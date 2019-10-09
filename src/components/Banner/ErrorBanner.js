@@ -7,7 +7,7 @@
 
 import React, { useEffect, useState } from 'react';
 import T from 'prop-types';
-import iconDictionary from 'utils/iconDictionary';
+import iconDictionary from '../../shared/iconDictionary';
 import {
   BannerWrapper,
   CloseButton,

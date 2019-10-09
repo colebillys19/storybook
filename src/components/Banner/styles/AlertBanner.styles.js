@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { borderStyle, borderWidth, ssRed } from 'defaultStyleHelper';
-import { TextButton } from 'components/base_ui/Buttons';
+import { borderStyle, borderWidth, ssRed } from '../../../shared/defaultStyleHelper';
+import TextButton from '../../Button/TextButton';
 
 // For the styled component below and the height being smaller than the min-height.
 // Ran into a problem/bug on IE11 where align-items doesn't work with min-height.

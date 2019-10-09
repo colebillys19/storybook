@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { FlatIconButton } from 'components/base_ui/Buttons';
-import { errorRed } from 'defaultStyleHelper';
+import FlatIconButton from '../../Button/FlatIconButton';
+import { errorRed } from '../../../shared/defaultStyleHelper';
 
 export const BannerWrapper = styled.div`
   align-items: center;
