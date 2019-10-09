@@ -3,8 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import ErrorBanner from '../ErrorBanner';
 
-const bannerError = { message: 'banner error' };
-const bannerContent = <div style={{ padding: '20px' }}>Banner Content</div>;
+const error = { message: 'error' };
 
 storiesOf('Banners|ErrorBanner', module)
-  .add('default', () => <ErrorBanner error={bannerError}>{bannerContent}</ErrorBanner>);
+  .add('default', () => <ErrorBanner error={error} />);
