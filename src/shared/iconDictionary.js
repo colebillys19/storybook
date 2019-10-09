@@ -65,7 +65,7 @@ import Trash from './svg/Trash';
 import Video from './svg/Video';
 import ViewEye from './svg/ViewEye';
 
-import { iconStyle, iconSize } from '../defaultStyleHelper';
+import { iconStyle, iconSize } from './defaultStyleHelper';
 
 /**
 * @description: Creates a formatted icon, based on name, size, and options
