@@ -1,0 +1,211 @@
+{
+  "name": "dmi-storybook",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "@babel/cli": "7.5.5",
+    "@material-ui/core": "4.5.0",
+    "polished": "3.4.1",
+    "prop-types": "15.6.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-scripts": "3.1.1",
+    "styled-components": "4.0.2"
+  },
+  "scripts": {
+    "build": "BABEL_ENV=production babel src -d dist",
+    "lint": "npm run lint:js",
+    "lint:css": "stylelint './app/**/*.js'",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
+    "lint:eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts --fix",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint:staged": "lint-staged",
+    "prepare": "npm run build",
+    "test": "react-scripts test",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "build-storybook-docs": "build-storybook -s public --docs",
+    "release": "auto shipit"
+  },
+  "lint-staged": {
+    "*.js": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts"
+  },
+  "pre-commit": "lint:staged",
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true,
+      "es6": true
+    },
+    "plugins": [
+      "redux-saga",
+      "react",
+      "jsx-a11y",
+      "react-hooks",
+      "sort-destructure-keys",
+      "import"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "arrow-body-style": [
+        2,
+        "as-needed"
+      ],
+      "class-methods-use-this": 0,
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "import/imports-first": 0,
+      "import/newline-after-import": 2,
+      "import/no-dynamic-require": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/no-named-as-default": 0,
+      "import/no-unresolved": 2,
+      "import/no-webpack-loader-syntax": 0,
+      "import/prefer-default-export": 0,
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "jsx-a11y/aria-props": 2,
+      "jsx-a11y/heading-has-content": 0,
+      "jsx-a11y/label-has-for": 2,
+      "jsx-a11y/mouse-events-have-key-events": 2,
+      "jsx-a11y/role-has-required-aria-props": 2,
+      "jsx-a11y/role-supports-aria-props": 2,
+      "max-len": [
+        1,
+        {
+          "code": 100
+        }
+      ],
+      "newline-per-chained-call": 0,
+      "no-confusing-arrow": 0,
+      "no-console": 1,
+      "no-use-before-define": 0,
+      "object-curly-newline": [
+        2,
+        {
+          "multiline": true,
+          "minProperties": 4
+        }
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "operator-linebreak": 0,
+      "prefer-template": 2,
+      "react/forbid-prop-types": 0,
+      "implicit-arrow-linebreak": 0,
+      "react-hooks/rules-of-hooks": "error",
+      "quotes": [
+        1,
+        "single",
+        {
+          "avoidEscape": true
+        }
+      ],
+      "react/jsx-first-prop-new-line": [
+        2,
+        "multiline"
+      ],
+      "react/jsx-filename-extension": 0,
+      "react/jsx-no-target-blank": 0,
+      "react/jsx-curly-brace-presence": 0,
+      "react/jsx-one-expression-per-line": 0,
+      "react/jsx-sort-props": 2,
+      "react/no-unused-prop-types": 2,
+      "react/prop-types": 2,
+      "react/require-default-props": 0,
+      "react/require-extension": 0,
+      "react/sort-comp": 0,
+      "react/sort-prop-types": 2,
+      "react/self-closing-comp": 0,
+      "redux-saga/no-yield-in-race": 2,
+      "redux-saga/yield-effects": 2,
+      "require-yield": 0,
+      "semi": [
+        "error",
+        "always"
+      ],
+      "sort-destructure-keys/sort-destructure-keys": 2,
+      "sort-keys": [
+        2,
+        "asc",
+        {
+          "caseSensitive": false,
+          "natural": true
+        }
+      ]
+    }
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "5.2.1",
+    "@storybook/addon-actions": "5.2.1",
+    "@storybook/addon-docs": "5.2.1",
+    "@storybook/addon-knobs": "5.2.1",
+    "@storybook/addon-links": "5.2.1",
+    "@storybook/addons": "5.2.1",
+    "@storybook/addon-storysource": "5.2.1",
+    "@storybook/react": "5.2.1",
+    "auto": "7.4.3",
+    "babel-eslint": "10.0.1",
+    "eslint": "5.7.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "3.1.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-prettier": "3.0.0",
+    "eslint-plugin-react": "7.11.1",
+    "eslint-plugin-react-hooks": "1.6.0",
+    "eslint-plugin-redux-saga": "0.9.0",
+    "eslint-plugin-sort-destructure-keys": "1.2.0",
+    "lint-staged": "7.3.0",
+    "prettier": "1.14.3",
+    "storybook-chromatic": "2.2.2",
+    "stylelint": "9.6.0",
+    "stylelint-config-recommended": "2.1.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-processor-styled-components": "1.5.0"
+  },
+  "description": "",
+  "main": "dist/index.js",
+  "repository": "https://github.com/colebillys19/dmi-storybook.git",
+  "author": "Billy Cole",
+  "license": "MIT"
+}
