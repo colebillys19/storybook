@@ -8,7 +8,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { ssLightBlue } from '../../shared/defaultStyles';
+import { ssLightBlue } from '../../shared/defaultStyleHelper';
 import { TitleCard } from './styles/sharedStyles';
 
 const TitleCardComponent = (restProps) => (
