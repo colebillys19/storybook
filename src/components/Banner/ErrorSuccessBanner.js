@@ -39,7 +39,7 @@ const ErrorSuccessBanner = ({
   };
 
   const successProps = success && { color: successGreen, icon: SuccessIcon, message: success.message };
-  const errorProps = error && { color: errorRed, Icon: WarningIcon, message: error.message };
+  const errorProps = error && { color: errorRed, icon: WarningIcon, message: error.message };
   const { color, icon, message } = successProps || errorProps || {};
   return (
     <BannerWrapper color={color} displayState={displayState} {...restProps}>

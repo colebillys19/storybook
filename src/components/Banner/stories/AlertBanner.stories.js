@@ -1,9 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 
 import AlertBanner from '../AlertBanner';
 
-const bannerContent = <div style={{ padding: '20px' }}>Banner Content</div>;
+const alertText = 'alert text';
+const buttonText = 'button text';
 
 storiesOf('Banners|AlertBanner', module)
-  .add('default', () => <AlertBanner>{bannerContent}</AlertBanner>);
+  .add('default', () => (
+    <AlertBanner
+      alertText={alertText}
+      buttonText={buttonText}
+      onClick={action('onClickButton')}
+    />
+  ));
