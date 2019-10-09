@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import BasePaper from './BasePaper';
-import { insetshadow } from '../../shared/defaultStyles';
+import { insetshadow } from '../../shared/defaultStyleHelper';
 
 const InsetPaper = styled(BasePaper)`
   background-color: #FBFBFB;
