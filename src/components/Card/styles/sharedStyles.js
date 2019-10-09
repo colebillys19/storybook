@@ -6,7 +6,7 @@ import {
   borderStyle,
   borderWidth,
   ssLightBlue,
-} from '../../../shared/defaultStyles';
+} from '../../../shared/defaultStyleHelper';
 
 export const CardContainer = styled(BasePaper)`
   border-radius: 0;
