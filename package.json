@@ -1,5 +1,5 @@
 {
-  "name": "dmi-storybook",
+  "name": "storybook",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -41,7 +41,6 @@
       "es6": true
     },
     "plugins": [
-      "redux-saga",
       "react",
       "jsx-a11y",
       "react-hooks",
@@ -139,8 +138,6 @@
       "react/sort-comp": 0,
       "react/sort-prop-types": 2,
       "react/self-closing-comp": 0,
-      "redux-saga/no-yield-in-race": 2,
-      "redux-saga/yield-effects": 2,
       "require-yield": 0,
       "semi": [
         "error",
@@ -193,7 +190,6 @@
     "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-react-hooks": "1.6.0",
-    "eslint-plugin-redux-saga": "0.9.0",
     "eslint-plugin-sort-destructure-keys": "1.2.0",
     "lint-staged": "7.3.0",
     "prettier": "1.14.3",
@@ -206,6 +202,6 @@
   "description": "",
   "main": "dist/index.js",
   "repository": "https://github.com/colebillys19/dmi-storybook.git",
-  "author": "Billy Cole",
+  "author": "Billy Cole, Kwame Amosah",
   "license": "MIT"
 }
