@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react';
 import {
   withKnobs,
   text,
-  boolean,
   select,
 } from '@storybook/addon-knobs/react';
 
