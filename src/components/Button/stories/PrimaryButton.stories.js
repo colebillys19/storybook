@@ -16,7 +16,6 @@ storiesOf('Buttons|PrimaryButton', module)
       disableRipple
       Icon={Icon}
       label={label}
-      loading
       onClick={action('onClickButton')}
     />
   ));

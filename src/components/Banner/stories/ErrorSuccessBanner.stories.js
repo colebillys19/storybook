@@ -9,8 +9,14 @@ const bannerProps = { errorMessage: 'error', successMessage: 'success' };
 storiesOf('Banners|ErrorSuccessBanner', module)
   .addDecorator(withKnobs)
   .add('error', () => (
-    <ErrorSuccessBanner error={{ message: text('Error Message', bannerProps.errorMessage) }} />
+    <ErrorSuccessBanner
+      error={{ message: text('Error Message', bannerProps.errorMessage) }}
+      success={false}
+    />
   ))
   .add('success', () => (
-    <ErrorSuccessBanner success={{ message: text('Success Message', bannerProps.successMessage) }} />
+    <ErrorSuccessBanner
+      error={false}
+      success={{ message: text('Success Message', bannerProps.successMessage) }}
+    />
   ));

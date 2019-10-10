@@ -4,16 +4,16 @@ import { action } from '@storybook/addon-actions';
 
 import iconDictionary from '../../../shared/iconDictionary';
 
-import BaseButton from '../BaseButton';
+import TooltipButton from '../TooltipButton';
 
 const enterDelay = 500;
 const Icon = iconDictionary('home', 'mediumSmall');
 const label = 'label text';
 const tooltipText = 'tooltip text';
 
-storiesOf('Buttons|BaseButton', module)
+storiesOf('Buttons|TooltipButton', module)
   .add('default', () => (
-    <BaseButton
+    <TooltipButton
       disableFocusRipple
       disableRipple
       enterDelay={enterDelay}

@@ -6,7 +6,7 @@ import iconDictionary from '../../../shared/iconDictionary';
 
 import BaseButton from '../BaseButton';
 
-const Icon = iconDictionary('home', 'mediumSmall');
+const Icon = iconDictionary('home', 'mediumSmall', 'header');
 const label = 'label text';
 
 storiesOf('Buttons|BaseButton', module)
