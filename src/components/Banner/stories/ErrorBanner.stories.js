@@ -1,9 +1,13 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { addDecorator, storiesOf } from '@storybook/react';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 import ErrorBanner from '../ErrorBanner';
 
-const error = { message: 'error' };
+const bannerProps = { errorMessage: 'error' };
 
 storiesOf('Banners|ErrorBanner', module)
-  .add('default', () => <ErrorBanner error={error} />);
+  .addDecorator(withKnobs)
+  .add('default', () => (
+    <ErrorBanner error={{ message: text('Error Message', bannerProps.errorMessage) }} />
+  ));
