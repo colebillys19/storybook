@@ -1,0 +1,413 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Banners|AlertBanner default 1`] = `
+<section
+  className="sc-bxivhb eMtVEh"
+>
+  <div
+    className="sc-EHOje jtyqUw"
+  >
+    <p>
+      alert text
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-contained sc-ifAKCX OEXGv sc-bdVaJa fWZjMm"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiButton-label label"
+        >
+          button text
+        </span>
+      </button>
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Storyshots Banners|ErrorBanner default 1`] = `
+<div
+  className="sc-gzVnrw cACCCw"
+>
+  <div
+    className="sc-htoDjs hiEdTM"
+  >
+    <svg
+      aria-hidden="true"
+      className="MuiSvgIcon-root root styled-icon sc-gqjmRU kVDmhf"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+      <path
+        d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+      />
+    </svg>
+  </div>
+  <div
+    className="sc-iwsKbI dwDcyq"
+  >
+    error
+  </div>
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-contained sc-dnqmqq ZQLdF sc-bdVaJa fWZjMm"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label label"
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root root styled-icon sc-gZMcBi fwoZLL"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 500 500"
+      >
+        <path
+          clipRule="evenodd"
+          d="M483 456.3L275.7 249 483 41.7 456.3 15 249 222.3 41.7 15 15 41.7 222.3 249 15 456.3 41.7 483 249 275.7 456.3 483z"
+          fillRule="evenodd"
+        />
+      </svg>
+      
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Banners|ErrorSuccessBanner error 1`] = `
+<div
+  className="sc-VigVT lbTyLf"
+  color="rgba(193, 54, 63, 1)"
+>
+  <div
+    className="sc-jTzLTM iUAGTk"
+  >
+    <svg
+      aria-hidden="true"
+      className="MuiSvgIcon-root root styled-icon sc-chPdSV iDIcoK"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+      <path
+        d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+      />
+    </svg>
+  </div>
+  <div
+    className="sc-jzJRlG jGZtgS"
+  >
+    error
+  </div>
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-contained sc-fjdhpX ehFBfA sc-bdVaJa fWZjMm"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label label"
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root root styled-icon sc-cSHVUG eQhDIE"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 500 500"
+      >
+        <path
+          clipRule="evenodd"
+          d="M483 456.3L275.7 249 483 41.7 456.3 15 249 222.3 41.7 15 15 41.7 222.3 249 15 456.3 41.7 483 249 275.7 456.3 483z"
+          fillRule="evenodd"
+        />
+      </svg>
+      
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Banners|ErrorSuccessBanner success 1`] = `
+<div
+  className="sc-VigVT CKoQJ"
+  color="rgba(45, 189, 154, 1)"
+>
+  <div
+    className="sc-jTzLTM iUAGTk"
+  >
+    <svg
+      aria-hidden="true"
+      className="MuiSvgIcon-root root styled-icon sc-kAzzGY juMMAY"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M0 0h24v24H0V0zm0 0h24v24H0V0z"
+        fill="none"
+      />
+      <path
+        d="M16.59 7.58L10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+      />
+    </svg>
+  </div>
+  <div
+    className="sc-jzJRlG jGZtgS"
+  >
+    success
+  </div>
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-contained sc-fjdhpX ehFBfA sc-bdVaJa fWZjMm"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label label"
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root root styled-icon sc-cSHVUG eQhDIE"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 500 500"
+      >
+        <path
+          clipRule="evenodd"
+          d="M483 456.3L275.7 249 483 41.7 456.3 15 249 222.3 41.7 15 15 41.7 222.3 249 15 456.3 41.7 483 249 275.7 456.3 483z"
+          fillRule="evenodd"
+        />
+      </svg>
+      
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Cards|BaseCard default 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root card sc-kGXeez jMaKoJ MuiPaper-rounded"
+>
+  <div
+    style={
+      Object {
+        "padding": "20px",
+      }
+    }
+  >
+    Card Content
+  </div>
+</div>
+`;
+
+exports[`Storyshots Cards|ContainerWrappedCard default 1`] = `
+<div
+  className="MuiPaper-root paper MuiPaper-elevation1 sc-kgoBCf cIFfxK MuiPaper-rounded"
+>
+  <div
+    className="MuiPaper-root MuiPaper-elevation1 MuiCard-root card sc-kGXeez bWKNwa MuiPaper-rounded"
+    width="100%"
+  >
+    <div
+      style={
+        Object {
+          "padding": "20px",
+        }
+      }
+    >
+      Card Content
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Cards|TitleCard default 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root card sc-kpOJdX keVVCR MuiPaper-rounded"
+  color="#4B9FE6"
+>
+  <div
+    style={
+      Object {
+        "padding": "20px",
+      }
+    }
+  >
+    Card Content
+  </div>
+</div>
+`;
+
+exports[`Storyshots Links|BaseLink default 1`] = `
+<a
+  className="sc-dxgOiQ jpDqGq"
+  classes={
+    Object {
+      "root": "link",
+    }
+  }
+  href="/path"
+  onClick={[Function]}
+>
+  Base Link
+</a>
+`;
+
+exports[`Storyshots Links|BaseLink icon 1`] = `
+<a
+  className="sc-dxgOiQ jpDqGq"
+  classes={
+    Object {
+      "root": "link",
+    }
+  }
+  href="/path"
+  onClick={[Function]}
+>
+  <svg
+    aria-hidden="true"
+    className="MuiSvgIcon-root root styled-icon sc-eNQAEJ hukgDA"
+    focusable="false"
+    role="presentation"
+    viewBox="0 0 500 500"
+  >
+    <path
+      d="M479.8 285.9l-86.2-86.2V70.5h-57.5v71.8L250 56.1 20.2 285.9v14.4h57.4v143.6h130.6V334.3h86.2v109.6h127.9V300.3h57.5v-14.4z"
+    />
+  </svg>
+  Base Link
+</a>
+`;
+
+exports[`Storyshots Links|GhostButtonLink default 1`] = `
+<a
+  className="sc-ckVGcZ kQBItm sc-dxgOiQ jpDqGq"
+  classes={
+    Object {
+      "root": "link",
+    }
+  }
+  href="/path"
+  onClick={[Function]}
+>
+  Ghost Button Link
+</a>
+`;
+
+exports[`Storyshots Links|GhostButtonLink icon 1`] = `
+<a
+  className="sc-ckVGcZ kQBItm sc-dxgOiQ jpDqGq"
+  classes={
+    Object {
+      "root": "link",
+    }
+  }
+  href="/path"
+  onClick={[Function]}
+>
+  <svg
+    aria-hidden="true"
+    className="MuiSvgIcon-root root styled-icon sc-hMqMXs VJxjE"
+    focusable="false"
+    role="presentation"
+    viewBox="0 0 500 500"
+  >
+    <path
+      d="M479.8 285.9l-86.2-86.2V70.5h-57.5v71.8L250 56.1 20.2 285.9v14.4h57.4v143.6h130.6V334.3h86.2v109.6h127.9V300.3h57.5v-14.4z"
+    />
+  </svg>
+  Ghost Button Link
+</a>
+`;
+
+exports[`Storyshots Paper|BasePaper default 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
+>
+  <div
+    style={
+      Object {
+        "padding": "20px",
+      }
+    }
+  >
+    Paper Content
+  </div>
+</div>
+`;
+
+exports[`Storyshots Paper|InsetPaper default 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation1 sc-jKJlTe ciWMFI MuiPaper-rounded"
+>
+  <div
+    style={
+      Object {
+        "padding": "20px",
+      }
+    }
+  >
+    Paper Content
+  </div>
+</div>
+`;

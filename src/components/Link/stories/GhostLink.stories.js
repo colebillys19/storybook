@@ -5,45 +5,52 @@ import {
   withKnobs,
   text,
   boolean,
-  object,
+  select,
 } from '@storybook/addon-knobs/react';
 
 import iconDictionary from '../../../shared/iconDictionary';
 
 import GhostButtonLink from '../GhostButtonLink';
 
+const iconOptions = {
+  cancel: 'cancel',
+  home: 'home',
+  inbox: 'inbox',
+  profile: 'profile',
+  star: 'star',
+};
+
+const iconDefault = 'home';
+
+const sizeOptions = {
+  large: 'large',
+  medium: 'medium',
+  mediumLarge: 'mediumLarge',
+  mediumSmall: 'mediumSmall',
+  small: 'small',
+  xSmall: 'xSmall',
+};
+
+const sizeDefault = 'mediumSmall';
+
 storiesOf('Links|GhostButtonLink', module)
   .addDecorator(withKnobs)
   .addDecorator((story) => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
-  .add('default', () => {
-    const label = text('label', 'Ghost Button Link');
-    const path = text('path', 'path');
-    const replace = boolean('replace', true);
-
-    return (
-      <GhostButtonLink
-        label={label}
-        path={path}
-        replace={replace}
-      />
-    );
-  })
-  .add('icon', () => {
-    const label = text('label', 'Ghost Button Link', 'Link Props');
-    const path = text('path', 'path', 'Link Props');
-    const replace = boolean('replace', true, 'Link Props');
-    const name = text('name', 'star', 'Icon Props');
-    const size = text('size', 'small', 'Icon Props');
-    const style = text('style', '', 'Icon Props');
-    const options = object('options', { color: 'inherit' }, 'Icon Props');
-    return (
-      <GhostButtonLink
-        Icon={iconDictionary(name, size, style, options)}
-        label={label}
-        path={path}
-        replace={replace}
-      />
-    );
-  });
+  .add('default', () => (
+    <GhostButtonLink
+      label={text('label', 'Ghost Button Link', 'Link Props')}
+      path={text('path', 'path', 'Link Props')}
+    />
+  ))
+  .add('icon', () => (
+    <GhostButtonLink
+      Icon={iconDictionary(
+        select('Icon', iconOptions, iconDefault, 'Icon Props'),
+        select('Icon Size', sizeOptions, sizeDefault, 'Icon Props')
+      )}
+      label={text('label', 'Ghost Button Link', 'Link Props')}
+      path={text('path', 'path', 'Link Props')}
+    />
+  ));

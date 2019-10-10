@@ -7,5 +7,5 @@ const error = { message: 'error' };
 const success = { message: 'success' };
 
 storiesOf('Banners|ErrorSuccessBanner', module)
-  .add('error', () => <ErrorSuccessBanner error={error} />)
-  .add('success', () => <ErrorSuccessBanner success={success} />);
+  .add('error', () => <ErrorSuccessBanner error={error} success={false} />)
+  .add('success', () => <ErrorSuccessBanner error={false} success={success} />);
