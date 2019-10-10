@@ -12,7 +12,7 @@
 import React from 'react';
 import T from 'prop-types';
 import StyledBaseLink from './styles/BaseLink.styles';
-import ConditionalRender from '../ConditionalRender';
+import ConditionalRender from '../../shared/ConditionalRender';
 
 const BaseLink = ({
   Icon,

@@ -14,10 +14,6 @@
 import React from 'react';
 import T from 'prop-types';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 829170aa35cbe4d90516d5380ad884b008006d5b
 function ConditionalRender({
   Component,
   FallbackComponent,
