@@ -18,8 +18,8 @@ storiesOf('Links|GhostButtonLink', module)
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
   .add('default', () => {
-    const label = text('label', 'Base Link Label');
-    const path = text('path', 'baseLinkPath');
+    const label = text('label', 'Ghost Button Link');
+    const path = text('path', 'path');
     const replace = boolean('replace', true);
 
     return (
@@ -31,8 +31,8 @@ storiesOf('Links|GhostButtonLink', module)
     );
   })
   .add('icon', () => {
-    const label = text('label', 'Base Link Label', 'Link Props');
-    const path = text('path', 'baseLinkPath', 'Link Props');
+    const label = text('label', 'Ghost Button Link', 'Link Props');
+    const path = text('path', 'path', 'Link Props');
     const replace = boolean('replace', true, 'Link Props');
     const name = text('name', 'star', 'Icon Props');
     const size = text('size', 'small', 'Icon Props');
