@@ -1,11 +1,22 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { addDecorator, storiesOf } from '@storybook/react';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 import ErrorSuccessBanner from '../ErrorSuccessBanner';
 
-const error = { message: 'error' };
-const success = { message: 'success' };
+const bannerProps = { errorMessage: 'error', successMessage: 'success' };
 
 storiesOf('Banners|ErrorSuccessBanner', module)
-  .add('error', () => <ErrorSuccessBanner error={error} success={false} />)
-  .add('success', () => <ErrorSuccessBanner error={false} success={success} />);
+  .addDecorator(withKnobs)
+  .add('error', () => (
+    <ErrorSuccessBanner
+      error={{ message: text('Error Message', bannerProps.errorMessage) }}
+      success={false}
+    />
+  ))
+  .add('success', () => (
+    <ErrorSuccessBanner
+      error={false}
+      success={{ message: text('Success Message', bannerProps.successMessage) }}
+    />
+  ));

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import BaseCard from '../BaseCard';
 
-const cardContent = <div style={{ padding: '20px' }}>Card Content</div>;
+const cardContent = <div style={{ padding: '20px' }}>card content</div>;
 
 storiesOf('Cards|BaseCard', module)
   .add('default', () => <BaseCard>{cardContent}</BaseCard>);

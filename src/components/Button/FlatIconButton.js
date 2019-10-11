@@ -7,6 +7,7 @@ const FlatIconButton = styled(({ tooltipText, ...restProps }) => {
   if (tooltipText) return <TooltipButton tooltipText={tooltipText} {...restProps} />;
   return <BaseButton {...restProps} />;
 })`
+  && {
     &:hover {
       background-color: transparent;
     }
@@ -15,5 +16,6 @@ const FlatIconButton = styled(({ tooltipText, ...restProps }) => {
     }
     background-color: transparent;
     box-shadow: none;
+  }
 `;
 export default FlatIconButton;

@@ -1,10 +1,11 @@
 import React from 'react';
 
-import BaseCard from '../BaseCard';
 import { checkBasicRendering } from '../../../shared/testingHelpers';
+import BasePaper from '../BasePaper';
 
-describe('<BaseCard />', () => {
+describe('<BasePaper />', () => {
   const propsToPassDown = {};
-  const component = <BaseCard {...propsToPassDown} />;
+
+  const component = <BasePaper {...propsToPassDown} />;
   checkBasicRendering(component);
 });

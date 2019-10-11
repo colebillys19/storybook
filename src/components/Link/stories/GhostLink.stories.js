@@ -13,13 +13,12 @@ import GhostButtonLink from '../GhostButtonLink';
 
 const iconOptions = {
   cancel: 'cancel',
-  home: 'home',
   inbox: 'inbox',
   profile: 'profile',
   star: 'star',
 };
 
-const iconDefault = 'home';
+const iconDefault = 'star';
 
 const sizeOptions = {
   large: 'large',
@@ -47,7 +46,8 @@ storiesOf('Links|GhostButtonLink', module)
     <GhostButtonLink
       Icon={iconDictionary(
         select('Icon', iconOptions, iconDefault, 'Icon Props'),
-        select('Icon Size', sizeOptions, sizeDefault, 'Icon Props')
+        select('Icon Size', sizeOptions, sizeDefault, 'Icon Props'),
+        'header',
       )}
       label={text('label', 'Ghost Button Link', 'Link Props')}
       path={text('path', 'path', 'Link Props')}
