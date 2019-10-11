@@ -16,11 +16,13 @@ import { ssGreyHover, ssLightGrey, ssMainBlue } from '../../shared/defaultStyleH
 import PrimaryButton from './PrimaryButton';
 
 const SecondaryButton = styled(PrimaryButton)`
-  &:hover {
-    background-color: ${ssGreyHover};
+  && {
+    &:hover {
+      background-color: ${ssGreyHover};
+    }
+    background-color: ${ssLightGrey};
+    color: ${ssMainBlue};
   }
-  background-color: ${ssLightGrey};
-  color: ${ssMainBlue};
 `;
 
 export default SecondaryButton;

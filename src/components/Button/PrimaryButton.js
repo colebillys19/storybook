@@ -15,11 +15,13 @@ import { ssMainBlue, ssMainBlueHover } from '../../shared/defaultStyleHelper';
 import BaseButton from './BaseButton';
 
 const PrimaryButton = styled(BaseButton)`
-  &:hover {
-    background-color: ${ssMainBlueHover};
-  };
-  background-color: ${ssMainBlue};
-  color: white;
+  && {
+    &:hover {
+      background-color: ${ssMainBlueHover};
+    };
+    background-color: ${ssMainBlue};
+    color: white;
+  }
 `;
 
 export default PrimaryButton;

@@ -6,7 +6,7 @@ import iconDictionary from '../../../shared/iconDictionary';
 
 import BaseButton from '../BaseButton';
 
-const Icon = iconDictionary('home', 'mediumSmall', 'header');
+const Icon = iconDictionary('inbox', 'mediumSmall', 'button');
 const label = 'label text';
 
 storiesOf('Buttons|BaseButton', module)
@@ -16,7 +16,6 @@ storiesOf('Buttons|BaseButton', module)
       disableRipple
       Icon={Icon}
       label={label}
-      loading
       onClick={action('onClickButton')}
     />
   ));

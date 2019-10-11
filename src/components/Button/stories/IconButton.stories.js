@@ -9,12 +9,11 @@ import IconButton from '../IconButton';
 
 const iconOptions = {
   cancel: 'cancel',
-  home: 'home',
   inbox: 'inbox',
   profile: 'profile',
   star: 'star',
 };
-const iconDefault = 'home';
+const iconDefault = 'inbox';
 
 const sizeOptions = {
   large: 'large',
