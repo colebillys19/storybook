@@ -11,7 +11,7 @@ addDecorator(withA11y);
 addDecorator(story => (
   <>
     {story()}
-    <GlobalStyle />
+    {/* <GlobalStyle /> */}
   </>
 ));
 
