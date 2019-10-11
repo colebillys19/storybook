@@ -10,3 +10,4 @@ export * from './components/Button';
 export * from './components/Card';
 export * from './components/Link';
 export * from './components/Paper';
+export * from './shared/svg';

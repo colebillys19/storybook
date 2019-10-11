@@ -2,68 +2,70 @@ import React from 'react';
 import styled from 'styled-components';
 
 // MATERIAL-UI ICONS
-import Star from '@material-ui/icons/Star';
-import StarOutline from '@material-ui/icons/StarBorder';
-import Download from '@material-ui/icons/VerticalAlignBottom';
-import Lock from '@material-ui/icons/Lock';
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import Block from '@material-ui/icons/Block';
-import Create from '@material-ui/icons/Create';
-import Inbox from '@material-ui/icons/Inbox';
-import Reply from '@material-ui/icons/Reply';
-import Send from '@material-ui/icons/Send';
-import CheckCircleOutline from '@material-ui/icons/CheckCircleOutline';
-import Warning from '@material-ui/icons/Warning';
-import AttachMoney from '@material-ui/icons/AttachMoney';
-import Laptop from '@material-ui/icons/Laptop';
-import Alarm from '@material-ui/icons/Alarm';
-import Mail from '@material-ui/icons/MailOutline';
-import Flower from '@material-ui/icons/LocalFlorist';
-import { ArrowDropUp } from './svg/materialUiIcons';
-import Add from './svg/Add';
-import ArrowCarouselNext from './svg/ArrowCarouselNext';
-import ArrowCarouselPrev from './svg/ArrowCarouselPrev';
-import ArrowDown from './svg/ArrowDown';
-import ArrowNext from './svg/ArrowNext';
-import ArrowPrev from './svg/ArrowPrev';
-import Calculate from './svg/Calculate';
-import Calendar from './svg/Calendar';
-import Cancel from './svg/Cancel';
-import Chat from './svg/Chat';
-import Checkmark from './svg/CheckMark';
-import CloseMenu from './svg/CloseMenu';
-import Edit from './svg/Edit';
-import EmailTips from './svg/EmailTips';
-import Escrow from './svg/Escrow';
-import Filter from './svg/Filter';
-import HamburgerMenu from './svg/HamburgerMenu';
-import Help from './svg/Help';
-import Home from './svg/Home';
-import Important from './svg/Important';
-import InfoDot from './svg/InfoDot';
-import LearningCenter from './svg/LearningCenter';
-import Logout from './svg/Logout';
-import Messaging from './svg/Messaging';
-import MessagingUnread from './svg/MessagingUnread';
-import Mia from './svg/Mia';
-import Minus from './svg/Minus';
-import ModalAlert from './svg/ModalAlert';
-import MortgageLogo from './svg/MortgageLogo';
-import MultipleDevicesTip from './svg/MultipleDevicesTip';
-import MultipleLoansTips from './svg/MultipleLoansTips';
-import Payments from './svg/Payments';
-import Payoff from './svg/Payoff';
-import Phone from './svg/Phone';
-import Plus from './svg/Plus';
-import Print from './svg/Print';
-import Profile from './svg/Profile';
-import Refresh from './svg/Refresh';
-import Statements from './svg/Statements';
-import TransHistory from './svg/TransHistory';
-import Trash from './svg/Trash';
-import Video from './svg/Video';
-import ViewEye from './svg/ViewEye';
+import {
+  Add,
+  Alarm,
+  ArrowCarouselNext,
+  ArrowCarouselPrev,
+  ArrowDown,
+  ArrowDropUp,
+  ArrowNext,
+  ArrowPrev,
+  AttachMoney,
+  Block,
+  Calculate,
+  Calendar,
+  Cancel,
+  Chat,
+  CheckCircleOutline,
+  Checkmark,
+  CloseMenu,
+  Create,
+  Download,
+  Edit,
+  EmailTips,
+  Escrow,
+  Filter,
+  Flower,
+  HamburgerMenu,
+  Help,
+  Home,
+  Important,
+  Inbox,
+  InfoDot,
+  Laptop,
+  LearningCenter,
+  Lock,
+  Logout,
+  Mail,
+  Messaging,
+  MessagingUnread,
+  Mia,
+  Minus,
+  ModalAlert,
+  MortgageLogo,
+  MultipleDevicesTip,
+  MultipleLoansTips,
+  Payments,
+  Payoff,
+  Phone,
+  Plus,
+  Print,
+  Profile,
+  Refresh,
+  Reply,
+  Send,
+  Star,
+  StarOutline,
+  Statements,
+  TransHistory,
+  Trash,
+  Video,
+  ViewEye,
+  Visibility,
+  VisibilityOff,
+  Warning,
+} from './svg';
 
 import { iconStyle, iconSize } from './defaultStyleHelper';
 
