@@ -1,5 +1,5 @@
 import React from 'react';
-import { addDecorator, storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
 import ErrorSuccessBanner from '../ErrorSuccessBanner';
