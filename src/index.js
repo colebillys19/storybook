@@ -1,5 +1,5 @@
 import * as storybookStyles from './shared/defaultStyleHelper';
-import * as storybookTestHelpers from './shared/testingHelpers';
+import * as storybookTestHelpers from './utils/testingHelpers';
 
 export { storybookStyles, storybookTestHelpers };
 

@@ -4,7 +4,7 @@ import {
   checkBasicRendering,
   checkRequiredProps,
 } from '../../../utils/testingHelpers';
-import BaseLink from '../index';
+import { BaseLink } from '../index';
 
 describe('<BaseLink />', () => {
   const propsToPassDown = {

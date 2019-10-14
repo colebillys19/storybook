@@ -1,3 +1,3 @@
-import BaseListItem from './ListItem';
+import { BaseListItem } from './ListItem';
 
 export { BaseListItem };
