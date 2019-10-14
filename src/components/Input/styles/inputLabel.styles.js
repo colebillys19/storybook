@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TooltipIcon } from 'components/base_ui/Icon';
+import { TooltipIcon } from '../../Icon';
 
 export const LabelWrapper = styled.div`
   align-items: center;

@@ -4,16 +4,16 @@ import requireContext from 'require-context.macro';
 import { withA11y } from '@storybook/addon-a11y';
 import 'storybook-chromatic';
 
-// import ThemeProvider from './ThemeProvider';
+import ThemeProvider from './ThemeProvider';
 import { GlobalStyle } from './globalStyle';
 
 addDecorator(withA11y);
 
 addDecorator(story => (
-  <>
+  <ThemeProvider>
     {story()}
     <GlobalStyle />
-  </>
+  </ThemeProvider>
 ));
 
 addParameters({ backgrounds: [{ name: 'Silver Site', value: '#F0F0F7', default: true }] });

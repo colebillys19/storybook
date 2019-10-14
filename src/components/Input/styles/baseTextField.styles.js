@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { inputFocusedBorder } from 'defaultStyleHelper';
 import TextField from '@material-ui/core/TextField';
 import FormHelperText from '@material-ui/core/FormHelperText';
+
+import { inputFocusedBorder } from '../../../shared/defaultStyleHelper';
 
 export const StyledErrorText = styled(FormHelperText)`
   font-size: 1.2rem;
@@ -21,7 +22,7 @@ export const BaseTextFieldInput = styled(TextField)`
     font-size: 1.2rem;
     margin-top: 0.5rem;
   }
-
+  
   .base-input {
     background: white;
     border-radius: .5rem;
