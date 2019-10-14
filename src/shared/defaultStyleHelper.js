@@ -78,6 +78,17 @@ export const ssPurple = '#9826AC';
 export const ssRed = '#C1363F';
 export const ssRedHover = '#A02D34';
 
+// MS PRIMARY INTERFACE COLORS
+export const colors = {
+  brightPurple: '#310078',
+  darkGrey: '#686c77',
+  deepPurple: '#230049',
+  hoverPurple: '#2a0063',
+  lightGrey: '#f2f2f2',
+  mainGreen: '#00db7d',
+  white: '#ffffff',
+};
+
 // Borders
 export const borderStyle = 'solid';
 export const borderWidth = '.5rem';
