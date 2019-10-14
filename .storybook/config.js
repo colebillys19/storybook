@@ -4,22 +4,25 @@ import requireContext from 'require-context.macro';
 import { withA11y } from '@storybook/addon-a11y';
 import 'storybook-chromatic';
 
-// import ThemeProvider from './ThemeProvider';
-import { GlobalStyle } from './globalStyle';
+import ThemeProvider from './ThemeProvider';
+import GlobalStyle from './globalStyle';
 
 addDecorator(withA11y);
 
 addDecorator(story => (
-  <>
+  <ThemeProvider>
     {story()}
     <GlobalStyle />
-  </>
+  </ThemeProvider>
 ));
 
 addParameters({ backgrounds: [{ name: 'Silver Site', value: '#F0F0F7', default: true }] });
 
 addParameters({
-  backgrounds: [{ name: "Silver Site", value: "#F0F0F7", default: true }]
+  backgrounds: [
+    { name: "Main Site", value: "#F2F2F2", default: true },
+    { name: "Silver Site", value: "#F0F0F7", default: false },
+  ]
 });
 
 const req = requireContext('../src/components', true, /\.stories\.js$/);

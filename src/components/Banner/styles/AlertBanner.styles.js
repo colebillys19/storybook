@@ -9,38 +9,32 @@ import TextButton from '../../Button/TextButton';
 // https://github.com/philipwalton/flexbugs/issues/231
 
 export const Wrapper = styled.section`
-  && {
-    align-items: center;
-    background-color: white;
-    border-top-color: ${ssRed};
-    border-top-style: ${borderStyle};
-    border-top-width: ${borderWidth};
-    display: flex;
-    height: 5rem;
-    min-height: 7rem;
-    padding: 1rem;
-  }
+  align-items: center;
+  background-color: white;
+  border-top-color: ${ssRed};
+  border-top-style: ${borderStyle};
+  border-top-width: ${borderWidth};
+  display: flex;
+  height: 5rem;
+  min-height: 7rem;
+  padding: 1rem;
 `;
 
 export const AlertButton = styled(TextButton)`
-  && {
-    font-size: 1.4rem;
-    line-height: 1.5rem;
-    margin: 0 0 0 0.4rem;
-    padding-bottom: 0.3rem;
-  }
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  margin: 0 0 0 0.4rem;
+  padding-bottom: 0.3rem;
 `;
 
 export const AlertText = styled.div`
-  && {
-    p {
-      line-height: 2rem;
-      margin: 0;
-      width: 100%;
-    }
-    align-items: center;  
-    display: flex;
-    flex-wrap: wrap;
-    text-align: left;
+  p {
+    line-height: 2rem;
+    margin: 0;
+    width: 100%;
   }
+  align-items: center;  
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
 `;

@@ -13,7 +13,7 @@ import { CardContainer } from './styles/sharedStyles';
 
 const ContainerWrappedCard = ({ children, ...restProps }) => (
   <CardContainer classes={{ root: 'paper' }}>
-    <Card width="100%" {...restProps}>
+    <Card {...restProps}>
       {children}
     </Card>
   </CardContainer>

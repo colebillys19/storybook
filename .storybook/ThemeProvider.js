@@ -9,9 +9,9 @@ import {
 } from '@material-ui/core/styles';
 
 import {
-  redHatText,
-  ssLightGrey,
-  ssMainBlue,
+  mainGreen,
+  deepPurple,
+  lightGrey,
 } from '../src/shared/defaultStyleHelper';
 
 const generateClassName = createGenerateClassName();
@@ -23,12 +23,12 @@ const jss = create({
 const muiTheme = createMuiTheme({
   overrides: { MuiTooltip: { tooltip: { fontSize: '1.2rem' } } },
   palette: {
-    accent3Color: ssMainBlue,
-    primary1Color: ssMainBlue,
+    accent3Color: mainGreen,
+    primaryColor: deepPurple,
   },
-  stepper: { iconColor: ssLightGrey },
+  stepper: { iconColor: lightGrey },
   typography: {
-    fontFamily: redHatText,
+    fontFamily: '"Overpass", sans-serif',
     useNextVariants: true,
   },
 });

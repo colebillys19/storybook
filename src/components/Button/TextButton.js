@@ -14,24 +14,22 @@ import { ssLightBlue, ssMainBlueHover } from '../../shared/defaultStyleHelper';
 import BaseButton from './BaseButton';
 
 const TextButton = styled(BaseButton)`
-  && {
-    &:active {
-      box-shadow: none;
-    };
-    &:hover {
-      background: transparent;
-      box-shadow: none;
-      color: ${ssMainBlueHover};
-      text-decoration: underline;
-    };
+  &:active {
+    box-shadow: none;
+  };
+  &:hover {
     background: transparent;
-    color: ${ssLightBlue};
-    font-size: 1.2rem;
-    margin: .2rem 1rem;
-    padding: 0;
+    box-shadow: none;
+    color: ${ssMainBlueHover};
     text-decoration: underline;
-    text-transform: none;
-  }
+  };
+  background: transparent;
+  color: ${ssLightBlue};
+  font-size: 1.2rem;
+  margin: .2rem 1rem;
+  padding: 0;
+  text-decoration: underline;
+  text-transform: none;
 `;
 
 export default TextButton;
