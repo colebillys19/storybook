@@ -1,16 +1,16 @@
 import React from 'react';
 
+import { H2 } from '../index';
 import {
   checkBasicRendering,
   checkRequiredProps,
+  checkSimpleChild,
 } from '../../../utils/testingHelpers';
-import { BaseListItem } from '../index';
 
-describe('<BaseListItem />', () => {
-  const component = (
-    <BaseListItem text="List Item" />
-  );
+describe('<H2 />', () => {
+  const component = <H2>H2 Component</H2>;
 
   checkBasicRendering(component);
   checkRequiredProps(component);
+  checkSimpleChild(component, 'H2 Component');
 });

@@ -1,0 +1,24 @@
+/**
+*
+* H3
+* @description: Wraps text to create an <h3> header
+* Use Case: Creating tertiary titles or headers
+*/
+
+import React from 'react';
+import T from 'prop-types';
+
+import { ExtendedH3 } from './styles/H3.styles';
+
+const H3 = (props) => (
+  <ExtendedH3 {...props} />
+);
+
+H3.propTypes = {
+  children: T.oneOfType([
+    T.string,
+    T.object,
+  ]).isRequired,
+};
+
+export { H3 };
