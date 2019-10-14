@@ -16,8 +16,6 @@ addDecorator(story => (
   </ThemeProvider>
 ));
 
-addParameters({ backgrounds: [{ name: 'Silver Site', value: '#F0F0F7', default: true }] });
-
 addParameters({
   backgrounds: [
     { name: "Main Site", value: "#F2F2F2", default: true },

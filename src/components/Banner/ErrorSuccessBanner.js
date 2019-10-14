@@ -38,6 +38,7 @@ const ErrorSuccessBanner = ({
     }
   };
 
+  // eslint-disable-next-line
   const successProps = success && { color: successGreen, icon: SuccessIcon, message: success.message };
   const errorProps = error && { color: errorRed, icon: WarningIcon, message: error.message };
   const { color, icon, message } = successProps || errorProps || {};
