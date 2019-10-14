@@ -52,12 +52,12 @@ storiesOf('ListItem|BaseListItem', module)
       button={boolean('button', false)}
       disabled={boolean('disabled', false)}
       onClick={action('onClickButton')}
-      text={text('text', 'List Item w/ Icon')}
       selected={boolean('selected', false)}
+      text={text('text', 'List Item w/ Icon')}
     >
-      <ListItemIcon
-        children={iconDictionary(select('Icon', iconOptions, iconDefault))}
-      />
+      <ListItemIcon>
+        {iconDictionary(select('Icon', iconOptions, iconDefault))}
+      </ListItemIcon>
     </BaseListItem>
   ))
   .add('selected', () => (
