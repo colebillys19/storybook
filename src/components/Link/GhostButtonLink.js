@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { greyBorder, ssGreyHover } from '../../shared/defaultStyleHelper';
+import { greyBorder, ssGreyHover } from '../../utils/defaultStyleHelper';
 import BaseLink from './BaseLink';
 
 const GhostButtonLink = styled(BaseLink)`

@@ -3,7 +3,7 @@ import React from 'react';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from '../../../shared/testingHelpers';
+} from '../../../utils/testingHelpers';
 import { BaseListItem } from '../index';
 
 describe('<BaseListItem />', () => {

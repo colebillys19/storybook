@@ -7,8 +7,8 @@
 
 import React, { useEffect, useState } from 'react';
 import T from 'prop-types';
-import iconDictionary from '../../shared/iconDictionary';
-import { errorRed, successGreen } from '../../shared/defaultStyleHelper';
+import iconDictionary from '../../utils/iconDictionary';
+import { errorRed, successGreen } from '../../utils/defaultStyleHelper';
 import {
   BannerWrapper,
   CloseButton,

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { ssMainBlue, ssMainBlueHover } from '../../../shared/defaultStyleHelper';
+import { ssMainBlue, ssMainBlueHover } from '../../../utils/defaultStyleHelper';
 
 const StyledBaseLink = styled(Link)`
   && {

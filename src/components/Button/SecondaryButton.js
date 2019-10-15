@@ -12,7 +12,7 @@
 * }
 */
 import styled from 'styled-components';
-import { ssGreyHover, ssLightGrey, ssMainBlue } from '../../shared/defaultStyleHelper';
+import { ssGreyHover, ssLightGrey, ssMainBlue } from '../../utils/defaultStyleHelper';
 import PrimaryButton from './PrimaryButton';
 
 const SecondaryButton = styled(PrimaryButton)`

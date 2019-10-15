@@ -12,7 +12,7 @@ import {
   ssDarkGrey,
   ssPurple,
   ssMainBlue,
-} from '../../../shared/defaultStyleHelper';
+} from '../../../utils/defaultStyleHelper';
 import { H1 } from '../index';
 
 const dmiColorOptions = {

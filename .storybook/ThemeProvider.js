@@ -12,7 +12,7 @@ import {
   mainGreen,
   deepPurple,
   lightGrey,
-} from '../src/shared/defaultStyleHelper';
+} from '../src/utils/defaultStyleHelper';
 
 const generateClassName = createGenerateClassName();
 const jss = create({

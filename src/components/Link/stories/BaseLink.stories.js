@@ -7,7 +7,7 @@ import {
   select,
 } from '@storybook/addon-knobs/react';
 
-import iconDictionary from '../../../shared/iconDictionary';
+import iconDictionary from '../../../utils/iconDictionary';
 
 import BaseLink from '../BaseLink';
 
