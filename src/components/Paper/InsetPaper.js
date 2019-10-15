@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import BasePaper from './BasePaper';
-import { insetshadow } from '../../utils/defaultStyleHelper';
+import { insetShadow } from '../../utils/defaultStyleHelper';
 
 const InsetPaper = styled(BasePaper)`
   background-color: #FBFBFB;
-  box-shadow: ${insetshadow};
+  box-shadow: ${insetShadow};
 `;
 
 export default InsetPaper;
