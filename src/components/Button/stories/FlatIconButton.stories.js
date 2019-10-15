@@ -41,9 +41,9 @@ storiesOf('Buttons|FlatIconButton', module)
         disableFocusRipple
         disableRipple
         Icon={icon}
-        label={text('label text', label)}
+        label={text('Label Text', label)}
         onClick={action('onClickButton')}
-        tooltipText={text('tooltip text', tooltipText)}
+        tooltipText={text('Tooltip Text', tooltipText)}
       />
     );
   });

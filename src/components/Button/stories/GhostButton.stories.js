@@ -40,7 +40,7 @@ storiesOf('Buttons|GhostButton', module)
         disableFocusRipple
         disableRipple
         Icon={icon}
-        label={text('label text', label)}
+        label={text('Label Text', label)}
         onClick={action('onClickButton')}
       />
     );

@@ -5,9 +5,38 @@ import { withKnobs, select, text } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 
-import SecondaryButton from '../SecondaryButton';
+import TooltipButton from '../TooltipButton';
 
 const label = 'label text';
+const tooltipText = 'tooltip text';
+
+const enterDelayOptions = {
+  '50ms': 50,
+  '100ms': 100,
+  '250ms': 200,
+  '500ms': 500,
+  '750ms': 750,
+  '1000ms': 1000,
+};
+const enterDelayDefault = 100;
+
+/* eslint-disable sort-keys */
+const placementOptions = {
+  'top-start': 'top-start',
+  top: 'top',
+  'top-end': 'top-end',
+  'right-start': 'right-start',
+  right: 'right',
+  'right-end': 'right-end',
+  'bottom-start': 'bottom-start',
+  bottom: 'bottom',
+  'bottom-end': 'bottom-end',
+  'left-start': 'left-start',
+  left: 'left',
+  'left-end': 'left-end',
+};
+/* eslint-enable sort-keys */
+const placementDefault = 'bottom';
 
 const iconOptions = {
   cancel: 'cancel',
@@ -27,7 +56,7 @@ const sizeOptions = {
 };
 const sizeDefault = 'mediumSmall';
 
-storiesOf('Buttons|SecondaryButton', module)
+storiesOf('Buttons|TooltipButton', module)
   .addDecorator(withKnobs)
   .add('default', () => {
     const icon = iconDictionary(
@@ -36,12 +65,15 @@ storiesOf('Buttons|SecondaryButton', module)
       'button'
     );
     return (
-      <SecondaryButton
+      <TooltipButton
         disableFocusRipple
         disableRipple
+        enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
         Icon={icon}
         label={text('Label Text', label)}
         onClick={action('onClickButton')}
+        placement={select('Placement', placementOptions, placementDefault)}
+        tooltipText={text('Tooltip Text', tooltipText)}
       />
     );
   });
