@@ -8,12 +8,11 @@ import {
   MuiThemeProvider,
 } from '@material-ui/core/styles';
 
-import { colors } from '../src/utils/defaultStyleHelper';
-const {
-  mainGreen,
-  deepPurple,
-  lightGrey,
-} = colors;
+import {
+  msMainGreen,
+  msDeepPurple,
+  msLightGrey,
+} from '../src/utils/defaultStyleHelper';
 
 const generateClassName = createGenerateClassName();
 const jss = create({
@@ -24,10 +23,10 @@ const jss = create({
 export const muiTheme = createMuiTheme({
   overrides: { MuiTooltip: { tooltip: { fontSize: '1.2rem' } } },
   palette: {
-    accent3Color: mainGreen,
-    primaryColor: deepPurple,
+    accent3Color: msMainGreen,
+    primaryColor: msDeepPurple,
   },
-  stepper: { iconColor: lightGrey },
+  stepper: { iconColor: msLightGrey },
   typography: {
     fontFamily: '"Overpass", sans-serif',
     useNextVariants: true,

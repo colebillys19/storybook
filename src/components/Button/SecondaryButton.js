@@ -12,7 +12,7 @@
 * }
 */
 import styled from 'styled-components';
-import { ssGreyHover, ssLightGrey, ssMainBlue } from '../../utils/defaultStyleHelper';
+import { msBrightPurple, ssGreyHover, ssLightGrey } from '../../utils/defaultStyleHelper';
 import PrimaryButton from './PrimaryButton';
 
 const SecondaryButton = styled(PrimaryButton)`
@@ -20,7 +20,7 @@ const SecondaryButton = styled(PrimaryButton)`
     background-color: ${ssGreyHover};
   }
   background-color: ${ssLightGrey};
-  color: ${ssMainBlue};
+  color: ${msBrightPurple};
 `;
 
 export default SecondaryButton;

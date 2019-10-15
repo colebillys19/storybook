@@ -5,10 +5,11 @@ import grey from '@material-ui/core/colors/grey';
 import red from '@material-ui/core/colors/red';
 import yellow from '@material-ui/core/colors/yellow';
 
-// Default Font Family
+// default font family
 export const redHatDisplay = "'RedHatDisplay', sans-serif";
 export const redHatText = "'RedHatText', sans-serif";
 
+// offsets
 export const footerOffset = '5.5rem';
 export const footerMarginOffset = '0.5rem';
 export const headerOffset = '12rem';
@@ -16,45 +17,53 @@ export const headingOffset = '4.1rem';
 export const headerNavOffset = '7.2rem';
 export const queryBuilderPaddingOffset = '6rem';
 
-// Colors
+// colors
 export const errorColor = red[500];
 export const whiteTextColor = grey[50];
 export const calculatorLabelColor = grey[500];
-export const lightGrey = '#85878D';
 export const darkGrey = '#5C6067';
-export const successGreen = 'rgba(45, 189, 154, 1)';
-export const errorRed = 'rgba(193, 54, 63, 1)';
+export const successGreen = '#5DBA9C';
+export const errorRed = '#C1363F';
 export const mobileMenuBlue = '#38639B';
 export const muiDisabledTextColor = 'rgb(0, 0, 0, 0.26)';
 export const readMessageGrey = '#FBFBFB';
-// Shadows
-export const greyshadow = `0.1rem 0 0.3rem 0 ${grey[300]}`;
-export const greyshadowAlt = `0 0 1rem 0 ${grey[500]}`;
-export const redshadow = `0 0 0.5rem 0 ${red[600]}`;
-export const insetshadow = 'inset 0px 0px 16px 0px rgba(224,224,224,0.4)';
-export const muiBoxShadow = '0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14), 0px 3px 14px 2px rgba(0,0,0,0.12)';
-// Transitions
-export const transitionbackground = 'background 0.2s ease';
-// Transition Colors
-export const transitioncolor = 'color 0.2s ease';
-// Backgrounds
-export const darkbg = blueGrey[800];
-export const lightbg = grey[300];
-// BACKGROUND QUESTION HIGHLIGHT COLOR
+
+// shadows
+export const greyShadow = `0.1rem 0 0.3rem 0 ${grey[300]}`;
+export const greyShadowAlt = `0 0 1rem 0 ${grey[500]}`;
+export const redShadow = `0 0 0.5rem 0 ${red[600]}`;
+export const insetShadow = 'inset 0px 0px 16px 0px rgba(224,224,224,0.4)';
+export const muiBoxShadow = `0px 5px 5px -3px rgba(0,0,0,0.2),
+                             0px 8px 10px 1px rgba(0,0,0,0.14),
+                             0px 3px 14px 2px rgba(0,0,0,0.12)`;
+
+// transitions
+export const transitionBackground = 'background 0.2s ease';
+
+// transition Colors
+export const transitionColor = 'color 0.2s ease';
+
+// backgrounds
+export const darkBackground = blueGrey[800];
+export const lightBackground = grey[300];
+
+// background question highlight color
 export const highlightBackground = '#E8F5E9';
-// Material UI Disabled Button background color
+
+// material ui disabled button background color
 export const disabledBackground = 'rgba(0, 0, 0, 0.12)';
-// Icon Colors
+
+// icon colors
 export const noMessagesGrey = '#e5e5f1';
 export const iconGreen = '#2DBD9A';
 export const iconGrey = '#85878D';
 
-// DMI COLORS
+// dmi colors
 export const dmiLightGreen = '#E8F5E9';
 export const dmiMainGreen = '#009350';
 export const dmiSecondaryColor = 'orange';
 
-// SS PRIMARY INTERFACE COLORS
+// silver site primary interface colors
 export const ssDarkBlue = '#0E2043';
 export const ssDarkBlueHover = '#030b20';
 export const ssDarkGrey = '#464A53';
@@ -65,7 +74,7 @@ export const ssMainBlue = '#2C5995';
 export const ssMainBlueHover = '#214472';
 export const ssYellow = '#EEB902';
 
-// SS SECONDARY COLORS
+// silver site secondary colors
 export const ssBabyBlue = '#4ECFE6';
 export const ssBrightGreen = '#2DBD9A';
 export const ssDarkGray2 = '#5C6067';
@@ -78,18 +87,15 @@ export const ssPurple = '#9826AC';
 export const ssRed = '#C1363F';
 export const ssRedHover = '#A02D34';
 
-// MS PRIMARY INTERFACE COLORS
-export const colors = {
-  brightPurple: '#310078',
-  darkGrey: '#686c77',
-  deepPurple: '#230049',
-  hoverPurple: '#2a0063',
-  lightGrey: '#f2f2f2',
-  mainGreen: '#00db7d',
-  white: '#ffffff',
-};
+// main site primary interface colors
+export const msBrightPurple = '#310078';
+export const msDarkGrey = '#686c77';
+export const msDeepPurple = '#230049';
+export const msHoverPurple = '#2a0063';
+export const msLightGrey = '#f2f2f2';
+export const msMainGreen = '#00db7d';
 
-// Borders
+// borders
 export const borderStyle = 'solid';
 export const borderWidth = '.5rem';
 export const expansionPanelDividerStyle = `0.1rem solid ${ssLightGrey}`;
@@ -100,30 +106,11 @@ export const inputFocusedBorder = `0.2rem solid ${ssLightBlue}`;
 export const redborder = `.1rem solid ${red[900]}`;
 export const tableBorderStyle = '.1rem solid rgba(224, 224, 224, 1)';
 export const inputBorder = '1px solid #c0c0c0';
-// font sizes
 
+// font sizes
 export const dropdownText = '1.4rem';
 
-export const donutChartColorScale = [
-  ssBrightGreen,
-  ssYellow,
-  ssRed,
-  ssGray,
-];
-
-export const donutChartLabelStyles = {
-  fill: ssDarkGray3,
-  fontFamily: redHatText,
-};
-
-export const ctaButtonStyles = `
-  margin: 0 0 1.5rem 0;
-  padding: .5rem 1.5rem;
-  width: 17rem;
-`;
-
-// Style for all icons in the app.
-// (Please move any style for icons to this file)
+// icon styles
 export const iconStyle = {
   alert: { color: yellow[500] },
   approved: { color: green[500] },
@@ -188,6 +175,7 @@ export const iconStyle = {
   warning: { color: errorColor },
 };
 
+// icon sizes
 export const iconSize = {
   large: {
     height: '11rem',
