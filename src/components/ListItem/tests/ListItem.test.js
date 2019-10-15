@@ -4,11 +4,11 @@ import {
   checkBasicRendering,
   checkRequiredProps,
 } from '../../../utils/testingHelpers';
-import { BaseListItem } from '../index';
+import { ListItem } from '../index';
 
 describe('<BaseListItem />', () => {
   const component = (
-    <BaseListItem text="List Item" />
+    <ListItem text="List Item" />
   );
 
   checkBasicRendering(component);

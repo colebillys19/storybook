@@ -42,4 +42,4 @@ BaseListItem.defaultProps = {
   disabled: false,
 };
 
-export { BaseListItem };
+export default BaseListItem;

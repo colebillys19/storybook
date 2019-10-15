@@ -8,11 +8,12 @@ import {
   MuiThemeProvider,
 } from '@material-ui/core/styles';
 
-import {
+import { colors } from '../src/utils/defaultStyleHelper';
+const {
   mainGreen,
   deepPurple,
   lightGrey,
-} from '../src/utils/defaultStyleHelper';
+} = colors;
 
 const generateClassName = createGenerateClassName();
 const jss = create({

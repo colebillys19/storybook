@@ -1,13 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import LoadingIndicator, { SmallLoadingIndicator } from '../index';
+import { LoadingIndicator } from '../index';
 
 
-storiesOf('Loaders|Indicators', module)
+storiesOf('Loading Indicators|LoadingIndicator', module)
   .add('default', () => (
     <LoadingIndicator />
-  ))
-  .add('small', () => (
-    <SmallLoadingIndicator />
   ));

@@ -598,7 +598,7 @@ exports[`Storyshots Links|GhostButtonLink icon 1`] = `
 </a>
 `;
 
-exports[`Storyshots ListItem|BaseListItem button 1`] = `
+exports[`Storyshots List Items|ListItem button 1`] = `
 <div
   className="MuiButtonBase-root-460 MuiListItem-root-448 MuiListItem-default-451 MuiListItem-gutters-456 MuiListItem-button-457"
   onBlur={[Function]}
@@ -631,7 +631,7 @@ exports[`Storyshots ListItem|BaseListItem button 1`] = `
 </div>
 `;
 
-exports[`Storyshots ListItem|BaseListItem default 1`] = `
+exports[`Storyshots List Items|ListItem default 1`] = `
 <li
   className="MuiListItem-root-394 MuiListItem-default-397 MuiListItem-gutters-402"
   disabled={false}
@@ -648,7 +648,7 @@ exports[`Storyshots ListItem|BaseListItem default 1`] = `
 </li>
 `;
 
-exports[`Storyshots ListItem|BaseListItem disabled 1`] = `
+exports[`Storyshots List Items|ListItem disabled 1`] = `
 <li
   className="MuiListItem-root-512 MuiListItem-default-515 MuiListItem-gutters-520 MuiListItem-disabled-518"
   disabled={true}
@@ -666,7 +666,7 @@ exports[`Storyshots ListItem|BaseListItem disabled 1`] = `
 </li>
 `;
 
-exports[`Storyshots ListItem|BaseListItem icon 1`] = `
+exports[`Storyshots List Items|ListItem icon 1`] = `
 <li
   className="MuiListItem-root-566 MuiListItem-default-569 MuiListItem-gutters-574"
   disabled={false}
@@ -707,7 +707,7 @@ exports[`Storyshots ListItem|BaseListItem icon 1`] = `
 </li>
 `;
 
-exports[`Storyshots ListItem|BaseListItem selected 1`] = `
+exports[`Storyshots List Items|ListItem selected 1`] = `
 <li
   className="MuiListItem-root-630 MuiListItem-default-633 MuiListItem-gutters-638 MuiListItem-selected-641"
   disabled={false}
@@ -725,7 +725,7 @@ exports[`Storyshots ListItem|BaseListItem selected 1`] = `
 </li>
 `;
 
-exports[`Storyshots Loaders|Indicators default 1`] = `
+exports[`Storyshots Loading Indicators|LoadingIndicator default 1`] = `
 <div
   className="sc-hMqMXs eXjJaW"
 >
@@ -772,7 +772,7 @@ exports[`Storyshots Loaders|Indicators default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Loaders|Indicators small 1`] = `
+exports[`Storyshots Loading Indicators|SmallLoadingIndicator default 1`] = `
 <span
   className="sc-kEYyzF exrwIn"
 >

@@ -1,3 +1,3 @@
-import { BaseListItem } from './ListItem';
+import ListItem from './ListItem';
 
-export { BaseListItem };
+export { ListItem };

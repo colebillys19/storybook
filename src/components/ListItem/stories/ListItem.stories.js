@@ -10,7 +10,7 @@ import {
 } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 
-import { BaseListItem } from '../index';
+import { ListItem } from '../index';
 import iconDictionary from '../../../utils/iconDictionary';
 
 const defaultListItem = {
@@ -28,11 +28,11 @@ const iconOptions = {
 
 const iconDefault = 'star';
 
-storiesOf('ListItem|BaseListItem', module)
+storiesOf('List Items|ListItem', module)
   .addDecorator(withKnobs)
-  .add('default', () => <BaseListItem {...defaultListItem} />)
+  .add('default', () => <ListItem {...defaultListItem} />)
   .add('button', () => (
-    <BaseListItem
+    <ListItem
       button={boolean('button', true)}
       disabled={boolean('disabled', false)}
       onClick={action('onClickButton')}
@@ -40,7 +40,7 @@ storiesOf('ListItem|BaseListItem', module)
     />
   ))
   .add('disabled', () => (
-    <BaseListItem
+    <ListItem
       button={boolean('button', false)}
       disabled={boolean('disabled', true)}
       onClick={action('onClickButton')}
@@ -48,7 +48,7 @@ storiesOf('ListItem|BaseListItem', module)
     />
   ))
   .add('icon', () => (
-    <BaseListItem
+    <ListItem
       button={boolean('button', false)}
       disabled={boolean('disabled', false)}
       onClick={action('onClickButton')}
@@ -58,10 +58,10 @@ storiesOf('ListItem|BaseListItem', module)
       <ListItemIcon>
         {iconDictionary(select('Icon', iconOptions, iconDefault))}
       </ListItemIcon>
-    </BaseListItem>
+    </ListItem>
   ))
   .add('selected', () => (
-    <BaseListItem
+    <ListItem
       button={boolean('button', false)}
       disabled={boolean('disabled', false)}
       onClick={action('onClickButton')}
