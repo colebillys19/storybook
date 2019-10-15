@@ -10,7 +10,7 @@ import {
   checkBasicRendering,
   checkRequiredProps,
   checkSimpleChild,
-} from '../../../shared/testingHelpers';
+} from '../../../utils/testingHelpers';
 
 describe('<H1 />', () => {
   const component = <H1>H1 Component</H1>;

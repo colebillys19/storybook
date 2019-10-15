@@ -11,7 +11,7 @@ import {
 import { action } from '@storybook/addon-actions';
 
 import { BaseListItem } from '../index';
-import iconDictionary from '../../../shared/iconDictionary';
+import iconDictionary from '../../../utils/iconDictionary';
 
 const defaultListItem = {
   button: false,

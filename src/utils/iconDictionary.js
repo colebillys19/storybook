@@ -65,7 +65,7 @@ import {
   Visibility,
   VisibilityOff,
   Warning,
-} from './svg';
+} from '../svg';
 
 import { iconStyle, iconSize } from './defaultStyleHelper';
 

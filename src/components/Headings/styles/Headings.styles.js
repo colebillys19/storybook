@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ssDarkGrey } from '../../../shared/defaultStyleHelper';
+import { ssDarkGrey } from '../../../utils/defaultStyleHelper';
 
 export const ExtendedH1 = styled.h1`
   color: ${ssDarkGrey};

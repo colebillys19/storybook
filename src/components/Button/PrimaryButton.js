@@ -11,7 +11,7 @@
 * }
 */
 import styled from 'styled-components';
-import { ssMainBlue, ssMainBlueHover } from '../../shared/defaultStyleHelper';
+import { ssMainBlue, ssMainBlueHover } from '../../utils/defaultStyleHelper';
 import BaseButton from './BaseButton';
 
 const PrimaryButton = styled(BaseButton)`

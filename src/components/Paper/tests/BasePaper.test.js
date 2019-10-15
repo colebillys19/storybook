@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { checkBasicRendering } from '../../../shared/testingHelpers';
+import { checkBasicRendering } from '../../../utils/testingHelpers';
 import BasePaper from '../BasePaper';
 
 describe('<BasePaper />', () => {

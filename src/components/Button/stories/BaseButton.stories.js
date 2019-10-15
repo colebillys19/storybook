@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import iconDictionary from '../../../shared/iconDictionary';
+import iconDictionary from '../../../utils/iconDictionary';
 
 import BaseButton from '../BaseButton';
 
