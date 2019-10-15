@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ContainerWrappedCard from '../ContainerWrappedCard';
-import { checkBasicRendering } from '../../../utils/testingHelpers';
+import { checkBasicRendering } from '../../../shared/testingHelpers';
 
 describe('<ContainerWrappedCard />', () => {
   const propsToPassDown = {};

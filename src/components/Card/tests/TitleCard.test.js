@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TitleCard from '../TitleCard';
-import { checkBasicRendering } from '../../../utils/testingHelpers';
+import { checkBasicRendering } from '../../../shared/testingHelpers';
 
 describe('<TitleCard />', () => {
   const propsToPassDown = {};

@@ -8,7 +8,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { ExtendedH3 } from './styles/H3.styles';
+import { ExtendedH3 } from './styles/Headings.styles';
 
 const H3 = (props) => (
   <ExtendedH3 {...props} />
@@ -21,4 +21,4 @@ H3.propTypes = {
   ]).isRequired,
 };
 
-export { H3 };
+export default H3;

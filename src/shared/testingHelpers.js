@@ -3,7 +3,7 @@ import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { cleanup, fireEvent, renderIntoDocument } from '@testing-library/react';
 import getElementWithContext from 'react-test-context-provider';
-// import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { muiTheme } from '../../.storybook/ThemeProvider';
 
 configure({ adapter: new Adapter() });
 
@@ -183,25 +183,24 @@ export const checkEventHandler = (
  * @return {object}: React element in utility wrapper that allows
  * all the 'react-testing-library' utility functions
  */
-// export const renderingHelper = (
-//   Component,
-//   fn,
-//   { functionName = 'onClick', propsToPassDown, addContext }
-// ) => {
-//   const propsToAdd = Object.assign({}, propsToPassDown);
-//   propsToAdd[functionName] = fn;
+export const renderingHelper = (
+  Component,
+  fn,
+  { functionName = 'onClick', propsToPassDown, addContext }
+) => {
+  const propsToAdd = Object.assign({}, propsToPassDown);
+  propsToAdd[functionName] = fn;
 
-//   // add Mui Theme info (required to render Mui components)
-//   const muiTheme = getMuiTheme();
-//   const context = Object.assign({ muiTheme }, addContext);
+  // add Mui Theme info (required to render Mui components)
+  const context = Object.assign({ muiTheme }, addContext);
 
-//   // create & render component with all necessary context
-//   const component = getElementWithContext(
-//     context,
-//     <Component {...propsToAdd} />
-//   );
-//   return renderIntoDocument(component);
-// };
+  // create & render component with all necessary context
+  const component = getElementWithContext(
+    context,
+    <Component {...propsToAdd} />
+  );
+  return renderIntoDocument(component);
+};
 
 /**
  * @description: Checks that when a specific child of a component is clicked

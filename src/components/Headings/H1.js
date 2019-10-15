@@ -8,7 +8,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { ExtendedH1 } from './styles/H1.styles';
+import { ExtendedH1 } from './styles/Headings.styles';
 
 const H1 = (props) => (
   <ExtendedH1 {...props} />
@@ -21,4 +21,4 @@ H1.propTypes = {
   ]).isRequired,
 };
 
-export { H1 };
+export default H1;

@@ -461,33 +461,33 @@ exports[`Storyshots Cards|TitleCard default 1`] = `
 </div>
 `;
 
-exports[`Storyshots H1|H1 default 1`] = `
+exports[`Storyshots Headings|H1 default 1`] = `
 <h1
-  className="sc-kpOJdX hzZTGW"
+  className="sc-kpOJdX dlYpup"
   style={
     Object {
       "color": "#464A53",
     }
   }
 >
-  H1 Header Text
+  H1 header text
 </h1>
 `;
 
-exports[`Storyshots H2|H2 default 1`] = `
+exports[`Storyshots Headings|H2 default 1`] = `
 <h2
-  className="sc-dxgOiQ coQbAd"
+  className="sc-dxgOiQ bDBJop"
   style={
     Object {
       "color": "#464A53",
     }
   }
 >
-  H2 Header Text
+  H2 header text
 </h2>
 `;
 
-exports[`Storyshots H3|H3 default 1`] = `
+exports[`Storyshots Headings|H3 default 1`] = `
 <h3
   className="sc-ckVGcZ bJUhKy"
   style={
@@ -496,7 +496,7 @@ exports[`Storyshots H3|H3 default 1`] = `
     }
   }
 >
-  H3 Header Text
+  H3 header text
 </h3>
 `;
 

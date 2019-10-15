@@ -4,31 +4,33 @@ import {
   withKnobs,
   select,
 } from '@storybook/addon-knobs/react';
-
+import { text } from '@storybook/addon-knobs';
 
 import {
-  dmiLightGreen,
   dmiMainGreen,
   dmiSecondaryColor,
   ssDarkGrey,
   ssPurple,
+  ssMainBlue,
 } from '../../../shared/defaultStyleHelper';
-import { H2 } from '../index';
+import { H1 } from '../index';
 
 const dmiColorOptions = {
-  dmiLightGreen,
   dmiMainGreen,
   dmiSecondaryColor,
   ssDarkGrey,
+  ssMainBlue,
   ssPurple,
 };
 
-storiesOf('H2|H2', module)
+const defaultH1Text = 'H1 header text';
+
+storiesOf('Headings|H1', module)
   .addDecorator(withKnobs)
   .add('default', () => (
-    <H2
+    <H1
       style={{ color: select('color', dmiColorOptions, ssDarkGrey) }}
     >
-      H2 Header Text
-    </H2>
+      {text('text', defaultH1Text)}
+    </H1>
   ));

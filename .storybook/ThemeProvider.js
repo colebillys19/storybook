@@ -20,7 +20,7 @@ const jss = create({
   insertionPoint: document.getElementById('jss-insertion-point'),
 });
 
-const muiTheme = createMuiTheme({
+export const muiTheme = createMuiTheme({
   overrides: { MuiTooltip: { tooltip: { fontSize: '1.2rem' } } },
   palette: {
     accent3Color: mainGreen,
