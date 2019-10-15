@@ -1,8 +1,6 @@
 /**
- *
  * ErrorBanner
- * @description: Individual error banner which is hidden on the page until an error occurs
- * Use Case: Display this component when an error occurs
+ * @description: ...
  */
 
 import React, { useEffect, useState } from 'react';

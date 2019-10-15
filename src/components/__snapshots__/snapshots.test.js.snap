@@ -44,7 +44,7 @@ exports[`Storyshots Banners|ErrorSuccessBanner error 1`] = `
   color="rgba(193, 54, 63, 1)"
 >
   <div
-    className="sc-htoDjs hiEdTM"
+    className="sc-htoDjs kYYNpa"
   >
     <svg
       aria-hidden="true"
@@ -113,7 +113,7 @@ exports[`Storyshots Banners|ErrorSuccessBanner success 1`] = `
   color="rgba(45, 189, 154, 1)"
 >
   <div
-    className="sc-htoDjs hiEdTM"
+    className="sc-htoDjs kYYNpa"
   >
     <svg
       aria-hidden="true"

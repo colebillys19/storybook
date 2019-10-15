@@ -16,6 +16,8 @@ export const BannerWrapper = styled.div`
 
 export const IconWrapper = styled.div`
   margin-left: 2rem;
+  position: relative;
+  top: 0.2rem;
 `;
 
 export const CloseButton = styled(FlatIconButton)`

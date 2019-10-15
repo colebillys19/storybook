@@ -1,8 +1,6 @@
 /**
- *
  * AlertBanner
- * @description: Individual alert banner for HeaderContainer
- * Use Case: Display this component when needed to show an Alert
+ * @description: ...
  */
 
 import React from 'react';

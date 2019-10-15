@@ -186,7 +186,7 @@ export const checkEventHandler = (
 export const renderingHelper = (
   Component,
   fn,
-  { functionName = 'onClick', propsToPassDown, addContext }
+  { addContext, functionName = 'onClick', propsToPassDown }
 ) => {
   const propsToAdd = Object.assign({}, propsToPassDown);
   propsToAdd[functionName] = fn;
