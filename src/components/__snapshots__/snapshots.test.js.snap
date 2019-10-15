@@ -242,7 +242,7 @@ exports[`Storyshots Buttons|IconButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-153 root styled-icon sc-kEYyzF hPdnBQ"
+      className="MuiSvgIcon-root-153 root styled-icon sc-eHgmQL gcRwue"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -286,7 +286,7 @@ exports[`Storyshots Buttons|IconButton disabled 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-178 root styled-icon sc-kkGfuU dSvbhl"
+      className="MuiSvgIcon-root-178 root styled-icon sc-cvbbAY lfKHPD"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -528,7 +528,7 @@ exports[`Storyshots Links|BaseLink icon 1`] = `
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root-376 root styled-icon sc-iAyFgw ibNxZu"
+    className="MuiSvgIcon-root-376 root styled-icon sc-jWBwVP cflIEy"
     focusable="false"
     role="presentation"
     viewBox="0 0 24 24"
@@ -577,7 +577,7 @@ exports[`Storyshots Links|GhostButtonLink icon 1`] = `
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root-385 root styled-icon sc-hSdWYo jtaFmI"
+    className="MuiSvgIcon-root-385 root styled-icon sc-brqgnP jMBMWu"
     focusable="false"
     role="presentation"
     viewBox="0 0 24 24"
@@ -686,7 +686,7 @@ exports[`Storyshots ListItem|BaseListItem icon 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-621 root styled-icon sc-eHgmQL lbphMB"
+      className="MuiSvgIcon-root-621 root styled-icon sc-cMljjf feSyRy"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -725,6 +725,100 @@ exports[`Storyshots ListItem|BaseListItem selected 1`] = `
 </li>
 `;
 
+exports[`Storyshots Loaders|Indicators default 1`] = `
+<div
+  className="sc-hMqMXs eXjJaW"
+>
+  <section
+    className="sc-iAyFgw eHAjaU"
+  >
+    <div
+      className="sc-jAaTju jUMItn"
+    />
+    <div
+      className="sc-jDwBTQ kDrhPC"
+    />
+    <div
+      className="sc-gPEVay gRYUfF"
+    />
+    <div
+      className="sc-iRbamj jyYzRF"
+    />
+    <div
+      className="sc-jlyJG ifHqfa"
+    />
+    <div
+      className="sc-gipzik dRuUG"
+    />
+    <div
+      className="sc-csuQGl cOSlqY"
+    />
+    <div
+      className="sc-Rmtcm daifoT"
+    />
+    <div
+      className="sc-bRBYWo miixP"
+    />
+    <div
+      className="sc-hzDkRC cuiHlK"
+    />
+    <div
+      className="sc-jhAzac jDFZO"
+    />
+    <div
+      className="sc-fBuWsC jjRQIX"
+    />
+  </section>
+</div>
+`;
+
+exports[`Storyshots Loaders|Indicators small 1`] = `
+<span
+  className="sc-kEYyzF exrwIn"
+>
+  <span
+    className="sc-kkGfuU kReWHd"
+  >
+    <div
+      className="sc-fMiknA lbJIwa"
+    />
+    <div
+      className="sc-dVhcbM kvfeDP"
+    />
+    <div
+      className="sc-eqIVtm ezCKhv"
+    />
+    <div
+      className="sc-fAjcbJ bJXjjs"
+    />
+    <div
+      className="sc-caSCKo bBarZp"
+    />
+    <div
+      className="sc-gisBJw kfVUSM"
+    />
+    <div
+      className="sc-kjoXOD kfaltw"
+    />
+    <div
+      className="sc-cHGsZl kuBUmH"
+    />
+    <div
+      className="sc-TOsTZ bOBAth"
+    />
+    <div
+      className="sc-kgAjT ldRUSv"
+    />
+    <div
+      className="sc-cJSrbW dMxrKR"
+    />
+    <div
+      className="sc-ksYbfQ kfaDUQ"
+    />
+  </span>
+</span>
+`;
+
 exports[`Storyshots Paper|BasePaper default 1`] = `
 <div
   className="MuiPaper-root-684 MuiPaper-elevation2-688 MuiPaper-rounded-685"
@@ -743,7 +837,7 @@ exports[`Storyshots Paper|BasePaper default 1`] = `
 
 exports[`Storyshots Paper|InsetPaper default 1`] = `
 <div
-  className="MuiPaper-root-711 MuiPaper-elevation2-715 MuiPaper-rounded-712 sc-hMqMXs hkKQUG"
+  className="MuiPaper-root-711 MuiPaper-elevation2-715 MuiPaper-rounded-712 sc-hSdWYo fXbWxY"
 >
   <div
     style={
