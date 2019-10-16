@@ -16,7 +16,7 @@ describe('<BaseButton />', () => {
     <BaseButton
       Icon={inboxIcon}
       label="label text"
-      onClick
+      onClick={onClick}
     />
   );
 
@@ -24,7 +24,8 @@ describe('<BaseButton />', () => {
   checkRequiredProps(component);
 
   it('calls onClick when button is clicked', () => {
-    const { container } = render(component);
+    const { container, debug } = render(component);
+    debug();
     const button = container.querySelector('button');
     fireEvent.click(button);
     expect(onClick).toHaveBeenCalledTimes(1);
