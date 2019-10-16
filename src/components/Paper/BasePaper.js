@@ -6,12 +6,12 @@
 */
 import React from 'react';
 import T from 'prop-types';
-import Paper from '@material-ui/core/Paper';
+import StyledPaper from './styles/BasePaper.styles';
 
 const BasePaper = ({ children, ...restProps }) => (
-  <Paper {...restProps}>
+  <StyledPaper {...restProps}>
     {children}
-  </Paper>);
+  </StyledPaper>);
 
 BasePaper.propTypes = { children: T.node };
 
