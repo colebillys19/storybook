@@ -16,7 +16,7 @@ describe('<BaseButton />', () => {
     <BaseButton
       Icon={inboxIcon}
       label="label text"
-      onClick
+      onClick={onClick}
     />
   );
 

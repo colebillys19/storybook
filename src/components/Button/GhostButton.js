@@ -11,12 +11,16 @@
 * }
 */
 import styled from 'styled-components';
-import { greyBorder, ssDarkGrey, ssLightGrey } from '../../utils/defaultStyleHelper';
+import {
+  greyBorder,
+  msLightGrey,
+  ssDarkGrey,
+} from '../../utils/defaultStyleHelper';
 import SecondaryButton from './SecondaryButton';
 
 const GhostButton = styled(SecondaryButton)`
   &:hover {
-    background-color: ${ssLightGrey};
+    background-color: ${msLightGrey};
   }
   background-color: white;
   border: ${greyBorder};
