@@ -27,7 +27,6 @@
     "test": "react-scripts test",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "build-storybook-docs": "build-storybook -s public --docs",
     "release": "auto shipit"
   },
   "lint-staged": {
@@ -181,7 +180,6 @@
     "@storybook/addon-a11y": "5.2.1",
     "@storybook/addon-actions": "5.2.1",
     "@storybook/addon-backgrounds": "5.2.3",
-    "@storybook/addon-docs": "5.2.1",
     "@storybook/addon-knobs": "5.2.1",
     "@storybook/addon-links": "5.2.1",
     "@storybook/addon-storyshots": "5.2.3",
