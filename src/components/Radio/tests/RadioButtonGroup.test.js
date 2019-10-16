@@ -39,7 +39,7 @@ describe('<RadioButtonGroup />', () => {
 
   checkBasicRendering(component);
   checkRequiredProps(component);
-  
+
   it('Expect to radio have been clicked', () => {
     const { getByTestId } = render(component);
     const radio = getByTestId('mui-radio-test').querySelector('input[type="radio"]');

@@ -23,15 +23,15 @@ storiesOf('Radio|RadioButtonGroup', module)
   .add('default', () => {
     const options = [
       {
-        label: text('radio text', labelText),
+        label: text('Radio Text', labelText),
         value: 'radio-text-1',
       },
       {
-        label: text('radio text', labelText),
+        label: text('Radio Text', labelText),
         value: 'radio-text-2',
       },
       {
-        label: text('radio text', labelText),
+        label: text('Radio Text', labelText),
         value: 'radio-text-3',
       },
     ];
@@ -41,7 +41,7 @@ storiesOf('Radio|RadioButtonGroup', module)
         labelPlacement={select('Label Placement', labelPlacementOptions, labelPlacementDefault)}
         onChange={onChange}
         options={options}
-        row={boolean('row', false)}
+        row={boolean('Row', false)}
       />
     );
   })
@@ -66,7 +66,7 @@ storiesOf('Radio|RadioButtonGroup', module)
         labelPlacement={select('Label Placement', labelPlacementOptions, labelPlacementDefault)}
         onChange={onChange}
         options={options}
-        row={boolean('row', false)}
+        row={boolean('Row', false)}
       />
     );
   });
