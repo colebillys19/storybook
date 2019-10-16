@@ -265,7 +265,7 @@ exports[`Storyshots Buttons|FlatIconButton default 1`] = `
 
 exports[`Storyshots Buttons|GhostButton default 1`] = `
 <button
-  className="MuiButtonBase-root-216 MuiButton-root-190 MuiButton-contained-201 MuiButton-raised-204 sc-jzJRlG eJCOkE sc-bdVaJa iRGXdW"
+  className="MuiButtonBase-root-216 MuiButton-root-190 MuiButton-contained-201 MuiButton-raised-204 sc-jzJRlG hTvvkz sc-bdVaJa iRGXdW"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -434,7 +434,7 @@ exports[`Storyshots Buttons|PrimaryButton default 1`] = `
 
 exports[`Storyshots Buttons|SecondaryButton default 1`] = `
 <button
-  className="MuiButtonBase-root-335 MuiButton-root-309 MuiButton-contained-320 MuiButton-raised-323 sc-fjdhpX hnNvrn sc-bdVaJa iRGXdW"
+  className="MuiButtonBase-root-335 MuiButton-root-309 MuiButton-contained-320 MuiButton-raised-323 sc-fjdhpX dQkZpA sc-bdVaJa iRGXdW"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}

@@ -24,8 +24,7 @@ describe('<BaseButton />', () => {
   checkRequiredProps(component);
 
   it('calls onClick when button is clicked', () => {
-    const { container, debug } = render(component);
-    debug();
+    const { container } = render(component);
     const button = container.querySelector('button');
     fireEvent.click(button);
     expect(onClick).toHaveBeenCalledTimes(1);

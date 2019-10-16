@@ -7,6 +7,8 @@ import 'storybook-chromatic';
 import ThemeProvider from './ThemeProvider';
 import GlobalStyle from './globalStyle';
 
+import { msLightGrey, ssLightGrey } from '../src/utils/defaultStyleHelper';
+
 addDecorator(withA11y);
 
 addDecorator(story => (
@@ -18,8 +20,8 @@ addDecorator(story => (
 
 addParameters({
   backgrounds: [
-    { name: "Main Site", value: "#F2F2F2", default: true },
-    { name: "Silver Site", value: "#F0F0F7", default: false },
+    { name: 'Main Site', value: msLightGrey, default: true },
+    { name: 'Silver Site', value: ssLightGrey, default: false },
   ]
 });
 
@@ -30,6 +32,3 @@ function loadStories() {
 }
 
 configure(loadStories, module);
-
-// // automatically import all files ending in *.stories.js|mdx
-// configure(require.context("../src/components", true, /\.stories\.js$/), module);

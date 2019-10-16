@@ -12,14 +12,18 @@
 * }
 */
 import styled from 'styled-components';
-import { msBrightPurple, ssGreyHover, ssLightGrey } from '../../utils/defaultStyleHelper';
+import {
+  msBrightPurple,
+  msLightGrey,
+  ssGreyHover,
+} from '../../utils/defaultStyleHelper';
 import PrimaryButton from './PrimaryButton';
 
 const SecondaryButton = styled(PrimaryButton)`
   &:hover {
     background-color: ${ssGreyHover};
   }
-  background-color: ${ssLightGrey};
+  background-color: ${msLightGrey};
   color: ${msBrightPurple};
 `;
 
