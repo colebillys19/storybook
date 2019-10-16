@@ -45,6 +45,7 @@ describe('<TooltipButton />', () => {
     const { container } = render(component);
     const button = container.querySelector('button');
     fireEvent.mouseOver(button);
+    // wait for tooltip to be displayed
     await waitForElement(
       () => container.querySelector('button[aria-describedby]'),
       { container }
