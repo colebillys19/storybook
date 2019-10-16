@@ -11,14 +11,14 @@
 * }
 */
 import styled from 'styled-components';
-import { ssMainBlue, ssMainBlueHover } from '../../utils/defaultStyleHelper';
+import { msBrightPurple, msHoverPurple } from '../../utils/defaultStyleHelper';
 import BaseButton from './BaseButton';
 
 const PrimaryButton = styled(BaseButton)`
   &:hover {
-    background-color: ${ssMainBlueHover};
+    background-color: ${msHoverPurple};
   };
-  background-color: ${ssMainBlue};
+  background-color: ${msBrightPurple};
   color: white;
 `;
 

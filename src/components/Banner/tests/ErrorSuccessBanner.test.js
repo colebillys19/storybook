@@ -31,17 +31,17 @@ describe('<ErrorSuccessBanner />', () => {
 
   it('renders error banner with correct background color', () => {
     const { container } = render(errorComponent);
-    expect(container.querySelector('div[color="rgba(193, 54, 63, 1)"]')).toBeTruthy();
+    expect(container.querySelector('div[color="#C1363F"]')).toBeTruthy();
   });
 
   it('renders success banner with correct background color', () => {
     const { container } = render(successComponent);
-    expect(container.querySelector('div[color="rgba(45, 189, 154, 1)"]')).toBeTruthy();
+    expect(container.querySelector('div[color="#5DBA9C"]')).toBeTruthy();
   });
 
   it('hides banner when close button is clicked', () => {
     const { container } = render(errorComponent);
-    const banner = container.querySelector('div[color="rgba(193, 54, 63, 1)"]');
+    const banner = container.querySelector('div[color="#C1363F"]');
     const button = container.querySelector('button');
     fireEvent.click(button);
     const styles = getComputedStyle(banner);

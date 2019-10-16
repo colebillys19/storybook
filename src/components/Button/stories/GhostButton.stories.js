@@ -5,7 +5,7 @@ import { withKnobs, select, text } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 
-import SecondaryButton from '../SecondaryButton';
+import GhostButton from '../GhostButton';
 
 const label = 'label text';
 
@@ -27,7 +27,7 @@ const sizeOptions = {
 };
 const sizeDefault = 'mediumSmall';
 
-storiesOf('Buttons|SecondaryButton', module)
+storiesOf('Buttons|GhostButton', module)
   .addDecorator(withKnobs)
   .add('default', () => {
     const icon = iconDictionary(
@@ -36,7 +36,7 @@ storiesOf('Buttons|SecondaryButton', module)
       'button'
     );
     return (
-      <SecondaryButton
+      <GhostButton
         disableFocusRipple
         disableRipple
         Icon={icon}

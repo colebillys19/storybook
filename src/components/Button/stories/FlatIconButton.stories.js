@@ -5,9 +5,10 @@ import { withKnobs, select, text } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 
-import SecondaryButton from '../SecondaryButton';
+import FlatIconButton from '../FlatIconButton';
 
 const label = 'label text';
+const tooltipText = 'tooltip text';
 
 const iconOptions = {
   cancel: 'cancel',
@@ -27,7 +28,7 @@ const sizeOptions = {
 };
 const sizeDefault = 'mediumSmall';
 
-storiesOf('Buttons|SecondaryButton', module)
+storiesOf('Buttons|FlatIconButton', module)
   .addDecorator(withKnobs)
   .add('default', () => {
     const icon = iconDictionary(
@@ -36,12 +37,13 @@ storiesOf('Buttons|SecondaryButton', module)
       'button'
     );
     return (
-      <SecondaryButton
+      <FlatIconButton
         disableFocusRipple
         disableRipple
         Icon={icon}
         label={text('Label Text', label)}
         onClick={action('onClickButton')}
+        tooltipText={text('Tooltip Text', tooltipText)}
       />
     );
   });
