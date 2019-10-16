@@ -2,13 +2,15 @@
 *
 * Card
 * @description Card component for displaying content
-* Use Case : Card receives content passed as children and will have
-* defualt styling that adheres to style guide
+* Usage : {
+*   color: (string) top card border color - optional, defaults to msBrightPurple
+*   width: (string) card width - optional
+* }
 */
 import React from 'react';
 import T from 'prop-types';
 
-import { StyledCard } from './styles/sharedStyles';
+import StyledCard from './styles/BaseCard.styles';
 
 const Card = (restProps) => (
   <StyledCard classes={{ root: 'card' }} {...restProps} />

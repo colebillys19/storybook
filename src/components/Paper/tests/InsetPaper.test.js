@@ -1,11 +1,16 @@
 import React from 'react';
 
-import { checkBasicRendering } from '../../../utils/testingHelpers';
 import InsetPaper from '../InsetPaper';
+import {
+  checkBasicRendering,
+  checkRequiredProps,
+  checkSimpleChild,
+} from '../../../utils/testingHelpers';
 
 describe('<InsetPaper />', () => {
-  const propsToPassDown = {};
-
-  const component = <InsetPaper {...propsToPassDown} />;
+  const paperContent = <div>card content</div>;
+  const component = <InsetPaper>{paperContent}</InsetPaper>;
   checkBasicRendering(component);
+  checkRequiredProps(component);
+  checkSimpleChild(component, paperContent);
 });

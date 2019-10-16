@@ -265,7 +265,7 @@ exports[`Storyshots Buttons|FlatIconButton default 1`] = `
 
 exports[`Storyshots Buttons|GhostButton default 1`] = `
 <button
-  className="MuiButtonBase-root-216 MuiButton-root-190 MuiButton-contained-201 MuiButton-raised-204 sc-jzJRlG eJCOkE sc-bdVaJa iRGXdW"
+  className="MuiButtonBase-root-216 MuiButton-root-190 MuiButton-contained-201 MuiButton-raised-204 sc-jzJRlG hTvvkz sc-bdVaJa iRGXdW"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -434,7 +434,7 @@ exports[`Storyshots Buttons|PrimaryButton default 1`] = `
 
 exports[`Storyshots Buttons|SecondaryButton default 1`] = `
 <button
-  className="MuiButtonBase-root-335 MuiButton-root-309 MuiButton-contained-320 MuiButton-raised-323 sc-fjdhpX hnNvrn sc-bdVaJa iRGXdW"
+  className="MuiButtonBase-root-335 MuiButton-root-309 MuiButton-contained-320 MuiButton-raised-323 sc-fjdhpX dQkZpA sc-bdVaJa iRGXdW"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -548,54 +548,70 @@ exports[`Storyshots Buttons|TooltipButton default 1`] = `
 
 exports[`Storyshots Cards|BaseCard default 1`] = `
 <div
-  className="MuiPaper-root-423 MuiPaper-elevation1-426 MuiPaper-rounded-424 MuiCard-root-422 card sc-kAzzGY cxxeiP"
+  className="MuiPaper-root-423 MuiPaper-elevation1-426 MuiPaper-rounded-424 MuiCard-root-422 card sc-cSHVUG dvYpwr"
+  color="#310078"
 >
   <div
     style={
       Object {
-        "padding": "20px",
+        "padding": "1rem",
       }
     }
   >
-    card content
+    card text
   </div>
 </div>
 `;
 
-exports[`Storyshots Cards|ContainerWrappedCard default 1`] = `
+exports[`Storyshots Cards|BaseCard image 1`] = `
 <div
-  className="MuiPaper-root-450 paper MuiPaper-elevation2-454 MuiPaper-rounded-451 sc-cSHVUG kLVlaS"
+  className="MuiPaper-root-479 MuiPaper-elevation1-482 MuiPaper-rounded-480 MuiCard-root-478 card sc-cSHVUG dvYpwr"
+  color="#310078"
 >
   <div
-    className="MuiPaper-root-450 MuiPaper-elevation1-453 MuiPaper-rounded-451 MuiCard-root-477 card sc-kAzzGY cxxeiP"
+    style={
+      Object {
+        "padding": "1rem",
+      }
+    }
   >
-    <div
+    <img
+      alt="placeholder"
+      src="imagePlaceholder.svg"
       style={
         Object {
-          "padding": "20px",
+          "width": "10rem",
         }
       }
-    >
-      card content
-    </div>
+    />
   </div>
 </div>
 `;
 
-exports[`Storyshots Cards|TitleCard default 1`] = `
+exports[`Storyshots Cards|BaseCard title 1`] = `
 <div
-  className="MuiPaper-root-479 MuiPaper-elevation1-482 MuiPaper-rounded-480 MuiCard-root-478 card sc-chPdSV hUHXzU"
-  color="#4B9FE6"
+  className="MuiPaper-root-451 MuiPaper-elevation1-454 MuiPaper-rounded-452 MuiCard-root-450 card sc-cSHVUG dvYpwr"
+  color="#310078"
 >
-  <h1>
-    card content
-  </h1>
+  <div
+    style={
+      Object {
+        "padding": "1rem",
+      }
+    }
+  >
+    <h1
+      className="sc-kAzzGY dFlnQs"
+    >
+      card text
+    </h1>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Headings|H1 default 1`] = `
 <h1
-  className="sc-kgoBCf dqMhJZ"
+  className="sc-chPdSV iujesU"
   style={
     Object {
       "color": "#464A53",
@@ -608,7 +624,7 @@ exports[`Storyshots Headings|H1 default 1`] = `
 
 exports[`Storyshots Headings|H2 default 1`] = `
 <h2
-  className="sc-kGXeez fxVvND"
+  className="sc-kgoBCf kFsPKU"
   style={
     Object {
       "color": "#464A53",
@@ -621,7 +637,7 @@ exports[`Storyshots Headings|H2 default 1`] = `
 
 exports[`Storyshots Headings|H3 default 1`] = `
 <h3
-  className="sc-kpOJdX cfnwxo"
+  className="sc-kGXeez dyhKDK"
   style={
     Object {
       "color": "#464A53",
@@ -634,7 +650,7 @@ exports[`Storyshots Headings|H3 default 1`] = `
 
 exports[`Storyshots Links|BaseLink default 1`] = `
 <a
-  className="sc-dxgOiQ jtNLXE"
+  className="sc-kpOJdX emQGug"
   classes={
     Object {
       "root": "link",
@@ -649,7 +665,7 @@ exports[`Storyshots Links|BaseLink default 1`] = `
 
 exports[`Storyshots Links|BaseLink icon 1`] = `
 <a
-  className="sc-dxgOiQ jtNLXE"
+  className="sc-kpOJdX emQGug"
   classes={
     Object {
       "root": "link",
@@ -683,7 +699,7 @@ exports[`Storyshots Links|BaseLink icon 1`] = `
 
 exports[`Storyshots Links|GhostButtonLink default 1`] = `
 <a
-  className="sc-ckVGcZ kJmKUs sc-dxgOiQ jtNLXE"
+  className="sc-dxgOiQ cQUnhg sc-kpOJdX emQGug"
   classes={
     Object {
       "root": "link",
@@ -698,7 +714,7 @@ exports[`Storyshots Links|GhostButtonLink default 1`] = `
 
 exports[`Storyshots Links|GhostButtonLink icon 1`] = `
 <a
-  className="sc-ckVGcZ kJmKUs sc-dxgOiQ jtNLXE"
+  className="sc-dxgOiQ cQUnhg sc-kpOJdX emQGug"
   classes={
     Object {
       "root": "link",
@@ -857,10 +873,10 @@ exports[`Storyshots List Items|ListItem selected 1`] = `
 
 exports[`Storyshots Loading Indicators|LoadingIndicator default 1`] = `
 <div
-  className="sc-jKJlTe tEDOl"
+  className="sc-ckVGcZ dfagEm"
 >
   <section
-    className="sc-kEYyzF gcUPwk"
+    className="sc-hMqMXs ksMxRb"
   >
     <div
       className="sc-gipzik lfHZRl"
@@ -904,10 +920,10 @@ exports[`Storyshots Loading Indicators|LoadingIndicator default 1`] = `
 
 exports[`Storyshots Loading Indicators|SmallLoadingIndicator default 1`] = `
 <span
-  className="sc-eNQAEJ dWzeQS"
+  className="sc-jKJlTe dJwQLv"
 >
   <span
-    className="sc-hMqMXs fmjCbJ"
+    className="sc-eNQAEJ eHjyYU"
   >
     <div
       className="sc-gisBJw dogVxU"
@@ -951,54 +967,102 @@ exports[`Storyshots Loading Indicators|SmallLoadingIndicator default 1`] = `
 
 exports[`Storyshots Paper|BasePaper default 1`] = `
 <div
-  className="MuiPaper-root-814 MuiPaper-elevation2-818 MuiPaper-rounded-815"
+  className="MuiPaper-root-814 MuiPaper-elevation2-818 MuiPaper-rounded-815 sc-kEYyzF jXBgyR"
 >
   <div
     style={
       Object {
-        "padding": "20px",
+        "padding": "2rem",
       }
     }
   >
-    paper content
+    paper text
+  </div>
+</div>
+`;
+
+exports[`Storyshots Paper|BasePaper image 1`] = `
+<div
+  className="MuiPaper-root-841 MuiPaper-elevation2-845 MuiPaper-rounded-842 sc-kEYyzF jXBgyR"
+>
+  <div
+    style={
+      Object {
+        "padding": "2rem",
+      }
+    }
+  >
+    <img
+      alt="placeholder"
+      src="imagePlaceholder.svg"
+      style={
+        Object {
+          "width": "10rem",
+        }
+      }
+    />
   </div>
 </div>
 `;
 
 exports[`Storyshots Paper|InsetPaper default 1`] = `
 <div
-  className="MuiPaper-root-841 MuiPaper-elevation2-845 MuiPaper-rounded-842 sc-kkGfuU lbpqxL"
+  className="MuiPaper-root-868 MuiPaper-elevation2-872 MuiPaper-rounded-869 sc-kkGfuU lbpqxL sc-kEYyzF jXBgyR"
 >
   <div
     style={
       Object {
-        "padding": "20px",
+        "padding": "2rem",
       }
     }
   >
-    paper content
+    paper text
+  </div>
+</div>
+`;
+
+exports[`Storyshots Paper|InsetPaper image 1`] = `
+<div
+  className="MuiPaper-root-895 MuiPaper-elevation2-899 MuiPaper-rounded-896 sc-kkGfuU lbpqxL sc-kEYyzF jXBgyR"
+>
+  <div
+    style={
+      Object {
+        "padding": "2rem",
+      }
+    }
+  >
+    <img
+      alt="placeholder"
+      src="imagePlaceholder.svg"
+      style={
+        Object {
+          "width": "10rem",
+        }
+      }
+    />
   </div>
 </div>
 `;
 
 exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
 <div
-  className="MuiFormControl-root-868 form"
+  className="MuiFormControl-root-922 form"
   disableRipple={false}
   labelPlacement="end"
 >
   <div
-    className="MuiFormGroup-root-872 group"
+    className="MuiFormGroup-root-926 group"
     disableRipple={false}
     labelPlacement="end"
     role="radiogroup"
   >
     <label
-      className="MuiFormControlLabel-root-874"
+      className="MuiFormControlLabel-root-928"
       disableRipple={false}
     >
       <span
-        className="MuiButtonBase-root-895 MuiIconButton-root-889 MuiPrivateSwitchBase-root-885 MuiRadio-root-880 radio MuiRadio-colorSecondary-884 sc-iAyFgw zOwdJ"
+        className="MuiButtonBase-root-949 MuiIconButton-root-943 MuiPrivateSwitchBase-root-939 MuiRadio-root-934 radio MuiRadio-colorSecondary-938 sc-iAyFgw zOwdJ"
         labelPlacement="end"
         onBlur={[Function]}
         onContextMenu={[Function]}
@@ -1014,11 +1078,11 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-894"
+          className="MuiIconButton-label-948"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-898"
+            className="MuiSvgIcon-root-952"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1029,7 +1093,7 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-888"
+            className="MuiPrivateSwitchBase-input-942"
             disabled={false}
             onChange={[Function]}
             type="radio"
@@ -1037,21 +1101,21 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-943"
+          className="MuiTouchRipple-root-997"
         />
       </span>
       <span
-        className="MuiTypography-root-907 MuiTypography-body2-915 MuiFormControlLabel-label-879 label"
+        className="MuiTypography-root-961 MuiTypography-body2-969 MuiFormControlLabel-label-933 label"
       >
         LABEL TEXT
       </span>
     </label>
     <label
-      className="MuiFormControlLabel-root-874"
+      className="MuiFormControlLabel-root-928"
       disableRipple={false}
     >
       <span
-        className="MuiButtonBase-root-895 MuiIconButton-root-889 MuiPrivateSwitchBase-root-885 MuiRadio-root-880 radio MuiRadio-colorSecondary-884 sc-iAyFgw zOwdJ"
+        className="MuiButtonBase-root-949 MuiIconButton-root-943 MuiPrivateSwitchBase-root-939 MuiRadio-root-934 radio MuiRadio-colorSecondary-938 sc-iAyFgw zOwdJ"
         labelPlacement="end"
         onBlur={[Function]}
         onContextMenu={[Function]}
@@ -1067,11 +1131,11 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-894"
+          className="MuiIconButton-label-948"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-898"
+            className="MuiSvgIcon-root-952"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1082,7 +1146,7 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-888"
+            className="MuiPrivateSwitchBase-input-942"
             disabled={false}
             onChange={[Function]}
             type="radio"
@@ -1090,21 +1154,21 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-943"
+          className="MuiTouchRipple-root-997"
         />
       </span>
       <span
-        className="MuiTypography-root-907 MuiTypography-body2-915 MuiFormControlLabel-label-879 label"
+        className="MuiTypography-root-961 MuiTypography-body2-969 MuiFormControlLabel-label-933 label"
       >
         LABEL TEXT
       </span>
     </label>
     <label
-      className="MuiFormControlLabel-root-874"
+      className="MuiFormControlLabel-root-928"
       disableRipple={false}
     >
       <span
-        className="MuiButtonBase-root-895 MuiIconButton-root-889 MuiPrivateSwitchBase-root-885 MuiRadio-root-880 radio MuiRadio-colorSecondary-884 sc-iAyFgw zOwdJ"
+        className="MuiButtonBase-root-949 MuiIconButton-root-943 MuiPrivateSwitchBase-root-939 MuiRadio-root-934 radio MuiRadio-colorSecondary-938 sc-iAyFgw zOwdJ"
         labelPlacement="end"
         onBlur={[Function]}
         onContextMenu={[Function]}
@@ -1120,11 +1184,11 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-894"
+          className="MuiIconButton-label-948"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-898"
+            className="MuiSvgIcon-root-952"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1135,7 +1199,7 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-888"
+            className="MuiPrivateSwitchBase-input-942"
             disabled={false}
             onChange={[Function]}
             type="radio"
@@ -1143,11 +1207,11 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-943"
+          className="MuiTouchRipple-root-997"
         />
       </span>
       <span
-        className="MuiTypography-root-907 MuiTypography-body2-915 MuiFormControlLabel-label-879 label"
+        className="MuiTypography-root-961 MuiTypography-body2-969 MuiFormControlLabel-label-933 label"
       >
         LABEL TEXT
       </span>
@@ -1158,20 +1222,20 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
 
 exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
 <div
-  className="MuiFormControl-root-950 form"
+  className="MuiFormControl-root-1004 form"
   labelPlacement="end"
 >
   <div
-    className="MuiFormGroup-root-954 group"
+    className="MuiFormGroup-root-1008 group"
     disabled={true}
     labelPlacement="end"
     role="radiogroup"
   >
     <label
-      className="MuiFormControlLabel-root-956 MuiFormControlLabel-disabled-960"
+      className="MuiFormControlLabel-root-1010 MuiFormControlLabel-disabled-1014"
     >
       <span
-        className="MuiButtonBase-root-977 MuiButtonBase-disabled-978 MuiIconButton-root-971 MuiIconButton-disabled-975 MuiPrivateSwitchBase-root-967 MuiRadio-root-962 radio MuiRadio-colorSecondary-966 MuiPrivateSwitchBase-disabled-969 MuiRadio-disabled-964 sc-iAyFgw zOwdJ"
+        className="MuiButtonBase-root-1031 MuiButtonBase-disabled-1032 MuiIconButton-root-1025 MuiIconButton-disabled-1029 MuiPrivateSwitchBase-root-1021 MuiRadio-root-1016 radio MuiRadio-colorSecondary-1020 MuiPrivateSwitchBase-disabled-1023 MuiRadio-disabled-1018 sc-iAyFgw zOwdJ"
         labelPlacement="end"
         onBlur={[Function]}
         onContextMenu={[Function]}
@@ -1187,11 +1251,11 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         tabIndex="-1"
       >
         <span
-          className="MuiIconButton-label-976"
+          className="MuiIconButton-label-1030"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-980"
+            className="MuiSvgIcon-root-1034"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1202,7 +1266,7 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-970"
+            className="MuiPrivateSwitchBase-input-1024"
             disabled={true}
             onChange={[Function]}
             type="radio"
@@ -1211,16 +1275,16 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         </span>
       </span>
       <span
-        className="MuiTypography-root-989 MuiTypography-body2-997 MuiFormControlLabel-label-961 label MuiFormControlLabel-disabled-960"
+        className="MuiTypography-root-1043 MuiTypography-body2-1051 MuiFormControlLabel-label-1015 label MuiFormControlLabel-disabled-1014"
       >
         LABEL TEXT
       </span>
     </label>
     <label
-      className="MuiFormControlLabel-root-956 MuiFormControlLabel-disabled-960"
+      className="MuiFormControlLabel-root-1010 MuiFormControlLabel-disabled-1014"
     >
       <span
-        className="MuiButtonBase-root-977 MuiButtonBase-disabled-978 MuiIconButton-root-971 MuiIconButton-disabled-975 MuiPrivateSwitchBase-root-967 MuiRadio-root-962 radio MuiRadio-colorSecondary-966 MuiPrivateSwitchBase-disabled-969 MuiRadio-disabled-964 sc-iAyFgw zOwdJ"
+        className="MuiButtonBase-root-1031 MuiButtonBase-disabled-1032 MuiIconButton-root-1025 MuiIconButton-disabled-1029 MuiPrivateSwitchBase-root-1021 MuiRadio-root-1016 radio MuiRadio-colorSecondary-1020 MuiPrivateSwitchBase-disabled-1023 MuiRadio-disabled-1018 sc-iAyFgw zOwdJ"
         labelPlacement="end"
         onBlur={[Function]}
         onContextMenu={[Function]}
@@ -1236,11 +1300,11 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         tabIndex="-1"
       >
         <span
-          className="MuiIconButton-label-976"
+          className="MuiIconButton-label-1030"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-980"
+            className="MuiSvgIcon-root-1034"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1251,7 +1315,7 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-970"
+            className="MuiPrivateSwitchBase-input-1024"
             disabled={true}
             onChange={[Function]}
             type="radio"
@@ -1260,16 +1324,16 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         </span>
       </span>
       <span
-        className="MuiTypography-root-989 MuiTypography-body2-997 MuiFormControlLabel-label-961 label MuiFormControlLabel-disabled-960"
+        className="MuiTypography-root-1043 MuiTypography-body2-1051 MuiFormControlLabel-label-1015 label MuiFormControlLabel-disabled-1014"
       >
         LABEL TEXT
       </span>
     </label>
     <label
-      className="MuiFormControlLabel-root-956 MuiFormControlLabel-disabled-960"
+      className="MuiFormControlLabel-root-1010 MuiFormControlLabel-disabled-1014"
     >
       <span
-        className="MuiButtonBase-root-977 MuiButtonBase-disabled-978 MuiIconButton-root-971 MuiIconButton-disabled-975 MuiPrivateSwitchBase-root-967 MuiRadio-root-962 radio MuiRadio-colorSecondary-966 MuiPrivateSwitchBase-disabled-969 MuiRadio-disabled-964 sc-iAyFgw zOwdJ"
+        className="MuiButtonBase-root-1031 MuiButtonBase-disabled-1032 MuiIconButton-root-1025 MuiIconButton-disabled-1029 MuiPrivateSwitchBase-root-1021 MuiRadio-root-1016 radio MuiRadio-colorSecondary-1020 MuiPrivateSwitchBase-disabled-1023 MuiRadio-disabled-1018 sc-iAyFgw zOwdJ"
         labelPlacement="end"
         onBlur={[Function]}
         onContextMenu={[Function]}
@@ -1285,11 +1349,11 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         tabIndex="-1"
       >
         <span
-          className="MuiIconButton-label-976"
+          className="MuiIconButton-label-1030"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-980"
+            className="MuiSvgIcon-root-1034"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1300,7 +1364,7 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-970"
+            className="MuiPrivateSwitchBase-input-1024"
             disabled={true}
             onChange={[Function]}
             type="radio"
@@ -1309,7 +1373,7 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         </span>
       </span>
       <span
-        className="MuiTypography-root-989 MuiTypography-body2-997 MuiFormControlLabel-label-961 label MuiFormControlLabel-disabled-960"
+        className="MuiTypography-root-1043 MuiTypography-body2-1051 MuiFormControlLabel-label-1015 label MuiFormControlLabel-disabled-1014"
       >
         LABEL TEXT
       </span>
