@@ -13,11 +13,7 @@ import { action } from '@storybook/addon-actions';
 import { ListItem } from '../index';
 import iconDictionary from '../../../utils/iconDictionary';
 
-const defaultListItem = {
-  button: false,
-  disabled: false,
-  text: 'Default List Item',
-};
+const listItemText = 'List Item Text';
 
 const iconOptions = {
   cancel: 'cancel',
@@ -30,21 +26,19 @@ const iconDefault = 'star';
 
 storiesOf('List Items|ListItem', module)
   .addDecorator(withKnobs)
-  .add('default', () => <ListItem {...defaultListItem} />)
+  .add('default', () => <ListItem text={listItemText} />)
   .add('button', () => (
     <ListItem
-      button={boolean('button', true)}
+      button
       disabled={boolean('disabled', false)}
       onClick={action('onClickButton')}
-      text={text('text', 'List Item Button')}
+      text={text('Text', listItemText)}
     />
   ))
   .add('disabled', () => (
     <ListItem
-      button={boolean('button', false)}
-      disabled={boolean('disabled', true)}
-      onClick={action('onClickButton')}
-      text={text('text', 'List Item Disabled')}
+      disabled
+      text={text('Text', listItemText)}
     />
   ))
   .add('icon', () => (
@@ -53,7 +47,7 @@ storiesOf('List Items|ListItem', module)
       disabled={boolean('disabled', false)}
       onClick={action('onClickButton')}
       selected={boolean('selected', false)}
-      text={text('text', 'List Item w/ Icon')}
+      text={text('Text', listItemText)}
     >
       <ListItemIcon>
         {iconDictionary(select('Icon', iconOptions, iconDefault))}
@@ -64,8 +58,7 @@ storiesOf('List Items|ListItem', module)
     <ListItem
       button={boolean('button', false)}
       disabled={boolean('disabled', false)}
-      onClick={action('onClickButton')}
-      selected={boolean('selected', true)}
-      text={text('text', 'List Item Selected')}
+      selected
+      text={text('Text', listItemText)}
     />
   ));

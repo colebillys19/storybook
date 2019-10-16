@@ -31,6 +31,10 @@ const sizeOptions = {
 
 const sizeDefault = 'mediumSmall';
 
+const labelText = 'LABEL TEXT';
+
+const path = 'path';
+
 storiesOf('Links|GhostButtonLink', module)
   .addDecorator(withKnobs)
   .addDecorator((story) => (
@@ -38,18 +42,18 @@ storiesOf('Links|GhostButtonLink', module)
   ))
   .add('default', () => (
     <GhostButtonLink
-      label={text('label', 'Ghost Button Link', 'Link Props')}
-      path={text('path', 'path', 'Link Props')}
+      label={text('Label', labelText)}
+      path={path}
     />
   ))
   .add('icon', () => (
     <GhostButtonLink
       Icon={iconDictionary(
-        select('Icon', iconOptions, iconDefault, 'Icon Props'),
-        select('Icon Size', sizeOptions, sizeDefault, 'Icon Props'),
+        select('Icon', iconOptions, iconDefault),
+        select('Icon Size', sizeOptions, sizeDefault),
         'header',
       )}
-      label={text('label', 'Ghost Button Link', 'Link Props')}
-      path={text('path', 'path', 'Link Props')}
+      label={text('Label', labelText)}
+      path={path}
     />
   ));

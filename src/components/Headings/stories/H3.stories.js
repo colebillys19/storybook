@@ -23,14 +23,14 @@ const dmiColorOptions = {
   ssPurple,
 };
 
-const defaultH3Text = 'H3 header text';
+const defaultH3Text = 'H3 HEADER TEXT';
 
 storiesOf('Headings|H3', module)
   .addDecorator(withKnobs)
   .add('default', () => (
     <H3
-      style={{ color: select('color', dmiColorOptions, ssDarkGrey) }}
+      style={{ color: select('Color', dmiColorOptions, ssDarkGrey) }}
     >
-      {text('text', defaultH3Text)}
+      {text('Text', defaultH3Text)}
     </H3>
   ));
