@@ -1,10 +1,12 @@
 import React from 'react';
 import T from 'prop-types';
 import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableHead from '@material-ui/core/TableHead';
-import Paper from '@material-ui/core/Paper';
 
+import {
+  StyledPaper,
+  StyledTableBody,
+  StyledTableHead,
+} from './styles/BaseTable.styles';
 import BaseTableRow from './BaseTableRow';
 
 export default function BaseTable({
@@ -20,16 +22,16 @@ export default function BaseTable({
     />
   ));
   return (
-    <Paper>
-      <Table size="small">
-        <TableHead>
+    <StyledPaper>
+      <Table>
+        <StyledTableHead>
           <BaseTableRow centeredCols={centeredCols} data={headers} />
-        </TableHead>
-        <TableBody>
+        </StyledTableHead>
+        <StyledTableBody>
           {rows}
-        </TableBody>
+        </StyledTableBody>
       </Table>
-    </Paper>
+    </StyledPaper>
   );
 }
 

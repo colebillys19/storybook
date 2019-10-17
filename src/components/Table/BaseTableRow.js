@@ -3,19 +3,18 @@
 import React from 'react';
 import T from 'prop-types';
 import uuid from 'uuid/v4';
-import TableRow from '@material-ui/core/TableRow';
 
-import { StyledTableCell } from './styles/BaseTableRow.styles';
+import { StyledTableCell, StyledTableRow } from './styles/BaseTableRow.styles';
 
 export default function BaseTableRow({ centeredCols, data }) {
   const cells = data.map((cell, i) => {
-    const isCentered = centeredCols.includes(i) ? 0 : 1;
+    const isCentered = centeredCols.length && centeredCols.includes(i) ? 1 : 0;
     return <StyledTableCell key={uuid()} iscentered={isCentered}>{cell}</StyledTableCell>;
   });
   return (
-    <TableRow>
+    <StyledTableRow>
       {cells}
-    </TableRow>
+    </StyledTableRow>
   );
 }
 
