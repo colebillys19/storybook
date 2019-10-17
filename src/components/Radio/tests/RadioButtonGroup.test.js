@@ -27,30 +27,28 @@ describe('<RadioButtonGroup />', () => {
   ];
 
   const component = (
-    <div data-testid="mui-radio-test">
-      <RadioButtonGroup
-        onChange={handleChange}
-        onClick={onClick}
-        options={options}
-        value={initialValue}
-      />
-    </div>
+    <RadioButtonGroup
+      onChange={handleChange}
+      onClick={onClick}
+      options={options}
+      value={initialValue}
+    />
   );
 
   checkBasicRendering(component);
   checkRequiredProps(component);
 
   it('Expect to radio have been clicked', () => {
-    const { getByTestId } = render(component);
-    const radio = getByTestId('mui-radio-test').querySelector('input[type="radio"]');
+    const { container } = render(component);
+    const radio = container.querySelector('input[type="radio"]');
     fireEvent.click(radio);
     expect(radio).toHaveProperty('checked', true);
     expect(onClick).toHaveBeenCalled();
   });
 
   it('Expect to radio value to have changed', () => {
-    const { getByTestId } = render(component);
-    const radio = getByTestId('mui-radio-test').querySelector('input[type="radio"]');
+    const { container } = render(component);
+    const radio = container.querySelector('input[type="radio"]');
     expect(radio).toHaveProperty('checked', true);
     fireEvent.change(radio, { target: { value: 'option2' } });
     expect(radio.value).toBe('option2');
