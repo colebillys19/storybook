@@ -1,7 +1,7 @@
 import React from 'react';
 
 import BaseTable from '../BaseTable';
-import BaseTableRow from '../BaseTableRow';
+import BaseTableRow from '../sub-components/BaseTableRow';
 import {
   checkBasicRendering,
   checkChildren,
@@ -28,7 +28,7 @@ describe('<BaseTable />', () => {
     />
   ));
   const tableBody = (
-    <StyledTableBody hoverColor={hoverColor}>
+    <StyledTableBody hovercolor={hoverColor}>
       {rows}
     </StyledTableBody>
   );

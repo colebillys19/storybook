@@ -6,7 +6,7 @@ import {
   StyledTableBody,
   StyledTableHead,
 } from './styles/BaseTable.styles';
-import BaseTableRow from './BaseTableRow';
+import BaseTableRow from './sub-components/BaseTableRow';
 
 export default function BaseTable({
   centeredCols,
@@ -26,7 +26,7 @@ export default function BaseTable({
       <StyledTableHead>
         <BaseTableRow centeredCols={centeredCols} data={headers} />
       </StyledTableHead>
-      <StyledTableBody hoverColor={hoverColor}>
+      <StyledTableBody hovercolor={hoverColor}>
         {rows}
       </StyledTableBody>
     </StyledTable>

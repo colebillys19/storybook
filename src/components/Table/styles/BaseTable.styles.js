@@ -9,7 +9,7 @@ export const StyledTable = styled(Table)`
 
 export const StyledTableBody = styled(TableBody)`
   tr:hover {
-    background-color: ${({ hoverColor }) => hoverColor || ''};
+    background-color: ${({ hovercolor }) => hovercolor || ''};
   }
 `;
 

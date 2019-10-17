@@ -4,7 +4,7 @@ import React from 'react';
 import T from 'prop-types';
 import uuid from 'uuid/v4';
 
-import { StyledTableCell, StyledTableRow } from './styles/BaseTableRow.styles';
+import { StyledTableCell, StyledTableRow } from './BaseTableRow.styles';
 
 export default function BaseTableRow({ centeredCols, data }) {
   const cells = data.map((cell, i) => {
