@@ -15,10 +15,9 @@ describe('<Checkbox />', () => {
 
   checkBasicRendering(component);
   checkRequiredProps(component);
-
   checkEventHandler(component, 'change', handleChange);
 
-  it('Expect to checkbox to have changed', () => {
+  it('Expect checkbox to have changed', () => {
     const { container } = render(component);
     const checkbox = container.querySelector('input[type="checkbox"]');
     expect(checkbox.checked).toEqual(false);
