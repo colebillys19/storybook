@@ -67,7 +67,6 @@ export const checkChildren = (component, expectedChildren) => {
     });
   });
 
-
   describe('Children should render the correct props in the correct order',
     () => {
       const children = Array

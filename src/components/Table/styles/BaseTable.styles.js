@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import Paper from '@material-ui/core/Paper';
+import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableHead from '@material-ui/core/TableHead';
 
-export const StyledPaper = styled(Paper)`
+export const StyledTable = styled(Table)`
   width: max-content;
 `;
 
 export const StyledTableBody = styled(TableBody)`
   tr:hover {
-    background-color: #F9F9F9;
+    background-color: ${({ hoverColor }) => hoverColor || ''};
   }
 `;
 

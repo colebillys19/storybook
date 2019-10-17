@@ -21,7 +21,8 @@ import {
 } from '../constants';
 
 const centeredColsA = [1, 2, 3, 4];
-const centeredColsB = [];
+const centeredColsB = [1, 2, 3];
+const hoverColor = '#F8F8F8';
 
 storiesOf('Tables|BaseTable', module)
   .addDecorator(withKnobs)
@@ -29,6 +30,7 @@ storiesOf('Tables|BaseTable', module)
     <BaseTable
       centeredCols={text('Centered Columns', centeredColsA)}
       headers={HEADERS_A}
+      hoverColor={text('Row Hover Color', hoverColor)}
       rowData={ROWDATA_A}
     />
   ))
@@ -36,6 +38,7 @@ storiesOf('Tables|BaseTable', module)
     <BaseTable
       centeredCols={text('Centered Columns', centeredColsB)}
       headers={HEADERS_B}
+      hoverColor={text('Row Hover Color', hoverColor)}
       rowData={ROWDATA_B}
     />
   ));
