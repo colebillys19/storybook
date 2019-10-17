@@ -6,6 +6,7 @@ export { storybookStyles, storybookTestHelpers };
 export * from './components/Banner';
 export * from './components/Button';
 export * from './components/Card';
+export * from './components/Checkbox';
 export * from './components/Headings';
 export * from './components/Link';
 export * from './components/ListItem';
