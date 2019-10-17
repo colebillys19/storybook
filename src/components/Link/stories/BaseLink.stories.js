@@ -32,6 +32,10 @@ const sizeOptions = {
 
 const sizeDefault = 'mediumSmall';
 
+const labelText = 'LABEL TEXT';
+
+const path = 'path';
+
 storiesOf('Links|BaseLink', module)
   .addDecorator((story) => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
@@ -39,18 +43,18 @@ storiesOf('Links|BaseLink', module)
   .addDecorator(withKnobs)
   .add('default', () => (
     <BaseLink
-      label={text('label', 'Base Link', 'Link Props')}
-      path={text('path', 'path', 'Link Props')}
+      label={text('Label', labelText, 'Link Props')}
+      path={path}
     />
   ))
   .add('icon', () => (
     <BaseLink
       Icon={iconDictionary(
-        select('Icon', iconOptions, iconDefault, 'Icon Props'),
-        select('Icon Size', sizeOptions, sizeDefault, 'Icon Props'),
+        select('Icon', iconOptions, iconDefault),
+        select('Icon Size', sizeOptions, sizeDefault),
         'header',
       )}
-      label={text('label', 'Base Link', 'Link Props')}
-      path={text('path', 'path', 'Link Props')}
+      label={text('Label', labelText)}
+      path={path}
     />
   ));
