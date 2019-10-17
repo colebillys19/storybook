@@ -5,7 +5,7 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 
 import TextButton from '../TextButton';
 
-const label = 'label text';
+const label = 'LABEL TEXT';
 
 storiesOf('Buttons|TextButton', module)
   .addDecorator(withKnobs)

@@ -7,7 +7,7 @@ import iconDictionary from '../../../utils/iconDictionary';
 
 import TooltipButton from '../TooltipButton';
 
-const label = 'label text';
+const label = 'LABEL TEXT';
 const tooltipText = 'tooltip text';
 
 const enterDelayOptions = {

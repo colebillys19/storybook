@@ -7,7 +7,7 @@ import iconDictionary from '../../../utils/iconDictionary';
 
 import FlatIconButton from '../FlatIconButton';
 
-const label = 'label text';
+const label = 'LABEL TEXT';
 const tooltipText = 'tooltip text';
 
 const iconOptions = {

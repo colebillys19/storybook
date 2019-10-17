@@ -1,10 +1,9 @@
 import React from 'react';
 import T from 'prop-types';
 import FormControl from '@material-ui/core/FormControl';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import RadioGroup from '@material-ui/core/RadioGroup';
 
-import { StyledRadioButton } from './styles/Radio.styles';
+import { StyledFormControlLabel, StyledRadioButton } from './styles/Radio.styles';
 
 export const RadioButtonGroup = ({
   onChange,
@@ -31,7 +30,7 @@ export const RadioButtonGroup = ({
       >
         {
           options.map(({ label, value }) => (
-            <FormControlLabel
+            <StyledFormControlLabel
               key={`radio-option-${value}`}
               classes={{ label: 'label' }}
               control={radio}

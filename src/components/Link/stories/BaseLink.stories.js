@@ -30,7 +30,7 @@ const sizeOptions = {
   xSmall: 'xSmall',
 };
 
-const sizeDefault = 'mediumSmall';
+const sizeDefault = 'small';
 
 const labelText = 'LABEL TEXT';
 
@@ -43,7 +43,7 @@ storiesOf('Links|BaseLink', module)
   .addDecorator(withKnobs)
   .add('default', () => (
     <BaseLink
-      label={text('Label', labelText, 'Link Props')}
+      label={text('Label Text', labelText, 'Link Props')}
       path={path}
     />
   ))
@@ -52,9 +52,9 @@ storiesOf('Links|BaseLink', module)
       Icon={iconDictionary(
         select('Icon', iconOptions, iconDefault),
         select('Icon Size', sizeOptions, sizeDefault),
-        'header',
+        'button',
       )}
-      label={text('Label', labelText)}
+      label={text('Label Text', labelText)}
       path={path}
     />
   ));

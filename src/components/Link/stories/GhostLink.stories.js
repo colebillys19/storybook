@@ -29,7 +29,7 @@ const sizeOptions = {
   xSmall: 'xSmall',
 };
 
-const sizeDefault = 'mediumSmall';
+const sizeDefault = 'small';
 
 const labelText = 'LABEL TEXT';
 
@@ -51,7 +51,7 @@ storiesOf('Links|GhostButtonLink', module)
       Icon={iconDictionary(
         select('Icon', iconOptions, iconDefault),
         select('Icon Size', sizeOptions, sizeDefault),
-        'header',
+        'button',
       )}
       label={text('Label', labelText)}
       path={path}

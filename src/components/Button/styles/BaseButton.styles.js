@@ -16,6 +16,7 @@ const StyledBaseButton = styled(Button)`
   font-weight: 500;
   margin: 1rem;
   padding: 1rem 2.8rem;
+  text-transform: none;
 `;
 
 export const StyledCircularProgress = styled(CircularProgress)`

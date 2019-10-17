@@ -7,7 +7,7 @@ import iconDictionary from '../../../utils/iconDictionary';
 
 import PrimaryButton from '../PrimaryButton';
 
-const label = 'label text';
+const label = 'LABEL TEXT';
 
 const iconOptions = {
   cancel: 'cancel',

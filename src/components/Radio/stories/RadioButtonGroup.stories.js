@@ -16,23 +16,23 @@ const labelPlacementDefault = 'end';
 
 const labelText = 'LABEL TEXT';
 
-const onChange = () => 'defaultOnchange';
+const onChange = () => 'defaultOnChange';
 
 storiesOf('Radio|RadioButtonGroup', module)
   .addDecorator(withKnobs)
   .add('default', () => {
     const options = [
       {
-        label: text('Radio Text', labelText),
-        value: 'radio-text-1',
+        label: text('Label Text', labelText),
+        value: 'label-text-1',
       },
       {
-        label: text('Radio Text', labelText),
-        value: 'radio-text-2',
+        label: text('Label Text', labelText),
+        value: 'label-text-2',
       },
       {
-        label: text('Radio Text', labelText),
-        value: 'radio-text-3',
+        label: text('Label Text', labelText),
+        value: 'label-text-3',
       },
     ];
     return (
@@ -48,16 +48,16 @@ storiesOf('Radio|RadioButtonGroup', module)
   .add('disabled', () => {
     const options = [
       {
-        label: text('Radio Text', labelText),
-        value: 'radio-text-1',
+        label: text('Label Text', labelText),
+        value: 'label-text-1',
       },
       {
-        label: text('Radio Text', labelText),
-        value: 'radio-text-2',
+        label: text('Label Text', labelText),
+        value: 'label-text-2',
       },
       {
-        label: text('Radio Text', labelText),
-        value: 'radio-text-3',
+        label: text('Label Text', labelText),
+        value: 'label-text-3',
       },
     ];
     return (
