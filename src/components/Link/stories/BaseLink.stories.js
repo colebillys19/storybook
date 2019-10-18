@@ -43,6 +43,7 @@ const labelText = 'LABEL TEXT';
 const path = 'path';
 
 storiesOf('Links|BaseLink', module)
+  .addParameters({ component: BaseLink })
   .addDecorator((story) => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))

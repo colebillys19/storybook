@@ -25,6 +25,7 @@ const colorOptions = {
 };
 
 storiesOf('Checkbox|Checkbox', module)
+  .addParameters({ component: Checkbox })
   .addDecorator(withKnobs)
   .add('default', () => (
     <Checkbox

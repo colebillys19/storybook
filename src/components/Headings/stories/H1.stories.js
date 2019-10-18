@@ -34,6 +34,7 @@ const dmiColorOptions = {
 const defaultH1Text = 'H1 HEADER TEXT';
 
 storiesOf('Headings|H1', module)
+  .addParameters({ component: H1 })
   .addDecorator(withKnobs)
   .add('default', () => (
     <H1

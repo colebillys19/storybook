@@ -34,6 +34,7 @@ const dmiColorOptions = {
 const defaultH3Text = 'H3 HEADER TEXT';
 
 storiesOf('Headings|H3', module)
+  .addParameters({ component: H3 })
   .addDecorator(withKnobs)
   .add('default', () => (
     <H3

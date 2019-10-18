@@ -27,6 +27,7 @@ const labelText = 'LABEL TEXT';
 const onChange = () => 'defaultOnChange';
 
 storiesOf('Radio|RadioButtonGroup', module)
+  .addParameters({ component: RadioButtonGroup })
   .addDecorator(withKnobs)
   .add('default', () => {
     const options = [

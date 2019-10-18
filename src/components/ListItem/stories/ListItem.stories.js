@@ -33,6 +33,7 @@ const iconOptions = {
 const iconDefault = 'star';
 
 storiesOf('List Items|ListItem', module)
+  .addParameters({ component: ListItem })
   .addDecorator(withKnobs)
   .add('default', () => <ListItem text={listItemText} />)
   .add('button', () => (
