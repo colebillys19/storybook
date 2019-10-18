@@ -609,56 +609,9 @@ exports[`Storyshots Cards|BaseCard title 1`] = `
 </div>
 `;
 
-exports[`Storyshots Checkbox|Checkbox checked 1`] = `
-<span
-  className="MuiButtonBase-root-585 MuiIconButton-root-579 MuiPrivateSwitchBase-root-575 MuiCheckbox-root-569 MuiCheckbox-colorSecondary-574 MuiPrivateSwitchBase-checked-576 MuiCheckbox-checked-570"
-  onBlur={[Function]}
-  onClick={[Function]}
-  onContextMenu={[Function]}
-  onFocus={[Function]}
-  onKeyDown={[Function]}
-  onKeyUp={[Function]}
-  onMouseDown={[Function]}
-  onMouseLeave={[Function]}
-  onMouseUp={[Function]}
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  tabIndex={null}
->
-  <span
-    className="MuiIconButton-label-584"
-  >
-    <svg
-      aria-hidden="true"
-      className="MuiSvgIcon-root-588"
-      focusable="false"
-      role="presentation"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-      />
-    </svg>
-    <input
-      checked={true}
-      className="MuiPrivateSwitchBase-input-578"
-      data-indeterminate={false}
-      disabled={false}
-      onChange={[Function]}
-      type="checkbox"
-      value="value"
-    />
-  </span>
-  <span
-    className="MuiTouchRipple-root-597"
-  />
-</span>
-`;
-
 exports[`Storyshots Checkbox|Checkbox default 1`] = `
 <span
-  className="MuiButtonBase-root-522 MuiIconButton-root-516 MuiPrivateSwitchBase-root-512 MuiCheckbox-root-506 MuiCheckbox-colorSecondary-511"
+  className="MuiButtonBase-root-522 MuiIconButton-root-516 MuiPrivateSwitchBase-root-512 MuiCheckbox-root-506 MuiPrivateSwitchBase-checked-513 MuiCheckbox-checked-507"
   onBlur={[Function]}
   onClick={[Function]}
   onContextMenu={[Function]}
@@ -684,11 +637,11 @@ exports[`Storyshots Checkbox|Checkbox default 1`] = `
       viewBox="0 0 24 24"
     >
       <path
-        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+        d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
       />
     </svg>
     <input
-      checked={false}
+      checked={true}
       className="MuiPrivateSwitchBase-input-515"
       data-indeterminate={false}
       disabled={false}
@@ -705,7 +658,7 @@ exports[`Storyshots Checkbox|Checkbox default 1`] = `
 
 exports[`Storyshots Checkbox|Checkbox disabled 1`] = `
 <span
-  className="MuiButtonBase-root-557 MuiButtonBase-disabled-558 MuiIconButton-root-551 MuiIconButton-disabled-555 MuiPrivateSwitchBase-root-547 MuiCheckbox-root-541 MuiCheckbox-colorSecondary-546 MuiPrivateSwitchBase-disabled-549 MuiCheckbox-disabled-543"
+  className="MuiButtonBase-root-592 MuiButtonBase-disabled-593 MuiIconButton-root-586 MuiIconButton-disabled-590 MuiPrivateSwitchBase-root-582 MuiCheckbox-root-576 MuiCheckbox-colorSecondary-581 MuiPrivateSwitchBase-disabled-584 MuiCheckbox-disabled-578"
   onBlur={[Function]}
   onClick={[Function]}
   onContextMenu={[Function]}
@@ -719,6 +672,50 @@ exports[`Storyshots Checkbox|Checkbox disabled 1`] = `
   onTouchMove={[Function]}
   onTouchStart={[Function]}
   tabIndex="-1"
+>
+  <span
+    className="MuiIconButton-label-591"
+  >
+    <svg
+      aria-hidden="true"
+      className="MuiSvgIcon-root-595"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+      />
+    </svg>
+    <input
+      checked={false}
+      className="MuiPrivateSwitchBase-input-585"
+      data-indeterminate={false}
+      disabled={true}
+      onChange={[Function]}
+      type="checkbox"
+      value="value"
+    />
+  </span>
+</span>
+`;
+
+exports[`Storyshots Checkbox|Checkbox unchecked 1`] = `
+<span
+  className="MuiButtonBase-root-557 MuiIconButton-root-551 MuiPrivateSwitchBase-root-547 MuiCheckbox-root-541 MuiCheckbox-colorSecondary-546"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onContextMenu={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={null}
 >
   <span
     className="MuiIconButton-label-556"
@@ -738,12 +735,15 @@ exports[`Storyshots Checkbox|Checkbox disabled 1`] = `
       checked={false}
       className="MuiPrivateSwitchBase-input-550"
       data-indeterminate={false}
-      disabled={true}
+      disabled={false}
       onChange={[Function]}
       type="checkbox"
       value="value"
     />
   </span>
+  <span
+    className="MuiTouchRipple-root-569"
+  />
 </span>
 `;
 
@@ -1516,6 +1516,174 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         LABEL TEXT
       </span>
     </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TextField|TextField autoFocus 1`] = `
+<div
+  className="MuiFormControl-root-1229"
+>
+  <label
+    className="MuiFormLabel-root-1244 MuiInputLabel-root-1233 MuiInputLabel-formControl-1238 MuiInputLabel-animated-1241"
+    data-shrink={false}
+  >
+    Text Field Label
+  </label>
+  <div
+    className="MuiInputBase-root-1264 MuiInput-root-1251 MuiInput-underline-1255 MuiInputBase-formControl-1265 MuiInput-formControl-1252"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      autoFocus={true}
+      className="MuiInputBase-input-1274 MuiInput-input-1259"
+      disabled={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Placeholder text"
+      required={false}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots TextField|TextField default 1`] = `
+<div
+  className="MuiFormControl-root-1177"
+>
+  <label
+    className="MuiFormLabel-root-1192 MuiInputLabel-root-1181 MuiInputLabel-formControl-1186 MuiInputLabel-animated-1189"
+    data-shrink={false}
+  >
+    Text Field Label
+  </label>
+  <div
+    className="MuiInputBase-root-1212 MuiInput-root-1199 MuiInput-underline-1203 MuiInputBase-formControl-1213 MuiInput-formControl-1200"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-1222 MuiInput-input-1207"
+      disabled={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      required={false}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots TextField|TextField disabled 1`] = `
+<div
+  className="MuiFormControl-root-1281"
+>
+  <label
+    className="MuiFormLabel-root-1296 MuiFormLabel-disabled-1298 MuiInputLabel-disabled-1287 MuiInputLabel-root-1285 MuiInputLabel-formControl-1290 MuiInputLabel-animated-1293"
+    data-shrink={false}
+  >
+    Text Field Label
+  </label>
+  <div
+    className="MuiInputBase-root-1316 MuiInput-root-1303 MuiInput-underline-1307 MuiInputBase-disabled-1319 MuiInput-disabled-1306 MuiInputBase-formControl-1317 MuiInput-formControl-1304"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-1326 MuiInput-input-1311 MuiInputBase-disabled-1319 MuiInput-disabled-1306"
+      disabled={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Placeholder text"
+      required={false}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots TextField|TextField multiline 1`] = `
+<div
+  className="MuiFormControl-root-1333"
+>
+  <label
+    className="MuiFormLabel-root-1348 MuiInputLabel-root-1337 MuiInputLabel-formControl-1342 MuiInputLabel-animated-1345"
+    data-shrink={false}
+  >
+    Text Field Label
+  </label>
+  <div
+    className="MuiInputBase-root-1368 MuiInput-root-1355 MuiInput-underline-1359 MuiInputBase-formControl-1369 MuiInput-formControl-1356 MuiInputBase-multiline-1376 MuiInput-multiline-1361"
+    onClick={[Function]}
+  >
+    <div
+      className="MuiPrivateTextarea-root-1385"
+    >
+      <textarea
+        aria-hidden="true"
+        className="MuiPrivateTextarea-textarea-1386 MuiPrivateTextarea-shadow-1387"
+        readOnly={true}
+        rows="1"
+        tabIndex={-1}
+        value=""
+      />
+      <textarea
+        aria-hidden="true"
+        className="MuiPrivateTextarea-textarea-1386 MuiPrivateTextarea-shadow-1387"
+        readOnly={true}
+        rows={1}
+        tabIndex={-1}
+      />
+      <textarea
+        aria-invalid={false}
+        className="MuiPrivateTextarea-textarea-1386 MuiInputBase-input-1378 MuiInput-input-1363 MuiInputBase-inputMultiline-1380 MuiInput-inputMultiline-1365"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        rows={1}
+        style={
+          Object {
+            "height": 19,
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TextField|TextField placeholder 1`] = `
+<div
+  className="MuiFormControl-root-1388"
+>
+  <label
+    className="MuiFormLabel-root-1403 MuiInputLabel-root-1392 MuiInputLabel-formControl-1397 MuiInputLabel-animated-1400"
+    data-shrink={false}
+  >
+    Text Field Label
+  </label>
+  <div
+    className="MuiInputBase-root-1423 MuiInput-root-1410 MuiInput-underline-1414 MuiInputBase-formControl-1424 MuiInput-formControl-1411"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-1433 MuiInput-input-1418"
+      disabled={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Placeholder text"
+      required={false}
+      type="text"
+    />
   </div>
 </div>
 `;

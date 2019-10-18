@@ -1,13 +1,12 @@
 /**
  * @description Base Link to be used throughout Silver Site
- * @props
- * Icon: (SVG) Icon to render if provided. Icons should be selected and styled through the
- *       iconDictionary before reaching this component
- * label: (string|array) Text link label
- * path: (string|array) Relative url representing the location to link to
- *        Can be a string or an url object
- * replace: (bool) When true, clicking the link will replace current entry in history stack
- *          instead of adding a new one
+ * @property Icon: (SVG) Icon to render if provided. Icons should be selected and styled through the
+ *                       iconDictionary before reaching this component
+ * @property label: (string|array) Text link label
+ * @property path: (string|array) Relative url representing the location to link to
+ *          Can be a string or an url object
+ * @property replace: (bool) When true, clicking the link will replace current entry
+ *                           in history stack instead of adding a new one
  */
 
 import React from 'react';

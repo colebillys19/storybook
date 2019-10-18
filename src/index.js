@@ -13,4 +13,5 @@ export * from './components/ListItem';
 export * from './components/LoadingIndicator';
 export * from './components/Paper';
 export * from './components/Radio';
+export * from './components/TextField';
 export * from './svg';

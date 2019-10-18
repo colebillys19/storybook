@@ -21,17 +21,9 @@ const TextFieldTemplate = (props) => (
 );
 
 TextFieldTemplate.propTypes = {
-  className: T.string,
   defaultValue: T.oneOfType([T.string, T.number, T.bool]),
   disabled: T.bool,
-  errorStyle: T.object,
-  errorText: T.node,
-  floatingLabelStyle: T.object,
-  floatingLabelText: T.string,
-  hintStyle: T.object,
-  hintText: T.string,
   id: T.string,
-  inputStyle: T.object,
   name: T.string,
   onChange: T.func.isRequired,
   style: T.object,
@@ -43,7 +35,6 @@ TextFieldTemplate.propTypes = {
 TextFieldTemplate.defaultProps = {
   disabled: false,
   type: 'text',
-  underlineShow: true,
 };
 
 export default TextFieldTemplate;
