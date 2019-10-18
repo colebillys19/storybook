@@ -1,10 +1,10 @@
 /**
  * @description Create an icon that displays when an option is selected
  * @props
- * @checked (boolean) If true, the component is checked
- * @disabled (boolean) If true, the component is disabled
- * @onChange (function) Callback fired when the state is changed
- * You can access the new checked state by accessing even.target.checked(boolean)
+ * checked: (boolean) If true, the component is checked
+ * disabled: (boolean) If true, the component is disabled
+ * onChange: (function) Callback fired when the state is changed
+ *            You can access the new checked state by accessing even.target.checked(boolean)
  */
 
 import React from 'react';

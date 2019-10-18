@@ -1,9 +1,9 @@
 /**
  * @description component description
  * @props
- * prop name (prop type) prop description
- * prop name (prop type) prop description
- * prop name (prop type) prop description
+ * button: (bool) If true, the list item will be a button (using ButtonBase)
+ * disabled: (bool) If true, the list item will be disabled
+ * text: (string) The text that will be the content of the item
  */
 
 import React from 'react';
