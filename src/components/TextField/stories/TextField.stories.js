@@ -3,6 +3,7 @@
  * @property autoComplete: (string) This props helps users to fill forms faster.
  * @property autoFocus: (bool) If true, the input element will be focused during th first mount.
  * @property classes: (object) Override or extend the styles applied to the component.
+ * @property color: (string) Underline color on focus
  * @property defaultValue: (string|number|bool) The default value of the input element.
  * @property disabled: (bool) [disabled=false] Callback fired when a radio button is selected.
  * @property id: (string) The id of the input element.
@@ -11,7 +12,7 @@
  * @property InputProps: (object) Props applied to the input element. It will be a FilledInput,
  *                                OutlinedInput or Input component depending
  *                                on the variant prop value.
- * @property margin: ('none' | 'dense' | 'normal') If dense or normal, will adjust verical spacing 
+ * @property margin: ('none' | 'dense' | 'normal') If dense or normal, will adjust verical spacing
  *                                                 of this and contained components.
  * @property name: (string) Name attribute of the input element.
  * @property onChange: (func) Callback fired when the value is changed.
@@ -44,18 +45,27 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs/react';
 
-
 import { TextField } from '../index';
+
+import {
+  msBrightPurple,
+  msDarkGrey,
+  msHoverPurple,
+  msMainGreen,
+} from '../../../utils/defaultStyleHelper';
 
 const defaultPlaceholder = 'Placeholder text';
 const defaultLabel = 'Text Field Label';
+
 const marginOptions = {
   dense: 'dense',
   none: 'none',
   normal: 'normal',
 };
 const defaultMargin = 'none';
+
 const defaultFalse = false;
+
 const rowOptions = {
   2: 2,
   4: 4,
@@ -71,12 +81,22 @@ const variantOptions = {
   standard: 'standard',
 };
 const defaultVariant = 'standard';
+
+const colorOptions = {
+  msBrightPurple,
+  msDarkGrey,
+  msHoverPurple,
+  msMainGreen,
+};
+const defaultColor = msBrightPurple;
+
 const handleChange = () => 'defaultOnChange';
 
 storiesOf('TextField|TextField', module)
   .addDecorator(withKnobs)
   .add('default', () => (
     <TextField
+      color={select('Underline Color', colorOptions, defaultColor)}
       label={text('Label', defaultLabel)}
       margin={select('Margin', marginOptions, defaultMargin)}
       onChange={handleChange}
@@ -86,6 +106,7 @@ storiesOf('TextField|TextField', module)
   .add('autoFocus', () => (
     <TextField
       autoFocus
+      color={select('Underline Color', colorOptions, defaultColor)}
       label={text('Label', defaultLabel)}
       margin={select('Margin', marginOptions, defaultMargin)}
       onChange={handleChange}
@@ -105,6 +126,7 @@ storiesOf('TextField|TextField', module)
   ))
   .add('multiline', () => (
     <TextField
+      color={select('Underline Color', colorOptions, defaultColor)}
       label={text('Label', defaultLabel)}
       margin={select('Margin', marginOptions, defaultMargin)}
       multiline
@@ -117,6 +139,7 @@ storiesOf('TextField|TextField', module)
   ))
   .add('placeholder', () => (
     <TextField
+      color={select('Underline Color', colorOptions, defaultColor)}
       margin={select('Margin', marginOptions, defaultMargin)}
       onChange={handleChange}
       placeholder={text('Placeholder', defaultPlaceholder)}

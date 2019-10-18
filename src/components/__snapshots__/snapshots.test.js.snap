@@ -1950,10 +1950,11 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
 
 exports[`Storyshots TextField|TextField autoFocus 1`] = `
 <div
-  className="MuiFormControl-root-1269"
+  className="MuiFormControl-root-1269 root sc-tilXH fYcBFb"
+  color="#310078"
 >
   <label
-    className="MuiFormLabel-root-1284 MuiInputLabel-root-1273 MuiInputLabel-formControl-1278 MuiInputLabel-animated-1281"
+    className="MuiFormLabel-root-1284 MuiInputLabel-root-1273 MuiInputLabel-formControl-1278 MuiInputLabel-animated-1281 label"
     data-shrink={false}
   >
     Text Field Label
@@ -1980,10 +1981,11 @@ exports[`Storyshots TextField|TextField autoFocus 1`] = `
 
 exports[`Storyshots TextField|TextField default 1`] = `
 <div
-  className="MuiFormControl-root-1217"
+  className="MuiFormControl-root-1217 root sc-fYxtnH bEfAzZ"
+  color="#310078"
 >
   <label
-    className="MuiFormLabel-root-1232 MuiInputLabel-root-1221 MuiInputLabel-formControl-1226 MuiInputLabel-animated-1229"
+    className="MuiFormLabel-root-1232 MuiInputLabel-root-1221 MuiInputLabel-formControl-1226 MuiInputLabel-animated-1229 label"
     data-shrink={false}
   >
     Text Field Label
@@ -2008,10 +2010,10 @@ exports[`Storyshots TextField|TextField default 1`] = `
 
 exports[`Storyshots TextField|TextField disabled 1`] = `
 <div
-  className="MuiFormControl-root-1321"
+  className="MuiFormControl-root-1321 root sc-hEsumM qhuRe"
 >
   <label
-    className="MuiFormLabel-root-1336 MuiFormLabel-disabled-1338 MuiInputLabel-disabled-1327 MuiInputLabel-root-1325 MuiInputLabel-formControl-1330 MuiInputLabel-animated-1333"
+    className="MuiFormLabel-root-1336 MuiFormLabel-disabled-1338 MuiInputLabel-disabled-1327 MuiInputLabel-root-1325 MuiInputLabel-formControl-1330 MuiInputLabel-animated-1333 label"
     data-shrink={false}
   >
     Text Field Label
@@ -2037,10 +2039,11 @@ exports[`Storyshots TextField|TextField disabled 1`] = `
 
 exports[`Storyshots TextField|TextField multiline 1`] = `
 <div
-  className="MuiFormControl-root-1373"
+  className="MuiFormControl-root-1373 root sc-ktHwxA bsOfio"
+  color="#310078"
 >
   <label
-    className="MuiFormLabel-root-1388 MuiInputLabel-root-1377 MuiInputLabel-formControl-1382 MuiInputLabel-animated-1385"
+    className="MuiFormLabel-root-1388 MuiInputLabel-root-1377 MuiInputLabel-formControl-1382 MuiInputLabel-animated-1385 label"
     data-shrink={false}
   >
     Text Field Label
@@ -2089,7 +2092,8 @@ exports[`Storyshots TextField|TextField multiline 1`] = `
 
 exports[`Storyshots TextField|TextField placeholder 1`] = `
 <div
-  className="MuiFormControl-root-1428"
+  className="MuiFormControl-root-1428 root sc-cIShpX iBcLPr"
+  color="#310078"
 >
   <div
     className="MuiInputBase-root-1445 MuiInput-root-1432 MuiInput-underline-1436 MuiInputBase-formControl-1446 MuiInput-formControl-1433"

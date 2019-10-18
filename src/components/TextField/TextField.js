@@ -1,26 +1,32 @@
-/**
-*
-* TextField
-* @description: Create input with type text
-* Use Case: When a controlled text input is needed
-* Parent Components/Containers: [
-*   {
-*     route: /queryBuilder,
-*     name: <LiveSearch>, <NumberPickerRange>,
-*   },
-* ]
-*/
-
 import React from 'react';
 import T from 'prop-types';
+import styled from 'styled-components';
 import TextField from '@material-ui/core/TextField';
 
+import { msBrightPurple } from '../../utils/defaultStyleHelper';
 
-const TextFieldTemplate = (props) => (
-  <TextField {...props} />
-);
+const BaseTextField = ({ color, ...props }) => {
+  const StyledTextField = styled((styledProps) => (
+    <TextField
+      classes={{ root: 'root' }}
+      InputLabelProps={{ className: 'label' }}
+      {...styledProps}
+    />
+  ))`
+    &.root {
+      div:after {
+        border-bottom: 0.2rem solid ${color || msBrightPurple};
+      }
+      .label {
+        color: #757575;
+      }
+    }
+  `;
+  return <StyledTextField color={color} {...props} />;
+};
 
-TextFieldTemplate.propTypes = {
+BaseTextField.propTypes = {
+  color: T.string,
   defaultValue: T.oneOfType([T.string, T.number, T.bool]),
   disabled: T.bool,
   id: T.string,
@@ -32,9 +38,9 @@ TextFieldTemplate.propTypes = {
   value: T.oneOfType([T.string, T.number, T.bool]),
 };
 
-TextFieldTemplate.defaultProps = {
+BaseTextField.defaultProps = {
   disabled: false,
   type: 'text',
 };
 
-export default TextFieldTemplate;
+export default BaseTextField;
