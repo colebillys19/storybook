@@ -1,9 +1,6 @@
 /**
- * @description component description
- * @props
- * prop name (prop type) prop description
- * prop name (prop type) prop description
- * prop name (prop type) prop description
+ * @description Circular, rotating loading indicator.
+ *              Smaller than the default Loading Indicator
  */
 
 import React from 'react';

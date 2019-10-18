@@ -200,7 +200,7 @@ exports[`Storyshots Buttons|BaseButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-135 root styled-icon sc-jWBwVP bGQksY"
+      className="MuiSvgIcon-root-135 root styled-icon sc-gPEVay gSxctk"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -245,7 +245,7 @@ exports[`Storyshots Buttons|FlatIconButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-181 root styled-icon sc-brqgnP hzGMET"
+      className="MuiSvgIcon-root-181 root styled-icon sc-iRbamj jYQInW"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -287,7 +287,7 @@ exports[`Storyshots Buttons|GhostButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-219 root styled-icon sc-cMljjf eIjVek"
+      className="MuiSvgIcon-root-219 root styled-icon sc-jlyJG kXwwmw"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -329,7 +329,7 @@ exports[`Storyshots Buttons|IconButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-237 root styled-icon sc-jAaTju hdUFTH"
+      className="MuiSvgIcon-root-237 root styled-icon sc-gipzik fikXjC"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -373,7 +373,7 @@ exports[`Storyshots Buttons|IconButton disabled 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-262 root styled-icon sc-jDwBTQ frAllG"
+      className="MuiSvgIcon-root-262 root styled-icon sc-csuQGl dTkLFy"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -414,7 +414,7 @@ exports[`Storyshots Buttons|PrimaryButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-300 root styled-icon sc-gPEVay gSxctk"
+      className="MuiSvgIcon-root-300 root styled-icon sc-Rmtcm ffCwtX"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -456,7 +456,7 @@ exports[`Storyshots Buttons|SecondaryButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-338 root styled-icon sc-iRbamj jYQInW"
+      className="MuiSvgIcon-root-338 root styled-icon sc-bRBYWo hDCvzT"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -528,7 +528,7 @@ exports[`Storyshots Buttons|TooltipButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-413 root styled-icon sc-jlyJG kXwwmw"
+      className="MuiSvgIcon-root-413 root styled-icon sc-hzDkRC iPnNXs"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -874,7 +874,7 @@ exports[`Storyshots Links|BaseLink icon 1`] = `
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root-638 root styled-icon sc-gipzik SwiDN"
+    className="MuiSvgIcon-root-638 root styled-icon sc-jhAzac kuumnq"
     focusable="false"
     role="presentation"
     viewBox="0 0 24 24"
@@ -923,7 +923,7 @@ exports[`Storyshots Links|GhostButtonLink icon 1`] = `
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root-647 root styled-icon sc-csuQGl cDswZA"
+    className="MuiSvgIcon-root-647 root styled-icon sc-fBuWsC ZRRAF"
     focusable="false"
     role="presentation"
     viewBox="0 0 24 24"
@@ -1031,7 +1031,7 @@ exports[`Storyshots List Items|ListItem icon 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-883 root styled-icon sc-Rmtcm kslTuq"
+      className="MuiSvgIcon-root-883 root styled-icon sc-fMiknA iceazc"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -1077,40 +1077,40 @@ exports[`Storyshots Loading Indicators|LoadingIndicator default 1`] = `
     className="sc-kkGfuU ePcewA"
   >
     <div
-      className="sc-bRBYWo eIcTHA"
+      className="sc-dVhcbM bQHCVd"
     />
     <div
-      className="sc-hzDkRC eOeQxn"
+      className="sc-eqIVtm ksEOCk"
     />
     <div
-      className="sc-jhAzac cSykLa"
+      className="sc-fAjcbJ fwMlPm"
     />
     <div
-      className="sc-fBuWsC jIkRxI"
+      className="sc-caSCKo beRQGi"
     />
     <div
-      className="sc-fMiknA ePdtzV"
+      className="sc-gisBJw fCjjzw"
     />
     <div
-      className="sc-dVhcbM cHiClB"
+      className="sc-kjoXOD ipbvxX"
     />
     <div
-      className="sc-eqIVtm dUKhcp"
+      className="sc-cHGsZl hDNDQB"
     />
     <div
-      className="sc-fAjcbJ hWQnGX"
+      className="sc-TOsTZ eZDcKC"
     />
     <div
-      className="sc-caSCKo coJjNr"
+      className="sc-kgAjT grTTDv"
     />
     <div
-      className="sc-gisBJw jbegPP"
+      className="sc-cJSrbW lmWAZI"
     />
     <div
-      className="sc-kjoXOD bStMB"
+      className="sc-ksYbfQ hJqnHQ"
     />
     <div
-      className="sc-cHGsZl jiPWSq"
+      className="sc-hmzhuo cRSwUR"
     />
   </section>
 </div>
@@ -1124,40 +1124,40 @@ exports[`Storyshots Loading Indicators|SmallLoadingIndicator default 1`] = `
     className="sc-kEYyzF kyapkX"
   >
     <div
-      className="sc-TOsTZ iKlcKq"
+      className="sc-frDJqD ibBIUi"
     />
     <div
-      className="sc-kgAjT bIgZjb"
+      className="sc-kvZOFW jBSTYF"
     />
     <div
-      className="sc-cJSrbW lfEUdy"
+      className="sc-hqyNC uwTDx"
     />
     <div
-      className="sc-ksYbfQ hKjHGt"
+      className="sc-jbKcbu kvpfxO"
     />
     <div
-      className="sc-hmzhuo NTzmv"
+      className="sc-dNLxif bKBQKX"
     />
     <div
-      className="sc-frDJqD bJbCQq"
+      className="sc-jqCOkK jvrKWd"
     />
     <div
-      className="sc-kvZOFW ixmDie"
+      className="sc-uJMKN ldercA"
     />
     <div
-      className="sc-hqyNC ejIKrD"
+      className="sc-bbmXgH fkuMhn"
     />
     <div
-      className="sc-jbKcbu fFRMjn"
+      className="sc-gGBfsJ kHNqMK"
     />
     <div
-      className="sc-dNLxif cEgmaj"
+      className="sc-jnlKLf sJYuk"
     />
     <div
-      className="sc-jqCOkK dZXPAQ"
+      className="sc-fYxtnH vUnDA"
     />
     <div
-      className="sc-uJMKN smQgA"
+      className="sc-tilXH Uqjco"
     />
   </span>
 </span>
@@ -1576,6 +1576,600 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         LABEL TEXT
       </span>
     </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tables|BaseTable default 1`] = `
+<table
+  className="MuiTable-root-1211 sc-jWBwVP ksZpXa"
+>
+  <thead
+    className="MuiTableHead-root-1212 sc-cMljjf cgnUiz"
+  >
+    <tr
+      className="MuiTableRow-root-1213 MuiTableRow-head-1216 sc-jDwBTQ gHKCKC"
+    >
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-head-1219 sc-jAaTju lltWEt"
+        iscentered={0}
+        scope="col"
+      >
+        Dessert
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-head-1219 sc-jAaTju dkrgEy"
+        iscentered={1}
+        scope="col"
+      >
+        Calories
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-head-1219 sc-jAaTju dkrgEy"
+        iscentered={1}
+        scope="col"
+      >
+        Fat (g)
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-head-1219 sc-jAaTju dkrgEy"
+        iscentered={1}
+        scope="col"
+      >
+        Carbs (g)
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-head-1219 sc-jAaTju dkrgEy"
+        iscentered={1}
+        scope="col"
+      >
+        Protein (g)
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="MuiTableBody-root-1230 sc-brqgnP hzFcas"
+    hovercolor="#F8F8F8"
+  >
+    <tr
+      className="MuiTableRow-root-1213 sc-jDwBTQ gHKCKC"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju lltWEt"
+        iscentered={0}
+      >
+        Cupcake
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        305
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        4
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        67
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        4
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-1213 sc-jDwBTQ gHKCKC"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju lltWEt"
+        iscentered={0}
+      >
+        Eclair
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        262
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        16
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        24
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        6
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-1213 sc-jDwBTQ gHKCKC"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju lltWEt"
+        iscentered={0}
+      >
+        Gingerbread
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        356
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        16
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        49
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        4
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-1213 sc-jDwBTQ gHKCKC"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju lltWEt"
+        iscentered={0}
+      >
+        Ice Cream
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        207
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        11
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        24
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        4
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Storyshots Tables|BaseTable offset 1`] = `
+<table
+  className="MuiTable-root-1231 sc-jWBwVP ksZpXa"
+>
+  <thead
+    className="MuiTableHead-root-1232 sc-cMljjf cgnUiz"
+  >
+    <tr
+      className="MuiTableRow-root-1233 MuiTableRow-head-1236 sc-jDwBTQ gHKCKC"
+    >
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-head-1239 sc-jAaTju lltWEt"
+        iscentered={0}
+        scope="col"
+      >
+        
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-head-1239 sc-jAaTju dkrgEy"
+        iscentered={1}
+        scope="col"
+      >
+        column one
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-head-1239 sc-jAaTju dkrgEy"
+        iscentered={1}
+        scope="col"
+      >
+        column two
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-head-1239 sc-jAaTju dkrgEy"
+        iscentered={1}
+        scope="col"
+      >
+        column three
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="MuiTableBody-root-1250 sc-brqgnP hzFcas"
+    hovercolor="#F8F8F8"
+  >
+    <tr
+      className="MuiTableRow-root-1233 sc-jDwBTQ gHKCKC"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju lltWEt"
+        iscentered={0}
+      >
+        row one
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        01-01
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        01-02
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        01-03
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-1233 sc-jDwBTQ gHKCKC"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju lltWEt"
+        iscentered={0}
+      >
+        row two
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        02-01
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        02-02
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        02-03
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-1233 sc-jDwBTQ gHKCKC"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju lltWEt"
+        iscentered={0}
+      >
+        row three
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        03-01
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        03-02
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        03-03
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-1233 sc-jDwBTQ gHKCKC"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju lltWEt"
+        iscentered={0}
+      >
+        row four
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        04-01
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        04-02
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        04-03
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root-1233 sc-jDwBTQ gHKCKC"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju lltWEt"
+        iscentered={0}
+      >
+        row five
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        05-01
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        05-02
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        iscentered={1}
+      >
+        05-03
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Storyshots TextField|TextField autoFocus 1`] = `
+<div
+  className="MuiFormControl-root-1303 root sc-ktHwxA bsOfio"
+  color="#310078"
+>
+  <label
+    className="MuiFormLabel-root-1318 MuiInputLabel-root-1307 MuiInputLabel-formControl-1312 MuiInputLabel-animated-1315 label"
+    data-shrink={false}
+  >
+    Text Field Label
+  </label>
+  <div
+    className="MuiInputBase-root-1338 MuiInput-root-1325 MuiInput-underline-1329 MuiInputBase-formControl-1339 MuiInput-formControl-1326"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      autoFocus={true}
+      className="MuiInputBase-input-1348 MuiInput-input-1333"
+      disabled={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Placeholder text"
+      required={false}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots TextField|TextField default 1`] = `
+<div
+  className="MuiFormControl-root-1251 root sc-hEsumM qhuRe"
+  color="#310078"
+>
+  <label
+    className="MuiFormLabel-root-1266 MuiInputLabel-root-1255 MuiInputLabel-formControl-1260 MuiInputLabel-animated-1263 label"
+    data-shrink={false}
+  >
+    Text Field Label
+  </label>
+  <div
+    className="MuiInputBase-root-1286 MuiInput-root-1273 MuiInput-underline-1277 MuiInputBase-formControl-1287 MuiInput-formControl-1274"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-1296 MuiInput-input-1281"
+      disabled={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      required={false}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots TextField|TextField disabled 1`] = `
+<div
+  className="MuiFormControl-root-1355 root sc-cIShpX iBcLPr"
+>
+  <label
+    className="MuiFormLabel-root-1370 MuiFormLabel-disabled-1372 MuiInputLabel-disabled-1361 MuiInputLabel-root-1359 MuiInputLabel-formControl-1364 MuiInputLabel-animated-1367 label"
+    data-shrink={false}
+  >
+    Text Field Label
+  </label>
+  <div
+    className="MuiInputBase-root-1390 MuiInput-root-1377 MuiInput-underline-1381 MuiInputBase-disabled-1393 MuiInput-disabled-1380 MuiInputBase-formControl-1391 MuiInput-formControl-1378"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-1400 MuiInput-input-1385 MuiInputBase-disabled-1393 MuiInput-disabled-1380"
+      disabled={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Placeholder text"
+      required={false}
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots TextField|TextField multiline 1`] = `
+<div
+  className="MuiFormControl-root-1407 root sc-kafWEX hxfjDX"
+  color="#310078"
+>
+  <label
+    className="MuiFormLabel-root-1422 MuiInputLabel-root-1411 MuiInputLabel-formControl-1416 MuiInputLabel-animated-1419 label"
+    data-shrink={false}
+  >
+    Text Field Label
+  </label>
+  <div
+    className="MuiInputBase-root-1442 MuiInput-root-1429 MuiInput-underline-1433 MuiInputBase-formControl-1443 MuiInput-formControl-1430 MuiInputBase-multiline-1450 MuiInput-multiline-1435"
+    onClick={[Function]}
+  >
+    <div
+      className="MuiPrivateTextarea-root-1459"
+    >
+      <textarea
+        aria-hidden="true"
+        className="MuiPrivateTextarea-textarea-1460 MuiPrivateTextarea-shadow-1461"
+        readOnly={true}
+        rows="1"
+        tabIndex={-1}
+        value=""
+      />
+      <textarea
+        aria-hidden="true"
+        className="MuiPrivateTextarea-textarea-1460 MuiPrivateTextarea-shadow-1461"
+        readOnly={true}
+        rows={4}
+        tabIndex={-1}
+      />
+      <textarea
+        aria-invalid={false}
+        className="MuiPrivateTextarea-textarea-1460 MuiInputBase-input-1452 MuiInput-input-1437 MuiInputBase-inputMultiline-1454 MuiInput-inputMultiline-1439"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        required={false}
+        rows={4}
+        style={
+          Object {
+            "height": 76,
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TextField|TextField placeholder 1`] = `
+<div
+  className="MuiFormControl-root-1462 root sc-feJyhm iwwCmw"
+  color="#310078"
+>
+  <div
+    className="MuiInputBase-root-1479 MuiInput-root-1466 MuiInput-underline-1470 MuiInputBase-formControl-1480 MuiInput-formControl-1467"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-1489 MuiInput-input-1474"
+      disabled={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Placeholder text"
+      required={false}
+      type="text"
+    />
   </div>
 </div>
 `;

@@ -1,9 +1,6 @@
 /**
- * @description component description
- * @props
- * prop name (prop type) prop description
- * prop name (prop type) prop description
- * prop name (prop type) prop description
+ * @description Circular, rotating loading indicator
+ *              For when the client is waiting for async data to finish loading
  */
 
 import React from 'react';

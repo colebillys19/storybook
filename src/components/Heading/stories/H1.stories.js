@@ -1,9 +1,5 @@
 /**
- * @description component description
- * @props
- * prop name (prop type) prop description
- * prop name (prop type) prop description
- * prop name (prop type) prop description
+ * @description Wraps text to create an <h1> header
  */
 
 import React from 'react';
