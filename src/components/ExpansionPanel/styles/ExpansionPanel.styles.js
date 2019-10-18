@@ -1,16 +1,23 @@
 import styled from 'styled-components';
-import { ExpansionPanelSummary } from 'components/base_ui/ExpansionPanel';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import { expansionPanelDividerStyle } from '../../../utils/defaultStyleHelper';
 
-
-export const PanelSummary = styled(ExpansionPanelSummary)`
-  &.expanded {
-    min-height: 4.8rem;
-    .content {
-      margin: 1.2rem 0rem;
+export const StyledExpansionPanel = styled(ExpansionPanel)`
+  border-bottom: ${expansionPanelDividerStyle};
+  box-shadow: none;
+  .collapse-container {
+    @media print { 
+      display: block;
+      height: auto;
     }
   }
-`;
-
-export const ViewWrapper = styled.div`
-  margin: ${({ margin }) => margin || '1rem 1rem'};
+  &:before {
+    display: none;
+  }
+  &:first-child {
+    border-top: ${expansionPanelDividerStyle};
+  }
+  &.expanded {
+    margin: 0rem;
+  }
 `;
