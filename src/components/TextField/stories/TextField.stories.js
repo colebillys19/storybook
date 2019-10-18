@@ -57,13 +57,13 @@ const marginOptions = {
 const defaultMargin = 'none';
 const defaultFalse = false;
 const rowOptions = {
-  1: 1,
   2: 2,
-  3: 3,
   4: 4,
+  6: 6,
+  8: 8,
 };
-const defaultRow = 1;
-const defaultRowMax = 4;
+const defaultRow = 4;
+const defaultRowMax = 8;
 
 const variantOptions = {
   filled: 'filled',
@@ -117,7 +117,6 @@ storiesOf('TextField|TextField', module)
   ))
   .add('placeholder', () => (
     <TextField
-      label={text('Label', defaultLabel)}
       margin={select('Margin', marginOptions, defaultMargin)}
       onChange={handleChange}
       placeholder={text('Placeholder', defaultPlaceholder)}
