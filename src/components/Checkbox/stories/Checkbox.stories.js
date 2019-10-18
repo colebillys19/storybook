@@ -28,6 +28,15 @@ storiesOf('Checkbox|Checkbox', module)
   .addDecorator(withKnobs)
   .add('default', () => (
     <Checkbox
+      checked
+      color={select('Colors', colorOptions, defaultColor)}
+      indeterminate={boolean('Indeterminate', defaultFalse)}
+      onClick={action('onClickButton')}
+      value={initialValue}
+    />
+  ))
+  .add('unchecked', () => (
+    <Checkbox
       disableRipple={boolean('Disable Ripple', defaultFalse)}
       indeterminate={boolean('Indeterminate', defaultFalse)}
       onClick={action('onClickButton')}
@@ -41,14 +50,4 @@ storiesOf('Checkbox|Checkbox', module)
       onClick={action('onClickButton')}
       value={initialValue}
     />
-  ))
-  .add('checked', () => (
-    <Checkbox
-      checked
-      color={select('Colors', colorOptions, defaultColor)}
-      indeterminate={boolean('Indeterminate', defaultFalse)}
-      onClick={action('onClickButton')}
-      value={initialValue}
-    />
   ));
-

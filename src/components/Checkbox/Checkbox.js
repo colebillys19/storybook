@@ -15,7 +15,6 @@ import React from 'react';
 import T from 'prop-types';
 import Checkbox from '@material-ui/core/Checkbox';
 
-
 const CheckboxTemplate = ({
   checked,
   disabled,
