@@ -16,5 +16,6 @@ export const StyledTooltip = styled((props) => (
     box-shadow: ${muiBoxShadow};
     color: black;
     font-size: 1.3rem;
+    padding: 0;
   }
 `;

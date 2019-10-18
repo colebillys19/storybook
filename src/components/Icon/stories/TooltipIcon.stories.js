@@ -23,7 +23,7 @@ const contentDivStyles = {
   width: '6rem',
 };
 const tooltipContent = (
-  <div style={{ margin: '0.5rem 0.2rem' }}>
+  <div style={{ margin: '0.5rem' }}>
     <div style={contentDivStyles}>some</div>
     <div style={contentDivStyles}>content</div>
     <div style={contentDivStyles}>here</div>
@@ -35,14 +35,12 @@ storiesOf('Icons|TooltipIcon', module)
   .add('default', () => (
     <TooltipIcon
       Icon={icon}
-      iconProps={{}}
       TooltipContent={<span>{text('Tooltip Text', 'tooltip text')}</span>}
     />
   ))
   .add('content', () => (
     <TooltipIcon
       Icon={icon}
-      iconProps={{}}
       TooltipContent={tooltipContent}
     />
   ));
