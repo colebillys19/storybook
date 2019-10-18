@@ -14,6 +14,15 @@ export default function BaseTable({
   hoverColor,
   rowData,
 }) {
+  const headersLen = headers.length;
+  const lengthCheck = rowData.every(({ cells }) => cells.length === headersLen);
+  if (!lengthCheck) {
+    // eslint-disable-next-line
+    console.error(
+      'Component BaseTable expects headers and row cells arrays to be of equal length.'
+    );
+    return null;
+  }
   const rows = rowData.map(({ cells, id }) => (
     <BaseTableRow
       key={id}

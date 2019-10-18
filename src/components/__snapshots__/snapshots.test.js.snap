@@ -1394,7 +1394,7 @@ exports[`Storyshots Tables|BaseTable default 1`] = `
     >
       <th
         aria-sort={null}
-        className="MuiTableCell-root-1086 MuiTableCell-head-1087 sc-brqgnP bQcQyM"
+        className="MuiTableCell-root-1086 MuiTableCell-head-1087 sc-brqgnP eoeaYm"
         iscentered={0}
         scope="col"
       >
@@ -1443,7 +1443,7 @@ exports[`Storyshots Tables|BaseTable default 1`] = `
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1086 MuiTableCell-body-1088 sc-brqgnP bQcQyM"
+        className="MuiTableCell-root-1086 MuiTableCell-body-1088 sc-brqgnP eoeaYm"
         iscentered={0}
       >
         Cupcake
@@ -1482,7 +1482,7 @@ exports[`Storyshots Tables|BaseTable default 1`] = `
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1086 MuiTableCell-body-1088 sc-brqgnP bQcQyM"
+        className="MuiTableCell-root-1086 MuiTableCell-body-1088 sc-brqgnP eoeaYm"
         iscentered={0}
       >
         Eclair
@@ -1521,7 +1521,7 @@ exports[`Storyshots Tables|BaseTable default 1`] = `
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1086 MuiTableCell-body-1088 sc-brqgnP bQcQyM"
+        className="MuiTableCell-root-1086 MuiTableCell-body-1088 sc-brqgnP eoeaYm"
         iscentered={0}
       >
         Gingerbread
@@ -1560,7 +1560,7 @@ exports[`Storyshots Tables|BaseTable default 1`] = `
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1086 MuiTableCell-body-1088 sc-brqgnP bQcQyM"
+        className="MuiTableCell-root-1086 MuiTableCell-body-1088 sc-brqgnP eoeaYm"
         iscentered={0}
       >
         Ice Cream
@@ -1610,7 +1610,7 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
     >
       <th
         aria-sort={null}
-        className="MuiTableCell-root-1106 MuiTableCell-head-1107 sc-brqgnP bQcQyM"
+        className="MuiTableCell-root-1106 MuiTableCell-head-1107 sc-brqgnP eoeaYm"
         iscentered={0}
         scope="col"
       >
@@ -1622,7 +1622,7 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
         iscentered={1}
         scope="col"
       >
-        one
+        column one
       </th>
       <th
         aria-sort={null}
@@ -1630,7 +1630,7 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
         iscentered={1}
         scope="col"
       >
-        two
+        column two
       </th>
       <th
         aria-sort={null}
@@ -1638,7 +1638,7 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
         iscentered={1}
         scope="col"
       >
-        three
+        column three
       </th>
     </tr>
   </thead>
@@ -1651,10 +1651,10 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1106 MuiTableCell-body-1108 sc-brqgnP bQcQyM"
+        className="MuiTableCell-root-1106 MuiTableCell-body-1108 sc-brqgnP eoeaYm"
         iscentered={0}
       >
-        one
+        row one
       </td>
       <td
         aria-sort={null}
@@ -1683,10 +1683,10 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1106 MuiTableCell-body-1108 sc-brqgnP bQcQyM"
+        className="MuiTableCell-root-1106 MuiTableCell-body-1108 sc-brqgnP eoeaYm"
         iscentered={0}
       >
-        two
+        row two
       </td>
       <td
         aria-sort={null}
@@ -1715,10 +1715,10 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1106 MuiTableCell-body-1108 sc-brqgnP bQcQyM"
+        className="MuiTableCell-root-1106 MuiTableCell-body-1108 sc-brqgnP eoeaYm"
         iscentered={0}
       >
-        three
+        row three
       </td>
       <td
         aria-sort={null}
@@ -1747,10 +1747,10 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1106 MuiTableCell-body-1108 sc-brqgnP bQcQyM"
+        className="MuiTableCell-root-1106 MuiTableCell-body-1108 sc-brqgnP eoeaYm"
         iscentered={0}
       >
-        four
+        row four
       </td>
       <td
         aria-sort={null}
@@ -1779,10 +1779,10 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1106 MuiTableCell-body-1108 sc-brqgnP bQcQyM"
+        className="MuiTableCell-root-1106 MuiTableCell-body-1108 sc-brqgnP eoeaYm"
         iscentered={0}
       >
-        five
+        row five
       </td>
       <td
         aria-sort={null}
