@@ -1,9 +1,9 @@
 /**
- * @description component description
- * @props
- * prop name (prop type) prop description
- * prop name (prop type) prop description
- * prop name (prop type) prop description
+ * @description Component that renders a listItem.
+ * @property button: (bool) If true, the list item will be a button (using ButtonBase).
+ * @property disabled: (bool) If true, the list item will be disabled.
+ * @property selected: (bool) Use to apply selected styles.
+ * @property text: (string) The text that will be the content of the item.
  */
 
 import React from 'react';
@@ -39,7 +39,7 @@ storiesOf('List Items|ListItem', module)
     <ListItem
       button
       disabled={boolean('disabled', false)}
-      onClick={action('onClickButton')}
+      onClick={action('clicked')}
       text={text('Text', listItemText)}
     />
   ))
@@ -53,7 +53,7 @@ storiesOf('List Items|ListItem', module)
     <ListItem
       button={boolean('button', false)}
       disabled={boolean('disabled', false)}
-      onClick={action('onClickButton')}
+      onClick={action('clicked')}
       selected={boolean('selected', false)}
       text={text('Text', listItemText)}
     >
