@@ -1,9 +1,3 @@
-/**
-*
-* TooltipIcon
-* @description Renders an Icon that can display a custom Tooltip.
-*/
-
 import React from 'react';
 import T from 'prop-types';
 import { StyledTooltip } from './styles/TooltipIcon.styles';
@@ -11,6 +5,7 @@ import { StyledTooltip } from './styles/TooltipIcon.styles';
 const TooltipIcon = ({
   Icon,
   iconProps,
+  placement,
   TooltipContent,
   ...restProps
 }) => {
@@ -18,7 +13,7 @@ const TooltipIcon = ({
   if (!TooltipContent) return Component;
   return (
     <StyledTooltip
-      placement="right-start"
+      placement={placement}
       title={TooltipContent}
       {...restProps}
     >
@@ -30,7 +25,10 @@ const TooltipIcon = ({
 TooltipIcon.propTypes = {
   Icon: T.oneOfType([T.func, T.element]).isRequired,
   iconProps: T.object,
+  placement: T.string,
   TooltipContent: T.oneOfType([T.element, T.node]),
 };
+
+TooltipIcon.defaultProps = { placement: 'right-start' };
 
 export default TooltipIcon;
