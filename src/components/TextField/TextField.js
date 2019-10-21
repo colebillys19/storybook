@@ -1,29 +1,9 @@
 import React from 'react';
 import T from 'prop-types';
-import styled from 'styled-components';
-import TextField from '@material-ui/core/TextField';
 
-import { msBrightPurple } from '../../utils/defaultStyleHelper';
+import { StyledTextField } from './styles/TextField.styles';
 
-const BaseTextField = ({ color, ...props }) => {
-  const StyledTextField = styled((styledProps) => (
-    <TextField
-      classes={{ root: 'root' }}
-      InputLabelProps={{ className: 'label' }}
-      {...styledProps}
-    />
-  ))`
-    &.root {
-      div:after {
-        border-bottom: 0.2rem solid ${color || msBrightPurple};
-      }
-      .label {
-        color: #757575;
-      }
-    }
-  `;
-  return <StyledTextField color={color} {...props} />;
-};
+const BaseTextField = ({ color, ...props }) => <StyledTextField color={color} {...props} />;
 
 BaseTextField.propTypes = {
   color: T.string,

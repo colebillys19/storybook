@@ -83,4 +83,4 @@ storiesOf('Icons|TooltipIcon', module)
     );
   });
 
-const spanStyles = { color: '#888', padding: '0.8rem' };
+const spanStyles = { color: '#888', display: 'inline-block', margin: '0.3rem 0.8rem' };
