@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import TextInput from '../TextInput';
+import NumberInput from '../NumberInput';
 
-storiesOf('Inputs|TextInput', module)
+storiesOf('Inputs|NumberInput', module)
   .add('default', () => (
-    <TextInput
+    <NumberInput
       onChange={() => console.log('change')}
     />
   ));

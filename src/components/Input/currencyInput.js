@@ -1,9 +1,8 @@
 import React from 'react';
 import T from 'prop-types';
 import iconDictionary from '../../utils/iconDictionary';
-import { formatAmountsWithCommas } from '../../utils/defaultStyleHelper';
 
-import { formatCurrency } from './helpers';
+import { formatCurrency, formatAmountsWithCommas } from './helpers';
 import TextInputWithAdornment from './sub-components/TextInputWithAdornment';
 
 const Dollar = iconDictionary('dollar', 'small');

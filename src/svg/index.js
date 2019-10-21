@@ -1,23 +1,3 @@
-// MATERIAL-UI ICONS
-import Star from '@material-ui/icons/Star';
-import StarOutline from '@material-ui/icons/StarBorder';
-import Download from '@material-ui/icons/VerticalAlignBottom';
-import Lock from '@material-ui/icons/Lock';
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import Block from '@material-ui/icons/Block';
-import Create from '@material-ui/icons/Create';
-import Inbox from '@material-ui/icons/Inbox';
-import Reply from '@material-ui/icons/Reply';
-import Send from '@material-ui/icons/Send';
-import CheckCircleOutline from '@material-ui/icons/CheckCircleOutline';
-import Warning from '@material-ui/icons/Warning';
-import AttachMoney from '@material-ui/icons/AttachMoney';
-import Laptop from '@material-ui/icons/Laptop';
-import Alarm from '@material-ui/icons/Alarm';
-import Mail from '@material-ui/icons/MailOutline';
-import Flower from '@material-ui/icons/LocalFlorist';
-import { ArrowDropUp } from './materialUiIcons';
 import Add from './Add';
 import ArrowCarouselNext from './ArrowCarouselNext';
 import ArrowCarouselPrev from './ArrowCarouselPrev';
@@ -64,40 +44,28 @@ import ViewEye from './ViewEye';
 
 export {
   Add,
-  Alarm,
   ArrowCarouselNext,
   ArrowCarouselPrev,
   ArrowDown,
-  ArrowDropUp,
   ArrowNext,
   ArrowPrev,
-  AttachMoney,
-  Block,
   Calculate,
   Calendar,
   Cancel,
   Chat,
-  CheckCircleOutline,
   Checkmark,
   CloseMenu,
-  Create,
-  Download,
   Edit,
   EmailTips,
   Escrow,
   Filter,
-  Flower,
   HamburgerMenu,
   Help,
   Home,
   Important,
-  Inbox,
   InfoDot,
-  Laptop,
   LearningCenter,
-  Lock,
   Logout,
-  Mail,
   Messaging,
   MessagingUnread,
   Mia,
@@ -113,16 +81,9 @@ export {
   Print,
   Profile,
   Refresh,
-  Reply,
-  Send,
-  Star,
-  StarOutline,
   Statements,
   TransHistory,
   Trash,
   Video,
   ViewEye,
-  Visibility,
-  VisibilityOff,
-  Warning,
 };

@@ -167,6 +167,10 @@ export const iconStyle = {
     width: '15rem',
   },
   overdue: { color: red[500] },
+  plusOne: {
+    height: '1.8rem',
+    width: '1.8rem',
+  },
   ready: { /* color: green500 */ },
   settings: { marginRight: '1rem' },
   submitted: { color: ssGreen },

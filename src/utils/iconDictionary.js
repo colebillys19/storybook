@@ -1,43 +1,55 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// MATERIAL-UI ICONS
+import Alarm from '@material-ui/icons/Alarm';
+import ArrowDropDown from '@material-ui/icons/ArrowDropDown';
+import ArrowDropUp from '@material-ui/icons/ArrowDropUp';
+import AttachMoney from '@material-ui/icons/AttachMoney';
+import Block from '@material-ui/icons/Block';
+import CheckCircleOutline from '@material-ui/icons/CheckCircleOutline';
+import Create from '@material-ui/icons/Create';
+import Download from '@material-ui/icons/VerticalAlignBottom';
+import ExpandMore from '@material-ui/icons/ExpandMore';
+import ExposurePlus1 from '@material-ui/icons/ExposurePlus1';
+import Flower from '@material-ui/icons/LocalFlorist';
+import HighlightOff from '@material-ui/icons/HighlightOff';
+import Inbox from '@material-ui/icons/Inbox';
+import Laptop from '@material-ui/icons/Laptop';
+import Lock from '@material-ui/icons/Lock';
+import Mail from '@material-ui/icons/MailOutline';
+import Reply from '@material-ui/icons/Reply';
+import Send from '@material-ui/icons/Send';
+import ShowChart from '@material-ui/icons/ShowChart';
+import Star from '@material-ui/icons/Star';
+import StarOutline from '@material-ui/icons/StarBorder';
+import Visibility from '@material-ui/icons/Visibility';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import Warning from '@material-ui/icons/Warning';
+
 import {
   Add,
-  Alarm,
   ArrowCarouselNext,
   ArrowCarouselPrev,
   ArrowDown,
-  ArrowDropUp,
   ArrowNext,
   ArrowPrev,
-  AttachMoney,
-  Block,
   Calculate,
   Calendar,
   Cancel,
   Chat,
-  CheckCircleOutline,
   Checkmark,
   CloseMenu,
-  Create,
-  Download,
   Edit,
   EmailTips,
   Escrow,
   Filter,
-  Flower,
   HamburgerMenu,
   Help,
   Home,
   Important,
-  Inbox,
   InfoDot,
-  Laptop,
   LearningCenter,
-  Lock,
   Logout,
-  Mail,
   Messaging,
   MessagingUnread,
   Mia,
@@ -53,18 +65,11 @@ import {
   Print,
   Profile,
   Refresh,
-  Reply,
-  Send,
-  Star,
-  StarOutline,
   Statements,
   TransHistory,
   Trash,
   Video,
   ViewEye,
-  Visibility,
-  VisibilityOff,
-  Warning,
 } from '../svg';
 
 import { iconStyle, iconSize } from './defaultStyleHelper';
@@ -87,6 +92,7 @@ export default (name, size, style, options) => {
     arrowCarouselNext: ArrowCarouselNext,
     arrowCarouselPrev: ArrowCarouselPrev,
     arrowDown: ArrowDown,
+    arrowDropDown: ArrowDropDown,
     arrowNext: ArrowNext,
     arrowPrev: ArrowPrev,
     arrowUp: ArrowDropUp,
@@ -103,10 +109,13 @@ export default (name, size, style, options) => {
     edit: Edit,
     emailTips: EmailTips,
     escrow: Escrow,
+    expandMore: ExpandMore,
+    exposurePlus1: ExposurePlus1,
     filter: Filter,
     flower: Flower,
     hamburgerMenu: HamburgerMenu,
     help: Help,
+    highlightOff: HighlightOff,
     home: Home,
     important: Important,
     inbox: Inbox,
@@ -128,11 +137,13 @@ export default (name, size, style, options) => {
     payoff: Payoff,
     phone: Phone,
     plus: Plus,
+    plus1: ExposurePlus1,
     print: Print,
     profile: Profile,
     refresh: Refresh,
     reply: Reply,
     send: Send,
+    showChart: ShowChart,
     star: Star,
     starOutline: StarOutline,
     statements: Statements,
