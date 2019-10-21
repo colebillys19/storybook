@@ -1,10 +1,7 @@
 /**
- * @description component description
- * @props
- * prop name (prop type) prop description
- * prop name (prop type) prop description
- * prop name (prop type) prop description
+ * @description Wraps text to create an <h3> header
  */
+
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
@@ -18,10 +15,10 @@ import {
   dmiMainGreen,
   dmiSecondaryColor,
   ssDarkGrey,
-  ssPurple,
   ssMainBlue,
+  ssPurple,
 } from '../../../utils/defaultStyleHelper';
-import { H1 } from '../index';
+import { H3 } from '../index';
 
 const dmiColorOptions = {
   dmiMainGreen,
@@ -31,15 +28,15 @@ const dmiColorOptions = {
   ssPurple,
 };
 
-const defaultH1Text = 'H1 HEADER TEXT';
+const defaultH3Text = 'H3 HEADER TEXT';
 
-storiesOf('Headings|H1', module)
-  .addParameters({ component: H1 })
+storiesOf('Headings|H3', module)
+  .addParameters({ component: H3 })
   .addDecorator(withKnobs)
   .add('default', () => (
-    <H1
+    <H3
       style={{ color: select('Color', dmiColorOptions, ssDarkGrey) }}
     >
-      {text('Text', defaultH1Text)}
-    </H1>
+      {text('Text', defaultH3Text)}
+    </H3>
   ));

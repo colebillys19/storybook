@@ -1,9 +1,5 @@
 /**
- * @description component description
- * @props
- * prop name (prop type) prop description
- * prop name (prop type) prop description
- * prop name (prop type) prop description
+ * @description Wraps text to create an <h1> header
  */
 
 import React from 'react';
@@ -18,10 +14,10 @@ import {
   dmiMainGreen,
   dmiSecondaryColor,
   ssDarkGrey,
-  ssMainBlue,
   ssPurple,
+  ssMainBlue,
 } from '../../../utils/defaultStyleHelper';
-import { H2 } from '../index';
+import { H1 } from '../index';
 
 const dmiColorOptions = {
   dmiMainGreen,
@@ -31,15 +27,15 @@ const dmiColorOptions = {
   ssPurple,
 };
 
-const defaultH2Text = 'H2 HEADER TEXT';
+const defaultH1Text = 'H1 HEADER TEXT';
 
-storiesOf('Headings|H2', module)
-  .addParameters({ component: H2 })
+storiesOf('Headings|H1', module)
+  .addParameters({ component: H1 })
   .addDecorator(withKnobs)
   .add('default', () => (
-    <H2
+    <H1
       style={{ color: select('Color', dmiColorOptions, ssDarkGrey) }}
     >
-      {text('Text', defaultH2Text)}
-    </H2>
+      {text('Text', defaultH1Text)}
+    </H1>
   ));

@@ -8,7 +8,7 @@ import { StyledTableCell, StyledTableRow } from './BaseTableRow.styles';
 
 export default function BaseTableRow({ centeredCols, data }) {
   const cells = data.map((cell, i) => {
-    const isCentered = centeredCols.length && centeredCols.includes(i) ? 1 : 0;
+    const isCentered = centeredCols && centeredCols.includes(i) ? 1 : 0;
     return <StyledTableCell key={uuid()} iscentered={isCentered}>{cell}</StyledTableCell>;
   });
   return (
