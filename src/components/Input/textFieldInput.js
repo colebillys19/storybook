@@ -38,7 +38,7 @@ import React, { Fragment } from 'react';
 import T from 'prop-types';
 import ConditionalRender from '../../utils/ConditionalRender';
 import InputLabel from './sub-components/InputLabel';
-import { BaseTextFieldInput } from './styles/TextField.styles';
+import { BaseTextFieldInput } from './styles/TextFieldInput.styles';
 
 const TextFieldInput = ({
   className,

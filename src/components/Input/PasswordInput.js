@@ -16,7 +16,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import useToggle from '../../utils/useToggle';
+import useToggle from './helpers/useToggle';
 import ShowPasswordIcon from './sub-components/ShowPasswordIcon';
 import TextInputWithAdornment from './sub-components/TextInputWithAdornment';
 

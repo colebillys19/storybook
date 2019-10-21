@@ -3,7 +3,7 @@ import T from 'prop-types';
 import iconDictionary from '../../utils/iconDictionary';
 
 import { formatCurrency, formatAmountsWithCommas } from './helpers';
-import TextInputWithAdornment from './sub-components/TextInputWithAdornment';
+import { StyledCurrencyInput } from './styles/CurrencyInput.styles';
 
 const Dollar = iconDictionary('dollar', 'small');
 
@@ -26,7 +26,7 @@ export const CurrencyInput = ({
   };
 
   return (
-    <TextInputWithAdornment
+    <StyledCurrencyInput
       adornmentComponent={Dollar}
       name={name}
       onBlur={addCurrencyComma}

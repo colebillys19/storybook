@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { validate } from '../../../utils/validate';
+import { validate } from '../helpers/validate';
 
 /**
  * @description Form Input Custom Hook

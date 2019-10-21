@@ -35,8 +35,3 @@ export const BaseTextFieldInput = styled(TextField)`
     };
   }
 `;
-
-export const StyledLabel = styled.div`
-  font-size: 1.3rem;
-  margin-left: .5rem;
-`;

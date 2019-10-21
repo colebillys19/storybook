@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 
 import { formatNumbers } from './helpers';
-import TextFieldInput from './TextFieldInput';
+import { StyledNumberInput } from './styles/NumberInput.styles';
 
 export const NumberInput = ({
   helperText,
@@ -18,7 +18,7 @@ export const NumberInput = ({
   };
 
   return (
-    <TextFieldInput
+    <StyledNumberInput
       helperText={helperText}
       name={name}
       onChange={handleNumInput}
