@@ -9,9 +9,10 @@
 import React from 'react';
 import T from 'prop-types';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import iconDictionary from 'utils/iconDictionary';
-import ConditionalRender from '../ConditionalRender';
-import { StyledPasswordIcon } from './styles/passwordIconStyles';
+import iconDictionary from '../../../utils/iconDictionary';
+import ConditionalRender from '../../../utils/ConditionalRender';
+
+import { StyledPasswordIcon } from './ShowPasswordIcon.styles';
 
 const Visibility = iconDictionary('visibility', 'mediumSmall', 'passwordIcon');
 const VisibilityOff = iconDictionary('visibilityOff', 'mediumSmall', 'passwordIcon');

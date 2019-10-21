@@ -10,6 +10,7 @@ import { greyShadowAlt, inputFocusedBorder } from '../../../utils/defaultStyleHe
 export const StyledBaseInput = styled(OutlinedInput)`
   background: white;
   border-radius: .5rem;
+  display: inline-flex;
   font-size: 1.4rem;
   height: 4rem;
   width: 100%;

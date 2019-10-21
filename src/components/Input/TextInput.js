@@ -14,7 +14,7 @@
 import React from 'react';
 import T from 'prop-types';
 import ConditionalRender from '../../utils/ConditionalRender';
-import { StyledBaseInput, StyledInputGroup, StyledLabel } from './styles/BaseTextInput.styles';
+import { StyledBaseInput, StyledInputGroup, StyledLabel } from './styles/TextInput.styles';
 
 const BaseTextInput = ({
   disabled,

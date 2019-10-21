@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 
 import { formatNumbers } from './helpers';
-import TextFieldInput from './textFieldInput';
+import TextFieldInput from './TextFieldInput';
 
 export const NumberInput = ({
   helperText,

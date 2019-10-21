@@ -15,9 +15,10 @@
 
 import React from 'react';
 import T from 'prop-types';
-import { useToggle } from 'utils/globalHooks';
-import ShowPasswordIcon from './showPasswordIcon';
-import TextInputWithAdornment from './textInputWithAdornment';
+
+import useToggle from '../../utils/useToggle';
+import ShowPasswordIcon from './sub-components/ShowPasswordIcon';
+import TextInputWithAdornment from './sub-components/TextInputWithAdornment';
 
 export const BasePasswordInput = (props) => {
   const [showPassword, handleShowToggle] = useToggle(false);

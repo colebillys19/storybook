@@ -1,8 +1,8 @@
 import React from 'react';
 import T from 'prop-types';
 
-import ConditionalRender from 'components/base_ui/ConditionalRender';
-import { LabelWrapper, StyledIcon } from './styles/inputLabelStyles';
+import ConditionalRender from '../../utils/ConditionalRender';
+import { LabelWrapper, StyledIcon } from './styles/InputLabel.styles';
 
 const InputLabel = ({
   className,

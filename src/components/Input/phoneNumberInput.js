@@ -1,8 +1,8 @@
 import React from 'react';
 import T from 'prop-types';
-import iconDictionary from 'utils/iconDictionary';
+import iconDictionary from '../../utils/iconDictionary';
 
-import TextInputWithAdornment from './textInputWithAdornment';
+import TextInputWithAdornment from './sub-components/TextInputWithAdornment';
 
 const Plus1 = iconDictionary('plus1', null, 'plusOne');
 

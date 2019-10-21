@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import TextFieldInput from './textFieldInput';
+import TextFieldInput from '../TextFieldInput';
 
 const TextInputWithAdornment = ({
   adornmentComponent,
