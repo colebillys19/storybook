@@ -21,6 +21,7 @@ const helperText = 'helper text';
 const labelText = 'label text';
 
 storiesOf('Inputs|CurrencyInput', module)
+  .addParameters({ component: CurrencyInput })
   .addDecorator(withKnobs)
   .add('default', () => (
     <CurrencyInput

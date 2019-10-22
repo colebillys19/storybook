@@ -42,11 +42,13 @@ const BaseButton = ({
   </StyledBaseButton>
 );
 
+/* eslint-disable react/default-props-match-prop-types */
 BaseButton.defaultProps = {
   disableFocusRipple: true,
   disableRipple: true,
   label: '',
 };
+/* eslint-enable react/default-props-match-prop-types */
 
 BaseButton.propTypes = {
   component: T.func,
@@ -54,8 +56,8 @@ BaseButton.propTypes = {
   disableRipple: T.bool,
   href: T.string,
   Icon: T.oneOfType([T.object, T.func]),
-  label: T.oneOfType([T.string, T.element]),
-  onClick: T.func,
+  label: T.oneOfType([T.string, T.element]).isRequired,
+  onClick: T.func.isRequired,
   target: T.string,
   to: T.string,
 };

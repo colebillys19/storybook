@@ -21,6 +21,7 @@ const helperText = 'helper text';
 const labelText = 'label text';
 
 storiesOf('Inputs|PasswordInput', module)
+  .addParameters({ component: PasswordInput })
   .addDecorator(withKnobs)
   .add('default', () => (
     <PasswordInput

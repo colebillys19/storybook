@@ -21,6 +21,7 @@ const helperText = 'helper text';
 const labelText = 'label text';
 
 storiesOf('Inputs|NumberInput', module)
+  .addParameters({ component: NumberInput })
   .addDecorator(withKnobs)
   .add('default', () => (
     <NumberInput
