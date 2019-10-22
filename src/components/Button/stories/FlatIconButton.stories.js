@@ -37,6 +37,7 @@ const sizeOptions = {
 const sizeDefault = 'mediumSmall';
 
 storiesOf('Buttons|FlatIconButton', module)
+  .addParameters({ component: FlatIconButton })
   .addDecorator(withKnobs)
   .add('default', () => {
     const icon = iconDictionary(

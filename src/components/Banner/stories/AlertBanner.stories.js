@@ -19,6 +19,7 @@ const bannerProps = {
 };
 
 storiesOf('Banners|AlertBanner', module)
+  .addParameters({ component: AlertBanner })
   .addDecorator(withKnobs)
   .add('default', () => (
     <AlertBanner

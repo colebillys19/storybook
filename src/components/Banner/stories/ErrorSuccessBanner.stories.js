@@ -15,6 +15,7 @@ import ErrorSuccessBanner from '../ErrorSuccessBanner';
 const bannerProps = { errorMessage: 'error', successMessage: 'success' };
 
 storiesOf('Banners|ErrorSuccessBanner', module)
+  .addParameters({ component: ErrorSuccessBanner })
   .addDecorator(withKnobs)
   .add('error', () => (
     <ErrorSuccessBanner

@@ -67,6 +67,13 @@ import {
   Warning,
 } from '../svg';
 
+import {
+  ArrowDropDown,
+  ExpandMore,
+  ShowChart,
+  VerticalAlignBottom,
+} from '../svg/materialUiIcons';
+
 import { iconStyle, iconSize } from './defaultStyleHelper';
 
 /**
@@ -87,6 +94,7 @@ export default (name, size, style, options) => {
     arrowCarouselNext: ArrowCarouselNext,
     arrowCarouselPrev: ArrowCarouselPrev,
     arrowDown: ArrowDown,
+    arrowDropDown: ArrowDropDown,
     arrowNext: ArrowNext,
     arrowPrev: ArrowPrev,
     arrowUp: ArrowDropUp,
@@ -103,6 +111,7 @@ export default (name, size, style, options) => {
     edit: Edit,
     emailTips: EmailTips,
     escrow: Escrow,
+    expandMore: ExpandMore,
     filter: Filter,
     flower: Flower,
     hamburgerMenu: HamburgerMenu,
@@ -133,12 +142,14 @@ export default (name, size, style, options) => {
     refresh: Refresh,
     reply: Reply,
     send: Send,
+    showChart: ShowChart,
     star: Star,
     starOutline: StarOutline,
     statements: Statements,
     successOutline: CheckCircleOutline,
     transHistory: TransHistory,
     trash: Trash,
+    verticalAlignBottom: VerticalAlignBottom,
     video: Video,
     viewEye: ViewEye,
     visibility: Visibility,

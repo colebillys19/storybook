@@ -24,6 +24,7 @@ const paddingDefault = '2rem';
 const paperText = 'paper text';
 
 storiesOf('Paper|InsetPaper', module)
+  .addParameters({ component: InsetPaper })
   .addDecorator(withKnobs)
   .add('default', () => (
     <InsetPaper>

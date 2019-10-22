@@ -55,6 +55,7 @@ const tooltipContent = (
 );
 
 storiesOf('Icons|TooltipIcon', module)
+  .addParameters({ component: TooltipIcon })
   .addDecorator(withKnobs)
   .add('default', () => {
     const icon = iconDictionary(

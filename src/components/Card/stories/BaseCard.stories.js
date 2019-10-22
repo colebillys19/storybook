@@ -45,6 +45,7 @@ const paddingDefault = '1rem';
 const cardText = 'card text';
 
 storiesOf('Cards|BaseCard', module)
+  .addParameters({ component: BaseCard })
   .addDecorator(withKnobs)
   .add('default', () => (
     <BaseCard color={select('Card Color', colorOptions, colorDefault)}>

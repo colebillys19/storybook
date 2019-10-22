@@ -48,6 +48,7 @@ const labelText = 'LABEL TEXT';
 const path = 'path';
 
 storiesOf('Links|GhostButtonLink', module)
+  .addParameters({ component: GhostButtonLink })
   .addDecorator(withKnobs)
   .addDecorator((story) => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
