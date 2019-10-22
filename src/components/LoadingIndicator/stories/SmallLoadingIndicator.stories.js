@@ -9,4 +9,5 @@ import { storiesOf } from '@storybook/react';
 import { SmallLoadingIndicator } from '../index';
 
 storiesOf('Loading Indicators|SmallLoadingIndicator', module)
+  .addParameters({ component: SmallLoadingIndicator })
   .add('default', () => <SmallLoadingIndicator />);

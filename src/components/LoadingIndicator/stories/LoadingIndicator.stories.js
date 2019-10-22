@@ -9,4 +9,5 @@ import { storiesOf } from '@storybook/react';
 import { LoadingIndicator } from '../index';
 
 storiesOf('Loading Indicators|LoadingIndicator', module)
+  .addParameters({ component: LoadingIndicator })
   .add('default', () => <LoadingIndicator />);

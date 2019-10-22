@@ -30,6 +30,7 @@ const centeredColsB = [1, 2, 3];
 const hoverColor = '#F8F8F8';
 
 storiesOf('Tables|BaseTable', module)
+  .addParameters({ component: BaseTable })
   .addDecorator(withKnobs)
   .add('default', () => (
     <BaseTable

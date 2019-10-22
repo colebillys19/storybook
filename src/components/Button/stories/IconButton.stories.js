@@ -34,6 +34,7 @@ const sizeOptions = {
 const sizeDefault = 'mediumSmall';
 
 storiesOf('Buttons|IconButton', module)
+  .addParameters({ component: IconButton })
   .addDecorator(withKnobs)
   .add('default', () => (
     <IconButton onClick={action('onClickButton')}>

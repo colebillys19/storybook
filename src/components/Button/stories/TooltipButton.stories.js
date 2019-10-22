@@ -65,6 +65,7 @@ const sizeOptions = {
 const sizeDefault = 'mediumSmall';
 
 storiesOf('Buttons|TooltipButton', module)
+  .addParameters({ component: TooltipButton })
   .addDecorator(withKnobs)
   .add('default', () => {
     const icon = iconDictionary(

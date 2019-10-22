@@ -72,6 +72,13 @@ import {
   ViewEye,
 } from '../svg';
 
+import {
+  ArrowDropDown,
+  ExpandMore,
+  ShowChart,
+  VerticalAlignBottom,
+} from '../svg/materialUiIcons';
+
 import { iconStyle, iconSize } from './defaultStyleHelper';
 
 /**
@@ -150,6 +157,7 @@ export default (name, size, style, options) => {
     successOutline: CheckCircleOutline,
     transHistory: TransHistory,
     trash: Trash,
+    verticalAlignBottom: VerticalAlignBottom,
     video: Video,
     viewEye: ViewEye,
     visibility: Visibility,

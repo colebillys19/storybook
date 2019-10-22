@@ -16,6 +16,7 @@ import TextButton from '../TextButton';
 const label = 'LABEL TEXT';
 
 storiesOf('Buttons|TextButton', module)
+  .addParameters({ component: TextButton })
   .addDecorator(withKnobs)
   .add('default', () => (
     <TextButton

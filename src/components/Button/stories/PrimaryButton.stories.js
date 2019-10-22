@@ -36,6 +36,7 @@ const sizeOptions = {
 const sizeDefault = 'mediumSmall';
 
 storiesOf('Buttons|PrimaryButton', module)
+  .addParameters({ component: PrimaryButton })
   .addDecorator(withKnobs)
   .add('default', () => {
     const icon = iconDictionary(

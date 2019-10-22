@@ -11,6 +11,7 @@
 
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import {
   boolean,
   select,
@@ -35,6 +36,7 @@ const labelText = 'LABEL TEXT';
 const onChange = () => 'defaultOnChange';
 
 storiesOf('Radio|RadioButtonGroup', module)
+  .addParameters({ component: RadioButtonGroup })
   .addDecorator(withKnobs)
   .add('default', () => {
     const options = [
@@ -55,7 +57,7 @@ storiesOf('Radio|RadioButtonGroup', module)
       <RadioButtonGroup
         disableRipple={boolean('Disable Ripple', false)}
         labelPlacement={select('Label Placement', labelPlacementOptions, labelPlacementDefault)}
-        onChange={onChange}
+        onChange={action('onChange')}
         options={options}
         row={boolean('Row', false)}
       />

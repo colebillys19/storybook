@@ -36,6 +36,7 @@ const sizeOptions = {
 const sizeDefault = 'mediumSmall';
 
 storiesOf('Buttons|GhostButton', module)
+  .addParameters({ component: GhostButton })
   .addDecorator(withKnobs)
   .add('default', () => {
     const icon = iconDictionary(
