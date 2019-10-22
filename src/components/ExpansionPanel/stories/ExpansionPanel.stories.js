@@ -73,6 +73,7 @@ const expansionDetailsStyles = { fontSize: '1.6rem' };
 const defaultFalse = false;
 
 storiesOf('ExpansionPanel|ExpansionPanel', module)
+  .addParameters({ component: ExpansionPanel })
   .addDecorator(withKnobs)
   .add('default', () => {
     const ExpandMoreIcon = iconDictionary(

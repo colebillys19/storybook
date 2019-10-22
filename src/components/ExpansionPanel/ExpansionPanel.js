@@ -19,7 +19,7 @@ const ExpansionPanel = ({
 );
 
 ExpansionPanel.propTypes = {
-  children: T.node,
+  children: T.node.isRequired,
   classes: T.object,
   defaultExpanded: T.bool,
   disabled: T.bool,

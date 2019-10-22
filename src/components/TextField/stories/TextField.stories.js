@@ -92,6 +92,7 @@ const colorOptions = {
 const defaultColor = msBrightPurple;
 
 storiesOf('TextField|TextField', module)
+  .addParameters({ component: TextField })
   .addDecorator(withKnobs)
   .add('default', () => (
     <TextField
