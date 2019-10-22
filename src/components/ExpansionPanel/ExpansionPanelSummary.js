@@ -1,10 +1,3 @@
-/**
-*
-* ExpansionPanelSummary
-* @description Expansion panel sub-component that displays summary component/text
-* Use Case : Render the headers / visible text in any expansion panel
-*/
-
 import React from 'react';
 import T from 'prop-types';
 import PanelSummary from '@material-ui/core/ExpansionPanelSummary';

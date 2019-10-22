@@ -1,10 +1,3 @@
-/**
-*
-* ExpansionPanelDetails
-* @description Expansion panel sub-component that displays additional details when in opened state
-* Use Case : Render the hidden content when expanded in a expansion panel
-*/
-
 import React from 'react';
 import T from 'prop-types';
 import PanelDetails from '@material-ui/core/ExpansionPanelDetails';

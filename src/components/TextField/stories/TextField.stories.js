@@ -23,8 +23,8 @@
  *                                 before the user enters a value.
  * @property required: (bool) [required=false] If true, the label is displayed in the input
  *                                             before the user enters a value.
- * @property rows: (string|number) Number of rows to display when multiline option is set to true.
- * @property rowsMax: (string|number) Maximum number of rows to display when
+ * @property rows: (string | number) Number of rows to display when multiline option is set to true.
+ * @property rowsMax: (string | number) Maximum number of rows to display when
  *                                    multiline option is set to true.
  * @property select: (bool) [select=false] Render a Select element while passing the Input element
  *                                         to Select as input parameter. If this option is set
@@ -37,6 +37,7 @@
  */
 
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import {
   boolean,
@@ -90,8 +91,6 @@ const colorOptions = {
 };
 const defaultColor = msBrightPurple;
 
-const handleChange = () => 'defaultOnChange';
-
 storiesOf('TextField|TextField', module)
   .addDecorator(withKnobs)
   .add('default', () => (
@@ -99,7 +98,7 @@ storiesOf('TextField|TextField', module)
       color={select('Underline Color', colorOptions, defaultColor)}
       label={text('Label', defaultLabel)}
       margin={select('Margin', marginOptions, defaultMargin)}
-      onChange={handleChange}
+      onChange={action('onChange')}
       variant={select('Variant', variantOptions, defaultVariant)}
     />
   ))
@@ -109,7 +108,7 @@ storiesOf('TextField|TextField', module)
       color={select('Underline Color', colorOptions, defaultColor)}
       label={text('Label', defaultLabel)}
       margin={select('Margin', marginOptions, defaultMargin)}
-      onChange={handleChange}
+      onChange={action('onChange')}
       placeholder={text('Placeholder', defaultPlaceholder)}
     />
   ))
@@ -118,7 +117,7 @@ storiesOf('TextField|TextField', module)
       disabled
       label={text('Label', defaultLabel)}
       margin={select('Margin', marginOptions, defaultMargin)}
-      onChange={handleChange}
+      onChange={action('onChange')}
       placeholder={text('Placeholder', defaultPlaceholder)}
       required={boolean('Required', false)}
       variant={select('Variant', variantOptions, defaultVariant)}
@@ -130,7 +129,7 @@ storiesOf('TextField|TextField', module)
       label={text('Label', defaultLabel)}
       margin={select('Margin', marginOptions, defaultMargin)}
       multiline
-      onChange={handleChange}
+      onChange={action('onChange')}
       required={boolean('Require', defaultFalse)}
       rows={select('Rows', rowOptions, defaultRow)}
       rowsMax={select('Rows Max', rowOptions, defaultRowMax)}
@@ -141,7 +140,7 @@ storiesOf('TextField|TextField', module)
     <TextField
       color={select('Underline Color', colorOptions, defaultColor)}
       margin={select('Margin', marginOptions, defaultMargin)}
-      onChange={handleChange}
+      onChange={action('onChange')}
       placeholder={text('Placeholder', defaultPlaceholder)}
       required={boolean('Require', defaultFalse)}
       variant={select('Variant', variantOptions, defaultVariant)}

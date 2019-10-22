@@ -1,12 +1,3 @@
-/**
-*
-* ExpansionPanel
-* @description Expansion panel component that displays summary component/text which on click
-* can expand to display additional details component/text
-* Use Case : Expansion panel receives several headers representing types and you want to display
-* information related to each type only when it's selected / clicked on.
-*/
-
 import React from 'react';
 import T from 'prop-types';
 
@@ -30,6 +21,17 @@ const ExpansionPanel = ({
 ExpansionPanel.propTypes = {
   children: T.node,
   classes: T.object,
+  defaultExpanded: T.bool,
+  disabled: T.bool,
+  expanded: T.bool,
+  onChange: T.func,
+  TransitionComponent: T.element,
+  TransitionProps: T.object,
+};
+
+ExpansionPanel.defaultProps = {
+  defaultExpanded: false,
+  disabled: false,
 };
 
 export default ExpansionPanel;
