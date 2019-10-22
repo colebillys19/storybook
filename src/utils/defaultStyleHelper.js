@@ -102,7 +102,7 @@ export const expansionPanelDividerStyle = `0.1rem solid ${ssLightGrey}`;
 export const greenBorderColor = green[500];
 export const greyBorder = `.1rem solid ${grey[300]}`;
 export const greyDivider = `0.2rem solid ${ssLightGrey}`;
-export const inputFocusedBorder = `0.2rem solid ${ssLightBlue}`;
+export const inputFocusedBorder = `0.2rem solid ${msBrightPurple}`;
 export const redborder = `.1rem solid ${red[900]}`;
 export const tableBorderStyle = '.1rem solid rgba(224, 224, 224, 1)';
 export const inputBorder = '1px solid #c0c0c0';
@@ -167,6 +167,10 @@ export const iconStyle = {
     width: '15rem',
   },
   overdue: { color: red[500] },
+  plusOne: {
+    height: '1.8rem',
+    width: '1.8rem',
+  },
   ready: { /* color: green500 */ },
   settings: { marginRight: '1rem' },
   submitted: { color: ssGreen },

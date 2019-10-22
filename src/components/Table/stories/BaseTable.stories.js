@@ -1,24 +1,3 @@
-/**
- * @description
- * - simple, no frills table
- * - takes in data in the form of string arrays, which are mapped to the table
- * - ensure that the length of headers and row arrays are equal
- * - see data shape below
- * @props
- * > centeredCols (array, optional)
- *   - array of numbers representing the indeces of columns whose content is centered
- * > headers (array)
- *   - array of strings respresenting column headers
- * > hoverColor (string, optional)
- *   - color value determining row background color on hover
- * > rowData (array)
- *   - array of objects containing:
- *     > cells (array)
- *       - array of strings representing row cell values
- *     > id (string)
- *       - unique id to be used when mapping rows
- */
-
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
