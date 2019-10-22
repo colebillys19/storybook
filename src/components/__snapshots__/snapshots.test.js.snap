@@ -200,7 +200,7 @@ exports[`Storyshots Buttons|BaseButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-135 root styled-icon sc-gPEVay gSxctk"
+      className="MuiSvgIcon-root-135 root styled-icon sc-fMiknA fHgBpm"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -245,7 +245,7 @@ exports[`Storyshots Buttons|FlatIconButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-181 root styled-icon sc-iRbamj jYQInW"
+      className="MuiSvgIcon-root-181 root styled-icon sc-dVhcbM cSbfGs"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -287,7 +287,7 @@ exports[`Storyshots Buttons|GhostButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-219 root styled-icon sc-jlyJG kXwwmw"
+      className="MuiSvgIcon-root-219 root styled-icon sc-eqIVtm etvAfY"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -329,7 +329,7 @@ exports[`Storyshots Buttons|IconButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-237 root styled-icon sc-gipzik fikXjC"
+      className="MuiSvgIcon-root-237 root styled-icon sc-fAjcbJ feyQBz"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -373,7 +373,7 @@ exports[`Storyshots Buttons|IconButton disabled 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-262 root styled-icon sc-csuQGl dTkLFy"
+      className="MuiSvgIcon-root-262 root styled-icon sc-caSCKo fQYLsh"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -414,7 +414,7 @@ exports[`Storyshots Buttons|PrimaryButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-300 root styled-icon sc-Rmtcm ffCwtX"
+      className="MuiSvgIcon-root-300 root styled-icon sc-gisBJw hFUNto"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -456,7 +456,7 @@ exports[`Storyshots Buttons|SecondaryButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-338 root styled-icon sc-bRBYWo hDCvzT"
+      className="MuiSvgIcon-root-338 root styled-icon sc-kjoXOD cuioRy"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -528,7 +528,7 @@ exports[`Storyshots Buttons|TooltipButton default 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-413 root styled-icon sc-hzDkRC iPnNXs"
+      className="MuiSvgIcon-root-413 root styled-icon sc-cHGsZl evGqlt"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -790,7 +790,7 @@ exports[`Storyshots Icons|TooltipIcon content 1`] = `
 <svg
   aria-describedby={null}
   aria-hidden="true"
-  className="MuiSvgIcon-root-629 root sc-kpOJdX iWsRMN styled-icon sc-dxgOiQ fcfTMG"
+  className="MuiSvgIcon-root-629 root sc-kpOJdX iWsRMN styled-icon sc-kgAjT dNWZJ"
   focusable="false"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -803,14 +803,10 @@ exports[`Storyshots Icons|TooltipIcon content 1`] = `
   viewBox="0 0 24 24"
 >
   <path
-    d="M0 0h24v24H0z"
-    fill="none"
+    d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z"
   />
   <path
-    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-  />
-  <path
-    d="M0 0h24v24H0z"
+    d="M0 0h24v24H0V0z"
     fill="none"
   />
 </svg>
@@ -820,7 +816,7 @@ exports[`Storyshots Icons|TooltipIcon default 1`] = `
 <svg
   aria-describedby={null}
   aria-hidden="true"
-  className="MuiSvgIcon-root-612 root sc-kpOJdX iWsRMN styled-icon sc-dxgOiQ fcfTMG"
+  className="MuiSvgIcon-root-612 root sc-kpOJdX iWsRMN styled-icon sc-TOsTZ fiyXsV"
   focusable="false"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -833,22 +829,893 @@ exports[`Storyshots Icons|TooltipIcon default 1`] = `
   viewBox="0 0 24 24"
 >
   <path
-    d="M0 0h24v24H0z"
-    fill="none"
+    d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z"
   />
   <path
-    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-  />
-  <path
-    d="M0 0h24v24H0z"
+    d="M0 0h24v24H0V0z"
     fill="none"
   />
 </svg>
 `;
 
+exports[`Storyshots Inputs|CurrencyInput default 1`] = `
+<div
+  className="MuiFormControl-root-638 root MuiFormControl-marginNormal-639 sc-hMqMXs pVjPw sc-eNQAEJ hjuxtB"
+>
+  <div
+    className="MuiInputBase-root-655 MuiOutlinedInput-root-642 base-input MuiInputBase-formControl-656 MuiInputBase-adornedStart-659 MuiOutlinedInput-adornedStart-645"
+    onClick={[Function]}
+  >
+    <fieldset
+      aria-hidden={true}
+      className="MuiPrivateNotchedOutline-root-672 MuiOutlinedInput-notchedOutline-649 outline"
+      style={
+        Object {
+          "paddingLeft": 8,
+        }
+      }
+    >
+      <legend
+        className="MuiPrivateNotchedOutline-legend-673"
+        style={
+          Object {
+            "width": 0,
+          }
+        }
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&#8203;",
+            }
+          }
+        />
+      </legend>
+    </fieldset>
+    <div
+      className="MuiInputAdornment-root-674 MuiInputAdornment-positionStart-676"
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root-679 root styled-icon sc-kEYyzF fywZiy"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
+        />
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+      </svg>
+    </div>
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-665 MuiOutlinedInput-input-650 input MuiInputBase-inputType-668 MuiInputBase-inputAdornedStart-670 MuiOutlinedInput-inputAdornedStart-653"
+      disabled={false}
+      min={1}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="0.00"
+      required={false}
+      type="number"
+      value={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Inputs|CurrencyInput helper text 1`] = `
+<div
+  className="MuiFormControl-root-688 root MuiFormControl-marginNormal-689 sc-hMqMXs pVjPw sc-eNQAEJ hjuxtB"
+>
+  <div
+    className="MuiInputBase-root-705 MuiOutlinedInput-root-692 base-input MuiInputBase-formControl-706 MuiInputBase-adornedStart-709 MuiOutlinedInput-adornedStart-695"
+    onClick={[Function]}
+  >
+    <fieldset
+      aria-hidden={true}
+      className="MuiPrivateNotchedOutline-root-722 MuiOutlinedInput-notchedOutline-699 outline"
+      style={
+        Object {
+          "paddingLeft": 8,
+        }
+      }
+    >
+      <legend
+        className="MuiPrivateNotchedOutline-legend-723"
+        style={
+          Object {
+            "width": 0,
+          }
+        }
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&#8203;",
+            }
+          }
+        />
+      </legend>
+    </fieldset>
+    <div
+      className="MuiInputAdornment-root-724 MuiInputAdornment-positionStart-726"
+    >
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root-729 root styled-icon sc-kEYyzF fywZiy"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
+        />
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+      </svg>
+    </div>
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-715 MuiOutlinedInput-input-700 input MuiInputBase-inputType-718 MuiInputBase-inputAdornedStart-720 MuiOutlinedInput-inputAdornedStart-703"
+      disabled={false}
+      min={1}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="0.00"
+      required={false}
+      type="number"
+      value={null}
+    />
+  </div>
+  <p
+    className="MuiFormHelperText-root-738 helper MuiFormHelperText-contained-742"
+  >
+    helper text
+  </p>
+</div>
+`;
+
+exports[`Storyshots Inputs|CurrencyInput label 1`] = `
+Array [
+  <div
+    className="sc-hMqMXs pVjPw sc-dxgOiQ eSKtOy"
+  >
+    <span>
+      label text
+    </span>
+  </div>,
+  <div
+    className="MuiFormControl-root-746 root MuiFormControl-marginNormal-747 sc-hMqMXs pVjPw sc-eNQAEJ hjuxtB"
+  >
+    <div
+      className="MuiInputBase-root-763 MuiOutlinedInput-root-750 base-input MuiInputBase-formControl-764 MuiInputBase-adornedStart-767 MuiOutlinedInput-adornedStart-753"
+      onClick={[Function]}
+    >
+      <fieldset
+        aria-hidden={true}
+        className="MuiPrivateNotchedOutline-root-780 MuiOutlinedInput-notchedOutline-757 outline"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="MuiPrivateNotchedOutline-legend-781"
+          style={
+            Object {
+              "width": 0,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+      <div
+        className="MuiInputAdornment-root-782 MuiInputAdornment-positionStart-784"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-787 root styled-icon sc-kEYyzF fywZiy"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
+          />
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <input
+        aria-invalid={false}
+        className="MuiInputBase-input-773 MuiOutlinedInput-input-758 input MuiInputBase-inputType-776 MuiInputBase-inputAdornedStart-778 MuiOutlinedInput-inputAdornedStart-761"
+        disabled={false}
+        min={1}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="0.00"
+        required={false}
+        type="number"
+        value={null}
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Inputs|NumberInput default 1`] = `
+<div
+  className="MuiFormControl-root-796 root MuiFormControl-marginNormal-797 sc-kkGfuU hCjPhk sc-eNQAEJ hjuxtB"
+>
+  <div
+    className="MuiInputBase-root-813 MuiOutlinedInput-root-800 base-input MuiInputBase-formControl-814"
+    onClick={[Function]}
+  >
+    <fieldset
+      aria-hidden={true}
+      className="MuiPrivateNotchedOutline-root-830 MuiOutlinedInput-notchedOutline-807 outline"
+      style={
+        Object {
+          "paddingLeft": 8,
+        }
+      }
+    >
+      <legend
+        className="MuiPrivateNotchedOutline-legend-831"
+        style={
+          Object {
+            "width": 0.01,
+          }
+        }
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&#8203;",
+            }
+          }
+        />
+      </legend>
+    </fieldset>
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-823 MuiOutlinedInput-input-808 input MuiInputBase-inputType-826"
+      disabled={false}
+      min={1}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="123"
+      required={false}
+      type="number"
+      value={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Inputs|NumberInput helper text 1`] = `
+<div
+  className="MuiFormControl-root-832 root MuiFormControl-marginNormal-833 sc-kkGfuU hCjPhk sc-eNQAEJ hjuxtB"
+>
+  <div
+    className="MuiInputBase-root-849 MuiOutlinedInput-root-836 base-input MuiInputBase-formControl-850"
+    onClick={[Function]}
+  >
+    <fieldset
+      aria-hidden={true}
+      className="MuiPrivateNotchedOutline-root-866 MuiOutlinedInput-notchedOutline-843 outline"
+      style={
+        Object {
+          "paddingLeft": 8,
+        }
+      }
+    >
+      <legend
+        className="MuiPrivateNotchedOutline-legend-867"
+        style={
+          Object {
+            "width": 0.01,
+          }
+        }
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&#8203;",
+            }
+          }
+        />
+      </legend>
+    </fieldset>
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-859 MuiOutlinedInput-input-844 input MuiInputBase-inputType-862"
+      disabled={false}
+      min={1}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="123"
+      required={false}
+      type="number"
+      value={null}
+    />
+  </div>
+  <p
+    className="MuiFormHelperText-root-868 helper MuiFormHelperText-contained-872"
+  >
+    helper text
+  </p>
+</div>
+`;
+
+exports[`Storyshots Inputs|NumberInput label 1`] = `
+Array [
+  <div
+    className="sc-kkGfuU hCjPhk sc-dxgOiQ eSKtOy"
+  >
+    <span>
+      label text
+    </span>
+  </div>,
+  <div
+    className="MuiFormControl-root-876 root MuiFormControl-marginNormal-877 sc-kkGfuU hCjPhk sc-eNQAEJ hjuxtB"
+  >
+    <div
+      className="MuiInputBase-root-893 MuiOutlinedInput-root-880 base-input MuiInputBase-formControl-894"
+      onClick={[Function]}
+    >
+      <fieldset
+        aria-hidden={true}
+        className="MuiPrivateNotchedOutline-root-910 MuiOutlinedInput-notchedOutline-887 outline"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="MuiPrivateNotchedOutline-legend-911"
+          style={
+            Object {
+              "width": 0.01,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+      <input
+        aria-invalid={false}
+        className="MuiInputBase-input-903 MuiOutlinedInput-input-888 input MuiInputBase-inputType-906"
+        disabled={false}
+        min={1}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="123"
+        required={false}
+        type="number"
+        value={null}
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Inputs|PasswordInput default 1`] = `
+<div
+  className="MuiFormControl-root-912 formControl MuiFormControl-marginNormal-913 sc-eNQAEJ hjuxtB"
+>
+  <div
+    className="MuiInputBase-root-929 MuiOutlinedInput-root-916 base-input MuiInputBase-formControl-930 MuiInputBase-adornedEnd-934 MuiOutlinedInput-adornedEnd-920"
+    onClick={[Function]}
+  >
+    <fieldset
+      aria-hidden={true}
+      className="MuiPrivateNotchedOutline-root-946 MuiOutlinedInput-notchedOutline-923 outline"
+      style={
+        Object {
+          "paddingLeft": 8,
+        }
+      }
+    >
+      <legend
+        className="MuiPrivateNotchedOutline-legend-947"
+        style={
+          Object {
+            "width": 0.01,
+          }
+        }
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&#8203;",
+            }
+          }
+        />
+      </legend>
+    </fieldset>
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-939 MuiOutlinedInput-input-924 input MuiInputBase-inputType-942 MuiInputBase-inputAdornedEnd-945 MuiOutlinedInput-inputAdornedEnd-928"
+      disabled={false}
+      min={null}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="placeholder"
+      required={false}
+      type="password"
+      value={null}
+    />
+    <div
+      className="MuiInputAdornment-root-948 MuiInputAdornment-positionEnd-951"
+    >
+      <div
+        className="MuiInputAdornment-root-948 MuiInputAdornment-positionEnd-951"
+      >
+        <button
+          aria-label="Toggle Password Visibility"
+          className="MuiButtonBase-root-959 MuiIconButton-root-953 sc-iAyFgw bUcqYc"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex="0"
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label-958"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-962 root styled-icon sc-eHgmQL gcRwue"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z"
+              />
+            </svg>
+          </span>
+          <span
+            className="MuiTouchRipple-root-971"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Inputs|PasswordInput helper text 1`] = `
+<div
+  className="MuiFormControl-root-978 formControl MuiFormControl-marginNormal-979 sc-eNQAEJ hjuxtB"
+>
+  <div
+    className="MuiInputBase-root-995 MuiOutlinedInput-root-982 base-input MuiInputBase-formControl-996 MuiInputBase-adornedEnd-1000 MuiOutlinedInput-adornedEnd-986"
+    onClick={[Function]}
+  >
+    <fieldset
+      aria-hidden={true}
+      className="MuiPrivateNotchedOutline-root-1012 MuiOutlinedInput-notchedOutline-989 outline"
+      style={
+        Object {
+          "paddingLeft": 8,
+        }
+      }
+    >
+      <legend
+        className="MuiPrivateNotchedOutline-legend-1013"
+        style={
+          Object {
+            "width": 0.01,
+          }
+        }
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&#8203;",
+            }
+          }
+        />
+      </legend>
+    </fieldset>
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-1005 MuiOutlinedInput-input-990 input MuiInputBase-inputType-1008 MuiInputBase-inputAdornedEnd-1011 MuiOutlinedInput-inputAdornedEnd-994"
+      disabled={false}
+      min={null}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="placeholder"
+      required={false}
+      type="password"
+      value={null}
+    />
+    <div
+      className="MuiInputAdornment-root-1014 MuiInputAdornment-positionEnd-1017"
+    >
+      <div
+        className="MuiInputAdornment-root-1014 MuiInputAdornment-positionEnd-1017"
+      >
+        <button
+          aria-label="Toggle Password Visibility"
+          className="MuiButtonBase-root-1025 MuiIconButton-root-1019 sc-iAyFgw bUcqYc"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onContextMenu={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex="0"
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label-1024"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-1028 root styled-icon sc-eHgmQL gcRwue"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z"
+                fill="none"
+              />
+              <path
+                d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z"
+              />
+            </svg>
+          </span>
+          <span
+            className="MuiTouchRipple-root-1045"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <p
+    className="MuiFormHelperText-root-1037 helper MuiFormHelperText-contained-1041"
+  >
+    helper text
+  </p>
+</div>
+`;
+
+exports[`Storyshots Inputs|PasswordInput label 1`] = `
+Array [
+  <div
+    className="sc-dxgOiQ eSKtOy"
+  >
+    <span>
+      label text
+    </span>
+  </div>,
+  <div
+    className="MuiFormControl-root-1052 formControl MuiFormControl-marginNormal-1053 sc-eNQAEJ hjuxtB"
+  >
+    <div
+      className="MuiInputBase-root-1069 MuiOutlinedInput-root-1056 base-input MuiInputBase-formControl-1070 MuiInputBase-adornedEnd-1074 MuiOutlinedInput-adornedEnd-1060"
+      onClick={[Function]}
+    >
+      <fieldset
+        aria-hidden={true}
+        className="MuiPrivateNotchedOutline-root-1086 MuiOutlinedInput-notchedOutline-1063 outline"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="MuiPrivateNotchedOutline-legend-1087"
+          style={
+            Object {
+              "width": 0.01,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+      <input
+        aria-invalid={false}
+        className="MuiInputBase-input-1079 MuiOutlinedInput-input-1064 input MuiInputBase-inputType-1082 MuiInputBase-inputAdornedEnd-1085 MuiOutlinedInput-inputAdornedEnd-1068"
+        disabled={false}
+        min={null}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder"
+        required={false}
+        type="password"
+        value={null}
+      />
+      <div
+        className="MuiInputAdornment-root-1088 MuiInputAdornment-positionEnd-1091"
+      >
+        <div
+          className="MuiInputAdornment-root-1088 MuiInputAdornment-positionEnd-1091"
+        >
+          <button
+            aria-label="Toggle Password Visibility"
+            className="MuiButtonBase-root-1099 MuiIconButton-root-1093 sc-iAyFgw bUcqYc"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex="0"
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label-1098"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-1102 root styled-icon sc-eHgmQL gcRwue"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0zm0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root-1111"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Inputs|TextInput default 1`] = `
+<div
+  className="MuiFormControl-root-1118 formControl MuiFormControl-marginNormal-1119 sc-eNQAEJ hjuxtB"
+>
+  <div
+    className="MuiInputBase-root-1135 MuiOutlinedInput-root-1122 base-input MuiInputBase-formControl-1136"
+    onClick={[Function]}
+  >
+    <fieldset
+      aria-hidden={true}
+      className="MuiPrivateNotchedOutline-root-1152 MuiOutlinedInput-notchedOutline-1129 outline"
+      style={
+        Object {
+          "paddingLeft": 8,
+        }
+      }
+    >
+      <legend
+        className="MuiPrivateNotchedOutline-legend-1153"
+        style={
+          Object {
+            "width": 0.01,
+          }
+        }
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&#8203;",
+            }
+          }
+        />
+      </legend>
+    </fieldset>
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-1145 MuiOutlinedInput-input-1130 input"
+      disabled={false}
+      min={null}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="placeholder text"
+      required={false}
+      type="text"
+      value={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Inputs|TextInput helper text 1`] = `
+<div
+  className="MuiFormControl-root-1154 formControl MuiFormControl-marginNormal-1155 sc-eNQAEJ hjuxtB"
+>
+  <div
+    className="MuiInputBase-root-1171 MuiOutlinedInput-root-1158 base-input MuiInputBase-formControl-1172"
+    onClick={[Function]}
+  >
+    <fieldset
+      aria-hidden={true}
+      className="MuiPrivateNotchedOutline-root-1188 MuiOutlinedInput-notchedOutline-1165 outline"
+      style={
+        Object {
+          "paddingLeft": 8,
+        }
+      }
+    >
+      <legend
+        className="MuiPrivateNotchedOutline-legend-1189"
+        style={
+          Object {
+            "width": 0.01,
+          }
+        }
+      >
+        <span
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "&#8203;",
+            }
+          }
+        />
+      </legend>
+    </fieldset>
+    <input
+      aria-invalid={false}
+      className="MuiInputBase-input-1181 MuiOutlinedInput-input-1166 input"
+      disabled={false}
+      min={null}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="placeholder text"
+      required={false}
+      type="text"
+      value={null}
+    />
+  </div>
+  <p
+    className="MuiFormHelperText-root-1190 helper MuiFormHelperText-contained-1194"
+  >
+    helper text
+  </p>
+</div>
+`;
+
+exports[`Storyshots Inputs|TextInput label 1`] = `
+Array [
+  <div
+    className="sc-dxgOiQ eSKtOy"
+  >
+    <span>
+      label text
+    </span>
+  </div>,
+  <div
+    className="MuiFormControl-root-1198 formControl MuiFormControl-marginNormal-1199 sc-eNQAEJ hjuxtB"
+  >
+    <div
+      className="MuiInputBase-root-1215 MuiOutlinedInput-root-1202 base-input MuiInputBase-formControl-1216"
+      onClick={[Function]}
+    >
+      <fieldset
+        aria-hidden={true}
+        className="MuiPrivateNotchedOutline-root-1232 MuiOutlinedInput-notchedOutline-1209 outline"
+        style={
+          Object {
+            "paddingLeft": 8,
+          }
+        }
+      >
+        <legend
+          className="MuiPrivateNotchedOutline-legend-1233"
+          style={
+            Object {
+              "width": 0.01,
+            }
+          }
+        >
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "&#8203;",
+              }
+            }
+          />
+        </legend>
+      </fieldset>
+      <input
+        aria-invalid={false}
+        className="MuiInputBase-input-1225 MuiOutlinedInput-input-1210 input"
+        disabled={false}
+        min={null}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="placeholder text"
+        required={false}
+        type="text"
+        value={null}
+      />
+    </div>
+  </div>,
+]
+`;
+
 exports[`Storyshots Links|BaseLink default 1`] = `
 <a
-  className="sc-ckVGcZ htUXAq"
+  className="sc-cvbbAY bwcORf"
   classes={
     Object {
       "root": "link",
@@ -863,7 +1730,7 @@ exports[`Storyshots Links|BaseLink default 1`] = `
 
 exports[`Storyshots Links|BaseLink icon 1`] = `
 <a
-  className="sc-ckVGcZ htUXAq"
+  className="sc-cvbbAY bwcORf"
   classes={
     Object {
       "root": "link",
@@ -874,7 +1741,7 @@ exports[`Storyshots Links|BaseLink icon 1`] = `
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root-638 root styled-icon sc-jhAzac kuumnq"
+    className="MuiSvgIcon-root-1234 root styled-icon sc-cJSrbW kNalNB"
     focusable="false"
     role="presentation"
     viewBox="0 0 24 24"
@@ -897,7 +1764,7 @@ exports[`Storyshots Links|BaseLink icon 1`] = `
 
 exports[`Storyshots Links|GhostButtonLink default 1`] = `
 <a
-  className="sc-jKJlTe eAkIyo sc-ckVGcZ htUXAq"
+  className="sc-jWBwVP bofprf sc-cvbbAY bwcORf"
   classes={
     Object {
       "root": "link",
@@ -912,7 +1779,7 @@ exports[`Storyshots Links|GhostButtonLink default 1`] = `
 
 exports[`Storyshots Links|GhostButtonLink icon 1`] = `
 <a
-  className="sc-jKJlTe eAkIyo sc-ckVGcZ htUXAq"
+  className="sc-jWBwVP bofprf sc-cvbbAY bwcORf"
   classes={
     Object {
       "root": "link",
@@ -923,7 +1790,7 @@ exports[`Storyshots Links|GhostButtonLink icon 1`] = `
 >
   <svg
     aria-hidden="true"
-    className="MuiSvgIcon-root-647 root styled-icon sc-fBuWsC ZRRAF"
+    className="MuiSvgIcon-root-1243 root styled-icon sc-ksYbfQ kBUVGf"
     focusable="false"
     role="presentation"
     viewBox="0 0 24 24"
@@ -946,7 +1813,7 @@ exports[`Storyshots Links|GhostButtonLink icon 1`] = `
 
 exports[`Storyshots List Items|ListItem button 1`] = `
 <div
-  className="MuiButtonBase-root-722 MuiListItem-root-710 MuiListItem-default-713 MuiListItem-gutters-718 MuiListItem-button-719"
+  className="MuiButtonBase-root-1318 MuiListItem-root-1306 MuiListItem-default-1309 MuiListItem-gutters-1314 MuiListItem-button-1315"
   onBlur={[Function]}
   onClick={[Function]}
   onContextMenu={[Function]}
@@ -963,30 +1830,30 @@ exports[`Storyshots List Items|ListItem button 1`] = `
   tabIndex="0"
 >
   <div
-    className="MuiListItemText-root-725 item-text"
+    className="MuiListItemText-root-1321 item-text"
   >
     <span
-      className="MuiTypography-root-731 MuiTypography-body1-740 MuiListItemText-primary-728"
+      className="MuiTypography-root-1327 MuiTypography-body1-1336 MuiListItemText-primary-1324"
     >
       List Item Text
     </span>
   </div>
   <span
-    className="MuiTouchRipple-root-767"
+    className="MuiTouchRipple-root-1363"
   />
 </div>
 `;
 
 exports[`Storyshots List Items|ListItem default 1`] = `
 <li
-  className="MuiListItem-root-656 MuiListItem-default-659 MuiListItem-gutters-664"
+  className="MuiListItem-root-1252 MuiListItem-default-1255 MuiListItem-gutters-1260"
   disabled={false}
 >
   <div
-    className="MuiListItemText-root-668 item-text"
+    className="MuiListItemText-root-1264 item-text"
   >
     <span
-      className="MuiTypography-root-674 MuiTypography-body1-683 MuiListItemText-primary-671"
+      className="MuiTypography-root-1270 MuiTypography-body1-1279 MuiListItemText-primary-1267"
     >
       List Item Text
     </span>
@@ -996,14 +1863,14 @@ exports[`Storyshots List Items|ListItem default 1`] = `
 
 exports[`Storyshots List Items|ListItem disabled 1`] = `
 <li
-  className="MuiListItem-root-774 MuiListItem-default-777 MuiListItem-gutters-782 MuiListItem-disabled-780"
+  className="MuiListItem-root-1370 MuiListItem-default-1373 MuiListItem-gutters-1378 MuiListItem-disabled-1376"
   disabled={true}
 >
   <div
-    className="MuiListItemText-root-786 item-text"
+    className="MuiListItemText-root-1382 item-text"
   >
     <span
-      className="MuiTypography-root-792 MuiTypography-body1-801 MuiListItemText-primary-789"
+      className="MuiTypography-root-1388 MuiTypography-body1-1397 MuiListItemText-primary-1385"
     >
       List Item Text
     </span>
@@ -1013,25 +1880,25 @@ exports[`Storyshots List Items|ListItem disabled 1`] = `
 
 exports[`Storyshots List Items|ListItem icon 1`] = `
 <li
-  className="MuiListItem-root-828 MuiListItem-default-831 MuiListItem-gutters-836"
+  className="MuiListItem-root-1424 MuiListItem-default-1427 MuiListItem-gutters-1432"
   disabled={false}
   onClick={[Function]}
 >
   <div
-    className="MuiListItemText-root-840 item-text"
+    className="MuiListItemText-root-1436 item-text"
   >
     <span
-      className="MuiTypography-root-846 MuiTypography-body1-855 MuiListItemText-primary-843"
+      className="MuiTypography-root-1442 MuiTypography-body1-1451 MuiListItemText-primary-1439"
     >
       List Item Text
     </span>
   </div>
   <div
-    className="MuiListItemIcon-root-882"
+    className="MuiListItemIcon-root-1478"
   >
     <svg
       aria-hidden="true"
-      className="MuiSvgIcon-root-883 root styled-icon sc-fMiknA iceazc"
+      className="MuiSvgIcon-root-1479 root styled-icon sc-hmzhuo GNDBz"
       focusable="false"
       role="presentation"
       viewBox="0 0 24 24"
@@ -1054,14 +1921,14 @@ exports[`Storyshots List Items|ListItem icon 1`] = `
 
 exports[`Storyshots List Items|ListItem selected 1`] = `
 <li
-  className="MuiListItem-root-892 MuiListItem-default-895 MuiListItem-gutters-900 MuiListItem-selected-903"
+  className="MuiListItem-root-1488 MuiListItem-default-1491 MuiListItem-gutters-1496 MuiListItem-selected-1499"
   disabled={false}
 >
   <div
-    className="MuiListItemText-root-904 item-text"
+    className="MuiListItemText-root-1500 item-text"
   >
     <span
-      className="MuiTypography-root-910 MuiTypography-body1-919 MuiListItemText-primary-907"
+      className="MuiTypography-root-1506 MuiTypography-body1-1515 MuiListItemText-primary-1503"
     >
       List Item Text
     </span>
@@ -1071,57 +1938,10 @@ exports[`Storyshots List Items|ListItem selected 1`] = `
 
 exports[`Storyshots Loading Indicators|LoadingIndicator default 1`] = `
 <div
-  className="sc-eNQAEJ jwoDya"
+  className="sc-brqgnP fKBTxP"
 >
   <section
-    className="sc-kkGfuU ePcewA"
-  >
-    <div
-      className="sc-dVhcbM bQHCVd"
-    />
-    <div
-      className="sc-eqIVtm ksEOCk"
-    />
-    <div
-      className="sc-fAjcbJ fwMlPm"
-    />
-    <div
-      className="sc-caSCKo beRQGi"
-    />
-    <div
-      className="sc-gisBJw fCjjzw"
-    />
-    <div
-      className="sc-kjoXOD ipbvxX"
-    />
-    <div
-      className="sc-cHGsZl hDNDQB"
-    />
-    <div
-      className="sc-TOsTZ eZDcKC"
-    />
-    <div
-      className="sc-kgAjT grTTDv"
-    />
-    <div
-      className="sc-cJSrbW lmWAZI"
-    />
-    <div
-      className="sc-ksYbfQ hJqnHQ"
-    />
-    <div
-      className="sc-hmzhuo cRSwUR"
-    />
-  </section>
-</div>
-`;
-
-exports[`Storyshots Loading Indicators|SmallLoadingIndicator default 1`] = `
-<span
-  className="sc-hMqMXs ccGCnh"
->
-  <span
-    className="sc-kEYyzF kyapkX"
+    className="sc-jDwBTQ dBmXCV"
   >
     <div
       className="sc-frDJqD ibBIUi"
@@ -1159,13 +1979,60 @@ exports[`Storyshots Loading Indicators|SmallLoadingIndicator default 1`] = `
     <div
       className="sc-tilXH Uqjco"
     />
+  </section>
+</div>
+`;
+
+exports[`Storyshots Loading Indicators|SmallLoadingIndicator default 1`] = `
+<span
+  className="sc-cMljjf eDznTh"
+>
+  <span
+    className="sc-jAaTju bdAFbg"
+  >
+    <div
+      className="sc-hEsumM KCDZc"
+    />
+    <div
+      className="sc-ktHwxA keIybq"
+    />
+    <div
+      className="sc-cIShpX iQWSmQ"
+    />
+    <div
+      className="sc-kafWEX tDCYM"
+    />
+    <div
+      className="sc-feJyhm iHZxtd"
+    />
+    <div
+      className="sc-iELTvK iWmUEm"
+    />
+    <div
+      className="sc-cmTdod tAAJe"
+    />
+    <div
+      className="sc-jwKygS cNMKQg"
+    />
+    <div
+      className="sc-btzYZH cDJfnB"
+    />
+    <div
+      className="sc-lhVmIH cFUMRb"
+    />
+    <div
+      className="sc-bYSBpT cGpzPh"
+    />
+    <div
+      className="sc-elJkPf ifHkgV"
+    />
   </span>
 </span>
 `;
 
 exports[`Storyshots Paper|BasePaper default 1`] = `
 <div
-  className="MuiPaper-root-946 MuiPaper-elevation2-950 MuiPaper-rounded-947 sc-iAyFgw fmaDgc"
+  className="MuiPaper-root-1542 MuiPaper-elevation2-1546 MuiPaper-rounded-1543 sc-gPEVay eWcWCS"
 >
   <div
     style={
@@ -1181,7 +2048,7 @@ exports[`Storyshots Paper|BasePaper default 1`] = `
 
 exports[`Storyshots Paper|BasePaper image 1`] = `
 <div
-  className="MuiPaper-root-973 MuiPaper-elevation2-977 MuiPaper-rounded-974 sc-iAyFgw fmaDgc"
+  className="MuiPaper-root-1569 MuiPaper-elevation2-1573 MuiPaper-rounded-1570 sc-gPEVay eWcWCS"
 >
   <div
     style={
@@ -1205,7 +2072,7 @@ exports[`Storyshots Paper|BasePaper image 1`] = `
 
 exports[`Storyshots Paper|InsetPaper default 1`] = `
 <div
-  className="MuiPaper-root-1000 MuiPaper-elevation2-1004 MuiPaper-rounded-1001 sc-hSdWYo fXbWxY sc-iAyFgw fmaDgc"
+  className="MuiPaper-root-1596 MuiPaper-elevation2-1600 MuiPaper-rounded-1597 sc-iRbamj fICjOX sc-gPEVay eWcWCS"
 >
   <div
     style={
@@ -1221,7 +2088,7 @@ exports[`Storyshots Paper|InsetPaper default 1`] = `
 
 exports[`Storyshots Paper|InsetPaper image 1`] = `
 <div
-  className="MuiPaper-root-1027 MuiPaper-elevation2-1031 MuiPaper-rounded-1028 sc-hSdWYo fXbWxY sc-iAyFgw fmaDgc"
+  className="MuiPaper-root-1623 MuiPaper-elevation2-1627 MuiPaper-rounded-1624 sc-iRbamj fICjOX sc-gPEVay eWcWCS"
 >
   <div
     style={
@@ -1245,22 +2112,22 @@ exports[`Storyshots Paper|InsetPaper image 1`] = `
 
 exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
 <div
-  className="MuiFormControl-root-1054 form"
+  className="MuiFormControl-root-1650 form"
   disableRipple={false}
   labelPlacement="end"
 >
   <div
-    className="MuiFormGroup-root-1058 group"
+    className="MuiFormGroup-root-1654 group"
     disableRipple={false}
     labelPlacement="end"
     role="radiogroup"
   >
     <label
-      className="MuiFormControlLabel-root-1060 sc-eHgmQL blxTht"
+      className="MuiFormControlLabel-root-1656 sc-jlyJG gHkOvH"
       disableRipple={false}
     >
       <span
-        className="MuiButtonBase-root-1081 MuiIconButton-root-1075 MuiPrivateSwitchBase-root-1071 MuiRadio-root-1066 radio MuiRadio-colorSecondary-1070 sc-cvbbAY cvGIOr"
+        className="MuiButtonBase-root-1677 MuiIconButton-root-1671 MuiPrivateSwitchBase-root-1667 MuiRadio-root-1662 radio MuiRadio-colorSecondary-1666 sc-gipzik lbhLoF"
         labelPlacement="end"
         onBlur={[Function]}
         onContextMenu={[Function]}
@@ -1276,11 +2143,11 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-1080"
+          className="MuiIconButton-label-1676"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-1084"
+            className="MuiSvgIcon-root-1680"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1291,7 +2158,7 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-1074"
+            className="MuiPrivateSwitchBase-input-1670"
             disabled={false}
             onChange={[Function]}
             type="radio"
@@ -1299,21 +2166,21 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-1129"
+          className="MuiTouchRipple-root-1725"
         />
       </span>
       <span
-        className="MuiTypography-root-1093 MuiTypography-body2-1101 MuiFormControlLabel-label-1065 label"
+        className="MuiTypography-root-1689 MuiTypography-body2-1697 MuiFormControlLabel-label-1661 label"
       >
         LABEL TEXT
       </span>
     </label>
     <label
-      className="MuiFormControlLabel-root-1060 sc-eHgmQL blxTht"
+      className="MuiFormControlLabel-root-1656 sc-jlyJG gHkOvH"
       disableRipple={false}
     >
       <span
-        className="MuiButtonBase-root-1081 MuiIconButton-root-1075 MuiPrivateSwitchBase-root-1071 MuiRadio-root-1066 radio MuiRadio-colorSecondary-1070 sc-cvbbAY cvGIOr"
+        className="MuiButtonBase-root-1677 MuiIconButton-root-1671 MuiPrivateSwitchBase-root-1667 MuiRadio-root-1662 radio MuiRadio-colorSecondary-1666 sc-gipzik lbhLoF"
         labelPlacement="end"
         onBlur={[Function]}
         onContextMenu={[Function]}
@@ -1329,11 +2196,11 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-1080"
+          className="MuiIconButton-label-1676"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-1084"
+            className="MuiSvgIcon-root-1680"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1344,7 +2211,7 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-1074"
+            className="MuiPrivateSwitchBase-input-1670"
             disabled={false}
             onChange={[Function]}
             type="radio"
@@ -1352,21 +2219,21 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-1129"
+          className="MuiTouchRipple-root-1725"
         />
       </span>
       <span
-        className="MuiTypography-root-1093 MuiTypography-body2-1101 MuiFormControlLabel-label-1065 label"
+        className="MuiTypography-root-1689 MuiTypography-body2-1697 MuiFormControlLabel-label-1661 label"
       >
         LABEL TEXT
       </span>
     </label>
     <label
-      className="MuiFormControlLabel-root-1060 sc-eHgmQL blxTht"
+      className="MuiFormControlLabel-root-1656 sc-jlyJG gHkOvH"
       disableRipple={false}
     >
       <span
-        className="MuiButtonBase-root-1081 MuiIconButton-root-1075 MuiPrivateSwitchBase-root-1071 MuiRadio-root-1066 radio MuiRadio-colorSecondary-1070 sc-cvbbAY cvGIOr"
+        className="MuiButtonBase-root-1677 MuiIconButton-root-1671 MuiPrivateSwitchBase-root-1667 MuiRadio-root-1662 radio MuiRadio-colorSecondary-1666 sc-gipzik lbhLoF"
         labelPlacement="end"
         onBlur={[Function]}
         onContextMenu={[Function]}
@@ -1382,11 +2249,11 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
         tabIndex={null}
       >
         <span
-          className="MuiIconButton-label-1080"
+          className="MuiIconButton-label-1676"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-1084"
+            className="MuiSvgIcon-root-1680"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1397,7 +2264,7 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-1074"
+            className="MuiPrivateSwitchBase-input-1670"
             disabled={false}
             onChange={[Function]}
             type="radio"
@@ -1405,11 +2272,11 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
           />
         </span>
         <span
-          className="MuiTouchRipple-root-1129"
+          className="MuiTouchRipple-root-1725"
         />
       </span>
       <span
-        className="MuiTypography-root-1093 MuiTypography-body2-1101 MuiFormControlLabel-label-1065 label"
+        className="MuiTypography-root-1689 MuiTypography-body2-1697 MuiFormControlLabel-label-1661 label"
       >
         LABEL TEXT
       </span>
@@ -1420,20 +2287,20 @@ exports[`Storyshots Radio|RadioButtonGroup default 1`] = `
 
 exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
 <div
-  className="MuiFormControl-root-1136 form"
+  className="MuiFormControl-root-1732 form"
   labelPlacement="end"
 >
   <div
-    className="MuiFormGroup-root-1140 group"
+    className="MuiFormGroup-root-1736 group"
     disabled={true}
     labelPlacement="end"
     role="radiogroup"
   >
     <label
-      className="MuiFormControlLabel-root-1142 MuiFormControlLabel-disabled-1146 sc-eHgmQL blxTht"
+      className="MuiFormControlLabel-root-1738 MuiFormControlLabel-disabled-1742 sc-jlyJG gHkOvH"
     >
       <span
-        className="MuiButtonBase-root-1163 MuiButtonBase-disabled-1164 MuiIconButton-root-1157 MuiIconButton-disabled-1161 MuiPrivateSwitchBase-root-1153 MuiRadio-root-1148 radio MuiRadio-colorSecondary-1152 MuiPrivateSwitchBase-disabled-1155 MuiRadio-disabled-1150 sc-cvbbAY cvGIOr"
+        className="MuiButtonBase-root-1759 MuiButtonBase-disabled-1760 MuiIconButton-root-1753 MuiIconButton-disabled-1757 MuiPrivateSwitchBase-root-1749 MuiRadio-root-1744 radio MuiRadio-colorSecondary-1748 MuiPrivateSwitchBase-disabled-1751 MuiRadio-disabled-1746 sc-gipzik lbhLoF"
         labelPlacement="end"
         onBlur={[Function]}
         onContextMenu={[Function]}
@@ -1449,11 +2316,11 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         tabIndex="-1"
       >
         <span
-          className="MuiIconButton-label-1162"
+          className="MuiIconButton-label-1758"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-1166"
+            className="MuiSvgIcon-root-1762"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1464,7 +2331,7 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-1156"
+            className="MuiPrivateSwitchBase-input-1752"
             disabled={true}
             onChange={[Function]}
             type="radio"
@@ -1473,16 +2340,16 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         </span>
       </span>
       <span
-        className="MuiTypography-root-1175 MuiTypography-body2-1183 MuiFormControlLabel-label-1147 label MuiFormControlLabel-disabled-1146"
+        className="MuiTypography-root-1771 MuiTypography-body2-1779 MuiFormControlLabel-label-1743 label MuiFormControlLabel-disabled-1742"
       >
         LABEL TEXT
       </span>
     </label>
     <label
-      className="MuiFormControlLabel-root-1142 MuiFormControlLabel-disabled-1146 sc-eHgmQL blxTht"
+      className="MuiFormControlLabel-root-1738 MuiFormControlLabel-disabled-1742 sc-jlyJG gHkOvH"
     >
       <span
-        className="MuiButtonBase-root-1163 MuiButtonBase-disabled-1164 MuiIconButton-root-1157 MuiIconButton-disabled-1161 MuiPrivateSwitchBase-root-1153 MuiRadio-root-1148 radio MuiRadio-colorSecondary-1152 MuiPrivateSwitchBase-disabled-1155 MuiRadio-disabled-1150 sc-cvbbAY cvGIOr"
+        className="MuiButtonBase-root-1759 MuiButtonBase-disabled-1760 MuiIconButton-root-1753 MuiIconButton-disabled-1757 MuiPrivateSwitchBase-root-1749 MuiRadio-root-1744 radio MuiRadio-colorSecondary-1748 MuiPrivateSwitchBase-disabled-1751 MuiRadio-disabled-1746 sc-gipzik lbhLoF"
         labelPlacement="end"
         onBlur={[Function]}
         onContextMenu={[Function]}
@@ -1498,11 +2365,11 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         tabIndex="-1"
       >
         <span
-          className="MuiIconButton-label-1162"
+          className="MuiIconButton-label-1758"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-1166"
+            className="MuiSvgIcon-root-1762"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1513,7 +2380,7 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-1156"
+            className="MuiPrivateSwitchBase-input-1752"
             disabled={true}
             onChange={[Function]}
             type="radio"
@@ -1522,16 +2389,16 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         </span>
       </span>
       <span
-        className="MuiTypography-root-1175 MuiTypography-body2-1183 MuiFormControlLabel-label-1147 label MuiFormControlLabel-disabled-1146"
+        className="MuiTypography-root-1771 MuiTypography-body2-1779 MuiFormControlLabel-label-1743 label MuiFormControlLabel-disabled-1742"
       >
         LABEL TEXT
       </span>
     </label>
     <label
-      className="MuiFormControlLabel-root-1142 MuiFormControlLabel-disabled-1146 sc-eHgmQL blxTht"
+      className="MuiFormControlLabel-root-1738 MuiFormControlLabel-disabled-1742 sc-jlyJG gHkOvH"
     >
       <span
-        className="MuiButtonBase-root-1163 MuiButtonBase-disabled-1164 MuiIconButton-root-1157 MuiIconButton-disabled-1161 MuiPrivateSwitchBase-root-1153 MuiRadio-root-1148 radio MuiRadio-colorSecondary-1152 MuiPrivateSwitchBase-disabled-1155 MuiRadio-disabled-1150 sc-cvbbAY cvGIOr"
+        className="MuiButtonBase-root-1759 MuiButtonBase-disabled-1760 MuiIconButton-root-1753 MuiIconButton-disabled-1757 MuiPrivateSwitchBase-root-1749 MuiRadio-root-1744 radio MuiRadio-colorSecondary-1748 MuiPrivateSwitchBase-disabled-1751 MuiRadio-disabled-1746 sc-gipzik lbhLoF"
         labelPlacement="end"
         onBlur={[Function]}
         onContextMenu={[Function]}
@@ -1547,11 +2414,11 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         tabIndex="-1"
       >
         <span
-          className="MuiIconButton-label-1162"
+          className="MuiIconButton-label-1758"
         >
           <svg
             aria-hidden="true"
-            className="MuiSvgIcon-root-1166"
+            className="MuiSvgIcon-root-1762"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -1562,7 +2429,7 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
           </svg>
           <input
             checked={false}
-            className="MuiPrivateSwitchBase-input-1156"
+            className="MuiPrivateSwitchBase-input-1752"
             disabled={true}
             onChange={[Function]}
             type="radio"
@@ -1571,7 +2438,7 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
         </span>
       </span>
       <span
-        className="MuiTypography-root-1175 MuiTypography-body2-1183 MuiFormControlLabel-label-1147 label MuiFormControlLabel-disabled-1146"
+        className="MuiTypography-root-1771 MuiTypography-body2-1779 MuiFormControlLabel-label-1743 label MuiFormControlLabel-disabled-1742"
       >
         LABEL TEXT
       </span>
@@ -1582,17 +2449,17 @@ exports[`Storyshots Radio|RadioButtonGroup disabled 1`] = `
 
 exports[`Storyshots Tables|BaseTable default 1`] = `
 <table
-  className="MuiTable-root-1211 sc-jWBwVP ksZpXa"
+  className="MuiTable-root-1807 sc-csuQGl cdVELH"
 >
   <thead
-    className="MuiTableHead-root-1212 sc-cMljjf cgnUiz"
+    className="MuiTableHead-root-1808 sc-bRBYWo iXBZWj"
   >
     <tr
-      className="MuiTableRow-root-1213 MuiTableRow-head-1216 sc-jDwBTQ gHKCKC"
+      className="MuiTableRow-root-1809 MuiTableRow-head-1812 sc-jhAzac cpVXPc"
     >
       <th
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-head-1219 sc-jAaTju lltWEt"
+        className="MuiTableCell-root-1814 MuiTableCell-head-1815 sc-hzDkRC dwPPhE"
         iscentered={0}
         scope="col"
       >
@@ -1600,7 +2467,7 @@ exports[`Storyshots Tables|BaseTable default 1`] = `
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-head-1219 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-head-1815 sc-hzDkRC iifttQ"
         iscentered={1}
         scope="col"
       >
@@ -1608,7 +2475,7 @@ exports[`Storyshots Tables|BaseTable default 1`] = `
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-head-1219 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-head-1815 sc-hzDkRC iifttQ"
         iscentered={1}
         scope="col"
       >
@@ -1616,7 +2483,7 @@ exports[`Storyshots Tables|BaseTable default 1`] = `
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-head-1219 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-head-1815 sc-hzDkRC iifttQ"
         iscentered={1}
         scope="col"
       >
@@ -1624,7 +2491,7 @@ exports[`Storyshots Tables|BaseTable default 1`] = `
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-head-1219 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-head-1815 sc-hzDkRC iifttQ"
         iscentered={1}
         scope="col"
       >
@@ -1633,160 +2500,160 @@ exports[`Storyshots Tables|BaseTable default 1`] = `
     </tr>
   </thead>
   <tbody
-    className="MuiTableBody-root-1230 sc-brqgnP hzFcas"
+    className="MuiTableBody-root-1826 sc-Rmtcm cSaOzU"
     hovercolor="#F8F8F8"
   >
     <tr
-      className="MuiTableRow-root-1213 sc-jDwBTQ gHKCKC"
+      className="MuiTableRow-root-1809 sc-jhAzac cpVXPc"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju lltWEt"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC dwPPhE"
         iscentered={0}
       >
         Cupcake
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         305
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         4
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         67
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         4
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-1213 sc-jDwBTQ gHKCKC"
+      className="MuiTableRow-root-1809 sc-jhAzac cpVXPc"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju lltWEt"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC dwPPhE"
         iscentered={0}
       >
         Eclair
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         262
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         16
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         24
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         6
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-1213 sc-jDwBTQ gHKCKC"
+      className="MuiTableRow-root-1809 sc-jhAzac cpVXPc"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju lltWEt"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC dwPPhE"
         iscentered={0}
       >
         Gingerbread
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         356
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         16
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         49
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         4
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-1213 sc-jDwBTQ gHKCKC"
+      className="MuiTableRow-root-1809 sc-jhAzac cpVXPc"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju lltWEt"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC dwPPhE"
         iscentered={0}
       >
         Ice Cream
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         207
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         11
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         24
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1218 MuiTableCell-body-1220 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1814 MuiTableCell-body-1816 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         4
@@ -1798,17 +2665,17 @@ exports[`Storyshots Tables|BaseTable default 1`] = `
 
 exports[`Storyshots Tables|BaseTable offset 1`] = `
 <table
-  className="MuiTable-root-1231 sc-jWBwVP ksZpXa"
+  className="MuiTable-root-1827 sc-csuQGl cdVELH"
 >
   <thead
-    className="MuiTableHead-root-1232 sc-cMljjf cgnUiz"
+    className="MuiTableHead-root-1828 sc-bRBYWo iXBZWj"
   >
     <tr
-      className="MuiTableRow-root-1233 MuiTableRow-head-1236 sc-jDwBTQ gHKCKC"
+      className="MuiTableRow-root-1829 MuiTableRow-head-1832 sc-jhAzac cpVXPc"
     >
       <th
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-head-1239 sc-jAaTju lltWEt"
+        className="MuiTableCell-root-1834 MuiTableCell-head-1835 sc-hzDkRC dwPPhE"
         iscentered={0}
         scope="col"
       >
@@ -1816,7 +2683,7 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-head-1239 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-head-1835 sc-hzDkRC iifttQ"
         iscentered={1}
         scope="col"
       >
@@ -1824,7 +2691,7 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-head-1239 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-head-1835 sc-hzDkRC iifttQ"
         iscentered={1}
         scope="col"
       >
@@ -1832,7 +2699,7 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
       </th>
       <th
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-head-1239 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-head-1835 sc-hzDkRC iifttQ"
         iscentered={1}
         scope="col"
       >
@@ -1841,164 +2708,164 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
     </tr>
   </thead>
   <tbody
-    className="MuiTableBody-root-1250 sc-brqgnP hzFcas"
+    className="MuiTableBody-root-1846 sc-Rmtcm cSaOzU"
     hovercolor="#F8F8F8"
   >
     <tr
-      className="MuiTableRow-root-1233 sc-jDwBTQ gHKCKC"
+      className="MuiTableRow-root-1829 sc-jhAzac cpVXPc"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju lltWEt"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC dwPPhE"
         iscentered={0}
       >
         row one
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         01-01
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         01-02
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         01-03
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-1233 sc-jDwBTQ gHKCKC"
+      className="MuiTableRow-root-1829 sc-jhAzac cpVXPc"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju lltWEt"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC dwPPhE"
         iscentered={0}
       >
         row two
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         02-01
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         02-02
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         02-03
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-1233 sc-jDwBTQ gHKCKC"
+      className="MuiTableRow-root-1829 sc-jhAzac cpVXPc"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju lltWEt"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC dwPPhE"
         iscentered={0}
       >
         row three
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         03-01
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         03-02
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         03-03
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-1233 sc-jDwBTQ gHKCKC"
+      className="MuiTableRow-root-1829 sc-jhAzac cpVXPc"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju lltWEt"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC dwPPhE"
         iscentered={0}
       >
         row four
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         04-01
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         04-02
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         04-03
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root-1233 sc-jDwBTQ gHKCKC"
+      className="MuiTableRow-root-1829 sc-jhAzac cpVXPc"
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju lltWEt"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC dwPPhE"
         iscentered={0}
       >
         row five
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         05-01
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         05-02
       </td>
       <td
         aria-sort={null}
-        className="MuiTableCell-root-1238 MuiTableCell-body-1240 sc-jAaTju dkrgEy"
+        className="MuiTableCell-root-1834 MuiTableCell-body-1836 sc-hzDkRC iifttQ"
         iscentered={1}
       >
         05-03
@@ -2010,23 +2877,23 @@ exports[`Storyshots Tables|BaseTable offset 1`] = `
 
 exports[`Storyshots TextField|TextField autoFocus 1`] = `
 <div
-  className="MuiFormControl-root-1303 root sc-ktHwxA bsOfio"
+  className="MuiFormControl-root-1899 root sc-fBuWsC kwnoed"
   color="#310078"
 >
   <label
-    className="MuiFormLabel-root-1318 MuiInputLabel-root-1307 MuiInputLabel-formControl-1312 MuiInputLabel-animated-1315 label"
+    className="MuiFormLabel-root-1914 MuiInputLabel-root-1903 MuiInputLabel-formControl-1908 MuiInputLabel-animated-1911 label"
     data-shrink={false}
   >
     Text Field Label
   </label>
   <div
-    className="MuiInputBase-root-1338 MuiInput-root-1325 MuiInput-underline-1329 MuiInputBase-formControl-1339 MuiInput-formControl-1326"
+    className="MuiInputBase-root-1934 MuiInput-root-1921 MuiInput-underline-1925 MuiInputBase-formControl-1935 MuiInput-formControl-1922"
     onClick={[Function]}
   >
     <input
       aria-invalid={false}
       autoFocus={true}
-      className="MuiInputBase-input-1348 MuiInput-input-1333"
+      className="MuiInputBase-input-1944 MuiInput-input-1929"
       disabled={false}
       onBlur={[Function]}
       onChange={[Function]}
@@ -2041,22 +2908,22 @@ exports[`Storyshots TextField|TextField autoFocus 1`] = `
 
 exports[`Storyshots TextField|TextField default 1`] = `
 <div
-  className="MuiFormControl-root-1251 root sc-hEsumM qhuRe"
+  className="MuiFormControl-root-1847 root sc-fBuWsC kwnoed"
   color="#310078"
 >
   <label
-    className="MuiFormLabel-root-1266 MuiInputLabel-root-1255 MuiInputLabel-formControl-1260 MuiInputLabel-animated-1263 label"
+    className="MuiFormLabel-root-1862 MuiInputLabel-root-1851 MuiInputLabel-formControl-1856 MuiInputLabel-animated-1859 label"
     data-shrink={false}
   >
     Text Field Label
   </label>
   <div
-    className="MuiInputBase-root-1286 MuiInput-root-1273 MuiInput-underline-1277 MuiInputBase-formControl-1287 MuiInput-formControl-1274"
+    className="MuiInputBase-root-1882 MuiInput-root-1869 MuiInput-underline-1873 MuiInputBase-formControl-1883 MuiInput-formControl-1870"
     onClick={[Function]}
   >
     <input
       aria-invalid={false}
-      className="MuiInputBase-input-1296 MuiInput-input-1281"
+      className="MuiInputBase-input-1892 MuiInput-input-1877"
       disabled={false}
       onBlur={[Function]}
       onChange={[Function]}
@@ -2070,21 +2937,21 @@ exports[`Storyshots TextField|TextField default 1`] = `
 
 exports[`Storyshots TextField|TextField disabled 1`] = `
 <div
-  className="MuiFormControl-root-1355 root sc-cIShpX iBcLPr"
+  className="MuiFormControl-root-1951 root sc-fBuWsC kwnoed"
 >
   <label
-    className="MuiFormLabel-root-1370 MuiFormLabel-disabled-1372 MuiInputLabel-disabled-1361 MuiInputLabel-root-1359 MuiInputLabel-formControl-1364 MuiInputLabel-animated-1367 label"
+    className="MuiFormLabel-root-1966 MuiFormLabel-disabled-1968 MuiInputLabel-disabled-1957 MuiInputLabel-root-1955 MuiInputLabel-formControl-1960 MuiInputLabel-animated-1963 label"
     data-shrink={false}
   >
     Text Field Label
   </label>
   <div
-    className="MuiInputBase-root-1390 MuiInput-root-1377 MuiInput-underline-1381 MuiInputBase-disabled-1393 MuiInput-disabled-1380 MuiInputBase-formControl-1391 MuiInput-formControl-1378"
+    className="MuiInputBase-root-1986 MuiInput-root-1973 MuiInput-underline-1977 MuiInputBase-disabled-1989 MuiInput-disabled-1976 MuiInputBase-formControl-1987 MuiInput-formControl-1974"
     onClick={[Function]}
   >
     <input
       aria-invalid={false}
-      className="MuiInputBase-input-1400 MuiInput-input-1385 MuiInputBase-disabled-1393 MuiInput-disabled-1380"
+      className="MuiInputBase-input-1996 MuiInput-input-1981 MuiInputBase-disabled-1989 MuiInput-disabled-1976"
       disabled={true}
       onBlur={[Function]}
       onChange={[Function]}
@@ -2099,25 +2966,25 @@ exports[`Storyshots TextField|TextField disabled 1`] = `
 
 exports[`Storyshots TextField|TextField multiline 1`] = `
 <div
-  className="MuiFormControl-root-1407 root sc-kafWEX hxfjDX"
+  className="MuiFormControl-root-2003 root sc-fBuWsC kwnoed"
   color="#310078"
 >
   <label
-    className="MuiFormLabel-root-1422 MuiInputLabel-root-1411 MuiInputLabel-formControl-1416 MuiInputLabel-animated-1419 label"
+    className="MuiFormLabel-root-2018 MuiInputLabel-root-2007 MuiInputLabel-formControl-2012 MuiInputLabel-animated-2015 label"
     data-shrink={false}
   >
     Text Field Label
   </label>
   <div
-    className="MuiInputBase-root-1442 MuiInput-root-1429 MuiInput-underline-1433 MuiInputBase-formControl-1443 MuiInput-formControl-1430 MuiInputBase-multiline-1450 MuiInput-multiline-1435"
+    className="MuiInputBase-root-2038 MuiInput-root-2025 MuiInput-underline-2029 MuiInputBase-formControl-2039 MuiInput-formControl-2026 MuiInputBase-multiline-2046 MuiInput-multiline-2031"
     onClick={[Function]}
   >
     <div
-      className="MuiPrivateTextarea-root-1459"
+      className="MuiPrivateTextarea-root-2055"
     >
       <textarea
         aria-hidden="true"
-        className="MuiPrivateTextarea-textarea-1460 MuiPrivateTextarea-shadow-1461"
+        className="MuiPrivateTextarea-textarea-2056 MuiPrivateTextarea-shadow-2057"
         readOnly={true}
         rows="1"
         tabIndex={-1}
@@ -2125,14 +2992,14 @@ exports[`Storyshots TextField|TextField multiline 1`] = `
       />
       <textarea
         aria-hidden="true"
-        className="MuiPrivateTextarea-textarea-1460 MuiPrivateTextarea-shadow-1461"
+        className="MuiPrivateTextarea-textarea-2056 MuiPrivateTextarea-shadow-2057"
         readOnly={true}
         rows={4}
         tabIndex={-1}
       />
       <textarea
         aria-invalid={false}
-        className="MuiPrivateTextarea-textarea-1460 MuiInputBase-input-1452 MuiInput-input-1437 MuiInputBase-inputMultiline-1454 MuiInput-inputMultiline-1439"
+        className="MuiPrivateTextarea-textarea-2056 MuiInputBase-input-2048 MuiInput-input-2033 MuiInputBase-inputMultiline-2050 MuiInput-inputMultiline-2035"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
@@ -2152,16 +3019,16 @@ exports[`Storyshots TextField|TextField multiline 1`] = `
 
 exports[`Storyshots TextField|TextField placeholder 1`] = `
 <div
-  className="MuiFormControl-root-1462 root sc-feJyhm iwwCmw"
+  className="MuiFormControl-root-2058 root sc-fBuWsC kwnoed"
   color="#310078"
 >
   <div
-    className="MuiInputBase-root-1479 MuiInput-root-1466 MuiInput-underline-1470 MuiInputBase-formControl-1480 MuiInput-formControl-1467"
+    className="MuiInputBase-root-2075 MuiInput-root-2062 MuiInput-underline-2066 MuiInputBase-formControl-2076 MuiInput-formControl-2063"
     onClick={[Function]}
   >
     <input
       aria-invalid={false}
-      className="MuiInputBase-input-1489 MuiInput-input-1474"
+      className="MuiInputBase-input-2085 MuiInput-input-2070"
       disabled={false}
       onBlur={[Function]}
       onChange={[Function]}

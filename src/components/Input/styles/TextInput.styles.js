@@ -9,7 +9,7 @@ export const StyledErrorText = styled(FormHelperText)`
   margin: 0.3rem 0rem 0rem 2.5rem;
 `;
 
-export const BaseTextFieldInput = styled(TextField)`
+export const BaseTextInput = styled(TextField)`
   margin: 0rem 1rem;
   min-width: 20rem;
 

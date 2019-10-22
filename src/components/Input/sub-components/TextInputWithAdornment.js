@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import TextFieldInput from '../TextFieldInput';
+import TextInput from '../TextInput';
 
 const TextInputWithAdornment = ({
   adornmentComponent,
@@ -11,7 +11,7 @@ const TextInputWithAdornment = ({
 }) => {
   const adornment = { [`${position}Adornment`]: <InputAdornment position={position}>{adornmentComponent}</InputAdornment> };
   return (
-    <TextFieldInput
+    <TextInput
       InputProps={{ ...adornment, ...InputProps }}
       {...restProps}
     />

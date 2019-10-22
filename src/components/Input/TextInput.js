@@ -1,7 +1,7 @@
 /* eslint-disable no-tabs */
 /**
  *
- * TextFieldInput
+ * TextInput
  * @description: Text Field Input.
  * API USAGE: {
   * autoComplete (string) This property helps users to fill forms faster, especially on mobile devices. The name can be confusing, as it's more like an autofill. You can learn more about it here: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill
@@ -38,9 +38,9 @@ import React, { Fragment } from 'react';
 import T from 'prop-types';
 import ConditionalRender from '../../utils/ConditionalRender';
 import InputLabel from './sub-components/InputLabel';
-import { BaseTextFieldInput } from './styles/TextFieldInput.styles';
+import { BaseTextInput } from './styles/TextInput.styles';
 
-const TextFieldInput = ({
+const TextInput = ({
   className,
   disabled,
   error,
@@ -73,7 +73,7 @@ const TextFieldInput = ({
         Component={Label}
         shouldRender={shouldRenderLabel}
       />
-      <BaseTextFieldInput
+      <BaseTextInput
         classes={{ root: 'formControl' }}
         className={className}
         disabled={disabled}
@@ -109,7 +109,7 @@ const TextFieldInput = ({
   );
 };
 
-TextFieldInput.defaultProps = {
+TextInput.defaultProps = {
   disabled: false,
   error: null,
   helperText: null,
@@ -121,7 +121,7 @@ TextFieldInput.defaultProps = {
   variant: 'outlined',
 };
 
-TextFieldInput.propTypes = {
+TextInput.propTypes = {
   disabled: T.bool,
   error: T.oneOfType([
     T.string,
@@ -155,4 +155,4 @@ TextFieldInput.propTypes = {
   ]),
 };
 
-export default TextFieldInput;
+export default TextInput;

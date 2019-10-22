@@ -8,7 +8,7 @@ import {
 } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 
-import TextFieldInput from '../TextFieldInput';
+import TextInput from '../TextInput';
 
 const variantOptions = {
   filled: 'filled',
@@ -20,10 +20,10 @@ const placeholderText = 'placeholder text';
 const helperText = 'helper text';
 const labelText = 'label text';
 
-storiesOf('Inputs|TextFieldInput', module)
+storiesOf('Inputs|TextInput', module)
   .addDecorator(withKnobs)
   .add('default', () => (
-    <TextFieldInput
+    <TextInput
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       multiline={boolean('Multiline', false)}
@@ -34,7 +34,7 @@ storiesOf('Inputs|TextFieldInput', module)
     />
   ))
   .add('helper text', () => (
-    <TextFieldInput
+    <TextInput
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       helperText={text('Helper Text', helperText)}
@@ -46,7 +46,7 @@ storiesOf('Inputs|TextFieldInput', module)
     />
   ))
   .add('label', () => (
-    <TextFieldInput
+    <TextInput
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       label={text('Label Text', labelText)}

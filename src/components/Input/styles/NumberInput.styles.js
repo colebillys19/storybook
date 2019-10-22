@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import TextFieldInput from '../TextFieldInput';
+import TextInput from '../TextInput';
 
 export const StyledNumberInput = styled((props) => (
-  <TextFieldInput
+  <TextInput
     classes={{ root: 'root' }}
     type="number"
     {...props}

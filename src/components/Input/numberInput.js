@@ -30,7 +30,7 @@ export const NumberInput = ({
 
 NumberInput.propTypes = {
   helperText: T.string,
-  name: T.string.isRequired,
+  name: T.string,
   onChange: T.func.isRequired,
   value: T.string,
 };

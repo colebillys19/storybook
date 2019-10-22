@@ -40,9 +40,9 @@ export const CurrencyInput = ({
 };
 
 CurrencyInput.propTypes = {
-  name: T.string.isRequired,
+  name: T.string,
   onChange: T.func.isRequired,
-  value: T.string.isRequired,
+  value: T.string,
 };
 
 export default CurrencyInput;
