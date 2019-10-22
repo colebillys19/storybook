@@ -24,8 +24,8 @@ storiesOf('Inputs|NumberInput', module)
   .addDecorator(withKnobs)
   .add('default', () => (
     <NumberInput
+      disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
-      multiline={boolean('Multiline', false)}
       onBlur={action('onBlur')}
       onChange={action('onChange')}
       placeholder={text('Placeholder', placeholder)}
@@ -34,9 +34,9 @@ storiesOf('Inputs|NumberInput', module)
   ))
   .add('helper text', () => (
     <NumberInput
+      disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       helperText={text('Helper Text', helperText)}
-      multiline={boolean('Multiline', false)}
       onBlur={action('onBlur')}
       onChange={action('onChange')}
       placeholder={text('Placeholder', placeholder)}
@@ -45,9 +45,9 @@ storiesOf('Inputs|NumberInput', module)
   ))
   .add('label', () => (
     <NumberInput
+      disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       label={text('Label Text', labelText)}
-      multiline={boolean('Multiline', false)}
       onBlur={action('onBlur')}
       onChange={action('onChange')}
       placeholder={text('Placeholder', placeholder)}

@@ -24,6 +24,7 @@ storiesOf('Inputs|CurrencyInput', module)
   .addDecorator(withKnobs)
   .add('default', () => (
     <CurrencyInput
+      disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       onBlur={action('onBlur')}
       onChange={action('onChange')}
@@ -33,6 +34,7 @@ storiesOf('Inputs|CurrencyInput', module)
   ))
   .add('helper text', () => (
     <CurrencyInput
+      disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       helperText={text('Helper Text', helperText)}
       onBlur={action('onBlur')}
@@ -43,6 +45,7 @@ storiesOf('Inputs|CurrencyInput', module)
   ))
   .add('label', () => (
     <CurrencyInput
+      disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       label={text('Label Text', labelText)}
       onBlur={action('onBlur')}

@@ -24,6 +24,7 @@ storiesOf('Inputs|TextFieldInput', module)
   .addDecorator(withKnobs)
   .add('default', () => (
     <TextFieldInput
+      disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       multiline={boolean('Multiline', false)}
       onBlur={action('onBlur')}
@@ -34,6 +35,7 @@ storiesOf('Inputs|TextFieldInput', module)
   ))
   .add('helper text', () => (
     <TextFieldInput
+      disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       helperText={text('Helper Text', helperText)}
       multiline={boolean('Multiline', false)}
@@ -45,6 +47,7 @@ storiesOf('Inputs|TextFieldInput', module)
   ))
   .add('label', () => (
     <TextFieldInput
+      disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       label={text('Label Text', labelText)}
       multiline={boolean('Multiline', false)}
