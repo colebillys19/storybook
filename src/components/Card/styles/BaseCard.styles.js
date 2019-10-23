@@ -7,7 +7,7 @@ import {
   msBrightPurple,
 } from 'utils/defaultStyleHelper';
 
-const StyledCard = styled(Card)`
+export const StyledCard = styled(Card)`
   border-radius: 0;
   border-top: ${({ color }) => color || msBrightPurple};
   border-top-width: ${borderWidth};
@@ -20,5 +20,3 @@ const StyledCard = styled(Card)`
 export const StyledH1 = styled.h1`
   margin: 1rem 0;
 `;
-
-export default StyledCard;

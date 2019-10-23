@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
-import BasePaper from '../BasePaper';
+import iconDictionary from 'utils/iconDictionary';
 
-import imgPlaceholder from 'utils/imagePlaceholder.svg';
+import BasePaper from '../BasePaper';
 
 const paddingOptions = {
   '1rem': '1rem',
@@ -14,6 +14,8 @@ const paddingOptions = {
 const paddingDefault = '2rem';
 
 const paperText = 'paper text';
+
+const imagePlaceholder = iconDictionary('imagePlaceholder', 'large');
 
 storiesOf('Paper|BasePaper', module)
   .addParameters({ component: BasePaper })
@@ -28,11 +30,7 @@ storiesOf('Paper|BasePaper', module)
   .add('image', () => (
     <BasePaper>
       <div style={{ padding: select('Paper Content Padding', paddingOptions, paddingDefault) }}>
-        <img
-          alt="placeholder"
-          src={imgPlaceholder}
-          style={{ width: '10rem' }}
-        />
+        {imagePlaceholder}
       </div>
     </BasePaper>
   ));

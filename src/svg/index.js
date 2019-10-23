@@ -17,6 +17,7 @@ import Filter from './Filter';
 import HamburgerMenu from './HamburgerMenu';
 import Help from './Help';
 import Home from './Home';
+import ImagePlaceholder from './ImagePlaceholder';
 import Important from './Important';
 import InfoDot from './InfoDot';
 import LearningCenter from './LearningCenter';
@@ -62,6 +63,7 @@ export {
   HamburgerMenu,
   Help,
   Home,
+  ImagePlaceholder,
   Important,
   InfoDot,
   LearningCenter,

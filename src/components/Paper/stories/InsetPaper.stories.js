@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
-import InsetPaper from '../InsetPaper';
+import iconDictionary from 'utils/iconDictionary';
 
-import imgPlaceholder from 'utils/imagePlaceholder.svg';
+import InsetPaper from '../InsetPaper';
 
 const paddingOptions = {
   '1rem': '1rem',
@@ -14,6 +14,8 @@ const paddingOptions = {
 const paddingDefault = '2rem';
 
 const paperText = 'paper text';
+
+const imagePlaceholder = iconDictionary('imagePlaceholder', 'large');
 
 storiesOf('Paper|InsetPaper', module)
   .addParameters({ component: InsetPaper })
@@ -28,11 +30,7 @@ storiesOf('Paper|InsetPaper', module)
   .add('image', () => (
     <InsetPaper>
       <div style={{ padding: select('Paper Content Padding', paddingOptions, paddingDefault) }}>
-        <img
-          alt="placeholder"
-          src={imgPlaceholder}
-          style={{ width: '10rem' }}
-        />
+        {imagePlaceholder}
       </div>
     </InsetPaper>
   ));
