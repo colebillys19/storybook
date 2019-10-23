@@ -12,8 +12,8 @@ import {
   ssLightBlue,
   ssMainBlue,
   ssYellow,
-} from '../../../utils/defaultStyleHelper';
-import imgPlaceholder from '../../../utils/imagePlaceholder.svg';
+} from 'utils/defaultStyleHelper';
+import imgPlaceholder from 'utils/imagePlaceholder.svg';
 
 const colorOptions = {
   msBrightPurple,

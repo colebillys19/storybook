@@ -4,7 +4,7 @@ import PasswordInput from '../PasswordInput';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
+} from 'utils/testingHelpers';
 
 describe('<PasswordInput />', () => {
   const onChange = jest.fn();

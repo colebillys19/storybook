@@ -7,7 +7,7 @@ import 'storybook-chromatic';
 import ThemeProvider from './ThemeProvider';
 import GlobalStyle from './globalStyle';
 
-import { msLightGrey, ssLightGrey } from '../src/utils/defaultStyleHelper';
+import { msLightGrey, ssLightGrey } from 'utils/defaultStyleHelper';
 
 addDecorator(withA11y);
 

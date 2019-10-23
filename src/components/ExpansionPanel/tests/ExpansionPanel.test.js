@@ -5,7 +5,7 @@ import {
   checkBasicRendering,
   // checkChildren,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
+} from 'utils/testingHelpers';
 
 import {
   ExpansionPanel,

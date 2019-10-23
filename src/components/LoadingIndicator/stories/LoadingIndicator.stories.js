@@ -6,7 +6,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { LoadingIndicator } from '../index';
+import LoadingIndicator from '../LoadingIndicator';
 
 storiesOf('Loading Indicators|LoadingIndicator', module)
   .addParameters({ component: LoadingIndicator })

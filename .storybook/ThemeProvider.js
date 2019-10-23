@@ -12,7 +12,7 @@ import {
   msMainGreen,
   msDeepPurple,
   msLightGrey,
-} from '../src/utils/defaultStyleHelper';
+} from 'utils/defaultStyleHelper';
 
 const generateClassName = createGenerateClassName();
 const jss = create({

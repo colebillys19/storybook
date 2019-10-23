@@ -24,7 +24,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs/react';
 
-import { Checkbox } from '../index';
+import Checkbox from '../Checkbox';
 
 const defaultFalse = false;
 const initialValue = 'value';

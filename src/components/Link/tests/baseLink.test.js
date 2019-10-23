@@ -3,8 +3,8 @@ import React from 'react';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
-import { BaseLink } from '../index';
+} from 'utils/testingHelpers';
+import BaseLink from '../BaseLink';
 
 describe('<BaseLink />', () => {
   const propsToPassDown = {

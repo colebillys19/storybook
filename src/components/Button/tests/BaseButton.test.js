@@ -4,9 +4,9 @@ import { render, fireEvent } from '@testing-library/react';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
-import iconDictionary from '../../../utils/iconDictionary';
-import { BaseButton } from '../index';
+} from 'utils/testingHelpers';
+import iconDictionary from 'utils/iconDictionary';
+import BaseButton from '../BaseButton';
 
 const inboxIcon = iconDictionary('inbox', 'mediumSmall', 'button');
 

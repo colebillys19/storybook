@@ -3,8 +3,8 @@ import React from 'react';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
-import { GhostButtonLink } from '../index';
+} from 'utils/testingHelpers';
+import GhostButtonLink from '../GhostButtonLink';
 
 describe('<GhostButtonLink />', () => {
   const propsToPassDown = {

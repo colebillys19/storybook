@@ -4,7 +4,7 @@ import { withKnobs, select, text } from '@storybook/addon-knobs';
 
 import BasePaper from '../BasePaper';
 
-import imgPlaceholder from '../../../utils/imagePlaceholder.svg';
+import imgPlaceholder from 'utils/imagePlaceholder.svg';
 
 const paddingOptions = {
   '1rem': '1rem',

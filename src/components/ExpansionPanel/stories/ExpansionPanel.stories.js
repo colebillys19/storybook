@@ -26,7 +26,7 @@ import {
 } from '@storybook/addon-knobs/react';
 
 
-import iconDictionary from '../../../utils/iconDictionary';
+import iconDictionary from 'utils/iconDictionary';
 import {
   ExpansionPanel,
   ExpansionPanelDetails,

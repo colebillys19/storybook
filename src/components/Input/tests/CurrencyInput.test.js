@@ -4,7 +4,7 @@ import CurrencyInput from '../CurrencyInput';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
+} from 'utils/testingHelpers';
 
 describe('<CurrencyInput />', () => {
   const onChange = jest.fn();

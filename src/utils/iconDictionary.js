@@ -70,7 +70,7 @@ import {
   Trash,
   Video,
   ViewEye,
-} from '../svg';
+} from 'svg';
 
 import { iconStyle, iconSize } from './defaultStyleHelper';
 

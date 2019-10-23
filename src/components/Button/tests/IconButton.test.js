@@ -5,9 +5,9 @@ import {
   checkBasicRendering,
   checkRequiredProps,
   checkSimpleChild,
-} from '../../../utils/testingHelpers';
-import iconDictionary from '../../../utils/iconDictionary';
-import { IconButton } from '../index';
+} from 'utils/testingHelpers';
+import iconDictionary from 'utils/iconDictionary';
+import IconButton from '../IconButton';
 
 const inboxIcon = iconDictionary('inbox', 'mediumSmall', 'button');
 

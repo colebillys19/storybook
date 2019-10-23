@@ -20,7 +20,7 @@ import {
 } from '@storybook/addon-knobs/react';
 // import { text, boolean } from '@storybook/addon-knobs';
 
-import { RadioButtonGroup } from '../index';
+import RadioButtonGroup from '../RadioButtonGroup';
 
 const labelPlacementOptions = {
   bottom: 'bottom',

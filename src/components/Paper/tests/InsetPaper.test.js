@@ -5,7 +5,7 @@ import {
   checkBasicRendering,
   checkRequiredProps,
   checkSimpleChild,
-} from '../../../utils/testingHelpers';
+} from 'utils/testingHelpers';
 
 describe('<InsetPaper />', () => {
   const paperContent = <div>card content</div>;

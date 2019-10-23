@@ -5,9 +5,9 @@ import TooltipIcon from '../TooltipIcon';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
+} from 'utils/testingHelpers';
 
-import iconDictionary from '../../../utils/iconDictionary';
+import iconDictionary from 'utils/iconDictionary';
 
 // to enable use of waitForElement
 global.document.createRange = () => ({

@@ -10,7 +10,7 @@
 */
 
 import styled from 'styled-components';
-import { ssLightBlue, ssMainBlueHover } from '../../utils/defaultStyleHelper';
+import { ssLightBlue, ssMainBlueHover } from 'utils/defaultStyleHelper';
 import BaseButton from './BaseButton';
 
 const TextButton = styled(BaseButton)`

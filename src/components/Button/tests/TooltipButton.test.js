@@ -4,9 +4,9 @@ import { render, fireEvent, waitForElement } from '@testing-library/react';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
-import iconDictionary from '../../../utils/iconDictionary';
-import { TooltipButton } from '../index';
+} from 'utils/testingHelpers';
+import iconDictionary from 'utils/iconDictionary';
+import TooltipButton from '../TooltipButton';
 
 // to enable use of waitForElement
 global.document.createRange = () => ({

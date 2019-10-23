@@ -16,7 +16,7 @@ import {
   msBrightPurple,
   msLightGrey,
   ssGreyHover,
-} from '../../utils/defaultStyleHelper';
+} from 'utils/defaultStyleHelper';
 import PrimaryButton from './PrimaryButton';
 
 const SecondaryButton = styled(PrimaryButton)`

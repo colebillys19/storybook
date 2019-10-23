@@ -4,8 +4,8 @@ import { render, fireEvent } from '@testing-library/react';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
-import { RadioButtonGroup } from '../index';
+} from 'utils/testingHelpers';
+import RadioButtonGroup from '../RadioButtonGroup';
 
 describe('<RadioButtonGroup />', () => {
   const handleChange = jest.fn();
