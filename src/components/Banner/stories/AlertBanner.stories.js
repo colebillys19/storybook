@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
@@ -10,13 +9,18 @@ const bannerProps = {
   buttonText: 'button text',
 };
 
-storiesOf('Banners|AlertBanner', module)
-  .addParameters({ component: AlertBanner })
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <AlertBanner
-      alertText={text('Alert Text', bannerProps.alertText)}
-      buttonText={text('Button Text', bannerProps.buttonText)}
-      onClick={action('onClickButton')}
-    />
-  ));
+export default {
+  decorators: [withKnobs],
+  parameters: { component: AlertBanner },
+  title: 'Banners|AlertBanner',
+};
+
+export const defaultStory = () => (
+  <AlertBanner
+    alertText={text('Alert Text', bannerProps.alertText)}
+    buttonText={text('Button Text', bannerProps.buttonText)}
+    onClick={action('onClickButton')}
+  />
+);
+
+defaultStory.story = { name: 'default' };
