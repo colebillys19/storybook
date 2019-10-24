@@ -3,11 +3,7 @@
  */
 
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import {
-  withKnobs,
-  select,
-} from '@storybook/addon-knobs/react';
+import { withKnobs, select } from '@storybook/addon-knobs/react';
 import { text } from '@storybook/addon-knobs';
 
 import {
@@ -29,13 +25,16 @@ const dmiColorOptions = {
 
 const defaultH1Text = 'H1 HEADER TEXT';
 
-storiesOf('Headings|H1', module)
-  .addParameters({ component: H1 })
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <H1
-      style={{ color: select('Color', dmiColorOptions, ssDarkGrey) }}
-    >
-      {text('Text', defaultH1Text)}
-    </H1>
-  ));
+export default {
+  decorators: [withKnobs],
+  parameters: { component: H1 },
+  title: 'Headings|H1',
+};
+
+export const defaultStory = () => (
+  <H1 style={{ color: select('Color', dmiColorOptions, ssDarkGrey) }}>
+    {text('Text', defaultH1Text)}
+  </H1>
+);
+
+defaultStory.story = { name: 'default' };

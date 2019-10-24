@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select } from '@storybook/addon-knobs';
 
@@ -25,22 +24,30 @@ const sizeOptions = {
 };
 const sizeDefault = 'mediumSmall';
 
-storiesOf('Buttons|IconButton', module)
-  .addParameters({ component: IconButton })
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <IconButton onClick={action('onClickButton')}>
-      {iconDictionary(
-        select('Icon', iconOptions, iconDefault),
-        select('Icon Size', sizeOptions, sizeDefault),
-      )}
-    </IconButton>
-  ))
-  .add('disabled', () => (
-    <IconButton disabled onClick={action('onClickButton')}>
-      {iconDictionary(
-        select('Icon', iconOptions, iconDefault),
-        select('Icon Size', sizeOptions, sizeDefault),
-      )}
-    </IconButton>
-  ));
+export default {
+  decorators: [withKnobs],
+  parameters: { component: IconButton },
+  title: 'Buttons|IconButton',
+};
+
+export const defaultStory = () => (
+  <IconButton onClick={action('onClickButton')}>
+    {iconDictionary(
+      select('Icon', iconOptions, iconDefault),
+      select('Icon Size', sizeOptions, sizeDefault)
+    )}
+  </IconButton>
+);
+
+defaultStory.story = { name: 'default' };
+
+export const disabledStory = () => (
+  <IconButton disabled onClick={action('onClickButton')}>
+    {iconDictionary(
+      select('Icon', iconOptions, iconDefault),
+      select('Icon Size', sizeOptions, sizeDefault)
+    )}
+  </IconButton>
+);
+
+disabledStory.story = { name: 'disabled' };

@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
@@ -56,25 +55,30 @@ const sizeOptions = {
 };
 const sizeDefault = 'mediumSmall';
 
-storiesOf('Buttons|TooltipButton', module)
-  .addParameters({ component: TooltipButton })
-  .addDecorator(withKnobs)
-  .add('default', () => {
-    const icon = iconDictionary(
-      select('Icon', iconOptions, iconDefault),
-      select('Icon Size', sizeOptions, sizeDefault),
-      'button'
-    );
-    return (
-      <TooltipButton
-        disableFocusRipple
-        disableRipple
-        enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
-        Icon={icon}
-        label={text('Label Text', label)}
-        onClick={action('onClickButton')}
-        placement={select('Placement', placementOptions, placementDefault)}
-        tooltipText={text('Tooltip Text', tooltipText)}
-      />
-    );
-  });
+export default {
+  decorators: [withKnobs],
+  parameters: { component: TooltipButton },
+  title: 'Buttons|TooltipButton',
+};
+
+export const defaultStory = () => {
+  const icon = iconDictionary(
+    select('Icon', iconOptions, iconDefault),
+    select('Icon Size', sizeOptions, sizeDefault),
+    'button'
+  );
+  return (
+    <TooltipButton
+      disableFocusRipple
+      disableRipple
+      enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
+      Icon={icon}
+      label={text('Label Text', label)}
+      onClick={action('onClickButton')}
+      placement={select('Placement', placementOptions, placementDefault)}
+      tooltipText={text('Tooltip Text', tooltipText)}
+    />
+  );
+};
+
+defaultStory.story = { name: 'default' };

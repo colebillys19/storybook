@@ -11,11 +11,10 @@
 
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { storiesOf } from '@storybook/react';
 import {
-  withKnobs,
-  text,
   select,
+  text,
+  withKnobs,
 } from '@storybook/addon-knobs/react';
 
 import iconDictionary from '../../../utils/iconDictionary';
@@ -45,26 +44,28 @@ const labelText = 'LABEL TEXT';
 
 const path = 'path';
 
-storiesOf('Links|BaseLink', module)
-  .addParameters({ component: BaseLink })
-  .addDecorator((story) => (
-    <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
-  ))
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <BaseLink
-      label={text('Label Text', labelText, 'Link Props')}
-      path={path}
-    />
-  ))
-  .add('icon', () => (
-    <BaseLink
-      Icon={iconDictionary(
-        select('Icon', iconOptions, iconDefault),
-        select('Icon Size', sizeOptions, sizeDefault),
-        'button',
-      )}
-      label={text('Label Text', labelText)}
-      path={path}
-    />
-  ));
+export default {
+  decorators: [(story) => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>, withKnobs],
+  parameters: { component: BaseLink },
+  title: 'Links|BaseLink',
+};
+
+export const defaultStory = () => (
+  <BaseLink label={text('Label Text', labelText, 'Link Props')} path={path} />
+);
+
+defaultStory.story = { name: 'default' };
+
+export const icon = () => (
+  <BaseLink
+    Icon={iconDictionary(
+      select('Icon', iconOptions, iconDefault),
+      select('Icon Size', sizeOptions, sizeDefault),
+      'button'
+    )}
+    label={text('Label Text', labelText)}
+    path={path}
+  />
+);
+
+icon.story = { name: 'icon' };

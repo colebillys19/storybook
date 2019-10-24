@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
 import BaseCard from '../BaseCard';
@@ -36,31 +35,47 @@ const paddingDefault = '1rem';
 
 const cardText = 'card text';
 
-storiesOf('Cards|BaseCard', module)
-  .addParameters({ component: BaseCard })
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
-      <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
-        {text('Card Text', cardText)}
-      </div>
-    </BaseCard>
-  ))
-  .add('title', () => (
-    <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
-      <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
-        <StyledH1>{text('Card Text', cardText)}</StyledH1>
-      </div>
-    </BaseCard>
-  ))
-  .add('image', () => (
-    <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
-      <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
-        <img
-          alt="placeholder"
-          src={imgPlaceholder}
-          style={{ width: '10rem' }}
-        />
-      </div>
-    </BaseCard>
-  ));
+export default {
+  title: 'Cards|BaseCard',
+  decorators: [withKnobs],
+
+  parameters: {
+    component: BaseCard,
+  },
+};
+
+export const defaultStory = () => (
+  <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
+    <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
+      {text('Card Text', cardText)}
+    </div>
+  </BaseCard>
+);
+
+defaultStory.story = {
+  name: 'default',
+};
+
+export const title = () => (
+  <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
+    <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
+      <StyledH1>{text('Card Text', cardText)}</StyledH1>
+    </div>
+  </BaseCard>
+);
+
+title.story = {
+  name: 'title',
+};
+
+export const image = () => (
+  <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
+    <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
+      <img alt="placeholder" src={imgPlaceholder} style={{ width: '10rem' }} />
+    </div>
+  </BaseCard>
+);
+
+image.story = {
+  name: 'image',
+};

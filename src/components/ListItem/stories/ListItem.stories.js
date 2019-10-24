@@ -7,14 +7,12 @@
  */
 
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-
 import {
-  withKnobs,
-  text,
-  select,
   boolean,
+  select,
+  text,
+  withKnobs,
 } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 
@@ -32,42 +30,52 @@ const iconOptions = {
 
 const iconDefault = 'star';
 
-storiesOf('List Items|ListItem', module)
-  .addParameters({ component: ListItem })
-  .addDecorator(withKnobs)
-  .add('default', () => <ListItem text={listItemText} />)
-  .add('button', () => (
-    <ListItem
-      button
-      disabled={boolean('disabled', false)}
-      onClick={action('clicked')}
-      text={text('Text', listItemText)}
-    />
-  ))
-  .add('disabled', () => (
-    <ListItem
-      disabled
-      text={text('Text', listItemText)}
-    />
-  ))
-  .add('icon', () => (
-    <ListItem
-      button={boolean('button', false)}
-      disabled={boolean('disabled', false)}
-      onClick={action('clicked')}
-      selected={boolean('selected', false)}
-      text={text('Text', listItemText)}
-    >
-      <ListItemIcon>
-        {iconDictionary(select('Icon', iconOptions, iconDefault))}
-      </ListItemIcon>
-    </ListItem>
-  ))
-  .add('selected', () => (
-    <ListItem
-      button={boolean('button', false)}
-      disabled={boolean('disabled', false)}
-      selected
-      text={text('Text', listItemText)}
-    />
-  ));
+export default {
+  decorators: [withKnobs],
+  parameters: { component: ListItem },
+  title: 'List Items|ListItem',
+};
+
+export const defaultStory = () => <ListItem text={listItemText} />;
+
+defaultStory.story = { name: 'default' };
+
+export const buttonStory = () => (
+  <ListItem
+    button
+    disabled={boolean('disabled', false)}
+    onClick={action('clicked')}
+    text={text('Text', listItemText)}
+  />
+);
+
+buttonStory.story = { name: 'button' };
+
+export const disabledStory = () => <ListItem disabled text={text('Text', listItemText)} />;
+
+disabledStory.story = { name: 'disabled' };
+
+export const icon = () => (
+  <ListItem
+    button={boolean('button', false)}
+    disabled={boolean('disabled', false)}
+    onClick={action('clicked')}
+    selected={boolean('selected', false)}
+    text={text('Text', listItemText)}
+  >
+    <ListItemIcon>{iconDictionary(select('Icon', iconOptions, iconDefault))}</ListItemIcon>
+  </ListItem>
+);
+
+icon.story = { name: 'icon' };
+
+export const selectedStory = () => (
+  <ListItem
+    button={boolean('button', false)}
+    disabled={boolean('disabled', false)}
+    selected
+    text={text('Text', listItemText)}
+  />
+);
+
+selectedStory.story = { name: 'selected' };
