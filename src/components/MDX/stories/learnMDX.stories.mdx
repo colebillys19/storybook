@@ -7,7 +7,7 @@ import { withKnobs, select, boolean, text } from '@storybook/addon-knobs/react';
   @description Meta Component
   @typedef (component) Storybook addon-docs block
   @props
-  - title: (string) 'GROUP|STORY'
+  - title: (string) 'GROUP|STORY' Title is computed from the component's title, and matches the component caption in Storybook's navigation.
   - decorators: (array) An array of decorators
   - parameters: (object) An object of parameters
 -->
@@ -19,7 +19,15 @@ import { withKnobs, select, boolean, text } from '@storybook/addon-knobs/react';
   decorators={[withKnobs]}
 />
 
-<!-- This is an example mdx story -->
+<!--  --------------------- These are comments ---------------------------
+  @description Story Component
+  @typedef (component) Storybook addon-docs block
+  @props
+  - name: (string) 'name of f'
+  - decorators: (array) An array of decorators
+  - parameters: (object) An object of parameters
+    @props(componentSubTitle)
+-->
 <Story name='nameOfStory'>
   <div>
     {text('text', 'default text')}
