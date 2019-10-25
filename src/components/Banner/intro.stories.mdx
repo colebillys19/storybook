@@ -52,17 +52,17 @@ Import components you want into your UI
 
 and use them like so
 
-```javascript
+```js
 const example = () => {
-  const [value, setValue] = React.useState(1);
+  const [value, setValue] = React.useState('VALUE');
 
   const handleChange = (event) => {
-    setValue(+event.target.value + 1);
+    setValue('NEW VALUE');
   };
 
   return (
     <BasePaper
-      onClick={handleClick(1)
+      onClick={handleClick}
       value={value}
     >
       {value}
@@ -87,7 +87,3 @@ const example = () => {
       VALUE
   </BasePaper>
 </Story>
-
-### Browse DMI components in your own Storybook
-
-```npm i && npm run storybook```

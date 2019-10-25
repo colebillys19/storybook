@@ -1,32 +1,27 @@
 import { action } from '@storybook/addon-actions';
 import { Button } from '@storybook/react/demo';
 import { Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, select, boolean, text } from '@storybook/addon-knobs/react';
 
-<Meta title='LEARN|MDX' component={Button} />
+<!--  --------------------- These are comments ---------------------------
+  @description Meta Component
+  @typedef (component) Storybook addon-docs block
+  @props
+  - title: (string) 'GROUP|STORY'
+  - decorators: (array) An array of decorators
+  - parameters: (object) An object of parameters
+-->
 
+### The Meta Tag
 
-# Hello Docs
+<Meta
+  title='LEARN|MDX'
+  decorators={[withKnobs]}
+/>
 
-<div style={{ color: '#777', fontWeight: 'bold'}}>
-  Handy Status label
-</div>
-
-Use `Badge` to highlight key info with a predefined status. Easy Peasy!
-
-- Welcome to the future of Storybook!
-### Testing
-
-- Another One
-<Story name="hello" >
-  <Button onClick={action('clicked')}>Hello button!</Button>
+<!-- This is an example mdx story -->
+<Story name='nameOfStory'>
+  <div>
+    {text('text', 'default text')}
+  </div>
 </Story>
-
-<Story name="another story" >
-  <Button onClick={action('clicked')}>Hello button!</Button>
-</Story>
-
-<Story id="cards-basecard--default-story" disabled />
-
-<Story id="expansionpanel-expansionpanel--secondary-text" />
-
-<Props of={Button} />
