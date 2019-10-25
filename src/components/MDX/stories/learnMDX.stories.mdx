@@ -1,35 +1,85 @@
 import { action } from '@storybook/addon-actions';
-import { Button } from '@storybook/react/demo';
-import { Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { PrimaryButton, TooltipButton } from 'components/Button';
+import { Story, Meta, Props, Preview } from '@storybook/addon-docs/blocks';
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs/react';
 
 <!--  --------------------- These are comments ---------------------------
   @description Meta Component
   @typedef (component) Storybook addon-docs block
   @props
-  - title: (string) 'GROUP|STORY' Title is computed from the component's title, and matches the component caption in Storybook's navigation.
+  - title: (string) 'GROUP|STORY' Title is computed from the component's title, and
+                                  matches the component caption in Storybook's navigation.
   - decorators: (array) An array of decorators
   - parameters: (object) An object of parameters
--->
 
-### The Meta Tag
+-->
 
 <Meta
   title='LEARN|MDX'
   decorators={[withKnobs]}
+  parameters={{component: PrimaryButton}}
 />
 
 <!--  --------------------- These are comments ---------------------------
   @description Story Component
   @typedef (component) Storybook addon-docs block
   @props
-  - name: (string) 'name of f'
-  - decorators: (array) An array of decorators
-  - parameters: (object) An object of parameters
-    @props(componentSubTitle)
+  - name: (string) The name of the story.
+  - id: (string) The id of the component to reference in storyBook
+                 The url of the component after last /
+                 @example
+                 - url='http://localhost:9009/?path=/story/paper-basepaper--default-story'
+                 - id='paper-basepaper--default-story'
 -->
 <Story name='nameOfStory'>
-  <div>
-    {text('text', 'default text')}
-  </div>
+    <PrimaryButton 
+      label={text('Primary Button Text', 'Primary Button')}
+      onClick={action('handleClick')}
+    />
 </Story>
+
+<!--  --------------------- These are comments ---------------------------
+  @description Preview Component
+               - Used to wrap Story to and preview story and code in documentation.
+  @typedef (component) Storybook addon-docs block
+-->
+
+<Preview>
+  <Story name='storyPreview'>
+     <TooltipButton 
+      label={text('Tooltip Button Text', 'Tooltip Button')}
+      onClick={action('handleClick')}
+      tooltipText='Tool Tip Text'
+    />
+  </Story>
+</Preview>
+
+<!--  --------------------- These are comments ---------------------------
+  @description Props Component
+               - Used to list props table of component
+  @typedef (component) Storybook addon-docs block
+  @props
+  - of: (component) The Props slot is computed from the component's docgen props,
+                    which can be defined in typescript or using react PropTypes.
+-->
+<Props of={TooltipButton} />
+
+<!--  --------------------- These are comments ---------------------------
+  @description Story Component
+  @typedef (component) Storybook addon-docs block
+  @props
+  - id: (string) The id of the component to reference in storyBook
+                The url of the component after last /
+                @example
+                - url='http://localhost:9009/?path=/story/paper-basepaper--default-story'
+                - id='paper-basepaper--default-story'
+               - Referencing another story in mdx
+-->
+<Story id='paper-basepaper--default-story' />
+
+
+<!--  --------------------- These are comments ---------------------------
+  to do: Importing mdx into existing mdx
+  @description MDX injection into existing MDX
+  parameters: { component: BaseCard, docs: { page: BaseCardMDX } },
+-->

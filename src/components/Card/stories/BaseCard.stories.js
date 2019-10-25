@@ -1,8 +1,6 @@
 import React from 'react';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
-import BaseCardMDX from 'components/Card/stories/BaseCardMDX.mdx';
-
 import BaseCard from '../BaseCard';
 import { StyledH1 } from '../styles/BaseCard.styles';
 import {
@@ -39,7 +37,7 @@ const cardText = 'card text';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: BaseCard, docs: { page: BaseCardMDX } },
+  parameters: { component: BaseCard },
   title: 'Cards|BaseCard',
 };
 
