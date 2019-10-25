@@ -1,0 +1,93 @@
+import { action } from '@storybook/addon-actions';
+import { Button } from '@storybook/react/demo';
+import { Story, Meta, Props, Preview } from '@storybook/addon-docs/blocks';
+import { linkTo } from '@storybook/addon-links';
+import { BasePaper } from 'components/Paper';
+import { msDeepPurple, msMainGreen } from 'utils/defaultStyleHelper';
+import Typography from '@material-ui/core/Typography';
+
+<Meta title="DMI Design System|Intro" />
+
+<img
+  alt="DMI Logo"
+  src={require('./dmi-logo.png')}
+  style={{ marginBottom: '3rem' }}
+/>
+
+# Get Started
+
+DMI Design System is a reusable component library that helps DMI contributors build UIs faster.
+
+The goals is to make building durable UIs more productive and satisfying.
+
+### Install
+
+`npm i @dmi-storybook-design-system`
+
+### Previewing Components
+
+The components are listed alphabetically on the side panel.
+
+To search through the component explorer press the `/` key and enter the component name.
+
+To the left of the page is the side panel with the component groups and their different states.
+
+Located at the top of the page are the `Canvas` and the `Docs` tab.
+
+The Canvas tab is used to preview components while the Docs tabs displays information about the component api and usage.
+
+Below are the `Knobs`, `Story`, `Actions`, and `Accessibility` tabs.
+
+The `Knobs` tab is used to enter changeable props.
+
+The `Story` tab displays the code used to create the component.
+
+The `Actions` displays actions of the component such an onChange and onClick events.
+
+### Use
+
+Import components you want into your UI
+
+`import { BasePaper } from '@dmi-storybook-design-system`
+
+and use them like so
+
+```javascript
+const example = () => {
+  const [value, setValue] = React.useState(1);
+
+  const handleChange = (event) => {
+    setValue(+event.target.value + 1);
+  };
+
+  return (
+    <BasePaper
+      onClick={handleClick(1)
+      value={value}
+    >
+      {value}
+    </BasePaper>
+  );
+};
+```
+
+<Story name="example">
+  <BasePaper 
+    style={{
+        backgroundColor: msDeepPurple,
+        padding: '2rem',
+        color: msMainGreen,
+        fontFamily: 'RedHatText',
+        fontSize: '2.5rem',
+        fontWeight: 'bold',
+      }} 
+      onClick={action('handleclick')}
+      value={1}
+    >
+      VALUE
+  </BasePaper>
+</Story>
+
+### Browse DMI components in your own Storybook
+
+```npm i && npm run storybook```

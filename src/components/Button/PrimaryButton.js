@@ -11,7 +11,7 @@
 * }
 */
 import styled from 'styled-components';
-import { msBrightPurple, msHoverPurple } from '../../utils/defaultStyleHelper';
+import { msBrightPurple, msHoverPurple } from 'utils/defaultStyleHelper';
 import BaseButton from './BaseButton';
 
 const PrimaryButton = styled(BaseButton)`

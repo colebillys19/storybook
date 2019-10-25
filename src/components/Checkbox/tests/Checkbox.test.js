@@ -6,7 +6,7 @@ import {
   checkBasicRendering,
   checkEventHandler,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
+} from 'utils/testingHelpers';
 
 
 describe('<Checkbox />', () => {

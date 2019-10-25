@@ -12,7 +12,7 @@ import {
   msDarkGrey,
   msHoverPurple,
   msMainGreen,
-} from '../../../utils/defaultStyleHelper';
+} from 'utils/defaultStyleHelper';
 
 
 export default {

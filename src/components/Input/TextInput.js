@@ -36,7 +36,7 @@
 
 import React, { Fragment } from 'react';
 import T from 'prop-types';
-import ConditionalRender from '../../utils/ConditionalRender';
+import ConditionalRender from 'utils/ConditionalRender';
 import InputLabel from './sub-components/InputLabel';
 import { BaseTextInput } from './styles/TextInput.styles';
 

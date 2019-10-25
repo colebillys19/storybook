@@ -4,8 +4,7 @@ module.exports = function({ config }) {
     loaders: [
       require.resolve("@storybook/source-loader"),
   ],
-    enforce: "pre"
+    enforce: "pre",
   });
-
   return config;
 };

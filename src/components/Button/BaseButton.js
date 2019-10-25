@@ -18,7 +18,7 @@
 import React from 'react';
 import T from 'prop-types';
 import Cancel from '../../svg/Cancel';
-import ConditionalRender from '../../utils/ConditionalRender';
+import ConditionalRender from 'utils/ConditionalRender';
 import StyledBaseButton from './styles/BaseButton.styles';
 
 const BaseButton = ({

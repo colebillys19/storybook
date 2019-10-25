@@ -3,7 +3,7 @@ import T from 'prop-types';
 import styled from 'styled-components';
 import TextField from '@material-ui/core/TextField';
 
-import { msBrightPurple } from '../../utils/defaultStyleHelper';
+import { msBrightPurple } from 'utils/defaultStyleHelper';
 
 const BaseTextField = ({ color, ...props }) => {
   const StyledTextField = styled((styledProps) => (

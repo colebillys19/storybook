@@ -1,6 +1,6 @@
 import React from 'react';
 import T from 'prop-types';
-import iconDictionary from '../../utils/iconDictionary';
+import iconDictionary from 'utils/iconDictionary';
 
 import { formatCurrency, formatAmountsWithCommas } from './helpers';
 import { StyledCurrencyInput } from './styles/CurrencyInput.styles';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import BaseTable from '../BaseTable';
+import BaseTable from 'components/Table/BaseTable';
 
 const centeredColsA = [1, 2, 3, 4];
 const centeredColsB = [1, 2, 3];

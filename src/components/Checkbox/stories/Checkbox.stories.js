@@ -23,7 +23,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs/react';
 
-import { Checkbox } from '../index';
+import Checkbox from 'components/Checkbox/Checkbox';
 
 const defaultFalse = false;
 const initialValue = 'value';
@@ -37,7 +37,11 @@ const colorOptions = {
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: Checkbox },
+  includeStories: [],
+  parameters: {
+    component: Checkbox,
+    componentSubtitle: 'Checkbox Subtitle',
+  },
   title: 'Checkbox|Checkbox',
 };
 
@@ -74,3 +78,11 @@ export const disabledStory = () => (
 );
 
 disabledStory.story = { name: 'disabled' };
+
+export const basic = () => (
+  <Checkbox
+    checked
+  />
+)
+
+basic.story = { name: 'basic' }

@@ -3,7 +3,7 @@ import React from 'react';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
+} from 'utils/testingHelpers';
 import { BaseLink } from '../index';
 
 describe('<BaseLink />', () => {

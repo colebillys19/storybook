@@ -24,12 +24,5 @@ addParameters({
   ]
 });
 
-// const req = requireContext('../src/components', true, /\.stories\.(js|mdx)$/);
 configure(require.context('../src', true, /\.stories\.(js|mdx)$/), module);
-
-// function loadStories() {
-//   req.keys().forEach(filename => req(filename));
-// }
-
-// configure(loadStories, module);
 

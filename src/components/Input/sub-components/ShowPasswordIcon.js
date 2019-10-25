@@ -9,8 +9,8 @@
 import React from 'react';
 import T from 'prop-types';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import iconDictionary from '../../../utils/iconDictionary';
-import ConditionalRender from '../../../utils/ConditionalRender';
+import iconDictionary from 'utils/iconDictionary';
+import ConditionalRender from 'utils/ConditionalRender';
 
 import { StyledPasswordIcon } from './ShowPasswordIcon.styles';
 

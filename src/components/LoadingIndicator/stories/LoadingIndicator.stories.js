@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-import { LoadingIndicator } from '../index';
+import LoadingIndicator from 'components/LoadingIndicator/LoadingIndicator';
 
 export default {
   parameters: { component: LoadingIndicator },

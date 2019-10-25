@@ -5,9 +5,9 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs/react';
 
-import InsetPaper from '../InsetPaper';
+import InsetPaper from 'components/Paper/InsetPaper';
 
-import imgPlaceholder from '../../../utils/imagePlaceholder.svg';
+import imgPlaceholder from 'utils/imagePlaceholder.svg';
 
 const paddingOptions = {
   '1rem': '1rem',

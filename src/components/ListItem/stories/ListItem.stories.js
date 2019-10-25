@@ -16,8 +16,8 @@ import {
 } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 
-import { ListItem } from '../index';
-import iconDictionary from '../../../utils/iconDictionary';
+import iconDictionary from 'utils/iconDictionary';
+import ListItem from 'components/ListItem/ListItem';
 
 const listItemText = 'List Item Text';
 

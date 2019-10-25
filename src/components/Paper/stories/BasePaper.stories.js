@@ -5,9 +5,9 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs/react';
 
-import BasePaper from '../BasePaper';
+import BasePaper from 'components/Paper/BasePaper';
 
-import imgPlaceholder from '../../../utils/imagePlaceholder.svg';
+import imgPlaceholder from 'utils/imagePlaceholder.svg';
 
 const paddingOptions = {
   '1rem': '1rem',

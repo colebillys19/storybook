@@ -7,7 +7,7 @@ import {
 } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 
-import TextInput from '../TextInput';
+import TextInput from 'components/Input/TextInput';
 
 const variantOptions = {
   filled: 'filled',

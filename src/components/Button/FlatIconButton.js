@@ -1,7 +1,9 @@
 import React from 'react';
+import T from 'prop-types';
 import styled from 'styled-components';
 import BaseButton from './BaseButton';
 import TooltipButton from './TooltipButton';
+
 
 const FlatIconButton = styled(({ tooltipText, ...restProps }) => {
   if (tooltipText) return <TooltipButton tooltipText={tooltipText} {...restProps} />;
@@ -16,4 +18,17 @@ const FlatIconButton = styled(({ tooltipText, ...restProps }) => {
   background-color: transparent;
   box-shadow: none;
 `;
+
+FlatIconButton.propTypes = {
+  component: T.func,
+  disableFocusRipple: T.bool,
+  disableRipple: T.bool,
+  href: T.string,
+  Icon: T.oneOfType([T.object, T.func]),
+  label: T.oneOfType([T.string, T.element]).isRequired,
+  onClick: T.func.isRequired,
+  target: T.string,
+  to: T.string,
+};
+
 export default FlatIconButton;

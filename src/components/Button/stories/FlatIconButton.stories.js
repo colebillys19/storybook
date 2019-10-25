@@ -2,9 +2,9 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
-import iconDictionary from '../../../utils/iconDictionary';
+import iconDictionary from 'utils/iconDictionary';
 
-import FlatIconButton from '../FlatIconButton';
+import FlatIconButton from 'components/Button/FlatIconButton';
 
 const label = 'LABEL TEXT';
 const tooltipText = 'tooltip text';

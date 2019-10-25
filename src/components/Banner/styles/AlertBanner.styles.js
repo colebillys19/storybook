@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { borderStyle, borderWidth, ssRed } from '../../../utils/defaultStyleHelper';
+import { borderStyle, borderWidth, ssRed } from 'utils/defaultStyleHelper';
 import TextButton from '../../Button/TextButton';
 
 // For the styled component below and the height being smaller than the min-height.

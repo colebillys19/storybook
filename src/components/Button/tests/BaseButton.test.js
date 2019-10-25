@@ -4,8 +4,8 @@ import { render, fireEvent } from '@testing-library/react';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
-import iconDictionary from '../../../utils/iconDictionary';
+} from 'utils/testingHelpers';
+import iconDictionary from 'utils/iconDictionary';
 import { BaseButton } from '../index';
 
 const inboxIcon = iconDictionary('inbox', 'mediumSmall', 'button');
@@ -29,4 +29,4 @@ describe('<BaseButton />', () => {
     fireEvent.click(button);
     expect(onClick).toHaveBeenCalledTimes(1);
   });
-});
+})

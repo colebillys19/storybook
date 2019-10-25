@@ -1,6 +1,8 @@
 import React from 'react';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
+import BaseCardMDX from 'components/Card/stories/BaseCardMDX.mdx';
+
 import BaseCard from '../BaseCard';
 import { StyledH1 } from '../styles/BaseCard.styles';
 import {
@@ -11,8 +13,8 @@ import {
   ssLightBlue,
   ssMainBlue,
   ssYellow,
-} from '../../../utils/defaultStyleHelper';
-import imgPlaceholder from '../../../utils/imagePlaceholder.svg';
+} from 'utils/defaultStyleHelper';
+import imgPlaceholder from 'utils/imagePlaceholder.svg';
 
 const colorOptions = {
   msBrightPurple,
@@ -36,16 +38,13 @@ const paddingDefault = '1rem';
 const cardText = 'card text';
 
 export default {
-  title: 'Cards|BaseCard',
   decorators: [withKnobs],
-
-  parameters: {
-    component: BaseCard,
-  },
+  parameters: { component: BaseCard, docs: { page: BaseCardMDX } },
+  title: 'Cards|BaseCard',
 };
 
 export const defaultStory = () => (
-  <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
+  <BaseCard id='base-card' color={select('Card Color', colorOptions, colorDefault)}>
     <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
       {text('Card Text', cardText)}
     </div>
@@ -76,6 +75,8 @@ export const image = () => (
   </BaseCard>
 );
 
+
 image.story = {
   name: 'image',
 };
+

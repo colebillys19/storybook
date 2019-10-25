@@ -1,0 +1,32 @@
+import { action } from '@storybook/addon-actions';
+import { Button } from '@storybook/react/demo';
+import { Story, Meta, Props } from '@storybook/addon-docs/blocks';
+
+<Meta title='LEARN|MDX' component={Button} />
+
+
+# Hello Docs
+
+<div style={{ color: '#777', fontWeight: 'bold'}}>
+  Handy Status label
+</div>
+
+Use `Badge` to highlight key info with a predefined status. Easy Peasy!
+
+- Welcome to the future of Storybook!
+### Testing
+
+- Another One
+<Story name="hello" >
+  <Button onClick={action('clicked')}>Hello button!</Button>
+</Story>
+
+<Story name="another story" >
+  <Button onClick={action('clicked')}>Hello button!</Button>
+</Story>
+
+<Story id="cards-basecard--default-story" disabled />
+
+<Story id="expansionpanel-expansionpanel--secondary-text" />
+
+<Props of={Button} />

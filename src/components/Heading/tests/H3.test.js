@@ -6,7 +6,7 @@ import {
   checkBasicRendering,
   checkRequiredProps,
   checkSimpleChild,
-} from '../../../utils/testingHelpers';
+} from 'utils/testingHelpers';
 
 describe('<H3 />', () => {
   const component = <H3>H3 Component</H3>;

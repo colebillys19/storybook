@@ -2,9 +2,9 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select } from '@storybook/addon-knobs';
 
-import iconDictionary from '../../../utils/iconDictionary';
+import iconDictionary from 'utils/iconDictionary';
 
-import IconButton from '../IconButton';
+import IconButton from 'components/Button/IconButton';
 
 const iconOptions = {
   cancel: 'cancel',

@@ -15,7 +15,7 @@ import {
   greyBorder,
   msLightGrey,
   ssDarkGrey,
-} from '../../utils/defaultStyleHelper';
+} from 'utils/defaultStyleHelper';
 import SecondaryButton from './SecondaryButton';
 
 const GhostButton = styled(SecondaryButton)`

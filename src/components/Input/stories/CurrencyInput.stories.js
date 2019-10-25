@@ -7,7 +7,7 @@ import {
 } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 
-import CurrencyInput from '../CurrencyInput';
+import CurrencyInput from 'components/Input/CurrencyInput';
 
 const variantOptions = {
   filled: 'filled',

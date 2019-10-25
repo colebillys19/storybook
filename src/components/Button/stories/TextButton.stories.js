@@ -2,7 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import TextButton from '../TextButton';
+import TextButton from 'components/Button/TextButton';
 
 const label = 'LABEL TEXT';
 

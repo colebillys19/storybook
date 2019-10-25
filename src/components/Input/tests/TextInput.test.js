@@ -4,7 +4,7 @@ import TextInput from '../TextInput';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from '../../../utils/testingHelpers';
+} from 'utils/testingHelpers';
 
 describe('<TextInput />', () => {
   const onChange = jest.fn();

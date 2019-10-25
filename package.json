@@ -6,7 +6,6 @@
     "@babel/cli": "7.6.4",
     "@material-ui/core": "3.9.3",
     "@material-ui/icons": "3.0.2",
-    "@storybook/cli": "5.2.5",
     "lodash": "4.17.11",
     "polished": "3.4.1",
     "prop-types": "15.7.2",
@@ -81,6 +80,11 @@
       "import/no-unresolved": 2,
       "import/no-webpack-loader-syntax": 0,
       "import/prefer-default-export": 0,
+      "import/resolver": {
+        "webpack": {
+          "config": "webpack.config.js"
+        }
+      },
       "indent": [
         2,
         2,
@@ -180,7 +184,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
     "@storybook/addon-a11y": "5.2.5",
     "@storybook/addon-actions": "5.2.5",
     "@storybook/addon-backgrounds": "5.2.5",
@@ -205,6 +208,7 @@
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-config-prettier": "3.1.0",
+    "eslint-import-resolver-webpack": "0.11.1",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-react": "7.11.1",

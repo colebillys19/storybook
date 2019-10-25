@@ -24,8 +24,10 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs/react';
 
-import iconDictionary from '../../../utils/iconDictionary';
-import { ExpansionPanel, ExpansionPanelDetails, ExpansionPanelSummary } from '../index';
+import iconDictionary from 'utils/iconDictionary';
+import ExpansionPanel from 'components/ExpansionPanel/ExpansionPanel';
+import ExpansionPanelDetails from 'components/ExpansionPanel/sub-components/ExpansionPanelDetails';
+import ExpansionPanelSummary from 'components/ExpansionPanel/sub-components/ExpansionPanelSummary';
 
 const defaultExpansionSummary = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
