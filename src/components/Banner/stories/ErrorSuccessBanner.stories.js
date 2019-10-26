@@ -1,23 +1,30 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
 import ErrorSuccessBanner from '../ErrorSuccessBanner';
 
 const bannerProps = { errorMessage: 'error', successMessage: 'success' };
 
-storiesOf('Banners|ErrorSuccessBanner', module)
-  .addParameters({ component: ErrorSuccessBanner })
-  .addDecorator(withKnobs)
-  .add('error', () => (
-    <ErrorSuccessBanner
-      error={{ message: text('Error Message', bannerProps.errorMessage) }}
-      success={false}
-    />
-  ))
-  .add('success', () => (
-    <ErrorSuccessBanner
-      error={false}
-      success={{ message: text('Success Message', bannerProps.successMessage) }}
-    />
-  ));
+export default {
+  decorators: [withKnobs],
+  parameters: { component: ErrorSuccessBanner },
+  title: 'Banners|ErrorSuccessBanner',
+};
+
+export const errorStory = () => (
+  <ErrorSuccessBanner
+    error={{ message: text('Error Message', bannerProps.errorMessage) }}
+    success={false}
+  />
+);
+
+errorStory.story = { name: 'error' };
+
+export const successStory = () => (
+  <ErrorSuccessBanner
+    error={false}
+    success={{ message: text('Success Message', bannerProps.successMessage) }}
+  />
+);
+
+successStory.story = { name: 'success' };

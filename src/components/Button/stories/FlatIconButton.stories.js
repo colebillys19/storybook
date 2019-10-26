@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
@@ -28,23 +27,28 @@ const sizeOptions = {
 };
 const sizeDefault = 'mediumSmall';
 
-storiesOf('Buttons|FlatIconButton', module)
-  .addParameters({ component: FlatIconButton })
-  .addDecorator(withKnobs)
-  .add('default', () => {
-    const icon = iconDictionary(
-      select('Icon', iconOptions, iconDefault),
-      select('Icon Size', sizeOptions, sizeDefault),
-      'button'
-    );
-    return (
-      <FlatIconButton
-        disableFocusRipple
-        disableRipple
-        Icon={icon}
-        label={text('Label Text', label)}
-        onClick={action('onClickButton')}
-        tooltipText={text('Tooltip Text', tooltipText)}
-      />
-    );
-  });
+export default {
+  decorators: [withKnobs],
+  parameters: { component: FlatIconButton },
+  title: 'Buttons|FlatIconButton',
+};
+
+export const defaultStory = () => {
+  const icon = iconDictionary(
+    select('Icon', iconOptions, iconDefault),
+    select('Icon Size', sizeOptions, sizeDefault),
+    'button'
+  );
+  return (
+    <FlatIconButton
+      disableFocusRipple
+      disableRipple
+      Icon={icon}
+      label={text('Label Text', label)}
+      onClick={action('onClickButton')}
+      tooltipText={text('Tooltip Text', tooltipText)}
+    />
+  );
+};
+
+defaultStory.story = { name: 'default' };

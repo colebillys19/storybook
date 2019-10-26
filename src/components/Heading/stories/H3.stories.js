@@ -2,13 +2,8 @@
  * @description Wraps text to create an <h3> header
  */
 
-
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import {
-  withKnobs,
-  select,
-} from '@storybook/addon-knobs/react';
+import { withKnobs, select } from '@storybook/addon-knobs/react';
 import { text } from '@storybook/addon-knobs';
 
 import {
@@ -30,13 +25,16 @@ const dmiColorOptions = {
 
 const defaultH3Text = 'H3 HEADER TEXT';
 
-storiesOf('Headings|H3', module)
-  .addParameters({ component: H3 })
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <H3
-      style={{ color: select('Color', dmiColorOptions, ssDarkGrey) }}
-    >
-      {text('Text', defaultH3Text)}
-    </H3>
-  ));
+export default {
+  decorators: [withKnobs],
+  parameters: { component: H3 },
+  title: 'Headings|H3',
+};
+
+export const defaultStory = () => (
+  <H3 style={{ color: select('Color', dmiColorOptions, ssDarkGrey) }}>
+    {text('Text', defaultH3Text)}
+  </H3>
+);
+
+defaultStory.story = { name: 'default' };

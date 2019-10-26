@@ -17,7 +17,6 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { action } from '@storybook/addon-actions';
-import { storiesOf } from '@storybook/react';
 import {
   boolean,
   select,
@@ -25,13 +24,8 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs/react';
 
-
-import iconDictionary from 'utils/iconDictionary';
-import {
-  ExpansionPanel,
-  ExpansionPanelDetails,
-  ExpansionPanelSummary,
-} from '../index';
+import iconDictionary from '../../../utils/iconDictionary';
+import { ExpansionPanel, ExpansionPanelDetails, ExpansionPanelSummary } from '../index';
 
 const defaultExpansionSummary = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
@@ -72,120 +66,21 @@ const expansionDetailsStyles = { fontSize: '1.6rem' };
 
 const defaultFalse = false;
 
-storiesOf('ExpansionPanel|ExpansionPanel', module)
-  .addParameters({ component: ExpansionPanel })
-  .addDecorator(withKnobs)
-  .add('default', () => {
-    const ExpandMoreIcon = iconDictionary(
-      select('Icon', iconOptions, iconDefault),
-      select('Size', sizeOptions, sizeDefault)
-    );
+export default {
+  decorators: [withKnobs],
+  parameters: { component: ExpansionPanel },
+  title: 'ExpansionPanel|ExpansionPanel',
+};
 
-    const SimpleExpansionPanel = (
-      <ExpansionPanel
-        disabled={boolean('Disabled', defaultFalse)}
-        onChange={action('onChange')}
-      >
-        <ExpansionPanelSummary expandIcon={ExpandMoreIcon}>
-          <Typography style={headingStyles}>
-            {text('Expansion Title', defaultExpansionTitle)}
-          </Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography style={expansionDetailsStyles}>
-            {text('Summary Text', defaultExpansionSummary)}
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-    );
-    return SimpleExpansionPanel;
-  })
-  .add('secondary text', () => {
-    const ExpandMoreIcon = iconDictionary(
-      select('Icon', iconOptions, iconDefault),
-      select('Size', sizeOptions, sizeDefault)
-    );
-    const defaultSecondaryText = 'Lorem ipsum dolor sit amet consectetur';
+export const defaultStory = () => {
+  const ExpandMoreIcon = iconDictionary(
+    select('Icon', iconOptions, iconDefault),
+    select('Size', sizeOptions, sizeDefault)
+  );
 
-    const SimpleExpansionPanel = (
-      <ExpansionPanel
-        disabled={boolean('Disabled', defaultFalse)}
-        onChange={action('onChange')}
-      >
-        <ExpansionPanelSummary expandIcon={ExpandMoreIcon}>
-          <Typography style={headingStyles}>
-            {text('Expansion Title', defaultExpansionTitle)}
-          </Typography>
-          <Typography style={secondaryHeadingStyles}>
-            {text('Secondary Text', defaultSecondaryText)}
-          </Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography style={expansionDetailsStyles}>
-            {text('Summary Text', defaultExpansionSummary)}
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-    );
-    return SimpleExpansionPanel;
-  })
-  .add('expanded', () => {
-    const ExpandMoreIcon = iconDictionary(
-      select('Icon', iconOptions, iconDefault),
-      select('Size', sizeOptions, sizeDefault)
-    );
-
-    const SimpleExpansionPanel = (
-      <ExpansionPanel
-        defaultExpanded
-        disabled={boolean('Disabled', defaultFalse)}
-        onChange={action('onChange')}
-      >
-        <ExpansionPanelSummary expandIcon={ExpandMoreIcon}>
-          <Typography style={headingStyles}>
-            {text('Expansion Title', defaultExpansionTitle)}
-          </Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography style={expansionDetailsStyles}>
-            {text('Summary Text', defaultExpansionSummary)}
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-    );
-    return SimpleExpansionPanel;
-  })
-  .add('disabled', () => {
-    const ExpandMoreIcon = iconDictionary(
-      select('Icon', iconOptions, iconDefault),
-      select('Size', sizeOptions, sizeDefault)
-    );
-
-    const SimpleExpansionPanel = (
-      <ExpansionPanel
-        disabled
-        onChange={action('onChange')}
-      >
-        <ExpansionPanelSummary expandIcon={ExpandMoreIcon}>
-          <Typography style={headingStyles}>
-            {text('Expansion Title', defaultExpansionTitle)}
-          </Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography style={expansionDetailsStyles}>
-            {text('Summary Text', defaultExpansionSummary)}
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-    );
-    return SimpleExpansionPanel;
-  })
-  .add('no expand icon', () => (
-    <ExpansionPanel
-      disabled={boolean('Disabled', defaultFalse)}
-      onChange={action('onChange')}
-    >
-      <ExpansionPanelSummary style={headingStyles}>
+  const SimpleExpansionPanel = (
+    <ExpansionPanel disabled={boolean('Disabled', defaultFalse)} onChange={action('onChange')}>
+      <ExpansionPanelSummary expandIcon={ExpandMoreIcon}>
         <Typography style={headingStyles}>
           {text('Expansion Title', defaultExpansionTitle)}
         </Typography>
@@ -196,4 +91,108 @@ storiesOf('ExpansionPanel|ExpansionPanel', module)
         </Typography>
       </ExpansionPanelDetails>
     </ExpansionPanel>
-  ));
+  );
+  return SimpleExpansionPanel;
+};
+
+defaultStory.story = { name: 'default' };
+
+export const secondaryText = () => {
+  const ExpandMoreIcon = iconDictionary(
+    select('Icon', iconOptions, iconDefault),
+    select('Size', sizeOptions, sizeDefault)
+  );
+  const defaultSecondaryText = 'Lorem ipsum dolor sit amet consectetur';
+
+  const SimpleExpansionPanel = (
+    <ExpansionPanel disabled={boolean('Disabled', defaultFalse)} onChange={action('onChange')}>
+      <ExpansionPanelSummary expandIcon={ExpandMoreIcon}>
+        <Typography style={headingStyles}>
+          {text('Expansion Title', defaultExpansionTitle)}
+        </Typography>
+        <Typography style={secondaryHeadingStyles}>
+          {text('Secondary Text', defaultSecondaryText)}
+        </Typography>
+      </ExpansionPanelSummary>
+      <ExpansionPanelDetails>
+        <Typography style={expansionDetailsStyles}>
+          {text('Summary Text', defaultExpansionSummary)}
+        </Typography>
+      </ExpansionPanelDetails>
+    </ExpansionPanel>
+  );
+  return SimpleExpansionPanel;
+};
+
+secondaryText.story = { name: 'secondary text' };
+
+export const expanded = () => {
+  const ExpandMoreIcon = iconDictionary(
+    select('Icon', iconOptions, iconDefault),
+    select('Size', sizeOptions, sizeDefault)
+  );
+
+  const SimpleExpansionPanel = (
+    <ExpansionPanel
+      defaultExpanded
+      disabled={boolean('Disabled', defaultFalse)}
+      onChange={action('onChange')}
+    >
+      <ExpansionPanelSummary expandIcon={ExpandMoreIcon}>
+        <Typography style={headingStyles}>
+          {text('Expansion Title', defaultExpansionTitle)}
+        </Typography>
+      </ExpansionPanelSummary>
+      <ExpansionPanelDetails>
+        <Typography style={expansionDetailsStyles}>
+          {text('Summary Text', defaultExpansionSummary)}
+        </Typography>
+      </ExpansionPanelDetails>
+    </ExpansionPanel>
+  );
+  return SimpleExpansionPanel;
+};
+
+expanded.story = { name: 'expanded' };
+
+export const disabledStory = () => {
+  const ExpandMoreIcon = iconDictionary(
+    select('Icon', iconOptions, iconDefault),
+    select('Size', sizeOptions, sizeDefault)
+  );
+
+  const SimpleExpansionPanel = (
+    <ExpansionPanel disabled onChange={action('onChange')}>
+      <ExpansionPanelSummary expandIcon={ExpandMoreIcon}>
+        <Typography style={headingStyles}>
+          {text('Expansion Title', defaultExpansionTitle)}
+        </Typography>
+      </ExpansionPanelSummary>
+      <ExpansionPanelDetails>
+        <Typography style={expansionDetailsStyles}>
+          {text('Summary Text', defaultExpansionSummary)}
+        </Typography>
+      </ExpansionPanelDetails>
+    </ExpansionPanel>
+  );
+  return SimpleExpansionPanel;
+};
+
+disabledStory.story = { name: 'disabled' };
+
+export const noExpandIcon = () => (
+  <ExpansionPanel disabled={boolean('Disabled', defaultFalse)} onChange={action('onChange')}>
+    <ExpansionPanelSummary style={headingStyles}>
+      <Typography style={headingStyles}>
+        {text('Expansion Title', defaultExpansionTitle)}
+      </Typography>
+    </ExpansionPanelSummary>
+    <ExpansionPanelDetails>
+      <Typography style={expansionDetailsStyles}>
+        {text('Summary Text', defaultExpansionSummary)}
+      </Typography>
+    </ExpansionPanelDetails>
+  </ExpansionPanel>
+);
+
+noExpandIcon.story = { name: 'no expand icon' };

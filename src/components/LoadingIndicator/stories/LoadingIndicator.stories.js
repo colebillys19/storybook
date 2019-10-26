@@ -4,10 +4,14 @@
  */
 
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import LoadingIndicator from '../LoadingIndicator';
 
-storiesOf('Loading Indicators|LoadingIndicator', module)
-  .addParameters({ component: LoadingIndicator })
-  .add('default', () => <LoadingIndicator />);
+export default {
+  parameters: { component: LoadingIndicator },
+  title: 'Loading Indicators|LoadingIndicator',
+};
+
+export const defaultStory = () => <LoadingIndicator />;
+
+defaultStory.story = { name: 'default' };

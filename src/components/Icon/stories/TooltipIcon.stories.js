@@ -15,7 +15,6 @@
  */
 
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { select, text, withKnobs } from '@storybook/addon-knobs';
 
 import TooltipIcon from '../TooltipIcon';
@@ -54,34 +53,37 @@ const tooltipContent = (
   </div>
 );
 
-storiesOf('Icons|TooltipIcon', module)
-  .addParameters({ component: TooltipIcon })
-  .addDecorator(withKnobs)
-  .add('default', () => {
-    const icon = iconDictionary(
-      select('Icon', iconOptions, iconDefault),
-      select('Icon Size', sizeOptions, sizeDefault),
-      'button'
-    );
-    return (
-      <TooltipIcon
-        Icon={icon}
-        TooltipContent={<span style={spanStyles}>{text('Tooltip Text', 'tooltip text')}</span>}
-      />
-    );
-  })
-  .add('content', () => {
-    const icon = iconDictionary(
-      select('Icon', iconOptions, iconDefault),
-      select('Icon Size', sizeOptions, sizeDefault),
-      'button'
-    );
-    return (
-      <TooltipIcon
-        Icon={icon}
-        TooltipContent={tooltipContent}
-      />
-    );
-  });
+export default {
+  decorators: [withKnobs],
+  parameters: { component: TooltipIcon },
+  title: 'Icons|TooltipIcon',
+};
+
+export const defaultStory = () => {
+  const icon = iconDictionary(
+    select('Icon', iconOptions, iconDefault),
+    select('Icon Size', sizeOptions, sizeDefault),
+    'button'
+  );
+  return (
+    <TooltipIcon
+      Icon={icon}
+      TooltipContent={<span style={spanStyles}>{text('Tooltip Text', 'tooltip text')}</span>}
+    />
+  );
+};
+
+defaultStory.story = { name: 'default' };
+
+export const content = () => {
+  const icon = iconDictionary(
+    select('Icon', iconOptions, iconDefault),
+    select('Icon Size', sizeOptions, sizeDefault),
+    'button'
+  );
+  return <TooltipIcon Icon={icon} TooltipContent={tooltipContent} />;
+};
+
+content.story = { name: 'content' };
 
 const spanStyles = { color: '#888', display: 'inline-block', margin: '0.3rem 0.8rem' };

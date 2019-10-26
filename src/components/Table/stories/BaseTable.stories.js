@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
 import BaseTable from '../BaseTable';
@@ -8,25 +7,34 @@ const centeredColsA = [1, 2, 3, 4];
 const centeredColsB = [1, 2, 3];
 const hoverColor = '#F8F8F8';
 
-storiesOf('Tables|BaseTable', module)
-  .addParameters({ component: BaseTable })
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <BaseTable
-      centeredCols={text('Centered Columns', centeredColsA)}
-      headers={headersA}
-      hoverColor={text('Row Hover Color', hoverColor)}
-      rowData={rowDataA}
-    />
-  ))
-  .add('offset', () => (
-    <BaseTable
-      centeredCols={text('Centered Columns', centeredColsB)}
-      headers={headersB}
-      hoverColor={text('Row Hover Color', hoverColor)}
-      rowData={rowDataB}
-    />
-  ));
+export default {
+  decorators: [withKnobs],
+  excludeStories: ['headersA', 'rowDataA', 'headersB', 'rowDataB'],
+  parameters: { component: BaseTable },
+  title: 'Tables|BaseTable',
+};
+
+export const defaultStory = () => (
+  <BaseTable
+    centeredCols={text('Centered Columns', centeredColsA)}
+    headers={headersA}
+    hoverColor={text('Row Hover Color', hoverColor)}
+    rowData={rowDataA}
+  />
+);
+
+defaultStory.story = { name: 'default' };
+
+export const offset = () => (
+  <BaseTable
+    centeredCols={text('Centered Columns', centeredColsB)}
+    headers={headersB}
+    hoverColor={text('Row Hover Color', hoverColor)}
+    rowData={rowDataB}
+  />
+);
+
+offset.story = { name: 'offset' };
 
 // data
 export const headersA = ['Dessert', 'Calories', 'Fat (g)', 'Carbs (g)', 'Protein (g)'];
