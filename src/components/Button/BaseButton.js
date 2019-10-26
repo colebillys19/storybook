@@ -21,26 +21,30 @@ import Cancel from '../../svg/Cancel';
 import ConditionalRender from '../../utils/ConditionalRender';
 import StyledBaseButton from './styles/BaseButton.styles';
 
-const BaseButton = ({
-  disableFocusRipple,
-  disableRipple,
-  Icon,
-  label,
-  onClick,
-  ...restProps
-}) => (
-  <StyledBaseButton
-    classes={{ label: 'label' }}
-    disableFocusRipple={disableFocusRipple}
-    disableRipple={disableRipple}
-    onClick={onClick}
-    variant="contained"
-    {...restProps}
-  >
-    <ConditionalRender Component={Icon || Cancel} shouldRender={!!Icon} />
-    {label}
-  </StyledBaseButton>
-);
+const BaseButton = React.forwardRef((props, ref) => {
+  const {
+    disableFocusRipple,
+    disableRipple,
+    Icon,
+    label,
+    onClick,
+    ...restProps
+  } = props;
+  return (
+    <StyledBaseButton
+      ref={ref}
+      classes={{ label: 'label' }}
+      disableFocusRipple={disableFocusRipple}
+      disableRipple={disableRipple}
+      onClick={onClick}
+      variant="contained"
+      {...restProps}
+    >
+      <ConditionalRender Component={Icon || Cancel} shouldRender={!!Icon} />
+      {label}
+    </StyledBaseButton>
+  );
+});
 
 /* eslint-disable react/default-props-match-prop-types */
 BaseButton.defaultProps = {

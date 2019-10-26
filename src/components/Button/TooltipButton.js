@@ -15,9 +15,7 @@ const TooltipButton = ({
     placement={placement}
     title={tooltipText}
   >
-    <BaseButton
-      {...restProps}
-    />
+    <BaseButton {...restProps} />
   </Tooltip>
 );
 

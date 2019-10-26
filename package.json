@@ -20,19 +20,10 @@
   },
   "scripts": {
     "build": "BABEL_ENV=production babel src -d dist",
-    "lint": "npm run lint:js",
-    "lint:css": "stylelint './app/**/*.js'",
-    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
-    "lint:eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts --fix",
-    "lint:js": "npm run lint:eslint -- . ",
-    "lint:staged": "lint-staged",
     "prepare": "npm run build",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
-  },
-  "lint-staged": {
-    "*.js": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts"
   },
   "pre-commit": "lint:staged",
   "eslintConfig": {
@@ -208,8 +199,6 @@
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-react-hooks": "1.6.0",
     "eslint-plugin-sort-destructure-keys": "1.2.0",
-    "lint-staged": "7.3.0",
-    "prettier": "1.14.3",
     "react-test": "0.1.1",
     "react-test-context-provider": "2.2.0",
     "react-test-renderer": "16.9.0",
