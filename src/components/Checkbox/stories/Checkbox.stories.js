@@ -20,7 +20,6 @@
  */
 
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs/react';
 
@@ -36,31 +35,42 @@ const colorOptions = {
   secondary: 'secondary',
 };
 
-storiesOf('Checkbox|Checkbox', module)
-  .addParameters({ component: Checkbox })
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <Checkbox
-      checked
-      color={select('Colors', colorOptions, defaultColor)}
-      indeterminate={boolean('Indeterminate', defaultFalse)}
-      onClick={action('onClickButton')}
-      value={initialValue}
-    />
-  ))
-  .add('unchecked', () => (
-    <Checkbox
-      disableRipple={boolean('Disable Ripple', defaultFalse)}
-      indeterminate={boolean('Indeterminate', defaultFalse)}
-      onClick={action('onClickButton')}
-      value={initialValue}
-    />
-  ))
-  .add('disabled', () => (
-    <Checkbox
-      disabled
-      indeterminate={boolean('Indeterminate', defaultFalse)}
-      onClick={action('onClickButton')}
-      value={initialValue}
-    />
-  ));
+export default {
+  decorators: [withKnobs],
+  parameters: { component: Checkbox },
+  title: 'Checkbox|Checkbox',
+};
+
+export const defaultStory = () => (
+  <Checkbox
+    checked
+    color={select('Colors', colorOptions, defaultColor)}
+    indeterminate={boolean('Indeterminate', defaultFalse)}
+    onClick={action('onClickButton')}
+    value={initialValue}
+  />
+);
+
+defaultStory.story = { name: 'default' };
+
+export const unchecked = () => (
+  <Checkbox
+    disableRipple={boolean('Disable Ripple', defaultFalse)}
+    indeterminate={boolean('Indeterminate', defaultFalse)}
+    onClick={action('onClickButton')}
+    value={initialValue}
+  />
+);
+
+unchecked.story = { name: 'unchecked' };
+
+export const disabledStory = () => (
+  <Checkbox
+    disabled
+    indeterminate={boolean('Indeterminate', defaultFalse)}
+    onClick={action('onClickButton')}
+    value={initialValue}
+  />
+);
+
+disabledStory.story = { name: 'disabled' };

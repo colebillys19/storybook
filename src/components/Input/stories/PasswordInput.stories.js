@@ -1,10 +1,9 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import {
-  withKnobs,
-  text,
-  select,
   boolean,
+  select,
+  text,
+  withKnobs,
 } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 
@@ -20,38 +19,49 @@ const placeholder = 'placeholder';
 const helperText = 'helper text';
 const labelText = 'label text';
 
-storiesOf('Inputs|PasswordInput', module)
-  .addParameters({ component: PasswordInput })
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <PasswordInput
-      disabled={boolean('Disabled', false)}
-      error={boolean('Error', false)}
-      onBlur={action('onBlur')}
-      onChange={action('onChange')}
-      placeholder={text('Placeholder', placeholder)}
-      variant={select('Variant', variantOptions, variantDefault)}
-    />
-  ))
-  .add('helper text', () => (
-    <PasswordInput
-      disabled={boolean('Disabled', false)}
-      error={boolean('Error', false)}
-      helperText={text('Helper Text', helperText)}
-      onBlur={action('onBlur')}
-      onChange={action('onChange')}
-      placeholder={text('Placeholder', placeholder)}
-      variant={select('Variant', variantOptions, variantDefault)}
-    />
-  ))
-  .add('label', () => (
-    <PasswordInput
-      disabled={boolean('Disabled', false)}
-      error={boolean('Error', false)}
-      label={text('Label Text', labelText)}
-      onBlur={action('onBlur')}
-      onChange={action('onChange')}
-      placeholder={text('Placeholder', placeholder)}
-      variant={select('Variant', variantOptions, variantDefault)}
-    />
-  ));
+export default {
+  decorators: [withKnobs],
+  parameters: { component: PasswordInput },
+  title: 'Inputs|PasswordInput',
+};
+
+export const defaultStory = () => (
+  <PasswordInput
+    disabled={boolean('Disabled', false)}
+    error={boolean('Error', false)}
+    onBlur={action('onBlur')}
+    onChange={action('onChange')}
+    placeholder={text('Placeholder', placeholder)}
+    variant={select('Variant', variantOptions, variantDefault)}
+  />
+);
+
+defaultStory.story = { name: 'default' };
+
+export const helperTextStory = () => (
+  <PasswordInput
+    disabled={boolean('Disabled', false)}
+    error={boolean('Error', false)}
+    helperText={text('Helper Text', helperText)}
+    onBlur={action('onBlur')}
+    onChange={action('onChange')}
+    placeholder={text('Placeholder', placeholder)}
+    variant={select('Variant', variantOptions, variantDefault)}
+  />
+);
+
+helperTextStory.story = { name: 'helper text' };
+
+export const labelStory = () => (
+  <PasswordInput
+    disabled={boolean('Disabled', false)}
+    error={boolean('Error', false)}
+    label={text('Label Text', labelText)}
+    onBlur={action('onBlur')}
+    onChange={action('onChange')}
+    placeholder={text('Placeholder', placeholder)}
+    variant={select('Variant', variantOptions, variantDefault)}
+  />
+);
+
+labelStory.story = { name: 'label' };

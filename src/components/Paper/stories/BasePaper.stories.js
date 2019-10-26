@@ -1,6 +1,9 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import {
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs/react';
 
 import iconDictionary from 'utils/iconDictionary';
 
@@ -15,22 +18,28 @@ const paddingDefault = '2rem';
 
 const paperText = 'paper text';
 
-const imagePlaceholder = iconDictionary('imagePlaceholder', 'large');
+export default {
+  decorators: [withKnobs],
+  parameters: { component: BasePaper },
+  title: 'Paper|BasePaper',
+};
 
-storiesOf('Paper|BasePaper', module)
-  .addParameters({ component: BasePaper })
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <BasePaper>
-      <div style={{ padding: select('Paper Content Padding', paddingOptions, paddingDefault) }}>
-        {text('Paper Text', paperText)}
-      </div>
-    </BasePaper>
-  ))
-  .add('image', () => (
-    <BasePaper>
-      <div style={{ padding: select('Paper Content Padding', paddingOptions, paddingDefault) }}>
-        {imagePlaceholder}
-      </div>
-    </BasePaper>
-  ));
+export const defaultStory = () => (
+  <BasePaper>
+    <div style={{ padding: select('Paper Content Padding', paddingOptions, paddingDefault) }}>
+      {text('Paper Text', paperText)}
+    </div>
+  </BasePaper>
+);
+
+defaultStory.story = { name: 'default' };
+
+export const image = () => (
+  <BasePaper>
+    <div style={{ padding: select('Paper Content Padding', paddingOptions, paddingDefault) }}>
+      <img alt="placeholder" src={imgPlaceholder} style={{ width: '10rem' }} />
+    </div>
+  </BasePaper>
+);
+
+image.story = { name: 'image' };

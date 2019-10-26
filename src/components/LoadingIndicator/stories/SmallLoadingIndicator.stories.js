@@ -4,10 +4,14 @@
  */
 
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import SmallLoadingIndicator from '../SmallLoadingIndicator';
 
-storiesOf('Loading Indicators|SmallLoadingIndicator', module)
-  .addParameters({ component: SmallLoadingIndicator })
-  .add('default', () => <SmallLoadingIndicator />);
+export default {
+  parameters: { component: SmallLoadingIndicator },
+  title: 'Loading Indicators|SmallLoadingIndicator',
+};
+
+export const defaultStory = () => <SmallLoadingIndicator />;
+
+defaultStory.story = { name: 'default' };

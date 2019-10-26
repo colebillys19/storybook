@@ -2,13 +2,8 @@
  * @description Wraps text to create an <h2> header
  */
 
-
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import {
-  withKnobs,
-  select,
-} from '@storybook/addon-knobs/react';
+import { withKnobs, select } from '@storybook/addon-knobs/react';
 import { text } from '@storybook/addon-knobs';
 
 import {
@@ -30,13 +25,16 @@ const dmiColorOptions = {
 
 const defaultH2Text = 'H2 HEADER TEXT';
 
-storiesOf('Headings|H2', module)
-  .addParameters({ component: H2 })
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <H2
-      style={{ color: select('Color', dmiColorOptions, ssDarkGrey) }}
-    >
-      {text('Text', defaultH2Text)}
-    </H2>
-  ));
+export default {
+  decorators: [withKnobs],
+  parameters: { component: H2 },
+  title: 'Headings|H2',
+};
+
+export const defaultStory = () => (
+  <H2 style={{ color: select('Color', dmiColorOptions, ssDarkGrey) }}>
+    {text('Text', defaultH2Text)}
+  </H2>
+);
+
+defaultStory.story = { name: 'default' };

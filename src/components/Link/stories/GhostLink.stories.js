@@ -12,11 +12,10 @@
 
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { storiesOf } from '@storybook/react';
 import {
-  withKnobs,
-  text,
   select,
+  text,
+  withKnobs,
 } from '@storybook/addon-knobs/react';
 
 import iconDictionary from 'utils/iconDictionary';
@@ -47,26 +46,26 @@ const labelText = 'LABEL TEXT';
 
 const path = 'path';
 
-storiesOf('Links|GhostButtonLink', module)
-  .addParameters({ component: GhostButtonLink })
-  .addDecorator(withKnobs)
-  .addDecorator((story) => (
-    <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
-  ))
-  .add('default', () => (
-    <GhostButtonLink
-      label={text('Label', labelText)}
-      path={path}
-    />
-  ))
-  .add('icon', () => (
-    <GhostButtonLink
-      Icon={iconDictionary(
-        select('Icon', iconOptions, iconDefault),
-        select('Icon Size', sizeOptions, sizeDefault),
-        'button',
-      )}
-      label={text('Label', labelText)}
-      path={path}
-    />
-  ));
+export default {
+  decorators: [withKnobs, (story) => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>],
+  parameters: { component: GhostButtonLink },
+  title: 'Links|GhostButtonLink',
+};
+
+export const defaultStory = () => <GhostButtonLink label={text('Label', labelText)} path={path} />;
+
+defaultStory.story = { name: 'default' };
+
+export const icon = () => (
+  <GhostButtonLink
+    Icon={iconDictionary(
+      select('Icon', iconOptions, iconDefault),
+      select('Icon Size', sizeOptions, sizeDefault),
+      'button'
+    )}
+    label={text('Label', labelText)}
+    path={path}
+  />
+);
+
+icon.story = { name: 'icon' };
