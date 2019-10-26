@@ -17,7 +17,7 @@ import {
 import { action } from '@storybook/addon-actions';
 
 import ListItem from '../ListItem';
-import iconDictionary from 'utils/iconDictionary';
+import iconDictionary from '../../../utils/iconDictionary';
 
 const listItemText = 'List Item Text';
 

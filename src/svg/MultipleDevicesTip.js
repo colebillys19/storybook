@@ -1,6 +1,6 @@
 import React from 'react';
 import SvgIcon from '@material-ui/core/SvgIcon';
-import { ssLightGrey } from 'utils/defaultStyleHelper';
+import { ssLightGrey } from '../utils/defaultStyleHelper';
 
 function MultipleDevicesTip(props) {
   return (

@@ -12,18 +12,10 @@ import T from 'prop-types';
 
 import { StyledCard } from './styles/BaseCard.styles';
 
-/**
- * component description
- */
 const Card = (restProps) => (
   <StyledCard classes={{ root: 'card' }} {...restProps} />
 );
 
-Card.propTypes = {
-  /**
-   * prop description
-   */
-  children: T.node
-};
+Card.propTypes = { children: T.node };
 
 export default Card;

@@ -5,7 +5,7 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs/react';
 
-import iconDictionary from 'utils/iconDictionary';
+import iconDictionary from '../../../utils/iconDictionary';
 
 import InsetPaper from '../InsetPaper';
 
@@ -37,7 +37,7 @@ defaultStory.story = { name: 'default' };
 export const image = () => (
   <InsetPaper>
     <div style={{ padding: select('Paper Content Padding', paddingOptions, paddingDefault) }}>
-      <img alt="placeholder" src={imgPlaceholder} style={{ width: '10rem' }} />
+      {iconDictionary('imagePlaceholder', 'large')}
     </div>
   </InsetPaper>
 );

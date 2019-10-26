@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
-import { msBrightPurple } from 'utils/defaultStyleHelper';
+import { msBrightPurple } from '../../../utils/defaultStyleHelper';
 
 export const StyledFormControlLabel = styled(FormControlLabel)`
   span {

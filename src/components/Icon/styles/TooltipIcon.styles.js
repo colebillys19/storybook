@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Tooltip from '@material-ui/core/Tooltip';
-import { greyBorder, muiBoxShadow } from 'utils/defaultStyleHelper';
+import { greyBorder, muiBoxShadow } from '../../../utils/defaultStyleHelper';
 
 export const StyledTooltip = styled((props) => (
   <Tooltip

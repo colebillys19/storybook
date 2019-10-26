@@ -1,9 +1,5 @@
-import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { cleanup, fireEvent, renderIntoDocument } from '@testing-library/react';
-import getElementWithContext from 'react-test-context-provider';
-import { muiTheme } from '../../.storybook/ThemeProvider';
 
 configure({ adapter: new Adapter() });
 
@@ -163,134 +159,136 @@ export const checkEventHandler = (
   }
 };
 
-/**
- * @description: a helper function to do the context and props decorating,
- * then rendering of components
- *
- * @used for: testing helpers that actually want to render the component
- * into the document (rather than just shallow rendering from Enzyme)
- * @param Component {React component class}: the component that
- * you want to render
- * @param fn {Function}: the mocked out function that you're testing
- * @param options {object}: destructures into functionName, propsToPassDown,
- * & addContext: @sub-param functionName {string}: the prop name of the
- * mocked handler function we're checking (default of 'onClick')
- * @sub-param propsToPassDown {object}: all props that are required
- * for the component to render
- * @sub-param addContext {object}: any additional context
- * that's required for the component to render
- * @return {object}: React element in utility wrapper that allows
- * all the 'react-testing-library' utility functions
- */
-export const renderingHelper = (
-  Component,
-  fn,
-  { addContext, functionName = 'onClick', propsToPassDown }
-) => {
-  const propsToAdd = Object.assign({}, propsToPassDown);
-  propsToAdd[functionName] = fn;
+/** ******************************************************************************** */
 
-  // add Mui Theme info (required to render Mui components)
-  const context = Object.assign({ muiTheme }, addContext);
+// /**
+//  * @description: a helper function to do the context and props decorating,
+//  * then rendering of components
+//  *
+//  * @used for: testing helpers that actually want to render the component
+//  * into the document (rather than just shallow rendering from Enzyme)
+//  * @param Component {React component class}: the component that
+//  * you want to render
+//  * @param fn {Function}: the mocked out function that you're testing
+//  * @param options {object}: destructures into functionName, propsToPassDown,
+//  * & addContext: @sub-param functionName {string}: the prop name of the
+//  * mocked handler function we're checking (default of 'onClick')
+//  * @sub-param propsToPassDown {object}: all props that are required
+//  * for the component to render
+//  * @sub-param addContext {object}: any additional context
+//  * that's required for the component to render
+//  * @return {object}: React element in utility wrapper that allows
+//  * all the 'react-testing-library' utility functions
+//  */
+// export const renderingHelper = (
+//   Component,
+//   fn,
+//   { addContext, functionName = 'onClick', propsToPassDown }
+// ) => {
+//   const propsToAdd = Object.assign({}, propsToPassDown);
+//   propsToAdd[functionName] = fn;
 
-  // create & render component with all necessary context
-  const component = getElementWithContext(
-    context,
-    <Component {...propsToAdd} />
-  );
-  return renderIntoDocument(component);
-};
+//   // add Mui Theme info (required to render Mui components)
+//   const context = Object.assign({ muiTheme }, addContext);
 
-/**
- * @description: Checks that when a specific child of a component is clicked
- * that the click handler registers the correct number of clicks
- *
- * @used for: components with children that can be clicked
- * @param Component {React component class}: the component whose onClick
- * handler you want to trigger/check on a child
- * @param buttonName {string}: the text identifying what should be clicked
- * @param options {object}: object with handlerName {string} (the prop name of
- * the mocked handler function we're checking, not required because defaults
- * to 'onClick'), propsToPassDown {object} (all props that are required for
- * the component to render), expectedInput {any} (what we expect the onClick
- * handler to be called with, if anything), & addContext {object} (any
- * additional context that's required for the component to render)
- * @return {void}
- */
-export const checkChildClickHandler = (Component, buttonName, options = {}) => {
-  const { expectedInput } = options;
+//   // create & render component with all necessary context
+//   const component = getElementWithContext(
+//     context,
+//     <Component {...propsToAdd} />
+//   );
+//   return renderIntoDocument(component);
+// };
 
-  // mock out the function we're testing
-  const handler = jest.fn();
+// /**
+//  * @description: Checks that when a specific child of a component is clicked
+//  * that the click handler registers the correct number of clicks
+//  *
+//  * @used for: components with children that can be clicked
+//  * @param Component {React component class}: the component whose onClick
+//  * handler you want to trigger/check on a child
+//  * @param buttonName {string}: the text identifying what should be clicked
+//  * @param options {object}: object with handlerName {string} (the prop name of
+//  * the mocked handler function we're checking, not required because defaults
+//  * to 'onClick'), propsToPassDown {object} (all props that are required for
+//  * the component to render), expectedInput {any} (what we expect the onClick
+//  * handler to be called with, if anything), & addContext {object} (any
+//  * additional context that's required for the component to render)
+//  * @return {void}
+//  */
+// export const checkChildClickHandler = (Component, buttonName, options = {}) => {
+//   const { expectedInput } = options;
 
-  // create component & render
-  const { getByText } = renderingHelper(Component, handler, options);
+//   // mock out the function we're testing
+//   const handler = jest.fn();
 
-  afterAll(cleanup);
-  /* eslint-disable-next-line max-len */
-  it(`Should not register a click event if the child with ${buttonName} text is not clicked`,
-    () => {
-      expect(handler).not.toHaveBeenCalled();
-    });
-  /* eslint-disable-next-line max-len */
-  it(`Should register a click event when the child with ${buttonName} text is clicked`,
-    () => {
-      fireEvent.click(getByText(buttonName));
-      expect(handler).toHaveBeenCalledTimes(1);
-    });
+//   // create component & render
+//   const { getByText } = renderingHelper(Component, handler, options);
 
-  if (expectedInput) {
-    it(`Event handler should have been called with ${expectedInput} input`,
-      () => {
-        expect(handler).toHaveBeenCalledWith(expectedInput);
-      });
-  }
-  /* eslint-disable-next-line max-len */
-  it(`Should register a second click event when the child with ${buttonName} text is clicked again`,
-    () => {
-      fireEvent.click(getByText(buttonName));
-      expect(handler).toHaveBeenCalledTimes(2);
-    });
-};
+//   afterAll(cleanup);
+//   /* eslint-disable-next-line max-len */
+//   it(`Should not register a click event if the child with ${buttonName} text is not clicked`,
+//     () => {
+//       expect(handler).not.toHaveBeenCalled();
+//     });
+//   /* eslint-disable-next-line max-len */
+//   it(`Should register a click event when the child with ${buttonName} text is clicked`,
+//     () => {
+//       fireEvent.click(getByText(buttonName));
+//       expect(handler).toHaveBeenCalledTimes(1);
+//     });
 
-/**
- * @description: checks to make sure that a component correctly mounts by
- * checking whether any function calls within mounting lifecycle methods occur
- * (componentDidMount, componentWillMount, etc.)
- *
- * @used for: components with lifecycle methods that call a function
- * that's been passed in as a prop inside
- * @param Component {React component class}: the component whose
- * mounting lifecycle you want to check
- * @param functionName {string}: the prop name of the function we're checking
- * @param options {object}: object with handlerName {string} (the prop nameof
- * the mocked handler function we're checking, defaults to 'onClick' & required
- * if testing expectedInput), propsToPassDown {object} (all props that are
- * required for the component to render), expectedInput {any} (what we expect
- * the onClick handler to be called with, if anything), & addContext {object}
- * (any additional context that's required for the component to render)
- * @return {void}
- */
-export const checkComponentMounting = (Component, options) => {
-  const { expectedInput, functionName } = options;
+//   if (expectedInput) {
+//     it(`Event handler should have been called with ${expectedInput} input`,
+//       () => {
+//         expect(handler).toHaveBeenCalledWith(expectedInput);
+//       });
+//   }
+//   /* eslint-disable-next-line max-len */
+//   it(`Should register a second click event when the child with ${buttonName} text is clicked again`,
+//     () => {
+//       fireEvent.click(getByText(buttonName));
+//       expect(handler).toHaveBeenCalledTimes(2);
+//     });
+// };
 
-  // mock out the function we're checking
-  const fn = jest.fn();
+// /**
+//  * @description: checks to make sure that a component correctly mounts by
+//  * checking whether any function calls within mounting lifecycle methods occur
+//  * (componentDidMount, componentWillMount, etc.)
+//  *
+//  * @used for: components with lifecycle methods that call a function
+//  * that's been passed in as a prop inside
+//  * @param Component {React component class}: the component whose
+//  * mounting lifecycle you want to check
+//  * @param functionName {string}: the prop name of the function we're checking
+//  * @param options {object}: object with handlerName {string} (the prop nameof
+//  * the mocked handler function we're checking, defaults to 'onClick' & required
+//  * if testing expectedInput), propsToPassDown {object} (all props that are
+//  * required for the component to render), expectedInput {any} (what we expect
+//  * the onClick handler to be called with, if anything), & addContext {object}
+//  * (any additional context that's required for the component to render)
+//  * @return {void}
+//  */
+// export const checkComponentMounting = (Component, options) => {
+//   const { expectedInput, functionName } = options;
 
-  // create component & render
-  renderingHelper(Component, fn, options);
+//   // mock out the function we're checking
+//   const fn = jest.fn();
 
-  afterAll(cleanup);
+//   // create component & render
+//   renderingHelper(Component, fn, options);
 
-  it('Should trigger the mounting lifecycle events exactly once', () => {
-    expect(fn).toHaveBeenCalledTimes(1);
-  });
+//   afterAll(cleanup);
 
-  if (expectedInput) {
-  /* eslint-disable-next-line max-len */
-    it(`Prop ${functionName} should have been called with ${expectedInput} input`,
-      () => {
-        expect(fn).toHaveBeenCalledWith(expectedInput);
-      });
-  }
-};
+//   it('Should trigger the mounting lifecycle events exactly once', () => {
+//     expect(fn).toHaveBeenCalledTimes(1);
+//   });
+
+//   if (expectedInput) {
+//   /* eslint-disable-next-line max-len */
+//     it(`Prop ${functionName} should have been called with ${expectedInput} input`,
+//       () => {
+//         expect(fn).toHaveBeenCalledWith(expectedInput);
+//       });
+//   }
+// };

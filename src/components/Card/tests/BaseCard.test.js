@@ -5,7 +5,7 @@ import {
   checkBasicRendering,
   checkRequiredProps,
   checkSimpleChild,
-} from 'utils/testingHelpers';
+} from '../../../utils/testingHelpers';
 
 describe('<BaseCard />', () => {
   const cardContent = <div>card content</div>;

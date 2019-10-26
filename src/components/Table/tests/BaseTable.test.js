@@ -6,7 +6,7 @@ import {
   checkBasicRendering,
   checkChildren,
   checkRequiredProps,
-} from 'utils/testingHelpers';
+} from '../../../utils/testingHelpers';
 
 import { HEADERS_TEST, ROWDATA_TEST } from '../constants';
 

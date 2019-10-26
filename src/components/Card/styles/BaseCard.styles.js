@@ -5,7 +5,7 @@ import {
   borderStyle,
   borderWidth,
   msBrightPurple,
-} from 'utils/defaultStyleHelper';
+} from '../../../utils/defaultStyleHelper';
 
 export const StyledCard = styled(Card)`
   border-radius: 0;

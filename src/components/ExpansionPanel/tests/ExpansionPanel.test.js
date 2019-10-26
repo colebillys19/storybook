@@ -1,11 +1,10 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 
 import {
   checkBasicRendering,
   // checkChildren,
   checkRequiredProps,
-} from 'utils/testingHelpers';
+} from '../../../utils/testingHelpers';
 
 import {
   ExpansionPanel,

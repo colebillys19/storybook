@@ -4,7 +4,7 @@ import { render, fireEvent } from '@testing-library/react';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from 'utils/testingHelpers';
+} from '../../../utils/testingHelpers';
 import RadioButtonGroup from '../RadioButtonGroup';
 
 describe('<RadioButtonGroup />', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
-import iconDictionary from 'utils/iconDictionary';
+import iconDictionary from '../../../utils/iconDictionary';
 
 import BaseCard from '../BaseCard';
 import { StyledH1 } from '../styles/BaseCard.styles';
@@ -13,7 +13,7 @@ import {
   ssLightBlue,
   ssMainBlue,
   ssYellow,
-} from 'utils/defaultStyleHelper';
+} from '../../../utils/defaultStyleHelper';
 
 const colorOptions = {
   msBrightPurple,
@@ -72,7 +72,7 @@ title.story = {
 export const image = () => (
   <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
     <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
-      <img alt="placeholder" src={imgPlaceholder} style={{ width: '10rem' }} />
+      {iconDictionary('imagePlaceholder', 'large')}
     </div>
   </BaseCard>
 );

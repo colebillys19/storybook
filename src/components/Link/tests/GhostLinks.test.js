@@ -3,7 +3,7 @@ import React from 'react';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from 'utils/testingHelpers';
+} from '../../../utils/testingHelpers';
 import GhostButtonLink from '../GhostButtonLink';
 
 describe('<GhostButtonLink />', () => {

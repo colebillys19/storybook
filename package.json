@@ -4,15 +4,15 @@
   "private": true,
   "dependencies": {
     "@babel/cli": "7.6.4",
-    "@material-ui/core": "3.9.3",
-    "@material-ui/icons": "3.0.2",
+    "@material-ui/core": "4.5.1",
+    "@material-ui/icons": "4.5.1",
+    "@material-ui/styles": "4.5.0",
     "@storybook/cli": "5.2.5",
     "lodash": "4.17.11",
     "polished": "3.4.1",
     "prop-types": "15.7.2",
     "react": "16.9.0",
     "react-dom": "16.9.0",
-    "react-jss": "8.6.1",
     "react-router-dom": "5.1.2",
     "react-scripts": "3.1.1",
     "styled-components": "4.0.2",
@@ -29,8 +29,7 @@
     "prepare": "npm run build",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
-    "release": "auto shipit"
+    "build-storybook": "build-storybook -s public"
   },
   "lint-staged": {
     "*.js": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts"
@@ -180,13 +179,13 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
+    "@babel/core": "7.6.4",
     "@storybook/addon-a11y": "5.2.5",
     "@storybook/addon-actions": "5.2.5",
     "@storybook/addon-backgrounds": "5.2.5",
     "@storybook/addon-docs": "5.2.5",
     "@storybook/addon-knobs": "5.2.5",
-    "@storybook/addon-links": "^5.2.5",
+    "@storybook/addon-links": "5.2.5",
     "@storybook/addon-storyshots": "5.2.5",
     "@storybook/addon-storysource": "5.2.5",
     "@storybook/addons": "5.2.5",
@@ -194,7 +193,6 @@
     "@storybook/source-loader": "5.2.5",
     "@testing-library/jest-dom": "4.1.2",
     "@testing-library/react": "9.3.0",
-    "auto": "7.12.0",
     "babel-eslint": "10.0.2",
     "babel-loader": "8.0.6",
     "babel-plugin-macros": "2.6.1",

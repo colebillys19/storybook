@@ -19,7 +19,7 @@ import { select, text, withKnobs } from '@storybook/addon-knobs';
 
 import TooltipIcon from '../TooltipIcon';
 
-import iconDictionary from 'utils/iconDictionary';
+import iconDictionary from '../../../utils/iconDictionary';
 
 const iconOptions = {
   cancel: 'cancel',
