@@ -48,8 +48,8 @@ BaseButton.defaultProps = {
   disableRipple: true,
   label: '',
 };
-/* eslint-enable react/default-props-match-prop-types */
 
+/* eslint-enable react/default-props-match-prop-types */
 BaseButton.propTypes = {
   component: T.func,
   disableFocusRipple: T.bool,

@@ -10,6 +10,8 @@
 *   styling: Styling object to override default styles.
 * }
 */
+import React from 'react';
+import T from 'prop-types';
 import styled from 'styled-components';
 import { msBrightPurple, msHoverPurple } from 'utils/defaultStyleHelper';
 import BaseButton from './BaseButton';
@@ -21,5 +23,25 @@ const PrimaryButton = styled(BaseButton)`
   background-color: ${msBrightPurple};
   color: white;
 `;
+
+/* eslint-disable react/default-props-match-prop-types */
+PrimaryButton.defaultProps = {
+  disableFocusRipple: true,
+  disableRipple: true,
+  label: '',
+};
+
+/* eslint-enable react/default-props-match-prop-types */
+PrimaryButton.propTypes = {
+  component: T.func,
+  disableFocusRipple: T.bool,
+  disableRipple: T.bool,
+  href: T.string,
+  Icon: T.oneOfType([T.object, T.func]),
+  label: T.oneOfType([T.string, T.element]).isRequired,
+  onClick: T.func.isRequired,
+  target: T.string,
+  to: T.string,
+};
 
 export default PrimaryButton;

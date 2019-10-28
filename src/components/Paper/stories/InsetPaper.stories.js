@@ -5,7 +5,7 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs/react';
 
-import InsetPaper from 'components/Paper/InsetPaper';
+import { BasePaper, InsetPaper } from 'components/Paper';
 
 import imgPlaceholder from 'utils/imagePlaceholder.svg';
 
@@ -20,7 +20,7 @@ const paperText = 'paper text';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: InsetPaper },
+  parameters: { component: BasePaper },
   title: 'Paper|InsetPaper',
 };
 

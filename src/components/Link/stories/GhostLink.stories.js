@@ -20,7 +20,7 @@ import {
 
 import iconDictionary from 'utils/iconDictionary';
 
-import GhostButtonLink from 'components/Link/GhostButtonLink';
+import { BaseLink, GhostButtonLink } from 'components/Link';
 
 const iconOptions = {
   cancel: 'cancel',
@@ -48,7 +48,7 @@ const path = 'path';
 
 export default {
   decorators: [withKnobs, (story) => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>],
-  parameters: { component: GhostButtonLink },
+  parameters: { component: BaseLink },
   title: 'Links|GhostButtonLink',
 };
 

@@ -177,17 +177,24 @@ The id would be `paper-basepaper--default-story`
 
 ### Importing MDX into MDX
 
-<!--  --------------------- These are comments ---------------------------
-  to do: Importing MDX into existing mdx
-  @description MDX injection into existing MDX
-  parameters: { component: BaseCard, docs: { page: BaseCardMDX } },
--->
+Consider the following mdx file learnmdx.docs.mdx
+
+```
+This text is from a mdx doc imported as a component into another mdx doc.
+```
+
+anotherFile.doc.mdx
+
 ```js
 import MDXDoc from 'components/MDX/docs/learnmdx.docs.mdx';
-```
 
-```js
+Some markdown text
 <MDXDoc />
 ```
 
-<MDXDoc />
+The previous code produces:
+
+```
+Some markdown text
+This text is from a mdx doc imported as a component into another mdx doc.
+```
