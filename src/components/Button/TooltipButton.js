@@ -1,8 +1,9 @@
 import React from 'react';
 import T from 'prop-types';
-import Tooltip from '@material-ui/core/Tooltip';
 import BaseButton from './BaseButton';
 import ForwardRef from '../../utils/ForwardRef';
+
+import { StyledTooltip } from './styles/TooltipButton.styles';
 
 const TooltipButton = ({
   enterDelay,
@@ -10,14 +11,13 @@ const TooltipButton = ({
   tooltipText,
   ...restProps
 }) => (
-  <Tooltip
-    classes={{ tooltip: 'tooltip' }}
+  <StyledTooltip
     enterDelay={enterDelay}
     placement={placement}
     title={tooltipText}
   >
     <ForwardRef Component={BaseButton} {...restProps} />
-  </Tooltip>
+  </StyledTooltip>
 );
 
 TooltipButton.defaultProps = {
