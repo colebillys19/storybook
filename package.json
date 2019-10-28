@@ -1,7 +1,7 @@
 {
-  "name": "@dmi-applications/storybook",
+  "name": "dmi-storybook-test",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@babel/cli": "7.6.4",
     "@material-ui/core": "4.5.1",
