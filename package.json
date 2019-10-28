@@ -1,5 +1,5 @@
 {
-  "name": "dmi-storybook-v1",
+  "name": "@my-org/dmi-storybook-v1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -214,7 +214,10 @@
   },
   "description": "This application acts as a library of base components to be used from project to project.",
   "main": "dist/index.js",
-  "repository": "https://github.com/dmiapplications/storybook.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmiapplications/storybook.git"
+  },
   "author": "Billy Cole, Kwame Amosah",
   "license": "MIT",
   "bugs": {
