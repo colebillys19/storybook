@@ -17,8 +17,8 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs/react';
 
-import iconDictionary from 'utils/iconDictionary';
-import BaseLink from 'components/Link/BaseLink';
+import iconDictionary from '../../../utils/iconDictionary';
+import BaseLink from '../BaseLink';
 
 const iconOptions = {
   cancel: 'cancel',

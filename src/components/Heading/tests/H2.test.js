@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { H2 } from '../index';
+import H2 from '../H2';
 
 import {
   checkBasicRendering,
   checkRequiredProps,
   checkSimpleChild,
-} from 'utils/testingHelpers';
+} from '../../../utils/testingHelpers';
 
 describe('<H2 />', () => {
   const component = <H2>H2 Component</H2>;

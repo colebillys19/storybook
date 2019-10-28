@@ -4,8 +4,8 @@ import { render, fireEvent } from '@testing-library/react';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from 'utils/testingHelpers';
-import { ErrorSuccessBanner } from '../index';
+} from '../../../utils/testingHelpers';
+import ErrorSuccessBanner from '../ErrorSuccessBanner';
 
 describe('<ErrorSuccessBanner />', () => {
   const onClose = jest.fn();

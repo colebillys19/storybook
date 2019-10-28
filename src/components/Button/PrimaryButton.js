@@ -10,10 +10,9 @@
 *   styling: Styling object to override default styles.
 * }
 */
-import React from 'react';
 import T from 'prop-types';
 import styled from 'styled-components';
-import { msBrightPurple, msHoverPurple } from 'utils/defaultStyleHelper';
+import { msBrightPurple, msHoverPurple } from '../../utils/defaultStyleHelper';
 import BaseButton from './BaseButton';
 
 const PrimaryButton = styled(BaseButton)`

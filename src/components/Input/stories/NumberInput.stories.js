@@ -7,7 +7,7 @@ import {
 } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 
-import NumberInput from 'components/Input/NumberInput';
+import NumberInput from '../NumberInput';
 
 const variantOptions = {
   filled: 'filled',

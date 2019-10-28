@@ -2,9 +2,8 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
-import iconDictionary from 'utils/iconDictionary';
-
-import BaseButton from 'components/Button/BaseButton';
+import iconDictionary from '../../../utils/iconDictionary';
+import BaseButton from '../BaseButton';
 
 const label = 'LABEL TEXT';
 

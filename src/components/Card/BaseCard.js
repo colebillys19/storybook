@@ -10,7 +10,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import StyledCard from './styles/BaseCard.styles';
+import { StyledCard } from './styles/BaseCard.styles';
 
 const Card = (restProps) => (
   <StyledCard classes={{ root: 'card' }} {...restProps} />

@@ -1,5 +1,6 @@
 import { action } from '@storybook/addon-actions';
-import { PrimaryButton, TooltipButton } from 'components/Button';
+import PrimaryButton from '../../Button/PrimaryButton';
+import TooltipButton from '../../Button/TooltipButton';
 import {
   Meta,
   Preview,
@@ -18,9 +19,9 @@ import {
   PreviewProps,
   PropsProps,
   StoryProps,
-} from 'components/MDX';
+} from '../../MDX';
 
-import MDXDoc from 'components/MDX/docs/learnmdx.docs.mdx';
+import MDXDoc from '../docs/learnmdx.docs.mdx';
 
 # Stories with MDX
 
@@ -186,7 +187,7 @@ This text is from a mdx doc imported as a component into another mdx doc.
 anotherFile.doc.mdx
 
 ```js
-import MDXDoc from 'components/MDX/docs/learnmdx.docs.mdx';
+import MDXDoc from '../docs/learnmdx.docs.mdx';
 
 Some markdown text
 <MDXDoc />

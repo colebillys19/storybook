@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import { expansionPanelDividerStyle } from 'utils/defaultStyleHelper';
+import { expansionPanelDividerStyle } from '../../../utils/defaultStyleHelper';
 
 export const StyledExpansionPanel = styled(ExpansionPanel)`
   border-bottom: ${expansionPanelDividerStyle};

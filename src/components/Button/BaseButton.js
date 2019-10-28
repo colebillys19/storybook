@@ -17,19 +17,22 @@
 
 import React from 'react';
 import T from 'prop-types';
+
 import Cancel from '../../svg/Cancel';
-import ConditionalRender from 'utils/ConditionalRender';
+import ConditionalRender from '../../utils/ConditionalRender';
 import StyledBaseButton from './styles/BaseButton.styles';
 
 const BaseButton = ({
   disableFocusRipple,
   disableRipple,
+  forwardedRef,
   Icon,
   label,
   onClick,
   ...restProps
 }) => (
   <StyledBaseButton
+    ref={forwardedRef}
     classes={{ label: 'label' }}
     disableFocusRipple={disableFocusRipple}
     disableRipple={disableRipple}
@@ -54,6 +57,7 @@ BaseButton.propTypes = {
   component: T.func,
   disableFocusRipple: T.bool,
   disableRipple: T.bool,
+  forwardedRef: T.func,
   href: T.string,
   Icon: T.oneOfType([T.object, T.func]),
   label: T.oneOfType([T.string, T.element]).isRequired,

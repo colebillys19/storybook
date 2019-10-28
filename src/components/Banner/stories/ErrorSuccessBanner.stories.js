@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import ErrorSuccessBanner from 'components/Banner/ErrorSuccessBanner';
+import ErrorSuccessBanner from '../ErrorSuccessBanner';
 
 const bannerProps = { errorMessage: 'error', successMessage: 'success' };
 

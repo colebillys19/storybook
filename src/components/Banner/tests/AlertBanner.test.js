@@ -4,8 +4,8 @@ import { render, fireEvent } from '@testing-library/react';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from 'utils/testingHelpers';
-import { AlertBanner } from '../index';
+} from '../../../utils/testingHelpers';
+import AlertBanner from '../AlertBanner';
 
 describe('<AlertBanner />', () => {
   const onClick = jest.fn();

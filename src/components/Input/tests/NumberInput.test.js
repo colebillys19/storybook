@@ -4,7 +4,7 @@ import NumberInput from '../NumberInput';
 import {
   checkBasicRendering,
   checkRequiredProps,
-} from 'utils/testingHelpers';
+} from '../../../utils/testingHelpers';
 
 describe('<NumberInput />', () => {
   const onChange = jest.fn();

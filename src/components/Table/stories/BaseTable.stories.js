@@ -1,7 +1,7 @@
 import React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import BaseTable from 'components/Table/BaseTable';
+import BaseTable from '../BaseTable';
 
 const centeredColsA = [1, 2, 3, 4];
 const centeredColsB = [1, 2, 3];
@@ -28,6 +28,7 @@ defaultStory.story = { name: 'default' };
 export const offset = () => (
   <BaseTable
     centeredCols={text('Centered Columns', centeredColsB)}
+    firstColBold
     headers={headersB}
     hoverColor={text('Row Hover Color', hoverColor)}
     rowData={rowDataB}

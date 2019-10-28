@@ -5,9 +5,9 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs/react';
 
-import BasePaper from 'components/Paper/BasePaper';
+import iconDictionary from '../../../utils/iconDictionary';
 
-import imgPlaceholder from 'utils/imagePlaceholder.svg';
+import BasePaper from '../BasePaper';
 
 const paddingOptions = {
   '1rem': '1rem',
@@ -37,7 +37,7 @@ defaultStory.story = { name: 'default' };
 export const image = () => (
   <BasePaper>
     <div style={{ padding: select('Paper Content Padding', paddingOptions, paddingDefault) }}>
-      <img alt="placeholder" src={imgPlaceholder} style={{ width: '10rem' }} />
+      {iconDictionary('imagePlaceholder', 'large')}
     </div>
   </BasePaper>
 );

@@ -1,6 +1,8 @@
 import React from 'react';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
+import iconDictionary from '../../../utils/iconDictionary';
+
 import BaseCard from '../BaseCard';
 import { StyledH1 } from '../styles/BaseCard.styles';
 import {
@@ -11,8 +13,7 @@ import {
   ssLightBlue,
   ssMainBlue,
   ssYellow,
-} from 'utils/defaultStyleHelper';
-import imgPlaceholder from 'utils/imagePlaceholder.svg';
+} from '../../../utils/defaultStyleHelper';
 
 const colorOptions = {
   msBrightPurple,
@@ -42,16 +43,17 @@ export default {
 };
 
 export const defaultStory = () => (
-  <BaseCard id='base-card' color={select('Card Color', colorOptions, colorDefault)}>
+  <BaseCard
+    color={select('Card Color', colorOptions, colorDefault)}
+    id="base-card"
+  >
     <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
       {text('Card Text', cardText)}
     </div>
   </BaseCard>
 );
 
-defaultStory.story = {
-  name: 'default',
-};
+defaultStory.story = { name: 'default' };
 
 export const title = () => (
   <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
@@ -61,20 +63,14 @@ export const title = () => (
   </BaseCard>
 );
 
-title.story = {
-  name: 'title',
-};
+title.story = { name: 'title' };
 
 export const image = () => (
   <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
     <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
-      <img alt="placeholder" src={imgPlaceholder} style={{ width: '10rem' }} />
+      {iconDictionary('imagePlaceholder', 'large')}
     </div>
   </BaseCard>
 );
 
-
-image.story = {
-  name: 'image',
-};
-
+image.story = { name: 'image' };

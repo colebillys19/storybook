@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-import SmallLoadingIndicator from 'components/LoadingIndicator/SmallLoadingIndicator';
+import SmallLoadingIndicator from '../SmallLoadingIndicator';
 
 export default {
   parameters: { component: SmallLoadingIndicator },

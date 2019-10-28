@@ -18,7 +18,7 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs/react';
 
-import RadioButtonGroup from 'components/Radio/RadioButtonGroup';
+import RadioButtonGroup from '../RadioButtonGroup';
 
 const labelPlacementOptions = {
   bottom: 'bottom',

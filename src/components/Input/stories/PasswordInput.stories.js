@@ -7,7 +7,7 @@ import {
 } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 
-import PasswordInput from 'components/Input/PasswordInput';
+import PasswordInput from '../PasswordInput';
 
 const variantOptions = {
   filled: 'filled',

@@ -1,17 +1,16 @@
 {
-  "name": "storybook",
-  "version": "0.1.0",
-  "private": true,
+  "name": "dmi-storybook-test",
+  "version": "0.1.3",
   "dependencies": {
-    "@babel/cli": "7.6.4",
-    "@material-ui/core": "3.9.3",
-    "@material-ui/icons": "3.0.2",
+    "@material-ui/core": "4.5.1",
+    "@material-ui/icons": "4.5.1",
+    "@material-ui/styles": "4.5.0",
+    "@storybook/cli": "5.2.5",
     "lodash": "4.17.11",
     "polished": "3.4.1",
     "prop-types": "15.7.2",
     "react": "16.9.0",
     "react-dom": "16.9.0",
-    "react-jss": "8.6.1",
     "react-router-dom": "5.1.2",
     "react-scripts": "3.1.1",
     "styled-components": "4.0.2",
@@ -19,20 +18,10 @@
   },
   "scripts": {
     "build": "BABEL_ENV=production babel src -d dist",
-    "lint": "npm run lint:js",
-    "lint:css": "stylelint './app/**/*.js'",
-    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
-    "lint:eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts --fix",
-    "lint:js": "npm run lint:eslint -- . ",
-    "lint:staged": "lint-staged",
     "prepare": "npm run build",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
-    "release": "auto shipit"
-  },
-  "lint-staged": {
-    "*.js": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts"
+    "build-storybook": "build-storybook -s public"
   },
   "pre-commit": "lint:staged",
   "eslintConfig": {
@@ -80,11 +69,6 @@
       "import/no-unresolved": 2,
       "import/no-webpack-loader-syntax": 0,
       "import/prefer-default-export": 0,
-      "import/resolver": {
-        "webpack": {
-          "config": "webpack.config.js"
-        }
-      },
       "indent": [
         2,
         2,
@@ -165,10 +149,12 @@
   },
   "babel": {
     "plugins": [
+      "babel-plugin-styled-components",
       "macros"
     ],
     "presets": [
-      "react-app"
+      "@babel/preset-env",
+      "@babel/preset-react"
     ]
   },
   "browserslist": {
@@ -184,12 +170,16 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "7.6.4",
+    "@babel/core": "7.6.4",
+    "@babel/preset-env": "7.6.3",
+    "@babel/preset-react": "7.6.3",
     "@storybook/addon-a11y": "5.2.5",
     "@storybook/addon-actions": "5.2.5",
     "@storybook/addon-backgrounds": "5.2.5",
     "@storybook/addon-docs": "5.2.5",
     "@storybook/addon-knobs": "5.2.5",
-    "@storybook/addon-links": "^5.2.5",
+    "@storybook/addon-links": "5.2.5",
     "@storybook/addon-storyshots": "5.2.5",
     "@storybook/addon-storysource": "5.2.5",
     "@storybook/addons": "5.2.5",
@@ -197,25 +187,21 @@
     "@storybook/source-loader": "5.2.5",
     "@testing-library/jest-dom": "4.1.2",
     "@testing-library/react": "9.3.0",
-    "auto": "7.4.3",
     "babel-eslint": "10.0.2",
     "babel-loader": "8.0.6",
     "babel-plugin-macros": "2.6.1",
+    "babel-plugin-styled-components": "1.10.6",
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.6.0",
-    "enzyme-to-json": "3.3.4",
     "eslint": "6.1.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-config-prettier": "3.1.0",
-    "eslint-import-resolver-webpack": "0.11.1",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-react-hooks": "1.6.0",
     "eslint-plugin-sort-destructure-keys": "1.2.0",
-    "lint-staged": "7.3.0",
-    "prettier": "1.14.3",
     "react-test": "0.1.1",
     "react-test-context-provider": "2.2.0",
     "react-test-renderer": "16.9.0",
@@ -228,7 +214,10 @@
   },
   "description": "This application acts as a library of base components to be used from project to project.",
   "main": "dist/index.js",
-  "repository": "https://github.com/dmiapplications/storybook.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmiapplications/storybook.git"
+  },
   "author": "Billy Cole, Kwame Amosah",
   "license": "MIT",
   "bugs": {

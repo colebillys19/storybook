@@ -12,8 +12,8 @@ import {
   ssDarkGrey,
   ssMainBlue,
   ssPurple,
-} from 'utils/defaultStyleHelper';
-import H2 from 'components/Heading/H2';
+} from '../../../utils/defaultStyleHelper';
+import H2 from '../H2';
 
 const dmiColorOptions = {
   dmiMainGreen,

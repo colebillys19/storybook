@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import { Checkbox } from '../index';
+import Checkbox from '../Checkbox';
 import {
   checkBasicRendering,
   checkEventHandler,
   checkRequiredProps,
-} from 'utils/testingHelpers';
+} from '../../../utils/testingHelpers';
 
 
 describe('<Checkbox />', () => {
