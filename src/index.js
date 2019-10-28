@@ -1,6 +1,12 @@
-import * as storybookStyles from './utils/defaultStyleHelper';
+import globalStyles from '../.storybook/globalStyle';
+import * as defaultStyles from './utils/defaultStyleHelper';
+import * as testingHelpers from './utils/testingHelpers';
 
-export { storybookStyles };
+export {
+  defaultStyles,
+  globalStyles,
+  testingHelpers,
+};
 
 export * from './components/Banner';
 export * from './components/Button';
