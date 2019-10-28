@@ -6,8 +6,6 @@ import { withA11y } from '@storybook/addon-a11y';
 
 import GlobalStyle from './globalStyle';
 
-import { msLightGrey, ssLightGrey } from '../src/utils/defaultStyleHelper';
-
 addDecorator(withA11y);
 
 addDecorator(story => (
@@ -19,8 +17,13 @@ addDecorator(story => (
 
 addParameters({
   backgrounds: [
-    { name: 'Main Site', value: msLightGrey, default: true },
-    { name: 'Silver Site', value: ssLightGrey, default: false },
+    { name: 'Gray 1', value: '#f0f0f0', default: true },
+    { name: 'Gray 2', value: '#f0f0f5', default: false },
+    { name: 'Gray 3', value: '#f0f0fa', default: false },
+    { name: 'Gray 4', value: '#f0f0ff', default: false },
+    { name: 'Black', value: '#000000', default: false },
+    { name: 'DMI Purple', value: '#310078', default: false },
+    { name: 'DMI Green', value: '#00db7d', default: false },
   ]
 });
 
