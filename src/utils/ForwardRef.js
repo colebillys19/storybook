@@ -1,7 +1,8 @@
 /**
 *
 * ForwardRef
-* @description ...
+* @description helper used to wrap function components in React's forwardRef method
+*              to be used when implementing material UI tooltips
 *
 */
 
