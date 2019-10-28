@@ -14,8 +14,8 @@ import ConditionalRender from '../../../utils/ConditionalRender';
 
 import { StyledPasswordIcon } from './ShowPasswordIcon.styles';
 
-const Visibility = iconDictionary('visibility', 'mediumSmall', 'passwordIcon');
-const VisibilityOff = iconDictionary('visibilityOff', 'mediumSmall', 'passwordIcon');
+const Visibility = iconDictionary('visibility', 'mediumSmall');
+const VisibilityOff = iconDictionary('visibilityOff', 'mediumSmall');
 
 const ShowPasswordIcon = ({ handleClick, showPassword }) => (
   <InputAdornment position="end">
