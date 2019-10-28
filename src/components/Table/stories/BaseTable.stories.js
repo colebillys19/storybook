@@ -28,6 +28,7 @@ defaultStory.story = { name: 'default' };
 export const offset = () => (
   <BaseTable
     centeredCols={text('Centered Columns', centeredColsB)}
+    firstColBold
     headers={headersB}
     hoverColor={text('Row Hover Color', hoverColor)}
     rowData={rowDataB}

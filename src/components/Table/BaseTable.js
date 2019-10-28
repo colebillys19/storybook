@@ -1,3 +1,15 @@
+/**
+ * @description ...
+ * @props
+ *   centeredCols (array) columns whose content should be centered
+ *   firstColBold (boolean) determines whether or not first column is bold
+ *   headers (array) strings representing table headers
+ *   hoverColor (string) background color on row hover
+ *   rowData (array) array of of objects containing:
+ *     - cells (array) array of strings that will populate cells
+ *     - id (string) unique id
+ */
+
 import React from 'react';
 import T from 'prop-types';
 
@@ -10,6 +22,7 @@ import BaseTableRow from './sub-components/BaseTableRow';
 
 export default function BaseTable({
   centeredCols,
+  firstColBold,
   headers,
   hoverColor,
   rowData,
@@ -28,12 +41,17 @@ export default function BaseTable({
       key={id}
       centeredCols={centeredCols}
       data={cells}
+      firstColBold={firstColBold}
     />
   ));
   return (
     <StyledTable>
       <StyledTableHead>
-        <BaseTableRow centeredCols={centeredCols} data={headers} />
+        <BaseTableRow
+          centeredCols={centeredCols}
+          data={headers}
+          firstColBold={firstColBold}
+        />
       </StyledTableHead>
       <StyledTableBody hovercolor={hoverColor}>
         {rows}
@@ -44,6 +62,7 @@ export default function BaseTable({
 
 BaseTable.propTypes = {
   centeredCols: T.arrayOf(T.number),
+  firstColBold: T.bool,
   headers: T.arrayOf(T.string),
   hoverColor: T.string,
   rowData: T.arrayOf(T.shape({

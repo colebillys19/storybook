@@ -4,6 +4,7 @@ import TableRow from '@material-ui/core/TableRow';
 
 export const StyledTableCell = styled(TableCell)`
   font-size: 1.2rem;
+  font-weight: ${({ isBold }) => isBold ? 'bold' : 'normal'};
   margin: 0;
   padding: 0.8rem;
   text-align: ${({ iscentered }) => iscentered ? 'center' : 'left'};
