@@ -249,7 +249,7 @@ exports[`Storyshots Buttons|FlatIconButton Default Story 1`] = `
 
 exports[`Storyshots Buttons|GhostButton Default Story 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-contained sc-cSHVUG gtGXPu sc-bdVaJa eKQRDg"
+  className="MuiButtonBase-root MuiButton-root MuiButton-contained sc-cSHVUG kavTbh sc-bdVaJa eKQRDg"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -1338,7 +1338,7 @@ exports[`Storyshots Icons|TooltipIcon Content 1`] = `
 <svg
   aria-describedby={null}
   aria-hidden="true"
-  className="MuiSvgIcon-root root sc-ckVGcZ jyyGS styled-icon sc-hqyNC hjRIiO"
+  className="MuiSvgIcon-root root sc-ckVGcZ kKJERm styled-icon sc-hqyNC hjRIiO"
   focusable="false"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -1360,7 +1360,7 @@ exports[`Storyshots Icons|TooltipIcon Default Story 1`] = `
 <svg
   aria-describedby={null}
   aria-hidden="true"
-  className="MuiSvgIcon-root root sc-ckVGcZ jyyGS styled-icon sc-kvZOFW jdTEdp"
+  className="MuiSvgIcon-root root sc-ckVGcZ kKJERm styled-icon sc-kvZOFW jdTEdp"
   focusable="false"
   onBlur={[Function]}
   onFocus={[Function]}
