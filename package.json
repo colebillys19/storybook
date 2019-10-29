@@ -16,7 +16,7 @@
     "uuid": "3.3.3"
   },
   "scripts": {
-    "build": "BABEL_ENV=production babel src -d dist",
+    "build": "BABEL_ENV=production babel src -d compiled",
     "prepare": "npm run build",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 9009 -s public",
@@ -211,7 +211,7 @@
     "stylelint-processor-styled-components": "1.5.0"
   },
   "description": "This application acts as a library of base components to be used from project to project.",
-  "main": "dist/index.js",
+  "main": "compiled/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dmiapplications/storybook.git"
