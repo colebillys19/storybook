@@ -1,0 +1,29 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { withKnobs, select, text } from '@storybook/addon-knobs';
+
+import * as stories from './FlatIconButton.stories.js';
+import BaseButton from '../BaseButton';
+import FlatIconButton from '../FlatIconButton';
+
+
+<Meta
+  decorators={[withKnobs]}
+  component={FlatIconButton}
+  title="Buttons|FlatIconButton|FlatIconButton"
+/>
+
+# FlatIconButton
+
+Button used to create FlatIcons as buttons.
+
+<Preview>
+  <Story name="default">
+    <div>
+    {stories.defaultStory()}
+    </div>
+  </Story>
+</Preview>
+
+<Props of={BaseButton} />
+
+

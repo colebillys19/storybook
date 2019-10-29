@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 
-<Meta title="LEARN|CSF" />
+<Meta title="Documentation|CSF" />
 
 # CSF Stories with MDX Docs
 
@@ -86,3 +86,88 @@ For this specific example the equivalent result can be achieved in a few ways de
 * `excludeStories: ['simpleData', 'complexData']`
 
 * `excludeStories: /.*Data$/`
+
+### Title
+
+`Title` is computed from the component's `title`, and matches the component caption in Storybook's navigation.
+
+For example:
+
+```js
+export default {
+  title: 'Path/to/Badge',
+};
+```
+
+### Subtitle
+
+The `Subtitle` slot is computed from the component's `componentSubtitle` parameter.
+
+For example in [Component Story Format (CSF)](https://medium.com/storybookjs/component-story-format-66f4c32366df):
+
+```js
+export default {
+  ...
+  parameters: {
+    componentSubtitle: 'Handy status label',
+  },
+};
+```
+
+### Description
+
+The `Description` slot is computed from the Component's docgen comments in the component's source.
+
+For example, here's the source for `Badge`:
+
+```js
+/**
+ * Use `Badge` to highlight key info with a predefined status.
+ */
+export const Badge = ({ status, children }) => { ... }
+```
+
+### Primary
+
+The `Primary` slot is computed from the first user-defined story for the component.
+
+For example here are `Badge`'s stories in CSF. The `allBadges` is selected as the primary story because it's first:
+
+```js
+// export default { ... }; /* Badge component metadata */
+export const allBadges = () => ...
+export const positive = () => ...
+export const negative = () => ...
+```
+
+### Props
+
+The `Props` slot is computed from the component's docgen props, which can be defined in typescript or using `react` PropTypes.
+
+For example, here are the `PropTypes` for the `Badge` component
+
+```js
+import PropTypes from 'prop-types';
+
+// ... Badge definition ...
+
+Badge.propTypes = {
+  status: PropTypes.oneOf(['positive', 'negative', 'neutral', 'error', 'warning']),
+};
+Badge.defaultProps = {
+  status: 'neutral',
+};
+```
+
+### Stories
+
+The `Stories` slot is computed from the user-defined stories for the component, excluding the first.
+
+For example here are `Badge`'s stories in CSF. The `positive` and `negative` stories are selected in that order:
+
+```js
+// export default { ... }; /* Badge component metadata */
+export const allBadges = () => ...
+export const positive = () => ...
+export const negative = () => ...
+```

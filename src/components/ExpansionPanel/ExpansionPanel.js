@@ -19,13 +19,38 @@ const ExpansionPanel = ({
 );
 
 ExpansionPanel.propTypes = {
+  /**
+   * The content of the expansion panel.
+   */
   children: T.node.isRequired,
+  /**
+   * Override or extend the styles applied to the component.
+   */
   classes: T.object,
+  /**
+   * If true, expands the panel by default.
+   */
   defaultExpanded: T.bool,
+  /**
+   * If true, the panel will be displayed in a disabled state.
+   */
   disabled: T.bool,
+  /**
+   * If true, expands the panel, otherwise collapse it.
+   * Setting this prop enables control over the panel.
+   */
   expanded: T.bool,
+  /**
+   * Callback fired when the expand/collapse state is changed.
+   */
   onChange: T.func,
+  /**
+   * The component used for the collapse effect.
+   */
   TransitionComponent: T.element,
+  /**
+   * Props applied to the Transition element.
+   */
   TransitionProps: T.object,
 };
 

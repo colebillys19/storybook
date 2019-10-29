@@ -16,8 +16,7 @@ import T from 'prop-types';
 import Checkbox from '@material-ui/core/Checkbox';
 
 /**
- * Use `Checkbox` to select one or more items from a set
- *
+ * Use `Checkbox` to select one or more items from a set.
  */
 const CheckboxTemplate = ({
   checked,
@@ -34,8 +33,17 @@ const CheckboxTemplate = ({
 );
 
 CheckboxTemplate.propTypes = {
+  /**
+   * If true, the component is checked.
+   */
   checked: T.bool,
+  /**
+   * If true, the switch will be disabled.
+   */
   disabled: T.bool,
+  /**
+   * Callback fired when the state is changed.
+   */
   onChange: T.func,
 };
 

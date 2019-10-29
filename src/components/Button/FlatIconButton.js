@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import BaseButton from './BaseButton';
 import TooltipButton from './TooltipButton';
 
-
+/**
+ * Button used to display flat icon.
+ */
 const FlatIconButton = styled(({ tooltipText, ...restProps }) => {
   if (tooltipText) return <TooltipButton tooltipText={tooltipText} {...restProps} />;
   return <BaseButton {...restProps} />;

@@ -15,6 +15,9 @@ const H1 = (props) => (
 );
 
 H1.propTypes = {
+  /**
+   * Wraps text to create an <h1> header.
+   */
   children: T.oneOfType([
     T.string,
     T.object,

@@ -1,7 +1,7 @@
 /**
 *
 * H3
-* @description: Wraps text to create an <h3> header
+* @description: Wraps text to create an <h3> header.
 * Use Case: Creating tertiary titles or headers
 */
 
@@ -15,6 +15,9 @@ const H3 = (props) => (
 );
 
 H3.propTypes = {
+  /**
+   * Wraps text to create an <h3> header.
+   */
   children: T.oneOfType([
     T.string,
     T.object,

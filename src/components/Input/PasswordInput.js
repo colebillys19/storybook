@@ -5,11 +5,11 @@
  *               masked passwords. The input also includes a show password toggle
  *               that will reveal the input values.
  * API USAGE: {
- *    disabled [bool]: Boolean to disable the input field. Defaults to false
- *    label [string]: Input field label. This label will be located right above the input field
- *    onChange [function]: On change function
- *    required [bool]: If the field is required
- *    value [string]: Input field value
+ *    disabled [bool]: Boolean to disable the input field. Defaults to false.
+ *    label [string]: Input field label. This label will be located right above the input field.
+ *    onChange [function]: On change function.
+ *    required [bool]: If the field is required.
+ *    value [string]: Input field value.
  * }
  */
 
@@ -42,10 +42,25 @@ export const BasePasswordInput = (props) => {
 BasePasswordInput.defaultProps = { disabled: false };
 
 BasePasswordInput.propTypes = {
+  /**
+   *  Boolean to disable the input field. Defaults to false.
+   */
   disabled: T.bool,
+  /**
+   * Input field label. This label will be located right above the input field.
+   */
   label: T.string,
+  /**
+   * The callback fired when an onChange event is triggered.
+   */
   onChange: T.func.isRequired,
+  /**
+   * If true, the label is displayed as required and the input will be required.
+   */
   required: T.bool,
+  /**
+   * The value of the Input element, required for a controlled component.
+   */
   value: T.oneOfType([T.string, T.number, T.bool]),
 };
 

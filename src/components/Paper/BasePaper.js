@@ -13,6 +13,11 @@ const BasePaper = ({ children, ...restProps }) => (
     {children}
   </StyledPaper>);
 
-BasePaper.propTypes = { children: T.node };
+BasePaper.propTypes = {
+/**
+ * The content of the component.
+ */
+  children: T.node,
+};
 
 export default BasePaper;

@@ -122,32 +122,71 @@ TextInput.defaultProps = {
 };
 
 TextInput.propTypes = {
+  /**
+   * If true, the input will be disabled.
+   */
   disabled: T.bool,
+  /**
+   * If true, the label will be displayed in an error state.
+   */
   error: T.oneOfType([
     T.string,
     T.oneOf([null]),
     T.bool,
   ]),
+  /**
+   * The props passed to the material-ui FormHelperText component.
+   */
   FormHelperTextProps: T.object,
+  /**
+   * The text displayed in the material-ui FormHelperText component.
+   */
   helperText: T.oneOfType([
     T.string,
     T.oneOf([null]),
   ]),
+  /**
+   * The label content. If you do not pass a label in, there will not be one.
+   */
   label: T.oneOfType([
     T.string,
     T.element,
     T.oneOf([null]),
   ]),
+  /**
+   * If true, a textarea element will be rendered instead of an input.
+   */
   multiline: T.bool,
+  /**
+   * Name attribute of the input element.
+   */
   name: T.string,
+  /**
+   * The callback fired when an onBlur event is triggered.
+   */
   onBlur: T.func,
+  /**
+   * The callback fired when an onChange event is triggered.
+   */
   onChange: T.func.isRequired,
+  /**
+   * If true, the label is displayed as required and the input will be required.
+   */
   required: T.bool,
+  /**
+   * Type attribute of the Input element. It should be a valid HTML5 input type.
+   */
   type: T.string,
+  /**
+   * The value of the Input element, required for a controlled component.
+   */
   value: T.oneOfType([
     T.number,
     T.string,
   ]),
+  /**
+   * The variant to use.
+   */
   variant: T.oneOf([
     'filled',
     'outlined',

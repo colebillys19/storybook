@@ -15,6 +15,9 @@ const H2 = (props) => (
 );
 
 H2.propTypes = {
+  /**
+   * Wraps text to create an <h2> header.
+   */
   children: T.oneOfType([
     T.string,
     T.object,

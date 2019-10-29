@@ -48,12 +48,26 @@ export const RadioButtonGroup = ({
 RadioButtonGroup.defaultProps = { row: false };
 
 RadioButtonGroup.propTypes = {
+  /**
+   *  Callback fired when a radio button is selected.
+   */
   onChange: T.func.isRequired,
+  /**
+   * The options displayed in the RadioButtonGroup.
+   * 
+   * An array of objects with properties label and value.
+   */
   options: T.arrayOf(T.shape({
     label: T.string,
     value: T.oneOfType([T.bool, T.number, T.string]).isRequired,
   })).isRequired,
+  /**
+   * If true, displays the radio group in a row.
+   */
   row: T.bool,
+  /**
+   *
+   */
   selected: T.oneOfType([T.bool, T.number, T.string]),
 };
 

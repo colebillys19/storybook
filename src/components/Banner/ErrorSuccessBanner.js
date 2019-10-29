@@ -19,6 +19,9 @@ const CloseIcon = iconDictionary('closeMenu', 'small');
 const SuccessIcon = iconDictionary('successOutline', 'mediumSmall');
 const WarningIcon = iconDictionary('warning', 'mediumSmall');
 
+/**
+ * Individual error banner which is hidden on the page until an error occurs.
+ */
 const ErrorSuccessBanner = ({
   error,
   onClose,
@@ -54,7 +57,13 @@ const ErrorSuccessBanner = ({
 };
 
 ErrorSuccessBanner.propTypes = {
+  /**
+   * Error messsage displayed in banner.
+   */
   error: T.oneOfType([T.bool, T.object]).isRequired,
+  /**
+   * Success messsage displayed in banner.
+   */
   success: T.oneOfType([T.bool, T.object]).isRequired,
 };
 

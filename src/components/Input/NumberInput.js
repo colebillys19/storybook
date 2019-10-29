@@ -1,5 +1,3 @@
-/** */
-
 import React from 'react';
 import T from 'prop-types';
 
@@ -31,9 +29,21 @@ export const NumberInput = ({
 };
 
 NumberInput.propTypes = {
+  /**
+   * The text displayed in the material-ui FormHelperText component.
+   */
   helperText: T.string,
+  /**
+   * Name attribute of the input element.
+   */
   name: T.string,
+  /**
+   * The callback fired when an onChange event is triggered.
+   */
   onChange: T.func.isRequired,
+  /**
+   * The value of the Input element, required for a controlled component.
+   */
   value: T.string,
 };
 

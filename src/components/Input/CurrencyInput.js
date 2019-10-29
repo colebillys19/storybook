@@ -1,5 +1,3 @@
-/** */
-
 import React from 'react';
 import T from 'prop-types';
 import iconDictionary from '../../utils/iconDictionary';
@@ -42,8 +40,17 @@ export const CurrencyInput = ({
 };
 
 CurrencyInput.propTypes = {
+  /**
+   * Name attribute of the input element.
+   */
   name: T.string,
+  /**
+   * The callback fired when an onChange event is triggered.
+   */
   onChange: T.func.isRequired,
+  /**
+   * The value of the Input element, required for a controlled component.
+   */
   value: T.string,
 };
 

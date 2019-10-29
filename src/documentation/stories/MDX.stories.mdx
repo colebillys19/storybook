@@ -1,6 +1,4 @@
 import { action } from '@storybook/addon-actions';
-import PrimaryButton from '../../Button/PrimaryButton';
-import TooltipButton from '../../Button/TooltipButton';
 import {
   Meta,
   Preview,
@@ -14,14 +12,18 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs/react';
 
+import { 
+  PrimaryButton,
+  TooltipButton
+} from '../../components/Button';
 import {
   MetaProps,
   OtherStoriesProps,
   PreviewProps,
   PropsProps,
   StoryProps,
-} from '../../MDX';
-import MDXDoc from '../docs/learnmdx.docs.mdx';
+} from '../props';
+import MDXDoc from '../docs/example.docs.mdx';
 
 # Stories with MDX
 
@@ -46,7 +48,7 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 
 ```js
 <Meta
-  title='LEARN|MDX'
+  title='Documentation|MDX'
   decorators={[withKnobs]}
   parameters={{component: PrimaryButton}}
 />
@@ -55,7 +57,7 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 <Props of={MetaProps} />
 
 <Meta
-  title='LEARN|MDX'
+  title='Documentation|MDX'
   decorators={[withKnobs]}
   parameters={{component: PrimaryButton}}
 />
@@ -178,7 +180,7 @@ The id would be `paper-basepaper--default-story`
 
 ### Importing MDX into MDX
 
-Consider the following mdx file learnmdx.docs.mdx
+Consider the following mdx file example.docs.mdx
 
 ```
 This text is from a mdx doc imported as a component into another mdx doc.
@@ -187,7 +189,7 @@ This text is from a mdx doc imported as a component into another mdx doc.
 anotherFile.doc.mdx
 
 ```js
-import MDXDoc from '../docs/learnmdx.docs.mdx';
+import MDXDoc from '../docs/example.docs.mdx';
 
 Some markdown text
 <MDXDoc />

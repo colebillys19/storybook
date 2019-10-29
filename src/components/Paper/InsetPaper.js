@@ -8,6 +8,11 @@ const InsetPaper = styled(BasePaper)`
   box-shadow: ${insetShadow};
 `;
 
-InsetPaper.propTypes = { children: T.node };
+InsetPaper.propTypes = {
+/**
+ * The content of the component.
+ */
+  children: T.node,
+};
 
 export default InsetPaper;

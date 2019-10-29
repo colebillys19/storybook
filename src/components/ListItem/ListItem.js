@@ -32,8 +32,17 @@ const BaseListItem = ({
 );
 
 BaseListItem.propTypes = {
+  /**
+   * If true, the list item will be a button (using ButtonBase).
+   */
   button: T.bool,
+  /**
+   * If true, the list item will be disabled.
+   */
   disabled: T.bool,
+  /**
+   *  The text that will be the content of the item.
+   */
   text: T.string.isRequired,
 };
 

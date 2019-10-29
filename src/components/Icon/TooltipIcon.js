@@ -23,9 +23,22 @@ const TooltipIcon = ({
 };
 
 TooltipIcon.propTypes = {
+  /**
+   * (SVG) Icon to render if provided. Icons should be selected and styled through the
+   * iconDictionary before reaching this component.
+   */
   Icon: T.oneOfType([T.func, T.element]).isRequired,
+  /**
+   * The props passed the Icon provided.
+   */
   iconProps: T.object,
+  /**
+   * The content displayed when the tooltip is triggered.
+   */
   placement: T.string,
+  /**
+   * The tooltip placement.
+   */
   TooltipContent: T.oneOfType([T.element, T.node]),
 };
 
