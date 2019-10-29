@@ -6,7 +6,6 @@ import {
 } from '@storybook/addon-knobs/react';
 
 import iconDictionary from '../../../utils/iconDictionary';
-
 import InsetPaper from '../InsetPaper';
 import BasePaper from '../BasePaper';
 

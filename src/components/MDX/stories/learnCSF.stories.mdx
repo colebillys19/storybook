@@ -33,6 +33,7 @@ The name is useful if you want to use names with spaces, names that correspond t
 
 ```js
 export const simple = () => <MyComponent prop1={val1} />;
+
 simple.story = {
   decorators: [ ... ],
   name: 'default', // can't be used as a named export
@@ -62,15 +63,16 @@ import MyComponent from './MyComponent';
 import someData from './data.json';
 
 export default {
-  title: 'MyComponent',
   component: MyComponent,
-  includeStories: ['simpleStory', 'complexStory']
-}
+  includeStories: ['simpleStory', 'complexStory'],
+  title: 'MyComponent',
+};
+
 export const simpleData = { foo: 1, bar: 'baz' };
 export const complexData = { foo: 1, { bar: 'baz', baz: someData }};
+
 export const simpleStory = () => <MyComponent data={simpleData} />;
 export const complexStory = () => <MyComponent data={complexData} />;
-
 ```
 
 When Storybook loads this file, it will see all the exports, but it will ignore the data exports and only treat simpleStory and complexStory as stories.

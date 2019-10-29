@@ -76,6 +76,7 @@ export const iconSize = {
   },
 };
 
+// dmi typography
 export const typography = {
   size: {
     l1: '32',

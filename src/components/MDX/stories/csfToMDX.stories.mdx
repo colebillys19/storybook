@@ -5,13 +5,14 @@ import { Meta } from '@storybook/addon-docs/blocks';
 # CSF to MDX
 
 ```js
-export default {
-  title: 'Button',
-};
+import Button from './Button';
+
+export default { title: 'Button', parameters: { component: Button } };
 
 export const story = () => <Button label="Story 1" />;
 
 export const story2 = () => <Button label="Story 2" onClick={action('click')} />;
+
 story2.story = { name: 'second story' };
 ```
 
@@ -20,11 +21,15 @@ Becomes:
 ```js
 import { Meta, Story } from '@storybook/addon-docs/blocks';
 
+import Button from './Button';
+
 # Button
 
 <Meta title='Button'>
 
-<Story name='story'><Button label="Story 1" /></Story>
+<Story name='story'>
+  <Button label="Story 1" />
+</Story>
 
 <Story name='second story'>
   <Button label="Story 2" onClick={action('click')} />

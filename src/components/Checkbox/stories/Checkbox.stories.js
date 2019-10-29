@@ -37,11 +37,7 @@ const colorOptions = {
 
 export default {
   decorators: [withKnobs],
-  includeStories: [],
-  parameters: {
-    component: Checkbox,
-    componentSubtitle: 'Checkbox Subtitle',
-  },
+  parameters: { component: Checkbox },
   title: 'Checkbox|Checkbox',
 };
 
@@ -78,11 +74,3 @@ export const disabledStory = () => (
 );
 
 disabledStory.story = { name: 'disabled' };
-
-export const basic = () => (
-  <Checkbox
-    checked
-  />
-)
-
-basic.story = { name: 'basic' }

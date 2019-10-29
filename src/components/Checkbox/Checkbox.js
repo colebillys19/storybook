@@ -17,7 +17,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 /**
  * Use `Checkbox` to select one or more items from a set
- * 
+ *
  */
 const CheckboxTemplate = ({
   checked,
@@ -34,13 +34,7 @@ const CheckboxTemplate = ({
 );
 
 CheckboxTemplate.propTypes = {
-  /**
-   * Proptypes for checkbox
-   */
   checked: T.bool,
-   /**
-   * Proptypes for checkbox
-   */
   disabled: T.bool,
   onChange: T.func,
 };

@@ -13,6 +13,7 @@ import {
   text,
   withKnobs,
 } from '@storybook/addon-knobs/react';
+
 import {
   MetaProps,
   OtherStoriesProps,
@@ -20,12 +21,11 @@ import {
   PropsProps,
   StoryProps,
 } from '../../MDX';
-
 import MDXDoc from '../docs/learnmdx.docs.mdx';
 
 # Stories with MDX
 
-You can now compose stories within your docs using the doc blocks addons `Meta`, `Preview`, `Props`, `Story` and MDX.
+You can now compose stories within your docs using the doc block addons `Meta`, `Preview`, `Props`, `Story` and MDX.
 
 ```js
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
@@ -39,8 +39,8 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
   @props
   - title: (string) 'GROUP|STORY' Title is computed from the component's title, and
                                   matches the component caption in Storybook's navigation.
-  - decorators: (array) An array of decorators
-  - parameters: (object) An object of parameters
+  - decorators: (array) An array of decorators.
+  - parameters: (object) An object of parameters.
 
 -->
 
@@ -85,7 +85,7 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 
 <Props of={StoryProps} />
 
-Creates one story in the canvas as well as a component in your markdown displayed on the docs tab.
+Creates one story in the Storybook navigation, Canvas as well as a component in your markdown displayed on the docs tab.
 
 <Story name='nameOfStory'>
     <PrimaryButton 
@@ -99,7 +99,7 @@ Creates one story in the canvas as well as a component in your markdown displaye
 <!--  --------------------- These are comments ---------------------------
   @description Preview Component
                - Used to wrap Story to and preview story and code in documentation.
-               - Allow you to preview code on the bottom right corner by clicking Show code.
+               - Allows you to preview code on the bottom right corner by clicking Show code.
   @typedef (component) Storybook addon-docs block
 -->
 
@@ -117,7 +117,7 @@ Creates one story in the canvas as well as a component in your markdown displaye
 
 <Props of={PreviewProps} />
 
-Allow you to preview and copy code on the bottom right corner by clicking `Show code`.
+Allows you to preview and copy code on the bottom right corner by clicking `Show code`.
 
 <Preview>
   <Story name='storyPreview'>
