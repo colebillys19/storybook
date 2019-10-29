@@ -75,3 +75,24 @@ export const iconSize = {
     width: '1.2rem',
   },
 };
+
+export const typography = {
+  size: {
+    l1: '32',
+    l2: '40',
+    l3: '48',
+    m1: '20',
+    m2: '24',
+    m3: '28',
+    s1: '12',
+    s2: '14',
+    s3: '16',
+  },
+  type: { primary: '"Overpass", "sans-serif"' },
+  weight: {
+    black: '900',
+    bold: '700',
+    extrabold: '800',
+    regular: '400',
+  },
+};

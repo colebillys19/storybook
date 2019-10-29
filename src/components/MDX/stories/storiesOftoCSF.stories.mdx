@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="LEARN|storiesOf to CSF" />
+
+# StoriesOf to CSF
+
+```js
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+
+storiesOf('Button', module)
+  .add('story', () => <Button label="Story 1" />)
+  .add('second story', () => <Button label="Story 2" onClick={action('click')} />)
+  .add('complex story', () => (
+    <div>
+      <Button label="The Button" onClick={action('onClick')} />
+      <br />
+    </div>
+  ));
+```
+
+Becomes:
+
+```js
+import { action } from '@storybook/addon-actions';
+
+export default {
+  title: 'Button',
+};
+
+export const story = () => <Button label="Story 1" />;
+
+export const story2 = () => <Button label="Story 2" onClick={action('click')} />;
+story2.story = { name: 'second story' };
+
+export const story3 = () => (
+  <div>
+    <Button label="The Button" onClick={action('onClick')} />
+    <br />
+  </div>
+);
+story3.story = { name: 'complex story' };
+```

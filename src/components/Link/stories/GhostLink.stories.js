@@ -20,6 +20,7 @@ import {
 
 import iconDictionary from '../../../utils/iconDictionary';
 
+import BaseLink from '../BaseLink';
 import GhostButtonLink from '../GhostButtonLink';
 
 const iconOptions = {
@@ -48,7 +49,7 @@ const path = 'path';
 
 export default {
   decorators: [withKnobs, (story) => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>],
-  parameters: { component: GhostButtonLink },
+  parameters: { component: BaseLink },
   title: 'Links|GhostButtonLink',
 };
 

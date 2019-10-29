@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title='LEARN| MDX to CSF' />
+
+# MDX to CSF
+
+```js
+import React from 'react';
+import Button from './Button';
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title='Button' />
+
+<Story name='basic stories'><Button label='The Button' /></Story>
+```
+
+Becomes:
+
+```js
+import React from 'react';
+import Button from './Button';
+
+export default {
+  title: 'Button',
+};
+
+export const basicStory = () => <Button label="The Button" />;
+basicStory.story = {
+  name: 'basic stories',
+};
+```

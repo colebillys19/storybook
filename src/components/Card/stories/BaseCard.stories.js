@@ -37,25 +37,23 @@ const paddingDefault = '1rem';
 const cardText = 'card text';
 
 export default {
-  title: 'Cards|BaseCard',
   decorators: [withKnobs],
-
-  parameters: {
-    component: BaseCard,
-  },
+  parameters: { component: BaseCard },
+  title: 'Cards|BaseCard',
 };
 
 export const defaultStory = () => (
-  <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
+  <BaseCard
+    color={select('Card Color', colorOptions, colorDefault)}
+    id="base-card"
+  >
     <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
       {text('Card Text', cardText)}
     </div>
   </BaseCard>
 );
 
-defaultStory.story = {
-  name: 'default',
-};
+defaultStory.story = { name: 'default' };
 
 export const title = () => (
   <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
@@ -65,9 +63,7 @@ export const title = () => (
   </BaseCard>
 );
 
-title.story = {
-  name: 'title',
-};
+title.story = { name: 'title' };
 
 export const image = () => (
   <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
@@ -77,6 +73,4 @@ export const image = () => (
   </BaseCard>
 );
 
-image.story = {
-  name: 'image',
-};
+image.story = { name: 'image' };

@@ -2,13 +2,14 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
+import BaseButton from '../BaseButton';
 import TextButton from '../TextButton';
 
 const label = 'LABEL TEXT';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: TextButton },
+  parameters: { component: BaseButton },
   title: 'Buttons|TextButton',
 };
 

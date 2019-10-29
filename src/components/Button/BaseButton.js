@@ -17,6 +17,7 @@
 
 import React from 'react';
 import T from 'prop-types';
+
 import Cancel from '../../svg/Cancel';
 import ConditionalRender from '../../utils/ConditionalRender';
 import StyledBaseButton from './styles/BaseButton.styles';
@@ -50,8 +51,8 @@ BaseButton.defaultProps = {
   disableRipple: true,
   label: '',
 };
-/* eslint-enable react/default-props-match-prop-types */
 
+/* eslint-enable react/default-props-match-prop-types */
 BaseButton.propTypes = {
   component: T.func,
   disableFocusRipple: T.bool,

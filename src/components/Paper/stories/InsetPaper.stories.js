@@ -8,6 +8,7 @@ import {
 import iconDictionary from '../../../utils/iconDictionary';
 
 import InsetPaper from '../InsetPaper';
+import BasePaper from '../BasePaper';
 
 const paddingOptions = {
   '1rem': '1rem',
@@ -20,7 +21,7 @@ const paperText = 'paper text';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: InsetPaper },
+  parameters: { component: BasePaper },
   title: 'Paper|InsetPaper',
 };
 

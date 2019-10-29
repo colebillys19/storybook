@@ -10,7 +10,9 @@
 *   styling: Styling object to override default styles.
 * }
 */
+import T from 'prop-types';
 import styled from 'styled-components';
+
 import {
   greyBorder,
   msLightGrey,
@@ -26,5 +28,23 @@ const GhostButton = styled(SecondaryButton)`
   border: ${greyBorder};
   color: ${ssDarkGrey};
 `;
+
+GhostButton.defaultProps = {
+  disableFocusRipple: true,
+  disableRipple: true,
+  label: '',
+};
+
+GhostButton.propTypes = {
+  component: T.func,
+  disableFocusRipple: T.bool,
+  disableRipple: T.bool,
+  href: T.string,
+  Icon: T.oneOfType([T.object, T.func]),
+  label: T.oneOfType([T.string, T.element]).isRequired,
+  onClick: T.func.isRequired,
+  target: T.string,
+  to: T.string,
+};
 
 export default GhostButton;

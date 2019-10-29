@@ -1,6 +1,7 @@
 
 import BaseButton from './BaseButton';
 import FlatIconButton from './FlatIconButton';
+import GhostButton from './GhostButton';
 import IconButton from './IconButton';
 import PrimaryButton from './PrimaryButton';
 import SecondaryButton from './SecondaryButton';
@@ -10,6 +11,7 @@ import TooltipButton from './TooltipButton';
 export {
   BaseButton,
   FlatIconButton,
+  GhostButton,
   IconButton,
   PrimaryButton,
   SecondaryButton,

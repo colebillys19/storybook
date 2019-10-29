@@ -11,7 +11,6 @@
  * @property onChange: (func) Callback fired when the expand/collapse state is changed.
  * @property TransitionComponent: (elementType) The component used for the collapse effect.
  * @property TransitionProps: (object) Props applied to the Transition element.
- * - Style sheet name: MuiExpansionPanel
  */
 
 import React from 'react';
@@ -25,7 +24,9 @@ import {
 } from '@storybook/addon-knobs/react';
 
 import iconDictionary from '../../../utils/iconDictionary';
-import { ExpansionPanel, ExpansionPanelDetails, ExpansionPanelSummary } from '../index';
+import ExpansionPanel from '../ExpansionPanel';
+import ExpansionPanelDetails from '../sub-components/ExpansionPanelDetails';
+import ExpansionPanelSummary from '../sub-components/ExpansionPanelSummary';
 
 const defaultExpansionSummary = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Suspendisse malesuada lacus ex, sit amet blandit leo lobortis

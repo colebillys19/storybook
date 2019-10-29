@@ -3,7 +3,6 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, select } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
-
 import IconButton from '../IconButton';
 
 const iconOptions = {
