@@ -1,6 +1,6 @@
 {
   "name": "@dmi-applications/storybook",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "@material-ui/core": "4.5.1",
     "@material-ui/icons": "4.5.1",
@@ -148,6 +148,7 @@
   },
   "babel": {
     "plugins": [
+      "@babel/plugin-proposal-export-default-from",
       "babel-plugin-styled-components",
       "macros"
     ],
@@ -171,6 +172,7 @@
   "devDependencies": {
     "@babel/cli": "7.6.4",
     "@babel/core": "7.6.4",
+    "@babel/plugin-proposal-export-default-from": "7.5.2",
     "@babel/preset-env": "7.6.3",
     "@babel/preset-react": "7.6.3",
     "@storybook/addon-a11y": "5.2.5",
