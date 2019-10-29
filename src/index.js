@@ -12,4 +12,3 @@ export * from './components/LoadingIndicator';
 export * from './components/Paper';
 export * from './components/Radio';
 export * from './components/Table';
-export * from './svg';
