@@ -1,25 +1,12 @@
-/**
-*
-* LoadingIndicator
-* @description: Circular, rotating loading indicator
-* Use Case: For when the client is waiting for async data to finish loading
-* Parent Components/Containers : [
-*  {
-*    route: components/Async/index,
-*    name: <Async>,
-*  },
-* ]
-*/
-
 import React from 'react';
 
 import Circle from './Circle';
-import { LoadingSection, Wrapper } from './styles/LoadingIndicator.styles';
+import { LoadingSection, Wrapper } from './styles/LoadingIndicatorNormal.styles';
 
 /**
- * Use `LoadingIndicator` to display a loading icon while waiting for async data to finish loading.
+ * Use `LoadingIndicatorNormal` to display a loading icon while waiting for async data to finish loading.
  */
-const LoadingIndicator = () => (
+const LoadingIndicatorNormal = () => (
   <Wrapper>
     <LoadingSection>
       <Circle />
@@ -38,4 +25,4 @@ const LoadingIndicator = () => (
   </Wrapper>
 );
 
-export default LoadingIndicator;
+export default LoadingIndicatorNormal;

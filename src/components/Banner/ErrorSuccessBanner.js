@@ -20,7 +20,7 @@ const SuccessIcon = iconDictionary('successOutline', 'mediumSmall');
 const WarningIcon = iconDictionary('warning', 'mediumSmall');
 
 /**
- * Use `ErrorSuccessBanner` when an error or success occurs.
+ * Use `ErrorSuccessBanner` to display either an error or success message.
  */
 const ErrorSuccessBanner = ({
   error,

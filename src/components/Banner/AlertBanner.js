@@ -25,15 +25,15 @@ const AlertBanner = ({ alertText, buttonText, onClick }) => (
 
 AlertBanner.propTypes = {
   /**
-   * Text displayed in alert banner.
+   * Alert text to be displayed within the banner.
    */
   alertText: T.string.isRequired,
   /**
-   * Text displayed in button banner.
+   * Button text to be displayed within the banner.
    */
   buttonText: T.string.isRequired,
   /**
-   * Callback function run when alert banner is clicked.
+   * Callback function to run when button is clicked.
    */
   onClick: T.func,
 };
