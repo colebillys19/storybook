@@ -20,6 +20,7 @@ const paperText = 'paper text';
 
 export default {
   decorators: [withKnobs],
+  includeStories: [],
   parameters: { component: BasePaper },
   title: 'Paper|InsetPaper',
 };

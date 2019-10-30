@@ -23,7 +23,7 @@ import ConditionalRender from '../../utils/ConditionalRender';
 import StyledBaseButton from './styles/BaseButton.styles';
 
 /**
- * Button used as a base to create Main, Special, and Modal buttons.
+ * Use `BaseButton` when a button is needed.
  */
 const BaseButton = ({
   disableFocusRipple,
@@ -78,7 +78,7 @@ BaseButton.propTypes = {
    */
   forwardedRef: T.func,
   /**
-   * The URL to link to when the button is clicked. If defined, an a element will be used as the root node.
+   * The URL to link to when the button is clicked. If defined, an element will be used as the root node.
    */
   href: T.string,
   /**

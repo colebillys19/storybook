@@ -1,27 +1,29 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
-import * as stories from './GhostButton.stories.js';
+import * as stories from './TextButton.stories.js';
 import BaseButton from '../BaseButton';
-import GhostButton from '../GhostButton';
+import TextButton from '../TextButton';
 
 
 <Meta
   decorators={[withKnobs]}
-  title="Buttons|GhostButton|GhostButton"
+  component={TextButton}
+  title="Buttons|TextButton|TextButton"
 />
 
-# GhostButton
+# TextButton
 
-Use `GhostButton` when a button with a transparent background and dark grey background on hover is needed.
+Use ``TextButton`` when a button without button shadow or ripple effects is needed.
 
 <Preview>
   <Story name="default">
     <div>
-      {stories.defaultStory()}
+    {stories.defaultStory()}
     </div>
   </Story>
 </Preview>
 
 <Props of={BaseButton} />
+
 

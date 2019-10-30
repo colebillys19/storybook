@@ -21,7 +21,7 @@ InsetPaper.propTypes = {
    * The component used for the root node.
    * Either a string to use a DOM element or a component.
    */
-  component: T.element,
+  component: T.string,
   /**
    * Shadow depth, corresponds to dp in the spec.
    * It accepts values between 0 and 24 inclusive.

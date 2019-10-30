@@ -13,7 +13,7 @@ import T from 'prop-types';
 import { StyledCard } from './styles/BaseCard.styles';
 
 /**
- * Use `BaseCard` for displaying content.
+ * Use `BaseCard` for displaying content in a card with a top border.
  */
 const Card = (restProps) => (
   <StyledCard classes={{ root: 'card' }} {...restProps} />

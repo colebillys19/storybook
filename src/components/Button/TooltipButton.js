@@ -5,6 +5,9 @@ import ForwardRef from '../../utils/ForwardRef';
 
 import { StyledTooltip } from './styles/TooltipButton.styles';
 
+/**
+ * Use `TooltipButton` when a button with a tooltip displayed on hover is needed.
+ */
 const TooltipButton = ({
   enterDelay,
   placement,

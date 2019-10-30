@@ -1,19 +1,20 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
-import * as stories from './GhostButton.stories.js';
+import * as stories from './SecondaryButton.stories.js';
 import BaseButton from '../BaseButton';
-import GhostButton from '../GhostButton';
+import SecondaryButton from '../SecondaryButton';
 
 
 <Meta
   decorators={[withKnobs]}
-  title="Buttons|GhostButton|GhostButton"
+  component={SecondaryButton}
+  title="Buttons|SecondaryButton|SecondaryButton"
 />
 
-# GhostButton
+# SecondaryButton
 
-Use `GhostButton` when a button with a transparent background and dark grey background on hover is needed.
+Use ``SecondaryButton`` when a button with secondary background color is needed.
 
 <Preview>
   <Story name="default">
@@ -24,4 +25,5 @@ Use `GhostButton` when a button with a transparent background and dark grey back
 </Preview>
 
 <Props of={BaseButton} />
+
 

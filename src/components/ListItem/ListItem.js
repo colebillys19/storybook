@@ -14,7 +14,7 @@
 *   text: (string) The text that will be the content of the item.
 * }
 */
-// Dependencies
+
 import React from 'react';
 import T from 'prop-types';
 import ListItem from '@material-ui/core/ListItem';
@@ -70,7 +70,7 @@ BaseListItem.propTypes = {
   /**
    * The container component used when a ListItemSecondaryAction is the last child.
    */
-  ContainerComponent: T.element,
+  ContainerComponent: T.oneOfType([T.string, T.element]),
   /**
    * Props applied to the container component if used.
    */

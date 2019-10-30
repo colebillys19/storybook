@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 /**
  * @description ...
  * @props
@@ -21,7 +22,7 @@ import {
 import BaseTableRow from './sub-components/BaseTableRow';
 
 /**
- * Use `BaseTable` to display a set of data.
+ * Use `BaseTable` to display sets of data.
  */
 const BaseTable = ({
   centeredCols,
@@ -61,7 +62,7 @@ const BaseTable = ({
       </StyledTableBody>
     </StyledTable>
   );
-}
+};
 
 BaseTable.propTypes = {
   /**
@@ -71,11 +72,7 @@ BaseTable.propTypes = {
   /**
    * The content of the table, normally TableHead and TableBody.
    */
-  children: T.element,
-  /**
-   * Override or extend the styles applied to the component.
-   */
-  classes: T.object,
+  children: T.node,
   /**
    * The component used for the root node.
    * Either a string to use a DOM element or a component.
@@ -86,11 +83,11 @@ BaseTable.propTypes = {
    */
   firstColBold: T.bool,
   /**
-   * Strings representing table headers.
+   * The an array of titles of the table headers.
    */
   headers: T.arrayOf(T.string),
   /**
-   * Background color on row hover.
+   * The background color on row hover.
    */
   hoverColor: T.string,
   /**
@@ -98,8 +95,7 @@ BaseTable.propTypes = {
    */
   padding: T.oneOf(['default', 'checkbox', 'none']),
   /**
-   * Array of of objects containing properties "cells" (an array of strings
-   * that will populate cells and "id" (string), unique id.
+   * The row data for each cell in a table row.
    */
   rowData: T.arrayOf(T.shape({
     cells: T.arrayOf(T.string),
@@ -113,6 +109,13 @@ BaseTable.propTypes = {
    * Set the header sticky.
    */
   stickyHeader: T.bool,
+};
+
+BaseTable.defaulProps = {
+  component: 'table',
+  padding: 'default',
+  size: 'medium',
+  stickyHeader: false,
 };
 
 export default BaseTable;

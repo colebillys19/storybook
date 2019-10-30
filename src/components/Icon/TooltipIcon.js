@@ -3,7 +3,7 @@ import T from 'prop-types';
 import { StyledTooltip } from './styles/TooltipIcon.styles';
 
 /**
- * Use `TooltipIcon` when a tooltip content is needed on hover of an icon.
+ * Use `TooltipIcon` when tooltip content is needed on hover of an icon.
  */
 const TooltipIcon = ({
   forwardedRef,
@@ -45,11 +45,11 @@ TooltipIcon.propTypes = {
    */
   iconProps: T.object,
   /**
-   * The content displayed when the tooltip is triggered.
+   * The tooltip placement.
    */
   placement: T.string,
   /**
-   * The tooltip placement.
+   * The content displayed when the tooltip is triggered.
    */
   TooltipContent: T.oneOfType([T.element, T.node]),
 };
