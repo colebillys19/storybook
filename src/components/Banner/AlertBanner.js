@@ -8,6 +8,10 @@ import T from 'prop-types';
 
 import { AlertButton, AlertText, Wrapper } from './styles/AlertBanner.styles';
 
+
+/**
+ * Use `AlertBanner` to display an alert message.
+ */
 const AlertBanner = ({ alertText, buttonText, onClick }) => (
   <Wrapper>
     <AlertText>
@@ -20,8 +24,17 @@ const AlertBanner = ({ alertText, buttonText, onClick }) => (
 );
 
 AlertBanner.propTypes = {
+  /**
+   * Alert text to be displayed within the banner.
+   */
   alertText: T.string.isRequired,
+  /**
+   * Button text to be displayed within the banner.
+   */
   buttonText: T.string.isRequired,
+  /**
+   * Callback function to run when button is clicked.
+   */
   onClick: T.func,
 };
 

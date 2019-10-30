@@ -1,11 +1,12 @@
-/** */
-
 import React from 'react';
 import T from 'prop-types';
 
 import { formatNumbers } from './helpers';
 import { StyledNumberInput } from './styles/NumberInput.styles';
 
+/**
+ * Use `NumberInput` when using an input that requires a number.
+ */
 export const NumberInput = ({
   helperText,
   name,
@@ -31,9 +32,21 @@ export const NumberInput = ({
 };
 
 NumberInput.propTypes = {
+  /**
+   * The text displayed in the material-ui FormHelperText component.
+   */
   helperText: T.string,
+  /**
+   * Name attribute of the input element.
+   */
   name: T.string,
+  /**
+   * The callback fired when an onChange event is triggered.
+   */
   onChange: T.func.isRequired,
+  /**
+   * The value of the Input element, required for a controlled component.
+   */
   value: T.string,
 };
 

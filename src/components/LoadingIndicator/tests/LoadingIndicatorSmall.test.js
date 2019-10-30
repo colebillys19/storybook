@@ -1,10 +1,10 @@
 import React from 'react';
 
-import SmallLoadingIndicator from '../SmallLoadingIndicator';
+import LoadingIndicatorSmall from '../LoadingIndicatorSmall';
 import { checkBasicRendering, checkRequiredProps } from '../../../utils/testingHelpers';
 
-describe('<SmallLoadingIndicator />', () => {
-  const component = <SmallLoadingIndicator />;
+describe('<LoadingIndicatorSmall />', () => {
+  const component = <LoadingIndicatorSmall />;
   checkBasicRendering(component);
   checkRequiredProps(component);
 });

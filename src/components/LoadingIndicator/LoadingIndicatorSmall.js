@@ -1,18 +1,13 @@
-/**
-*
-* SmallLoadingIndicator
-* @description: Circular, rotating loading indicator. Small than the default Loading Indicator
-* Will work in table rows without violating DOM nesting rules.
-* Use Case: For when the client is waiting for async data to finish loading and don't want the
-* loader to take up the whole view height.
-*/
-
 import React from 'react';
 
 import Circle from './Circle';
-import { SmallLoadingSection, SmallWrapper } from './styles/LoadingIndicator.styles';
+import { SmallLoadingSection, SmallWrapper } from './styles/LoadingIndicatorNormal.styles';
 
-const SmallLoadingIndicator = () => (
+/**
+ * Use `LoadingIndicatorSmall` when the client is waiting for async data to finish
+ * loading and you don't want the loader to take up the whole view height.
+ */
+const LoadingIndicatorSmall = () => (
   <SmallWrapper>
     <SmallLoadingSection>
       <Circle />
@@ -31,4 +26,4 @@ const SmallLoadingIndicator = () => (
   </SmallWrapper>
 );
 
-export default SmallLoadingIndicator;
+export default LoadingIndicatorSmall;

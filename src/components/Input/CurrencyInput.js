@@ -1,5 +1,3 @@
-/** */
-
 import React from 'react';
 import T from 'prop-types';
 import iconDictionary from '../../utils/iconDictionary';
@@ -9,6 +7,9 @@ import { StyledCurrencyInput } from './styles/CurrencyInput.styles';
 
 const Dollar = iconDictionary('dollar', 'small');
 
+/**
+ * Use `CurrentInput` when an input with currency is needed.
+ */
 export const CurrencyInput = ({
   name,
   onChange,
@@ -42,9 +43,40 @@ export const CurrencyInput = ({
 };
 
 CurrencyInput.propTypes = {
+  /**
+   * If true, the input will be disabled.
+   */
+  disabled: T.bool,
+  /**
+   * If true, the input will indicate an error.
+   * This is normally obtained via context from FormControl.
+   */
+  error: T.bool,
+  /**
+   * Name attribute of the input element.
+   */
   name: T.string,
+  /**
+   * The callback fired when an onBlur event is triggered.
+   */
+  onBlur: T.func,
+  /**
+   * The callback fired when an onChange event is triggered.
+   */
   onChange: T.func.isRequired,
+  /**
+   * The placeholder text.
+   */
+  placeholder: T.string,
+  /**
+   * The value of the Input element, required for a controlled component.
+   */
   value: T.string,
+};
+
+CurrencyInput.defaultProps = {
+  disabled: false,
+  error: false,
 };
 
 export default CurrencyInput;

@@ -9,6 +9,7 @@ const bannerProps = {
   buttonText: 'button text',
 };
 
+
 export default {
   decorators: [withKnobs],
   parameters: { component: AlertBanner },
