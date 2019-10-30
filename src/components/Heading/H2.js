@@ -10,6 +10,9 @@ import T from 'prop-types';
 
 import { ExtendedH2 } from './styles/Headings.styles';
 
+/**
+ * Use `H2` to create an `<h2>` header.
+ */
 const H2 = (props) => (
   <ExtendedH2 {...props} />
 );

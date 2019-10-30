@@ -14,6 +14,9 @@ import T from 'prop-types';
 import StyledBaseLink from './styles/BaseLink.styles';
 import ConditionalRender from '../../utils/ConditionalRender';
 
+/**
+ * Use `BaseLink` when a link is need.
+ */
 const BaseLink = ({
   Icon,
   label,

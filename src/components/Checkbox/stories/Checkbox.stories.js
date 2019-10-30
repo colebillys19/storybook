@@ -1,13 +1,13 @@
 /**
  * @description Create an icon that displays when an option is selected.
  * @property checked: (bool) If true, the component is checked.
+ * @property checkIcon: (node) The icon to display when the component is checked.
  * @property classes: (object) Override or extend the styles applied to the component.
  * @property color: ('primary' | 'secondary' | 'default') The color of the component.
- * @property checkIcon: (node) The icon to display when the component is checked.
  * @property disabled: (bool) If true, the component is disabled.
  * @property disableRipple: (bool) If true, the ripple effect will be disabled.
  * @property icon: (node) The icon to display when the component is unchecked.
- *                       Use the icon dictionary.
+ *                        Use the icon dictionary.
  * @property id: (string) The id of the input element.
  * @property indeterminate: (bool) [indeterminate=false] If true the component appears indeterminate.
  * @property indeterminateIcon: (node) The icon to display when the component is indeterminate.

@@ -12,6 +12,10 @@ import React from 'react';
 import Circle from './Circle';
 import { SmallLoadingSection, SmallWrapper } from './styles/LoadingIndicator.styles';
 
+/**
+ * Use `SmallLoadingIndicator` when the client is waiting for async data to finish
+ * loading and you don't want the loader to take up the whole view height.
+ */
 const SmallLoadingIndicator = () => (
   <SmallWrapper>
     <SmallLoadingSection>

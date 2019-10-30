@@ -10,6 +10,9 @@ import T from 'prop-types';
 
 import { ExtendedH1 } from './styles/Headings.styles';
 
+/**
+ * Use `H1` to create an `<h1>` header.
+ */
 const H1 = (props) => (
   <ExtendedH1 {...props} />
 );

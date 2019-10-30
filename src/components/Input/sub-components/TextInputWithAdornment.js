@@ -18,8 +18,6 @@ const TextInputWithAdornment = ({
   );
 };
 
-TextInputWithAdornment.defaultProps = { position: 'start' };
-
 TextInputWithAdornment.propTypes = {
   adornmentComponent: T.node.isRequired,
   InputProps: T.object,
@@ -28,5 +26,8 @@ TextInputWithAdornment.propTypes = {
     'start',
   ]),
 };
+
+TextInputWithAdornment.defaultProps = { position: 'start' };
+
 
 export default TextInputWithAdornment;

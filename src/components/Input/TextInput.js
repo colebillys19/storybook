@@ -40,6 +40,9 @@ import ConditionalRender from '../../utils/ConditionalRender';
 import InputLabel from './sub-components/InputLabel';
 import { BaseTextInput } from './styles/TextInput.styles';
 
+/**
+ * Use `TextInput` when you need a text field input. Typically used in forms and dialogs.
+ */
 const TextInput = ({
   className,
   disabled,
@@ -109,19 +112,24 @@ const TextInput = ({
   );
 };
 
-TextInput.defaultProps = {
-  disabled: false,
-  error: null,
-  helperText: null,
-  label: null, // pass in the label prop for a label to appear
-  multiline: false,
-  required: false,
-  type: 'text',
-  value: null,
-  variant: 'outlined',
-};
-
 TextInput.propTypes = {
+  /**
+   * This prop helps users to fill forms faster, especially on mobile devices. 
+   * The name can be confusing, as it's more like an autofill.
+   */
+  autoComplete: T.string,
+  /**
+   * If true, the input element will be focused during the first mount.
+   */
+  autoFocus: T.bool,
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: T.object,
+  /**
+   * The default value of the input element.
+   */
+  defaultValue: T.any,
   /**
    * If true, the input will be disabled.
    */
@@ -139,11 +147,41 @@ TextInput.propTypes = {
    */
   FormHelperTextProps: T.object,
   /**
+   * If true, the input will take up the full width of its container.
+   */
+  fullWidth: T.bool,
+  /**
    * The text displayed in the material-ui FormHelperText component.
    */
   helperText: T.oneOfType([
     T.string,
     T.oneOf([null]),
+    T.node,
+  ]),
+  /**
+   * The id of the input element.
+   * Use this prop to make label and helperText accessible for screen readers.
+   */
+  id: T.string,
+  /**
+   * Props applied to the InputLabel element.
+   */
+  InputLabelProps: T.object,
+  /**
+   * Props applied to the Input element. 
+   * It will be a FilledInput, OutlinedInput or Input component depending on the variant prop value.
+   */
+  InputProps: T.object,
+  /**
+   * Attributes applied to the input element.
+   */
+  inputProps: T.object,
+  /**
+   *  Ref passed to the input element.
+   */
+  inputRef: T.oneOfType([
+    T.func,
+    T.shape({ current: T.any }),
   ]),
   /**
    * The label content. If you do not pass a label in, there will not be one.
@@ -152,7 +190,12 @@ TextInput.propTypes = {
     T.string,
     T.element,
     T.oneOf([null]),
+    T.node,
   ]),
+  /**
+   * If dense or normal, will adjust vertical spacing of this and contained components.
+   */
+  margin: T.oneOf(['none', 'dense', 'normal']),
   /**
    * If true, a textarea element will be rendered instead of an input.
    */
@@ -170,9 +213,30 @@ TextInput.propTypes = {
    */
   onChange: T.func.isRequired,
   /**
+   * The short hint displayed in the input before the user enters a value.
+   */
+  placeholder: T.string,
+  /**
    * If true, the label is displayed as required and the input will be required.
    */
   required: T.bool,
+  /**
+   * Number of rows to display when multiline option is set to true.
+   */
+  rows: T.oneOfType([T.string, T.number]),
+  /**
+   * Maximum number of rows to display when multiline option is set to true.
+   */
+  rowsMax: T.oneOfType([T.string, T.number]),
+  /**
+   * Render a Select element while passing the Input element to Select as input parameter.
+   * If this option is set you must pass the options of the select as children.
+   */
+  select: T.bool,
+  /**
+   * Props applied to the Select element.
+   */
+  SelectProps: T.object,
   /**
    * Type attribute of the Input element. It should be a valid HTML5 input type.
    */
@@ -180,10 +244,7 @@ TextInput.propTypes = {
   /**
    * The value of the Input element, required for a controlled component.
    */
-  value: T.oneOfType([
-    T.number,
-    T.string,
-  ]),
+  value: T.any,
   /**
    * The variant to use.
    */
@@ -192,6 +253,19 @@ TextInput.propTypes = {
     'outlined',
     'standard',
   ]),
+};
+
+TextInput.defaultProps = {
+  disabled: false,
+  error: null,
+  helperText: null,
+  label: null, // pass in the label prop for a label to appear
+  multiline: false,
+  required: false,
+  select: false,
+  type: 'text',
+  value: null,
+  variant: 'outlined',
 };
 
 export default TextInput;

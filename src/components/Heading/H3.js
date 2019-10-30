@@ -10,6 +10,9 @@ import T from 'prop-types';
 
 import { ExtendedH3 } from './styles/Headings.styles';
 
+/**
+ * Use `H3` to create an `<h3>` header.
+ */
 const H3 = (props) => (
   <ExtendedH3 {...props} />
 );

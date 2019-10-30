@@ -20,7 +20,7 @@ const SuccessIcon = iconDictionary('successOutline', 'mediumSmall');
 const WarningIcon = iconDictionary('warning', 'mediumSmall');
 
 /**
- * Individual error banner which is hidden on the page until an error occurs.
+ * Use `ErrorSuccessBanner` when an error or success occurs.
  */
 const ErrorSuccessBanner = ({
   error,

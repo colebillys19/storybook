@@ -4,6 +4,9 @@ import T from 'prop-types';
 import { formatNumbers } from './helpers';
 import { StyledNumberInput } from './styles/NumberInput.styles';
 
+/**
+ * Use `NumberInput` when using an input that requires a number.
+ */
 export const NumberInput = ({
   helperText,
   name,

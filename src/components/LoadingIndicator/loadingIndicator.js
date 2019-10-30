@@ -16,6 +16,9 @@ import React from 'react';
 import Circle from './Circle';
 import { LoadingSection, Wrapper } from './styles/LoadingIndicator.styles';
 
+/**
+ * Use `LoadingIndicator` to display a loading icon while waiting for async data to finish loading.
+ */
 const LoadingIndicator = () => (
   <Wrapper>
     <LoadingSection>

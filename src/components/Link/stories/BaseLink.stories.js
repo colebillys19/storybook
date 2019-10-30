@@ -4,7 +4,7 @@
  *                       iconDictionary before reaching this component
  * @property label: (string|array) Text link label
  * @property path: (string|array) Relative url representing the location to link to
- *          Can be a string or an url object
+ *           Can be a string or an url object
  * @property replace: (bool) When true, clicking the link will replace current entry
  *                           in history stack instead of adding a new one
  */

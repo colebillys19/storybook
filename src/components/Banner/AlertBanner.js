@@ -10,7 +10,7 @@ import { AlertButton, AlertText, Wrapper } from './styles/AlertBanner.styles';
 
 
 /**
- * Display this component when needed to show an Alert.
+ * Use `AlertBanner` to display an alert message.
  */
 const AlertBanner = ({ alertText, buttonText, onClick }) => (
   <Wrapper>
