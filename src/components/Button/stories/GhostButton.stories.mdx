@@ -1,0 +1,27 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { withKnobs, select, text } from '@storybook/addon-knobs';
+
+import * as stories from './GhostButton.stories.js';
+import BaseButton from '../BaseButton';
+import GhostButton from '../GhostButton';
+
+
+<Meta
+  decorators={[withKnobs]}
+  title="Buttons|GhostButton|GhostButton"
+/>
+
+# GhostButton
+
+Use `GhostButton` when a button with a transparent background and dark grey background on hover is needed.
+
+<Preview>
+  <Story name="default">
+    <div>
+      {stories.defaultStory()}
+    </div>
+  </Story>
+</Preview>
+
+<Props of={BaseButton} />
+

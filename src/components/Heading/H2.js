@@ -10,11 +10,17 @@ import T from 'prop-types';
 
 import { ExtendedH2 } from './styles/Headings.styles';
 
+/**
+ * Use `H2` to create an `<h2>` header.
+ */
 const H2 = (props) => (
   <ExtendedH2 {...props} />
 );
 
 H2.propTypes = {
+  /**
+   * Wraps text to create an <h2> header.
+   */
   children: T.oneOfType([
     T.string,
     T.object,

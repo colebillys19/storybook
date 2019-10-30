@@ -22,6 +22,9 @@ import Cancel from '../../svg/Cancel';
 import ConditionalRender from '../../utils/ConditionalRender';
 import StyledBaseButton from './styles/BaseButton.styles';
 
+/**
+ * Use `BaseButton` when a button is needed.
+ */
 const BaseButton = ({
   disableFocusRipple,
   disableRipple,
@@ -54,15 +57,49 @@ BaseButton.defaultProps = {
 
 /* eslint-enable react/default-props-match-prop-types */
 BaseButton.propTypes = {
+  /**
+   * The component used for the root node. Either a string to use a DOM element or a component.
+   */
   component: T.func,
+  /**
+   * If true, the button will be disabled.
+   */
+  disabled: T.bool,
+  /**
+   * If true, the keyboard focus ripple will be disabled. disableRipple must also be true.
+   */
   disableFocusRipple: T.bool,
+  /**
+   * If true, the ripple effect will be disabled.
+   */
   disableRipple: T.bool,
+  /**
+   * Used to wrap function components in React's forwardRef method to be used when implementing material UI tooltips.
+   */
   forwardedRef: T.func,
+  /**
+   * The URL to link to when the button is clicked. If defined, an element will be used as the root node.
+   */
   href: T.string,
+  /**
+   * Icon to render if provided. Icons should be selected and styled through the iconDictionary.
+   */
   Icon: T.oneOfType([T.object, T.func]),
+  /**
+   * The Button label.
+   */
   label: T.oneOfType([T.string, T.element]).isRequired,
+  /**
+   * Callback function fired during a click event.
+   */
   onClick: T.func.isRequired,
+  /**
+   *
+   */
   target: T.string,
+  /**
+   *
+   */
   to: T.string,
 };
 

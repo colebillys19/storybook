@@ -1,8 +1,4 @@
-import { Meta } from '@storybook/addon-docs/blocks';
-
-<Meta title="LEARN|storiesOf to CSF" />
-
-# StoriesOf to CSF
+### StoriesOf to CSF
 
 ```js
 import { storiesOf } from '@storybook/react';
@@ -31,6 +27,7 @@ export default {
 export const story = () => <Button label="Story 1" />;
 
 export const story2 = () => <Button label="Story 2" onClick={action('click')} />;
+
 story2.story = { name: 'second story' };
 
 export const story3 = () => (
@@ -39,5 +36,6 @@ export const story3 = () => (
     <br />
   </div>
 );
+
 story3.story = { name: 'complex story' };
 ```

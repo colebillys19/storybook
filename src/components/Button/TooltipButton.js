@@ -5,6 +5,9 @@ import ForwardRef from '../../utils/ForwardRef';
 
 import { StyledTooltip } from './styles/TooltipButton.styles';
 
+/**
+ * Use `TooltipButton` when a button with a tooltip displayed on hover is needed.
+ */
 const TooltipButton = ({
   enterDelay,
   placement,
@@ -26,8 +29,18 @@ TooltipButton.defaultProps = {
 };
 
 TooltipButton.propTypes = {
+  /**
+   * The number of milliseconds to wait before showing the tooltip.
+   * This prop won't impact the enter touch delay.
+   */
   enterDelay: T.number,
+  /**
+   * The Tooltip placement.
+   */
   placement: T.string,
+  /**
+   * The Tooltip text. Zero-length titles string are never displayed.
+   */
   tooltipText: T.string.isRequired,
 };
 

@@ -29,6 +29,7 @@ const sizeDefault = 'mediumSmall';
 
 export default {
   decorators: [withKnobs],
+  includeStories: [],
   parameters: { component: BaseButton },
   title: 'Buttons|PrimaryButton',
 };

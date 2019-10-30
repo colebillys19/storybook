@@ -3,12 +3,18 @@ import T from 'prop-types';
 
 import { StyledExpansionPanel } from './styles/ExpansionPanel.styles';
 
+/**
+ * Use `ExpansionPanel` when you need a lightweight container to display a summary (component/text)
+ * which on click can expand to display additional details (component/text).
+ */
 const ExpansionPanel = ({
   children,
   classes,
+  forwardedRef,
   ...restProps
 }) => (
   <StyledExpansionPanel
+    ref={forwardedRef}
     classes={Object.assign({ expanded: 'expanded' }, classes)}
     CollapseProps={{ classes: { container: 'collapse-container' } }}
     square
@@ -19,13 +25,45 @@ const ExpansionPanel = ({
 );
 
 ExpansionPanel.propTypes = {
+  /**
+   * The content of the expansion panel.
+   */
   children: T.node.isRequired,
+  /**
+   * Override or extend the styles applied to the component.
+   */
   classes: T.object,
+  /**
+   * If true, expands the panel by default.
+   */
   defaultExpanded: T.bool,
+  /**
+   * If true, the panel will be displayed in a disabled state.
+   */
   disabled: T.bool,
+  /**
+   * If true, expands the panel, otherwise collapse it.
+   * Setting this prop enables control over the panel.
+   */
   expanded: T.bool,
+  /**
+   * The ref forwarded to the root element.
+   */
+  forwardedRef: T.oneOfType([
+    T.func,
+    T.shape({ current: T.any }),
+  ]),
+  /**
+   * Callback fired when the expand/collapse state is changed.
+   */
   onChange: T.func,
+  /**
+   * The component used for the collapse effect.
+   */
   TransitionComponent: T.element,
+  /**
+   * Props applied to the Transition element.
+   */
   TransitionProps: T.object,
 };
 

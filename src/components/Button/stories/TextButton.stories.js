@@ -9,6 +9,7 @@ const label = 'LABEL TEXT';
 
 export default {
   decorators: [withKnobs],
+  includeStories: [],
   parameters: { component: BaseButton },
   title: 'Buttons|TextButton',
 };

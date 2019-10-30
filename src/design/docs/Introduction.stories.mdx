@@ -1,18 +1,16 @@
 import { action } from '@storybook/addon-actions';
-import { Button } from '@storybook/react/demo';
 import { Story, Meta, Props, Preview } from '@storybook/addon-docs/blocks';
-import { linkTo } from '@storybook/addon-links';
 import Typography from '@material-ui/core/Typography';
 
 
-import { BasePaper } from '../Paper';
+import BasePaper from '../../components/Paper/BasePaper';
 import { msDeepPurple, msMainGreen } from '../../utils/defaultStyleHelper';
 
 <Meta title="DMI Design System|Introduction" />
 
 <img
   alt="DMI Logo"
-  src={require('./dmi-logo.png')}
+  src={require('../images/dmi-logo.png')}
   style={{ marginBottom: '3rem' }}
 />
 
@@ -20,7 +18,7 @@ import { msDeepPurple, msMainGreen } from '../../utils/defaultStyleHelper';
 
 DMI Design System is a reusable component library that helps DMI contributors build UIs faster.
 
-The goals is to make building durable UIs more productive and satisfying.
+The goal is to make building durable UIs more productive and satisfying.
 
 ### Install
 
@@ -48,7 +46,7 @@ The `Knobs` tab is used to examine the component's appearance with alternate pro
 
 The `Story` tab displays the code used to create the component.
 
-The `Actions` displays action fired from the component such as onChange and onClick events.
+The `Actions` tab displays action fired from the component such as onChange and onClick events.
 
 #### Docs
 
@@ -89,5 +87,18 @@ const example = () => {
   );
 };
 ```
+
+<BasePaper
+  onClick={action('onClick')}
+  style={{
+    backgroundColor: msDeepPurple,
+    color: msMainGreen,
+    fontSize: '2rem',
+    padding: '1.5rem',
+  }}
+  value={'value'}
+>
+  VALUE
+</BasePaper>
 
 
