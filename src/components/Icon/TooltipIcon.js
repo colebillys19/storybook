@@ -6,18 +6,18 @@ const TooltipIcon = ({
   Icon,
   iconProps,
   placement,
-  TooltipContent,
+  tooltipText,
   ...restProps
 }) => {
-  const Component = typeof Icon === 'function' ? <Icon {...iconProps} /> : Icon;
-  if (!TooltipContent) return Component;
+  const WrappedIcon = typeof Icon === 'function' ? <Icon {...iconProps} /> : Icon;
+  if (!tooltipText) return WrappedIcon;
   return (
     <StyledTooltip
       placement={placement}
-      title={TooltipContent}
+      title={tooltipText}
       {...restProps}
     >
-      {Component}
+      {WrappedIcon}
     </StyledTooltip>
   );
 };
@@ -26,7 +26,7 @@ TooltipIcon.propTypes = {
   Icon: T.oneOfType([T.func, T.element]).isRequired,
   iconProps: T.object,
   placement: T.string,
-  TooltipContent: T.oneOfType([T.element, T.node]),
+  tooltipText: T.string.isRequired,
 };
 
 TooltipIcon.defaultProps = { placement: 'right-start' };

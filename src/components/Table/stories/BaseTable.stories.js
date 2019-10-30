@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 import BaseTable from '../BaseTable';
 
@@ -17,6 +17,7 @@ export default {
 export const defaultStory = () => (
   <BaseTable
     centeredCols={text('Centered Columns', centeredColsA)}
+    firstColBold={boolean('First Column Bold', false)}
     headers={headersA}
     hoverColor={text('Row Hover Color', hoverColor)}
     rowData={rowDataA}
@@ -28,7 +29,7 @@ defaultStory.story = { name: 'default' };
 export const offset = () => (
   <BaseTable
     centeredCols={text('Centered Columns', centeredColsB)}
-    firstColBold
+    firstColBold={boolean('First Column Bold', true)}
     headers={headersB}
     hoverColor={text('Row Hover Color', hoverColor)}
     rowData={rowDataB}

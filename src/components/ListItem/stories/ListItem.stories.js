@@ -36,46 +36,60 @@ export default {
   title: 'List Items|ListItem',
 };
 
-export const defaultStory = () => <ListItem text={listItemText} />;
+export const defaultStory = () => (
+  <div style={{ maxWidth: '30rem' }}>
+    <ListItem text={listItemText} />
+  </div>
+);
 
 defaultStory.story = { name: 'default' };
 
 export const buttonStory = () => (
-  <ListItem
-    button
-    disabled={boolean('disabled', false)}
-    onClick={action('clicked')}
-    text={text('Text', listItemText)}
-  />
+  <div style={{ maxWidth: '30rem' }}>
+    <ListItem
+      button
+      disabled={boolean('disabled', false)}
+      onClick={action('clicked')}
+      text={text('Text', listItemText)}
+    />
+  </div>
 );
 
 buttonStory.story = { name: 'button' };
 
-export const disabledStory = () => <ListItem disabled text={text('Text', listItemText)} />;
+export const disabledStory = () => (
+  <div style={{ maxWidth: '30rem' }}>
+    <ListItem disabled text={text('Text', listItemText)} />
+  </div>
+);
 
 disabledStory.story = { name: 'disabled' };
 
 export const icon = () => (
-  <ListItem
-    button={boolean('button', false)}
-    disabled={boolean('disabled', false)}
-    onClick={action('clicked')}
-    selected={boolean('selected', false)}
-    text={text('Text', listItemText)}
-  >
-    <ListItemIcon>{iconDictionary(select('Icon', iconOptions, iconDefault))}</ListItemIcon>
-  </ListItem>
+  <div style={{ maxWidth: '30rem' }}>
+    <ListItem
+      button={boolean('button', false)}
+      disabled={boolean('disabled', false)}
+      onClick={action('clicked')}
+      selected={boolean('selected', false)}
+      text={text('Text', listItemText)}
+    >
+      <ListItemIcon>{iconDictionary(select('Icon', iconOptions, iconDefault))}</ListItemIcon>
+    </ListItem>
+  </div>
 );
 
 icon.story = { name: 'icon' };
 
 export const selectedStory = () => (
-  <ListItem
-    button={boolean('button', false)}
-    disabled={boolean('disabled', false)}
-    selected
-    text={text('Text', listItemText)}
-  />
+  <div style={{ maxWidth: '30rem' }}>
+    <ListItem
+      button={boolean('button', false)}
+      disabled={boolean('disabled', false)}
+      selected
+      text={text('Text', listItemText)}
+    />
+  </div>
 );
 
 selectedStory.story = { name: 'selected' };

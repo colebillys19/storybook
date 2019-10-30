@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Tooltip from '@material-ui/core/Tooltip';
+import { greyBorder, muiBoxShadow } from '../../../utils/defaultStyleHelper';
 
 export const StyledTooltip = styled((props) => (
   <Tooltip
@@ -8,7 +9,13 @@ export const StyledTooltip = styled((props) => (
     {...props}
   />
 ))`
+  opacity: 1;
   & .tooltip {
-    font-size: 1rem;
+    background-color: white;
+    border: ${greyBorder};
+    box-shadow: ${muiBoxShadow};
+    color: black;
+    font-size: 1.3rem;
+    padding: 0;
   }
 `;

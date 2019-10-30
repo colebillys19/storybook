@@ -10,11 +10,11 @@ import iconDictionary from '../../../utils/iconDictionary';
 import BasePaper from '../BasePaper';
 
 const paddingOptions = {
-  '1rem': '1rem',
-  '2rem': '2rem',
-  '3rem': '3rem',
+  '1rem 3rem': '1rem 3rem',
+  '2rem 4rem': '2rem 4rem',
+  '3rem 5rem': '3rem 5rem',
 };
-const paddingDefault = '2rem';
+const paddingDefault = '2rem 4rem';
 
 const paperText = 'paper text';
 
