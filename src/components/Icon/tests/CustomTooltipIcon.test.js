@@ -19,7 +19,7 @@ global.document.createRange = () => ({
   setStart: () => {},
 });
 
-const icon = iconDictionary('star', 'medium', 'button');
+const icon = iconDictionary('star', 'medium');
 const tooltipContent = <span>tooltip content</span>;
 
 describe('<CustomTooltipIcon />', () => {

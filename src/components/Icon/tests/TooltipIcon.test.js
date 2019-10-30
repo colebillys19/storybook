@@ -19,14 +19,15 @@ global.document.createRange = () => ({
   setStart: () => {},
 });
 
-const icon = iconDictionary('star', 'medium', 'button');
-const tooltipContent = <span>tooltip content</span>;
+const icon = iconDictionary('star', 'medium');
+
+const tooltipText = 'tooltip text';
 
 describe('<TooltipIcon />', () => {
   const component = (
     <TooltipIcon
       Icon={icon}
-      TooltipContent={tooltipContent}
+      tooltipText={tooltipText}
     />
   );
   checkBasicRendering(component);

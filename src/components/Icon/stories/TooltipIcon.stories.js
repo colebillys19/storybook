@@ -27,10 +27,12 @@ export default {
   title: 'Icons|TooltipIcon',
 };
 
+const tooltipText = 'tooltip text';
+
 export const defaultStory = () => (
   <TooltipIcon
     Icon={iconDictionary('inbox', 'medium')}
-    tooltipText={text('Tooltip Text', 'tooltip text')}
+    tooltipText={text('Tooltip Text', tooltipText)}
   />
 );
 
