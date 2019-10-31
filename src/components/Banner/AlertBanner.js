@@ -31,9 +31,9 @@ AlertBanner.propTypes = {
   /**
    * Button text to be displayed within the banner.
    */
-  buttonText: T.string.isRequired,
+  buttonText: T.string,
   /**
-   * Callback function to run when button is clicked.
+   * Function to run when button is clicked.
    */
   onClick: T.func,
 };

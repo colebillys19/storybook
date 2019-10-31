@@ -20,7 +20,7 @@ const SuccessIcon = iconDictionary('successOutline', 'mediumSmall');
 const WarningIcon = iconDictionary('warning', 'mediumSmall');
 
 /**
- * Use `ErrorSuccessBanner` to display either an error or success message.
+ * Use `ErrorSuccessBanner` to display either an error or success message. Make sure
  */
 const ErrorSuccessBanner = ({
   error,
@@ -58,13 +58,22 @@ const ErrorSuccessBanner = ({
 
 ErrorSuccessBanner.propTypes = {
   /**
-   * Error messsage displayed in banner.
+   * Error message to be displayed in the banner.
    */
-  error: T.oneOfType([T.bool, T.object]).isRequired,
+  error: T.oneOfType([T.bool, T.object]),
   /**
-   * Success messsage displayed in banner.
+   * Function to be run when the user closes the banner.
    */
-  success: T.oneOfType([T.bool, T.object]).isRequired,
+  onClose: T.func,
+  /**
+   * Success messsage to be displayed in the banner.
+   */
+  success: T.oneOfType([T.bool, T.object]),
+};
+
+ErrorSuccessBanner.defaultProps = {
+  error: false,
+  success: false,
 };
 
 export default ErrorSuccessBanner;
