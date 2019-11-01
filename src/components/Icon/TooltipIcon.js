@@ -6,7 +6,6 @@ import { StyledTooltip } from './styles/TooltipIcon.styles';
  * Use `TooltipIcon` when tooltip content is needed on hover of an icon.
  */
 const TooltipIcon = ({
-  forwardedRef,
   Icon,
   iconProps,
   placement,
@@ -18,7 +17,6 @@ const TooltipIcon = ({
   if (!tooltipText) return Icon;
   return (
     <StyledTooltip
-      ref={forwardedRef}
       placement={placement}
       title={tooltipText}
       {...restProps}
@@ -29,13 +27,6 @@ const TooltipIcon = ({
 };
 
 TooltipIcon.propTypes = {
-  /**
-   * The ref forwarded to the root element.
-   */
-  forwardedRef: T.oneOfType([
-    T.func,
-    T.shape({ current: T.any }),
-  ]),
   /**
    * (SVG) Icon to render if provided. Icons should be selected and styled through the
    * iconDictionary before reaching this component.

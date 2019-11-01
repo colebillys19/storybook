@@ -1,9 +1,3 @@
-/**
-*
-* BasePaper
-* @description Material-ui paper component
-* Use Case : When you need an already styled card with a box shadow and a white background.
-*/
 import React from 'react';
 import T from 'prop-types';
 import StyledPaper from './styles/BasePaper.styles';
@@ -13,13 +7,9 @@ import StyledPaper from './styles/BasePaper.styles';
  */
 const BasePaper = ({
   children,
-  forwardedRef,
   ...restProps
 }) => (
-  <StyledPaper
-    ref={forwardedRef}
-    {...restProps}
-  >
+  <StyledPaper {...restProps}>
     {children}
   </StyledPaper>);
 
@@ -42,13 +32,6 @@ BasePaper.propTypes = {
    * It accepts values between 0 and 24 inclusive.
    */
   elevation: T.number,
-  /**
-   * The ref forwarded to the root element.
-   */
-  ref: T.oneOfType([
-    T.func,
-    T.shape({ current: T.any }),
-  ]),
   /**
    * If true, rounded corners are disabled.
    */

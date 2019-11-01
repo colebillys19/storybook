@@ -27,7 +27,6 @@ const iconOptions = {
   profile: 'profile',
   star: 'star',
 };
-
 const iconDefault = 'star';
 
 export default {
@@ -74,7 +73,7 @@ export const icon = () => (
       selected={boolean('selected', false)}
       text={text('Text', listItemText)}
     >
-      <ListItemIcon>{iconDictionary(select('Icon', iconOptions, iconDefault))}</ListItemIcon>
+      <ListItemIcon>{iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall')}</ListItemIcon>
     </ListItem>
   </div>
 );
