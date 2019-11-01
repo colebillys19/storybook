@@ -1,4 +1,4 @@
-import LoadingIndicatorNormal from './LoadingIndicatorNormal';
-import LoadingIndicatorSmall from './LoadingIndicatorSmall';
+import LoadingIndicator from './LoadingIndicator';
+import SmallLoadingIndicator from './SmallLoadingIndicator';
 
-export { LoadingIndicatorNormal, LoadingIndicatorSmall };
+export { LoadingIndicator, SmallLoadingIndicator };

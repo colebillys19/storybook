@@ -1,7 +1,8 @@
 import React from 'react';
 import T from 'prop-types';
-import BaseButton from './BaseButton';
 
+import BaseButton from './BaseButton';
+import ForwardRef from '../../utils/ForwardRef';
 import { StyledTooltip } from './styles/TooltipButton.styles';
 
 /**
@@ -18,7 +19,7 @@ const TooltipButton = ({
     placement={placement}
     title={tooltipText}
   >
-    <BaseButton {...restProps} />
+    <ForwardRef Component={BaseButton} {...restProps} />
   </StyledTooltip>
 );
 

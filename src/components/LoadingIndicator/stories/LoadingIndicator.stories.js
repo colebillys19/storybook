@@ -5,13 +5,13 @@
 
 import React from 'react';
 
-import LoadingIndicatorNormal from '../LoadingIndicatorNormal';
+import LoadingIndicator from '../LoadingIndicator';
 
 export default {
-  parameters: { component: LoadingIndicatorNormal },
-  title: 'Loading Indicators|LoadingIndicatorNormal',
+  parameters: { component: LoadingIndicator },
+  title: 'Loading Indicators|LoadingIndicator',
 };
 
-export const defaultStory = () => <LoadingIndicatorNormal />;
+export const defaultStory = () => <LoadingIndicator />;
 
 defaultStory.story = { name: 'default' };

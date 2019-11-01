@@ -19,6 +19,7 @@ const BaseButton = ({
   ...restProps
 }) => (
   <StyledBaseButton
+    ref={forwardedRef}
     classes={{ label: 'label' }}
     disabled={disabled}
     disableFocusRipple={disableFocusRipple}
@@ -57,6 +58,13 @@ BaseButton.propTypes = {
    * If true, the ripple effect will be disabled.
    */
   disableRipple: T.bool,
+  /**
+   * Ref passed down from parent Tooltip component (if button is child of a tooltip).
+   */
+  forwardedRef: T.oneOfType([
+    T.func,
+    T.shape({ current: T.instanceOf(Element) }),
+  ]),
   /**
    * The URL to link to when the button is clicked. If defined, an element will be used as the root node.
    */
