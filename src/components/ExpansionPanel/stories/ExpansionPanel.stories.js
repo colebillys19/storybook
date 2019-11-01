@@ -35,7 +35,6 @@ const defaultExpansionTitle = 'Expansion Panel';
 
 const iconOptions = {
   arrowDown: 'arrowDown',
-  arrowDropDown: 'arrowDropDown',
   expandMore: 'expandMore',
 };
 

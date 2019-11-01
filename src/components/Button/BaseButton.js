@@ -1,31 +1,15 @@
-/**
-*
-* BaseButton
-* @description Button used as a base to create Main, Special, and Modal buttons
-* API Usage: {
-*   classes: (object) classes object created by Main, Special, or Modal buttons.
-*            The classes targets which Material-UI nested component to overwrite styling
-*   className: (string) the assigned className. If overwriting styles using styled-components,
-*               className must be included in order for the component to apply the proper styling.
-*   Icon: (SVG) Icon to render if provided. Icons should be selected and styled through the
-*         iconDictionary before reaching this component.
-*   label: Button label
-*   onClick: onClick handler
-*   styling: Styling object to override default styles. Only applies to the root styling.
-* }
-*/
-
 import React from 'react';
 import T from 'prop-types';
 
-import Cancel from '../../svg/Cancel';
 import ConditionalRender from '../../utils/ConditionalRender';
 import StyledBaseButton from './styles/BaseButton.styles';
+import iconDictionary from '../../utils/iconDictionary';
 
 /**
- * Use `BaseButton` when a button is needed.
+ * Basic button.
  */
 const BaseButton = ({
+  disabled,
   disableFocusRipple,
   disableRipple,
   forwardedRef,
@@ -35,15 +19,15 @@ const BaseButton = ({
   ...restProps
 }) => (
   <StyledBaseButton
-    ref={forwardedRef}
     classes={{ label: 'label' }}
+    disabled={disabled}
     disableFocusRipple={disableFocusRipple}
     disableRipple={disableRipple}
     onClick={onClick}
     variant="contained"
     {...restProps}
   >
-    <ConditionalRender Component={Icon || Cancel} shouldRender={!!Icon} />
+    <ConditionalRender Component={Icon || iconDictionary('cancel', 'mediumSmall')} shouldRender={!!Icon} />
     {label}
   </StyledBaseButton>
 );
@@ -73,10 +57,6 @@ BaseButton.propTypes = {
    * If true, the ripple effect will be disabled.
    */
   disableRipple: T.bool,
-  /**
-   * Used to wrap function components in React's forwardRef method to be used when implementing material UI tooltips.
-   */
-  forwardedRef: T.func,
   /**
    * The URL to link to when the button is clicked. If defined, an element will be used as the root node.
    */

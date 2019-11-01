@@ -1,8 +1,3 @@
-/**
- * ErrorBanner
- * @description: ...
- */
-
 import React, { useEffect, useState } from 'react';
 import T from 'prop-types';
 
@@ -11,16 +6,15 @@ import { errorRed, successGreen } from '../../utils/defaultStyleHelper';
 import {
   BannerWrapper,
   CloseButton,
-  Text,
-  IconWrapper,
+  Content,
 } from './styles/ErrorSuccessBanner.styles';
 
-const CloseIcon = iconDictionary('closeMenu', 'small');
+const CloseIcon = iconDictionary('close', 'small');
 const SuccessIcon = iconDictionary('successOutline', 'mediumSmall');
 const WarningIcon = iconDictionary('warning', 'mediumSmall');
 
 /**
- * Use `ErrorSuccessBanner` to display either an error or success message. Make sure
+ * Use `ErrorSuccessBanner` to display either an error or success message.
  */
 const ErrorSuccessBanner = ({
   error,
@@ -40,14 +34,15 @@ const ErrorSuccessBanner = ({
     }
   };
 
-  // eslint-disable-next-line
   const successProps = success && { color: successGreen, icon: SuccessIcon, message: success.message };
   const errorProps = error && { color: errorRed, icon: WarningIcon, message: error.message };
   const { color, icon, message } = successProps || errorProps || {};
   return (
     <BannerWrapper color={color} displayState={displayState} {...restProps}>
-      <IconWrapper>{icon}</IconWrapper>
-      <Text>{message}</Text>
+      <Content>
+        {icon}
+        <span>{message}</span>
+      </Content>
       <CloseButton
         Icon={CloseIcon}
         onClick={handleClose}
@@ -58,7 +53,7 @@ const ErrorSuccessBanner = ({
 
 ErrorSuccessBanner.propTypes = {
   /**
-   * Error message to be displayed in the banner.
+   * Error message to be displayed within the banner.
    */
   error: T.oneOfType([T.bool, T.object]),
   /**
@@ -66,7 +61,7 @@ ErrorSuccessBanner.propTypes = {
    */
   onClose: T.func,
   /**
-   * Success messsage to be displayed in the banner.
+   * Success messsage to be displayed within the banner.
    */
   success: T.oneOfType([T.bool, T.object]),
 };

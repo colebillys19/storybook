@@ -14,12 +14,6 @@ export const BannerWrapper = styled.div`
   transition: all .25s;
 `;
 
-export const IconWrapper = styled.div`
-  margin-left: 2rem;
-  position: relative;
-  top: 0.2rem;
-`;
-
 export const CloseButton = styled(FlatIconButton)`
   background-color: transparent;
   color: white;
@@ -28,6 +22,11 @@ export const CloseButton = styled(FlatIconButton)`
   padding: 0.6rem 1.6rem;
 `;
 
-export const Text = styled.div`
+export const Content = styled.div`
+  display: flex;
+  align-items: center;
   margin: 0rem 1rem;
+  span {
+    margin-left: 1rem;
+  }
 `;

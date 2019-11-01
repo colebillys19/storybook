@@ -1,26 +1,18 @@
-/**
- * AlertBanner
- * @description: ...
- */
-
 import React from 'react';
 import T from 'prop-types';
 
-import { AlertButton, AlertText, Wrapper } from './styles/AlertBanner.styles';
-
+import { AlertButton, AlertText, BannerWrapper } from './styles/AlertBanner.styles';
 
 /**
  * Use `AlertBanner` to display an alert message.
  */
 const AlertBanner = ({ alertText, buttonText, onClick }) => (
-  <Wrapper>
+  <BannerWrapper>
     <AlertText>
-      <p>
-        {alertText}
-        {onClick && <AlertButton label={buttonText} onClick={onClick} />}
-      </p>
+      {alertText}
+      {onClick && <AlertButton label={buttonText} onClick={onClick} />}
     </AlertText>
-  </Wrapper>
+  </BannerWrapper>
 );
 
 AlertBanner.propTypes = {

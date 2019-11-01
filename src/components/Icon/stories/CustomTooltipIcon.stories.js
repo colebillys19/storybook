@@ -37,7 +37,7 @@ const divStyles = {
 };
 const tooltipContent = (
   <div style={containerStyles}>
-    {iconDictionary('imagePlaceholder', 'medium')}
+    {iconDictionary('image', 'medium')}
     <div style={divStyles}>some custom content here</div>
   </div>
 );

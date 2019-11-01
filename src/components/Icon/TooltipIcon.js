@@ -13,8 +13,9 @@ const TooltipIcon = ({
   tooltipText,
   ...restProps
 }) => {
-  const WrappedIcon = typeof Icon === 'function' ? <Icon {...iconProps} /> : Icon;
-  if (!tooltipText) return WrappedIcon;
+  // console.log('ICON', Icon);
+  // const WrappedIcon = typeof Icon === 'function' ? <Icon {...iconProps} /> : Icon;
+  if (!tooltipText) return Icon;
   return (
     <StyledTooltip
       ref={forwardedRef}
@@ -22,7 +23,7 @@ const TooltipIcon = ({
       title={tooltipText}
       {...restProps}
     >
-      {WrappedIcon}
+      {Icon}
     </StyledTooltip>
   );
 };

@@ -68,7 +68,7 @@ title.story = { name: 'title' };
 export const image = () => (
   <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
     <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
-      {iconDictionary('imagePlaceholder', 'large')}
+      {iconDictionary('image', 'large')}
     </div>
   </BaseCard>
 );

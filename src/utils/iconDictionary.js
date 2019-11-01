@@ -11,14 +11,10 @@ import Star from '@material-ui/icons/Star';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Warning from '@material-ui/icons/Warning';
-
-import {
-  ArrowDown,
-  Cancel,
-  CloseMenu,
-  ImagePlaceholder,
-  Profile,
-} from '../svg';
+import Cancel from '@material-ui/icons/Cancel';
+import Close from '@material-ui/icons/Close';
+import Image from '@material-ui/icons/Image';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 
 import { iconStyle, iconSize } from './defaultStyleHelper';
 
@@ -36,16 +32,15 @@ import { iconStyle, iconSize } from './defaultStyleHelper';
 
 export default (name, size, style, options) => {
   const icons = {
-    arrowDown: ArrowDown,
-    arrowDropDown: ArrowDropDown,
+    arrowDown: ArrowDropDown,
     cancel: Cancel,
-    closeMenu: CloseMenu,
+    close: Close,
     dollar: AttachMoney,
     expandMore: ExpandMore,
-    imagePlaceholder: ImagePlaceholder,
+    image: Image,
     inbox: Inbox,
     plus1: ExposurePlus1,
-    profile: Profile,
+    profile: AccountCircle,
     star: Star,
     successOutline: CheckCircleOutline,
     visibility: Visibility,

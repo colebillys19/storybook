@@ -37,7 +37,7 @@ defaultStory.story = { name: 'default' };
 export const image = () => (
   <BasePaper>
     <div style={{ padding: select('Paper Content Padding', paddingOptions, paddingDefault) }}>
-      {iconDictionary('imagePlaceholder', 'large')}
+      {iconDictionary('image', 'large')}
     </div>
   </BasePaper>
 );

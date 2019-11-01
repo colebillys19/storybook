@@ -15,7 +15,7 @@
  */
 
 import React from 'react';
-import { text, withKnobs } from '@storybook/addon-knobs';
+import { text, select, withKnobs } from '@storybook/addon-knobs';
 
 import TooltipIcon from '../TooltipIcon';
 
@@ -27,13 +27,37 @@ export default {
   title: 'Icons|TooltipIcon',
 };
 
+const iconOptions = {
+  cancel: 'cancel',
+  inbox: 'inbox',
+  profile: 'profile',
+  star: 'star',
+};
+const iconDefault = 'inbox';
+
+const sizeOptions = {
+  large: 'large',
+  medium: 'medium',
+  mediumLarge: 'mediumLarge',
+  mediumSmall: 'mediumSmall',
+  small: 'small',
+  xSmall: 'xSmall',
+};
+const sizeDefault = 'medium';
+
 const tooltipText = 'tooltip text';
 
-export const defaultStory = () => (
-  <TooltipIcon
-    Icon={iconDictionary('inbox', 'medium')}
-    tooltipText={text('Tooltip Text', tooltipText)}
-  />
-);
+export const defaultStory = () => {
+  const icon = iconDictionary(
+    select('Icon', iconOptions, iconDefault),
+    select('Icon Size', sizeOptions, sizeDefault),
+  );
+  return (
+    <TooltipIcon
+      Icon={icon}
+      tooltipText={text('Tooltip Text', tooltipText)}
+    />
+  );
+};
 
 defaultStory.story = { name: 'default' };

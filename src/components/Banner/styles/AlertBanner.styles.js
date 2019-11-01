@@ -3,32 +3,26 @@ import styled from 'styled-components';
 import { borderStyle, borderWidth, ssRed } from '../../../utils/defaultStyleHelper';
 import TextButton from '../../Button/TextButton';
 
-export const Wrapper = styled.section`
+export const BannerWrapper = styled.section`
   align-items: center;
   background-color: white;
   border-top-color: ${ssRed};
   border-top-style: ${borderStyle};
   border-top-width: ${borderWidth};
   display: flex;
-  min-height: max-content;
-  padding: 2rem;
+  min-height: 2.4rem;
+  padding: 1.4rem;
 `;
 
 export const AlertButton = styled(TextButton)`
+  display: relative;
   font-size: 1.4rem;
-  line-height: 1.5rem;
   margin: 0 0 0 0.4rem;
-  padding-bottom: 0.3rem;
+  bottom: 0.1rem;
 `;
 
-export const AlertText = styled.div`
-  p {
-    line-height: 2rem;
-    margin: 0;
-    width: 100%;
-  }
-  align-items: center;  
+export const AlertText = styled.p`
   display: flex;
-  flex-wrap: wrap;
-  text-align: left;
+  align-items: center;
+  margin: 0;
 `;
