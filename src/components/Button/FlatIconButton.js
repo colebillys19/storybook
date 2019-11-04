@@ -26,7 +26,7 @@ FlatIconButton.propTypes = {
   disableFocusRipple: T.bool,
   disableRipple: T.bool,
   href: T.string,
-  Icon: T.oneOfType([T.object, T.func]),
+  Icon: T.oneOfType([T.object, T.func]).isRequired,
   label: T.oneOfType([T.string, T.element]),
   onClick: T.func.isRequired,
   target: T.string,

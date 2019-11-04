@@ -27,12 +27,10 @@ addParameters({
   ]
 });
 
-const design = requireContext('../src/design', true, /\.stories\.(js|mdx)$/);
 const components = requireContext('../src/components', true, /\.stories\.(js|mdx)$/);
-const documentation = requireContext('../src/documentation', true, /\.stories\.(js|mdx)$/);
+// const design = requireContext('../src/design', true, /\.stories\.(js|mdx)$/);
+// const documentation = requireContext('../src/documentation', true, /\.stories\.(js|mdx)$/);
 
 configure([
-  design,
   components,
-  documentation,
 ], module);

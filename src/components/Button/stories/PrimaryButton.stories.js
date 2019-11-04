@@ -4,7 +4,6 @@ import { withKnobs, select, text } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 
-import BaseButton from '../BaseButton';
 import PrimaryButton from '../PrimaryButton';
 
 const label = 'LABEL TEXT';
@@ -29,8 +28,7 @@ const sizeDefault = 'mediumSmall';
 
 export default {
   decorators: [withKnobs],
-  includeStories: [],
-  parameters: { component: BaseButton },
+  parameters: { component: PrimaryButton },
   title: 'Buttons|PrimaryButton',
 };
 

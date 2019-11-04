@@ -9,7 +9,7 @@ import {
   Content,
 } from './styles/ErrorSuccessBanner.styles';
 
-const CloseIcon = iconDictionary('close', 'small');
+const CloseIcon = iconDictionary('close', 'mediumSmall');
 const SuccessIcon = iconDictionary('successOutline', 'mediumSmall');
 const WarningIcon = iconDictionary('warning', 'mediumSmall');
 

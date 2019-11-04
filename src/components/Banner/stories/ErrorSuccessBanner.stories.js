@@ -1,5 +1,6 @@
 import React from 'react';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { text, withKnobs } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 
 import ErrorSuccessBanner from '../ErrorSuccessBanner';
 
@@ -14,7 +15,7 @@ export default {
 export const errorStory = () => (
   <ErrorSuccessBanner
     error={{ message: text('Error Message', bannerProps.errorMessage) }}
-    success={false}
+    onClose={action('onClose')}
   />
 );
 
@@ -22,7 +23,7 @@ errorStory.story = { name: 'error' };
 
 export const successStory = () => (
   <ErrorSuccessBanner
-    error={false}
+    onClose={action('onClose')}
     success={{ message: text('Success Message', bannerProps.successMessage) }}
   />
 );

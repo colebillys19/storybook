@@ -28,7 +28,7 @@ export const buttonStory = () => (
   <AlertBanner
     alertText={text('Alert Text', bannerProps.alertText)}
     buttonText={text('Button Text', bannerProps.buttonText)}
-    onClick={action('onClickButton')}
+    onClick={action('onClick')}
   />
 );
 

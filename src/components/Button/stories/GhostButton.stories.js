@@ -27,8 +27,7 @@ const sizeDefault = 'mediumSmall';
 
 export default {
   decorators: [withKnobs],
-  includeStories: [],
-  parameters: { docs: { disable: true } },
+  parameters: { component: GhostButton },
   title: 'Buttons|GhostButton',
 };
 

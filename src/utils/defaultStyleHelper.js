@@ -55,12 +55,12 @@ export const iconSize = {
     width: '3rem',
   },
   medium: {
-    height: '5rem',
-    width: '5rem',
-  },
-  mediumLarge: {
     height: '3.5rem',
     width: '3.5rem',
+  },
+  mediumLarge: {
+    height: '5rem',
+    width: '5rem',
   },
   mediumSmall: {
     height: '2rem',

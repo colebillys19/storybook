@@ -30,8 +30,7 @@ const sizeDefault = 'mediumSmall';
 
 export default {
   decorators: [withKnobs],
-  includeStories: [],
-  parameters: { component: BaseButton, docs: { disable: true } },
+  parameters: { component: BaseButton },
   title: 'Buttons|FlatIconButton',
 };
 
@@ -53,4 +52,4 @@ export const defaultStory = () => {
   );
 };
 
-defaultStory.story = { name: 'default', parameters: { docs: { disable: true } } };
+defaultStory.story = { name: 'default' };
