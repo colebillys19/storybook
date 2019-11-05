@@ -1,9 +1,9 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import TextButtonDocs from '../docs/TextButton.docs.mdx';
 
 import TextButton from '../TextButton';
+import TextButtonDocs from '../docs/TextButton.docs.mdx';
 
 const label = 'LABEL TEXT';
 

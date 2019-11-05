@@ -3,9 +3,6 @@ import T from 'prop-types';
 
 import { AlertButton, AlertText, BannerWrapper } from './styles/AlertBanner.styles';
 
-/**
- * Use `AlertBanner` to display an alert message.
- */
 const AlertBanner = ({
   alertText,
   buttonText,

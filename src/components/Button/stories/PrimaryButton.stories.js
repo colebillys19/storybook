@@ -3,8 +3,8 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
-
 import PrimaryButton from '../PrimaryButton';
+import PrimaryButtonDocs from '../docs/PrimaryButton.docs.mdx';
 
 const label = 'LABEL TEXT';
 
@@ -14,6 +14,7 @@ const iconOptions = {
   profile: 'profile',
   star: 'star',
 };
+
 const iconDefault = 'inbox';
 
 const sizeOptions = {
@@ -24,11 +25,12 @@ const sizeOptions = {
   small: 'small',
   xSmall: 'xSmall',
 };
+
 const sizeDefault = 'mediumSmall';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: PrimaryButton },
+  parameters: { component: PrimaryButton, docs: { page: PrimaryButtonDocs } },
   title: 'Buttons|PrimaryButton',
 };
 

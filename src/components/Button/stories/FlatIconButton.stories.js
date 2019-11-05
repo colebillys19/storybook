@@ -4,8 +4,7 @@ import { withKnobs, select, text } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import FlatIconButton from '../FlatIconButton';
-import BaseButton from '../BaseButton';
-
+import FlatIconButtonDocs from '../docs/FlatIconButton.docs.mdx';
 
 const label = 'LABEL TEXT';
 const tooltipText = 'tooltip text';
@@ -30,7 +29,7 @@ const sizeDefault = 'mediumSmall';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: BaseButton },
+  parameters: { component: FlatIconButton, docs: { page: FlatIconButtonDocs } },
   title: 'Buttons|FlatIconButton',
 };
 

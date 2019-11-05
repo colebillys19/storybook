@@ -2,12 +2,9 @@ import React from 'react';
 import T from 'prop-types';
 
 import ConditionalRender from '../../utils/ConditionalRender';
-import StyledBaseButton from './styles/BaseButton.styles';
+import { StyledBaseButton } from './styles/BaseButton.styles';
 import iconDictionary from '../../utils/iconDictionary';
 
-/**
- * Basic button.
- */
 const BaseButton = ({
   disabled,
   disableFocusRipple,
@@ -28,7 +25,10 @@ const BaseButton = ({
     variant="contained"
     {...restProps}
   >
-    <ConditionalRender Component={Icon || iconDictionary('cancel', 'mediumSmall')} shouldRender={!!Icon} />
+    <ConditionalRender
+      Component={Icon || iconDictionary('cancel', 'mediumSmall', 'button')}
+      shouldRender={!!Icon}
+    />
     {label}
   </StyledBaseButton>
 );
@@ -39,8 +39,8 @@ BaseButton.defaultProps = {
   disableRipple: true,
   label: '',
 };
-
 /* eslint-enable react/default-props-match-prop-types */
+
 BaseButton.propTypes = {
   /**
    * The component used for the root node. Either a string to use a DOM element or a component.
@@ -66,7 +66,8 @@ BaseButton.propTypes = {
     T.shape({ current: T.instanceOf(Element) }),
   ]),
   /**
-   * The URL to link to when the button is clicked. If defined, an element will be used as the root node.
+   * The URL to link to when the button is clicked.
+   * If defined, an element will be used as the root node.
    */
   href: T.string,
   /**

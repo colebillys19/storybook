@@ -4,7 +4,7 @@ import { withKnobs, select, text } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import BaseButton from '../BaseButton';
-import notes from '../readme/BaseButton.md';
+import BaseButtonDocs from '../docs/BaseButton.docs.mdx';
 
 const label = 'LABEL TEXT';
 
@@ -29,7 +29,7 @@ const sizeDefaultB = 'mediumSmall';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: BaseButton },
+  parameters: { component: BaseButton, docs: { page: BaseButtonDocs } },
   title: 'Buttons|BaseButton',
 };
 
@@ -43,7 +43,7 @@ export const defaultStory = () => (
   />
 );
 
-defaultStory.story = { name: 'text', parameters: { notes } };
+defaultStory.story = { name: 'text' };
 
 /** */
 export const iconStory = () => {

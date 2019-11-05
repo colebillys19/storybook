@@ -4,6 +4,7 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import IconButton from '../IconButton';
+import IconButtonDocs from '../docs/IconButton.docs.mdx';
 
 const iconOptions = {
   cancel: 'cancel',
@@ -25,7 +26,7 @@ const sizeDefault = 'mediumSmall';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: IconButton },
+  parameters: { component: IconButton, docs: { page: IconButtonDocs } },
   title: 'Buttons|IconButton',
 };
 

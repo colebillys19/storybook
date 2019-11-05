@@ -13,9 +13,6 @@ const CloseIcon = iconDictionary('close', 'mediumSmall');
 const SuccessIcon = iconDictionary('successOutline', 'mediumSmall');
 const WarningIcon = iconDictionary('warning', 'mediumSmall');
 
-/**
- * Use `ErrorSuccessBanner` to display either an error or success message.
- */
 const ErrorSuccessBanner = ({
   error,
   onClose,

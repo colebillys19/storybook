@@ -4,6 +4,7 @@ import { withKnobs, select, text } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import GhostButton from '../GhostButton';
+import GhostButtonDocs from '../docs/GhostButton.docs.mdx';
 
 const label = 'LABEL TEXT';
 
@@ -27,7 +28,7 @@ const sizeDefault = 'mediumSmall';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: GhostButton },
+  parameters: { component: GhostButton, docs: { page: GhostButtonDocs } },
   title: 'Buttons|GhostButton',
 };
 
