@@ -1,0 +1,16 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { withKnobs, select, text } from '@storybook/addon-knobs';
+
+import TextButton from '../TextButton';
+
+<Meta
+  decorators={[withKnobs]}
+  component={TextButton}
+  title="Buttons|TextButton"
+/>
+
+# TextButton
+
+Use ``TextButton`` when a button without button shadow or ripple effects is needed.
+
+<Props of={TextButton} />

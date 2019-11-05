@@ -3,16 +3,16 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
 import AlertBanner from '../AlertBanner';
+import AlertBannerDocs from '../docs/AlertBanner.docs.mdx';
 
 const bannerProps = {
   alertText: 'alert text',
   buttonText: 'button text',
 };
 
-
 export default {
   decorators: [withKnobs],
-  parameters: { component: AlertBanner },
+  parameters: { component: AlertBanner, docs: { page: AlertBannerDocs } },
   title: 'Banners|AlertBanner',
 };
 

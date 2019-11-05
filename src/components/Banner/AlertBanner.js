@@ -6,7 +6,11 @@ import { AlertButton, AlertText, BannerWrapper } from './styles/AlertBanner.styl
 /**
  * Use `AlertBanner` to display an alert message.
  */
-const AlertBanner = ({ alertText, buttonText, onClick }) => (
+const AlertBanner = ({
+  alertText,
+  buttonText,
+  onClick,
+}) => (
   <BannerWrapper>
     <AlertText>
       {alertText}
