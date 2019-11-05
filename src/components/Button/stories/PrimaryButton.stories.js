@@ -1,6 +1,11 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import PrimaryButton from '../PrimaryButton';
@@ -14,7 +19,6 @@ const iconOptions = {
   profile: 'profile',
   star: 'star',
 };
-
 const iconDefault = 'inbox';
 
 const sizeOptions = {
@@ -25,7 +29,6 @@ const sizeOptions = {
   small: 'small',
   xSmall: 'xSmall',
 };
-
 const sizeDefault = 'mediumSmall';
 
 export default {
@@ -34,7 +37,19 @@ export default {
   title: 'Buttons|PrimaryButton',
 };
 
-export const defaultStory = () => {
+/** */
+export const defaultStory = () => (
+  <PrimaryButton
+    disabled={boolean('Disabled', false)}
+    label={text('Label Text', label)}
+    onClick={action('onClickButton')}
+  />
+);
+
+defaultStory.story = { name: 'default' };
+
+/** */
+export const withIconStory = () => {
   const icon = iconDictionary(
     select('Icon', iconOptions, iconDefault),
     select('Icon Size', sizeOptions, sizeDefault),
@@ -42,6 +57,7 @@ export const defaultStory = () => {
   );
   return (
     <PrimaryButton
+      disabled={boolean('Disabled', false)}
       icon={icon}
       label={text('Label Text', label)}
       onClick={action('onClickButton')}
@@ -49,4 +65,4 @@ export const defaultStory = () => {
   );
 };
 
-defaultStory.story = { name: 'default' };
+withIconStory.story = { name: 'text + icon' };

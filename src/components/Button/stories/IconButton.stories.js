@@ -1,6 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import IconButton from '../IconButton';
@@ -31,7 +31,7 @@ export default {
 };
 
 export const defaultStory = () => (
-  <IconButton onClick={action('onClickButton')}>
+  <IconButton disabled={boolean('Disabled', false)} onClick={action('onClickButton')}>
     {iconDictionary(
       select('Icon', iconOptions, iconDefault),
       select('Icon Size', sizeOptions, sizeDefault)
@@ -40,14 +40,3 @@ export const defaultStory = () => (
 );
 
 defaultStory.story = { name: 'default' };
-
-export const disabledStory = () => (
-  <IconButton disabled onClick={action('onClickButton')}>
-    {iconDictionary(
-      select('Icon', iconOptions, iconDefault),
-      select('Icon Size', sizeOptions, sizeDefault)
-    )}
-  </IconButton>
-);
-
-disabledStory.story = { name: 'disabled' };

@@ -4,9 +4,6 @@ import BaseButton from '../BaseButton';
 import { msBrightPurple, msHoverPurple } from '../../../utils/defaultStyleHelper';
 
 export const StyledBaseButton = styled(BaseButton)`
-  &:active {
-    box-shadow: none;
-  }
   align-items: center;
   background: transparent;
   box-shadow: none;
@@ -18,6 +15,9 @@ export const StyledBaseButton = styled(BaseButton)`
   padding: 0;
   text-decoration: underline;
   text-transform: none;
+  &:active {
+    box-shadow: none;
+  }
   &:hover {
     background: transparent;
     box-shadow: none;

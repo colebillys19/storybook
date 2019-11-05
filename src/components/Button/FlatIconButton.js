@@ -6,7 +6,7 @@ import { StyledBaseButton, StyledTooltipButton } from './styles/FlatIconButton.s
 const FlatIconButton = (props) => {
   const { tooltipText, ...restProps } = props;
   if (tooltipText) return <StyledTooltipButton tooltipText={tooltipText} {...restProps} />;
-  return <StyledBaseButton {...props} />;
+  return <StyledBaseButton label="" {...props} />;
 };
 
 FlatIconButton.defaultProps = {
@@ -21,8 +21,8 @@ FlatIconButton.propTypes = {
   disableRipple: T.bool,
   forwardedRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
   href: T.string,
-  Icon: T.oneOfType([T.object, T.func]),
-  label: T.oneOfType([T.string, T.element]).isRequired,
+  icon: T.oneOfType([T.object, T.func]),
+  label: T.oneOfType([T.string, T.element]),
   onClick: T.func.isRequired,
   target: T.string,
   to: T.string,

@@ -1,6 +1,11 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import BaseButton from '../BaseButton';
@@ -24,8 +29,7 @@ const sizeOptions = {
   small: 'small',
   xSmall: 'xSmall',
 };
-const sizeDefaultA = 'medium';
-const sizeDefaultB = 'mediumSmall';
+const sizeDefault = 'mediumSmall';
 
 export default {
   decorators: [withKnobs],
@@ -36,44 +40,24 @@ export default {
 /** */
 export const defaultStory = () => (
   <BaseButton
-    disableFocusRipple
-    disableRipple
+    disabled={boolean('Disabled', false)}
     label={text('Label Text', label)}
     onClick={action('onClickButton')}
   />
 );
 
-defaultStory.story = { name: 'text' };
+defaultStory.story = { name: 'default' };
 
 /** */
-export const iconStory = () => {
+export const withIconStory = () => {
   const icon = iconDictionary(
     select('Icon', iconOptions, iconDefault),
-    select('Icon Size', sizeOptions, sizeDefaultA),
-  );
-  return (
-    <BaseButton
-      disableFocusRipple
-      disableRipple
-      icon={icon}
-      onClick={action('onClickButton')}
-    />
-  );
-};
-
-iconStory.story = { name: 'icon' };
-
-/** */
-export const textIconStory = () => {
-  const icon = iconDictionary(
-    select('Icon', iconOptions, iconDefault),
-    select('Icon Size', sizeOptions, sizeDefaultB),
+    select('Icon Size', sizeOptions, sizeDefault),
     'button'
   );
   return (
     <BaseButton
-      disableFocusRipple
-      disableRipple
+      disabled={boolean('Disabled', false)}
       icon={icon}
       label={text('Label Text', label)}
       onClick={action('onClickButton')}
@@ -81,4 +65,4 @@ export const textIconStory = () => {
   );
 };
 
-textIconStory.story = { name: 'text + icon' };
+withIconStory.story = { name: 'with icon' };

@@ -29,7 +29,7 @@ export const StyledTooltipButton = styled(TooltipButton)`
   font-size: 1.4rem;
   font-weight: 500;
   margin: 1rem;
-  padding: 1rem 2.8rem;
+  padding: 0.5rem 1rem;
   text-transform: none;
   &:active {
     box-shadow: none;

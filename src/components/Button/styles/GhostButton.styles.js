@@ -6,12 +6,11 @@ import {
   greyBorder,
   msBrightPurple,
   msGreyHover,
-  msLightGrey,
 } from '../../../utils/defaultStyleHelper';
 
 export const StyledBaseButton = styled(BaseButton)`
   align-items: center;
-  background-color: ${msLightGrey};
+  background-color: transparent;
   border: ${greyBorder};
   box-shadow: none;
   color: ${msBrightPurple};

@@ -1,6 +1,11 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import GhostButton from '../GhostButton';
@@ -32,7 +37,19 @@ export default {
   title: 'Buttons|GhostButton',
 };
 
-export const defaultStory = () => {
+/** */
+export const defaultStory = () => (
+  <GhostButton
+    disabled={boolean('Disabled', false)}
+    label={text('Label Text', label)}
+    onClick={action('onClickButton')}
+  />
+);
+
+defaultStory.story = { name: 'default' };
+
+/** */
+export const withIconStory = () => {
   const icon = iconDictionary(
     select('Icon', iconOptions, iconDefault),
     select('Icon Size', sizeOptions, sizeDefault),
@@ -40,8 +57,7 @@ export const defaultStory = () => {
   );
   return (
     <GhostButton
-      disableFocusRipple
-      disableRipple
+      disabled={boolean('Disabled', false)}
       icon={icon}
       label={text('Label Text', label)}
       onClick={action('onClickButton')}
@@ -49,4 +65,4 @@ export const defaultStory = () => {
   );
 };
 
-defaultStory.story = { name: 'default' };
+withIconStory.story = { name: 'with icon' };

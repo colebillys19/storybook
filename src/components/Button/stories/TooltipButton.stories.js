@@ -1,6 +1,11 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import TooltipButton from '../TooltipButton';
@@ -61,7 +66,22 @@ export default {
   title: 'Buttons|TooltipButton',
 };
 
-export const defaultStory = () => {
+/** */
+export const defaultStory = () => (
+  <TooltipButton
+    disabled={boolean('Disabled', false)}
+    enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
+    label={text('Label Text', label)}
+    onClick={action('onClickButton')}
+    placement={select('Placement', placementOptions, placementDefault)}
+    tooltipText={text('Tooltip Text', tooltipText)}
+  />
+);
+
+defaultStory.story = { name: 'default' };
+
+/** */
+export const withIconStory = () => {
   const icon = iconDictionary(
     select('Icon', iconOptions, iconDefault),
     select('Icon Size', sizeOptions, sizeDefault),
@@ -69,8 +89,7 @@ export const defaultStory = () => {
   );
   return (
     <TooltipButton
-      disableFocusRipple
-      disableRipple
+      disabled={boolean('Disabled', false)}
       enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
       icon={icon}
       label={text('Label Text', label)}
@@ -81,4 +100,4 @@ export const defaultStory = () => {
   );
 };
 
-defaultStory.story = { name: 'default' };
+withIconStory.story = { name: 'text + icon' };

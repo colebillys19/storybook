@@ -1,12 +1,16 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import FlatIconButton from '../FlatIconButton';
 import FlatIconButtonDocs from '../docs/FlatIconButton.docs.mdx';
 
-const label = 'LABEL TEXT';
 const tooltipText = 'tooltip text';
 
 const iconOptions = {
@@ -25,7 +29,7 @@ const sizeOptions = {
   small: 'small',
   xSmall: 'xSmall',
 };
-const sizeDefault = 'mediumSmall';
+const sizeDefault = 'medium';
 
 export default {
   decorators: [withKnobs],
@@ -37,14 +41,11 @@ export const defaultStory = () => {
   const icon = iconDictionary(
     select('Icon', iconOptions, iconDefault),
     select('Icon Size', sizeOptions, sizeDefault),
-    'button'
   );
   return (
     <FlatIconButton
-      disableFocusRipple
-      disableRipple
+      disabled={boolean('Disabled', false)}
       icon={icon}
-      label={text('Label Text', label)}
       onClick={action('onClickButton')}
       tooltipText={text('Tooltip Text', tooltipText)}
     />

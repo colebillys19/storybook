@@ -7,9 +7,6 @@ import {
 } from '../../../utils/defaultStyleHelper';
 
 export const StyledBaseButton = styled(BaseButton)`
-  &:active {
-    box-shadow: none;
-  }
   align-items: center;
   background-color: ${msMainGreen};
   box-shadow: none;
@@ -19,6 +16,9 @@ export const StyledBaseButton = styled(BaseButton)`
   margin: 1rem;
   padding: 1rem 2.8rem;
   text-transform: none;
+  &:active {
+    box-shadow: none;
+  }
   &:hover {
     background-color: ${msHoverGreen};
   }
