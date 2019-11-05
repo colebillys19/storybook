@@ -1,0 +1,25 @@
+import styled from 'styled-components';
+import BaseButton from '../BaseButton';
+
+import {
+  msHoverGreen,
+  msMainGreen,
+} from '../../../utils/defaultStyleHelper';
+
+export const StyledBaseButton = styled(BaseButton)`
+  &:active {
+    box-shadow: none;
+  }
+  align-items: center;
+  background-color: ${msMainGreen};
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 1rem;
+  padding: 1rem 2.8rem;
+  text-transform: none;
+  &:hover {
+    background-color: ${msHoverGreen};
+  }
+`;

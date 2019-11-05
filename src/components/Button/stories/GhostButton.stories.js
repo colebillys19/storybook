@@ -42,7 +42,7 @@ export const defaultStory = () => {
     <GhostButton
       disableFocusRipple
       disableRipple
-      Icon={icon}
+      icon={icon}
       label={text('Label Text', label)}
       onClick={action('onClickButton')}
     />

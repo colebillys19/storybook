@@ -5,42 +5,45 @@ import BaseButton from './BaseButton';
 import ForwardRef from '../../utils/ForwardRef';
 import { StyledTooltip } from './styles/TooltipButton.styles';
 
-/**
- * Use `TooltipButton` when a button with a tooltip displayed on hover is needed.
- */
-const TooltipButton = ({
-  enterDelay,
-  placement,
-  tooltipText,
-  ...restProps
-}) => (
-  <StyledTooltip
-    enterDelay={enterDelay}
-    placement={placement}
-    title={tooltipText}
-  >
-    <ForwardRef Component={BaseButton} {...restProps} />
-  </StyledTooltip>
-);
+const TooltipButton = (props) => {
+  const {
+    enterDelay,
+    placement,
+    tooltipText,
+    ...restProps
+  } = props;
+  return (
+    <StyledTooltip
+      enterDelay={enterDelay}
+      placement={placement}
+      title={tooltipText}
+    >
+      <ForwardRef Component={BaseButton} {...restProps} />
+    </StyledTooltip>
+  );
+};
 
 TooltipButton.defaultProps = {
+  disableFocusRipple: true,
+  disableRipple: true,
   enterDelay: 100,
   placement: 'top',
 };
 
 TooltipButton.propTypes = {
-  /**
-   * The number of milliseconds to wait before showing the tooltip.
-   * This prop won't impact the enter touch delay.
-   */
+  component: T.func,
+  disabled: T.bool,
+  disableFocusRipple: T.bool,
+  disableRipple: T.bool,
   enterDelay: T.number,
-  /**
-   * The Tooltip placement.
-   */
+  forwardedRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
+  href: T.string,
+  icon: T.oneOfType([T.object, T.func]),
+  label: T.oneOfType([T.string, T.element]).isRequired,
+  onClick: T.func.isRequired,
   placement: T.string,
-  /**
-   * The Tooltip text. Zero-length titles string are never displayed.
-   */
+  target: T.string,
+  to: T.string,
   tooltipText: T.string.isRequired,
 };
 

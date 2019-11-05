@@ -55,7 +55,7 @@ export const iconStory = () => {
     <BaseButton
       disableFocusRipple
       disableRipple
-      Icon={icon}
+      icon={icon}
       onClick={action('onClickButton')}
     />
   );
@@ -74,7 +74,7 @@ export const textIconStory = () => {
     <BaseButton
       disableFocusRipple
       disableRipple
-      Icon={icon}
+      icon={icon}
       label={text('Label Text', label)}
       onClick={action('onClickButton')}
     />

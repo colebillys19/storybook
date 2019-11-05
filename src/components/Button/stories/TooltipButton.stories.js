@@ -72,7 +72,7 @@ export const defaultStory = () => {
       disableFocusRipple
       disableRipple
       enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
-      Icon={icon}
+      icon={icon}
       label={text('Label Text', label)}
       onClick={action('onClickButton')}
       placement={select('Placement', placementOptions, placementDefault)}

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import Button from '@material-ui/core/Button';
+
+import BaseButton from '../BaseButton';
 
 import { msBrightPurple, msHoverPurple } from '../../../utils/defaultStyleHelper';
 
-export const StyledBaseButton = styled(Button)`
+export const StyledBaseButton = styled(BaseButton)`
   align-items: center;
   background-color: ${msBrightPurple};
   box-shadow: none;

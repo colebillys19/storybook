@@ -2,9 +2,11 @@
 export const msBrightPurple = '#310078';
 export const msDarkGrey = '#686c77';
 export const msDeepPurple = '#230049';
+export const msGreyHover = '#e3e3e3';
 export const msHoverPurple = '#2a0063';
 export const msLightGrey = '#f2f2f2';
 export const msMainGreen = '#00db7d';
+export const msHoverGreen = '#1be08c';
 
 // silver site colors
 export const ssDarkBlue = '#0E2043';

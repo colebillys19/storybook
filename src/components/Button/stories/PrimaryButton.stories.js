@@ -42,9 +42,7 @@ export const defaultStory = () => {
   );
   return (
     <PrimaryButton
-      disableFocusRipple
-      disableRipple
-      Icon={icon}
+      icon={icon}
       label={text('Label Text', label)}
       onClick={action('onClickButton')}
     />

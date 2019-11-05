@@ -43,7 +43,7 @@ export const defaultStory = () => {
     <FlatIconButton
       disableFocusRipple
       disableRipple
-      Icon={icon}
+      icon={icon}
       label={text('Label Text', label)}
       onClick={action('onClickButton')}
       tooltipText={text('Tooltip Text', tooltipText)}
