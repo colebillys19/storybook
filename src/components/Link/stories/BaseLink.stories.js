@@ -1,6 +1,6 @@
 /**
  * @description Base Link to be used throughout Silver Site
- * @property Icon: (SVG) Icon to render if provided. Icons should be selected and styled through the
+ * @property icon: (SVG) Icon to render if provided. Icons should be selected and styled through the
  *                       iconDictionary before reaching this component
  * @property label: (string|array) Text link label
  * @property path: (string|array) Relative url representing the location to link to
@@ -56,7 +56,7 @@ export const defaultStory = () => (
 
 defaultStory.story = { name: 'default' };
 
-export const icon = () => (
+export const iconStory = () => (
   <BaseLink
     Icon={iconDictionary(
       select('Icon', iconOptions, iconDefault),
@@ -68,4 +68,4 @@ export const icon = () => (
   />
 );
 
-icon.story = { name: 'icon' };
+iconStory.story = { name: 'icon' };

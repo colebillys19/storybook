@@ -9,15 +9,15 @@ import {
 import iconDictionary from '../../../utils/iconDictionary';
 import RoundIconButton from '../RoundIconButton';
 
-const inboxIcon = iconDictionary('inbox', 'mediumSmall', 'button');
+const InboxIcon = iconDictionary('inbox', 'mediumSmall', 'button');
 
 describe('<RoundIconButton />', () => {
   const onClick = jest.fn();
-  const component = <RoundIconButton onClick={onClick}>{inboxIcon}</RoundIconButton>;
+  const component = <RoundIconButton onClick={onClick}>{InboxIcon}</RoundIconButton>;
 
   checkBasicRendering(component);
   checkRequiredProps(component);
-  checkSimpleChild(component, inboxIcon);
+  checkSimpleChild(component, InboxIcon);
 
   it('calls onClick when button is clicked', () => {
     const { container } = render(component);

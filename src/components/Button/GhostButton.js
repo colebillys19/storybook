@@ -22,7 +22,7 @@ GhostButton.propTypes = {
   /**
    * Icon to be displayed within the button.
    */
-  icon: T.oneOfType([T.object, T.func]),
+  Icon: T.oneOfType([T.object, T.func]),
   /**
    * String to be displayed within the button.
    */

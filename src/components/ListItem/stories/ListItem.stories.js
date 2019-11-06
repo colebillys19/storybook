@@ -64,7 +64,7 @@ export const disabledStory = () => (
 
 disabledStory.story = { name: 'disabled' };
 
-export const icon = () => (
+export const iconStory = () => (
   <div style={{ maxWidth: '30rem' }}>
     <ListItem
       button={boolean('button', false)}
@@ -78,7 +78,7 @@ export const icon = () => (
   </div>
 );
 
-icon.story = { name: 'icon' };
+iconStory.story = { name: 'icon' };
 
 export const selectedStory = () => (
   <div style={{ maxWidth: '30rem' }}>

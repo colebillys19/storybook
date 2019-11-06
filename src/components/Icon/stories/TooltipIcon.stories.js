@@ -48,13 +48,13 @@ const sizeDefault = 'medium';
 const tooltipText = 'tooltip text';
 
 export const defaultStory = () => {
-  const icon = iconDictionary(
+  const Icon = iconDictionary(
     select('Icon', iconOptions, iconDefault),
     select('Icon Size', sizeOptions, sizeDefault),
   );
   return (
     <TooltipIcon
-      Icon={icon}
+      Icon={Icon}
       tooltipText={text('Tooltip Text', tooltipText)}
     />
   );

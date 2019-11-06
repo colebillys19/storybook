@@ -51,13 +51,13 @@ export default {
 };
 
 export const defaultStory = () => {
-  const icon = iconDictionary(
+  const Icon = iconDictionary(
     select('Icon', iconOptions, iconDefault),
     select('Icon Size', sizeOptions, sizeDefault),
   );
   return (
     <CustomTooltipIcon
-      Icon={icon}
+      Icon={Icon}
       interactiveTooltip={boolean('Interactive Tooltip', false)}
       TooltipContent={tooltipContent}
     />

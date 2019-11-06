@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import Button from '@material-ui/core/Button';
+import BaseButton from '../BaseButton';
 
 import TooltipButton from '../TooltipButton';
 
-export const StyledBaseButton = styled(Button)`
+export const StyledBaseButton = styled(BaseButton)`
   align-items: center;
   background-color: transparent;
   box-shadow: none;

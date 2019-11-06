@@ -72,12 +72,12 @@ defaultStory.story = { name: 'default' };
 
 /** */
 export const withIconStory = () => {
-  const icon = iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall', 'button');
+  const Icon = iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall', 'button');
   return (
     <TooltipButton
       disabled={boolean('Disabled', false)}
       enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
-      icon={icon}
+      Icon={Icon}
       label={text('Label Text', label)}
       onClick={action('onClickButton')}
       placement={select('Placement', placementOptions, placementDefault)}

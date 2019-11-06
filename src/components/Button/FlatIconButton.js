@@ -28,7 +28,7 @@ FlatIconButton.propTypes = {
   /**
    * Icon to be displayed within the button.
    */
-  icon: T.oneOfType([T.object, T.func]).isRequired,
+  Icon: T.oneOfType([T.object, T.func]).isRequired,
   /**
    * Function to be run when a user clicks the button.
    */

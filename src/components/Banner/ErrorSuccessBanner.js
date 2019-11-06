@@ -31,13 +31,13 @@ const ErrorSuccessBanner = ({
     }
   };
 
-  const successProps = success && { color: successGreen, icon: SuccessIcon, message: success.message };
-  const errorProps = error && { color: errorRed, icon: WarningIcon, message: error.message };
-  const { color, icon, message } = successProps || errorProps || {};
+  const successProps = success && { color: successGreen, Icon: SuccessIcon, message: success.message };
+  const errorProps = error && { color: errorRed, Icon: WarningIcon, message: error.message };
+  const { color, Icon, message } = successProps || errorProps || {};
   return (
     <BannerWrapper color={color} displayState={displayState} {...restProps}>
       <Content>
-        {icon}
+        {Icon}
         <span>{message}</span>
       </Content>
       <CloseButton

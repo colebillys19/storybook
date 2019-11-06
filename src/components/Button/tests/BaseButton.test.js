@@ -8,13 +8,13 @@ import {
 import iconDictionary from '../../../utils/iconDictionary';
 import BaseButton from '../BaseButton';
 
-const inboxIcon = iconDictionary('inbox', 'mediumSmall', 'button');
+const InboxIcon = iconDictionary('inbox', 'mediumSmall', 'button');
 
 describe('<BaseButton />', () => {
   const onClick = jest.fn();
   const component = (
     <BaseButton
-      Icon={inboxIcon}
+      Icon={InboxIcon}
       label="label text"
       onClick={onClick}
     />

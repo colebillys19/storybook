@@ -10,7 +10,7 @@ const BaseButton = ({
   disableFocusRipple,
   disableRipple,
   forwardedRef,
-  icon,
+  Icon,
   label,
   onClick,
   ...restProps
@@ -26,8 +26,8 @@ const BaseButton = ({
     {...restProps}
   >
     <ConditionalRender
-      Component={icon || iconDictionary('cancel', 'mediumSmall', 'button')}
-      shouldRender={!!icon}
+      Component={Icon || iconDictionary('cancel', 'mediumSmall', 'button')}
+      shouldRender={!!Icon}
     />
     {label}
   </StyledBaseButton>
@@ -50,7 +50,7 @@ BaseButton.propTypes = {
   /**
    * Icon to be displayed within the button.
    */
-  icon: T.oneOfType([T.object, T.func]),
+  Icon: T.oneOfType([T.object, T.func]),
   /**
    * String to be displayed within the button.
    */

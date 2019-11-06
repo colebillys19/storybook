@@ -31,14 +31,14 @@ export default {
 };
 
 export const defaultStory = () => {
-  const icon = iconDictionary(
+  const Icon = iconDictionary(
     select('Icon', iconOptions, iconDefault),
     select('Icon Size', sizeOptions, sizeDefault)
   );
   return (
     <RoundIconButton
       disabled={boolean('Disabled', false)}
-      icon={icon}
+      Icon={Icon}
       onClick={action('onClickButton')}
     />
   );

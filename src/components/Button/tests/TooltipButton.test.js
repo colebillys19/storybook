@@ -18,13 +18,13 @@ global.document.createRange = () => ({
   setStart: () => {},
 });
 
-const inboxIcon = iconDictionary('inbox', 'mediumSmall', 'button');
+const InboxIcon = iconDictionary('inbox', 'mediumSmall', 'button');
 
 describe('<TooltipButton />', () => {
   const onClick = jest.fn();
   const component = (
     <TooltipButton
-      Icon={inboxIcon}
+      Icon={InboxIcon}
       label="label text"
       onClick={onClick}
       tooltipText="tooltip text"

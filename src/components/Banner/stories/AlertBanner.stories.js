@@ -32,4 +32,4 @@ export const buttonStory = () => (
   />
 );
 
-buttonStory.story = { name: 'button' };
+buttonStory.story = { name: 'with button' };

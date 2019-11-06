@@ -40,11 +40,11 @@ defaultStory.story = { name: 'default' };
 
 /** */
 export const withIconStory = () => {
-  const icon = iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall', 'button');
+  const Icon = iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall', 'button');
   return (
     <SecondaryButton
       disabled={boolean('Disabled', false)}
-      icon={icon}
+      Icon={Icon}
       label={text('Label Text', label)}
       onClick={action('onClickButton')}
     />

@@ -80,7 +80,7 @@ RadioButtonGroup.propTypes = {
    * The icon to display when the component is unchecked.
    * Use the icon dictionary.
    */
-  icon: T.node,
+  Icon: T.node,
   /**
    * The id of the input element.
    */
