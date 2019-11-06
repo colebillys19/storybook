@@ -32,7 +32,7 @@ const iconDefault = 'star';
 export default {
   decorators: [withKnobs],
   parameters: { component: ListItem },
-  title: 'List Items|ListItem',
+  title: 'Miscellaneous|ListItem',
 };
 
 export const defaultStory = () => (

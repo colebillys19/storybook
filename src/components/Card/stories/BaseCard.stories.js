@@ -60,7 +60,7 @@ const imageContainerStyles = {
 export default {
   decorators: [withKnobs],
   parameters: { component: BaseCard, docs: { page: BaseCardDocs } },
-  title: 'Cards|BaseCard',
+  title: 'Miscellaneous|BaseCard',
 };
 
 export const defaultStory = () => {

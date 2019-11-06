@@ -21,7 +21,7 @@ export const defaultStory = () => (
   <TextButton
     disabled={boolean('Disabled', false)}
     label={text('Label Text', label)}
-    onClick={action('onClickButton')}
+    onClick={action('onClick')}
   />
 );
 

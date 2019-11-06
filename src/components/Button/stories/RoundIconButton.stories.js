@@ -39,7 +39,7 @@ export const defaultStory = () => {
     <RoundIconButton
       disabled={boolean('Disabled', false)}
       Icon={Icon}
-      onClick={action('onClickButton')}
+      onClick={action('onClick')}
     />
   );
 };

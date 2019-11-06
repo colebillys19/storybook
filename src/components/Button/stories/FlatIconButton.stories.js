@@ -46,7 +46,7 @@ export const defaultStory = () => {
     <FlatIconButton
       disabled={boolean('Disabled', false)}
       Icon={Icon}
-      onClick={action('onClickButton')}
+      onClick={action('onClick')}
       tooltipText={text('Tooltip Text', tooltipText)}
     />
   );

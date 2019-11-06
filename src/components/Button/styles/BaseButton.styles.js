@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 export const StyledBaseButton = styled(Button)`
   align-items: center;
@@ -17,8 +16,4 @@ export const StyledBaseButton = styled(Button)`
   &.root {
     min-width: 0;
   }
-`;
-
-export const StyledCircularProgress = styled(CircularProgress)`
-  color: inherit;
 `;

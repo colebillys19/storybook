@@ -32,7 +32,7 @@ export const defaultStory = () => (
   <GhostButton
     disabled={boolean('Disabled', false)}
     label={text('Label Text', label)}
-    onClick={action('onClickButton')}
+    onClick={action('onClick')}
   />
 );
 
@@ -46,7 +46,7 @@ export const withIconStory = () => {
       disabled={boolean('Disabled', false)}
       Icon={Icon}
       label={text('Label Text', label)}
-      onClick={action('onClickButton')}
+      onClick={action('onClick')}
     />
   );
 };

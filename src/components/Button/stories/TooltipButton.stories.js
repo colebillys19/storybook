@@ -62,7 +62,7 @@ export const defaultStory = () => (
     disabled={boolean('Disabled', false)}
     enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
     label={text('Label Text', label)}
-    onClick={action('onClickButton')}
+    onClick={action('onClick')}
     placement={select('Placement', placementOptions, placementDefault)}
     tooltipText={text('Tooltip Text', tooltipText)}
   />
@@ -79,7 +79,7 @@ export const withIconStory = () => {
       enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
       Icon={Icon}
       label={text('Label Text', label)}
-      onClick={action('onClickButton')}
+      onClick={action('onClick')}
       placement={select('Placement', placementOptions, placementDefault)}
       tooltipText={text('Tooltip Text', tooltipText)}
     />

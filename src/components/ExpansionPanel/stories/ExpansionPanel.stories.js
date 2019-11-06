@@ -69,7 +69,7 @@ const defaultFalse = false;
 export default {
   decorators: [withKnobs],
   parameters: { component: ExpansionPanel },
-  title: 'ExpansionPanel|ExpansionPanel',
+  title: 'Miscellaneous|ExpansionPanel',
 };
 
 export const defaultStory = () => {
