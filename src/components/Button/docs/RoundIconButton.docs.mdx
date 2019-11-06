@@ -1,24 +1,24 @@
 import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 
-import IconButton from '../IconButton';
+import RoundIconButton from '../RoundIconButton';
 
 <Meta
   decorators={[withKnobs]}
-  component={IconButton}
-  title="Buttons|IconButton"
+  component={RoundIconButton}
+  title="Buttons|RoundIconButton"
 />
 
 <div style={{ position: 'relative', bottom: '20px' }}>
 
-  ## IconButton
+  ## RoundIconButton
 
-  Use ``IconButton`` ...
+  A circular button (displaying an icon) where the button boundaries are hidden until the user hovers.
 
   ### Props
 
   <div style={{ position: 'relative', bottom: '20px' }}>
-    <Props of={IconButton} />
+    <Props of={RoundIconButton} />
   </div>
 
 </div>

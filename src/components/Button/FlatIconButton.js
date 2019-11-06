@@ -5,7 +5,9 @@ import { StyledBaseButton, StyledTooltipButton } from './styles/FlatIconButton.s
 
 const FlatIconButton = (props) => {
   const { tooltipText, ...restProps } = props;
-  if (tooltipText) return <StyledTooltipButton tooltipText={tooltipText} {...restProps} />;
+  if (tooltipText) {
+    return <StyledTooltipButton label="" tooltipText={tooltipText} {...restProps} />;
+  }
   return <StyledBaseButton label="" {...props} />;
 };
 
@@ -15,17 +17,22 @@ FlatIconButton.defaultProps = {
 };
 
 FlatIconButton.propTypes = {
-  component: T.func,
   disabled: T.bool,
   disableFocusRipple: T.bool,
   disableRipple: T.bool,
+  /**
+   * To be used when a button is wrapped in a Material UI tooltip component.
+   * Use the `ForwardRef` helper component in conjunction with this prop.
+   */
   forwardedRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
-  href: T.string,
-  icon: T.oneOfType([T.object, T.func]),
-  label: T.oneOfType([T.string, T.element]),
+  /**
+   * Icon to be displayed within the button.
+   */
+  icon: T.oneOfType([T.object, T.func]).isRequired,
+  /**
+   * Function to be run when a user clicks the button.
+   */
   onClick: T.func.isRequired,
-  target: T.string,
-  to: T.string,
 };
 
 export default FlatIconButton;

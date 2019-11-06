@@ -3,8 +3,8 @@ import { action } from '@storybook/addon-actions';
 import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
-import IconButton from '../IconButton';
-import IconButtonDocs from '../docs/IconButton.docs.mdx';
+import RoundIconButton from '../RoundIconButton';
+import RoundIconButtonDocs from '../docs/RoundIconButton.docs.mdx';
 
 const iconOptions = {
   cancel: 'cancel',
@@ -26,17 +26,22 @@ const sizeDefault = 'mediumSmall';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: IconButton, docs: { page: IconButtonDocs } },
-  title: 'Buttons|IconButton',
+  parameters: { component: RoundIconButton, docs: { page: RoundIconButtonDocs } },
+  title: 'Buttons|RoundIconButton',
 };
 
-export const defaultStory = () => (
-  <IconButton disabled={boolean('Disabled', false)} onClick={action('onClickButton')}>
-    {iconDictionary(
-      select('Icon', iconOptions, iconDefault),
-      select('Icon Size', sizeOptions, sizeDefault)
-    )}
-  </IconButton>
-);
+export const defaultStory = () => {
+  const icon = iconDictionary(
+    select('Icon', iconOptions, iconDefault),
+    select('Icon Size', sizeOptions, sizeDefault)
+  );
+  return (
+    <RoundIconButton
+      disabled={boolean('Disabled', false)}
+      icon={icon}
+      onClick={action('onClickButton')}
+    />
+  );
+};
 
 defaultStory.story = { name: 'default' };

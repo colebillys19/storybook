@@ -21,16 +21,6 @@ const iconOptions = {
 };
 const iconDefault = 'inbox';
 
-const sizeOptions = {
-  large: 'large',
-  medium: 'medium',
-  mediumLarge: 'mediumLarge',
-  mediumSmall: 'mediumSmall',
-  small: 'small',
-  xSmall: 'xSmall',
-};
-const sizeDefault = 'mediumSmall';
-
 export default {
   decorators: [withKnobs],
   parameters: { component: GhostButton, docs: { page: GhostButtonDocs } },
@@ -50,11 +40,7 @@ defaultStory.story = { name: 'default' };
 
 /** */
 export const withIconStory = () => {
-  const icon = iconDictionary(
-    select('Icon', iconOptions, iconDefault),
-    select('Icon Size', sizeOptions, sizeDefault),
-    'button'
-  );
+  const icon = iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall', 'button');
   return (
     <GhostButton
       disabled={boolean('Disabled', false)}

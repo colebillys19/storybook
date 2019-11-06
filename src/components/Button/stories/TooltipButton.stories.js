@@ -50,16 +50,6 @@ const iconOptions = {
 };
 const iconDefault = 'inbox';
 
-const sizeOptions = {
-  large: 'large',
-  medium: 'medium',
-  mediumLarge: 'mediumLarge',
-  mediumSmall: 'mediumSmall',
-  small: 'small',
-  xSmall: 'xSmall',
-};
-const sizeDefault = 'mediumSmall';
-
 export default {
   decorators: [withKnobs],
   parameters: { component: TooltipButton, docs: { page: TooltipButtonDocs } },
@@ -82,11 +72,7 @@ defaultStory.story = { name: 'default' };
 
 /** */
 export const withIconStory = () => {
-  const icon = iconDictionary(
-    select('Icon', iconOptions, iconDefault),
-    select('Icon Size', sizeOptions, sizeDefault),
-    'button'
-  );
+  const icon = iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall', 'button');
   return (
     <TooltipButton
       disabled={boolean('Disabled', false)}
@@ -100,4 +86,4 @@ export const withIconStory = () => {
   );
 };
 
-withIconStory.story = { name: 'text + icon' };
+withIconStory.story = { name: 'with icon' };

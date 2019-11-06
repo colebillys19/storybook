@@ -11,15 +11,22 @@ TextButton.defaultProps = {
 };
 
 TextButton.propTypes = {
-  component: T.func,
+  disabled: T.bool,
   disableFocusRipple: T.bool,
   disableRipple: T.bool,
-  href: T.string,
-  Icon: T.oneOfType([T.object, T.func]),
+  /**
+   * To be used when a button is wrapped in a Material UI tooltip component.
+   * Use the `ForwardRef` helper component in conjunction with this prop.
+   */
+  forwardedRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
+  /**
+   * String to be displayed within the button.
+   */
   label: T.oneOfType([T.string, T.element]).isRequired,
+  /**
+   * Function to be run when a user clicks the button.
+   */
   onClick: T.func.isRequired,
-  target: T.string,
-  to: T.string,
 };
 
 export default TextButton;

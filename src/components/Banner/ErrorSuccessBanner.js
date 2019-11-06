@@ -54,7 +54,7 @@ ErrorSuccessBanner.propTypes = {
    */
   error: T.oneOfType([T.bool, T.object]),
   /**
-   * Function to be run when the user closes the banner.
+   * Function to be run when a user closes the banner.
    */
   onClose: T.func,
   /**

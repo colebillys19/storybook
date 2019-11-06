@@ -8,11 +8,8 @@ export const StyledBaseButton = styled(Button)`
   background-color: transparent;
   box-shadow: none;
   display: inline-flex;
-  font-size: 1.4rem;
-  font-weight: 500;
   margin: 1rem;
-  padding: 1rem 2.8rem;
-  text-transform: none;
+  padding: 0.8rem 1rem;
   &:active {
     box-shadow: none;
   }
@@ -26,11 +23,8 @@ export const StyledTooltipButton = styled(TooltipButton)`
   background-color: transparent;
   box-shadow: none;
   display: inline-flex;
-  font-size: 1.4rem;
-  font-weight: 500;
   margin: 1rem;
-  padding: 0.5rem 1rem;
-  text-transform: none;
+  padding: 0.8rem 1rem;
   &:active {
     box-shadow: none;
   }
