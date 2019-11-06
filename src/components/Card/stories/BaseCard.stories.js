@@ -1,7 +1,13 @@
 import React from 'react';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
+import BaseCardDocs from '../docs/BaseCard.docs.mdx';
 
 import BaseCard from '../BaseCard';
 import { StyledH1 } from '../styles/BaseCard.styles';
@@ -26,51 +32,77 @@ const colorOptions = {
 };
 const colorDefault = msBrightPurple;
 
-const paddingOptions = {
+const textPaddingOptions = {
+  '0.5rem 1.5rem': '0.5rem 1.5rem',
+  '1rem 2rem': '1rem 2rem',
+  '2rem 3rem': '2rem 3rem',
+  '3rem 4rem': '3rem 4rem',
+};
+const textPaddingDefault = '1rem 2rem';
+
+const imagePaddingOptions = {
   '0.5rem': '0.5rem',
   '1rem': '1rem',
   '2rem': '2rem',
   '3rem': '3rem',
 };
-const paddingDefault = '1rem';
+const imagePaddingDefault = '2rem';
 
-const cardText = 'card text';
+const cardText = 'CARD TEXT';
+
+const imageContainerStyles = {
+  alignItems: 'center',
+  backgroundColor: '#f0f0f0',
+  border: '0.2rem solid #1f1f1f',
+  display: 'flex',
+};
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: BaseCard },
+  parameters: { component: BaseCard, docs: { page: BaseCardDocs } },
   title: 'Cards|BaseCard',
 };
 
-export const defaultStory = () => (
-  <BaseCard
-    color={select('Card Color', colorOptions, colorDefault)}
-    id="base-card"
-  >
-    <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
-      {text('Card Text', cardText)}
-    </div>
-  </BaseCard>
-);
+export const defaultStory = () => {
+  const hasColor = boolean('Has Color', true);
+  return (
+    <BaseCard
+      color={hasColor ? select('Color', colorOptions, colorDefault) : null}
+      id="base-card"
+    >
+      <div style={{ padding: select('Card Content Padding', textPaddingOptions, textPaddingDefault) }}>
+        {text('Card Text', cardText)}
+      </div>
+    </BaseCard>
+  );
+};
 
 defaultStory.story = { name: 'default' };
 
-export const title = () => (
-  <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
-    <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
-      <StyledH1>{text('Card Text', cardText)}</StyledH1>
-    </div>
-  </BaseCard>
-);
+export const headingStory = () => {
+  const hasColor = boolean('Has Color', true);
+  return (
+    <BaseCard color={hasColor ? select('Color', colorOptions, colorDefault) : null}>
+      <div style={{ padding: select('Card Content Padding', textPaddingOptions, textPaddingDefault) }}>
+        <StyledH1>{text('Card Text', cardText)}</StyledH1>
+      </div>
+    </BaseCard>
+  );
+};
 
-title.story = { name: 'title' };
+headingStory.story = { name: 'heading' };
 
-export const image = () => (
-  <BaseCard color={select('Card Color', colorOptions, colorDefault)}>
-    <div style={{ padding: select('Card Content Padding', paddingOptions, paddingDefault) }}>
-      {iconDictionary('image', 'large')}
-    </div>
-  </BaseCard>
-);
+export const imageStory = () => {
+  const hasColor = boolean('Has Color', true);
+  return (
+    <BaseCard color={hasColor ? select('Color', colorOptions, colorDefault) : null}>
+      <div style={{ padding: select('Card Content Padding', imagePaddingOptions, imagePaddingDefault) }}>
+        <div style={imageContainerStyles}>
+          {iconDictionary('image', 'large')}
+        </div>
+      </div>
+    </BaseCard>
+  );
+};
 
-image.story = { name: 'image' };
+imageStory.story = { name: 'image' };
