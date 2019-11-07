@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import { BaseCard } from '../../Card';
-import { FlatIconButton } from '../../Button';
 
 export const StyledImage = styled.img`
   display: block;

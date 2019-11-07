@@ -3,8 +3,8 @@ import T from 'prop-types';
 import iconDictionary from '../../../utils/iconDictionary';
 import { LeftNavButton, RightNavButton } from '../styles/Carousel.styles';
 
-const IconNext = iconDictionary('arrowCarouselNext', 'mediumSmall', 'button');
-const IconPrevious = iconDictionary('arrowCarouselPrev', 'mediumSmall', 'button');
+const IconNext = iconDictionary('arrowRight', 'mediumSmall', 'button');
+const IconPrevious = iconDictionary('arrowLeft', 'mediumSmall', 'button');
 
 const NavigationButtons = ({
   children,
