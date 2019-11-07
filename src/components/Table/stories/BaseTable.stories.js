@@ -11,7 +11,7 @@ export default {
   decorators: [withKnobs],
   excludeStories: ['headersA', 'rowDataA', 'headersB', 'rowDataB'],
   parameters: { component: BaseTable },
-  title: 'Tables|BaseTable',
+  title: 'Miscellaneous|BaseTable',
 };
 
 export const defaultStory = () => (

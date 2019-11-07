@@ -1,47 +1,25 @@
-/**
-*
-* Card
-* @description Card component for displaying content
-* Usage : {
-*   color: (string) top card border color - optional, defaults to msBrightPurple
-*   width: (string) card width - optional
-* }
-*/
 import React from 'react';
 import T from 'prop-types';
 
 import { StyledCard } from './styles/BaseCard.styles';
 
-/**
- * Use `BaseCard` for displaying content in a card with a top border.
- */
-const Card = (restProps) => (
-  <StyledCard classes={{ root: 'card' }} {...restProps} />
+const Card = (props) => (
+  <StyledCard classes={{ root: 'card' }} {...props} />
 );
 
 Card.propTypes = {
   /**
-   * The content of the component.
+   * Card content.
    */
-  children: T.node,
+  children: T.oneOfType([T.arrayOf(T.node), T.node]).isRequired,
   /**
-   * The color of the top border.
+   * The color of the card's tab.
    */
   color: T.string,
-  /**
-   * If true, the card will use raised styling.
-   */
-  raised: T.bool,
   /**
    * The width of the card.
    */
   width: T.string,
-};
-
-Card.defaultProps = {
-  color: '#310078',
-  raised: false,
-  width: 'max-content',
 };
 
 export default Card;

@@ -7,17 +7,17 @@ import {
   checkSimpleChild,
 } from '../../../utils/testingHelpers';
 import iconDictionary from '../../../utils/iconDictionary';
-import IconButton from '../IconButton';
+import RoundIconButton from '../RoundIconButton';
 
-const inboxIcon = iconDictionary('inbox', 'mediumSmall', 'button');
+const InboxIcon = iconDictionary('inbox', 'mediumSmall', 'button');
 
-describe('<IconButton />', () => {
+describe('<RoundIconButton />', () => {
   const onClick = jest.fn();
-  const component = <IconButton onClick={onClick}>{inboxIcon}</IconButton>;
+  const component = <RoundIconButton onClick={onClick}>{InboxIcon}</RoundIconButton>;
 
   checkBasicRendering(component);
   checkRequiredProps(component);
-  checkSimpleChild(component, inboxIcon);
+  checkSimpleChild(component, InboxIcon);
 
   it('calls onClick when button is clicked', () => {
     const { container } = render(component);

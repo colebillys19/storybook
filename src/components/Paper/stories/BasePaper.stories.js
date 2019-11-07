@@ -18,6 +18,13 @@ const paddingDefault = '2rem 4rem';
 
 const paperText = 'paper text';
 
+const imageContainerStyles = {
+  alignItems: 'center',
+  backgroundColor: '#f0f0f0',
+  border: '0.2rem solid #1f1f1f',
+  display: 'flex',
+};
+
 export default {
   decorators: [withKnobs],
   parameters: { component: BasePaper },
@@ -37,7 +44,9 @@ defaultStory.story = { name: 'default' };
 export const image = () => (
   <BasePaper>
     <div style={{ padding: select('Paper Content Padding', paddingOptions, paddingDefault) }}>
-      {iconDictionary('imagePlaceholder', 'large')}
+      <div style={imageContainerStyles}>
+        {iconDictionary('image', 'large')}
+      </div>
     </div>
   </BasePaper>
 );

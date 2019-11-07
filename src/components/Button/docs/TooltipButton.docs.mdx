@@ -1,0 +1,24 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { withKnobs, select, text } from '@storybook/addon-knobs';
+
+import TooltipButton from '../TooltipButton';
+
+<Meta
+  decorators={[withKnobs]}
+  component={TooltipButton}
+  title="Buttons|TooltipButton"
+/>
+
+<div style={{ position: 'relative', bottom: '20px' }}>
+
+  ## TooltipButton
+
+  A button that displays a tooltip on hover.
+
+  ### Props
+
+  <div style={{ position: 'relative', bottom: '20px' }}>
+    <Props of={TooltipButton} />
+  </div>
+
+</div>

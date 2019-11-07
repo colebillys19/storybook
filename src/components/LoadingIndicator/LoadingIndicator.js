@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Circle from './Circle';
-import { LoadingSection, Wrapper } from './styles/LoadingIndicatorNormal.styles';
+import { LoadingSection, Wrapper } from './styles/LoadingIndicator.styles';
 
 /**
- * Use `LoadingIndicatorNormal` to display a loading icon while waiting for async data to finish loading.
+ * Use `LoadingIndicator` to display a loading icon while waiting for async data to finish loading.
  */
-const LoadingIndicatorNormal = () => (
+const LoadingIndicator = () => (
   <Wrapper>
     <LoadingSection>
       <Circle />
@@ -25,4 +25,4 @@ const LoadingIndicatorNormal = () => (
   </Wrapper>
 );
 
-export default LoadingIndicatorNormal;
+export default LoadingIndicator;

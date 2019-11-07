@@ -1,46 +1,36 @@
-/**
-*
-* PrimaryButton
-* @description Main Primary Button used throughout the Silver Site
-* API Usage: {
-*   Icon: (SVG) Icon to render if provided. Icons should be selected and styled through the
-*         iconDictionary before reaching this component.
-*   label: Button label
-*   onClick: onClick handler
-*   styling: Styling object to override default styles.
-* }
-*/
+import React from 'react';
 import T from 'prop-types';
-import styled from 'styled-components';
-import { msBrightPurple, msHoverPurple } from '../../utils/defaultStyleHelper';
-import BaseButton from './BaseButton';
 
-const PrimaryButton = styled(BaseButton)`
-  &:hover {
-    background-color: ${msHoverPurple};
-  };
-  background-color: ${msBrightPurple};
-  color: white;
-`;
+import { StyledBaseButton } from './styles/PrimaryButton.styles';
 
-/* eslint-disable react/default-props-match-prop-types */
+const PrimaryButton = (props) => <StyledBaseButton {...props} />;
+
+PrimaryButton.propTypes = {
+  disabled: T.bool,
+  disableFocusRipple: T.bool,
+  disableRipple: T.bool,
+  /**
+   * To be used when a button is wrapped in a Material UI tooltip component.
+   * Use the `ForwardRef` helper component in conjunction with this prop.
+   */
+  forwardedRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
+  /**
+   * Icon to be displayed within the button.
+   */
+  Icon: T.oneOfType([T.object, T.func]),
+  /**
+   * String to be displayed within the button.
+   */
+  label: T.oneOfType([T.string, T.element]).isRequired,
+  /**
+   * Function to be run when a user clicks the button.
+   */
+  onClick: T.func.isRequired,
+};
+
 PrimaryButton.defaultProps = {
   disableFocusRipple: true,
   disableRipple: true,
-  label: '',
-};
-
-/* eslint-enable react/default-props-match-prop-types */
-PrimaryButton.propTypes = {
-  component: T.func,
-  disableFocusRipple: T.bool,
-  disableRipple: T.bool,
-  href: T.string,
-  Icon: T.oneOfType([T.object, T.func]),
-  label: T.oneOfType([T.string, T.element]).isRequired,
-  onClick: T.func.isRequired,
-  target: T.string,
-  to: T.string,
 };
 
 export default PrimaryButton;

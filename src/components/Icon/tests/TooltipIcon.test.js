@@ -19,14 +19,14 @@ global.document.createRange = () => ({
   setStart: () => {},
 });
 
-const icon = iconDictionary('star', 'medium');
+const Icon = iconDictionary('star', 'medium');
 
 const tooltipText = 'tooltip text';
 
 describe('<TooltipIcon />', () => {
   const component = (
     <TooltipIcon
-      Icon={icon}
+      Icon={Icon}
       tooltipText={tooltipText}
     />
   );

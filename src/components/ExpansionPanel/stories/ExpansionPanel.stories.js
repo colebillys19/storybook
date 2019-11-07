@@ -35,7 +35,6 @@ const defaultExpansionTitle = 'Expansion Panel';
 
 const iconOptions = {
   arrowDown: 'arrowDown',
-  arrowDropDown: 'arrowDropDown',
   expandMore: 'expandMore',
 };
 
@@ -70,7 +69,7 @@ const defaultFalse = false;
 export default {
   decorators: [withKnobs],
   parameters: { component: ExpansionPanel },
-  title: 'ExpansionPanel|ExpansionPanel',
+  title: 'Miscellaneous|ExpansionPanel',
 };
 
 export const defaultStory = () => {

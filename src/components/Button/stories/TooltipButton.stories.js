@@ -1,9 +1,15 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import TooltipButton from '../TooltipButton';
+import TooltipButtonDocs from '../docs/TooltipButton.docs.mdx';
 
 const label = 'LABEL TEXT';
 const tooltipText = 'tooltip text';
@@ -44,40 +50,40 @@ const iconOptions = {
 };
 const iconDefault = 'inbox';
 
-const sizeOptions = {
-  large: 'large',
-  medium: 'medium',
-  mediumLarge: 'mediumLarge',
-  mediumSmall: 'mediumSmall',
-  small: 'small',
-  xSmall: 'xSmall',
-};
-const sizeDefault = 'mediumSmall';
-
 export default {
   decorators: [withKnobs],
-  parameters: { component: TooltipButton },
+  parameters: { component: TooltipButton, docs: { page: TooltipButtonDocs } },
   title: 'Buttons|TooltipButton',
 };
 
-export const defaultStory = () => {
-  const icon = iconDictionary(
-    select('Icon', iconOptions, iconDefault),
-    select('Icon Size', sizeOptions, sizeDefault),
-    'button'
-  );
+/** */
+export const defaultStory = () => (
+  <TooltipButton
+    disabled={boolean('Disabled', false)}
+    enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
+    label={text('Label Text', label)}
+    onClick={action('onClick')}
+    placement={select('Placement', placementOptions, placementDefault)}
+    tooltipText={text('Tooltip Text', tooltipText)}
+  />
+);
+
+defaultStory.story = { name: 'default' };
+
+/** */
+export const withIconStory = () => {
+  const Icon = iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall', 'button');
   return (
     <TooltipButton
-      disableFocusRipple
-      disableRipple
+      disabled={boolean('Disabled', false)}
       enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
-      Icon={icon}
+      Icon={Icon}
       label={text('Label Text', label)}
-      onClick={action('onClickButton')}
+      onClick={action('onClick')}
       placement={select('Placement', placementOptions, placementDefault)}
       tooltipText={text('Tooltip Text', tooltipText)}
     />
   );
 };
 
-defaultStory.story = { name: 'default' };
+withIconStory.story = { name: 'with icon' };

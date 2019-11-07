@@ -18,22 +18,19 @@
 import React from 'react';
 import T from 'prop-types';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+
+import { StyledListItemText } from './styles/ListItem.styles';
 
 /**
  * Use `ListItem` to create list items for a list component.
  */
 const BaseListItem = ({
   children,
-  forwardedRef,
   text,
   ...restProps
 }) => (
-  <ListItem
-    ref={forwardedRef}
-    {...restProps}
-  >
-    <ListItemText className="item-text" primary={text} />
+  <ListItem {...restProps}>
+    <StyledListItemText className="item-text" primary={text} />
     {children}
   </ListItem>
 );
@@ -91,13 +88,6 @@ BaseListItem.propTypes = {
    * If true, a 1px light border is added to the bottom of the list item.
    */
   divider: T.bool,
-  /**
-   * The ref forwarded to the root element.
-   */
-  forwardedRef: T.oneOfType([
-    T.func,
-    T.shape({ current: T.any }),
-  ]),
   /**
    * Use to apply selected styling.
    */

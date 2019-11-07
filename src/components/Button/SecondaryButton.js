@@ -1,52 +1,36 @@
-
-/**
-*
-* SecondaryButton
-* @description Main Secondary Button used throughout the Silver Site
-* API Usage: {
-*   Icon: (SVG) Icon to render if provided. Icons should be selected and styled through the
-*         iconDictionary before reaching this component.
-*   label: Button label
-*   onClick: onClick handler
-*   styling: Styling object to override default styles.
-* }
-*/
+import React from 'react';
 import T from 'prop-types';
-import styled from 'styled-components';
 
-import {
-  msBrightPurple,
-  msLightGrey,
-  ssGreyHover,
-} from '../../utils/defaultStyleHelper';
-import PrimaryButton from './PrimaryButton';
+import { StyledBaseButton } from './styles/SecondaryButton.styles';
 
-const SecondaryButton = styled(PrimaryButton)`
-  &:hover {
-    background-color: ${ssGreyHover};
-  }
-  background-color: ${msLightGrey};
-  color: ${msBrightPurple};
-`;
+const SecondaryButton = (props) => <StyledBaseButton {...props} />;
 
-/* eslint-disable react/default-props-match-prop-types */
+SecondaryButton.propTypes = {
+  disabled: T.bool,
+  disableFocusRipple: T.bool,
+  disableRipple: T.bool,
+  /**
+   * To be used when a button is wrapped in a Material UI tooltip component.
+   * Use the `ForwardRef` helper component in conjunction with this prop.
+   */
+  forwardedRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
+  /**
+   * Icon to be displayed within the button.
+   */
+  Icon: T.oneOfType([T.object, T.func]),
+  /**
+   * String to be displayed within the button.
+   */
+  label: T.oneOfType([T.string, T.element]).isRequired,
+  /**
+   * Function to be run when a user clicks the button.
+   */
+  onClick: T.func.isRequired,
+};
+
 SecondaryButton.defaultProps = {
   disableFocusRipple: true,
   disableRipple: true,
-  label: '',
-};
-
-/* eslint-enable react/default-props-match-prop-types */
-SecondaryButton.propTypes = {
-  component: T.func,
-  disableFocusRipple: T.bool,
-  disableRipple: T.bool,
-  href: T.string,
-  Icon: T.oneOfType([T.object, T.func]),
-  label: T.oneOfType([T.string, T.element]).isRequired,
-  onClick: T.func.isRequired,
-  target: T.string,
-  to: T.string,
 };
 
 export default SecondaryButton;

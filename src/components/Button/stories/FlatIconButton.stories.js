@@ -1,13 +1,16 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import FlatIconButton from '../FlatIconButton';
-import BaseButton from '../BaseButton';
+import FlatIconButtonDocs from '../docs/FlatIconButton.docs.mdx';
 
-
-const label = 'LABEL TEXT';
 const tooltipText = 'tooltip text';
 
 const iconOptions = {
@@ -26,31 +29,27 @@ const sizeOptions = {
   small: 'small',
   xSmall: 'xSmall',
 };
-const sizeDefault = 'mediumSmall';
+const sizeDefault = 'medium';
 
 export default {
   decorators: [withKnobs],
-  includeStories: [],
-  parameters: { component: BaseButton, docs: { disable: true } },
+  parameters: { component: FlatIconButton, docs: { page: FlatIconButtonDocs } },
   title: 'Buttons|FlatIconButton',
 };
 
 export const defaultStory = () => {
-  const icon = iconDictionary(
+  const Icon = iconDictionary(
     select('Icon', iconOptions, iconDefault),
     select('Icon Size', sizeOptions, sizeDefault),
-    'button'
   );
   return (
     <FlatIconButton
-      disableFocusRipple
-      disableRipple
-      Icon={icon}
-      label={text('Label Text', label)}
-      onClick={action('onClickButton')}
+      disabled={boolean('Disabled', false)}
+      Icon={Icon}
+      onClick={action('onClick')}
       tooltipText={text('Tooltip Text', tooltipText)}
     />
   );
 };
 
-defaultStory.story = { name: 'default', parameters: { docs: { disable: true } } };
+defaultStory.story = { name: 'default' };

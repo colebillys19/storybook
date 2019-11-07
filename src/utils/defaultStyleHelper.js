@@ -1,3 +1,13 @@
+// main site colors
+export const msBrightPurple = '#310078';
+export const msDarkGrey = '#686c77';
+export const msDeepPurple = '#230049';
+export const msGreyHover = '#e3e3e3';
+export const msHoverPurple = '#2a0063';
+export const msLightGrey = '#f2f2f2';
+export const msMainGreen = '#00db7d';
+export const msHoverGreen = '#1be08c';
+
 // silver site colors
 export const ssDarkBlue = '#0E2043';
 export const ssDarkGrey = '#464A53';
@@ -9,14 +19,6 @@ export const ssMainBlueHover = '#214472';
 export const ssYellow = '#EEB902';
 export const ssPurple = '#9826AC';
 export const ssRed = '#C1363F';
-
-// main site colors
-export const msBrightPurple = '#310078';
-export const msDarkGrey = '#686c77';
-export const msDeepPurple = '#230049';
-export const msHoverPurple = '#2a0063';
-export const msLightGrey = '#f2f2f2';
-export const msMainGreen = '#00db7d';
 
 // misc
 export const successGreen = '#5DBA9C';
@@ -55,12 +57,12 @@ export const iconSize = {
     width: '3rem',
   },
   medium: {
-    height: '5rem',
-    width: '5rem',
-  },
-  mediumLarge: {
     height: '3.5rem',
     width: '3.5rem',
+  },
+  mediumLarge: {
+    height: '5rem',
+    width: '5rem',
   },
   mediumSmall: {
     height: '2rem',
@@ -76,7 +78,7 @@ export const iconSize = {
   },
 };
 
-// dmi typography
+// typography
 export const typography = {
   size: {
     l1: '32',

@@ -27,13 +27,12 @@ const iconOptions = {
   profile: 'profile',
   star: 'star',
 };
-
 const iconDefault = 'star';
 
 export default {
   decorators: [withKnobs],
   parameters: { component: ListItem },
-  title: 'List Items|ListItem',
+  title: 'Miscellaneous|ListItem',
 };
 
 export const defaultStory = () => (
@@ -65,7 +64,7 @@ export const disabledStory = () => (
 
 disabledStory.story = { name: 'disabled' };
 
-export const icon = () => (
+export const iconStory = () => (
   <div style={{ maxWidth: '30rem' }}>
     <ListItem
       button={boolean('button', false)}
@@ -74,12 +73,12 @@ export const icon = () => (
       selected={boolean('selected', false)}
       text={text('Text', listItemText)}
     >
-      <ListItemIcon>{iconDictionary(select('Icon', iconOptions, iconDefault))}</ListItemIcon>
+      <ListItemIcon>{iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall')}</ListItemIcon>
     </ListItem>
   </div>
 );
 
-icon.story = { name: 'icon' };
+iconStory.story = { name: 'icon' };
 
 export const selectedStory = () => (
   <div style={{ maxWidth: '30rem' }}>

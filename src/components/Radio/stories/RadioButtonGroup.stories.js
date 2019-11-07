@@ -36,7 +36,7 @@ const onChange = () => 'defaultOnChange';
 export default {
   decorators: [withKnobs],
   parameters: { component: RadioButtonGroup },
-  title: 'Radio|RadioButtonGroup',
+  title: 'Miscellaneous|RadioButtonGroup',
 };
 
 export const defaultStory = () => {

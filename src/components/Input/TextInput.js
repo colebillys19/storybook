@@ -22,7 +22,7 @@
   * multiline	(bool) If true, a textarea element will be rendered instead of an input.
   * name (string) Name attribute of the input element.
   * onChange(func) Callback fired when the value is changed.
-  * placeholder (string) The short hint displayed in the input before the user enters a value.
+  * placeholder (string) The short hint displayed in the input before a user enters a value.
   * required (bool) If true, the label is displayed as required and the input will be required.
   * rows (string|number) Number of rows to display when multiline option is set to true.
   * rowsMax (string|number) Maximum number of rows to display when multiline option is set to true.
@@ -114,7 +114,7 @@ const TextInput = ({
 
 TextInput.propTypes = {
   /**
-   * This prop helps users to fill forms faster, especially on mobile devices. 
+   * This prop helps users to fill forms faster, especially on mobile devices.
    * The name can be confusing, as it's more like an autofill.
    */
   autoComplete: T.string,
@@ -168,7 +168,7 @@ TextInput.propTypes = {
    */
   InputLabelProps: T.object,
   /**
-   * Props applied to the Input element. 
+   * Props applied to the Input element.
    * It will be a FilledInput, OutlinedInput or Input component depending on the variant prop value.
    */
   InputProps: T.object,
@@ -213,7 +213,7 @@ TextInput.propTypes = {
    */
   onChange: T.func.isRequired,
   /**
-   * The short hint displayed in the input before the user enters a value.
+   * The short hint displayed in the input before a user enters a value.
    */
   placeholder: T.string,
   /**

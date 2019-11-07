@@ -1,7 +1,7 @@
 /**
  * @description Main Ghost Button used throughout the Silver Site
  * @props
- * Icon: (SVG) Icon to render if provided. Icons should be selected and styled through the
+ * icon: (SVG) Icon to render if provided. Icons should be selected and styled through the
  *       iconDictionary before reaching this component
  * label: (string|array) Text link label
  * path: (string|array) Relative url representing the location to link to.
@@ -57,7 +57,7 @@ export const defaultStory = () => <GhostButtonLink label={text('Label', labelTex
 
 defaultStory.story = { name: 'default' };
 
-export const icon = () => (
+export const iconStory = () => (
   <GhostButtonLink
     Icon={iconDictionary(
       select('Icon', iconOptions, iconDefault),
@@ -69,4 +69,4 @@ export const icon = () => (
   />
 );
 
-icon.story = { name: 'icon' };
+iconStory.story = { name: 'icon' };

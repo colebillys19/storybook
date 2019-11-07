@@ -1,36 +1,38 @@
 import React from 'react';
 import T from 'prop-types';
-import styled from 'styled-components';
-import BaseButton from './BaseButton';
-import TooltipButton from './TooltipButton';
 
-/**
- * Button used to display flat icon.
- */
-const FlatIconButton = styled(({ tooltipText, ...restProps }) => {
-  if (tooltipText) return <TooltipButton tooltipText={tooltipText} {...restProps} />;
-  return <BaseButton {...restProps} />;
-})`
-  &:hover {
-    background-color: transparent;
+import { StyledBaseButton, StyledTooltipButton } from './styles/FlatIconButton.styles';
+
+const FlatIconButton = (props) => {
+  const { tooltipText, ...restProps } = props;
+  if (tooltipText) {
+    return <StyledTooltipButton label="" tooltipText={tooltipText} {...restProps} />;
   }
-  &:active {
-    box-shadow: none;
-  }
-  background-color: transparent;
-  box-shadow: none;
-`;
+  return <StyledBaseButton label="" {...props} />;
+};
+
+FlatIconButton.defaultProps = {
+  disableFocusRipple: true,
+  disableRipple: true,
+};
 
 FlatIconButton.propTypes = {
-  component: T.func,
+  disabled: T.bool,
   disableFocusRipple: T.bool,
   disableRipple: T.bool,
-  href: T.string,
-  Icon: T.oneOfType([T.object, T.func]),
-  label: T.oneOfType([T.string, T.element]),
+  /**
+   * To be used when a button is wrapped in a Material UI tooltip component.
+   * Use the `ForwardRef` helper component in conjunction with this prop.
+   */
+  forwardedRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
+  /**
+   * Icon to be displayed within the button.
+   */
+  Icon: T.oneOfType([T.object, T.func]).isRequired,
+  /**
+   * Function to be run when a user clicks the button.
+   */
   onClick: T.func.isRequired,
-  target: T.string,
-  to: T.string,
 };
 
 export default FlatIconButton;
