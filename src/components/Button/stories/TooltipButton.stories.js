@@ -7,9 +7,10 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs';
 
-import iconDictionary from '../../../utils/iconDictionary';
 import TooltipButton from '../TooltipButton';
 import TooltipButtonDocs from '../docs/TooltipButton.docs.mdx';
+import iconDictionary from '../../../utils/iconDictionary';
+import { iconOptions } from '../../../utils/storyConstants';
 
 const label = 'LABEL TEXT';
 const tooltipText = 'tooltip text';
@@ -42,21 +43,12 @@ const placementOptions = {
 /* eslint-enable sort-keys */
 const placementDefault = 'bottom';
 
-const iconOptions = {
-  cancel: 'cancel',
-  inbox: 'inbox',
-  profile: 'profile',
-  star: 'star',
-};
-const iconDefault = 'inbox';
-
 export default {
   decorators: [withKnobs],
   parameters: { component: TooltipButton, docs: { page: TooltipButtonDocs } },
   title: 'Buttons|TooltipButton',
 };
 
-/** */
 export const defaultStory = () => (
   <TooltipButton
     disabled={boolean('Disabled', false)}
@@ -70,9 +62,8 @@ export const defaultStory = () => (
 
 defaultStory.story = { name: 'default' };
 
-/** */
 export const withIconStory = () => {
-  const Icon = iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall', 'button');
+  const Icon = iconDictionary(select('Icon', iconOptions, 'inbox'), 'mediumSmall', 'button');
   return (
     <TooltipButton
       disabled={boolean('Disabled', false)}

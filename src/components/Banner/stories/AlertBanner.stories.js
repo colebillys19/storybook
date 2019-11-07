@@ -5,11 +5,6 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 import AlertBanner from '../AlertBanner';
 import AlertBannerDocs from '../docs/AlertBanner.docs.mdx';
 
-const bannerProps = {
-  alertText: 'alert text',
-  buttonText: 'button text',
-};
-
 export default {
   decorators: [withKnobs],
   parameters: { component: AlertBanner, docs: { page: AlertBannerDocs } },
@@ -17,17 +12,15 @@ export default {
 };
 
 export const defaultStory = () => (
-  <AlertBanner
-    alertText={text('Alert Text', bannerProps.alertText)}
-  />
+  <AlertBanner alertText={text('Alert Text', 'alert text')} />
 );
 
 defaultStory.story = { name: 'default' };
 
 export const buttonStory = () => (
   <AlertBanner
-    alertText={text('Alert Text', bannerProps.alertText)}
-    buttonText={text('Button Text', bannerProps.buttonText)}
+    alertText={text('Alert Text', 'alert text')}
+    buttonText={text('Button Text', 'button text')}
     onClick={action('onClick')}
   />
 );

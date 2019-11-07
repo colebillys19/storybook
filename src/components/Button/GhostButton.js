@@ -5,11 +5,6 @@ import { StyledBaseButton } from './styles/GhostButton.styles';
 
 const GhostButton = (props) => <StyledBaseButton {...props} />;
 
-GhostButton.defaultProps = {
-  disableFocusRipple: true,
-  disableRipple: true,
-};
-
 GhostButton.propTypes = {
   disabled: T.bool,
   disableFocusRipple: T.bool,
@@ -31,6 +26,12 @@ GhostButton.propTypes = {
    * Function to be run when a user clicks the button.
    */
   onClick: T.func.isRequired,
+};
+
+GhostButton.defaultProps = {
+  disabled: false,
+  disableFocusRipple: true,
+  disableRipple: true,
 };
 
 export default GhostButton;

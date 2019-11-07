@@ -7,21 +7,21 @@ import {
   BannerWrapper,
   CloseButton,
   Content,
-} from './styles/ErrorSuccessBanner.styles';
+} from './styles/ResultBanner.styles';
 
 const CloseIcon = iconDictionary('close', 'mediumSmall');
 const SuccessIcon = iconDictionary('successOutline', 'mediumSmall');
 const WarningIcon = iconDictionary('warning', 'mediumSmall');
 
-const ErrorSuccessBanner = ({
+const ResultBanner = ({
   error,
   onClose,
   success,
   ...restProps
 }) => {
-  const isErrorSuccess = success || error;
-  const [displayState, setDisplayState] = useState(!!isErrorSuccess);
-  useEffect(() => setDisplayState(!!isErrorSuccess), [isErrorSuccess]);
+  const isResults = success || error;
+  const [displayState, setDisplayState] = useState(!!isResults);
+  useEffect(() => setDisplayState(!!isResults), [isResults]);
 
   const handleClose = () => {
     setDisplayState(false);
@@ -48,7 +48,7 @@ const ErrorSuccessBanner = ({
   );
 };
 
-ErrorSuccessBanner.propTypes = {
+ResultBanner.propTypes = {
   /**
    * Error message to be displayed within the banner.
    */
@@ -63,9 +63,9 @@ ErrorSuccessBanner.propTypes = {
   success: T.oneOfType([T.bool, T.object]),
 };
 
-ErrorSuccessBanner.defaultProps = {
+ResultBanner.defaultProps = {
   error: false,
   success: false,
 };
 
-export default ErrorSuccessBanner;
+export default ResultBanner;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ssGreyHover } from '../../utils/defaultStyleHelper';
+import { ssHoverGrey } from '../../utils/defaultStyleHelper';
 import BaseLink from './BaseLink';
 
 const GhostButtonLink = styled(BaseLink)`
@@ -11,7 +11,7 @@ const GhostButtonLink = styled(BaseLink)`
     text-decoration: none;
   
     &:hover {
-      background-color: ${ssGreyHover};
+      background-color: ${ssHoverGrey};
     }
   }
 `;

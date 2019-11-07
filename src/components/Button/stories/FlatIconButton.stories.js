@@ -7,29 +7,12 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs';
 
-import iconDictionary from '../../../utils/iconDictionary';
 import FlatIconButton from '../FlatIconButton';
 import FlatIconButtonDocs from '../docs/FlatIconButton.docs.mdx';
+import iconDictionary from '../../../utils/iconDictionary';
+import { iconOptions, iconSizeOptions } from '../../../utils/storyConstants';
 
 const tooltipText = 'tooltip text';
-
-const iconOptions = {
-  cancel: 'cancel',
-  inbox: 'inbox',
-  profile: 'profile',
-  star: 'star',
-};
-const iconDefault = 'inbox';
-
-const sizeOptions = {
-  large: 'large',
-  medium: 'medium',
-  mediumLarge: 'mediumLarge',
-  mediumSmall: 'mediumSmall',
-  small: 'small',
-  xSmall: 'xSmall',
-};
-const sizeDefault = 'medium';
 
 export default {
   decorators: [withKnobs],
@@ -39,8 +22,8 @@ export default {
 
 export const defaultStory = () => {
   const Icon = iconDictionary(
-    select('Icon', iconOptions, iconDefault),
-    select('Icon Size', sizeOptions, sizeDefault),
+    select('Icon', iconOptions, 'inbox'),
+    select('Icon Size', iconSizeOptions, 'mediumSmall'),
   );
   return (
     <FlatIconButton

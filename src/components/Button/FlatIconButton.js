@@ -11,11 +11,6 @@ const FlatIconButton = (props) => {
   return <StyledBaseButton label="" {...props} />;
 };
 
-FlatIconButton.defaultProps = {
-  disableFocusRipple: true,
-  disableRipple: true,
-};
-
 FlatIconButton.propTypes = {
   disabled: T.bool,
   disableFocusRipple: T.bool,
@@ -33,6 +28,12 @@ FlatIconButton.propTypes = {
    * Function to be run when a user clicks the button.
    */
   onClick: T.func.isRequired,
+};
+
+FlatIconButton.defaultProps = {
+  disabled: false,
+  disableFocusRipple: true,
+  disableRipple: true,
 };
 
 export default FlatIconButton;

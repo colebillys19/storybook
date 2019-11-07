@@ -29,6 +29,7 @@ PrimaryButton.propTypes = {
 };
 
 PrimaryButton.defaultProps = {
+  disabled: false,
   disableFocusRipple: true,
   disableRipple: true,
 };

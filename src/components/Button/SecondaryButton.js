@@ -29,6 +29,7 @@ SecondaryButton.propTypes = {
 };
 
 SecondaryButton.defaultProps = {
+  disabled: false,
   disableFocusRipple: true,
   disableRipple: true,
 };

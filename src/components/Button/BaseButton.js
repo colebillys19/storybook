@@ -32,11 +32,6 @@ const BaseButton = ({
   </StyledBaseButton>
 );
 
-BaseButton.defaultProps = {
-  disableFocusRipple: true,
-  disableRipple: true,
-};
-
 BaseButton.propTypes = {
   disabled: T.bool,
   disableFocusRipple: T.bool,
@@ -58,6 +53,12 @@ BaseButton.propTypes = {
    * Function to be run when a user clicks the button.
    */
   onClick: T.func.isRequired,
+};
+
+BaseButton.defaultProps = {
+  disabled: false,
+  disableFocusRipple: true,
+  disableRipple: true,
 };
 
 export default BaseButton;

@@ -7,19 +7,12 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs';
 
-import iconDictionary from '../../../utils/iconDictionary';
 import GhostButton from '../GhostButton';
 import GhostButtonDocs from '../docs/GhostButton.docs.mdx';
+import iconDictionary from '../../../utils/iconDictionary';
+import { iconOptions } from '../../../utils/storyConstants';
 
 const label = 'LABEL TEXT';
-
-const iconOptions = {
-  cancel: 'cancel',
-  inbox: 'inbox',
-  profile: 'profile',
-  star: 'star',
-};
-const iconDefault = 'inbox';
 
 export default {
   decorators: [withKnobs],
@@ -27,7 +20,6 @@ export default {
   title: 'Buttons|GhostButton',
 };
 
-/** */
 export const defaultStory = () => (
   <GhostButton
     disabled={boolean('Disabled', false)}
@@ -38,9 +30,8 @@ export const defaultStory = () => (
 
 defaultStory.story = { name: 'default' };
 
-/** */
 export const withIconStory = () => {
-  const Icon = iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall', 'button');
+  const Icon = iconDictionary(select('Icon', iconOptions, 'inbox'), 'mediumSmall', 'button');
   return (
     <GhostButton
       disabled={boolean('Disabled', false)}

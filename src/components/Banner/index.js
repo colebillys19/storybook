@@ -1,7 +1,7 @@
 import AlertBanner from './AlertBanner';
-import ErrorSuccessBanner from './ErrorSuccessBanner';
+import ResultBanner from './ResultBanner';
 
 export {
   AlertBanner,
-  ErrorSuccessBanner,
+  ResultBanner,
 };

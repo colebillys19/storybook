@@ -34,7 +34,9 @@ RoundIconButton.propTypes = {
 };
 
 RoundIconButton.defaultProps = {
+  disabled: false,
   disableFocusRipple: false,
+  disableRipple: false,
   edge: false,
   size: 'medium',
 };
