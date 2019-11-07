@@ -31,7 +31,7 @@ export const dmiMainGreen = '#009350';
 export const dmiSecondaryColor = 'orange';
 export const borderStyle = 'solid';
 export const borderWidth = '.5rem';
-export const expansionPanelDividerStyle = `0.1rem solid ${ssLightGrey}`;
+export const expansionPanelDividerStyle = `0.2rem solid ${msLightGrey}`;
 export const greyBorder = '.1rem solid #9e9e9e';
 export const inputFocusedBorder = `0.2rem solid ${msBrightPurple}`;
 

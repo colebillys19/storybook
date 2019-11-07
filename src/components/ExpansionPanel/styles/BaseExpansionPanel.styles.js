@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import { expansionPanelDividerStyle } from '../../../utils/defaultStyleHelper';
 
 export const StyledExpansionPanel = styled((props) => (
@@ -9,31 +8,26 @@ export const StyledExpansionPanel = styled((props) => (
 ))`
   border-bottom: ${expansionPanelDividerStyle};
   box-shadow: none;
-  &:before {
+  & :before {
     display: none;
-  }
-  &:first-child {
-    border-top: ${expansionPanelDividerStyle};
   }
   & .expanded {
     margin: 0;
   }
-`;
-
-export const StyledExpansionPanelSummary = styled((props) => (
-  <ExpansionPanelSummary classes={{ content: 'content' }} {...props} />
-))`
-  & .content {
+  .MuiExpansionPanelSummary-content {
     display: flex;
     align-items: center;
   }
-`;
-
-export const WithImageContentWrapper = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  .MuiExpansionPanelSummary-root.Mui-expanded {
+    min-height: 0;
+  }
+  .MuiExpansionPanelSummary-content.Mui-expanded {
+    margin: 1.2rem 0;
+  }
+  .MuiExpansionPanelDetails-root {
+    border-top: ${expansionPanelDividerStyle};
+    padding: 2.4rem;
+  }
 `;
 
 export const ImageWrapper = styled.div`
