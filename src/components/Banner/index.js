@@ -1,7 +1,7 @@
-import AlertBanner from './AlertBanner';
+import NotificationBanner from './NotificationBanner';
 import ResultBanner from './ResultBanner';
 
 export {
-  AlertBanner,
+  NotificationBanner,
   ResultBanner,
 };

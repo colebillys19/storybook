@@ -1,24 +1,24 @@
 import { Meta, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
 
-import AlertBanner from '../AlertBanner';
+import NotificationBanner from '../NotificationBanner';
 
 <Meta
   decorators={[withKnobs]}
-  component={AlertBanner}
-  title="Banners|AlertBanner"
+  component={NotificationBanner}
+  title="Banners|NotificationBanner"
 />
 
 <div style={{ position: 'relative', bottom: '20px' }}>
 
-  ## AlertBanner
+  ## NotificationBanner
 
-  A banner used to communicate alerts to the user.
+  A banner used to communicate either a message or an alert to the user.
 
   ### Props
 
   <div style={{ position: 'relative', bottom: '20px' }}>
-    <Props of={AlertBanner} />
+    <Props of={NotificationBanner} />
   </div>
 
 </div>

@@ -5,14 +5,14 @@ import {
   checkBasicRendering,
   checkRequiredProps,
 } from '../../../utils/testingHelpers';
-import AlertBanner from '../AlertBanner';
+import NotificationBanner from '../NotificationBanner';
 
-describe('<AlertBanner />', () => {
+describe('<NotificationBanner />', () => {
   const onClick = jest.fn();
   const component = (
-    <AlertBanner
-      alertText="alert text"
+    <NotificationBanner
       buttonText="button text"
+      messageText="message text"
       onClick={onClick}
     />
   );
