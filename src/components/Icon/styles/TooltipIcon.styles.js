@@ -8,7 +8,7 @@ export const StyledTooltip = styled((props) => (
     {...props}
   />
 ))`
-  & .tooltip {
+  &.tooltip {
     font-size: 1rem;
   }
 `;

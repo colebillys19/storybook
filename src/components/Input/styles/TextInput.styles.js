@@ -22,7 +22,7 @@ export const StyledTextInput = styled(TextField)`
     height: 4rem;
     width: 100%;
 
-    & .focused .outline {
+    &.focused .outline {
       border: ${inputFocusedBorder};
     };
   }

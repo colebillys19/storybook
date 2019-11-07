@@ -8,7 +8,7 @@ export const StyledListItemText = styled((props) => (
     {...props}
   />
 ))`
-  & .primary {
+  &.primary {
     font-family: 'Overpass', sans-serif;
     font-size: 1.4rem;
   }

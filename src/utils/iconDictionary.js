@@ -47,6 +47,7 @@ export default (name, size, style, options) => {
     visibilityOff: VisibilityOff,
     warning: Warning,
   };
+
   // Create style object to apply to SVG Icon
   const sizing = iconSize[size] || {};
   const styling = iconStyle[style] || {};
@@ -54,7 +55,7 @@ export default (name, size, style, options) => {
   const propsToPassDown = Object.assign({}, options);
   const IconToRender = icons[name];
   // Style Icon by applying to root styles
-  const StyledIcon = styled(IconToRender)({ '& .root': stylesToApply });
+  const StyledIcon = styled(IconToRender)({ '&.root': stylesToApply });
   // Return Styled Icon w/ proper class selection
   return <StyledIcon classes={{ root: 'root' }} className="styled-icon" {...propsToPassDown} />;
 };

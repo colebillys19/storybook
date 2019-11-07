@@ -15,7 +15,7 @@ export const StyledRadioButton = styled(Radio)`
   &:hover {
     color: ${msBrightPurple};
   }
-  & .checked {
+  &.checked {
     color: ${msBrightPurple};
   }
 `;
