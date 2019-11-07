@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import { expansionPanelDividerStyle } from '../../../utils/defaultStyleHelper';
+
+import { expansionPanelDividerStyle, msDarkGrey } from '../../../utils/defaultStyleHelper';
 
 export const StyledExpansionPanel = styled((props) => (
   <ExpansionPanel classes={{ expanded: 'expanded' }} {...props} />
@@ -16,7 +17,7 @@ export const StyledExpansionPanel = styled((props) => (
   }
   .MuiExpansionPanelSummary-content {
     display: flex;
-    align-items: center;
+    align-items: baseline;
   }
   .MuiExpansionPanelSummary-root.Mui-expanded {
     min-height: 0;
@@ -30,10 +31,11 @@ export const StyledExpansionPanel = styled((props) => (
   }
 `;
 
-export const ImageWrapper = styled.div`
-  align-items: center;
-  background-color: #f0f0f0;
-  border: 0.2rem solid #1f1f1f;
-  display: flex;
-  margin-right: 2rem;
+export const PrimarySummary = styled.span`
+  font-size: 1.7rem;
+  margin-right: 2.5rem;
+`;
+
+export const SecondarySummary = styled.span`
+  color: ${msDarkGrey};
 `;

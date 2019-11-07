@@ -3,7 +3,7 @@ import T from 'prop-types';
 
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 
-const BaseExpansionPanelSummary = ({
+const Summary = ({
   children,
   iconProps,
   ...restProps
@@ -15,11 +15,11 @@ const BaseExpansionPanelSummary = ({
 
 // Need this for Material UI composition
 // https://material-ui.com/guides/composition/
-BaseExpansionPanelSummary.muiName = ExpansionPanelSummary.muiName;
+Summary.muiName = ExpansionPanelSummary.muiName;
 
-BaseExpansionPanelSummary.propTypes = {
+Summary.propTypes = {
   children: T.node,
   iconProps: T.object,
 };
 
-export default BaseExpansionPanelSummary;
+export default Summary;
