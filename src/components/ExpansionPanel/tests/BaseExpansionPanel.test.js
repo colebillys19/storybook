@@ -1,18 +1,15 @@
 import React from 'react';
 
+import BaseExpansionPanel from '../BaseExpansionPanel';
+import ExpansionPanelSummary from '../sub-components/ExpansionPanelSummary';
+import ExpansionPanelDetails from '../sub-components/ExpansionPanelDetails';
 import {
   checkBasicRendering,
   // checkChildren,
   checkRequiredProps,
 } from '../../../utils/testingHelpers';
 
-import {
-  ExpansionPanel,
-  ExpansionPanelDetails,
-  ExpansionPanelSummary,
-} from '../index';
-
-describe('<ExpansionPanel />', () => {
+describe('<BaseExpansionPanel />', () => {
   const Summary = (
     <ExpansionPanelSummary key="summary">
       Title text
@@ -28,7 +25,7 @@ describe('<ExpansionPanel />', () => {
 
   /* eslint-disable react/no-children-prop */
   const component = (
-    <ExpansionPanel
+    <BaseExpansionPanel
       children={children}
     />
   );

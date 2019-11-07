@@ -3,8 +3,8 @@ import T from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
 
 const RoundIconButton = (props) => {
-  const { Icon } = props;
-  return <IconButton label="" {...props}>{Icon}</IconButton>;
+  const { Icon, ...restProps } = props;
+  return <IconButton label="" {...restProps}>{Icon}</IconButton>;
 };
 
 RoundIconButton.propTypes = {

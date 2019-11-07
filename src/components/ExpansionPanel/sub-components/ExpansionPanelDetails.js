@@ -2,15 +2,8 @@ import React from 'react';
 import T from 'prop-types';
 import PanelDetails from '@material-ui/core/ExpansionPanelDetails';
 
-const ExpansionPanelDetails = ({
-  children,
-  classes,
-  ...restProps
-}) => (
-  <PanelDetails
-    classes={classes}
-    {...restProps}
-  >
+const ExpansionPanelDetails = ({ children, ...restProps }) => (
+  <PanelDetails {...restProps}>
     {children}
   </PanelDetails>
 );

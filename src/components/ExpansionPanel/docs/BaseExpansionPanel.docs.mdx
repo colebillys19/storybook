@@ -1,0 +1,25 @@
+import { Meta, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+
+import BaseExpansionPanel from '../BaseExpansionPanel';
+
+<Meta
+  decorators={[withKnobs]}
+  component={BaseExpansionPanel}
+  title="Banners|BaseExpansionPanel"
+/>
+
+<div style={{ position: 'relative', bottom: '20px' }}>
+
+  ## BaseExpansionPanel
+
+  Use `ExpansionPanel` when you need a lightweight container to display a summary (component/text) 
+  which on click can expand to display additional details (component/text).
+
+  ### Props
+
+  <div style={{ position: 'relative', bottom: '20px' }}>
+    <Props of={BaseExpansionPanel} />
+  </div>
+
+</div>

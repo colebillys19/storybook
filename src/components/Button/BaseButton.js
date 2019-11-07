@@ -17,7 +17,6 @@ const BaseButton = ({
 }) => (
   <StyledBaseButton
     ref={forwardedRef}
-    classes={{ label: 'label', root: 'root' }}
     disabled={disabled}
     disableFocusRipple={disableFocusRipple}
     disableRipple={disableRipple}

@@ -1,7 +1,10 @@
+import React from 'react';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 
-export const StyledBaseButton = styled(Button)`
+export const StyledBaseButton = styled((props) => (
+  <Button classes={{ label: 'label', root: 'root' }} {...props} />
+))`
   align-items: center;
   box-shadow: none;
   display: inline-flex;
@@ -13,7 +16,7 @@ export const StyledBaseButton = styled(Button)`
   &:active {
     box-shadow: none;
   }
-  &.root {
+  & .root {
     min-width: 0;
   }
 `;

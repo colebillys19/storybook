@@ -23,9 +23,8 @@ export const RadioButtonGroup = ({
   );
 
   return (
-    <FormControl classes={{ root: 'form' }} {...restProps}>
+    <FormControl {...restProps}>
       <RadioGroup
-        classes={{ root: 'group' }}
         onChange={(e) => onChange(e.target.value)}
         row={row}
         value={selected}
