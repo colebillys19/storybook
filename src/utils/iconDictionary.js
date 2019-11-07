@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import ArrowDropDown from '@material-ui/icons/ArrowDropDown';
 import AttachMoney from '@material-ui/icons/AttachMoney';
 import CheckCircleOutline from '@material-ui/icons/CheckCircleOutline';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRight from '@material-ui/icons/ChevronRight';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import ExposurePlus1 from '@material-ui/icons/ExposurePlus1';
 import Inbox from '@material-ui/icons/Inbox';
