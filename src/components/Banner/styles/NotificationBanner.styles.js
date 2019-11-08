@@ -11,7 +11,7 @@ import TextButton from '../../Button/TextButton';
 export const BannerWrapper = styled.section`
   align-items: center;
   background-color: white;
-  border-top-color: ${({ isAlert }) => isAlert ? ssRed : ssLightBlue};
+  border-top-color: ${({ isAlert }) => (isAlert ? ssRed : ssLightBlue)};
   border-top-style: ${borderStyle};
   border-top-width: ${borderWidth};
   display: flex;

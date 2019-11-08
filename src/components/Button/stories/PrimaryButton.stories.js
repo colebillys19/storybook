@@ -12,8 +12,6 @@ import PrimaryButtonDocs from '../docs/PrimaryButton.docs.mdx';
 import iconDictionary from '../../../utils/iconDictionary';
 import { iconOptions } from '../../../utils/storyConstants';
 
-const label = 'LABEL TEXT';
-
 export default {
   decorators: [withKnobs],
   parameters: { component: PrimaryButton, docs: { page: PrimaryButtonDocs } },
@@ -23,7 +21,7 @@ export default {
 export const defaultStory = () => (
   <PrimaryButton
     disabled={boolean('Disabled', false)}
-    label={text('Label Text', label)}
+    label={text('Label Text', 'LABEL TEXT')}
     onClick={action('onClick')}
   />
 );
@@ -36,7 +34,7 @@ export const withIconStory = () => {
     <PrimaryButton
       disabled={boolean('Disabled', false)}
       Icon={Icon}
-      label={text('Label Text', label)}
+      label={text('Label Text', 'LABEL TEXT')}
       onClick={action('onClick')}
     />
   );

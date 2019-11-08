@@ -8,11 +8,11 @@ export const BannerWrapper = styled.div`
   color: white;
   display: flex;
   font-size: 1.5rem;
-  height: ${({ displayState }) => displayState ? 'auto' : '0'};
+  height: ${({ displayState }) => (displayState ? 'auto' : '0')};
   justify-content: space-between;
   overflow: hidden;
-  padding: ${({ displayState }) => displayState ? '1rem 0' : '0'};;
-  transition: all .25s;
+  padding: ${({ displayState }) => (displayState ? '1rem 0' : '0')};
+  transition: all 0.25s;
 `;
 
 export const CloseButton = styled(FlatIconButton)`

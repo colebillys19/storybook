@@ -12,8 +12,6 @@ import FlatIconButtonDocs from '../docs/FlatIconButton.docs.mdx';
 import iconDictionary from '../../../utils/iconDictionary';
 import { iconOptions, iconSizeOptions } from '../../../utils/storyConstants';
 
-const tooltipText = 'tooltip text';
-
 export default {
   decorators: [withKnobs],
   parameters: { component: FlatIconButton, docs: { page: FlatIconButtonDocs } },
@@ -30,7 +28,7 @@ export const defaultStory = () => {
       disabled={boolean('Disabled', false)}
       Icon={Icon}
       onClick={action('onClick')}
-      tooltipText={text('Tooltip Text', tooltipText)}
+      tooltipText={text('Tooltip Text', 'tooltip text')}
     />
   );
 };
