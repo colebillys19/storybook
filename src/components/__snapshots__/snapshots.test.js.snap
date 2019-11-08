@@ -2664,6 +2664,37 @@ exports[`Storyshots Miscellaneous|BaseExpansionPanel Secondary Text Story 1`] = 
 </div>
 `;
 
+exports[`Storyshots Miscellaneous|BaseListItem Default Story 1`] = `
+<ul
+  className="sc-hqyNC igDkic"
+>
+  <li
+    bullet={false}
+    className="MuiListItem-root root sc-frDJqD hEFKAd MuiListItem-gutters"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Item 1 Text
+  </li>
+  <li
+    bullet={false}
+    className="MuiListItem-root root sc-frDJqD hEFKAd MuiListItem-gutters"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Item 2 Text
+  </li>
+  <li
+    bullet={false}
+    className="MuiListItem-root root sc-frDJqD hEFKAd MuiListItem-gutters"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Item 3 Text
+  </li>
+</ul>
+`;
+
 exports[`Storyshots Miscellaneous|BaseTable Default Story 1`] = `
 <table
   className="MuiTable-root sc-jnlKLf jgxlCf"
