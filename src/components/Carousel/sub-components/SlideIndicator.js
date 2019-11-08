@@ -1,6 +1,6 @@
 import React from 'react';
 import T from 'prop-types';
-import { Indicator, IndicatorWrapper } from '../styles/Carousel.styles';
+import { Indicator, IndicatorWrapper } from '../styles/BaseCarousel.styles';
 
 const SlideIndicator = ({
   numItems,

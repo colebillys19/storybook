@@ -4,18 +4,18 @@ import {
   StyledItemTitle,
   StyledImage,
   StyledItemWrapper,
-} from '../styles/CarouselItem.styles';
+} from '../styles/BaseCarouselItem.styles';
 
-const CarouselItem = ({
+const BaseCarouselItem = ({
   description,
   handleClick,
   imageUrl,
-  selected,
+  // selected,
   title,
 }) => (
   <StyledItemWrapper
     onClick={() => handleClick({ title })}
-    selected={selected}
+    // selected={selected}
   >
     <StyledImage src={imageUrl} />
     <StyledItemTitle>{title}</StyledItemTitle>
@@ -23,12 +23,12 @@ const CarouselItem = ({
   </StyledItemWrapper>
 );
 
-CarouselItem.propTypes = {
+BaseCarouselItem.propTypes = {
   description: T.string,
   handleClick: T.func.isRequired,
   imageUrl: T.string.isRequired,
-  selected: T.bool.isRequired,
+  // selected: T.bool.isRequired,
   title: T.string.isRequired,
 };
 
-export default CarouselItem;
+export default BaseCarouselItem;

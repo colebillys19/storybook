@@ -203,6 +203,7 @@
     "react-test-context-provider": "2.2.0",
     "react-test-renderer": "16.9.0",
     "require-context.macro": "1.2.2",
+    "storybook-addon-state": "^1.0.3",
     "stylelint": "9.6.0",
     "stylelint-config-recommended": "2.1.0",
     "stylelint-config-styled-components": "0.1.1",

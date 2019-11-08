@@ -8,10 +8,15 @@ import {
   CarouselWrapper,
   ContentWrapper,
   OverflowWrapper,
-} from './styles/Carousel.styles';
+} from './styles/BaseCarousel.styles';
 
-const Carousel = ({ children, itemsPerSlide }) => {
-  const [position, setPosition] = useState(0);
+const BaseCarousel = ({
+  children,
+  itemsPerSlide,
+  position,
+  setPosition,
+}) => {
+  // const [position, setPosition] = useState(0);
   const numItems = children.length - itemsPerSlide + 1;
   const width = 100 / itemsPerSlide;
   return (
@@ -23,18 +28,13 @@ const Carousel = ({ children, itemsPerSlide }) => {
       >
         <ContentWrapper>
           <OverflowWrapper>
-            <SlidingContainer
-              position={position}
-              width={width}
-            >
-              {
-                children.map((child, index) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <CarouselItem key={`carousel-item-${index}`} width={width}>
-                    {child}
-                  </CarouselItem>
-                ))
-              }
+            <SlidingContainer position={position} width={width}>
+              {children.map((child, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <CarouselItem key={`carousel-item-${index}`} width={width}>
+                  {child}
+                </CarouselItem>
+              ))}
             </SlidingContainer>
           </OverflowWrapper>
           <SlideIndicator
@@ -48,11 +48,13 @@ const Carousel = ({ children, itemsPerSlide }) => {
   );
 };
 
-Carousel.propTypes = {
+BaseCarousel.propTypes = {
   children: T.node,
   itemsPerSlide: T.number,
+  position: T.number,
+  setPosition: T.func,
 };
 
-Carousel.defaultProps = { itemsPerSlide: 1 };
+BaseCarousel.defaultProps = { itemsPerSlide: 1 };
 
-export default Carousel;
+export default BaseCarousel;

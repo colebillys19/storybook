@@ -8,10 +8,8 @@ export const StyledImage = styled.img`
 export const StyledItemWrapper = styled.div`
   cursor: pointer;
   margin: 2rem 1rem 0;
-  transform: ${({ selected }) => selected ? 'translateY(-1.5rem)' : 'translateY(0)'};
   transition: transform 0.3s ease-in-out;
   width: 100%;
-
   &:hover {
     transform: translateY(-1.5rem);
   }
