@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 import BaseButton from '../BaseButton';
 
-import { msBrightPurple, msHoverPurple } from '../../../utils/defaultStyleHelper';
+import {
+  msBrightPurple,
+  msHoverPurple,
+} from '../../../utils/defaultStyleHelper';
 
 export const StyledBaseButton = styled(BaseButton)`
   align-items: center;
@@ -20,5 +23,5 @@ export const StyledBaseButton = styled(BaseButton)`
   }
   &:hover {
     background-color: ${msHoverPurple};
-  };
+  }
 `;

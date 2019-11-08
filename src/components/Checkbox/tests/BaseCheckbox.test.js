@@ -8,7 +8,6 @@ import {
   checkRequiredProps,
 } from '../../../utils/testingHelpers';
 
-
 describe('<Checkbox />', () => {
   const handleChange = jest.fn();
   const component = <Checkbox onChange={handleChange} />;

@@ -2,19 +2,19 @@ import React from 'react';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
-import ErrorSuccessBanner from '../ErrorSuccessBanner';
-import ErrorSuccessBannerDocs from '../docs/ErrorSuccessBanner.docs.mdx';
+import ResultBanner from '../ResultBanner';
+import ResultBannerDocs from '../docs/ResultBanner.docs.mdx';
 
 const bannerProps = { errorMessage: 'error', successMessage: 'success' };
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: ErrorSuccessBanner, docs: { page: ErrorSuccessBannerDocs } },
-  title: 'Banners|ErrorSuccessBanner',
+  parameters: { component: ResultBanner, docs: { page: ResultBannerDocs } },
+  title: 'Banners|ResultBanner',
 };
 
 export const errorStory = () => (
-  <ErrorSuccessBanner
+  <ResultBanner
     error={{ message: text('Error Message', bannerProps.errorMessage) }}
     onClose={action('onClose')}
   />
@@ -23,7 +23,7 @@ export const errorStory = () => (
 errorStory.story = { name: 'error' };
 
 export const successStory = () => (
-  <ErrorSuccessBanner
+  <ResultBanner
     onClose={action('onClose')}
     success={{ message: text('Success Message', bannerProps.successMessage) }}
   />

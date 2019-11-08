@@ -53,7 +53,7 @@ export default {
 export const defaultStory = () => {
   const Icon = iconDictionary(
     select('Icon', iconOptions, iconDefault),
-    select('Icon Size', sizeOptions, sizeDefault),
+    select('Icon Size', sizeOptions, sizeDefault)
   );
   return (
     <CustomTooltipIcon

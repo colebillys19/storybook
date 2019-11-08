@@ -7,21 +7,21 @@ import {
   BannerWrapper,
   CloseButton,
   Content,
-} from './styles/ErrorSuccessBanner.styles';
+} from './styles/ResultBanner.styles';
 
 const CloseIcon = iconDictionary('close', 'mediumSmall');
 const SuccessIcon = iconDictionary('successOutline', 'mediumSmall');
 const WarningIcon = iconDictionary('warning', 'mediumSmall');
 
-const ErrorSuccessBanner = ({
+const ResultBanner = ({
   error,
   onClose,
   success,
   ...restProps
 }) => {
-  const isErrorSuccess = success || error;
-  const [displayState, setDisplayState] = useState(!!isErrorSuccess);
-  useEffect(() => setDisplayState(!!isErrorSuccess), [isErrorSuccess]);
+  const isResults = success || error;
+  const [displayState, setDisplayState] = useState(!!isResults);
+  useEffect(() => setDisplayState(!!isResults), [isResults]);
 
   const handleClose = () => {
     setDisplayState(false);
@@ -31,24 +31,37 @@ const ErrorSuccessBanner = ({
     }
   };
 
-  const successProps = success && { color: successGreen, Icon: SuccessIcon, message: success.message };
-  const errorProps = error && { color: errorRed, Icon: WarningIcon, message: error.message };
-  const { color, Icon, message } = successProps || errorProps || {};
+  const successProps = success && {
+    color: successGreen,
+    Icon: SuccessIcon,
+    message: success.message,
+  };
+  const errorProps = error && {
+    color: errorRed,
+    Icon: WarningIcon,
+    message: error.message,
+  };
+  const {
+    color,
+    Icon,
+    message,
+  } = successProps || errorProps || {};
   return (
-    <BannerWrapper color={color} displayState={displayState} {...restProps}>
+    <BannerWrapper
+      color={color}
+      displayState={displayState}
+      {...restProps}
+    >
       <Content>
         {Icon}
         <span>{message}</span>
       </Content>
-      <CloseButton
-        Icon={CloseIcon}
-        onClick={handleClose}
-      />
+      <CloseButton Icon={CloseIcon} onClick={handleClose} />
     </BannerWrapper>
   );
 };
 
-ErrorSuccessBanner.propTypes = {
+ResultBanner.propTypes = {
   /**
    * Error message to be displayed within the banner.
    */
@@ -63,9 +76,6 @@ ErrorSuccessBanner.propTypes = {
   success: T.oneOfType([T.bool, T.object]),
 };
 
-ErrorSuccessBanner.defaultProps = {
-  error: false,
-  success: false,
-};
+ResultBanner.defaultProps = { error: false, success: false };
 
-export default ErrorSuccessBanner;
+export default ResultBanner;

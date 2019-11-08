@@ -7,48 +7,14 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs';
 
-import iconDictionary from '../../../utils/iconDictionary';
 import TooltipButton from '../TooltipButton';
 import TooltipButtonDocs from '../docs/TooltipButton.docs.mdx';
-
-const label = 'LABEL TEXT';
-const tooltipText = 'tooltip text';
-
-const enterDelayOptions = {
-  '50ms': 50,
-  '100ms': 100,
-  '250ms': 200,
-  '500ms': 500,
-  '750ms': 750,
-  '1000ms': 1000,
-};
-const enterDelayDefault = 100;
-
-/* eslint-disable sort-keys */
-const placementOptions = {
-  'top-start': 'top-start',
-  top: 'top',
-  'top-end': 'top-end',
-  'right-start': 'right-start',
-  right: 'right',
-  'right-end': 'right-end',
-  'bottom-start': 'bottom-start',
-  bottom: 'bottom',
-  'bottom-end': 'bottom-end',
-  'left-start': 'left-start',
-  left: 'left',
-  'left-end': 'left-end',
-};
-/* eslint-enable sort-keys */
-const placementDefault = 'bottom';
-
-const iconOptions = {
-  cancel: 'cancel',
-  inbox: 'inbox',
-  profile: 'profile',
-  star: 'star',
-};
-const iconDefault = 'inbox';
+import iconDictionary from '../../../utils/iconDictionary';
+import {
+  enterDelayOptions,
+  iconOptions,
+  placementOptions,
+} from '../../../utils/storyConstants';
 
 export default {
   decorators: [withKnobs],
@@ -56,32 +22,34 @@ export default {
   title: 'Buttons|TooltipButton',
 };
 
-/** */
 export const defaultStory = () => (
   <TooltipButton
     disabled={boolean('Disabled', false)}
-    enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
-    label={text('Label Text', label)}
+    enterDelay={select('Delay', enterDelayOptions, 100)}
+    label={text('Label Text', 'LABEL TEXT')}
     onClick={action('onClick')}
-    placement={select('Placement', placementOptions, placementDefault)}
-    tooltipText={text('Tooltip Text', tooltipText)}
+    placement={select('Placement', placementOptions, 'bottom')}
+    tooltipText={text('Tooltip Text', 'tooltip text')}
   />
 );
 
 defaultStory.story = { name: 'default' };
 
-/** */
 export const withIconStory = () => {
-  const Icon = iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall', 'button');
+  const Icon = iconDictionary(
+    select('Icon', iconOptions, 'inbox'),
+    'mediumSmall',
+    'button'
+  );
   return (
     <TooltipButton
       disabled={boolean('Disabled', false)}
-      enterDelay={select('Delay', enterDelayOptions, enterDelayDefault)}
+      enterDelay={select('Delay', enterDelayOptions, 100)}
       Icon={Icon}
-      label={text('Label Text', label)}
+      label={text('Label Text', 'LABEL TEXT')}
       onClick={action('onClick')}
-      placement={select('Placement', placementOptions, placementDefault)}
-      tooltipText={text('Tooltip Text', tooltipText)}
+      placement={select('Placement', placementOptions, 'bottom')}
+      tooltipText={text('Tooltip Text', 'tooltip text')}
     />
   );
 };

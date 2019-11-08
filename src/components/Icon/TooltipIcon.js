@@ -12,14 +12,11 @@ const TooltipIcon = ({
   tooltipText,
   ...restProps
 }) => {
-  const WrappedIcon = typeof Icon === 'function' ? <Icon {...iconProps} /> : Icon;
+  const WrappedIcon =
+    typeof Icon === 'function' ? <Icon {...iconProps} /> : Icon;
   if (!tooltipText) return WrappedIcon;
   return (
-    <StyledTooltip
-      placement={placement}
-      title={tooltipText}
-      {...restProps}
-    >
+    <StyledTooltip placement={placement} title={tooltipText} {...restProps}>
       {WrappedIcon}
     </StyledTooltip>
   );

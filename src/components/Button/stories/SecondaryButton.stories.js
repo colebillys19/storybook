@@ -7,45 +7,41 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs';
 
-import iconDictionary from '../../../utils/iconDictionary';
 import SecondaryButton from '../SecondaryButton';
 import SecondaryButtonDocs from '../docs/SecondaryButton.docs.mdx';
-
-const label = 'LABEL TEXT';
-
-const iconOptions = {
-  cancel: 'cancel',
-  inbox: 'inbox',
-  profile: 'profile',
-  star: 'star',
-};
-const iconDefault = 'inbox';
+import iconDictionary from '../../../utils/iconDictionary';
+import { iconOptions } from '../../../utils/storyConstants';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: SecondaryButton, docs: { page: SecondaryButtonDocs } },
+  parameters: {
+    component: SecondaryButton,
+    docs: { page: SecondaryButtonDocs },
+  },
   title: 'Buttons|SecondaryButton',
 };
 
-/** */
 export const defaultStory = () => (
   <SecondaryButton
     disabled={boolean('Disabled', false)}
-    label={text('Label Text', label)}
+    label={text('Label Text', 'LABEL TEXT')}
     onClick={action('onClick')}
   />
 );
 
 defaultStory.story = { name: 'default' };
 
-/** */
 export const withIconStory = () => {
-  const Icon = iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall', 'button');
+  const Icon = iconDictionary(
+    select('Icon', iconOptions, 'inbox'),
+    'mediumSmall',
+    'button'
+  );
   return (
     <SecondaryButton
       disabled={boolean('Disabled', false)}
       Icon={Icon}
-      label={text('Label Text', label)}
+      label={text('Label Text', 'LABEL TEXT')}
       onClick={action('onClick')}
     />
   );

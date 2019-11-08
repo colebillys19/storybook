@@ -3,11 +3,9 @@ import T from 'prop-types';
 
 import { StyledCard } from './styles/BaseCard.styles';
 
-const Card = (props) => (
-  <StyledCard classes={{ root: 'card' }} {...props} />
-);
+const BaseCard = (props) => <StyledCard {...props} />;
 
-Card.propTypes = {
+BaseCard.propTypes = {
   /**
    * Card content.
    */
@@ -22,4 +20,4 @@ Card.propTypes = {
   width: T.string,
 };
 
-export default Card;
+export default BaseCard;

@@ -8,12 +8,7 @@
 
 import React from 'react';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import {
-  boolean,
-  select,
-  text,
-  withKnobs,
-} from '@storybook/addon-knobs/react';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 
 import ListItem from '../ListItem';
@@ -73,7 +68,12 @@ export const iconStory = () => (
       selected={boolean('selected', false)}
       text={text('Text', listItemText)}
     >
-      <ListItemIcon>{iconDictionary(select('Icon', iconOptions, iconDefault), 'mediumSmall')}</ListItemIcon>
+      <ListItemIcon>
+        {iconDictionary(
+          select('Icon', iconOptions, iconDefault),
+          'mediumSmall'
+        )}
+      </ListItemIcon>
     </ListItem>
   </div>
 );

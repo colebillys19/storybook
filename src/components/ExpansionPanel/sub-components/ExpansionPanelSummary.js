@@ -1,33 +1,21 @@
 import React from 'react';
 import T from 'prop-types';
-import PanelSummary from '@material-ui/core/ExpansionPanelSummary';
 
-const ExpansionPanelSummary = ({
-  children,
-  classes,
-  expandIcon,
-  iconProps,
-  ...restProps
-}) => (
-  <PanelSummary
-    classes={classes}
-    expandIcon={expandIcon}
-    IconButtonProps={iconProps}
-    {...restProps}
-  >
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+
+const Summary = ({ children, iconProps, ...restProps }) => (
+  <ExpansionPanelSummary IconButtonProps={iconProps} {...restProps}>
     {children}
-  </PanelSummary>
+  </ExpansionPanelSummary>
 );
 
 // Need this for Material UI composition
 // https://material-ui.com/guides/composition/
-ExpansionPanelSummary.muiName = PanelSummary.muiName;
+Summary.muiName = ExpansionPanelSummary.muiName;
 
-ExpansionPanelSummary.propTypes = {
+Summary.propTypes = {
   children: T.node,
-  classes: T.object,
-  expandIcon: T.element,
   iconProps: T.object,
 };
 
-export default ExpansionPanelSummary;
+export default Summary;

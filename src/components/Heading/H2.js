@@ -1,30 +1,12 @@
-/**
-*
-* H2
-* @description: Wraps text to create an <h2> header
-* Use Case: Creating secondary titles or headers
-*/
+import styled from 'styled-components';
 
-import React from 'react';
-import T from 'prop-types';
+import { ssDarkGrey } from '../../utils/defaultStyleHelper';
 
-import { ExtendedH2 } from './styles/Headings.styles';
-
-/**
- * Use `H2` to create an `<h2>` header.
- */
-const H2 = (props) => (
-  <ExtendedH2 {...props} />
-);
-
-H2.propTypes = {
-  /**
-   * Wraps text to create an <h2> header.
-   */
-  children: T.oneOfType([
-    T.string,
-    T.object,
-  ]).isRequired,
-};
+const H2 = styled.h2`
+  color: ${ssDarkGrey};
+  font-size: 2.9rem;
+  font-weight: 500;
+  margin: 1.7rem 0;
+`;
 
 export default H2;

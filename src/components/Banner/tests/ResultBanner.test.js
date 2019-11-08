@@ -1,23 +1,20 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import {
-  checkBasicRendering,
-  checkRequiredProps,
-} from '../../../utils/testingHelpers';
-import ErrorSuccessBanner from '../ErrorSuccessBanner';
+import { checkBasicRendering, checkRequiredProps } from '../../../utils/testingHelpers';
+import ResultBanner from '../ResultBanner';
 
-describe('<ErrorSuccessBanner />', () => {
+describe('<ResultBanner />', () => {
   const onClose = jest.fn();
   const errorComponent = (
-    <ErrorSuccessBanner
+    <ResultBanner
       error={{ message: 'error' }}
       onClose={onClose}
       success={false}
     />
   );
   const successComponent = (
-    <ErrorSuccessBanner
+    <ResultBanner
       error={false}
       onClose={onClose}
       success={{ message: 'success' }}

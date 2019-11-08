@@ -11,7 +11,7 @@ export const StyledBaseButton = styled(BaseButton)`
   display: inline-flex;
   font-size: 1.2rem;
   font-weight: 500;
-  margin: .2rem 1rem;
+  margin: 0.2rem 1rem;
   padding: 0;
   text-decoration: underline;
   text-transform: none;
@@ -23,5 +23,5 @@ export const StyledBaseButton = styled(BaseButton)`
     box-shadow: none;
     color: ${msHoverPurple};
     text-decoration: underline;
-  };
+  }
 `;

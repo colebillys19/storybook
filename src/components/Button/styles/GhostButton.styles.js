@@ -5,7 +5,7 @@ import BaseButton from '../BaseButton';
 import {
   greyBorder,
   msBrightPurple,
-  msGreyHover,
+  msHoverGrey,
 } from '../../../utils/defaultStyleHelper';
 
 export const StyledBaseButton = styled(BaseButton)`
@@ -24,6 +24,6 @@ export const StyledBaseButton = styled(BaseButton)`
     box-shadow: none;
   }
   &:hover {
-    background-color: ${msGreyHover};
+    background-color: ${msHoverGrey};
   }
 `;

@@ -15,8 +15,8 @@ import {
   msBrightPurple,
   msDarkGrey,
   msMainGreen,
+  muiBlue,
   ssDarkBlue,
-  ssLightBlue,
   ssMainBlue,
   ssYellow,
 } from '../../../utils/defaultStyleHelper';
@@ -25,8 +25,8 @@ const colorOptions = {
   msBrightPurple,
   msDarkGrey,
   msMainGreen,
+  muiBlue,
   ssDarkBlue,
-  ssLightBlue,
   ssMainBlue,
   ssYellow,
 };
@@ -48,8 +48,6 @@ const imagePaddingOptions = {
 };
 const imagePaddingDefault = '2rem';
 
-const cardText = 'CARD TEXT';
-
 const imageContainerStyles = {
   alignItems: 'center',
   backgroundColor: '#f0f0f0',
@@ -70,8 +68,16 @@ export const defaultStory = () => {
       color={hasColor ? select('Color', colorOptions, colorDefault) : null}
       id="base-card"
     >
-      <div style={{ padding: select('Card Content Padding', textPaddingOptions, textPaddingDefault) }}>
-        {text('Card Text', cardText)}
+      <div
+        style={{
+          padding: select(
+            'Card Content Padding',
+            textPaddingOptions,
+            textPaddingDefault
+          ),
+        }}
+      >
+        {text('Card Text', 'Card Text')}
       </div>
     </BaseCard>
   );
@@ -82,9 +88,19 @@ defaultStory.story = { name: 'default' };
 export const headingStory = () => {
   const hasColor = boolean('Has Color', true);
   return (
-    <BaseCard color={hasColor ? select('Color', colorOptions, colorDefault) : null}>
-      <div style={{ padding: select('Card Content Padding', textPaddingOptions, textPaddingDefault) }}>
-        <StyledH1>{text('Card Text', cardText)}</StyledH1>
+    <BaseCard
+      color={hasColor ? select('Color', colorOptions, colorDefault) : null}
+    >
+      <div
+        style={{
+          padding: select(
+            'Card Content Padding',
+            textPaddingOptions,
+            textPaddingDefault
+          ),
+        }}
+      >
+        <StyledH1>{text('Card Text', 'Card Text')}</StyledH1>
       </div>
     </BaseCard>
   );
@@ -95,8 +111,18 @@ headingStory.story = { name: 'heading' };
 export const imageStory = () => {
   const hasColor = boolean('Has Color', true);
   return (
-    <BaseCard color={hasColor ? select('Color', colorOptions, colorDefault) : null}>
-      <div style={{ padding: select('Card Content Padding', imagePaddingOptions, imagePaddingDefault) }}>
+    <BaseCard
+      color={hasColor ? select('Color', colorOptions, colorDefault) : null}
+    >
+      <div
+        style={{
+          padding: select(
+            'Card Content Padding',
+            imagePaddingOptions,
+            imagePaddingDefault
+          ),
+        }}
+      >
         <div style={imageContainerStyles}>
           {iconDictionary('image', 'large')}
         </div>

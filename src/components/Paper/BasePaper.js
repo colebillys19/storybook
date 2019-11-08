@@ -5,18 +5,14 @@ import StyledPaper from './styles/BasePaper.styles';
 /**
  * Use `BasePaper` when you need a styled card with box shadow and white background.
  */
-const BasePaper = ({
-  children,
-  ...restProps
-}) => (
-  <StyledPaper {...restProps}>
-    {children}
-  </StyledPaper>);
+const BasePaper = ({ children, ...restProps }) => (
+  <StyledPaper {...restProps}>{children}</StyledPaper>
+);
 
 BasePaper.propTypes = {
-/**
- * The content of the component.
- */
+  /**
+   * The content of the component.
+   */
   children: T.node,
   /**
    * Override or extend the styles applied to the component.

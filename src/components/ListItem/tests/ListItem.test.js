@@ -7,9 +7,7 @@ import {
 import ListItem from '../ListItem';
 
 describe('<BaseListItem />', () => {
-  const component = (
-    <ListItem text="List Item" />
-  );
+  const component = <ListItem text="List Item" />;
 
   checkBasicRendering(component);
   checkRequiredProps(component);

@@ -4,7 +4,7 @@ import BasePaper from './BasePaper';
 import { insetShadow } from '../../utils/defaultStyleHelper';
 
 const InsetPaper = styled(BasePaper)`
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
   box-shadow: ${insetShadow};
 `;
 
@@ -30,10 +30,7 @@ InsetPaper.propTypes = {
   /**
    * The ref forwarded to the root element.
    */
-  ref: T.oneOfType([
-    T.func,
-    T.shape({ current: T.any }),
-  ]),
+  ref: T.oneOfType([T.func, T.shape({ current: T.any })]),
   /**
    * If true, rounded corners are disabled.
    */

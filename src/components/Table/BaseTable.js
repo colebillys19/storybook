@@ -57,9 +57,7 @@ const BaseTable = ({
           firstColBold={firstColBold}
         />
       </StyledTableHead>
-      <StyledTableBody hovercolor={hoverColor}>
-        {rows}
-      </StyledTableBody>
+      <StyledTableBody hovercolor={hoverColor}>{rows}</StyledTableBody>
     </StyledTable>
   );
 };
@@ -97,10 +95,12 @@ BaseTable.propTypes = {
   /**
    * The row data for each cell in a table row.
    */
-  rowData: T.arrayOf(T.shape({
-    cells: T.arrayOf(T.string),
-    id: T.string,
-  })),
+  rowData: T.arrayOf(
+    T.shape({
+      cells: T.arrayOf(T.string),
+      id: T.string,
+    })
+  ),
   /**
    * Allows TableCells to inherit size of the Table.
    */

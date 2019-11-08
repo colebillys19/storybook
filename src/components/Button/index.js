@@ -1,4 +1,3 @@
-
 import BaseButton from './BaseButton';
 import FlatIconButton from './FlatIconButton';
 import GhostButton from './GhostButton';

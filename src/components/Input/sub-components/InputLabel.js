@@ -4,12 +4,7 @@ import T from 'prop-types';
 import ConditionalRender from '../../../utils/ConditionalRender';
 import { LabelWrapper, StyledIcon } from './InputLabel.styles';
 
-const InputLabel = ({
-  className,
-  Icon,
-  text,
-  Tooltip,
-}) => (
+const InputLabel = ({ className, Icon, text, Tooltip }) => (
   <LabelWrapper className={className}>
     <span>{text}</span>
     <ConditionalRender

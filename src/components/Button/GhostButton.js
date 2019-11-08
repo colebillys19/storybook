@@ -5,11 +5,6 @@ import { StyledBaseButton } from './styles/GhostButton.styles';
 
 const GhostButton = (props) => <StyledBaseButton {...props} />;
 
-GhostButton.defaultProps = {
-  disableFocusRipple: true,
-  disableRipple: true,
-};
-
 GhostButton.propTypes = {
   disabled: T.bool,
   disableFocusRipple: T.bool,
@@ -18,7 +13,10 @@ GhostButton.propTypes = {
    * To be used when a button is wrapped in a Material UI tooltip component.
    * Use the `ForwardRef` helper component in conjunction with this prop.
    */
-  forwardedRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
+  forwardedRef: T.oneOfType([
+    T.func,
+    T.shape({ current: T.instanceOf(Element) }),
+  ]),
   /**
    * Icon to be displayed within the button.
    */
@@ -31,6 +29,12 @@ GhostButton.propTypes = {
    * Function to be run when a user clicks the button.
    */
   onClick: T.func.isRequired,
+};
+
+GhostButton.defaultProps = {
+  disabled: false,
+  disableFocusRipple: true,
+  disableRipple: true,
 };
 
 export default GhostButton;

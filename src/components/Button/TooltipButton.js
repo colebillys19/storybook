@@ -23,13 +23,6 @@ const TooltipButton = (props) => {
   );
 };
 
-TooltipButton.defaultProps = {
-  disableFocusRipple: true,
-  disableRipple: true,
-  enterDelay: 100,
-  placement: 'top',
-};
-
 TooltipButton.propTypes = {
   disabled: T.bool,
   disableFocusRipple: T.bool,
@@ -43,7 +36,10 @@ TooltipButton.propTypes = {
    * To be used when a button is wrapped in a Material UI tooltip component.
    * Use the `ForwardRef` helper component in conjunction with this prop.
    */
-  forwardedRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
+  forwardedRef: T.oneOfType([
+    T.func,
+    T.shape({ current: T.instanceOf(Element) }),
+  ]),
   /**
    * Icon to be displayed within the button.
    */
@@ -67,6 +63,14 @@ TooltipButton.propTypes = {
    * String to be displayed within the tooltip.
    */
   tooltipText: T.string.isRequired,
+};
+
+TooltipButton.defaultProps = {
+  disabled: false,
+  disableFocusRipple: true,
+  disableRipple: true,
+  enterDelay: 100,
+  placement: 'top',
 };
 
 export default TooltipButton;

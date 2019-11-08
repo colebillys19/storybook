@@ -1,40 +1,28 @@
-/**
- * @description Wraps text to create an <h1> header
- */
-
 import React from 'react';
+import styled from 'styled-components';
 import { withKnobs, select } from '@storybook/addon-knobs/react';
 import { text } from '@storybook/addon-knobs';
 
-import {
-  dmiMainGreen,
-  dmiSecondaryColor,
-  ssDarkGrey,
-  ssPurple,
-  ssMainBlue,
-} from '../../../utils/defaultStyleHelper';
+import HeadingDocs from '../docs/Heading.docs.mdx';
+import { headingColorOptions } from '../../../utils/storyConstants';
+import { msDarkGrey } from '../../../utils/defaultStyleHelper';
 import H1 from '../H1';
-
-const dmiColorOptions = {
-  dmiMainGreen,
-  dmiSecondaryColor,
-  ssDarkGrey,
-  ssMainBlue,
-  ssPurple,
-};
-
-const defaultH1Text = 'H1 HEADER TEXT';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: H1 },
+  parameters: { component: H1, docs: { page: HeadingDocs } },
   title: 'Headings|H1',
 };
 
+const StyledH1 = styled(H1)`
+  color: ${({ color }) => color};
+  margin-left: 1.7rem;
+`;
+
 export const defaultStory = () => (
-  <H1 style={{ color: select('Color', dmiColorOptions, ssDarkGrey) }}>
-    {text('Text', defaultH1Text)}
-  </H1>
+  <StyledH1 color={select('Color', headingColorOptions, msDarkGrey)}>
+    {text('Text', 'Header Text')}
+  </StyledH1>
 );
 
 defaultStory.story = { name: 'default' };

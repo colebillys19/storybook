@@ -1,7 +1,4 @@
-import AlertBanner from './AlertBanner';
-import ErrorSuccessBanner from './ErrorSuccessBanner';
+import NotificationBanner from './NotificationBanner';
+import ResultBanner from './ResultBanner';
 
-export {
-  AlertBanner,
-  ErrorSuccessBanner,
-};
+export { NotificationBanner, ResultBanner };

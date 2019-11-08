@@ -9,8 +9,6 @@ import {
 import TextButton from '../TextButton';
 import TextButtonDocs from '../docs/TextButton.docs.mdx';
 
-const label = 'LABEL TEXT';
-
 export default {
   decorators: [withKnobs],
   parameters: { component: TextButton, docs: { page: TextButtonDocs } },
@@ -20,7 +18,7 @@ export default {
 export const defaultStory = () => (
   <TextButton
     disabled={boolean('Disabled', false)}
-    label={text('Label Text', label)}
+    label={text('Label Text', 'LABEL TEXT')}
     onClick={action('onClick')}
   />
 );
