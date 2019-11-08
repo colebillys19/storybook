@@ -5,7 +5,7 @@ import { ssDarkGrey } from '../../utils/defaultStyleHelper';
 const H2 = styled.h2`
   color: ${ssDarkGrey};
   font-size: 2.9rem;
-  font-weight: 500;
+  font-weight: 400;
   margin: 1.7rem 0;
 `;
 

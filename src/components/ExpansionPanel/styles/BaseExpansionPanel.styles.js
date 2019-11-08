@@ -15,7 +15,7 @@ export const StyledExpansionPanel = styled((props) => (
   & :before {
     display: none;
   }
-  &.expanded {
+  & .expanded {
     margin: 0;
   }
   .MuiExpansionPanelSummary-content {

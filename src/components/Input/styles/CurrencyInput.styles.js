@@ -5,7 +5,7 @@ import TextInputWithAdornment from '../sub-components/TextInputWithAdornment';
 export const StyledCurrencyInput = styled((props) => (
   <TextInputWithAdornment classes={{ root: 'root' }} type="number" {...props} />
 ))`
-  &.root {
+  & .root {
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       /* display: none; <- Crashes Chrome on hover */

@@ -9,7 +9,7 @@ export const StyledBaseButton = styled(BaseButton)`
   box-shadow: none;
   display: inline-flex;
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 400;
   margin: 1rem;
   padding: 1rem 2.8rem;
   text-transform: none;
