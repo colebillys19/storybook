@@ -13,7 +13,7 @@ import {
 } from '../../../utils/testingHelpers';
 import BaseCarousel from '../BaseCarousel';
 import BaseCarouselItem from '../sub-components/BaseCarouselItem';
-import { PaymentAssistanceImage } from '../constants';
+import { defaultCarouselItem } from '../../../utils/storyConstants';
 
 afterEach(cleanup);
 
@@ -30,13 +30,6 @@ describe('<BaseCarousel />', () => {
         setPosition={setPosition}
       />
     );
-  };
-
-
-  const defaultCarouselItem = {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: PaymentAssistanceImage,
-    title: 'Carousel Item Title',
   };
 
   const children = Array.from({ length: 6 }).map((_, index) => (
