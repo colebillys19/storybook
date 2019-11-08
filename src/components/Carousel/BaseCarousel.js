@@ -1,5 +1,6 @@
 import React from 'react';
 import T from 'prop-types';
+
 import NavigationButtons from './sub-components/NavigationButtons';
 import SlideIndicator from './sub-components/SlideIndicator';
 import {
@@ -57,15 +58,18 @@ BaseCarousel.propTypes = {
    */
   itemsPerSlide: T.number,
   /**
-   * The starting item position.
+   * The position used to render items displayed in the carousel.
    */
-  position: T.number.isRequired,
+  position: T.number,
   /**
-   * A function that sets the position that dictates which items to show in the slide.
+   * A function that sets the position and dictates which items to show in the carousel.
    */
   setPosition: T.func.isRequired,
 };
 
-BaseCarousel.defaultProps = { itemsPerSlide: 1 };
+BaseCarousel.defaultProps = {
+  itemsPerSlide: 1,
+  position: 0,
+};
 
 export default BaseCarousel;

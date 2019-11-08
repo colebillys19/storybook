@@ -13,39 +13,13 @@ import BaseCarouselItem from '../sub-components/BaseCarouselItem';
 import BaseCarouselDocs from '../docs/BaseCarousel.docs.mdx';
 import { StyledCardTitle, StyledCard } from '../styles/BaseCarousel.styles';
 import {
-  msBrightPurple,
-  msDarkGrey,
-  msMainGreen,
-  ssDarkBlue,
-  ssLightBlue,
-  ssMainBlue,
-  ssYellow,
-} from '../../../utils/defaultStyleHelper';
-import { PaymentAssistanceImage } from '../constants';
+  colorOptions,
+  defaultCarouselItem,
+  itemsPerSlideDefault,
+  itemsPerSlideOptions,
+} from '../../../utils/storyConstants';
 
-const colorOptions = {
-  msBrightPurple,
-  msDarkGrey,
-  msMainGreen,
-  ssDarkBlue,
-  ssLightBlue,
-  ssMainBlue,
-  ssYellow,
-};
-const colorDefault = ssMainBlue;
-
-const itemsPerSlideOptions = {
-  3: 3,
-  4: 4,
-  5: 5,
-};
-const itemsPerSlideDefault = 4;
-
-const defaultCarouselItem = {
-  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-  imageUrl: PaymentAssistanceImage,
-  title: 'Carousel Item Title',
-};
+const colorDefault = colorOptions.ssMainBlue;
 
 export default {
   decorators: [withKnobs],
@@ -67,7 +41,8 @@ export const defaultStory = () => {
       >
         {Array.from({ length: number('Number of Cards', 6) }).map((_, index) => (
           <BaseCarouselItem
-            key={`carousel-image-${index}`} // eslint-disable-line react/no-array-index-key
+            // eslint-disable-next-line react/no-array-index-key
+            key={`carousel-image-${index}`}
             {...carouselItem}
           />
         ))}

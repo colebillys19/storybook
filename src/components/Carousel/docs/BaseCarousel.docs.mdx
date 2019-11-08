@@ -6,21 +6,14 @@ import BaseCarousel from '../BaseCarousel';
 import BaseCarouselItem from '../sub-components/BaseCarouselItem';
 import { StyledCardTitle, StyledCard } from '../styles/BaseCarousel.styles';
 import {
+  carouselItems,
+  colorOptions,
   EscrowStatementImage,
   InsuranceClaimImage,
   LenderInsuranceImage,
   PaymentAssistanceImage,
   YearEndTaxImage,
-} from '../constants';
-import {
-  msBrightPurple,
-  msDarkGrey,
-  msMainGreen,
-  ssDarkBlue,
-  ssLightBlue,
-  ssMainBlue,
-  ssYellow,
-} from '../../../utils/defaultStyleHelper';
+} from '../../../utils/storyConstants';
 
 <div style={{ position: 'relative', bottom: '20px' }}>
 
@@ -38,46 +31,6 @@ import {
 
 Example Usage:
 ```js
-import React, { useState } from 'react';
-import { BaseCarousel } from 'components/Carousel';
-import { ssMainBlue } from 'utils/defaultStyleHelper';
-import { StyledCardTitle, StyledCard } from 'components/Carousel/styles/BaseCarousel.styles';
-
-import {
-  PaymentAssistanceImage,
-  EscrowStatementImage,
-  InsuranceClaimImage,
-  LenderInsuranceImage,
-} from 'images';
-
-const carouselItems = [
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: PaymentAssistanceImage,
-    title: 'Payment Assistance Title',
-  },
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: EscrowStatementImage,
-    title: 'Escrow Statement Title',
-  },
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: InsuranceClaimImage,
-    title: 'Insurance Claim Title',
-  },
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: LenderInsuranceImage,
-    title: 'Lender Insurance Title',
-  },
-   {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: YearEndTaxImage,
-    title: 'Lender Insurance Title',
-  },
-]
-
   const myCarousel = () => {
     const [position, setPosition] = useState(0);
 
@@ -85,14 +38,13 @@ const carouselItems = [
       <StyledCard color={ssMainBlue}>
         <StyledCardTitle>Carousel Title</StyledCardTitle>
         <BaseCarousel
-          itemsPerSlide={2}
+          itemsPerSlide={3}
           position={position}
           setPosition={setPosition}
         >
           {carouselItems.map((item, index) => (
             <BaseCarouselItem
-              key={`carousel-image-${index}`} // eslint-disable-line react/no-array-index-key
-              {...item}
+              key={`carousel-image-${index}`}
             />
           ))}
         </BaseCarousel>
@@ -101,38 +53,10 @@ const carouselItems = [
 );
 ```
 
-export const carouselItems = [
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: PaymentAssistanceImage,
-    title: 'Payment Assistance Title',
-  },
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: EscrowStatementImage,
-    title: 'Escrow Statement Title',
-  },
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: InsuranceClaimImage,
-    title: 'Insurance Claim Title',
-  },
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: LenderInsuranceImage,
-    title: 'Lender Insurance Title',
-  },
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: YearEndTaxImage,
-    title: 'Year End Tax Title',
-  },
-];
-
 export const MyCarousel = () => {
   const [position, setPosition] = useState(0);
   return (
-    <StyledCard color={ssMainBlue}>
+    <StyledCard color={colorOptions.ssMainBlue}>
       <StyledCardTitle>Carousel Title</StyledCardTitle>
       <BaseCarousel
         itemsPerSlide={3}
@@ -141,7 +65,7 @@ export const MyCarousel = () => {
       >
         {carouselItems.map((item, index) => (
           <BaseCarouselItem
-            key={`carousel-image-${index}`} // eslint-disable-line react/no-array-index-key
+            key={`carousel-image-${index}`}
             {...item}
           />
         ))}

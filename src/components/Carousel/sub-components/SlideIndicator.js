@@ -1,5 +1,6 @@
 import React from 'react';
 import T from 'prop-types';
+
 import { Indicator, IndicatorWrapper } from '../styles/BaseCarousel.styles';
 
 const SlideIndicator = ({
@@ -11,7 +12,8 @@ const SlideIndicator = ({
     {
       Array.from({ length: numItems }).map((_, index) => (
         <Indicator
-          key={`carousel-indicator-${index}`} // eslint-disable-line react/no-array-index-key
+          // eslint-disable-next-line react/no-array-index-key
+          key={`carousel-indicator-${index}`}
           checked={position === index}
           onClick={() => setPosition(index)}
         />

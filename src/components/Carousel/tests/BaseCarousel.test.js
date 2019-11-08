@@ -15,7 +15,6 @@ import BaseCarousel from '../BaseCarousel';
 import BaseCarouselItem from '../sub-components/BaseCarouselItem';
 import { PaymentAssistanceImage } from '../constants';
 
-
 afterEach(cleanup);
 
 describe('<BaseCarousel />', () => {
@@ -56,7 +55,52 @@ describe('<BaseCarousel />', () => {
     />
   );
 
-  
+  it('renders nav buttons', () => {
+    const { container } = render(component);
+    const navButtons = container.querySelectorAll('button');
+    expect(navButtons).toHaveLength(2);
+  });
+
+  it('renders radios', () => {
+    const { container } = render(component);
+    const radios = container.querySelectorAll('input[type="radio"]');
+    expect(radios).toHaveLength(3);
+  });
+
+  it('navigates using nav buttons', () => {
+    const { container } = render(component);
+    const navButtons = container.querySelectorAll('button');
+    const leftNavButton = navButtons[0];
+    const rightNavButton = navButtons[1];
+    expect(leftNavButton).toBeDisabled();
+    expect(rightNavButton).not.toBeDisabled();
+    fireEvent.click(rightNavButton);
+    expect(leftNavButton).not.toBeDisabled();
+    expect(rightNavButton).not.toBeDisabled();
+    fireEvent.click(rightNavButton);
+    expect(leftNavButton).not.toBeDisabled();
+    expect(rightNavButton).toBeDisabled();
+  });
+
+  it('navigates using radio buttons', () => {
+    const { container } = render(component);
+    const radios = container.querySelectorAll('input[type="radio"]');
+    const leftRadio = radios[0];
+    const middleRadio = radios[1];
+    const rightRadio = radios[2];
+    expect(leftRadio).toHaveProperty('checked', true);
+    expect(middleRadio).toHaveProperty('checked', false);
+    expect(rightRadio).toHaveProperty('checked', false);
+    fireEvent.click(middleRadio);
+    expect(middleRadio).toHaveProperty('checked', true);
+    expect(rightRadio).toHaveProperty('checked', false);
+    expect(leftRadio).toHaveProperty('checked', false);
+    fireEvent.click(rightRadio);
+    expect(rightRadio).toHaveProperty('checked', true);
+    expect(leftRadio).toHaveProperty('checked', false);
+    expect(middleRadio).toHaveProperty('checked', false);
+  });
+
   checkBasicRendering(component);
   checkRequiredProps(component);
   checkChildren(component, children);
