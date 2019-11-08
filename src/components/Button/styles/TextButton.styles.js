@@ -10,7 +10,7 @@ export const StyledBaseButton = styled(BaseButton)`
   color: ${msBrightPurple};
   display: inline-flex;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0.2rem 1rem;
   padding: 0;
   text-decoration: underline;
