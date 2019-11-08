@@ -7,7 +7,7 @@ export const StyledFormControlLabel = styled(FormControlLabel)`
   span {
     font-size: 1.4rem;
   }
-  margin-left: 0
+  margin-left: 0;
 `;
 
 export const StyledRadioButton = styled(Radio)`

@@ -6,16 +6,8 @@ import ConditionalRender from '../../utils/ConditionalRender';
 /**
  * Use `BaseLink` when a link is need.
  */
-const BaseLink = ({
-  Icon,
-  label,
-  path,
-  ...restProps
-}) => (
-  <StyledBaseLink
-    to={path}
-    {...restProps}
-  >
+const BaseLink = ({ Icon, label, path, ...restProps }) => (
+  <StyledBaseLink to={path} {...restProps}>
     <ConditionalRender Component={Icon} shouldRender={!!Icon} />
     {label}
   </StyledBaseLink>

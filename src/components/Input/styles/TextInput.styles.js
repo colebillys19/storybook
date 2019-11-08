@@ -9,7 +9,7 @@ export const StyledTextInput = styled(TextField)`
   min-width: 20rem;
   .label {
     font-size: 1.4rem;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
   .helper {
     font-size: 1.2rem;
@@ -17,14 +17,14 @@ export const StyledTextInput = styled(TextField)`
   }
   .base-input {
     background: white;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     font-size: 1.4rem;
     height: 4rem;
     width: 100%;
 
     &.focused .outline {
       border: ${inputFocusedBorder};
-    };
+    }
   }
 `;
 

@@ -13,12 +13,7 @@ const CloseIcon = iconDictionary('close', 'mediumSmall');
 const SuccessIcon = iconDictionary('successOutline', 'mediumSmall');
 const WarningIcon = iconDictionary('warning', 'mediumSmall');
 
-const ResultBanner = ({
-  error,
-  onClose,
-  success,
-  ...restProps
-}) => {
+const ResultBanner = ({ error, onClose, success, ...restProps }) => {
   const isResults = success || error;
   const [displayState, setDisplayState] = useState(!!isResults);
   useEffect(() => setDisplayState(!!isResults), [isResults]);
@@ -31,8 +26,16 @@ const ResultBanner = ({
     }
   };
 
-  const successProps = success && { color: successGreen, Icon: SuccessIcon, message: success.message };
-  const errorProps = error && { color: errorRed, Icon: WarningIcon, message: error.message };
+  const successProps = success && {
+    color: successGreen,
+    Icon: SuccessIcon,
+    message: success.message,
+  };
+  const errorProps = error && {
+    color: errorRed,
+    Icon: WarningIcon,
+    message: error.message,
+  };
   const { color, Icon, message } = successProps || errorProps || {};
   return (
     <BannerWrapper color={color} displayState={displayState} {...restProps}>
@@ -40,10 +43,7 @@ const ResultBanner = ({
         {Icon}
         <span>{message}</span>
       </Content>
-      <CloseButton
-        Icon={CloseIcon}
-        onClick={handleClose}
-      />
+      <CloseButton Icon={CloseIcon} onClick={handleClose} />
     </BannerWrapper>
   );
 };

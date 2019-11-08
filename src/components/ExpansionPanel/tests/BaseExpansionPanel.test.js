@@ -11,24 +11,16 @@ import {
 
 describe('<BaseExpansionPanel />', () => {
   const Summary = (
-    <ExpansionPanelSummary key="summary">
-      Title text
-    </ExpansionPanelSummary>
+    <ExpansionPanelSummary key="summary">Title text</ExpansionPanelSummary>
   );
 
   const Details = (
-    <ExpansionPanelDetails key="details">
-      Details Text
-    </ExpansionPanelDetails>
+    <ExpansionPanelDetails key="details">Details Text</ExpansionPanelDetails>
   );
   const children = [Summary, Details];
 
   /* eslint-disable react/no-children-prop */
-  const component = (
-    <BaseExpansionPanel
-      children={children}
-    />
-  );
+  const component = <BaseExpansionPanel children={children} />;
 
   checkBasicRendering(component);
   checkRequiredProps(component);

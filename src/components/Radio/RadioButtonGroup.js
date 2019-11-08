@@ -3,7 +3,10 @@ import T from 'prop-types';
 import FormControl from '@material-ui/core/FormControl';
 import RadioGroup from '@material-ui/core/RadioGroup';
 
-import { StyledFormControlLabel, StyledRadioButton } from './styles/Radio.styles';
+import {
+  StyledFormControlLabel,
+  StyledRadioButton,
+} from './styles/Radio.styles';
 
 /**
  * Use `RadioButtonGroup` when one selection is needed from a set options.
@@ -30,18 +33,16 @@ export const RadioButtonGroup = ({
         value={selected}
         {...restProps}
       >
-        {
-          options.map(({ label, value }) => (
-            <StyledFormControlLabel
-              key={`radio-option-${value}`}
-              classes={{ label: 'label' }}
-              control={radio}
-              label={label}
-              value={value}
-              {...restProps}
-            />
-          ))
-        }
+        {options.map(({ label, value }) => (
+          <StyledFormControlLabel
+            key={`radio-option-${value}`}
+            classes={{ label: 'label' }}
+            control={radio}
+            label={label}
+            value={value}
+            {...restProps}
+          />
+        ))}
       </RadioGroup>
     </FormControl>
   );
@@ -91,10 +92,7 @@ RadioButtonGroup.propTypes = {
   /**
    * Pass a ref to the input element.
    */
-  inputRef: T.oneOfType([
-    T.func,
-    T.shape({ current: T.any }),
-  ]),
+  inputRef: T.oneOfType([T.func, T.shape({ current: T.any })]),
   /**
    * The position of the label.
    */
@@ -111,10 +109,12 @@ RadioButtonGroup.propTypes = {
    * The options displayed in the RadioButtonGroup.
    * An array of objects with properties label and value.
    */
-  options: T.arrayOf(T.shape({
-    label: T.string,
-    value: T.oneOfType([T.bool, T.number, T.string]).isRequired,
-  })).isRequired,
+  options: T.arrayOf(
+    T.shape({
+      label: T.string,
+      value: T.oneOfType([T.bool, T.number, T.string]).isRequired,
+    })
+  ).isRequired,
   /**
    * If true, the input element will be required.
    */

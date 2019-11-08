@@ -1,9 +1,9 @@
 import BaseExpansionPanel from './BaseExpansionPanel';
-import BaseExpansionPanelDetails from './BaseExpansionPanelDetails';
-import BaseExpansionPanelSummary from './BaseExpansionPanelSummary';
+import ExpansionPanelDetails from './sub-components/ExpansionPanelDetails';
+import ExpansionPanelSummary from './sub-components/ExpansionPanelSummary';
 
 export {
   BaseExpansionPanel,
-  BaseExpansionPanelDetails,
-  BaseExpansionPanelSummary,
+  ExpansionPanelDetails,
+  ExpansionPanelSummary,
 };

@@ -24,17 +24,24 @@ addParameters({
     { name: 'Black', value: '#000000', default: false },
     { name: 'DMI Purple', value: '#310078', default: false },
     { name: 'DMI Green', value: '#00db7d', default: false },
-  ]
+  ],
 });
 
 addParameters({ docs: { page: null } });
 
-const components = requireContext('../src/components', true, /\.stories\.(js)$/);
+const components = requireContext(
+  '../src/components',
+  true,
+  /\.stories\.(js)$/
+);
 // const design = requireContext('../src/design', true, /\.stories\.(js|mdx)$/);
 // const documentation = requireContext('../src/documentation', true, /\.stories\.(js|mdx)$/);
 
-configure([
-  // design,
-  // documentation,
-  components,
-], module);
+configure(
+  [
+    // design,
+    // documentation,
+    components,
+  ],
+  module
+);

@@ -20,16 +20,10 @@ const ExpansionPanel = (props) => {
   return (
     <StyledExpansionPanel {...restProps}>
       <ExpansionPanelSummary expandIcon={iconDictionary('arrowDown', 'medium')}>
-        <PrimarySummary>
-          {primarySummaryText}
-        </PrimarySummary>
-        <SecondarySummary>
-          {secondarySummaryText}
-        </SecondarySummary>
+        <PrimarySummary>{primarySummaryText}</PrimarySummary>
+        <SecondarySummary>{secondarySummaryText}</SecondarySummary>
       </ExpansionPanelSummary>
-      <ExpansionPanelDetails>
-        {content}
-      </ExpansionPanelDetails>
+      <ExpansionPanelDetails>{content}</ExpansionPanelDetails>
     </StyledExpansionPanel>
   );
 };

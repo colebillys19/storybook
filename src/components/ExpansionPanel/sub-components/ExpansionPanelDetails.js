@@ -4,9 +4,7 @@ import T from 'prop-types';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 
 const Details = ({ children, ...restProps }) => (
-  <ExpansionPanelDetails {...restProps}>
-    {children}
-  </ExpansionPanelDetails>
+  <ExpansionPanelDetails {...restProps}>{children}</ExpansionPanelDetails>
 );
 
 // Need this for Material UI composition

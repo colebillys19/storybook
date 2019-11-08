@@ -9,7 +9,7 @@ const GhostButtonLink = styled(BaseLink)`
     padding: 0.5rem 1rem;
     text-align: center;
     text-decoration: none;
-  
+
     &:hover {
       background-color: ${ssHoverGrey};
     }

@@ -4,11 +4,14 @@ import isUndefined from 'lodash/isUndefined';
 import moment from 'moment';
 
 const isBlank = (value) =>
-  isUndefined(value) || isNull(value) || value.length === 0 || isEmptyString(value);
+  isUndefined(value) ||
+  isNull(value) ||
+  value.length === 0 ||
+  isEmptyString(value);
 
 const isEmptyString = (str) => {
   if (typeof str === 'string') {
-    return (/^\s*$/).test(str);
+    return /^\s*$/.test(str);
   }
   return false;
 };
@@ -16,11 +19,15 @@ const isEmptyString = (str) => {
 const validateNumber = (number) => {
   const numberWithoutCommas = number.replace(/,/g, '');
   const convertedNumber = Number(numberWithoutCommas);
-  if (isEqual(convertedNumber, NaN) || convertedNumber < 0 || number === 'Infinity') {
-    return ({
+  if (
+    isEqual(convertedNumber, NaN) ||
+    convertedNumber < 0 ||
+    number === 'Infinity'
+  ) {
+    return {
       error: 'invalidValue',
       message: 'Invalid number',
-    });
+    };
   }
   return false;
 };
@@ -47,12 +54,10 @@ const validateNumberRange = (number, { max, min }) => {
 
 const validateDate = (date) => {
   if (!moment(date).isValid()) {
-    return (
-      {
-        error: 'invalidValue',
-        message: 'Invalid date',
-      }
-    );
+    return {
+      error: 'invalidValue',
+      message: 'Invalid date',
+    };
   }
   return false;
 };
@@ -60,71 +65,71 @@ const validateDate = (date) => {
 const validatePercentage = (number) => {
   const convertedNumber = Number(number);
   if (isEqual(convertedNumber, NaN)) {
-    return ({
+    return {
       error: 'invalidValue',
       message: 'Invalid number',
-    });
+    };
   }
   if (convertedNumber <= 0 || convertedNumber > 100) {
-    return ({
+    return {
       error: 'invalidValue',
       message: 'Invalid Value',
-    });
+    };
   }
   return false;
 };
 
-
 const validateGreaterThanZero = (number) => {
   const convertedNumber = Number(number);
   if (isEqual(convertedNumber, NaN)) {
-    return ({
+    return {
       error: 'invalidValue',
       message: 'Invalid number',
-    });
+    };
   }
   if (convertedNumber <= 0) {
-    return ({
+    return {
       error: 'invalidValue',
       message: 'Invalid Value',
-    });
+    };
   }
   return false;
 };
 
 const validateString = (str) => {
   if (typeof str !== 'string') {
-    return ({
+    return {
       error: 'invalidValue',
       message: 'Invalid value',
-    });
+    };
   }
   return false;
 };
 
 const validateLength = (value, { length, maxLength, minLength }) => {
   if (length && value.length !== length) {
-    return ({
+    return {
       error: 'invalidLength',
       message: `Invalid length. Must have a length of ${length}`,
-    });
+    };
   }
   if (minLength && value.length < minLength) {
-    return ({
+    return {
       error: 'invalidLength',
       message: `Invalid length. Must have a length greater than or equal to ${minLength}`,
-    });
+    };
   }
   if (maxLength && value.length > maxLength) {
-    return ({
+    return {
       error: 'invalidLength',
       message: `Invalid length. Must have a length less than or equal to ${maxLength}`,
-    });
+    };
   }
   return false;
 };
 
-const validateBody = (value) => validateLength(value, { maxLength: 3000 }) || validateString(value);
+const validateBody = (value) =>
+  validateLength(value, { maxLength: 3000 }) || validateString(value);
 
 const validateCurrencyRange = (number, { max, min }) =>
   validateNumber(number) || validateNumberRange(number, { max, min });
@@ -151,11 +156,11 @@ const validateRoutingNumber = (value) =>
 const validatePassword = (value) => {
   const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{10,})/;
   if (!re.test(value)) {
-    return ({
+    return {
       error: 'invalidPassword',
       message:
-      'Must contain at least 1 lowercase, 1 uppercase, 1 number and at least 10 characters long',
-    });
+        'Must contain at least 1 lowercase, 1 uppercase, 1 number and at least 10 characters long',
+    };
   }
   return false;
 };
@@ -177,10 +182,10 @@ const validateEmail = (value) => {
   */
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!re.test(value)) {
-    return ({
+    return {
       error: 'invalidEmail',
       message: 'Invalid email address ex. jdoe@mail.com',
-    });
+    };
   }
   return false;
 };
@@ -199,10 +204,10 @@ const validatePhone = (phone) => {
 
 const validateConfirmInput = (value, { comparisonValue, name }) => {
   if (value !== comparisonValue) {
-    return ({
+    return {
       error: 'invalidMatch',
       message: `${name} does not match with previous value.`,
-    });
+    };
   }
   return false;
 };
@@ -232,17 +237,12 @@ export const validationDictionary = {
   zipCode: validateZipCode,
 };
 
-export const validate = ({
-  required,
-  type,
-  value,
-  ...validationProps
-}) => {
+export const validate = ({ required, type, value, ...validationProps }) => {
   if (required && isBlank(value)) {
-    return ({
+    return {
       error: 'isRequired',
       message: 'Required field',
-    });
+    };
   }
   if (!Array.isArray(type)) {
     const validationFunction = validationDictionary[type];

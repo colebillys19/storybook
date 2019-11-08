@@ -12,11 +12,7 @@
 
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import {
-  select,
-  text,
-  withKnobs,
-} from '@storybook/addon-knobs/react';
+import { select, text, withKnobs } from '@storybook/addon-knobs/react';
 
 import iconDictionary from '../../../utils/iconDictionary';
 
@@ -48,12 +44,17 @@ const labelText = 'LABEL TEXT';
 const path = 'path';
 
 export default {
-  decorators: [withKnobs, (story) => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>],
+  decorators: [
+    withKnobs,
+    (story) => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>,
+  ],
   parameters: { component: BaseLink },
   title: 'Links|GhostButtonLink',
 };
 
-export const defaultStory = () => <GhostButtonLink label={text('Label', labelText)} path={path} />;
+export const defaultStory = () => (
+  <GhostButtonLink label={text('Label', labelText)} path={path} />
+);
 
 defaultStory.story = { name: 'default' };
 

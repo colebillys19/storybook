@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 import BaseButton from '../BaseButton';
 
-import {
-  msHoverGreen,
-  msMainGreen,
-} from '../../../utils/defaultStyleHelper';
+import { msHoverGreen, msMainGreen } from '../../../utils/defaultStyleHelper';
 
 export const StyledBaseButton = styled(BaseButton)`
   align-items: center;

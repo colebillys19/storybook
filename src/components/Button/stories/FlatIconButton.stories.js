@@ -1,11 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import {
-  boolean,
-  select,
-  text,
-  withKnobs,
-} from '@storybook/addon-knobs';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 
 import FlatIconButton from '../FlatIconButton';
 import FlatIconButtonDocs from '../docs/FlatIconButton.docs.mdx';
@@ -21,7 +16,7 @@ export default {
 export const defaultStory = () => {
   const Icon = iconDictionary(
     select('Icon', iconOptions, 'inbox'),
-    select('Icon Size', iconSizeOptions, 'mediumSmall'),
+    select('Icon Size', iconSizeOptions, 'mediumSmall')
   );
   return (
     <FlatIconButton

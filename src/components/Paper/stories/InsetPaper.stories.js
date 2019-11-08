@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  select,
-  text,
-  withKnobs,
-} from '@storybook/addon-knobs/react';
+import { select, text, withKnobs } from '@storybook/addon-knobs/react';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import InsetPaper from '../InsetPaper';
@@ -33,7 +29,15 @@ export default {
 
 export const defaultStory = () => (
   <InsetPaper>
-    <div style={{ padding: select('Paper Content Padding', paddingOptions, paddingDefault) }}>
+    <div
+      style={{
+        padding: select(
+          'Paper Content Padding',
+          paddingOptions,
+          paddingDefault
+        ),
+      }}
+    >
       {text('Paper Text', paperText)}
     </div>
   </InsetPaper>
@@ -43,10 +47,16 @@ defaultStory.story = { name: 'default' };
 
 export const image = () => (
   <InsetPaper>
-    <div style={{ padding: select('Paper Content Padding', paddingOptions, paddingDefault) }}>
-      <div style={imageContainerStyles}>
-        {iconDictionary('image', 'large')}
-      </div>
+    <div
+      style={{
+        padding: select(
+          'Paper Content Padding',
+          paddingOptions,
+          paddingDefault
+        ),
+      }}
+    >
+      <div style={imageContainerStyles}>{iconDictionary('image', 'large')}</div>
     </div>
   </InsetPaper>
 );

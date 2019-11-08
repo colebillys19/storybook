@@ -1,10 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import {
-  boolean,
-  text,
-  withKnobs,
-} from '@storybook/addon-knobs';
+import { boolean, text, withKnobs } from '@storybook/addon-knobs';
 
 import TextButton from '../TextButton';
 import TextButtonDocs from '../docs/TextButton.docs.mdx';

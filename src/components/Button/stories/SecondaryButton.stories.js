@@ -1,11 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import {
-  boolean,
-  select,
-  text,
-  withKnobs,
-} from '@storybook/addon-knobs';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 
 import SecondaryButton from '../SecondaryButton';
 import SecondaryButtonDocs from '../docs/SecondaryButton.docs.mdx';
@@ -14,11 +9,13 @@ import { iconOptions } from '../../../utils/storyConstants';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: SecondaryButton, docs: { page: SecondaryButtonDocs } },
+  parameters: {
+    component: SecondaryButton,
+    docs: { page: SecondaryButtonDocs },
+  },
   title: 'Buttons|SecondaryButton',
 };
 
-/** */
 export const defaultStory = () => (
   <SecondaryButton
     disabled={boolean('Disabled', false)}
@@ -29,9 +26,12 @@ export const defaultStory = () => (
 
 defaultStory.story = { name: 'default' };
 
-/** */
 export const withIconStory = () => {
-  const Icon = iconDictionary(select('Icon', iconOptions, 'inbox'), 'mediumSmall', 'button');
+  const Icon = iconDictionary(
+    select('Icon', iconOptions, 'inbox'),
+    'mediumSmall',
+    'button'
+  );
   return (
     <SecondaryButton
       disabled={boolean('Disabled', false)}

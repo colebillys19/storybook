@@ -28,18 +28,11 @@ const TextInput = ({
 }) => {
   const shouldRenderLabel = !!label;
   const Label = (
-    <InputLabel
-      className={className}
-      text={label}
-      {...InputLabelProps}
-    />
+    <InputLabel className={className} text={label} {...InputLabelProps} />
   );
   return (
     <Fragment>
-      <ConditionalRender
-        Component={Label}
-        shouldRender={shouldRenderLabel}
-      />
+      <ConditionalRender Component={Label} shouldRender={shouldRenderLabel} />
       <StyledTextInput
         className={className}
         disabled={disabled}
@@ -100,11 +93,7 @@ TextInput.propTypes = {
   /**
    * If true, the label will be displayed in an error state.
    */
-  error: T.oneOfType([
-    T.string,
-    T.oneOf([null]),
-    T.bool,
-  ]),
+  error: T.oneOfType([T.string, T.oneOf([null]), T.bool]),
   /**
    * The props passed to the material-ui FormHelperText component.
    */
@@ -116,11 +105,7 @@ TextInput.propTypes = {
   /**
    * The text displayed in the material-ui FormHelperText component.
    */
-  helperText: T.oneOfType([
-    T.string,
-    T.oneOf([null]),
-    T.node,
-  ]),
+  helperText: T.oneOfType([T.string, T.oneOf([null]), T.node]),
   /**
    * The id of the input element.
    * Use this prop to make label and helperText accessible for screen readers.
@@ -142,19 +127,11 @@ TextInput.propTypes = {
   /**
    *  Ref passed to the input element.
    */
-  inputRef: T.oneOfType([
-    T.func,
-    T.shape({ current: T.any }),
-  ]),
+  inputRef: T.oneOfType([T.func, T.shape({ current: T.any })]),
   /**
    * The label content. If you do not pass a label in, there will not be one.
    */
-  label: T.oneOfType([
-    T.string,
-    T.element,
-    T.oneOf([null]),
-    T.node,
-  ]),
+  label: T.oneOfType([T.string, T.element, T.oneOf([null]), T.node]),
   /**
    * If dense or normal, will adjust vertical spacing of this and contained components.
    */
@@ -211,11 +188,7 @@ TextInput.propTypes = {
   /**
    * The variant to use.
    */
-  variant: T.oneOf([
-    'filled',
-    'outlined',
-    'standard',
-  ]),
+  variant: T.oneOf(['filled', 'outlined', 'standard']),
 };
 
 TextInput.defaultProps = {

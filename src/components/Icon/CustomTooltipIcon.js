@@ -10,7 +10,8 @@ const CustomTooltipIcon = ({
   TooltipContent,
   ...restProps
 }) => {
-  const WrappedIcon = typeof Icon === 'function' ? <Icon {...iconProps} /> : Icon;
+  const WrappedIcon =
+    typeof Icon === 'function' ? <Icon {...iconProps} /> : Icon;
   if (!TooltipContent) return WrappedIcon;
   return (
     <StyledTooltip

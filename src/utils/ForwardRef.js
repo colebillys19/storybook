@@ -1,10 +1,10 @@
 /**
-*
-* ForwardRef
-* @description helper used to wrap function components in React's forwardRef method
-*              to be used when implementing material UI tooltips
-*
-*/
+ *
+ * ForwardRef
+ * @description helper used to wrap function components in React's forwardRef method
+ *              to be used when implementing material UI tooltips
+ *
+ */
 
 import React from 'react';
 import T, { element } from 'prop-types';

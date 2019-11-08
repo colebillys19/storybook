@@ -1,15 +1,15 @@
 /**
-*
-* ConditionalRender
-* @description Render a component only when a condition is satisfied
-* Use Case: Decluttering component render methods with repeated logic
-* Parent Components/Containers : [
-*  {
-*    route: /queryBuilder,
-*    name: <NumberPickerRange>,
-*  },
-* ]
-*/
+ *
+ * ConditionalRender
+ * @description Render a component only when a condition is satisfied
+ * Use Case: Decluttering component render methods with repeated logic
+ * Parent Components/Containers : [
+ *  {
+ *    route: /queryBuilder,
+ *    name: <NumberPickerRange>,
+ *  },
+ * ]
+ */
 
 import React from 'react';
 import T from 'prop-types';

@@ -11,11 +11,7 @@
 
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import {
-  select,
-  text,
-  withKnobs,
-} from '@storybook/addon-knobs/react';
+import { select, text, withKnobs } from '@storybook/addon-knobs/react';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import BaseLink from '../BaseLink';
@@ -45,7 +41,10 @@ const labelText = 'LABEL TEXT';
 const path = 'path';
 
 export default {
-  decorators: [(story) => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>, withKnobs],
+  decorators: [
+    (story) => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>,
+    withKnobs,
+  ],
   parameters: { component: BaseLink },
   title: 'Links|BaseLink',
 };

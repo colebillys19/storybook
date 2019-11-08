@@ -50,13 +50,10 @@ const tooltipText = 'tooltip text';
 export const defaultStory = () => {
   const Icon = iconDictionary(
     select('Icon', iconOptions, iconDefault),
-    select('Icon Size', sizeOptions, sizeDefault),
+    select('Icon Size', sizeOptions, sizeDefault)
   );
   return (
-    <TooltipIcon
-      Icon={Icon}
-      tooltipText={text('Tooltip Text', tooltipText)}
-    />
+    <TooltipIcon Icon={Icon} tooltipText={text('Tooltip Text', tooltipText)} />
   );
 };
 

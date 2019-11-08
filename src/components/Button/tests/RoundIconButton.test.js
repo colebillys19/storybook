@@ -13,7 +13,9 @@ const InboxIcon = iconDictionary('inbox', 'mediumSmall', 'button');
 
 describe('<RoundIconButton />', () => {
   const onClick = jest.fn();
-  const component = <RoundIconButton onClick={onClick}>{InboxIcon}</RoundIconButton>;
+  const component = (
+    <RoundIconButton onClick={onClick}>{InboxIcon}</RoundIconButton>
+  );
 
   checkBasicRendering(component);
   checkRequiredProps(component);

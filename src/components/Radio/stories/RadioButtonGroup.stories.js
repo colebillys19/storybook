@@ -11,12 +11,7 @@
 
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import {
-  boolean,
-  select,
-  text,
-  withKnobs,
-} from '@storybook/addon-knobs/react';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs/react';
 
 import RadioButtonGroup from '../RadioButtonGroup';
 
@@ -57,7 +52,11 @@ export const defaultStory = () => {
   return (
     <RadioButtonGroup
       disableRipple={boolean('Disable Ripple', false)}
-      labelPlacement={select('Label Placement', labelPlacementOptions, labelPlacementDefault)}
+      labelPlacement={select(
+        'Label Placement',
+        labelPlacementOptions,
+        labelPlacementDefault
+      )}
       onChange={action('onChange')}
       options={options}
       row={boolean('Row', false)}
@@ -85,7 +84,11 @@ export const disabledStory = () => {
   return (
     <RadioButtonGroup
       disabled
-      labelPlacement={select('Label Placement', labelPlacementOptions, labelPlacementDefault)}
+      labelPlacement={select(
+        'Label Placement',
+        labelPlacementOptions,
+        labelPlacementDefault
+      )}
       onChange={onChange}
       options={options}
       row={boolean('Row', false)}

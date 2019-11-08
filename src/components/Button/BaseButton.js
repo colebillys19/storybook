@@ -40,7 +40,10 @@ BaseButton.propTypes = {
    * To be used when a button is wrapped in a Material UI tooltip component.
    * Use the `ForwardRef` helper component in conjunction with this prop.
    */
-  forwardedRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
+  forwardedRef: T.oneOfType([
+    T.func,
+    T.shape({ current: T.instanceOf(Element) }),
+  ]),
   /**
    * Icon to be displayed within the button.
    */

@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  boolean,
-  select,
-  text,
-  withKnobs,
-} from '@storybook/addon-knobs';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import BaseCardDocs from '../docs/BaseCard.docs.mdx';
@@ -70,7 +65,15 @@ export const defaultStory = () => {
       color={hasColor ? select('Color', colorOptions, colorDefault) : null}
       id="base-card"
     >
-      <div style={{ padding: select('Card Content Padding', textPaddingOptions, textPaddingDefault) }}>
+      <div
+        style={{
+          padding: select(
+            'Card Content Padding',
+            textPaddingOptions,
+            textPaddingDefault
+          ),
+        }}
+      >
         {text('Card Text', cardText)}
       </div>
     </BaseCard>
@@ -82,8 +85,18 @@ defaultStory.story = { name: 'default' };
 export const headingStory = () => {
   const hasColor = boolean('Has Color', true);
   return (
-    <BaseCard color={hasColor ? select('Color', colorOptions, colorDefault) : null}>
-      <div style={{ padding: select('Card Content Padding', textPaddingOptions, textPaddingDefault) }}>
+    <BaseCard
+      color={hasColor ? select('Color', colorOptions, colorDefault) : null}
+    >
+      <div
+        style={{
+          padding: select(
+            'Card Content Padding',
+            textPaddingOptions,
+            textPaddingDefault
+          ),
+        }}
+      >
         <StyledH1>{text('Card Text', cardText)}</StyledH1>
       </div>
     </BaseCard>
@@ -95,8 +108,18 @@ headingStory.story = { name: 'heading' };
 export const imageStory = () => {
   const hasColor = boolean('Has Color', true);
   return (
-    <BaseCard color={hasColor ? select('Color', colorOptions, colorDefault) : null}>
-      <div style={{ padding: select('Card Content Padding', imagePaddingOptions, imagePaddingDefault) }}>
+    <BaseCard
+      color={hasColor ? select('Color', colorOptions, colorDefault) : null}
+    >
+      <div
+        style={{
+          padding: select(
+            'Card Content Padding',
+            imagePaddingOptions,
+            imagePaddingDefault
+          ),
+        }}
+      >
         <div style={imageContainerStyles}>
           {iconDictionary('image', 'large')}
         </div>

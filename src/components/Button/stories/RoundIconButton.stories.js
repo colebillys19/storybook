@@ -9,7 +9,10 @@ import { iconOptions, iconSizeOptions } from '../../../utils/storyConstants';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: RoundIconButton, docs: { page: RoundIconButtonDocs } },
+  parameters: {
+    component: RoundIconButton,
+    docs: { page: RoundIconButtonDocs },
+  },
   title: 'Buttons|RoundIconButton',
 };
 

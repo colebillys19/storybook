@@ -3,11 +3,7 @@ import T from 'prop-types';
 
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 
-const Summary = ({
-  children,
-  iconProps,
-  ...restProps
-}) => (
+const Summary = ({ children, iconProps, ...restProps }) => (
   <ExpansionPanelSummary IconButtonProps={iconProps} {...restProps}>
     {children}
   </ExpansionPanelSummary>

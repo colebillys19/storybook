@@ -7,12 +7,7 @@ import {
   NotificationText,
 } from './styles/NotificationBanner.styles';
 
-const NotificationBanner = ({
-  alert,
-  buttonText,
-  messageText,
-  onClick,
-}) => (
+const NotificationBanner = ({ alert, buttonText, messageText, onClick }) => (
   <BannerWrapper isAlert={alert}>
     <NotificationText>
       {messageText}

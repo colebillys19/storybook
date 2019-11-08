@@ -1,11 +1,7 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { action } from '@storybook/addon-actions';
-import {
-  boolean,
-  text,
-  withKnobs,
-} from '@storybook/addon-knobs/react';
+import { boolean, text, withKnobs } from '@storybook/addon-knobs/react';
 
 import BaseExpansionPanelDocs from '../docs/BaseExpansionPanel.docs.mdx';
 import BaseExpansionPanel from '../BaseExpansionPanel';
@@ -24,7 +20,10 @@ const ImageWrapper = styled.div`
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: BaseExpansionPanel, docs: { page: BaseExpansionPanelDocs } },
+  parameters: {
+    component: BaseExpansionPanel,
+    docs: { page: BaseExpansionPanelDocs },
+  },
   title: 'Miscellaneous|BaseExpansionPanel',
 };
 
@@ -45,7 +44,10 @@ export const secondaryTextStory = () => (
     disabled={boolean('Disabled', false)}
     onChange={action('onChange')}
     primarySummaryText={text('Primary Summary Text', 'Primary Summary Text')}
-    secondarySummaryText={text('Secondary Summary Text', 'secondary summary text')}
+    secondarySummaryText={text(
+      'Secondary Summary Text',
+      'secondary summary text'
+    )}
   />
 );
 
@@ -54,12 +56,8 @@ secondaryTextStory.story = { name: 'with secondary text' };
 export const imageStory = () => {
   const content = (
     <Fragment>
-      <ImageWrapper>
-        {iconDictionary('image', 'large')}
-      </ImageWrapper>
-      <div>
-        {text('Content Text', contentText)}
-      </div>
+      <ImageWrapper>{iconDictionary('image', 'large')}</ImageWrapper>
+      <div>{text('Content Text', contentText)}</div>
     </Fragment>
   );
   return (

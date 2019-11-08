@@ -39,7 +39,13 @@ export const offset = () => (
 offset.story = { name: 'offset' };
 
 // data
-export const headersA = ['Dessert', 'Calories', 'Fat (g)', 'Carbs (g)', 'Protein (g)'];
+export const headersA = [
+  'Dessert',
+  'Calories',
+  'Fat (g)',
+  'Carbs (g)',
+  'Protein (g)',
+];
 export const rowDataA = [
   {
     cells: ['Cupcake', '305', '4', '67', '4'],

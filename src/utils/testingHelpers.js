@@ -4,13 +4,13 @@ import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
 /**
-* @description: Checks the basic rendering of a React component or container
-*
-* @used for: base_ui and starting point for all other React components
-* (including containers)
-* @param component {React component}: the unrendered React component
-* that you're testing
-*/
+ * @description: Checks the basic rendering of a React component or container
+ *
+ * @used for: base_ui and starting point for all other React components
+ * (including containers)
+ * @param component {React component}: the unrendered React component
+ * that you're testing
+ */
 export const checkBasicRendering = (component) => {
   it('Expect to render', () => {
     const renderedComponent = shallow(component);
@@ -19,14 +19,14 @@ export const checkBasicRendering = (component) => {
 };
 
 /**
-* @description: Checks that all required props on a React component
-* are present and the correct type
-*
-* @used for: base_ui and starting point for all other
-* React components (including containers)
-* @param component {React component}: the unrendered React
-* component that you're testing
-*/
+ * @description: Checks that all required props on a React component
+ * are present and the correct type
+ *
+ * @used for: base_ui and starting point for all other
+ * React components (including containers)
+ * @param component {React component}: the unrendered React
+ * component that you're testing
+ */
 export const checkRequiredProps = (component) => {
   it('Expect to have all required propTypes', () => {
     const spy = jest.spyOn(global.console, 'error');
@@ -37,17 +37,17 @@ export const checkRequiredProps = (component) => {
 };
 
 /**
-* @description: Checks that any required children
-* are present on a React component
-*
-* @used for: base_ui and starting point for all other
-* React components (including containers) that wrap sub-components
-* @param component {React component}: the unrendered React component that
-* you're testing
-* @param expectedChildren {array of objects}: the names and properties
-* you're expecting the children to have
-* @return {void}
-*/
+ * @description: Checks that any required children
+ * are present on a React component
+ *
+ * @used for: base_ui and starting point for all other
+ * React components (including containers) that wrap sub-components
+ * @param component {React component}: the unrendered React component that
+ * you're testing
+ * @param expectedChildren {array of objects}: the names and properties
+ * you're expecting the children to have
+ * @return {void}
+ */
 export const checkChildren = (component, expectedChildren) => {
   const renderedComponent = shallow(component);
   const renderedChildren = renderedComponent.props().children;
@@ -63,35 +63,35 @@ export const checkChildren = (component, expectedChildren) => {
     });
   });
 
-  describe('Children should render the correct props in the correct order',
-    () => {
-      const children = Array
-        .isArray(renderedChildren) ? renderedChildren : [renderedChildren];
+  describe('Children should render the correct props in the correct order', () => {
+    const children = Array.isArray(renderedChildren)
+      ? renderedChildren
+      : [renderedChildren];
 
-      children.forEach((child, index) => {
-        it('Expect child prop to render in the correct order', () => {
-          expect(child.type.name).toEqual(expectedChildren[index].name);
-        });
+    children.forEach((child, index) => {
+      it('Expect child prop to render in the correct order', () => {
+        expect(child.type.name).toEqual(expectedChildren[index].name);
+      });
 
-        it('Expect child to contain certain props', () => {
-          expect(child.props).toMatchObject(expectedChildren[index].props);
-        });
+      it('Expect child to contain certain props', () => {
+        expect(child.props).toMatchObject(expectedChildren[index].props);
       });
     });
+  });
 };
 
 /**
-* @description: Checks that a simple required child is
-* present on a React component
-*
-* @used for: base_ui and starting point for all other
-* React components (including containers)
-* that wrap strings (like <H1>)
-* @param component {React component}: the unrendered React component that
-* you're testing
-* @param expectedChild {string}: the child you're expecting to be passed in
-* @return {void}
-*/
+ * @description: Checks that a simple required child is
+ * present on a React component
+ *
+ * @used for: base_ui and starting point for all other
+ * React components (including containers)
+ * that wrap strings (like <H1>)
+ * @param component {React component}: the unrendered React component that
+ * you're testing
+ * @param expectedChild {string}: the child you're expecting to be passed in
+ * @return {void}
+ */
 export const checkSimpleChild = (component, expectedChild) => {
   const { children } = component.props;
 
@@ -112,17 +112,17 @@ export const checkSimpleChild = (component, expectedChild) => {
 };
 
 /**
-* @description: Checks that a component's return value contains a
-* specific subcomponent (with props)
-*
-* @used for: testing the rendering of a specific subtree within a
-* component's return value
-* @param component {React element}: the unrendered React element that
-* you're testing
-* @param subComponent {React element}: the subComponent you expect
-* to be included
-* @return {void}
-*/
+ * @description: Checks that a component's return value contains a
+ * specific subcomponent (with props)
+ *
+ * @used for: testing the rendering of a specific subtree within a
+ * component's return value
+ * @param component {React element}: the unrendered React element that
+ * you're testing
+ * @param subComponent {React element}: the subComponent you expect
+ * to be included
+ * @return {void}
+ */
 export const checkContainsSubComponent = (component, subComponent) => {
   expect(shallow(component).contains(subComponent)).toBe(true);
 };
@@ -145,16 +145,14 @@ export const checkEventHandler = (
   handler,
   expectedInput
 ) => {
-  it(`Should trigger handler function when ${eventType} event is triggered`,
-    () => {
-      shallow(component).simulate(eventType);
-      expect(handler).toHaveBeenCalledTimes(1);
-    });
+  it(`Should trigger handler function when ${eventType} event is triggered`, () => {
+    shallow(component).simulate(eventType);
+    expect(handler).toHaveBeenCalledTimes(1);
+  });
 
   if (expectedInput) {
-    it(`Event handler should have been called with ${expectedInput} input`,
-      () => {
-        expect(handler).toHaveBeenCalledWith(expectedInput);
-      });
+    it(`Event handler should have been called with ${expectedInput} input`, () => {
+      expect(handler).toHaveBeenCalledWith(expectedInput);
+    });
   }
 };

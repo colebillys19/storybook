@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 
-import { expansionPanelDividerStyle, msDarkGrey } from '../../../utils/defaultStyleHelper';
+import {
+  expansionPanelDividerStyle,
+  msDarkGrey,
+} from '../../../utils/defaultStyleHelper';
 
 export const StyledExpansionPanel = styled((props) => (
   <ExpansionPanel classes={{ expanded: 'expanded' }} {...props} />

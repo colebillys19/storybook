@@ -24,12 +24,7 @@ const Icon = iconDictionary('star', 'medium');
 const tooltipText = 'tooltip text';
 
 describe('<TooltipIcon />', () => {
-  const component = (
-    <TooltipIcon
-      Icon={Icon}
-      tooltipText={tooltipText}
-    />
-  );
+  const component = <TooltipIcon Icon={Icon} tooltipText={tooltipText} />;
   checkBasicRendering(component);
   checkRequiredProps(component);
 

@@ -3,9 +3,7 @@ import T from 'prop-types';
 
 import { StyledCard } from './styles/BaseCard.styles';
 
-const BaseCard = (props) => (
-  <StyledCard {...props} />
-);
+const BaseCard = (props) => <StyledCard {...props} />;
 
 BaseCard.propTypes = {
   /**

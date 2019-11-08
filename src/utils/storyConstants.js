@@ -1,8 +1,4 @@
-import {
-  msBrightPurple,
-  msDarkGrey,
-  msMainGreen,
-} from './defaultStyleHelper';
+import { msBrightPurple, msDarkGrey, msMainGreen } from './defaultStyleHelper';
 
 export const iconOptions = {
   cancel: 'cancel',
