@@ -1,10 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 
-import {
-  checkBasicRendering,
-  checkRequiredProps,
-} from '../../../utils/testingHelpers';
+import { checkBasicRendering, checkRequiredProps } from '../../../utils/testingHelpers';
 import ResultBanner from '../ResultBanner';
 
 describe('<ResultBanner />', () => {

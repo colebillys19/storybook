@@ -1,6 +1,11 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import PrimaryButton from '../PrimaryButton';
 import PrimaryButtonDocs from '../docs/PrimaryButton.docs.mdx';

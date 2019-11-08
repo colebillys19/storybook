@@ -6,7 +6,12 @@ import ForwardRef from '../../utils/ForwardRef';
 import { StyledTooltip } from './styles/TooltipButton.styles';
 
 const TooltipButton = (props) => {
-  const { enterDelay, placement, tooltipText, ...restProps } = props;
+  const {
+    enterDelay,
+    placement,
+    tooltipText,
+    ...restProps
+  } = props;
   return (
     <StyledTooltip
       enterDelay={enterDelay}

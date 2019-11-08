@@ -1,6 +1,11 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import FlatIconButton from '../FlatIconButton';
 import FlatIconButtonDocs from '../docs/FlatIconButton.docs.mdx';

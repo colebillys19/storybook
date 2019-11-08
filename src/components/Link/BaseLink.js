@@ -3,26 +3,23 @@ import T from 'prop-types';
 import StyledBaseLink from './styles/BaseLink.styles';
 import ConditionalRender from '../../utils/ConditionalRender';
 
-/**
- * Use `BaseLink` when a link is need.
- */
-const BaseLink = ({ Icon, label, path, ...restProps }) => (
+const BaseLink = ({
+  Icon,
+  path,
+  text,
+  ...restProps
+}) => (
   <StyledBaseLink to={path} {...restProps}>
     <ConditionalRender Component={Icon} shouldRender={!!Icon} />
-    {label}
+    {text}
   </StyledBaseLink>
 );
 
 BaseLink.propTypes = {
   /**
-   * (SVG) Icon to render if provided.
-   * Icons should be selected and styled through the iconDictionary before reaching this component.
+   * Icon to be displayed with the link.
    */
-  Icon: T.object,
-  /**
-   * The text link label.
-   */
-  label: T.oneOfType([T.string, T.arrayOf(T.element)]).isRequired,
+  Icon: T.oneOfType([T.object, T.func]),
   /**
    * Relative url representing the location to link to. Can be a string or an url object.
    */
@@ -31,6 +28,9 @@ BaseLink.propTypes = {
    * When true, clicking the link will replace current entry in history stack instead of add a new one.
    */
   replace: T.bool,
+  text: T.string.isRequired,
 };
+
+BaseLink.defaultProps = { replace: false };
 
 export default BaseLink;

@@ -1,6 +1,10 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, withKnobs } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import RoundIconButton from '../RoundIconButton';
 import RoundIconButtonDocs from '../docs/RoundIconButton.docs.mdx';

@@ -1,5 +1,10 @@
 import React from 'react';
-import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import iconDictionary from '../../../utils/iconDictionary';
 import BaseCardDocs from '../docs/BaseCard.docs.mdx';
@@ -10,8 +15,8 @@ import {
   msBrightPurple,
   msDarkGrey,
   msMainGreen,
+  muiBlue,
   ssDarkBlue,
-  ssLightBlue,
   ssMainBlue,
   ssYellow,
 } from '../../../utils/defaultStyleHelper';
@@ -20,8 +25,8 @@ const colorOptions = {
   msBrightPurple,
   msDarkGrey,
   msMainGreen,
+  muiBlue,
   ssDarkBlue,
-  ssLightBlue,
   ssMainBlue,
   ssYellow,
 };
@@ -42,8 +47,6 @@ const imagePaddingOptions = {
   '3rem': '3rem',
 };
 const imagePaddingDefault = '2rem';
-
-const cardText = 'CARD TEXT';
 
 const imageContainerStyles = {
   alignItems: 'center',
@@ -74,7 +77,7 @@ export const defaultStory = () => {
           ),
         }}
       >
-        {text('Card Text', cardText)}
+        {text('Card Text', 'Card Text')}
       </div>
     </BaseCard>
   );
@@ -97,7 +100,7 @@ export const headingStory = () => {
           ),
         }}
       >
-        <StyledH1>{text('Card Text', cardText)}</StyledH1>
+        <StyledH1>{text('Card Text', 'Card Text')}</StyledH1>
       </div>
     </BaseCard>
   );

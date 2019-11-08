@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {
   borderStyle,
   borderWidth,
-  ssLightBlue,
+  muiBlue,
   ssRed,
 } from '../../../utils/defaultStyleHelper';
 import TextButton from '../../Button/TextButton';
@@ -11,7 +11,7 @@ import TextButton from '../../Button/TextButton';
 export const BannerWrapper = styled.section`
   align-items: center;
   background-color: white;
-  border-top-color: ${({ isAlert }) => (isAlert ? ssRed : ssLightBlue)};
+  border-top-color: ${({ isAlert }) => (isAlert ? ssRed : muiBlue)};
   border-top-style: ${borderStyle};
   border-top-width: ${borderWidth};
   display: flex;
@@ -20,7 +20,7 @@ export const BannerWrapper = styled.section`
 `;
 
 export const NotificationButton = styled(TextButton)`
-  color: ${ssLightBlue}
+  color: ${muiBlue}
   display: relative;
   font-size: 1.4rem;
   margin: 0 0 0 0.4rem;

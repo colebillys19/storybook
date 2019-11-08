@@ -33,15 +33,13 @@ export const insetShadow = 'inset 0px 0px 16px 0px rgba(224,224,224,0.4)';
 export const muiBoxShadow = `0px 5px 5px -3px rgba(0,0,0,0.2),
                              0px 8px 10px 1px rgba(0,0,0,0.14),
                              0px 3px 14px 2px rgba(0,0,0,0.12)`;
+export const muiBlue = '#2196f3';
 export const successGreen = '#5DBA9C';
 
 // icons
 export const iconStyle = {
-  button: {
-    color: 'inherit',
-    fontSize: '2.4rem',
-    marginRight: '.6rem',
-  },
+  button: { marginRight: '.6rem' },
+  link: { marginRight: '.4rem' },
   plusOne: {
     height: '1.8rem',
     width: '1.8rem',

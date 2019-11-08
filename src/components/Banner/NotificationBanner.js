@@ -7,7 +7,12 @@ import {
   NotificationText,
 } from './styles/NotificationBanner.styles';
 
-const NotificationBanner = ({ alert, buttonText, messageText, onClick }) => (
+const NotificationBanner = ({
+  alert,
+  buttonText,
+  messageText,
+  onClick,
+}) => (
   <BannerWrapper isAlert={alert}>
     <NotificationText>
       {messageText}
@@ -18,7 +23,7 @@ const NotificationBanner = ({ alert, buttonText, messageText, onClick }) => (
 
 NotificationBanner.propTypes = {
   /**
-   * ...
+   * If true, top border will be red.
    */
   alert: T.bool,
   /**

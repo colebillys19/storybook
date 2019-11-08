@@ -92,7 +92,13 @@
       "no-confusing-arrow": 0,
       "no-console": 1,
       "no-use-before-define": 0,
-      "object-curly-newline": "off",
+      "object-curly-newline": [
+        2,
+        {
+          "multiline": true,
+          "minProperties": 4
+        }
+      ],
       "object-curly-spacing": [
         "error",
         "always"
