@@ -9,6 +9,7 @@ import { StyledFormControlLabel, StyledRadioButton } from './styles/Radio.styles
  * Use `RadioButtonGroup` when one selection is needed from a set options.
  */
 export const RadioButtonGroup = ({
+  labelPlacement,
   onChange,
   options,
   row,
@@ -38,6 +39,7 @@ export const RadioButtonGroup = ({
               classes={{ label: 'label' }}
               control={radio}
               label={label}
+              labelPlacement={labelPlacement}
               value={value}
               {...restProps}
             />
@@ -80,7 +82,7 @@ RadioButtonGroup.propTypes = {
    * The icon to display when the component is unchecked.
    * Use the icon dictionary.
    */
-  Icon: T.node,
+  icon: T.node,
   /**
    * The id of the input element.
    */
@@ -97,10 +99,6 @@ RadioButtonGroup.propTypes = {
     T.shape({ current: T.any }),
   ]),
   /**
-   * The position of the label.
-   */
-  labelPlacement: T.oneOf(['end', 'start', 'top', 'bottom']),
-  /**
    * Name attribute of the input element.
    */
   name: T.string,
@@ -116,6 +114,10 @@ RadioButtonGroup.propTypes = {
     label: T.string,
     value: T.oneOfType([T.bool, T.number, T.string]).isRequired,
   })).isRequired,
+  /**
+   * The position of the label.
+   */
+  placement: T.oneOf(['end', 'start', 'top', 'bottom']),
   /**
    * If true, the input element will be required.
    */
@@ -137,7 +139,7 @@ RadioButtonGroup.propTypes = {
 
 RadioButtonGroup.defaultProps = {
   color: 'secondary',
-  labelPlacement: 'end',
+  placement: 'end',
 };
 
 export default RadioButtonGroup;

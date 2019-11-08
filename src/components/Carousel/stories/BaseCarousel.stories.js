@@ -7,11 +7,9 @@ import {
   text,
   withKnobs,
 } from '@storybook/addon-knobs/react';
-import { action } from '@storybook/addon-actions';
 
 import BaseCarousel from '../BaseCarousel';
 import BaseCarouselItem from '../sub-components/BaseCarouselItem';
-import { VIDEO_TUTORIALS } from '../constants';
 import BaseCarouselDocs from '../docs/BaseCarousel.docs.mdx';
 import { StyledCardTitle, StyledCard } from '../styles/BaseCarousel.styles';
 import {
@@ -23,7 +21,7 @@ import {
   ssMainBlue,
   ssYellow,
 } from '../../../utils/defaultStyleHelper';
-import PaymentAssistanceImage from '../../../images/LearningCenter/PaymentAssistance.png';
+import { PaymentAssistanceImage } from '../constants';
 
 const colorOptions = {
   msBrightPurple,
@@ -37,8 +35,6 @@ const colorOptions = {
 const colorDefault = ssMainBlue;
 
 const itemsPerSlideOptions = {
-  1: 1,
-  2: 2,
   3: 3,
   4: 4,
   5: 5,
@@ -72,7 +68,6 @@ export const defaultStory = () => {
         {Array.from({ length: number('Number of Cards', 6) }).map((_, index) => (
           <BaseCarouselItem
             key={`carousel-image-${index}`} // eslint-disable-line react/no-array-index-key
-            handleClick={action('handleClick')}
             {...carouselItem}
           />
         ))}
@@ -82,11 +77,3 @@ export const defaultStory = () => {
 };
 
 defaultStory.story = { name: 'default' };
-
-// {VIDEO_TUTORIALS.map((item, index) => (
-//   <BaseCarouselItem
-//     key={`carousel-image-${index}`} // eslint-disable-line react/no-array-index-key
-//     handleClick={action('handleClick')}
-//     {...item}
-//   />
-// ))}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import T from 'prop-types';
 import NavigationButtons from './sub-components/NavigationButtons';
 import SlideIndicator from './sub-components/SlideIndicator';
@@ -16,7 +16,6 @@ const BaseCarousel = ({
   position,
   setPosition,
 }) => {
-  // const [position, setPosition] = useState(0);
   const numItems = children.length - itemsPerSlide + 1;
   const width = 100 / itemsPerSlide;
   return (
@@ -49,10 +48,22 @@ const BaseCarousel = ({
 };
 
 BaseCarousel.propTypes = {
-  children: T.node,
+  /**
+   * The component items to render in the carousel.
+   */
+  children: T.node.isRequired,
+  /**
+   * The amount of items to show per slide.
+   */
   itemsPerSlide: T.number,
-  position: T.number,
-  setPosition: T.func,
+  /**
+   * The starting item position.
+   */
+  position: T.number.isRequired,
+  /**
+   * A function that sets the position that dictates which items to show in the slide.
+   */
+  setPosition: T.func.isRequired,
 };
 
 BaseCarousel.defaultProps = { itemsPerSlide: 1 };

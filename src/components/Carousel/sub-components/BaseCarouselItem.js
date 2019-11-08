@@ -8,15 +8,10 @@ import {
 
 const BaseCarouselItem = ({
   description,
-  handleClick,
   imageUrl,
-  // selected,
   title,
 }) => (
-  <StyledItemWrapper
-    onClick={() => handleClick({ title })}
-    // selected={selected}
-  >
+  <StyledItemWrapper>
     <StyledImage src={imageUrl} />
     <StyledItemTitle>{title}</StyledItemTitle>
     <div>{description}</div>
@@ -25,9 +20,7 @@ const BaseCarouselItem = ({
 
 BaseCarouselItem.propTypes = {
   description: T.string,
-  handleClick: T.func.isRequired,
   imageUrl: T.string.isRequired,
-  // selected: T.bool.isRequired,
   title: T.string.isRequired,
 };
 

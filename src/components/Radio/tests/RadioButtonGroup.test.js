@@ -1,11 +1,13 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { cleanup, render, fireEvent } from '@testing-library/react';
 
 import {
   checkBasicRendering,
   checkRequiredProps,
 } from '../../../utils/testingHelpers';
 import RadioButtonGroup from '../RadioButtonGroup';
+
+afterEach(cleanup);
 
 describe('<RadioButtonGroup />', () => {
   const handleChange = jest.fn();
@@ -38,7 +40,7 @@ describe('<RadioButtonGroup />', () => {
   checkBasicRendering(component);
   checkRequiredProps(component);
 
-  it('Expect to radio have been clicked', () => {
+  it('Expect radio to have been clicked', () => {
     const { container } = render(component);
     const radio = container.querySelector('input[type="radio"]');
     fireEvent.click(radio);
@@ -46,7 +48,7 @@ describe('<RadioButtonGroup />', () => {
     expect(onClick).toHaveBeenCalled();
   });
 
-  it('Expect to radio value to have changed', () => {
+  it('Expect radio to value to have changed', () => {
     const { container } = render(component);
     const radio = container.querySelector('input[type="radio"]');
     expect(radio).toHaveProperty('checked', true);

@@ -52,8 +52,6 @@ export const CarouselItem = styled.div`
 export const NavButton = styled((props) => (
   <FlatIconButton
     classes={{ disabled: 'disabled' }}
-    disableFocusRipple={false}
-    disableRipple={false}
     {...props}
   />
 ))`

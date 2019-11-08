@@ -70,7 +70,7 @@ export const checkChildren = (component, expectedChildren) => {
 
       children.forEach((child, index) => {
         it('Expect child prop to render in the correct order', () => {
-          expect(child.type.name).toEqual(expectedChildren[index].name);
+          expect(child.type.name).toEqual(expectedChildren[index].type.name);
         });
 
         it('Expect child to contain certain props', () => {
