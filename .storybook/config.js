@@ -29,7 +29,7 @@ addParameters({
   options: {
     name: 'DMI UI',
     url: '#',
-    goFullScreen: false,
+    // goFullScreen: false,
   },
   viewport: {
     viewports: INITIAL_VIEWPORTS,
