@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
@@ -10,12 +11,14 @@ export const StyledFormControlLabel = styled(FormControlLabel)`
   margin-left: 0;
 `;
 
-export const StyledRadioButton = styled(Radio)`
-  padding: 0.5rem;
+export const StyledRadioButton = styled((props) => (
+  <Radio classes={{ checked: 'checked' }} {...props} />
+))`
+  padding: 0.7rem;
   &:hover {
     color: ${msBrightPurple};
   }
-  & .checked {
+  &.checked {
     color: ${msBrightPurple};
   }
 `;

@@ -1,4 +1,4 @@
-import LoadingIndicator from './LoadingIndicator';
+import BaseLoadingIndicator from './BaseLoadingIndicator';
 import SmallLoadingIndicator from './SmallLoadingIndicator';
 
-export { LoadingIndicator, SmallLoadingIndicator };
+export { BaseLoadingIndicator, SmallLoadingIndicator };

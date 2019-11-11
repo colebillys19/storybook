@@ -1,13 +1,13 @@
 import React from 'react';
 
-import LoadingIndicator from '../LoadingIndicator';
+import BaseLoadingIndicator from '../BaseLoadingIndicator';
 import {
   checkBasicRendering,
   checkRequiredProps,
 } from '../../../utils/testingHelpers';
 
-describe('<LoadingIndicator />', () => {
-  const component = <LoadingIndicator />;
+describe('<BaseLoadingIndicator />', () => {
+  const component = <BaseLoadingIndicator />;
   checkBasicRendering(component);
   checkRequiredProps(component);
 });

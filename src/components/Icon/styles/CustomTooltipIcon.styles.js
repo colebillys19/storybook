@@ -10,7 +10,7 @@ export const StyledTooltip = styled((props) => (
   />
 ))`
   opacity: 1;
-  & .tooltip {
+  &.tooltip {
     background-color: white;
     border: ${greyBorder};
     box-shadow: ${muiBoxShadow};
