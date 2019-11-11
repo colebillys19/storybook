@@ -1,14 +1,7 @@
-/**
-*
-* ErrorLabel
-* @description Renders an error label for the date picker
-*/
-
 import React from 'react';
 import T from 'prop-types';
 
-import { DatePickerErrorLabel } from './styledComponents';
-
+import { DatePickerErrorLabel } from './styles/BaseDatePicker.styles';
 
 const ErrorLabel = ({ error, restProps }) => (
   <DatePickerErrorLabel {...restProps}>

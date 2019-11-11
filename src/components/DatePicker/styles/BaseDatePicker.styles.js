@@ -11,7 +11,7 @@ export const DatePickerErrorLabel = styled.span`
 `;
 
 export const StyledWrapper = styled.div`
-  color: ${ssMainBlue};
+  color: ${({ color }) => color || ssMainBlue};
   position: relative;
   width: fit-content;
   
@@ -32,7 +32,7 @@ export const StyledWrapper = styled.div`
 
   & .DateInput_input {
     border: none;
-    color: ${ssMainBlue};
+    color: ${({ color }) => color || ssMainBlue};
     font-size: 1.4rem;
     font-weight: 500;
 
@@ -51,6 +51,6 @@ export const StyledWrapper = styled.div`
   }
 
   & .SingleDatePickerInput_calendarIcon_svg {
-    fill: ${ssMainBlue};
+    fill: ${({ color }) => color || ssMainBlue};
   }
 `;

@@ -114,3 +114,6 @@ export const itemsPerSlideOptions = {
   5: 5,
 };
 export const itemsPerSlideDefault = 4;
+
+export const initialDate = new Date();
+export const defaultDatePlaceholder = 'SELECT A DATE';

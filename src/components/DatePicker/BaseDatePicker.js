@@ -3,10 +3,11 @@ import T from 'prop-types';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 import { ICON_AFTER_POSITION, ICON_BEFORE_POSITION } from 'react-dates/constants';
-import { StyledWrapper } from './styles/DatePicker.styles';
+import { StyledWrapper } from './styles/BaseDatePicker.styles';
 
-const DatePicker = ({
+const BaseDatePicker = ({
   className,
+  color,
   daySize,
   disabled,
   disableDayFunction,
@@ -31,7 +32,7 @@ const DatePicker = ({
   }, [date]);
   const inputIconPosition = iconAlignRight ? ICON_AFTER_POSITION : ICON_BEFORE_POSITION;
   return (
-    <StyledWrapper className={className}>
+    <StyledWrapper className={className} color={color}>
       <SingleDatePicker
         customInputIcon={Icon}
         date={date}
@@ -54,7 +55,7 @@ const DatePicker = ({
   );
 };
 
-DatePicker.propTypes = {
+BaseDatePicker.propTypes = {
   daySize: T.number,
   disabled: T.bool,
   disableDayFunction: T.func,
@@ -68,7 +69,7 @@ DatePicker.propTypes = {
   renderPortal: T.bool,
 };
 
-DatePicker.defaultProps = {
+BaseDatePicker.defaultProps = {
   daySize: 40,
   disabled: false,
   iconAlignRight: true,
@@ -76,4 +77,4 @@ DatePicker.defaultProps = {
   placeholder: 'SELECT A DATE',
 };
 
-export default DatePicker;
+export default BaseDatePicker;

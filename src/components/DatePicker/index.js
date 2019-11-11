@@ -1,4 +1,4 @@
-import DatePicker from './DatePicker';
+import BaseDatePicker from './BaseDatePicker';
 import ControlledDatePicker from './ControlledDatePicker';
 
-export { ControlledDatePicker, DatePicker };
+export { ControlledDatePicker, BaseDatePicker };
