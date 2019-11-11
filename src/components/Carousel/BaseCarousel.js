@@ -50,7 +50,7 @@ const BaseCarousel = ({
 
 BaseCarousel.propTypes = {
   /**
-   * The component items to render in the carousel.
+   * The items rendered in the carousel.
    */
   children: T.node.isRequired,
   /**
