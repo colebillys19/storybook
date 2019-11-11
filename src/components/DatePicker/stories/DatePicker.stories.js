@@ -40,3 +40,13 @@ export const initialDateStory = () => (
 );
 
 initialDateStory.story = { name: 'with intial date' };
+
+export const disabledStory = () => (
+  <BaseDatePicker
+    color={select('Color', colorOptions, defaultColor)}
+    disabled
+    id="disabled"
+  />
+)
+
+disabledStory.story = { name: 'disabled' };
