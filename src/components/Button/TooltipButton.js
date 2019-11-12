@@ -2,7 +2,6 @@ import React from 'react';
 import T from 'prop-types';
 
 import BaseButton from './BaseButton';
-import ForwardRef from '../../utils/ForwardRef';
 import { StyledTooltip } from './styles/TooltipButton.styles';
 
 const TooltipButton = (props) => {
@@ -18,7 +17,7 @@ const TooltipButton = (props) => {
       placement={placement}
       title={tooltipText}
     >
-      <ForwardRef Component={BaseButton} {...restProps} />
+      <BaseButton {...restProps} />
     </StyledTooltip>
   );
 };
@@ -32,14 +31,6 @@ TooltipButton.propTypes = {
    * and when the tooltip is displayed.
    */
   enterDelay: T.number,
-  /**
-   * To be used when a button is wrapped in a Material UI tooltip component.
-   * Use the `ForwardRef` helper component in conjunction with this prop.
-   */
-  forwardedRef: T.oneOfType([
-    T.func,
-    T.shape({ current: T.instanceOf(Element) }),
-  ]),
   /**
    * Icon to be displayed within the button.
    */

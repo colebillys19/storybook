@@ -10,14 +10,6 @@ TextButton.propTypes = {
   disableFocusRipple: T.bool,
   disableRipple: T.bool,
   /**
-   * To be used when a button is wrapped in a Material UI tooltip component.
-   * Use the `ForwardRef` helper component in conjunction with this prop.
-   */
-  forwardedRef: T.oneOfType([
-    T.func,
-    T.shape({ current: T.instanceOf(Element) }),
-  ]),
-  /**
    * String to be displayed within the button.
    */
   label: T.oneOfType([T.string, T.element]).isRequired,

@@ -1,49 +1,47 @@
-import React from 'react';
+import React, { Component } from 'react';
 import T from 'prop-types';
 
 import ConditionalRender from '../../utils/ConditionalRender';
 import { StyledBaseButton } from './styles/BaseButton.styles';
 import iconDictionary from '../../utils/iconDictionary';
 
-const BaseButton = ({
-  disabled,
-  disableFocusRipple,
-  disableRipple,
-  forwardedRef,
-  Icon,
-  label,
-  onClick,
-  ...restProps
-}) => (
-  <StyledBaseButton
-    ref={forwardedRef}
-    disabled={disabled}
-    disableFocusRipple={disableFocusRipple}
-    disableRipple={disableRipple}
-    onClick={onClick}
-    variant="contained"
-    {...restProps}
-  >
-    <ConditionalRender
-      Component={Icon || iconDictionary('cancel', 'mediumSmall', 'button')}
-      shouldRender={!!Icon}
-    />
-    {label}
-  </StyledBaseButton>
-);
+// class component is utilized to enable mui tooltip functionality
+/* eslint-disable react/prefer-stateless-function */
+class BaseButton extends Component {
+  render() {
+    const {
+      disabled,
+      disableFocusRipple,
+      disableRipple,
+      Icon,
+      label,
+      onClick,
+      ...restProps
+    } = this.props;
+    return (
+      <StyledBaseButton
+        disabled={disabled}
+        disableFocusRipple={disableFocusRipple}
+        disableRipple={disableRipple}
+        onClick={onClick}
+        variant="contained"
+        {...restProps}
+      >
+        <ConditionalRender
+          Component={Icon || iconDictionary('cancel', 'mediumSmall', 'button')}
+          shouldRender={!!Icon}
+        />
+        {label}
+      </StyledBaseButton>
+    );
+  }
+}
+/* eslint-enable react/prefer-stateless-function */
 
 BaseButton.propTypes = {
   disabled: T.bool,
   disableFocusRipple: T.bool,
   disableRipple: T.bool,
-  /**
-   * To be used when a button is wrapped in a Material UI tooltip component.
-   * Use the `ForwardRef` helper component in conjunction with this prop.
-   */
-  forwardedRef: T.oneOfType([
-    T.func,
-    T.shape({ current: T.instanceOf(Element) }),
-  ]),
   /**
    * Icon to be displayed within the button.
    */
