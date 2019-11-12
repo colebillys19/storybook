@@ -12,8 +12,14 @@ import {
   checkRequiredProps,
 } from '../../../utils/testingHelpers';
 import BaseCarousel from '../BaseCarousel';
-import BaseCarouselItem from '../sub-components/BaseCarouselItem';
-import { defaultCarouselItem } from '../../../utils/storyConstants';
+import CarouselItem from '../sub-components/CarouselItem';
+import { PaymentAssistanceImage } from '../../../images';
+
+const defaultCarouselItem = {
+  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
+  imageUrl: PaymentAssistanceImage,
+  title: 'Carousel Item Title',
+};
 
 afterEach(cleanup);
 
@@ -33,7 +39,7 @@ describe('<BaseCarousel />', () => {
   };
 
   const children = Array.from({ length: 6 }).map((_, index) => (
-    <BaseCarouselItem
+    <CarouselItem
       // eslint-disable-next-line react/no-array-index-key
       key={`carousel-image-${index}`}
       {...defaultCarouselItem}

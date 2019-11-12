@@ -5,19 +5,19 @@ import NavigationButtons from './sub-components/NavigationButtons';
 import SlideIndicator from './sub-components/SlideIndicator';
 import {
   SlidingContainer,
-  CarouselItem,
   CarouselWrapper,
   ContentWrapper,
-  OverflowWrapper,
 } from './styles/BaseCarousel.styles';
 
+import CarouselItem from './sub-components/CarouselItem';
+
 const BaseCarousel = ({
-  children,
+  items,
   itemsPerSlide,
   position,
   setPosition,
 }) => {
-  const numItems = children.length - itemsPerSlide + 1;
+  const numItems = items.length - itemsPerSlide + 1;
   const width = 100 / itemsPerSlide;
   return (
     <CarouselWrapper>
@@ -27,16 +27,25 @@ const BaseCarousel = ({
         setPosition={setPosition}
       >
         <ContentWrapper>
-          <OverflowWrapper>
-            <SlidingContainer position={position} width={width}>
-              {children.map((child, index) => (
+          <SlidingContainer position={position} width={width}>
+            {items.map((
+              {
+                description,
+                imageUrl,
+                title,
+              },
+              index,
+            ) => (
+              <CarouselItem
                 // eslint-disable-next-line react/no-array-index-key
-                <CarouselItem key={`carousel-item-${index}`} width={width}>
-                  {child}
-                </CarouselItem>
-              ))}
-            </SlidingContainer>
-          </OverflowWrapper>
+                key={`carousel-item-${index}`}
+                description={description}
+                imageUrl={imageUrl}
+                title={title}
+                width={width}
+              />
+            ))}
+          </SlidingContainer>
           <SlideIndicator
             numItems={numItems}
             position={position}
@@ -50,9 +59,14 @@ const BaseCarousel = ({
 
 BaseCarousel.propTypes = {
   /**
-   * The component items to render in the carousel.
+   * An array of objects containing carousel item content.
+   * Each contains description, imageUrl, and title.
    */
-  children: T.node.isRequired,
+  items: T.arrayOf(T.shape({
+    description: T.string,
+    imageUrl: T.string.isRequired,
+    title: T.string.isRequired,
+  })).isRequired,
   /**
    * The amount of items to show per slide.
    */
@@ -68,7 +82,7 @@ BaseCarousel.propTypes = {
 };
 
 BaseCarousel.defaultProps = {
-  itemsPerSlide: 1,
+  itemsPerSlide: 3,
   position: 0,
 };
 

@@ -1,25 +1,27 @@
 import React from 'react';
 import useState from 'storybook-addon-state';
 import {
-  number,
-  object,
   select,
   text,
   withKnobs,
 } from '@storybook/addon-knobs/react';
 
 import BaseCarousel from '../BaseCarousel';
-import BaseCarouselItem from '../sub-components/BaseCarouselItem';
 import BaseCarouselDocs from '../docs/BaseCarousel.docs.mdx';
-import { StyledCardTitle, StyledCard } from '../styles/BaseCarousel.styles';
 import {
-  colorOptions,
-  defaultCarouselItem,
-  itemsPerSlideDefault,
-  itemsPerSlideOptions,
-} from '../../../utils/storyConstants';
+  EscrowStatementImage,
+  InsuranceClaimImage,
+  LenderInsuranceImage,
+  PaymentAssistanceImage,
+  YearEndTaxImage,
+} from '../../../images';
 
-const colorDefault = colorOptions.ssMainBlue;
+const itemsPerSlideOptions = {
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+};
 
 export default {
   decorators: [withKnobs],
@@ -28,26 +30,42 @@ export default {
 };
 
 export const defaultStory = () => {
+  const carouselItems = [
+    {
+      description: text('Item 1 Description', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.'),
+      imageUrl: PaymentAssistanceImage,
+      title: text('Item 1 Title', 'Payment Assistance Title'),
+    },
+    {
+      description: text('Item 2 Description', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.'),
+      imageUrl: EscrowStatementImage,
+      title: text('Item 2 Title', 'Escrow Assistance Title'),
+    },
+    {
+      description: text('Item 3 Description', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.'),
+      imageUrl: InsuranceClaimImage,
+      title: text('Item 3 Title', 'Insurance Claim Title'),
+    },
+    {
+      description: text('Item 4 Description', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.'),
+      imageUrl: LenderInsuranceImage,
+      title: text('Item 4 Title', 'Lender Insurance Title'),
+    },
+    {
+      description: text('Item 5 Description', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.'),
+      imageUrl: YearEndTaxImage,
+      title: text('Item 5 Title', 'Year End Tax Title'),
+    },
+  ];
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [position, setPosition] = useState('position', 0);
-  const carouselItem = object('Carousel Item', defaultCarouselItem);
+  const [position, setPosition] = useState(0);
   return (
-    <StyledCard color={select('Color', colorOptions, colorDefault)}>
-      <StyledCardTitle>{text('Carousel Title', 'Carousel Title')}</StyledCardTitle>
-      <BaseCarousel
-        itemsPerSlide={select('Items Per Slide', itemsPerSlideOptions, itemsPerSlideDefault)}
-        position={position}
-        setPosition={setPosition}
-      >
-        {Array.from({ length: number('Number of Cards', 6) }).map((_, index) => (
-          <BaseCarouselItem
-            // eslint-disable-next-line react/no-array-index-key
-            key={`carousel-image-${index}`}
-            {...carouselItem}
-          />
-        ))}
-      </BaseCarousel>
-    </StyledCard>
+    <BaseCarousel
+      items={carouselItems}
+      itemsPerSlide={select('Items Per Slide', itemsPerSlideOptions, 3)}
+      position={position}
+      setPosition={setPosition}
+    />
   );
 };
 

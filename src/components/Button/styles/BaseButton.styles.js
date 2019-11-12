@@ -16,7 +16,7 @@ export const StyledBaseButton = styled((props) => (
   &:active {
     box-shadow: none;
   }
-  & .root {
+  &.root {
     min-width: 0;
   }
 `;

@@ -2,27 +2,29 @@ import React from 'react';
 import T from 'prop-types';
 
 import {
-  StyledItemTitle,
+  StyledCarouselItem,
   StyledImage,
-  StyledItemWrapper,
-} from '../styles/BaseCarouselItem.styles';
+  StyledItemTitle,
+} from './CarouselItem.styles';
 
-const BaseCarouselItem = ({
+const CarouselItem = ({
   description,
   imageUrl,
   title,
+  width,
 }) => (
-  <StyledItemWrapper>
+  <StyledCarouselItem width={width}>
     <StyledImage src={imageUrl} />
     <StyledItemTitle>{title}</StyledItemTitle>
     <div>{description}</div>
-  </StyledItemWrapper>
+  </StyledCarouselItem>
 );
 
-BaseCarouselItem.propTypes = {
+CarouselItem.propTypes = {
   description: T.string,
   imageUrl: T.string.isRequired,
   title: T.string.isRequired,
+  width: T.string,
 };
 
-export default BaseCarouselItem;
+export default CarouselItem;

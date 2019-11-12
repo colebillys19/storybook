@@ -12,10 +12,10 @@ export const StyledExpansionPanel = styled((props) => (
 ))`
   border-bottom: ${expansionPanelDividerStyle};
   box-shadow: none;
-  & :before {
+  &:before {
     display: none;
   }
-  & .expanded {
+  &.expanded {
     margin: 0;
   }
   .MuiExpansionPanelSummary-content {

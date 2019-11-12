@@ -2,10 +2,10 @@ import React, { Fragment } from 'react';
 import T from 'prop-types';
 
 import iconDictionary from '../../../utils/iconDictionary';
-import { LeftNavButton, RightNavButton } from '../styles/BaseCarousel.styles';
+import { LeftNavButton, RightNavButton } from './NavigationButtons.styles';
 
-const IconNext = iconDictionary('arrowRight', 'mediumLarge', 'button');
-const IconPrevious = iconDictionary('arrowLeft', 'mediumLarge', 'button');
+const IconNext = iconDictionary('arrowRight', 'mediumLarge');
+const IconPrevious = iconDictionary('arrowLeft', 'mediumLarge');
 
 const NavigationButtons = ({
   children,

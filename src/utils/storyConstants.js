@@ -1,20 +1,4 @@
-import {
-  msBrightPurple,
-  msDarkGrey,
-  msMainGreen,
-  ssDarkBlue,
-  ssLightBlue,
-  ssMainBlue,
-  ssYellow,
-} from './defaultStyleHelper';
-
-import {
-  EscrowStatementImage,
-  InsuranceClaimImage,
-  LenderInsuranceImage,
-  PaymentAssistanceImage,
-  YearEndTaxImage,
-} from '../images';
+import { msBrightPurple, msDarkGrey, msMainGreen } from './defaultStyleHelper';
 
 export const iconOptions = {
   cancel: 'cancel',
@@ -63,54 +47,3 @@ export const placementOptions = {
   'left-end': 'left-end',
 };
 /* eslint-enable sort-keys */
-
-export const colorOptions = {
-  msBrightPurple,
-  msDarkGrey,
-  msMainGreen,
-  ssDarkBlue,
-  ssLightBlue,
-  ssMainBlue,
-  ssYellow,
-};
-
-export const defaultCarouselItem = {
-  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-  imageUrl: PaymentAssistanceImage,
-  title: 'Carousel Item Title',
-};
-
-export const carouselItems = [
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: PaymentAssistanceImage,
-    title: 'Payment Assistance Title',
-  },
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: EscrowStatementImage,
-    title: 'Escrow Statement Title',
-  },
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: InsuranceClaimImage,
-    title: 'Insurance Claim Title',
-  },
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: LenderInsuranceImage,
-    title: 'Lender Insurance Title',
-  },
-  {
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, mollitia.',
-    imageUrl: YearEndTaxImage,
-    title: 'Year End Tax Title',
-  },
-];
-
-export const itemsPerSlideOptions = {
-  3: 3,
-  4: 4,
-  5: 5,
-};
-export const itemsPerSlideDefault = 4;

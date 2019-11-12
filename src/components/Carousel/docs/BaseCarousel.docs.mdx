@@ -1,25 +1,13 @@
 import { useState } from 'react';
-import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import { Story, Props } from '@storybook/addon-docs/blocks';
 
 import BaseCarousel from '../BaseCarousel';
-import BaseCarouselItem from '../sub-components/BaseCarouselItem';
-import { StyledCardTitle, StyledCard } from '../styles/BaseCarousel.styles';
-import {
-  carouselItems,
-  colorOptions,
-  EscrowStatementImage,
-  InsuranceClaimImage,
-  LenderInsuranceImage,
-  PaymentAssistanceImage,
-  YearEndTaxImage,
-} from '../../../utils/storyConstants';
 
 <div style={{ position: 'relative', bottom: '20px' }}>
 
   ## BaseCarousel
 
-  A basic carousel.
+  An interactive carousel component. Allows the user to horizontally scroll through content.
 
   ### Props
 
@@ -27,50 +15,3 @@ import {
     <Props of={BaseCarousel} />
   </div>
 </div>
-
-Example Usage:
-```js
-  const MyCarousel = () => {
-    const [position, setPosition] = useState(0);
-
-    return (
-      <StyledCard color={ssMainBlue}>
-        <StyledCardTitle>Carousel Title</StyledCardTitle>
-        <BaseCarousel
-          itemsPerSlide={3}
-          position={position}
-          setPosition={setPosition}
-        >
-          {carouselItems.map((item, index) => (
-            <BaseCarouselItem
-              key={`carousel-image-${index}`}
-            />
-          ))}
-        </BaseCarousel>
-      </StyledCard>
-    }
-);
-```
-
-export const MyCarousel = () => {
-  const [position, setPosition] = useState(0);
-  return (
-    <StyledCard color={colorOptions.ssMainBlue}>
-      <StyledCardTitle>Carousel Title</StyledCardTitle>
-      <BaseCarousel
-        itemsPerSlide={3}
-        position={position}
-        setPosition={setPosition}
-      >
-        {carouselItems.map((item, index) => (
-          <BaseCarouselItem
-            key={`carousel-image-${index}`}
-            {...item}
-          />
-        ))}
-      </BaseCarousel>
-    </StyledCard>
-  )
-}
-
-<MyCarousel />

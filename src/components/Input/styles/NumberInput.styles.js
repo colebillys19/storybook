@@ -5,7 +5,7 @@ import TextInput from '../TextInput';
 export const StyledNumberInput = styled((props) => (
   <TextInput classes={{ root: 'root' }} type="number" {...props} />
 ))`
-  & .root {
+  &.root {
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       /* display: none; <- Crashes Chrome on hover */
