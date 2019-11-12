@@ -2,7 +2,16 @@ import React, { useState, useEffect } from 'react';
 import T from 'prop-types';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
-import { ICON_AFTER_POSITION, ICON_BEFORE_POSITION } from 'react-dates/constants';
+import {
+  ANCHOR_LEFT,
+  ANCHOR_RIGHT,
+  HORIZONTAL_ORIENTATION,
+  ICON_AFTER_POSITION,
+  ICON_BEFORE_POSITION,
+  OPEN_DOWN,
+  OPEN_UP,
+  VERTICAL_ORIENTATION,
+} from 'react-dates/constants';
 import { StyledWrapper } from './styles/BaseDatePicker.styles';
 
 const BaseDatePicker = ({
