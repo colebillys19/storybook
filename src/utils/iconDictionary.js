@@ -1,20 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import AccountCircle from '@material-ui/icons/AccountCircle';
 import ArrowDropDown from '@material-ui/icons/ArrowDropDown';
 import AttachMoney from '@material-ui/icons/AttachMoney';
+import Cancel from '@material-ui/icons/Cancel';
 import CheckCircleOutline from '@material-ui/icons/CheckCircleOutline';
+import ChevronLeft from '@material-ui/icons/ChevronLeft';
+import ChevronRight from '@material-ui/icons/ChevronRight';
+import Close from '@material-ui/icons/Close';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import ExposurePlus1 from '@material-ui/icons/ExposurePlus1';
+import Image from '@material-ui/icons/Image';
 import Inbox from '@material-ui/icons/Inbox';
 import Star from '@material-ui/icons/Star';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Warning from '@material-ui/icons/Warning';
-import Cancel from '@material-ui/icons/Cancel';
-import Close from '@material-ui/icons/Close';
-import Image from '@material-ui/icons/Image';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 
 import { iconStyle, iconSize } from './defaultStyleHelper';
 
@@ -33,6 +35,8 @@ import { iconStyle, iconSize } from './defaultStyleHelper';
 export default (name, size, style, options) => {
   const icons = {
     arrowDown: ArrowDropDown,
+    arrowLeft: ChevronLeft,
+    arrowRight: ChevronRight,
     cancel: Cancel,
     close: Close,
     dollar: AttachMoney,
