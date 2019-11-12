@@ -16,7 +16,7 @@ export const BannerWrapper = styled.section`
   border-top-width: ${borderWidth};
   display: flex;
   min-height: 2.4rem;
-  padding: 1.4rem;
+  padding: 1.4rem 0;
 `;
 
 export const NotificationButton = styled(TextButton)`
@@ -30,5 +30,6 @@ export const NotificationButton = styled(TextButton)`
 export const NotificationText = styled.p`
   display: flex;
   align-items: center;
-  margin: 0;
+  margin: 0 1.9rem;
+  min-height: 2.4rem;
 `;

@@ -1,12 +1,13 @@
 import React from 'react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import {
+  boolean,
+  color,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
 import BaseTable from '../BaseTable';
 import BaseTableDocs from '../docs/BaseTable.docs.mdx';
-
-const centeredColsA = [1, 2, 3, 4];
-const centeredColsB = [1, 2, 3];
-const hoverColor = '#F8F8F8';
 
 export default {
   decorators: [withKnobs],
@@ -17,37 +18,58 @@ export default {
 
 export const defaultStory = () => (
   <BaseTable
-    centeredCols={text('Centered Columns', centeredColsA)}
+    centeredCols={text('Centered Columns', [1, 2, 3, 4])}
     firstColBold={boolean('First Column Bold', false)}
+    hasBorders={boolean('Borders', true)}
     headers={headersA}
-    hoverColor={text('Row Hover Color', hoverColor)}
+    headersBold={boolean('Headers Bold', true)}
     rowData={rowDataA}
+    rowHoverBackgroundColor={color('Row Background Hover Color', '')}
+    rowHoverTextColor={color('Row Text Hover Color', '')}
   />
 );
 
 defaultStory.story = { name: 'default' };
 
-export const offset = () => (
+export const offsetStory = () => (
   <BaseTable
-    centeredCols={text('Centered Columns', centeredColsB)}
+    centeredCols={text('Centered Columns', [1, 2, 3, 4])}
     firstColBold={boolean('First Column Bold', true)}
+    hasBorders={boolean('Borders', true)}
     headers={headersB}
-    hoverColor={text('Row Hover Color', hoverColor)}
+    headersBold={boolean('Headers Bold', true)}
     rowData={rowDataB}
+    rowHoverBackgroundColor={color('Row Background Hover Color', '')}
+    rowHoverTextColor={color('Row Text Hover Color', '')}
   />
 );
 
-offset.story = { name: 'offset' };
+offsetStory.story = { name: 'offset' };
+
+export const minimalStory = () => (
+  <BaseTable
+    centeredCols={text('Centered Columns', [])}
+    firstColBold={boolean('First Column Bold', false)}
+    hasBorders={boolean('Borders', false)}
+    headers={headersC}
+    headersBold={boolean('Headers Bold', false)}
+    rowData={rowDataC}
+    rowHoverBackgroundColor={color('Row Background Hover Color', '')}
+    rowHoverTextColor={color('Row Text Hover Color', '')}
+  />
+);
+
+minimalStory.story = { name: 'minimal' };
 
 // data
-export const headersA = [
+const headersA = [
   'Dessert',
   'Calories',
   'Fat (g)',
   'Carbs (g)',
   'Protein (g)',
 ];
-export const rowDataA = [
+const rowDataA = [
   {
     cells: ['Cupcake', '305', '4', '67', '4'],
     id: 'cupcake',
@@ -66,26 +88,42 @@ export const rowDataA = [
   },
 ];
 
-export const headersB = ['', 'column one', 'column two', 'column three'];
-export const rowDataB = [
+const headersB = ['', 'Jessica', 'Adam', 'Sarah', 'Mike'];
+const rowDataB = [
   {
-    cells: ['row one', '01-01', '01-02', '01-03'],
+    cells: ['Monday', '-', '-', 'L', 'L'],
     id: '1',
   },
   {
-    cells: ['row two', '02-01', '02-02', '02-03'],
+    cells: ['Tuesday', 'L', '-', '-', '-'],
     id: '2',
   },
   {
-    cells: ['row three', '03-01', '03-02', '03-03'],
+    cells: ['Wednesday', '-', '-', 'S', '-'],
     id: '3',
   },
   {
-    cells: ['row four', '04-01', '04-02', '04-03'],
+    cells: ['Thursday', '-', '-', '-', '-'],
     id: '4',
   },
   {
-    cells: ['row five', '05-01', '05-02', '05-03'],
+    cells: ['Friday', 'S', 'A', '-', 'V'],
     id: '5',
+  },
+];
+
+const headersC = ['A', 'B', 'C', 'D'];
+const rowDataC = [
+  {
+    cells: ['E', 'F', 'G', 'H'],
+    id: '1',
+  },
+  {
+    cells: ['I', 'J', 'K', 'L'],
+    id: '2',
+  },
+  {
+    cells: ['M', 'N', 'O', 'P'],
+    id: '3',
   },
 ];
