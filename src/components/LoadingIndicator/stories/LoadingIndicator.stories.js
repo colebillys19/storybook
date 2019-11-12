@@ -1,17 +1,13 @@
-/**
- * @description Circular, rotating loading indicator
- *              For when the client is waiting for async data to finish loading
- */
-
 import React from 'react';
 
-import LoadingIndicatorNormal from '../LoadingIndicatorNormal';
+import LoadingIndicatorDocs from '../docs/LoadingIndicator.docs.mdx';
+import BaseLoadingIndicator from '../BaseLoadingIndicator';
 
 export default {
-  parameters: { component: LoadingIndicatorNormal },
-  title: 'Loading Indicators|LoadingIndicatorNormal',
+  parameters: { component: BaseLoadingIndicator, docs: { page: LoadingIndicatorDocs } },
+  title: 'Loading Indicators|BaseLoadingIndicator',
 };
 
-export const defaultStory = () => <LoadingIndicatorNormal />;
+export const defaultStory = () => <BaseLoadingIndicator />;
 
 defaultStory.story = { name: 'default' };

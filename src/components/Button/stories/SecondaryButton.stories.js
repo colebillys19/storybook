@@ -1,53 +1,50 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
-import iconDictionary from '../../../utils/iconDictionary';
-import BaseButton from '../BaseButton';
 import SecondaryButton from '../SecondaryButton';
-
-const label = 'LABEL TEXT';
-
-const iconOptions = {
-  cancel: 'cancel',
-  inbox: 'inbox',
-  profile: 'profile',
-  star: 'star',
-};
-const iconDefault = 'inbox';
-
-const sizeOptions = {
-  large: 'large',
-  medium: 'medium',
-  mediumLarge: 'mediumLarge',
-  mediumSmall: 'mediumSmall',
-  small: 'small',
-  xSmall: 'xSmall',
-};
-const sizeDefault = 'mediumSmall';
+import SecondaryButtonDocs from '../docs/SecondaryButton.docs.mdx';
+import iconDictionary from '../../../utils/iconDictionary';
+import { iconOptions } from '../../../utils/storyConstants';
 
 export default {
   decorators: [withKnobs],
-  includeStories: [],
-  parameters: { component: BaseButton },
+  parameters: {
+    component: SecondaryButton,
+    docs: { page: SecondaryButtonDocs },
+  },
   title: 'Buttons|SecondaryButton',
 };
 
-export const defaultStory = () => {
-  const icon = iconDictionary(
-    select('Icon', iconOptions, iconDefault),
-    select('Icon Size', sizeOptions, sizeDefault),
+export const defaultStory = () => (
+  <SecondaryButton
+    disabled={boolean('Disabled', false)}
+    label={text('Label Text', 'LABEL TEXT')}
+    onClick={action('onClick')}
+  />
+);
+
+defaultStory.story = { name: 'default' };
+
+export const withIconStory = () => {
+  const Icon = iconDictionary(
+    select('Icon', iconOptions, 'inbox'),
+    'mediumSmall',
     'button'
   );
   return (
     <SecondaryButton
-      disableFocusRipple
-      disableRipple
-      Icon={icon}
-      label={text('Label Text', label)}
-      onClick={action('onClickButton')}
+      disabled={boolean('Disabled', false)}
+      Icon={Icon}
+      label={text('Label Text', 'LABEL TEXT')}
+      onClick={action('onClick')}
     />
   );
 };
 
-defaultStory.story = { name: 'default' };
+withIconStory.story = { name: 'with icon' };

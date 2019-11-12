@@ -10,12 +10,7 @@ const Dollar = iconDictionary('dollar', 'small');
 /**
  * Use `CurrentInput` when an input with currency is needed.
  */
-export const CurrencyInput = ({
-  name,
-  onChange,
-  value,
-  ...restProps
-}) => {
+export const CurrencyInput = ({ name, onChange, value, ...restProps }) => {
   const addCurrencyComma = (e) => {
     const formattedValue = value ? formatAmountsWithCommas(value, false) : '';
     e.target.value = formattedValue;

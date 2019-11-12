@@ -8,11 +8,7 @@ import {
 
 describe('<CurrencyInput />', () => {
   const onChange = jest.fn();
-  const component = (
-    <CurrencyInput
-      onChange={onChange}
-    />
-  );
+  const component = <CurrencyInput onChange={onChange} />;
 
   checkBasicRendering(component);
   checkRequiredProps(component);

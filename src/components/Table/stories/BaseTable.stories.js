@@ -2,6 +2,7 @@ import React from 'react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 import BaseTable from '../BaseTable';
+import BaseTableDocs from '../docs/BaseTable.docs.mdx';
 
 const centeredColsA = [1, 2, 3, 4];
 const centeredColsB = [1, 2, 3];
@@ -10,8 +11,8 @@ const hoverColor = '#F8F8F8';
 export default {
   decorators: [withKnobs],
   excludeStories: ['headersA', 'rowDataA', 'headersB', 'rowDataB'],
-  parameters: { component: BaseTable },
-  title: 'Tables|BaseTable',
+  parameters: { component: BaseTable, docs: { page: BaseTableDocs } },
+  title: 'Miscellaneous|BaseTable',
 };
 
 export const defaultStory = () => (
@@ -39,7 +40,13 @@ export const offset = () => (
 offset.story = { name: 'offset' };
 
 // data
-export const headersA = ['Dessert', 'Calories', 'Fat (g)', 'Carbs (g)', 'Protein (g)'];
+export const headersA = [
+  'Dessert',
+  'Calories',
+  'Fat (g)',
+  'Carbs (g)',
+  'Protein (g)',
+];
 export const rowDataA = [
   {
     cells: ['Cupcake', '305', '4', '67', '4'],

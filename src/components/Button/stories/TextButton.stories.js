@@ -1,25 +1,25 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import {
+  boolean,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
-import BaseButton from '../BaseButton';
 import TextButton from '../TextButton';
-
-const label = 'LABEL TEXT';
+import TextButtonDocs from '../docs/TextButton.docs.mdx';
 
 export default {
   decorators: [withKnobs],
-  includeStories: [],
-  parameters: { component: BaseButton },
+  parameters: { component: TextButton, docs: { page: TextButtonDocs } },
   title: 'Buttons|TextButton',
 };
 
 export const defaultStory = () => (
   <TextButton
-    disableFocusRipple
-    disableRipple
-    label={text('Label Text', label)}
-    onClick={action('onClickButton')}
+    disabled={boolean('Disabled', false)}
+    label={text('Label Text', 'LABEL TEXT')}
+    onClick={action('onClick')}
   />
 );
 

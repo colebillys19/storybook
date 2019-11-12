@@ -1,30 +1,12 @@
-/**
-*
-* H3
-* @description: Wraps text to create an <h3> header.
-* Use Case: Creating tertiary titles or headers
-*/
+import styled from 'styled-components';
 
-import React from 'react';
-import T from 'prop-types';
+import { ssDarkGrey } from '../../utils/defaultStyleHelper';
 
-import { ExtendedH3 } from './styles/Headings.styles';
-
-/**
- * Use `H3` to create an `<h3>` header.
- */
-const H3 = (props) => (
-  <ExtendedH3 {...props} />
-);
-
-H3.propTypes = {
-  /**
-   * Wraps text to create an <h3> header.
-   */
-  children: T.oneOfType([
-    T.string,
-    T.object,
-  ]).isRequired,
-};
+const H3 = styled.h3`
+  color: ${ssDarkGrey};
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 1.7rem 0;
+`;
 
 export default H3;

@@ -1,0 +1,24 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { withKnobs, select, text } from '@storybook/addon-knobs';
+
+import BaseButton from '../BaseButton';
+
+<Meta
+  decorators={[withKnobs]}
+  component={BaseButton}
+  title="Buttons|BaseButton"
+/>
+
+<div style={{ position: 'relative', bottom: '20px' }}>
+
+  ## BaseButton
+
+  A basic, no frills button.
+
+  ### Props
+
+  <div style={{ position: 'relative', bottom: '20px' }}>
+    <Props of={BaseButton} />
+  </div>
+
+</div>

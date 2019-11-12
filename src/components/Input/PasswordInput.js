@@ -42,10 +42,9 @@ export const BasePasswordInput = (props) => {
   );
 };
 
-
 BasePasswordInput.propTypes = {
   /**
-   * Override or extend the styles applied to the component. 
+   * Override or extend the styles applied to the component.
    */
   classes: T.object,
   /**
@@ -90,6 +89,5 @@ BasePasswordInput.defaultProps = {
   disabled: false,
   required: false,
 };
-
 
 export default BasePasswordInput;

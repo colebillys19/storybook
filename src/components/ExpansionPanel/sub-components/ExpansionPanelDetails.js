@@ -1,27 +1,16 @@
 import React from 'react';
 import T from 'prop-types';
-import PanelDetails from '@material-ui/core/ExpansionPanelDetails';
 
-const ExpansionPanelDetails = ({
-  children,
-  classes,
-  ...restProps
-}) => (
-  <PanelDetails
-    classes={classes}
-    {...restProps}
-  >
-    {children}
-  </PanelDetails>
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+
+const Details = ({ children, ...restProps }) => (
+  <ExpansionPanelDetails {...restProps}>{children}</ExpansionPanelDetails>
 );
 
 // Need this for Material UI composition
 // https://material-ui.com/guides/composition/
-ExpansionPanelDetails.muiName = PanelDetails.muiName;
+Details.muiName = ExpansionPanelDetails.muiName;
 
-ExpansionPanelDetails.propTypes = {
-  children: T.node,
-  classes: T.object,
-};
+Details.propTypes = { children: T.node };
 
-export default ExpansionPanelDetails;
+export default Details;

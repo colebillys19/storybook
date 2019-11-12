@@ -7,6 +7,7 @@
     "@material-ui/styles": "4.5.0",
     "@storybook/cli": "5.2.5",
     "lodash": "4.17.11",
+    "moment": "2.24.0",
     "prop-types": "15.7.2",
     "react": "16.9.0",
     "react-dom": "16.9.0",
@@ -114,10 +115,6 @@
           "avoidEscape": true
         }
       ],
-      "react/jsx-first-prop-new-line": [
-        2,
-        "multiline"
-      ],
       "react/jsx-filename-extension": 0,
       "react/jsx-no-target-blank": 0,
       "react/jsx-curly-brace-presence": 0,
@@ -199,10 +196,12 @@
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-react-hooks": "1.6.0",
     "eslint-plugin-sort-destructure-keys": "1.2.0",
+    "prettier": "1.18.2",
     "react-test": "0.1.1",
     "react-test-context-provider": "2.2.0",
     "react-test-renderer": "16.9.0",
     "require-context.macro": "1.2.2",
+    "storybook-addon-state": "1.0.3",
     "stylelint": "9.6.0",
     "stylelint-config-recommended": "2.1.0",
     "stylelint-config-styled-components": "0.1.1",

@@ -1,0 +1,24 @@
+import { Meta, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs } from '@storybook/addon-knobs';
+
+import NotificationBanner from '../NotificationBanner';
+
+<Meta
+  decorators={[withKnobs]}
+  component={NotificationBanner}
+  title="Banners|NotificationBanner"
+/>
+
+<div style={{ position: 'relative', bottom: '20px' }}>
+
+  ## NotificationBanner
+
+  A banner used to communicate either a message or an alert to the user.
+
+  ### Props
+
+  <div style={{ position: 'relative', bottom: '20px' }}>
+    <Props of={NotificationBanner} />
+  </div>
+
+</div>

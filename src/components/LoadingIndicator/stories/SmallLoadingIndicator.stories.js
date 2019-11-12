@@ -1,17 +1,13 @@
-/**
- * @description Circular, rotating loading indicator.
- *              Smaller than the default Loading Indicator
- */
-
 import React from 'react';
 
-import LoadingIndicatorSmall from '../LoadingIndicatorSmall';
+import LoadingIndicatorDocs from '../docs/LoadingIndicator.docs.mdx';
+import SmallLoadingIndicator from '../SmallLoadingIndicator';
 
 export default {
-  parameters: { component: LoadingIndicatorSmall },
-  title: 'Loading Indicators|LoadingIndicatorSmall',
+  parameters: { component: SmallLoadingIndicator, docs: { page: LoadingIndicatorDocs } },
+  title: 'Loading Indicators|SmallLoadingIndicator',
 };
 
-export const defaultStory = () => <LoadingIndicatorSmall />;
+export const defaultStory = () => <SmallLoadingIndicator />;
 
 defaultStory.story = { name: 'default' };

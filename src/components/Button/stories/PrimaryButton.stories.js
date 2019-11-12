@@ -1,54 +1,47 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import {
+  boolean,
+  select,
+  text,
+  withKnobs,
+} from '@storybook/addon-knobs';
 
-import iconDictionary from '../../../utils/iconDictionary';
-
-import BaseButton from '../BaseButton';
 import PrimaryButton from '../PrimaryButton';
-
-const label = 'LABEL TEXT';
-
-const iconOptions = {
-  cancel: 'cancel',
-  inbox: 'inbox',
-  profile: 'profile',
-  star: 'star',
-};
-const iconDefault = 'inbox';
-
-const sizeOptions = {
-  large: 'large',
-  medium: 'medium',
-  mediumLarge: 'mediumLarge',
-  mediumSmall: 'mediumSmall',
-  small: 'small',
-  xSmall: 'xSmall',
-};
-const sizeDefault = 'mediumSmall';
+import PrimaryButtonDocs from '../docs/PrimaryButton.docs.mdx';
+import iconDictionary from '../../../utils/iconDictionary';
+import { iconOptions } from '../../../utils/storyConstants';
 
 export default {
   decorators: [withKnobs],
-  includeStories: [],
-  parameters: { component: BaseButton },
+  parameters: { component: PrimaryButton, docs: { page: PrimaryButtonDocs } },
   title: 'Buttons|PrimaryButton',
 };
 
-export const defaultStory = () => {
-  const icon = iconDictionary(
-    select('Icon', iconOptions, iconDefault),
-    select('Icon Size', sizeOptions, sizeDefault),
+export const defaultStory = () => (
+  <PrimaryButton
+    disabled={boolean('Disabled', false)}
+    label={text('Label Text', 'LABEL TEXT')}
+    onClick={action('onClick')}
+  />
+);
+
+defaultStory.story = { name: 'default' };
+
+export const withIconStory = () => {
+  const Icon = iconDictionary(
+    select('Icon', iconOptions, 'inbox'),
+    'mediumSmall',
     'button'
   );
   return (
     <PrimaryButton
-      disableFocusRipple
-      disableRipple
-      Icon={icon}
-      label={text('Label Text', label)}
-      onClick={action('onClickButton')}
+      disabled={boolean('Disabled', false)}
+      Icon={Icon}
+      label={text('Label Text', 'LABEL TEXT')}
+      onClick={action('onClick')}
     />
   );
 };
 
-defaultStory.story = { name: 'default' };
+withIconStory.story = { name: 'with icon' };

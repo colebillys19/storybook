@@ -1,44 +1,8 @@
-/* eslint-disable no-tabs */
-/**
- *
- * TextInput
- * @description: Text Field Input.
- * API USAGE: {
-  * autoComplete (string) This property helps users to fill forms faster, especially on mobile devices. The name can be confusing, as it's more like an autofill. You can learn more about it here: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill
-  * autoFocus	(bool) If true, the input will be focused during the first mount.
-  * defaultValue (string|number) The default value of the Input element.
-  * disabled (bool) If true, the input will be disabled.
-  * error	(bool) If true, the label will be displayed in an error state.
-  * FormHelperTextProps	(object) Properties applied to the FormHelperText element.
-  * fullWidth	(bool) If true, the input will take up the full width of its container.
-  * helperText (node)	The helper text content.
-  * id (string) The id of the input element. Use that property to make label and helperText accessible for screen readers.
-  * InputLabelProps	(object) Properties applied to the InputLabel element.
-  * InputProps (object) Properties applied to the Input element.
-  * inputProps (object)	Attributes applied to the native input element.
-  * inputRef (func|object) Use that property to pass a ref callback to the native input component.
-  * label	(node) The label content. If you do not pass a label in, there will not be one.
-  * margin	(enum) 'none'|'dense'|'normal' If dense or normal, will adjust vertical spacing of this and contained components.
-  * multiline	(bool) If true, a textarea element will be rendered instead of an input.
-  * name (string) Name attribute of the input element.
-  * onChange(func) Callback fired when the value is changed.
-  * placeholder (string) The short hint displayed in the input before the user enters a value.
-  * required (bool) If true, the label is displayed as required and the input will be required.
-  * rows (string|number) Number of rows to display when multiline option is set to true.
-  * rowsMax (string|number) Maximum number of rows to display when multiline option is set to true.
-  * select (bool) Render a Select element while passing the Input element to Select as input parameter. If this option is set you must pass the options of the select as children.
-  * SelectProps (object) Properties applied to the Select element.
-  * type (string) Type attribute of the Input element. It should be a valid HTML5 input type.
-  * value	(string|number|bool|arrayOf) The value of the Input element, required for a controlled component.
-  * variant	(enum):'standard'|'outlined'|'filled'|'standard' The variant to use.
-* }
-*/
-
 import React, { Fragment } from 'react';
 import T from 'prop-types';
 import ConditionalRender from '../../utils/ConditionalRender';
 import InputLabel from './sub-components/InputLabel';
-import { BaseTextInput } from './styles/TextInput.styles';
+import { StyledTextInput } from './styles/TextInput.styles';
 
 /**
  * Use `TextInput` when you need a text field input. Typically used in forms and dialogs.
@@ -64,20 +28,12 @@ const TextInput = ({
 }) => {
   const shouldRenderLabel = !!label;
   const Label = (
-    <InputLabel
-      className={className}
-      text={label}
-      {...InputLabelProps}
-    />
+    <InputLabel className={className} text={label} {...InputLabelProps} />
   );
   return (
     <Fragment>
-      <ConditionalRender
-        Component={Label}
-        shouldRender={shouldRenderLabel}
-      />
-      <BaseTextInput
-        classes={{ root: 'formControl' }}
+      <ConditionalRender Component={Label} shouldRender={shouldRenderLabel} />
+      <StyledTextInput
         className={className}
         disabled={disabled}
         error={error}
@@ -114,7 +70,7 @@ const TextInput = ({
 
 TextInput.propTypes = {
   /**
-   * This prop helps users to fill forms faster, especially on mobile devices. 
+   * This prop helps users to fill forms faster, especially on mobile devices.
    * The name can be confusing, as it's more like an autofill.
    */
   autoComplete: T.string,
@@ -137,11 +93,7 @@ TextInput.propTypes = {
   /**
    * If true, the label will be displayed in an error state.
    */
-  error: T.oneOfType([
-    T.string,
-    T.oneOf([null]),
-    T.bool,
-  ]),
+  error: T.oneOfType([T.string, T.oneOf([null]), T.bool]),
   /**
    * The props passed to the material-ui FormHelperText component.
    */
@@ -153,11 +105,7 @@ TextInput.propTypes = {
   /**
    * The text displayed in the material-ui FormHelperText component.
    */
-  helperText: T.oneOfType([
-    T.string,
-    T.oneOf([null]),
-    T.node,
-  ]),
+  helperText: T.oneOfType([T.string, T.oneOf([null]), T.node]),
   /**
    * The id of the input element.
    * Use this prop to make label and helperText accessible for screen readers.
@@ -168,7 +116,7 @@ TextInput.propTypes = {
    */
   InputLabelProps: T.object,
   /**
-   * Props applied to the Input element. 
+   * Props applied to the Input element.
    * It will be a FilledInput, OutlinedInput or Input component depending on the variant prop value.
    */
   InputProps: T.object,
@@ -179,19 +127,11 @@ TextInput.propTypes = {
   /**
    *  Ref passed to the input element.
    */
-  inputRef: T.oneOfType([
-    T.func,
-    T.shape({ current: T.any }),
-  ]),
+  inputRef: T.oneOfType([T.func, T.shape({ current: T.any })]),
   /**
    * The label content. If you do not pass a label in, there will not be one.
    */
-  label: T.oneOfType([
-    T.string,
-    T.element,
-    T.oneOf([null]),
-    T.node,
-  ]),
+  label: T.oneOfType([T.string, T.element, T.oneOf([null]), T.node]),
   /**
    * If dense or normal, will adjust vertical spacing of this and contained components.
    */
@@ -213,7 +153,7 @@ TextInput.propTypes = {
    */
   onChange: T.func.isRequired,
   /**
-   * The short hint displayed in the input before the user enters a value.
+   * The short hint displayed in the input before a user enters a value.
    */
   placeholder: T.string,
   /**
@@ -248,11 +188,7 @@ TextInput.propTypes = {
   /**
    * The variant to use.
    */
-  variant: T.oneOf([
-    'filled',
-    'outlined',
-    'standard',
-  ]),
+  variant: T.oneOf(['filled', 'outlined', 'standard']),
 };
 
 TextInput.defaultProps = {

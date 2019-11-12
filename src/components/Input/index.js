@@ -3,9 +3,4 @@ import NumberInput from './NumberInput';
 import PasswordInput from './PasswordInput';
 import TextInput from './TextInput';
 
-export {
-  CurrencyInput,
-  NumberInput,
-  PasswordInput,
-  TextInput,
-};
+export { CurrencyInput, NumberInput, PasswordInput, TextInput };

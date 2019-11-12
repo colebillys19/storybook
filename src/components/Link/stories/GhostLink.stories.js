@@ -1,72 +1,33 @@
-/**
- * @description Main Ghost Button used throughout the Silver Site
- * @props
- * Icon: (SVG) Icon to render if provided. Icons should be selected and styled through the
- *       iconDictionary before reaching this component
- * label: (string|array) Text link label
- * path: (string|array) Relative url representing the location to link to.
- *        Can be a string or an url object
- * replace: (bool) When true, clicking the link will replace current entry in history stack
- *          instead of adding a new one
- */
-
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import {
-  select,
-  text,
-  withKnobs,
-} from '@storybook/addon-knobs/react';
+import { select, text, withKnobs } from '@storybook/addon-knobs/react';
 
-import iconDictionary from '../../../utils/iconDictionary';
-
-import BaseLink from '../BaseLink';
+import GhostButtonLinkDocs from '../docs/GhostButtonLink.docs.mdx';
 import GhostButtonLink from '../GhostButtonLink';
-
-const iconOptions = {
-  cancel: 'cancel',
-  inbox: 'inbox',
-  profile: 'profile',
-  star: 'star',
-};
-
-const iconDefault = 'star';
-
-const sizeOptions = {
-  large: 'large',
-  medium: 'medium',
-  mediumLarge: 'mediumLarge',
-  mediumSmall: 'mediumSmall',
-  small: 'small',
-  xSmall: 'xSmall',
-};
-
-const sizeDefault = 'small';
-
-const labelText = 'LABEL TEXT';
-
-const path = 'path';
+import iconDictionary from '../../../utils/iconDictionary';
+import { iconOptions } from '../../../utils/storyConstants';
 
 export default {
-  decorators: [withKnobs, (story) => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>],
-  parameters: { component: BaseLink },
+  decorators: [
+    (story) => <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>,
+    withKnobs,
+  ],
+  parameters: { component: GhostButtonLink, docs: { page: GhostButtonLinkDocs } },
   title: 'Links|GhostButtonLink',
 };
 
-export const defaultStory = () => <GhostButtonLink label={text('Label', labelText)} path={path} />;
+export const defaultStory = () => (
+  <GhostButtonLink path={'path'} text={text('Link Text', 'Link Text')} />
+);
 
 defaultStory.story = { name: 'default' };
 
-export const icon = () => (
+export const withIconStory = () => (
   <GhostButtonLink
-    Icon={iconDictionary(
-      select('Icon', iconOptions, iconDefault),
-      select('Icon Size', sizeOptions, sizeDefault),
-      'button'
-    )}
-    label={text('Label', labelText)}
-    path={path}
+    Icon={iconDictionary(select('Icon', iconOptions, 'star'), 'small', 'link')}
+    path={'path'}
+    text={text('Link Text', 'Link Text')}
   />
 );
 
-icon.story = { name: 'icon' };
+withIconStory.story = { name: 'with icon' };

@@ -1,25 +1,27 @@
-/**
- * @description
- * - icon that displays a tooltip on hover
- * @props
- * > Icon (function | element)
- *   - icon to be displayed, generated via icon dictionary
- * > iconProps (object)
- *   - icon props
- * > placement (string)
- *   - placement of tooltip:
- *     top-start, top, top-end, right-start, right, right-end
- *     bottom-start, bottom, bottom-end, left-start, left, left-end
- * > TooltipContent (element | node)
- *   - markup passed and displayed within tooltip
- */
-
 import React from 'react';
-import { boolean, withKnobs } from '@storybook/addon-knobs';
+import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 
 import CustomTooltipIcon from '../CustomTooltipIcon';
 
 import iconDictionary from '../../../utils/iconDictionary';
+
+const iconOptions = {
+  cancel: 'cancel',
+  inbox: 'inbox',
+  profile: 'profile',
+  star: 'star',
+};
+const iconDefault = 'inbox';
+
+const sizeOptions = {
+  large: 'large',
+  medium: 'medium',
+  mediumLarge: 'mediumLarge',
+  mediumSmall: 'mediumSmall',
+  small: 'small',
+  xSmall: 'xSmall',
+};
+const sizeDefault = 'medium';
 
 const containerStyles = {
   alignItems: 'center',
@@ -37,7 +39,7 @@ const divStyles = {
 };
 const tooltipContent = (
   <div style={containerStyles}>
-    {iconDictionary('imagePlaceholder', 'medium')}
+    {iconDictionary('image', 'medium')}
     <div style={divStyles}>some custom content here</div>
   </div>
 );
@@ -48,12 +50,18 @@ export default {
   title: 'Icons|CustomTooltipIcon',
 };
 
-export const defaultStory = () => (
-  <CustomTooltipIcon
-    Icon={iconDictionary('inbox', 'medium')}
-    interactiveTooltip={boolean('Interactive Tooltip', false)}
-    TooltipContent={tooltipContent}
-  />
-);
+export const defaultStory = () => {
+  const Icon = iconDictionary(
+    select('Icon', iconOptions, iconDefault),
+    select('Icon Size', sizeOptions, sizeDefault)
+  );
+  return (
+    <CustomTooltipIcon
+      Icon={Icon}
+      interactiveTooltip={boolean('Interactive Tooltip', false)}
+      TooltipContent={tooltipContent}
+    />
+  );
+};
 
 defaultStory.story = { name: 'default' };

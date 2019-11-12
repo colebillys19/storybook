@@ -8,11 +8,7 @@ import {
 
 describe('<PasswordInput />', () => {
   const onChange = jest.fn();
-  const component = (
-    <PasswordInput
-      onChange={onChange}
-    />
-  );
+  const component = <PasswordInput onChange={onChange} />;
 
   checkBasicRendering(component);
   checkRequiredProps(component);

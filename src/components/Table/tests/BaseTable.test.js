@@ -21,16 +21,10 @@ describe('<BaseTable />', () => {
     </StyledTableHead>
   );
   const rows = ROWDATA_TEST.map(({ cells, id }) => (
-    <BaseTableRow
-      key={id}
-      centeredCols={centeredCols}
-      data={cells}
-    />
+    <BaseTableRow key={id} centeredCols={centeredCols} data={cells} />
   ));
   const tableBody = (
-    <StyledTableBody hovercolor={hoverColor}>
-      {rows}
-    </StyledTableBody>
+    <StyledTableBody hovercolor={hoverColor}>{rows}</StyledTableBody>
   );
   const children = [tableHead, tableBody];
 

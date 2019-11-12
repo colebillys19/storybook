@@ -1,30 +1,12 @@
-/**
-*
-* H1
-* @description: Wraps text to create an <h1> header
-* Use Case: Creating large titles or headers
-*/
+import styled from 'styled-components';
 
-import React from 'react';
-import T from 'prop-types';
+import { ssDarkGrey } from '../../utils/defaultStyleHelper';
 
-import { ExtendedH1 } from './styles/Headings.styles';
-
-/**
- * Use `H1` to create an `<h1>` header.
- */
-const H1 = (props) => (
-  <ExtendedH1 {...props} />
-);
-
-H1.propTypes = {
-  /**
-   * Wraps text to create an <h1> header.
-   */
-  children: T.oneOfType([
-    T.string,
-    T.object,
-  ]).isRequired,
-};
+const H1 = styled.h1`
+  color: ${ssDarkGrey};
+  font-size: 3.6rem;
+  font-weight: 400;
+  margin: 1.7rem 0;
+`;
 
 export default H1;

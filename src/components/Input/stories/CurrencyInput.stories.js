@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  boolean,
-  select,
-  text,
-  withKnobs,
-} from '@storybook/addon-knobs/react';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs/react';
 import { action } from '@storybook/addon-actions';
 
 import CurrencyInput from '../CurrencyInput';

@@ -39,8 +39,13 @@ export const formatCurrency = (value) => {
  * For example: 12345.12 -> $12,345.12
  */
 export function formatAmountsWithCommas(amount, withAdorn = true) {
-  const formattedAmount = isNumber(amount) ? amount : convertCurrencyStrToNumber(amount);
-  const splitAmount = parseFloat(formattedAmount).toFixed(2).toString().split('.');
+  const formattedAmount = isNumber(amount)
+    ? amount
+    : convertCurrencyStrToNumber(amount);
+  const splitAmount = parseFloat(formattedAmount)
+    .toFixed(2)
+    .toString()
+    .split('.');
   splitAmount[0] = splitAmount[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   return `${withAdorn ? '$' : ''}${splitAmount.join('.')}`;
 }

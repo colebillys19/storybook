@@ -1,0 +1,24 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { withKnobs, select, text } from '@storybook/addon-knobs';
+
+import PrimaryButton from '../PrimaryButton';
+
+<Meta
+  decorators={[withKnobs]}
+  component={PrimaryButton}
+  title="Buttons|PrimaryButton"
+/>
+
+<div style={{ position: 'relative', bottom: '20px' }}>
+
+  ## PrimaryButton
+
+  A button displaying a primary color scheme.
+
+  ### Props
+
+  <div style={{ position: 'relative', bottom: '20px' }}>
+    <Props of={PrimaryButton} />
+  </div>
+
+</div>

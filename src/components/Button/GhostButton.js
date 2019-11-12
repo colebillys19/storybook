@@ -1,50 +1,40 @@
-/**
-*
-* GhostButton
-* @description Main Ghost Button used throughout the Silver Site
-* API Usage: {
-*   Icon: (SVG) Icon to render if provided. Icons should be selected and styled through the
-*         iconDictionary before reaching this component.
-*   label: Button label
-*   onClick: onClick handler
-*   styling: Styling object to override default styles.
-* }
-*/
+import React from 'react';
 import T from 'prop-types';
-import styled from 'styled-components';
 
-import {
-  greyBorder,
-  msLightGrey,
-  ssDarkGrey,
-} from '../../utils/defaultStyleHelper';
-import SecondaryButton from './SecondaryButton';
+import { StyledBaseButton } from './styles/GhostButton.styles';
 
-const GhostButton = styled(SecondaryButton)`
-  &:hover {
-    background-color: ${msLightGrey};
-  }
-  background-color: white;
-  border: ${greyBorder};
-  color: ${ssDarkGrey};
-`;
-
-GhostButton.defaultProps = {
-  disableFocusRipple: true,
-  disableRipple: true,
-  label: '',
-};
+const GhostButton = (props) => <StyledBaseButton {...props} />;
 
 GhostButton.propTypes = {
-  component: T.func,
+  disabled: T.bool,
   disableFocusRipple: T.bool,
   disableRipple: T.bool,
-  href: T.string,
+  /**
+   * To be used when a button is wrapped in a Material UI tooltip component.
+   * Use the `ForwardRef` helper component in conjunction with this prop.
+   */
+  forwardedRef: T.oneOfType([
+    T.func,
+    T.shape({ current: T.instanceOf(Element) }),
+  ]),
+  /**
+   * Icon to be displayed within the button.
+   */
   Icon: T.oneOfType([T.object, T.func]),
+  /**
+   * String to be displayed within the button.
+   */
   label: T.oneOfType([T.string, T.element]).isRequired,
+  /**
+   * Function to be run when a user clicks the button.
+   */
   onClick: T.func.isRequired,
-  target: T.string,
-  to: T.string,
+};
+
+GhostButton.defaultProps = {
+  disabled: false,
+  disableFocusRipple: true,
+  disableRipple: true,
 };
 
 export default GhostButton;
