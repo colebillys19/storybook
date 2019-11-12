@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body * {
     font-family: 'Overpass', sans-serif;
+    box-sizing: border-box;
   }
 `;
 
