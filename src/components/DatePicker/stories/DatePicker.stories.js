@@ -1,6 +1,8 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import centered from '@storybook/addon-centered/react';
 import {
+  boolean,
   select,
   text,
   withKnobs,
@@ -8,13 +10,30 @@ import {
 
 import BaseDatePicker from '../BaseDatePicker';
 import BaseDatePickerDocs from '../docs/BaseDatePicker.docs.mdx';
-import { colorOptions } from '../../../utils/storyConstants';
+import {
+  msBrightPurple,
+  msDarkGrey,
+  msMainGreen,
+  muiBlue,
+  ssDarkBlue,
+  ssMainBlue,
+  ssYellow,
+} from '../../../utils/defaultStyleHelper';
 
 const initialDate = new Date();
 
 const defaultDatePlaceholder = 'SELECT A DATE';
 
-const defaultColor = colorOptions.ssMainBlue;
+const colorOptions = {
+  msBrightPurple,
+  msDarkGrey,
+  msMainGreen,
+  muiBlue,
+  ssDarkBlue,
+  ssMainBlue,
+  ssYellow,
+};
+const defaultColor = ssMainBlue;
 
 const numberOfMonthsOptions = {
   1: 1,
@@ -120,3 +139,29 @@ export const keyBoardShortcutsPanelStory = () => {
 };
 
 keyBoardShortcutsPanelStory.story = { name: 'with keyboard shortcuts panel' };
+
+export const anchorLeftStory = () => {
+  const setProps = props.set();
+  return (
+    <BaseDatePicker
+      anchorLeft={boolean('Anchor Left', true)}
+      focused
+      {...setProps}
+    />
+  );
+};
+
+anchorLeftStory.story = { decorators: [centered], name: 'anchor left' };
+
+export const openUpStory = () => {
+  const setProps = props.set();
+  return (
+    <BaseDatePicker
+      focused
+      openUp={boolean('Open Up', true)}
+      {...setProps}
+    />
+  );
+};
+
+openUpStory.story = { decorators: [centered], name: 'open up' };

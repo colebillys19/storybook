@@ -5,27 +5,28 @@ import { SingleDatePicker } from 'react-dates';
 import {
   ANCHOR_LEFT,
   ANCHOR_RIGHT,
-  HORIZONTAL_ORIENTATION,
   ICON_AFTER_POSITION,
   ICON_BEFORE_POSITION,
   OPEN_DOWN,
   OPEN_UP,
-  VERTICAL_ORIENTATION,
 } from 'react-dates/constants';
 import { StyledWrapper } from './styles/BaseDatePicker.styles';
 
 const BaseDatePicker = ({
+  anchorLeft,
   className,
   color,
   daySize,
   disabled,
   disableDayFunction,
   dispatchFunction,
+  display,
   Icon,
   iconAlignRight,
   id,
   initialDate,
   numberOfMonths,
+  openUp,
   placeholder,
   renderPortal,
   ...restProps
@@ -35,14 +36,17 @@ const BaseDatePicker = ({
 
   useEffect(() => {
     if (dispatchFunction) {
-      const dateString = date ? date.toISOString() : null;
+      const dateString = date ? date.string() : null;
       dispatchFunction(dateString);
     }
   }, [date]);
   const inputIconPosition = iconAlignRight ? ICON_AFTER_POSITION : ICON_BEFORE_POSITION;
+  const anchorDirection = anchorLeft ? ANCHOR_RIGHT : ANCHOR_LEFT;
+  const openDirection = openUp ? OPEN_UP : OPEN_DOWN;
   return (
     <StyledWrapper className={className} color={color}>
       <SingleDatePicker
+        anchorDirection={anchorDirection}
         customInputIcon={Icon}
         date={date}
         daySize={daySize}
@@ -55,6 +59,7 @@ const BaseDatePicker = ({
         numberOfMonths={numberOfMonths}
         onDateChange={(selectedDate) => setDate(selectedDate)}
         onFocusChange={({ focused }) => setIsFocused(focused)}
+        openDirection={openDirection}
         placeholder={placeholder}
         showDefaultInputIcon={!Icon}
         withPortal={renderPortal}
