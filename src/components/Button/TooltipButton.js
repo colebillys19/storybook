@@ -61,7 +61,7 @@ TooltipButton.defaultProps = {
   disableFocusRipple: true,
   disableRipple: true,
   enterDelay: 100,
-  placement: 'top',
+  placement: 'right',
 };
 
 export default TooltipButton;

@@ -2,12 +2,26 @@ import React from 'react';
 import T from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
 
+import { StyledTooltip } from './styles/TooltipButton.styles';
+
 const RoundIconButton = (props) => {
-  const { Icon, ...restProps } = props;
+  const {
+    enterDelay,
+    Icon,
+    placement,
+    tooltipText,
+    ...restProps
+  } = props;
   return (
-    <IconButton label="" {...restProps}>
-      {Icon}
-    </IconButton>
+    <StyledTooltip
+      enterDelay={enterDelay}
+      placement={placement}
+      title={tooltipText}
+    >
+      <IconButton label="" {...restProps}>
+        {Icon}
+      </IconButton>
+    </StyledTooltip>
   );
 };
 
@@ -22,6 +36,11 @@ RoundIconButton.propTypes = {
    */
   edge: T.oneOf(['start', 'end', false]),
   /**
+   * The amount of time (milliseconds) between when a user mouses over the button
+   * and when the tooltip is displayed.
+   */
+  enterDelay: T.number,
+  /**
    * Icon to be displayed within the button.
    */
   Icon: T.oneOfType([T.object, T.func]).isRequired,
@@ -29,7 +48,18 @@ RoundIconButton.propTypes = {
    * Function to be run when a user clicks the button.
    */
   onClick: T.func.isRequired,
+  /**
+   * Placement of the tooltip in relation to the button.
+   * Choose from one of the following:
+   * top-start, top, top-end, right-start, right, right-end,
+   * bottom-start, bottom, bottom-end, left-start, left, left-end
+   */
+  placement: T.string,
   size: T.oneOf(['small', 'medium']),
+  /**
+   * String to be displayed within the tooltip.
+   */
+  tooltipText: T.string.isRequired,
 };
 
 RoundIconButton.defaultProps = {
@@ -37,6 +67,8 @@ RoundIconButton.defaultProps = {
   disableFocusRipple: false,
   disableRipple: false,
   edge: false,
+  enterDelay: 100,
+  placement: 'right',
   size: 'medium',
 };
 

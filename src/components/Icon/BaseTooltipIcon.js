@@ -1,11 +1,9 @@
 import React from 'react';
 import T from 'prop-types';
-import { StyledTooltip } from './styles/TooltipIcon.styles';
+import { StyledTooltip } from './styles/BaseTooltipIcon.styles';
 
-/**
- * Use `TooltipIcon` when tooltip content is needed on hover of an icon.
- */
-const TooltipIcon = ({
+const BaseTooltipIcon = ({
+  enterDelay,
   Icon,
   iconProps,
   placement,
@@ -22,14 +20,19 @@ const TooltipIcon = ({
   );
 };
 
-TooltipIcon.propTypes = {
+BaseTooltipIcon.propTypes = {
+  /**
+   * The amount of time (milliseconds) between when a user mouses over the icon
+   * and when the tooltip is displayed.
+   */
+  enterDelay: T.number,
   /**
    * (SVG) Icon to render if provided. Icons should be selected and styled through the
    * iconDictionary before reaching this component.
    */
   Icon: T.oneOfType([T.func, T.element]).isRequired,
   /**
-   * The props passed the Icon provided.
+   * The props passed to the Icon provided.
    */
   iconProps: T.object,
   /**
@@ -39,6 +42,9 @@ TooltipIcon.propTypes = {
   tooltipText: T.string.isRequired,
 };
 
-TooltipIcon.defaultProps = { placement: 'right-start' };
+BaseTooltipIcon.defaultProps = {
+  enterDelay: 100,
+  placement: 'right',
+};
 
-export default TooltipIcon;
+export default BaseTooltipIcon;
