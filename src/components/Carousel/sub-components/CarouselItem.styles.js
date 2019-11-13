@@ -8,8 +8,11 @@ export const StyledCarouselItem = styled.div`
   padding: 0 0.5rem;
   transition: transform 0.2s ease-in-out;
   width: ${({ width }) => `${width}%` || null};
+  & > * {
+    text-align: center;
+  }
   &:hover {
-    > * {
+    > h3 {
       color: ${msBrightPurple};
     }
     transform: translateY(-0.5rem);
@@ -25,5 +28,4 @@ export const StyledItemTitle = styled.h3`
   font-size: 1.6rem;
   font-weight: 500;
   margin: 1rem 0 0.5rem;
-  text-align: center;
 `;

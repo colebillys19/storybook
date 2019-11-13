@@ -24,7 +24,7 @@ CarouselItem.propTypes = {
   description: T.string,
   imageUrl: T.string.isRequired,
   title: T.string.isRequired,
-  width: T.string,
+  width: T.number,
 };
 
 export default CarouselItem;

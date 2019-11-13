@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import {
   boolean,
   select,
+  text,
   withKnobs,
 } from '@storybook/addon-knobs';
 
@@ -30,6 +31,7 @@ export const defaultStory = () => {
       disabled={boolean('Disabled', false)}
       Icon={Icon}
       onClick={action('onClick')}
+      tooltipText={text('Tooltip Text', 'tooltip text')}
     />
   );
 };

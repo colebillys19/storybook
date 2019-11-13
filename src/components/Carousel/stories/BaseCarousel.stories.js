@@ -26,7 +26,7 @@ const itemsPerSlideOptions = {
 export default {
   decorators: [withKnobs],
   parameters: { component: BaseCarousel, docs: { page: BaseCarouselDocs } },
-  title: 'Carousel|BaseCarousel',
+  title: 'Miscellaneous|BaseCarousel',
 };
 
 export const defaultStory = () => {

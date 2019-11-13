@@ -7,13 +7,24 @@ import {
 } from './styles/FlatIconButton.styles';
 
 const FlatIconButton = (props) => {
-  const { tooltipText, ...restProps } = props;
+  const {
+    enterDelay,
+    placement,
+    tooltipText,
+    ...restProps
+  } = props;
   if (tooltipText) {
     return (
-      <StyledTooltipButton label="" tooltipText={tooltipText} {...restProps} />
+      <StyledTooltipButton
+        enterDelay={enterDelay}
+        label=""
+        placement={placement}
+        tooltipText={tooltipText}
+        {...restProps}
+      />
     );
   }
-  return <StyledBaseButton label="" {...props} />;
+  return <StyledBaseButton label="" {...restProps} />;
 };
 
 FlatIconButton.propTypes = {
@@ -21,13 +32,10 @@ FlatIconButton.propTypes = {
   disableFocusRipple: T.bool,
   disableRipple: T.bool,
   /**
-   * To be used when a button is wrapped in a Material UI tooltip component.
-   * Use the `ForwardRef` helper component in conjunction with this prop.
+   * The amount of time (milliseconds) between when a user mouses over the button
+   * and when the tooltip is displayed.
    */
-  forwardedRef: T.oneOfType([
-    T.func,
-    T.shape({ current: T.instanceOf(Element) }),
-  ]),
+  enterDelay: T.number,
   /**
    * Icon to be displayed within the button.
    */
@@ -36,12 +44,25 @@ FlatIconButton.propTypes = {
    * Function to be run when a user clicks the button.
    */
   onClick: T.func.isRequired,
+  /**
+   * Placement of the tooltip in relation to the button.
+   * Choose from one of the following:
+   * top-start, top, top-end, right-start, right, right-end,
+   * bottom-start, bottom, bottom-end, left-start, left, left-end
+   */
+  placement: T.string,
+  /**
+   * String to be displayed within the tooltip.
+   */
+  tooltipText: T.string,
 };
 
 FlatIconButton.defaultProps = {
   disabled: false,
   disableFocusRipple: true,
   disableRipple: true,
+  enterDelay: 100,
+  placement: 'right',
 };
 
 export default FlatIconButton;

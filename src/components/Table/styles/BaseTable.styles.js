@@ -5,16 +5,19 @@ import TableHead from '@material-ui/core/TableHead';
 
 export const StyledTable = styled(Table)`
   width: max-content;
+  * {
+    border-bottom-style: ${({ hasBorders }) => hasBorders === false ? 'none' : null};
+  }
 `;
 
 export const StyledTableBody = styled(TableBody)`
-  tr:hover {
-    background-color: ${({ hovercolor }) => hovercolor || ''};
+  tr:last-of-type td {
+    border-bottom-style: none;
   }
 `;
 
 export const StyledTableHead = styled(TableHead)`
   th {
-    font-weight: bold;
+    font-weight: ${({ headersBold }) => headersBold ? 'bold' : null};
   }
 `;

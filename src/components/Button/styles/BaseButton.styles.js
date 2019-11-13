@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 
 export const StyledBaseButton = styled((props) => (
-  <Button classes={{ label: 'label', root: 'root' }} {...props} />
+  <Button classes={{ root: 'root' }} {...props} />
 ))`
   align-items: center;
   box-shadow: none;

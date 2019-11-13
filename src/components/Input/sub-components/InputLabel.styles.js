@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TooltipIcon } from '../../Icon';
+import BaseTooltipIcon from '../../Icon/BaseTooltipIcon';
 
 export const LabelWrapper = styled.div`
   align-items: center;
@@ -8,6 +8,6 @@ export const LabelWrapper = styled.div`
   margin: 0 0 0.3rem 1.35rem;
 `;
 
-export const StyledIcon = styled(TooltipIcon)`
+export const StyledIcon = styled(BaseTooltipIcon)`
   margin: 0rem 1rem;
 `;

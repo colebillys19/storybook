@@ -1,16 +1,3 @@
-/* eslint-disable react/no-unused-prop-types */
-/**
- * @description ...
- * @props
- *   centeredCols (array) columns whose content should be centered
- *   firstColBold (boolean) determines whether or not first column is bold
- *   headers (array) strings representing table headers
- *   hoverColor (string) background color on row hover
- *   rowData (array) array of of objects containing:
- *     - cells (array) array of strings that will populate cells
- *     - id (string) unique id
- */
-
 import React from 'react';
 import T from 'prop-types';
 
@@ -21,15 +8,15 @@ import {
 } from './styles/BaseTable.styles';
 import BaseTableRow from './sub-components/BaseTableRow';
 
-/**
- * Use `BaseTable` to display sets of data.
- */
 const BaseTable = ({
   centeredCols,
   firstColBold,
+  hasBorders,
   headers,
-  hoverColor,
+  headersBold,
   rowData,
+  rowHoverBackgroundColor,
+  rowHoverTextColor,
 }) => {
   const headersLen = headers.length;
   const lengthCheck = rowData.every(({ cells }) => cells.length === headersLen);
@@ -46,76 +33,73 @@ const BaseTable = ({
       centeredCols={centeredCols}
       data={cells}
       firstColBold={firstColBold}
+      rowHoverBackgroundColor={rowHoverBackgroundColor}
+      rowHoverTextColor={rowHoverTextColor}
     />
   ));
   return (
-    <StyledTable>
-      <StyledTableHead>
+    <StyledTable hasBorders={hasBorders}>
+      <StyledTableHead headersBold={headersBold}>
         <BaseTableRow
           centeredCols={centeredCols}
           data={headers}
           firstColBold={firstColBold}
         />
       </StyledTableHead>
-      <StyledTableBody hovercolor={hoverColor}>{rows}</StyledTableBody>
+      <StyledTableBody>
+        {rows}
+      </StyledTableBody>
     </StyledTable>
   );
 };
 
 BaseTable.propTypes = {
   /**
-   * Columns whose content should be centered.
+   * Array containing the indices of columns whose content is to be centered.
    */
   centeredCols: T.arrayOf(T.number),
   /**
-   * The content of the table, normally TableHead and TableBody.
-   */
-  children: T.node,
-  /**
-   * The component used for the root node.
-   * Either a string to use a DOM element or a component.
-   */
-  component: T.element,
-  /**
-   * If true, the first column will be bold.
+   * If true, text in the table's first column will appear bold.
    */
   firstColBold: T.bool,
   /**
-   * The an array of titles of the table headers.
+   * If true, the table has a border between each row.
    */
-  headers: T.arrayOf(T.string),
+  hasBorders: T.bool,
   /**
-   * The background color on row hover.
+   * Array containing strings to be used as the table's column headers
    */
-  hoverColor: T.string,
+  headers: T.arrayOf(T.string).isRequired,
   /**
-   * Allows TableCells to inherit padding of the Table.
+   * If true, the table headers appear bold.
    */
-  padding: T.oneOf(['default', 'checkbox', 'none']),
+  headersBold: T.bool,
   /**
-   * The row data for each cell in a table row.
+   * Array of objects containing row cells arrays (arrays of strings) and row IDs (strings).
    */
   rowData: T.arrayOf(
     T.shape({
       cells: T.arrayOf(T.string),
       id: T.string,
     })
-  ),
+  ).isRequired,
   /**
-   * Allows TableCells to inherit size of the Table.
+   * Row background color on hover.
    */
-  size: T.oneOf(['small', 'medium']),
+  rowHoverBackgroundColor: T.string,
   /**
-   * Set the header sticky.
+   * Row text color on hover.
    */
-  stickyHeader: T.bool,
+  rowHoverTextColor: T.string,
 };
 
-BaseTable.defaulProps = {
-  component: 'table',
-  padding: 'default',
-  size: 'medium',
-  stickyHeader: false,
+BaseTable.defaultProps = {
+  centeredCols: [],
+  firstColBold: false,
+  hasBorders: true,
+  headersBold: true,
+  rowHoverBackgroundColor: '',
+  rowHoverTextColor: '',
 };
 
 export default BaseTable;

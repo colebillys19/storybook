@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, waitForElement } from '@testing-library/react';
 
-import TooltipIcon from '../TooltipIcon';
+import BaseTooltipIcon from '../BaseTooltipIcon';
 import {
   checkBasicRendering,
   checkRequiredProps,
@@ -23,8 +23,8 @@ const Icon = iconDictionary('star', 'medium');
 
 const tooltipText = 'tooltip text';
 
-describe('<TooltipIcon />', () => {
-  const component = <TooltipIcon Icon={Icon} tooltipText={tooltipText} />;
+describe('<BaseTooltipIcon />', () => {
+  const component = <BaseTooltipIcon Icon={Icon} tooltipText={tooltipText} />;
   checkBasicRendering(component);
   checkRequiredProps(component);
 

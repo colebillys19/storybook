@@ -1,4 +1,3 @@
-import TooltipIcon from './TooltipIcon';
-import CustomTooltipIcon from './CustomTooltipIcon';
+import BaseTooltipIcon from './BaseTooltipIcon';
 
-export { CustomTooltipIcon, TooltipIcon };
+export { BaseTooltipIcon };

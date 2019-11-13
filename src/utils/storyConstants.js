@@ -31,19 +31,19 @@ export const enterDelayOptions = {
   '1000ms': 1000,
 };
 
-/* eslint-disable sort-keys */
+/* eslint-disable */
 export const placementOptions = {
   'top-start': 'top-start',
-  top: 'top',
+  'top': 'top',
   'top-end': 'top-end',
   'right-start': 'right-start',
-  right: 'right',
+  'right': 'right',
   'right-end': 'right-end',
   'bottom-start': 'bottom-start',
-  bottom: 'bottom',
+  'bottom': 'bottom',
   'bottom-end': 'bottom-end',
   'left-start': 'left-start',
-  left: 'left',
+  'left': 'left',
   'left-end': 'left-end',
 };
-/* eslint-enable sort-keys */
+/* eslint-enable */
