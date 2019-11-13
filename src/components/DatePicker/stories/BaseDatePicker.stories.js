@@ -1,10 +1,11 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import styled from 'styled-components';
 import moment from 'moment';
 import useState from 'storybook-addon-state';
-import centered from '@storybook/addon-centered/react';
 import {
   boolean,
+  color,
   select,
   text,
   withKnobs,
@@ -12,28 +13,7 @@ import {
 
 import BaseDatePicker from '../BaseDatePicker';
 import BaseDatePickerDocs from '../docs/BaseDatePicker.docs.mdx';
-import {
-  msBrightPurple,
-  msDarkGrey,
-  msMainGreen,
-  muiBlue,
-  ssDarkBlue,
-  ssMainBlue,
-  ssYellow,
-} from '../../../utils/defaultStyleHelper';
-
-const defaultDatePlaceholder = 'SELECT A DATE';
-
-const colorOptions = {
-  msBrightPurple,
-  msDarkGrey,
-  msMainGreen,
-  muiBlue,
-  ssDarkBlue,
-  ssMainBlue,
-  ssYellow,
-};
-const defaultColor = ssMainBlue;
+import { msBrightPurple } from '../../../utils/defaultStyleHelper';
 
 const numberOfMonthsOptions = {
   1: 1,
@@ -41,26 +21,25 @@ const numberOfMonthsOptions = {
   3: 3,
   4: 4,
 };
-const defaultNumberOfMonths = 1;
 
+/* eslint-disable sort-keys */
 const daySizeOptions = {
   small: 30,
-  // eslint-disable-next-line sort-keys
-  default: 40,
+  medium: 40,
   large: 60,
-  xlarge: 80,
+  xLarge: 80,
 };
-const daySizeDefault = 40;
+/* eslint-enable sort-keys */
 
 const props = {
   set: (date, setDate) => ({
-    color: select('Color', colorOptions, defaultColor),
+    color: color('Color', msBrightPurple),
     date,
-    daySize: select('Calendar Size', daySizeOptions, daySizeDefault),
+    daySize: select('Calendar Size', daySizeOptions, 40),
     id: 'date-picker',
-    numberOfMonths: select('Number of Months', numberOfMonthsOptions, defaultNumberOfMonths),
+    numberOfMonths: select('Number of Months', numberOfMonthsOptions, 1),
     onChange: setDate,
-    placeholder: text('Placeholder Text', defaultDatePlaceholder),
+    placeholder: text('Placeholder Text', 'SELECT A DATE'),
   }),
   useDate: (initialDate) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -80,6 +59,10 @@ export const defaultStory = () => {
   const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
+      disabled={boolean('Disabled', false)}
+      hideKeyboardShortcutsPanel={boolean('Hide Keyboard Shortcuts', true)}
+      iconAlignRight={boolean('Align Icon Right', true)}
+      withPortal={boolean('With Portal', false)}
       {...setProps}
     />
   );
@@ -87,45 +70,40 @@ export const defaultStory = () => {
 
 defaultStory.story = { name: 'default' };
 
-export const initialDateStory = () => {
+export const withInitialDateStory = () => {
   const [date, setDate] = props.useDate(new Date());
   const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
+      disabled={boolean('Disabled', false)}
+      hideKeyboardShortcutsPanel={boolean('Hide Keyboard Shortcuts', true)}
+      iconAlignRight={boolean('Align Icon Right', true)}
+      withPortal={boolean('With Portal', false)}
       {...setProps}
     />
   );
 };
 
-initialDateStory.story = { name: 'with intial date' };
+withInitialDateStory.story = { name: 'with intial date' };
 
-export const disabledStory = () => {
-  const [date, setDate] = props.useDate(new Date());
-  const setProps = props.set(date, setDate);
-  return (
-    <BaseDatePicker
-      disabled
-      {...setProps}
-    />
-  );
-};
-
-disabledStory.story = { name: 'disabled' };
-
-export const errorStory = () => {
-  const [date, setDate] = props.useDate(new Date());
+export const withErrorStory = () => {
+  const [date, setDate] = props.useDate();
   const setProps = props.set(date, setDate);
   return (
     <div style={{ marginTop: 30 }}>
       <BaseDatePicker
-        error={text('Error', 'Error Text')}
+        disabled={boolean('Disabled', false)}
+        error={text('Error Text', 'error text')}
+        hideKeyboardShortcutsPanel={boolean('Hide Keyboard Shortcuts', true)}
+        iconAlignRight={boolean('Align Icon Right', true)}
+        withPortal={boolean('With Portal', false)}
         {...setProps}
       />
     </div>
   );
 };
 
-errorStory.story = { name: 'error' };
+withErrorStory.story = { name: 'with error' };
 
 export const focusedStory = () => {
   const [date, setDate] = props.useDate();
@@ -133,6 +111,9 @@ export const focusedStory = () => {
   return (
     <BaseDatePicker
       focused
+      hideKeyboardShortcutsPanel={boolean('Hide Keyboard Shortcuts', true)}
+      iconAlignRight={boolean('Align Icon Right', true)}
+      withPortal={boolean('With Portal', false)}
       {...setProps}
     />
   );
@@ -140,71 +121,72 @@ export const focusedStory = () => {
 
 focusedStory.story = { name: 'focused' };
 
-export const portalStory = () => {
+export const withBlockedDaysStory = () => {
+  const datesList = [
+    moment().add(1, 'days'),
+    moment().add(3, 'days'),
+    moment().add(5, 'days'),
+    moment().add(7, 'days'),
+  ];
+  const isSameDay = (a, b) => {
+    if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+    return a.date() === b.date()
+      && a.month() === b.month()
+      && a.year() === b.year();
+  };
   const [date, setDate] = props.useDate();
   const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
+      disabled={boolean('Disabled', false)}
       focused
-      renderPortal
+      hideKeyboardShortcutsPanel={boolean('Hide Keyboard Shortcuts', true)}
+      iconAlignRight={boolean('Align Icon Right', true)}
+      isDayBlocked={(day1) => datesList.some((day2) => isSameDay(day1, day2))}
+      withPortal={boolean('With Portal', false)}
       {...setProps}
     />
   );
 };
 
-portalStory.story = { name: 'portal' };
+withBlockedDaysStory.story = { name: 'with blocked days' };
 
-export const keyBoardShortcutsPanelStory = () => {
+export const anchorRightStory = () => {
+  const StoryContainer = styled.div`padding-left: 10.6rem;`;
   const [date, setDate] = props.useDate();
   const setProps = props.set(date, setDate);
   return (
-    <BaseDatePicker
-      focused
-      hideKeyboardShortcutsPanel={false}
-      {...setProps}
-    />
+    <StoryContainer>
+      <BaseDatePicker
+        anchorLeft={boolean('Anchor Left', false)}
+        focused
+        hideKeyboardShortcutsPanel={boolean('Hide Keyboard Shortcuts', true)}
+        iconAlignRight={boolean('Align Icon Right', true)}
+        withPortal={boolean('With Portal', false)}
+        {...setProps}
+      />
+    </StoryContainer>
   );
 };
 
-keyBoardShortcutsPanelStory.story = { name: 'with keyboard shortcuts panel' };
-
-export const anchorLeftStory = () => {
-  const [date, setDate] = props.useDate();
-  const setProps = props.set(date, setDate);
-  return (
-    <BaseDatePicker
-      anchorLeft={boolean('Anchor Left', true)}
-      focused
-      {...setProps}
-    />
-  );
-};
-
-anchorLeftStory.story = { decorators: [centered], name: 'anchor left' };
+anchorRightStory.story = { name: 'anchor right' };
 
 export const openUpStory = () => {
+  const StoryContainer = styled.div`padding-top: 32.6rem;`;
   const [date, setDate] = props.useDate();
   const setProps = props.set(date, setDate);
   return (
-    <BaseDatePicker
-      focused
-      openUp={boolean('Open Up', true)}
-      {...setProps}
-    />
+    <StoryContainer>
+      <BaseDatePicker
+        focused
+        hideKeyboardShortcutsPanel={boolean('Hide Keyboard Shortcuts', true)}
+        iconAlignRight={boolean('Align Icon Right', true)}
+        openUp={boolean('Open Up', true)}
+        withPortal={boolean('With Portal', false)}
+        {...setProps}
+      />
+    </StoryContainer>
   );
 };
 
-openUpStory.story = { decorators: [centered], name: 'open up' };
-
-export const alignLeftStory = () => {
-  const [date, setDate] = props.useDate();
-  const setProps = props.set(date, setDate);
-  return (
-    <BaseDatePicker
-      iconAlignRight={boolean('Align Left', false)}
-      {...setProps}
-    />
-  );
-};
-
-alignLeftStory.story = { name: 'icon align left' };
+openUpStory.story = { name: 'open up' };

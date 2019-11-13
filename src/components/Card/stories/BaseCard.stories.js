@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   boolean,
+  color,
   select,
   text,
   withKnobs,
@@ -11,26 +12,7 @@ import BaseCardDocs from '../docs/BaseCard.docs.mdx';
 
 import BaseCard from '../BaseCard';
 import { StyledH1 } from '../styles/BaseCard.styles';
-import {
-  msBrightPurple,
-  msDarkGrey,
-  msMainGreen,
-  muiBlue,
-  ssDarkBlue,
-  ssMainBlue,
-  ssYellow,
-} from '../../../utils/defaultStyleHelper';
-
-const colorOptions = {
-  msBrightPurple,
-  msDarkGrey,
-  msMainGreen,
-  muiBlue,
-  ssDarkBlue,
-  ssMainBlue,
-  ssYellow,
-};
-const colorDefault = msBrightPurple;
+import { msBrightPurple } from '../../../utils/defaultStyleHelper';
 
 const textPaddingOptions = {
   '0.5rem 1.5rem': '0.5rem 1.5rem',
@@ -38,7 +20,6 @@ const textPaddingOptions = {
   '2rem 3rem': '2rem 3rem',
   '3rem 4rem': '3rem 4rem',
 };
-const textPaddingDefault = '1rem 2rem';
 
 const imagePaddingOptions = {
   '0.5rem': '0.5rem',
@@ -46,7 +27,6 @@ const imagePaddingOptions = {
   '2rem': '2rem',
   '3rem': '3rem',
 };
-const imagePaddingDefault = '2rem';
 
 const imageContainerStyles = {
   alignItems: 'center',
@@ -65,7 +45,7 @@ export const defaultStory = () => {
   const hasColor = boolean('Has Color', true);
   return (
     <BaseCard
-      color={hasColor ? select('Color', colorOptions, colorDefault) : null}
+      color={hasColor ? color('Color', msBrightPurple) : null}
       id="base-card"
     >
       <div
@@ -73,7 +53,7 @@ export const defaultStory = () => {
           padding: select(
             'Card Content Padding',
             textPaddingOptions,
-            textPaddingDefault
+            '1rem 2rem'
           ),
         }}
       >
@@ -89,14 +69,14 @@ export const headingStory = () => {
   const hasColor = boolean('Has Color', true);
   return (
     <BaseCard
-      color={hasColor ? select('Color', colorOptions, colorDefault) : null}
+      color={hasColor ? color('Color', msBrightPurple) : null}
     >
       <div
         style={{
           padding: select(
             'Card Content Padding',
             textPaddingOptions,
-            textPaddingDefault
+            '1rem 2rem'
           ),
         }}
       >
@@ -112,14 +92,14 @@ export const imageStory = () => {
   const hasColor = boolean('Has Color', true);
   return (
     <BaseCard
-      color={hasColor ? select('Color', colorOptions, colorDefault) : null}
+      color={hasColor ? color('Color', msBrightPurple) : null}
     >
       <div
         style={{
           padding: select(
             'Card Content Padding',
             imagePaddingOptions,
-            imagePaddingDefault
+            '2rem',
           ),
         }}
       >

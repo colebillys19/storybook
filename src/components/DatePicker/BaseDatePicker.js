@@ -12,7 +12,7 @@ import {
 } from 'react-dates/constants';
 
 import { StyledWrapper } from './styles/BaseDatePicker.styles';
-import ErrorLabel from './ErrorLabel';
+import ErrorLabel from './sub-components/ErrorLabel';
 
 const BaseDatePicker = ({
   anchorLeft,
@@ -21,25 +21,26 @@ const BaseDatePicker = ({
   date,
   daySize,
   disabled,
-  disableDayFunction,
   dispatchFunction,
   display,
   error,
+  hideKeyboardShortcutsPanel,
   Icon,
   iconAlignRight,
   id,
+  isDayBlocked,
   numberOfMonths,
   onChange,
   openUp,
   placeholder,
-  renderPortal,
   styleProps,
+  withPortal,
   ...restProps
 }) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const inputIconPosition = iconAlignRight ? ICON_AFTER_POSITION : ICON_BEFORE_POSITION;
-  const anchorDirection = anchorLeft ? ANCHOR_RIGHT : ANCHOR_LEFT;
+  const anchorDirection = anchorLeft ? ANCHOR_LEFT : ANCHOR_RIGHT;
   const openDirection = openUp ? OPEN_UP : OPEN_DOWN;
   return (
     <StyledWrapper className={className} color={color} {...styleProps}>
@@ -51,17 +52,17 @@ const BaseDatePicker = ({
         daySize={daySize}
         disabled={disabled}
         focused={isFocused}
-        hideKeyboardShortcutsPanel
+        hideKeyboardShortcutsPanel={hideKeyboardShortcutsPanel}
         id={id}
         inputIconPosition={inputIconPosition}
-        isDayBlocked={disableDayFunction}
+        isDayBlocked={isDayBlocked}
         numberOfMonths={numberOfMonths}
         onDateChange={(selectedDate) => onChange(selectedDate)}
         onFocusChange={({ focused }) => setIsFocused(focused)}
         openDirection={openDirection}
         placeholder={placeholder}
         showDefaultInputIcon={!Icon}
-        withPortal={renderPortal}
+        withPortal={withPortal}
         {...restProps}
       />
     </StyledWrapper>
@@ -69,6 +70,10 @@ const BaseDatePicker = ({
 };
 
 BaseDatePicker.propTypes = {
+  /**
+   * If true, the calendar's left border will align with the input's left border.
+   */
+  anchorLeft: T.bool,
   /**
    * Moment object or null.
    */
@@ -81,12 +86,18 @@ BaseDatePicker.propTypes = {
    * If true, the input will be disabled.
    */
   disabled: T.bool,
-  disableDayFunction: T.func,
+  /**
+   * 
+   */
   dispatchFunction: T.func,
   /**
    * Error label text.
    */
   error: T.oneOfType([T.bool, T.string]),
+  /**
+   * If true, keyboard shortcuts button will be hidden from corner of calendar.
+   */
+  hideKeyboardShortcutsPanel: T.bool,
   /**
    * If provided, will render icon.
    */
@@ -100,6 +111,11 @@ BaseDatePicker.propTypes = {
    */
   id: T.string.isRequired,
   /**
+   * A callback function that takes a moment date and expects a boolean in return,
+   * true meaning that the day is blocked and false meaning the opposite.
+   */
+  isDayBlocked: T.func,
+  /**
    * Number of months to render on focus.
    */
   numberOfMonths: T.number,
@@ -111,16 +127,21 @@ BaseDatePicker.propTypes = {
    * Placeholder label.
    */
   placeholder: T.string,
-  renderPortal: T.bool,
   /**
    * Styles to pass to wrapper.
    */
   styleProps: T.object,
+  /**
+   * If true, calendar will open independently as a modal.
+   */
+  withPortal: T.bool,
 };
 
 BaseDatePicker.defaultProps = {
+  anchorLeft: true,
   daySize: 40,
   disabled: false,
+  hideKeyboardShortcutsPanel: true,
   iconAlignRight: true,
   numberOfMonths: 1,
   placeholder: 'SELECT A DATE',
