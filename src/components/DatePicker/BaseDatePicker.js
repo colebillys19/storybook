@@ -69,7 +69,7 @@ const BaseDatePicker = ({
 
 BaseDatePicker.propTypes = {
   /**
-   * Moment object.
+   * Moment object or null.
    */
   date: T.string,
   /**

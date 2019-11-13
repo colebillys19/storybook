@@ -41,7 +41,7 @@ const numberOfMonthsOptions = {
   3: 3,
   4: 4,
 };
-const defaultNumberofMonths = 1;
+const defaultNumberOfMonths = 1;
 
 const daySizeOptions = {
   small: 30,
@@ -58,7 +58,7 @@ const props = {
     date,
     daySize: select('Calendar Size', daySizeOptions, daySizeDefault),
     id: 'date-picker',
-    numberOfMonths: select('Number of Months', numberOfMonthsOptions, defaultNumberofMonths),
+    numberOfMonths: select('Number of Months', numberOfMonthsOptions, defaultNumberOfMonths),
     onChange: setDate,
     placeholder: text('Placeholder Text', defaultDatePlaceholder),
   }),
@@ -112,13 +112,18 @@ export const disabledStory = () => {
 
 disabledStory.story = { name: 'disabled' };
 
-export const errorStory = () => (
-  <div style={{ marginTop: 30 }}>
-    <BaseDatePicker
-      error={text('Error', 'Error Text')}
-    />
-  </div>
-);
+export const errorStory = () => {
+  const [date, setDate] = props.useDate(new Date());
+  const setProps = props.set(date, setDate);
+  return (
+    <div style={{ marginTop: 30 }}>
+      <BaseDatePicker
+        error={text('Error', 'Error Text')}
+        {...setProps}
+      />
+    </div>
+  );
+};
 
 errorStory.story = { name: 'error' };
 
