@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import T from 'prop-types';
-import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 import {
   ANCHOR_LEFT,
@@ -10,41 +9,40 @@ import {
   OPEN_DOWN,
   OPEN_UP,
 } from 'react-dates/constants';
+
 import { StyledWrapper } from './styles/BaseDatePicker.styles';
+import ErrorLabel from './ErrorLabel';
 
 const BaseDatePicker = ({
   anchorLeft,
   className,
   color,
+  date,
   daySize,
   disabled,
   disableDayFunction,
   dispatchFunction,
   display,
+  error,
   Icon,
   iconAlignRight,
   id,
-  initialDate,
   numberOfMonths,
+  onChange,
   openUp,
   placeholder,
   renderPortal,
+  styleProps,
   ...restProps
 }) => {
-  const [date, setDate] = useState(initialDate ? moment(initialDate) : null);
   const [isFocused, setIsFocused] = useState(false);
 
-  useEffect(() => {
-    if (dispatchFunction) {
-      const dateString = date ? date.string() : null;
-      dispatchFunction(dateString);
-    }
-  }, [date]);
   const inputIconPosition = iconAlignRight ? ICON_AFTER_POSITION : ICON_BEFORE_POSITION;
   const anchorDirection = anchorLeft ? ANCHOR_RIGHT : ANCHOR_LEFT;
   const openDirection = openUp ? OPEN_UP : OPEN_DOWN;
   return (
-    <StyledWrapper className={className} color={color}>
+    <StyledWrapper className={className} color={color} {...styleProps}>
+      { error && <ErrorLabel error={error} /> }
       <SingleDatePicker
         anchorDirection={anchorDirection}
         customInputIcon={Icon}
@@ -57,7 +55,7 @@ const BaseDatePicker = ({
         inputIconPosition={inputIconPosition}
         isDayBlocked={disableDayFunction}
         numberOfMonths={numberOfMonths}
-        onDateChange={(selectedDate) => setDate(selectedDate)}
+        onDateChange={(selectedDate) => onChange(selectedDate)}
         onFocusChange={({ focused }) => setIsFocused(focused)}
         openDirection={openDirection}
         placeholder={placeholder}
@@ -70,17 +68,53 @@ const BaseDatePicker = ({
 };
 
 BaseDatePicker.propTypes = {
+  /**
+   * Moment object.
+   */
+  date: T.string,
+  /**
+   * Size of the date picker.
+   */
   daySize: T.number,
+  /**
+   * If true, the input will be disabled.
+   */
   disabled: T.bool,
   disableDayFunction: T.func,
   dispatchFunction: T.func,
+  /**
+   * Error label text.
+   */
+  error: T.oneOfType(T.bool, T.string),
+  /**
+   * If provided, will render icon.
+   */
   Icon: T.node,
+  /**
+   * Aligns the icon to the right of the input.
+   */
   iconAlignRight: T.bool,
+  /**
+   * Id passed as the name attribute to the input.
+   */
   id: T.string.isRequired,
-  initialDate: T.string,
+  /**
+   * Number of months to render on focus.
+   */
   numberOfMonths: T.number,
+  /**
+   * Function to run on date change.
+   */
+  onChange: T.func.isRequired,
+  /**
+   * Placeholder label.
+   */
   placeholder: T.string,
   renderPortal: T.bool,
+  /**
+   * Styles to pass to wrapper.
+   */
+  styleProps: T.object,
 };
 
 BaseDatePicker.defaultProps = {

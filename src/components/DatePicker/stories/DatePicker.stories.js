@@ -1,5 +1,7 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import moment from 'moment';
+import useState from 'storybook-addon-state';
 import centered from '@storybook/addon-centered/react';
 import {
   boolean,
@@ -19,8 +21,6 @@ import {
   ssMainBlue,
   ssYellow,
 } from '../../../utils/defaultStyleHelper';
-
-const initialDate = new Date();
 
 const defaultDatePlaceholder = 'SELECT A DATE';
 
@@ -53,13 +53,20 @@ const daySizeOptions = {
 const daySizeDefault = 40;
 
 const props = {
-  set: () => ({
+  set: (date, setDate) => ({
     color: select('Color', colorOptions, defaultColor),
+    date,
     daySize: select('Calendar Size', daySizeOptions, daySizeDefault),
     id: 'date-picker',
     numberOfMonths: select('Number of Months', numberOfMonthsOptions, defaultNumberofMonths),
+    onChange: setDate,
     placeholder: text('Placeholder Text', defaultDatePlaceholder),
   }),
+  useDate: (initialDate) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [date, setDate] = useState('date', initialDate ? moment(initialDate) : null);
+    return [date, setDate];
+  },
 };
 
 export default {
@@ -69,7 +76,8 @@ export default {
 };
 
 export const defaultStory = () => {
-  const setProps = props.set();
+  const [date, setDate] = props.useDate();
+  const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
       {...setProps}
@@ -80,10 +88,10 @@ export const defaultStory = () => {
 defaultStory.story = { name: 'default' };
 
 export const initialDateStory = () => {
-  const setProps = props.set();
+  const [date, setDate] = props.useDate(new Date());
+  const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
-      initialDate={initialDate}
       {...setProps}
     />
   );
@@ -92,7 +100,8 @@ export const initialDateStory = () => {
 initialDateStory.story = { name: 'with intial date' };
 
 export const disabledStory = () => {
-  const setProps = props.set();
+  const [date, setDate] = props.useDate();
+  const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
       disabled
@@ -103,8 +112,17 @@ export const disabledStory = () => {
 
 disabledStory.story = { name: 'disabled' };
 
+export const errorStory = () => (
+  <BaseDatePicker
+    error={text('Error', 'Error Text')}
+  />
+);
+
+errorStory.story = { decorators: [centered], name: 'error' };
+
 export const focusedStory = () => {
-  const setProps = props.set();
+  const [date, setDate] = props.useDate();
+  const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
       focused
@@ -115,9 +133,9 @@ export const focusedStory = () => {
 
 focusedStory.story = { name: 'focused' };
 
-
 export const portalStory = () => {
-  const setProps = props.set();
+  const [date, setDate] = props.useDate();
+  const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
       renderPortal
@@ -129,7 +147,8 @@ export const portalStory = () => {
 portalStory.story = { name: 'portal' };
 
 export const keyBoardShortcutsPanelStory = () => {
-  const setProps = props.set();
+  const [date, setDate] = props.useDate();
+  const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
       hideKeyboardShortcutsPanel={false}
@@ -141,7 +160,8 @@ export const keyBoardShortcutsPanelStory = () => {
 keyBoardShortcutsPanelStory.story = { name: 'with keyboard shortcuts panel' };
 
 export const anchorLeftStory = () => {
-  const setProps = props.set();
+  const [date, setDate] = props.useDate();
+  const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
       anchorLeft={boolean('Anchor Left', true)}
@@ -154,7 +174,8 @@ export const anchorLeftStory = () => {
 anchorLeftStory.story = { decorators: [centered], name: 'anchor left' };
 
 export const openUpStory = () => {
-  const setProps = props.set();
+  const [date, setDate] = props.useDate();
+  const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
       focused
@@ -165,3 +186,16 @@ export const openUpStory = () => {
 };
 
 openUpStory.story = { decorators: [centered], name: 'open up' };
+
+export const alignLeftStory = () => {
+  const [date, setDate] = props.useDate();
+  const setProps = props.set(date, setDate);
+  return (
+    <BaseDatePicker
+      iconAlignRight={boolean('Align Left', false)}
+      {...setProps}
+    />
+  );
+};
+
+alignLeftStory.story = { name: 'align left' };

@@ -19,11 +19,13 @@ import BaseDatePicker from '../BaseDatePicker';
 afterEach(cleanup);
 
 describe('<BaseDatePicker />', () => {
-  const initialDate = new Date().toString();
+  const initialDate = moment(new Date());
+  const handleChange = jest.fn();
   const component = (
     <BaseDatePicker
+      date={initialDate}
       id="test-date-picker"
-      initialDate={initialDate}
+      onChange={handleChange}
     />
   );
 
