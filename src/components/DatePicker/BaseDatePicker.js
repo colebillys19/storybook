@@ -72,7 +72,7 @@ BaseDatePicker.propTypes = {
   /**
    * Moment object or null.
    */
-  date: T.oneOfType([momentPropTypes.momentObj, null, T.string]),
+  date: T.oneOfType([momentPropTypes.momentObj, T.instanceOf(null), T.string]),
   /**
    * Size of the date picker.
    */
