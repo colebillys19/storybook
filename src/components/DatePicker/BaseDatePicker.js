@@ -87,7 +87,7 @@ BaseDatePicker.propTypes = {
    */
   disabled: T.bool,
   /**
-   * 
+   * ...
    */
   dispatchFunction: T.func,
   /**

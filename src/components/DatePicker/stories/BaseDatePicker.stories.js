@@ -142,7 +142,7 @@ export const withBlockedDaysStory = () => {
       focused
       hideKeyboardShortcutsPanel={boolean('Hide Keyboard Shortcuts', true)}
       iconAlignRight={boolean('Align Icon Right', true)}
-      isDayBlocked={(day1) => datesList.some((day2) => isSameDay(day1, day2))}
+      isDayBlocked={(day1) => datesList.some((day) => isSameDay(day1, day))}
       withPortal={boolean('With Portal', false)}
       {...setProps}
     />
