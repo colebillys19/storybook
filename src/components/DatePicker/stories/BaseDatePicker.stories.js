@@ -100,7 +100,7 @@ export const initialDateStory = () => {
 initialDateStory.story = { name: 'with intial date' };
 
 export const disabledStory = () => {
-  const [date, setDate] = props.useDate();
+  const [date, setDate] = props.useDate(new Date());
   const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
@@ -113,12 +113,14 @@ export const disabledStory = () => {
 disabledStory.story = { name: 'disabled' };
 
 export const errorStory = () => (
-  <BaseDatePicker
-    error={text('Error', 'Error Text')}
-  />
+  <div style={{ marginTop: 30 }}>
+    <BaseDatePicker
+      error={text('Error', 'Error Text')}
+    />
+  </div>
 );
 
-errorStory.story = { decorators: [centered], name: 'error' };
+errorStory.story = { name: 'error' };
 
 export const focusedStory = () => {
   const [date, setDate] = props.useDate();
@@ -138,6 +140,7 @@ export const portalStory = () => {
   const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
+      focused
       renderPortal
       {...setProps}
     />
@@ -151,6 +154,7 @@ export const keyBoardShortcutsPanelStory = () => {
   const setProps = props.set(date, setDate);
   return (
     <BaseDatePicker
+      focused
       hideKeyboardShortcutsPanel={false}
       {...setProps}
     />
@@ -198,4 +202,4 @@ export const alignLeftStory = () => {
   );
 };
 
-alignLeftStory.story = { name: 'align left' };
+alignLeftStory.story = { name: 'icon align left' };
