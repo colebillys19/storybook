@@ -12,7 +12,7 @@ import {
 } from 'react-dates/constants';
 
 import { StyledWrapper } from './styles/BaseDatePicker.styles';
-import ErrorLabel from './ErrorLabel';
+import ErrorLabel from './sub-components/ErrorLabel';
 
 const BaseDatePicker = ({
   anchorLeft,
