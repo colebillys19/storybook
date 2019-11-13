@@ -29,7 +29,7 @@ describe('<BaseDatePicker />', () => {
     />
   );
 
-  it('renders a single date picker', async () => {
+  it('renders a single date picker', () => {
     const { container } = render(component);
     const datePickerInput = container.querySelector('input[name="test-date-picker"]');
     expect(container.querySelector('div.SingleDatePicker_picker')).not.toBeInTheDocument();
