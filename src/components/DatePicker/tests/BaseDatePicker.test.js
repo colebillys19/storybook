@@ -44,6 +44,7 @@ describe('<BaseDatePicker />', () => {
     const tomorrow = moment(today).add(1, 'd').format('L');
     expect(datePickerInput.value).toBe(today);
     fireEvent.change(datePickerInput, { target: { value: tomorrow } });
+    expect(handleChange).toBeCalledTimes(1);
     expect(datePickerInput.value).toBe(tomorrow);
   });
 
