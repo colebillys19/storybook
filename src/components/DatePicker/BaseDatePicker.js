@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import T from 'prop-types';
+import momentPropTypes from 'react-moment-proptypes';
 import { SingleDatePicker } from 'react-dates';
 import {
   ANCHOR_LEFT,
@@ -71,7 +72,7 @@ BaseDatePicker.propTypes = {
   /**
    * Moment object or null.
    */
-  date: T.string,
+  date: T.oneOfType([momentPropTypes.momentObj, null, T.string]),
   /**
    * Size of the date picker.
    */
