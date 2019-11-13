@@ -54,7 +54,7 @@ FlatIconButton.propTypes = {
   /**
    * String to be displayed within the tooltip.
    */
-  tooltipText: T.string.isRequired,
+  tooltipText: T.string,
 };
 
 FlatIconButton.defaultProps = {
