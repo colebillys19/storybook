@@ -1,5 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
+// Needed to add classes to all DatePicker components
+// https://github.com/airbnb/react-dates#initialize
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
+
 const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
