@@ -86,7 +86,7 @@ BaseDatePicker.propTypes = {
   /**
    * Error label text.
    */
-  error: T.oneOfType(T.bool, T.string),
+  error: T.oneOfType([T.bool, T.string]),
   /**
    * If provided, will render icon.
    */
