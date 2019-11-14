@@ -14,6 +14,7 @@ import {
 import { StyledWrapper } from './styles/BaseDatePicker.styles';
 import ErrorLabel from './sub-components/ErrorLabel';
 import iconDictionary from '../../utils/iconDictionary';
+import { msBrightPurple } from '../../utils/defaultStyleHelper';
 
 const BaseDatePicker = ({
   anchorLeft,
@@ -25,7 +26,6 @@ const BaseDatePicker = ({
   display,
   error,
   hideKeyboardShortcutsPanel,
-  Icon,
   iconAlignRight,
   id,
   isDayBlocked,
@@ -47,7 +47,6 @@ const BaseDatePicker = ({
       { error && <ErrorLabel error={error} /> }
       <SingleDatePicker
         anchorDirection={anchorDirection}
-        // customInputIcon={Icon}
         customInputIcon={iconDictionary('calendar', 'mediumSmall')}
         date={date}
         daySize={daySize}
@@ -64,7 +63,6 @@ const BaseDatePicker = ({
         onFocusChange={({ focused }) => setIsFocused(focused)}
         openDirection={openDirection}
         placeholder={placeholder}
-        showDefaultInputIcon={!Icon}
         withPortal={withPortal}
         {...restProps}
       />
@@ -78,11 +76,17 @@ BaseDatePicker.propTypes = {
    */
   anchorLeft: T.bool,
   /**
+   * Color of the main picker elements.
+   * Note that this prop will not affect colors in the portal calendar,
+   * adjust those style's manually in globalStyle.
+   */
+  color: T.string,
+  /**
    * Moment object or null.
    */
   date: T.oneOfType([momentPropTypes.momentObj, T.instanceOf(null)]),
   /**
-   * Size of the date picker.
+   * The size of the individual days in the calendar in pixels.
    */
   daySize: T.number,
   /**
@@ -97,10 +101,6 @@ BaseDatePicker.propTypes = {
    * If true, keyboard shortcuts button will be hidden from corner of calendar.
    */
   hideKeyboardShortcutsPanel: T.bool,
-  /**
-   * If provided, will render icon.
-   */
-  Icon: T.node,
   /**
    * Aligns the icon to the right of the input.
    */
@@ -138,6 +138,7 @@ BaseDatePicker.propTypes = {
 
 BaseDatePicker.defaultProps = {
   anchorLeft: true,
+  color: msBrightPurple,
   daySize: 40,
   disabled: false,
   hideKeyboardShortcutsPanel: true,

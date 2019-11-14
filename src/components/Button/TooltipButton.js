@@ -14,6 +14,7 @@ const TooltipButton = (props) => {
   return (
     <StyledTooltip
       enterDelay={enterDelay}
+      open
       placement={placement}
       title={tooltipText}
     >

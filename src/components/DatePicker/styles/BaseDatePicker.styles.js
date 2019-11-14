@@ -23,23 +23,4 @@ export const StyledWrapper = styled.div`
     top: 0.2rem;
     width: 1.8rem;
   }
-  & .DayPickerNavigation_button:first-of-type {
-    display: inline-block;
-    left: 2.5rem;
-    position: absolute;
-    top: 1.8rem;
-  }
-  & .DayPickerNavigation_button:last-of-type {
-    display: inline-block;
-    position: absolute;
-    right: 2.5rem;
-    top: 1.8rem;
-  }
-  & .CalendarMonth_caption {
-    color: ${({ color }) => color || msBrightPurple};
-  }
-  & .CalendarDay__selected {
-    background-color: ${({ color }) => color || msBrightPurple};
-    border: none;
-  }
 `;
