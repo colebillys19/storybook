@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import ArrowDropDown from '@material-ui/icons/ArrowDropDown';
 import AttachMoney from '@material-ui/icons/AttachMoney';
+import CalendarToday from '@material-ui/icons/CalendarToday';
 import Cancel from '@material-ui/icons/Cancel';
 import CheckCircleOutline from '@material-ui/icons/CheckCircleOutline';
 import ChevronLeft from '@material-ui/icons/ChevronLeft';
@@ -37,6 +38,7 @@ export default (name, size, style, options) => {
     arrowDown: ArrowDropDown,
     arrowLeft: ChevronLeft,
     arrowRight: ChevronRight,
+    calendar: CalendarToday,
     cancel: Cancel,
     close: Close,
     dollar: AttachMoney,
