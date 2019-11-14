@@ -13,6 +13,7 @@ import {
 
 import { StyledWrapper } from './styles/BaseDatePicker.styles';
 import ErrorLabel from './sub-components/ErrorLabel';
+import iconDictionary from '../../utils/iconDictionary';
 
 const BaseDatePicker = ({
   anchorLeft,
@@ -21,7 +22,6 @@ const BaseDatePicker = ({
   date,
   daySize,
   disabled,
-  dispatchFunction,
   display,
   error,
   hideKeyboardShortcutsPanel,
@@ -47,7 +47,8 @@ const BaseDatePicker = ({
       { error && <ErrorLabel error={error} /> }
       <SingleDatePicker
         anchorDirection={anchorDirection}
-        customInputIcon={Icon}
+        // customInputIcon={Icon}
+        customInputIcon={iconDictionary('calendar', 'mediumSmall')}
         date={date}
         daySize={daySize}
         disabled={disabled}
@@ -56,6 +57,8 @@ const BaseDatePicker = ({
         id={id}
         inputIconPosition={inputIconPosition}
         isDayBlocked={isDayBlocked}
+        navNext={iconDictionary('arrowRight', 'medium')}
+        navPrev={iconDictionary('arrowLeft', 'medium')}
         numberOfMonths={numberOfMonths}
         onDateChange={(selectedDate) => onChange(selectedDate)}
         onFocusChange={({ focused }) => setIsFocused(focused)}
@@ -87,10 +90,6 @@ BaseDatePicker.propTypes = {
    */
   disabled: T.bool,
   /**
-   * ...
-   */
-  dispatchFunction: T.func,
-  /**
    * Error label text.
    */
   error: T.oneOfType([T.bool, T.string]),
@@ -111,8 +110,8 @@ BaseDatePicker.propTypes = {
    */
   id: T.string.isRequired,
   /**
-   * A callback function that takes a moment date and expects a boolean in return,
-   * true meaning that the day is blocked and false meaning the opposite.
+   * This function will be passed a moment object for each date on the displayed calendar.
+   * If the function returns true, that date will be blocked.
    */
   isDayBlocked: T.func,
   /**

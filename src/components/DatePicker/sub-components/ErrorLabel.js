@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { DatePickerErrorLabel } from '../styles/BaseDatePicker.styles';
+import { DatePickerErrorLabel } from './ErrorLabel.styles';
 
 const ErrorLabel = ({ error, restProps }) => (
   <DatePickerErrorLabel {...restProps}>

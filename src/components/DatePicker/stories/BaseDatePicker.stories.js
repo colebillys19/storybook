@@ -87,10 +87,11 @@ export const withInitialDateStory = () => {
 withInitialDateStory.story = { name: 'with intial date' };
 
 export const withErrorStory = () => {
+  const StoryContainer = styled.div` padding-top: 2.1rem; `;
   const [date, setDate] = props.useDate();
   const setProps = props.set(date, setDate);
   return (
-    <div style={{ marginTop: 30 }}>
+    <StoryContainer>
       <BaseDatePicker
         disabled={boolean('Disabled', false)}
         error={text('Error Text', 'error text')}
@@ -99,7 +100,7 @@ export const withErrorStory = () => {
         withPortal={boolean('With Portal', false)}
         {...setProps}
       />
-    </div>
+    </StoryContainer>
   );
 };
 
@@ -128,12 +129,9 @@ export const withBlockedDaysStory = () => {
     moment().add(5, 'days'),
     moment().add(7, 'days'),
   ];
-  const isSameDay = (a, b) => {
-    if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
-    return a.date() === b.date()
-      && a.month() === b.month()
-      && a.year() === b.year();
-  };
+  const checkBlocked = (dayA) => (
+    datesList.some((dayB) => dayA.format('YMD') === dayB.format('YMD'))
+  );
   const [date, setDate] = props.useDate();
   const setProps = props.set(date, setDate);
   return (
@@ -142,7 +140,7 @@ export const withBlockedDaysStory = () => {
       focused
       hideKeyboardShortcutsPanel={boolean('Hide Keyboard Shortcuts', true)}
       iconAlignRight={boolean('Align Icon Right', true)}
-      isDayBlocked={(day1) => datesList.some((day) => isSameDay(day1, day))}
+      isDayBlocked={checkBlocked}
       withPortal={boolean('With Portal', false)}
       {...setProps}
     />
@@ -152,7 +150,7 @@ export const withBlockedDaysStory = () => {
 withBlockedDaysStory.story = { name: 'with blocked days' };
 
 export const anchorRightStory = () => {
-  const StoryContainer = styled.div`padding-left: 10.6rem;`;
+  const StoryContainer = styled.div` padding-left: 14.4rem; `;
   const [date, setDate] = props.useDate();
   const setProps = props.set(date, setDate);
   return (
@@ -172,7 +170,7 @@ export const anchorRightStory = () => {
 anchorRightStory.story = { name: 'anchor right' };
 
 export const openUpStory = () => {
-  const StoryContainer = styled.div`padding-top: 32.6rem;`;
+  const StoryContainer = styled.div` padding-top: 32.7rem; `;
   const [date, setDate] = props.useDate();
   const setProps = props.set(date, setDate);
   return (
