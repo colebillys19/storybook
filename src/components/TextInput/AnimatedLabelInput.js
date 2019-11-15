@@ -1,20 +1,26 @@
 import React from 'react';
 import T from 'prop-types';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import { StyledInput } from './styles/BaseTextInput.styles';
+import { StyledTextField } from './styles/AnimatedLabelInput.styles';
 
-const BaseTextInput = ({ color, Icon, ...props }) => {
+const AnimatedLabelInput = ({ Icon, ...props }) => {
   const startAdornment = Icon ? (
     <InputAdornment position="start">
       <Icon />
     </InputAdornment>
   ) : null;
   return (
-    <StyledInput color={color} InputProps={{ startAdornment }} {...props} />
+    <StyledTextField
+      animated
+      InputProps={{ startAdornment }}
+      margin="none"
+      variant="outlined"
+      {...props}
+    />
   );
 };
 
-BaseTextInput.propTypes = {
+AnimatedLabelInput.propTypes = {
   autoComplete: T.string,
   autoFocus: T.bool,
   classes: T.object,
@@ -43,7 +49,7 @@ BaseTextInput.propTypes = {
   value: T.any,
 };
 
-BaseTextInput.defaultProps = {
+AnimatedLabelInput.defaultProps = {
   autoComplete: false,
   autoFocus: false,
   disabled: false,
@@ -54,7 +60,7 @@ BaseTextInput.defaultProps = {
   required: false,
 };
 
-export default BaseTextInput;
+export default AnimatedLabelInput;
 
 /*
 
@@ -67,40 +73,5 @@ The underlying DOM nodes should have this structure.
   <input id="my-input" aria-describedby="my-helper-text" />
   <span id="my-helper-text">We'll never share your email.</span>
 </div>
-
-const BootstrapInput = withStyles(theme => ({
-  root: {
-    'label + &': {
-      marginTop: theme.spacing(3),
-    },
-  },
-  input: {
-    borderRadius: 4,
-    position: 'relative',
-    backgroundColor: theme.palette.common.white,
-    border: '1px solid #ced4da',
-    fontSize: 16,
-    width: 'auto',
-    padding: '10px 12px',
-    transition: theme.transitions.create(['border-color', 'box-shadow']),
-    // Use the system font instead of the default Roboto font.
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-    '&:focus': {
-      boxShadow: `${fade(theme.palette.primary.main, 0.25)} 0 0 0 0.2rem`,
-      borderColor: theme.palette.primary.main,
-    },
-  },
-}))(InputBase);
 
 */

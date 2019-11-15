@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import BaseTextInput from '../BaseTextInput';
 import BaseTextInputDocs from '../docs/BaseTextInput.docs.mdx';
@@ -9,13 +8,6 @@ export default {
   title: 'Inputs|BaseTextInput',
 };
 
-export const defaultStory = () => {
-  const StoryWrapper = styled.div` padding-top: 0.7rem `;
-  return (
-    <StoryWrapper>
-      <BaseTextInput label="label text" />
-    </StoryWrapper>
-  );
-};
+export const defaultStory = () => <BaseTextInput label="label text" />;
 
 defaultStory.story = { name: 'default' };
