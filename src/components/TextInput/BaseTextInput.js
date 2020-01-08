@@ -53,8 +53,8 @@ BaseTextInput.propTypes = {
     * component.
     */
   inputComponent: T.elementType,
-  /** Attributes applied to the input element. Ensure the 'aria-describedby' string matches the
-    * helper text element's 'id' attribute.
+  /** Attributes applied to the input element. Ensure the 'aria-describedby' string (required)
+    * matches the helper text element's 'id' attribute.
     */
   inputProps: T.shape({ 'aria-describedby': T.string.isRequired }),
   /** Pass a ref to the input element. */
