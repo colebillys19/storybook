@@ -2,16 +2,18 @@ import { Props } from '@storybook/addon-docs/blocks';
 
 import BaseTextInput from '../BaseTextInput';
 
-<div style={{ position: 'relative', bottom: '20px' }}>
+<div>
 
   ## BaseTextInput
 
-  ...
+  <h3 style={{ position: 'relative', top: '20px' }}>Props</h3>
 
-  ### Props
-
-  <div style={{ position: 'relative', bottom: '20px' }}>
+  <div style={{ marginBottom: '-14px' }}>
     <Props of={BaseTextInput} />
   </div>
 
+  <h3 style={{ position: 'relative', top: '3px' }}>Notes</h3>
+
+  To ensure accessibility, make use of both a label and a helper text element when using BaseTextInput.
+  
 </div>
