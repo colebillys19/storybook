@@ -3,14 +3,20 @@ import T from 'prop-types';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { StyledInput } from './styles/BaseTextInput.styles';
 
-const BaseTextInput = ({ color, Icon, ...props }) => {
+const BaseTextInput = ({
+  Icon,
+  ...props
+}) => {
   const startAdornment = Icon ? (
     <InputAdornment position="start">
       <Icon />
     </InputAdornment>
   ) : null;
   return (
-    <StyledInput color={color} InputProps={{ startAdornment }} {...props} />
+    <StyledInput
+      startAdornment={startAdornment}
+      {...props}
+    />
   );
 };
 
@@ -40,7 +46,7 @@ BaseTextInput.propTypes = {
     */
   FormHelperTextProps: T.object,
   /** If true, the input will take up the full width of its container. */
-  fullwidth: T.bool,
+  fullWidth: T.bool,
   /** The id of the input element. Ensure the input label's 'for' attribute has a matching value. */
   id: T.string.isRequired,
   /** The component used for the input element. Either a string to use a DOM element or a
@@ -91,7 +97,7 @@ BaseTextInput.defaultProps = {
   autoFocus: false,
   disabled: false,
   error: false,
-  fullwidth: false,
+  fullWidth: false,
   inputComponent: 'input',
   inputProps: {},
   multiline: false,
@@ -101,52 +107,3 @@ BaseTextInput.defaultProps = {
 };
 
 export default BaseTextInput;
-
-/*
-
-In order for the text field to be accessible,
-the input should be linked to the label and the helper text.
-The underlying DOM nodes should have this structure.
-
-<div class="form-control">
-  <label for="my-input">Email address</label>
-  <BaseTextInput id="my-input" aria-describedby="my-helper-text" />
-  <span id="my-helper-text">We'll never share your email.</span>
-</div>
-
-const BootstrapInput = withStyles(theme => ({
-  root: {
-    'label + &': {
-      marginTop: theme.spacing(3),
-    },
-  },
-  input: {
-    borderRadius: 4,
-    position: 'relative',
-    backgroundColor: theme.palette.common.white,
-    border: '1px solid #ced4da',
-    fontSize: 16,
-    width: 'auto',
-    padding: '10px 12px',
-    transition: theme.transitions.create(['border-color', 'box-shadow']),
-    // Use the system font instead of the default Roboto font.
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-    '&:focus': {
-      boxShadow: `${fade(theme.palette.primary.main, 0.25)} 0 0 0 0.2rem`,
-      borderColor: theme.palette.primary.main,
-    },
-  },
-}))(InputBase);
-
-*/

@@ -8,6 +8,11 @@ export default {
   title: 'Inputs|BaseTextInput',
 };
 
-export const defaultStory = () => <BaseTextInput label="label text" />;
+export const defaultStory = () => (
+  <BaseTextInput
+    id="mock-id"
+    inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
+  />
+);
 
 defaultStory.story = { name: 'default' };
