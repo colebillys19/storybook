@@ -16,7 +16,7 @@ export const StyledInput = styled((props) => (
     box-sizing: border-box;
     font-size: 1.4rem;
     min-height: 3.8rem;
-    min-width: 18rem;
+    min-width: 24rem;
     opacity: ${({ disabled }) => disabled ? '0.5' : '1'};
     padding: 1rem 1.2rem;
     ${null/* eslint-disable indent */}
@@ -56,5 +56,5 @@ export const StyledSpan = styled.span`
   display: block;
   margin: 0.4rem 0 0 0.5rem;
   font-size: 1.2rem;
-  color: #888;
+  color: #666;
 `;

@@ -1,0 +1,19 @@
+import { Props } from '@storybook/addon-docs/blocks';
+
+import TextAreaInput from '../TextAreaInput';
+
+<div>
+  <h2>TextAreaInput</h2>
+  <h3 style={{ position: 'relative', top: '20px' }}>Props</h3>
+  <div style={{ marginBottom: '-11px' }}>
+    <Props of={TextAreaInput} />
+  </div>
+  <h3 style={{ marginBottom: '17px' }}>Notes</h3>
+  {/* separate lines w/ <br /> */}
+  To ensure accessibility, make use of both a label and a helper text element when using TextAreaInput.
+  <br />
+  <br />
+  To see options for the 'autoComplete' prop:
+  <br />
+  https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete
+</div>
