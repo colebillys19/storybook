@@ -1,23 +1,15 @@
 import React from 'react';
 import T from 'prop-types';
-import InputAdornment from '@material-ui/core/InputAdornment';
+// import InputAdornment from '@material-ui/core/InputAdornment';
 import { StyledInput } from './styles/BaseTextInput.styles';
 
 const BaseTextInput = ({
   Icon,
+  iconPlacement,
   ...props
-}) => {
-  const startAdornment = Icon ? (
-    <InputAdornment position="start">
-      <Icon />
-    </InputAdornment>
-  ) : null;
-  return (
-    <StyledInput
-      startAdornment={startAdornment}
-      {...props}
-    />
-  );
+}) => { // eslint-disable-line
+  // adornment logic
+  return <StyledInput {...props} />;
 };
 
 BaseTextInput.propTypes = {
@@ -43,6 +35,8 @@ BaseTextInput.propTypes = {
   fullWidth: T.bool,
   /** */
   Icon: T.node,
+  /** */
+  iconPlacement: T.oneOf(['start', 'end']),
   /** The id of the input element. Ensure the input label's 'for' attribute has a matching value. */
   id: T.string.isRequired,
   /** Attributes applied to the input element. Ensure the 'aria-describedby' string matches the
