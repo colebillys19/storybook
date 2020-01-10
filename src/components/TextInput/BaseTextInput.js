@@ -43,10 +43,10 @@ BaseTextInput.propTypes = {
   fullWidth: T.bool,
   /** The id of the input element. Ensure the input label's 'for' attribute has a matching value. */
   id: T.string.isRequired,
-  /** Attributes applied to the input element. Ensure the 'aria-describedby' string (required)
-    * matches the helper text element's 'id' attribute.
+  /** Attributes applied to the input element. Ensure the 'aria-describedby' string matches the
+    * helper text element's 'id' attribute.
     */
-  inputProps: T.shape({ 'aria-describedby': T.string.isRequired }),
+  inputProps: T.object,
   /** Pass a ref to the input element. */
   inputRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
   /** Name attribute of the input element. */

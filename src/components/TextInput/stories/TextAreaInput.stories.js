@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import {
   boolean,
@@ -17,48 +17,64 @@ export default {
   title: 'Inputs|TextAreaInput',
 };
 
-export const defaultStory = () => (
-  <TextAreaInput
-    color={text('Color', msBrightPurple)}
-    defaultValue={text('Default Value', '')}
-    disabled={boolean('Disabled', false)}
-    error={boolean('Error', false)}
-    fullWidth={boolean('Full Width', false)}
-    id="mock-id"
-    inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
-    onBlur={action('onBlur')}
-    onChange={action('onChange')}
-    placeholder={text('Placeholder', '')}
-    readOnly={boolean('Read Only', false)}
-    value={text('Value', '')}
-  />
-);
+export const DefaultStory = () => {
+  const [value, setValue] = useState('');
 
-defaultStory.story = { name: 'default' };
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
 
-export const accessibleStory = () => (
-  <Fragment>
-    <StyledLabel for="base-text-input">
-      {text('Label Text', 'label text')}
-    </StyledLabel>
+  return (
     <TextAreaInput
       color={text('Color', msBrightPurple)}
-      defaultValue={text('Default Value', '')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       fullWidth={boolean('Full Width', false)}
-      id="base-text-input"
-      inputProps={{ 'aria-describedby': 'helper-text' }}
+      id="mock-id"
+      inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
       onBlur={action('onBlur')}
-      onChange={action('onChange')}
+      onChange={handleChange}
       placeholder={text('Placeholder', '')}
       readOnly={boolean('Read Only', false)}
-      value={text('Value', '')}
+      value={value}
     />
-    <StyledSpan id="helper-text">
-      {text('Helper Text', 'helper text')}
-    </StyledSpan>
-  </Fragment>
-);
+  );
+};
 
-accessibleStory.story = { name: 'accessible' };
+DefaultStory.story = { name: 'default' };
+
+export const AccessibleStory = () => {
+  const [value, setValue] = useState('');
+
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
+
+  return (
+    <Fragment>
+      <StyledLabel for="base-text-input">
+        {text('Label Text', 'label text')}
+      </StyledLabel>
+      <TextAreaInput
+        color={text('Color', msBrightPurple)}
+        disabled={boolean('Disabled', false)}
+        error={boolean('Error', false)}
+        fullWidth={boolean('Full Width', false)}
+        id="base-text-input"
+        inputProps={{ 'aria-describedby': 'helper-text' }}
+        onBlur={action('onBlur')}
+        onChange={handleChange}
+        placeholder={text('Placeholder', '')}
+        readOnly={boolean('Read Only', false)}
+        value={value}
+      />
+      <StyledSpan id="helper-text">
+        {text('Helper Text', 'helper text')}
+      </StyledSpan>
+    </Fragment>
+  );
+};
+
+AccessibleStory.story = { name: 'accessible' };
