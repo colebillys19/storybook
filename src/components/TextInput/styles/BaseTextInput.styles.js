@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import InputBase from '@material-ui/core/InputBase';
+import InputAdornment from '@material-ui/core/InputAdornment';
 
 import { msBrightPurple, muiRed } from '../../../utils/defaultStyleHelper';
 
@@ -44,6 +45,28 @@ export const StyledInput = styled((props) => (
       }};
     }
     ${null/* eslint-enable indent */}
+  }
+`;
+
+export const StyledInputWithAdornment = styled((props) => (
+  <StyledInput classes={{ input: 'input' }} {...props} />
+))`
+  & .input {
+    ${null/* eslint-disable indent */}
+    padding: ${({ adornmentPlacement }) => (
+      adornmentPlacement === 'start' ? '1rem 1.2rem 1rem 3.9rem' : '1rem 3.8rem 1rem 1.2rem'
+    )};
+    ${null/* eslint-enable indent */}
+  }
+`;
+
+export const StyledInputAdornment = styled((props) => (
+  <InputAdornment classes={{ root: 'root' }} {...props} />
+))`
+  &.root {
+    position: absolute;
+    left: ${({ adornmentPlacement }) => adornmentPlacement === 'start' ? '1.2rem' : ''};
+    right: ${({ adornmentPlacement }) => adornmentPlacement === 'start' ? '' : '0.4rem'};
   }
 `;
 

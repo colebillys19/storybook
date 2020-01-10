@@ -1,27 +1,14 @@
 import React from 'react';
 import T from 'prop-types';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import { StyledInput } from './styles/TextAreaInput.styles';
 
-const TextAreaInput = ({
-  Icon,
-  ...props
-}) => {
-  const startAdornment = Icon ? (
-    <InputAdornment position="start">
-      <Icon />
-    </InputAdornment>
-  ) : null;
-  return (
-    <StyledInput
-      multiline
-      startAdornment={startAdornment}
-      {...props}
-    />
-  );
-};
+const TextAreaInput = (props) => <StyledInput multiline {...props} />;
 
 TextAreaInput.propTypes = {
+  /** This prop helps users to fill forms faster, especially on mobile devices. (e.g. name, email,
+    * tel, etc.)
+    */
+  autoComplete: T.string,
   /** If true, the input element will be focused during the first mount. */
   autoFocus: T.bool,
   /** Override or extend the styles applied to the component. See CSS API below for more details. */
@@ -73,6 +60,7 @@ TextAreaInput.propTypes = {
 };
 
 TextAreaInput.defaultProps = {
+  autoComplete: 'off',
   autoFocus: false,
   disabled: false,
   error: false,

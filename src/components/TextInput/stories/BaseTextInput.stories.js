@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import {
   boolean,
+  select,
   text,
   withKnobs,
 } from '@storybook/addon-knobs';
@@ -18,6 +19,14 @@ export default {
   title: 'Inputs|BaseTextInput',
 };
 
+const iconOptions = {
+  Inbox: 'inbox',
+  Profile: 'profile',
+  Warning: 'warning',
+};
+
+const iconPlacementOptions = { End: 'end', Start: 'start' };
+
 export const DefaultStory = () => {
   const [value, setValue] = useState('');
 
@@ -29,11 +38,9 @@ export const DefaultStory = () => {
   return (
     <BaseTextInput
       color={text('Color', msBrightPurple)}
-      defaultValue={text('Default Value', '')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       fullWidth={boolean('Full Width', false)}
-      Icon={iconDictionary('dollar', 'medium')}
       id="mock-id"
       inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
       onBlur={action('onBlur')}
@@ -62,7 +69,6 @@ export const AccessibleStory = () => {
       </StyledLabel>
       <BaseTextInput
         color={text('Color', msBrightPurple)}
-        defaultValue={text('Default Value', '')}
         disabled={boolean('Disabled', false)}
         error={boolean('Error', false)}
         fullWidth={boolean('Full Width', false)}
@@ -82,3 +88,34 @@ export const AccessibleStory = () => {
 };
 
 AccessibleStory.story = { name: 'accessible' };
+
+export const WithAdornmentStory = () => {
+  const [value, setValue] = useState('');
+
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
+
+  return (
+    <BaseTextInput
+      adornmentContent={
+        iconDictionary(select('Icon', iconOptions, 'inbox'), 'mediumSmall')
+      }
+      adornmentPlacement={select('Icon Placement', iconPlacementOptions, 'start')}
+      color={text('Color', msBrightPurple)}
+      disabled={boolean('Disabled', false)}
+      error={boolean('Error', false)}
+      fullWidth={boolean('Full Width', false)}
+      id="mock-id"
+      inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
+      onBlur={action('onBlur')}
+      onChange={handleChange}
+      placeholder={text('Placeholder', '')}
+      readOnly={boolean('Read Only', false)}
+      value={value}
+    />
+  );
+};
+
+WithAdornmentStory.story = { name: 'with adornment' };

@@ -1,18 +1,47 @@
 import React from 'react';
 import T from 'prop-types';
-// import InputAdornment from '@material-ui/core/InputAdornment';
-import { StyledInput } from './styles/BaseTextInput.styles';
+import {
+  StyledInput,
+  StyledInputAdornment,
+  StyledInputWithAdornment,
+} from './styles/BaseTextInput.styles';
 
 const BaseTextInput = ({
-  Icon,
-  iconPlacement,
+  adornmentContent,
+  adornmentPlacement,
   ...props
 }) => { // eslint-disable-line
-  // adornment logic
+  if (adornmentContent) {
+    if (adornmentPlacement !== 'start' && adornmentPlacement !== 'end') {
+      throw new Error(
+        `Invalid adornmentPlacement string "${adornmentPlacement}" passed to BaseTextInput.`
+      );
+    }
+    // position always passed as "start" here for styling consistency
+    // see ./styles/BaseTextInput.styles
+    const adornment = (
+      <StyledInputAdornment adornmentPlacement={adornmentPlacement} position="start">
+        {adornmentContent}
+      </StyledInputAdornment>
+    );
+    const adornmentProp = {};
+    adornmentProp[`${adornmentPlacement}Adornment`] = adornment;
+    return (
+      <StyledInputWithAdornment
+        adornmentPlacement={adornmentPlacement}
+        {...adornmentProp}
+        {...props}
+      />
+    );
+  }
   return <StyledInput {...props} />;
 };
 
 BaseTextInput.propTypes = {
+  /** */
+  adornmentContent: T.node,
+  /** */
+  adornmentPlacement: T.oneOf(['start', 'end']),
   /** This prop helps users to fill forms faster, especially on mobile devices. (e.g. name, email,
     * tel, etc.)
     */
@@ -33,10 +62,6 @@ BaseTextInput.propTypes = {
   error: T.bool,
   /** If true, the input will take up the full width of its container. */
   fullWidth: T.bool,
-  /** */
-  Icon: T.node,
-  /** */
-  iconPlacement: T.oneOf(['start', 'end']),
   /** The id of the input element. Ensure the input label's 'for' attribute has a matching value. */
   id: T.string.isRequired,
   /** Attributes applied to the input element. Ensure the 'aria-describedby' string matches the
@@ -66,6 +91,8 @@ BaseTextInput.propTypes = {
 };
 
 BaseTextInput.defaultProps = {
+  adornmentPlacement: 'start',
+  autoComplete: 'off',
   autoFocus: false,
   disabled: false,
   error: false,
