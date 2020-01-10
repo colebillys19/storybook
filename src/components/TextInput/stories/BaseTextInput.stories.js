@@ -10,6 +10,7 @@ import BaseTextInput from '../BaseTextInput';
 import BaseTextInputDocs from '../docs/BaseTextInput.docs.mdx';
 import { msBrightPurple } from '../../../utils/defaultStyleHelper';
 import { StyledLabel, StyledSpan } from '../styles/BaseTextInput.styles';
+import iconDictionary from '../../../utils/iconDictionary';
 
 export default {
   decorators: [withKnobs],
@@ -32,6 +33,7 @@ export const DefaultStory = () => {
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       fullWidth={boolean('Full Width', false)}
+      Icon={iconDictionary('dollar', 'medium')}
       id="mock-id"
       inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
       onBlur={action('onBlur')}

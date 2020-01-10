@@ -41,6 +41,8 @@ BaseTextInput.propTypes = {
   error: T.bool,
   /** If true, the input will take up the full width of its container. */
   fullWidth: T.bool,
+  /** */
+  Icon: T.node,
   /** The id of the input element. Ensure the input label's 'for' attribute has a matching value. */
   id: T.string.isRequired,
   /** Attributes applied to the input element. Ensure the 'aria-describedby' string matches the
