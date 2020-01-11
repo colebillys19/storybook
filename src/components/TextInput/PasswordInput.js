@@ -3,7 +3,7 @@ import T from 'prop-types';
 
 import BaseTextInput from './BaseTextInput';
 import { StyledIconButton } from './styles/PasswordInput.styles';
-import iconDictionary from '../../utils/iconDictionary';
+import IconDictionary from '../../utils/IconDictionary';
 
 const PasswordInput = ({
   adornmentPlacement,
@@ -24,9 +24,9 @@ const PasswordInput = ({
       onMouseDown={handleMouseDownPassword}
     >
       {visibility ? (
-        iconDictionary('visibility', 'mediumSmall')
+        IconDictionary('visibility', 'mediumSmall')
       ) : (
-        iconDictionary('visibilityOff', 'mediumSmall')
+        IconDictionary('visibilityOff', 'mediumSmall')
       )}
     </StyledIconButton>
   );

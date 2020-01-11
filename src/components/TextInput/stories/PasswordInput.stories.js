@@ -11,7 +11,7 @@ import PasswordInput from '../PasswordInput';
 import PasswordInputDocs from '../docs/PasswordInput.docs.mdx';
 import { msBrightPurple } from '../../../utils/defaultStyleHelper';
 // import { StyledLabel, StyledSpan } from '../styles/PasswordInput.styles';
-// import iconDictionary from '../../../utils/iconDictionary';
+// import IconDictionary from '../../../utils/IconDictionary';
 
 export default {
   decorators: [withKnobs],
@@ -100,7 +100,7 @@ DefaultStory.story = { name: 'default' };
 //   return (
 //     <PasswordInput
 //       adornmentContent={
-//         iconDictionary(select('Icon', iconOptions, 'inbox'), 'mediumSmall')
+//         IconDictionary(select('Icon', iconOptions, 'inbox'), 'mediumSmall')
 //       }
 //       adornmentPlacement={select('Icon Placement', iconPlacementOptions, 'start')}
 //       color={text('Color', msBrightPurple)}

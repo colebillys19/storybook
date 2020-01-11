@@ -1,27 +1,24 @@
 import { Meta, Typeset } from '@storybook/addon-docs/blocks';
-import { typography } from '../../utils/defaultStyleHelper';
-
 
 <Meta title="DMI Design System|Typography" />
-
 
 # Typography
 
 **Font:** Overpass
 
-**Weights:** 400(regular), 700(bold), 800(extrabold), 900(black)
+**Weights:** 300(light), 400(regular), 700(bold)
 
 <Typeset
   fontSizes={[
-    Number(typography.size.s1),
-    Number(typography.size.s2),
-    Number(typography.size.s3),
-    Number(typography.size.m1),
-    Number(typography.size.m2),
-    Number(typography.size.m3),
-    Number(typography.size.l1),
-    Number(typography.size.l2),
-    Number(typography.size.l3),
+    Number('12'),
+    Number('14'),
+    Number('16'),
+    Number('20'),
+    Number('24'),
+    Number('28'),
+    Number('32'),
+    Number('40'),
+    Number('48'),
   ]}
-  fontWeight={typography.weight.black}
+  fontWeight="700"
 />

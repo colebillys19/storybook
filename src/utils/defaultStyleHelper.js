@@ -79,22 +79,25 @@ export const iconSize = {
 
 // typography
 export const typography = {
-  size: {
-    l1: '32',
-    l2: '40',
-    l3: '48',
-    m1: '20',
-    m2: '24',
-    m3: '28',
-    s1: '12',
-    s2: '14',
-    s3: '16',
+  font: {
+    montserrat: "'Montserrat', sans-serif",
+    overpass: '"Overpass", "sans-serif"',
+    robotoCondensed: "'Roboto Condensed', sans-serif",
   },
-  type: { primary: '"Overpass", "sans-serif"' },
+  size: {
+    l1: '3.2rem',
+    l2: '4rem',
+    l3: '4.8rem',
+    m1: '2rem',
+    m2: '2.4rem',
+    m3: '2.8rem',
+    s1: '1.2rem',
+    s2: '1.4rem',
+    s3: '1.6rem',
+  },
   weight: {
-    black: '900',
     bold: '700',
-    extrabold: '800',
+    light: '300',
     regular: '400',
   },
 };

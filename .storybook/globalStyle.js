@@ -8,18 +8,18 @@ import { createGlobalStyle } from 'styled-components';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
-import { msBrightPurple } from '../src/utils/defaultStyleHelper';
+import { msBrightPurple, typography } from '../src/utils/defaultStyleHelper';
 
 const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
   }
   body {
-    font-size: 1.4rem;
+    font-size: ${typography.size.s2};
     font-weight: 400;
   }
   body * {
-    font-family: 'Overpass', sans-serif;
+    font-family: ${typography.font.overpass};
     box-sizing: border-box;
   }
   
