@@ -60,7 +60,7 @@ export const StyledInputWithAdornment = styled((props) => (
   }
 `;
 
-export const StyledInputAdornment = styled((props) => (
+export const StyledAdornment = styled((props) => (
   <InputAdornment classes={{ root: 'root' }} {...props} />
 ))`
   &.root {

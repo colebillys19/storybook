@@ -1,5 +1,6 @@
 import React from 'react';
 import T from 'prop-types';
+
 import { StyledInput } from './styles/TextAreaInput.styles';
 
 const TextAreaInput = (props) => <StyledInput multiline {...props} />;

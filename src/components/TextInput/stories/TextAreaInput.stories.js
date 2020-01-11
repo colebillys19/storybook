@@ -54,7 +54,7 @@ export const AccessibleStory = () => {
 
   return (
     <Fragment>
-      <StyledLabel for="base-text-input">
+      <StyledLabel htmlFor="base-text-input">
         {text('Label Text', 'label text')}
       </StyledLabel>
       <TextAreaInput

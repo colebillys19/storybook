@@ -64,7 +64,7 @@ export const AccessibleStory = () => {
 
   return (
     <Fragment>
-      <StyledLabel for="base-text-input">
+      <StyledLabel htmlFor="base-text-input">
         {text('Label Text', 'label text')}
       </StyledLabel>
       <BaseTextInput
@@ -100,7 +100,7 @@ export const WithAdornmentStory = () => {
   return (
     <BaseTextInput
       adornmentContent={
-        iconDictionary(select('Icon', iconOptions, 'inbox'), 'mediumSmall')
+        iconDictionary(select('Icon', iconOptions, 'visibilityOff'), 'mediumSmall')
       }
       adornmentPlacement={select('Icon Placement', iconPlacementOptions, 'start')}
       color={text('Color', msBrightPurple)}

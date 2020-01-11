@@ -1,31 +1,44 @@
 import React from 'react';
 import T from 'prop-types';
+
 import {
   StyledInput,
-  StyledInputAdornment,
+  StyledAdornment,
   StyledInputWithAdornment,
 } from './styles/BaseTextInput.styles';
 
 const BaseTextInput = ({
   adornmentContent,
   adornmentPlacement,
+  type,
   ...props
 }) => { // eslint-disable-line
+  if (type !== 'text' && type !== 'password') {
+    throw new Error(
+      `Invalid type string "${type}" passed to BaseTextInput.
+       Please pass either 'text' or 'password'.`
+    );
+  }
+
   if (adornmentContent) {
     if (adornmentPlacement !== 'start' && adornmentPlacement !== 'end') {
       throw new Error(
-        `Invalid adornmentPlacement string "${adornmentPlacement}" passed to BaseTextInput.`
+        `Invalid adornmentPlacement string "${adornmentPlacement}" passed to BaseTextInput.
+         Please pass either 'start' or 'end'.`
       );
     }
+
     // position always passed as "start" here for styling consistency
     // see ./styles/BaseTextInput.styles
     const adornment = (
-      <StyledInputAdornment adornmentPlacement={adornmentPlacement} position="start">
+      <StyledAdornment adornmentPlacement={adornmentPlacement} position="start">
         {adornmentContent}
-      </StyledInputAdornment>
+      </StyledAdornment>
     );
+
     const adornmentProp = {};
     adornmentProp[`${adornmentPlacement}Adornment`] = adornment;
+
     return (
       <StyledInputWithAdornment
         adornmentPlacement={adornmentPlacement}
@@ -34,13 +47,14 @@ const BaseTextInput = ({
       />
     );
   }
+
   return <StyledInput {...props} />;
 };
 
 BaseTextInput.propTypes = {
-  /** */
+  /** Adornment to be displayed - either an icon or icon button. */
   adornmentContent: T.node,
-  /** */
+  /** Determines whether the adornment is placed and the start or end of the input. */
   adornmentPlacement: T.oneOf(['start', 'end']),
   /** This prop helps users to fill forms faster, especially on mobile devices. (e.g. name, email,
     * tel, etc.)
@@ -86,6 +100,8 @@ BaseTextInput.propTypes = {
   readOnly: T.bool,
   /** If true, the input element will be required. */
   required: T.bool,
+  /** */
+  type: T.oneOf(['text', 'password']),
   /** The value of the input element, required for a controlled component. */
   value: T.any,
 };
@@ -100,6 +116,7 @@ BaseTextInput.defaultProps = {
   inputProps: {},
   readOnly: false,
   required: false,
+  type: 'text',
 };
 
 export default BaseTextInput;
