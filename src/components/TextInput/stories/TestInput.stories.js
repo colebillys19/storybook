@@ -28,14 +28,22 @@ export default {
 
 // const iconPlacementOptions = { End: 'end', Start: 'start' };
 
-const textAdornment = {
+// const textAdornment = {
+//   color: 'red',
+//   font: typography.font.robotoCondensed,
+//   onClick: () => console.log('clicked'),
+//   position: 'start',
+//   size: typography.size.s2,
+//   text: '808',
+//   weight: typography.weight.bold,
+// };
+
+const iconAdornment = {
   color: 'red',
-  // font: typography.font.robotoCondensed,
+  hoverColor: 'green',
+  iconName: 'profile',
   // onClick: () => console.log('clicked'),
   position: 'end',
-  // size: typography.size.s2,
-  text: '808',
-  // weight: typography.weight.bold,
 };
 
 export const DefaultStory = () => { // eslint-disable-line
@@ -55,9 +63,9 @@ export const DefaultStory = () => { // eslint-disable-line
 
   return (
     <TestInput
+      iconAdornment={iconAdornment}
       id="mock-id"
       inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
-      textAdornment={textAdornment}
     />
   );
 };

@@ -19,21 +19,20 @@ import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Warning from '@material-ui/icons/Warning';
 
-import { iconStyle, iconSize } from './defaultStyleHelper';
+import { iconSize } from './defaultStyleHelper';
 
 /**
- * @description: Creates a formatted icon, based on name, size, and options
+ * @description: Creates a formatted icon, based on name, size, color, and options
  *
  * @param name {string}: the name/label of the icon to use
  * @param size {string}: 'large', 'medium', 'small', or 'xSmall'
- * @param style {string}: icon styling to apply
- * @param options {object}: additional options for the icon
- * (including color, hoverColor, etc.)
+ * @param color {string}: desired icon color
+ * @param hoverColor {string}: desired icon hover color
  * @return {React component}: the rendered icon with the styling and options
  * passed down as props
  */
 
-export default (name, size, style, options) => {
+export default (name, size, styling) => {
   const icons = {
     arrowDown: ArrowDropDown,
     arrowLeft: ChevronLeft,
@@ -54,20 +53,8 @@ export default (name, size, style, options) => {
     warning: Warning,
   };
 
-  // Create style object to apply to SVG Icon
   const sizing = iconSize[size] || {};
-  const styling = iconStyle[style] || {};
   const stylesToApply = Object.assign({}, sizing, styling);
-  const propsToPassDown = Object.assign({}, options);
-  const IconToRender = icons[name];
-  // Style Icon by applying to root styles
-  const StyledIcon = styled(IconToRender)({ '&.root': stylesToApply });
-  // Return Styled Icon w/ proper class selection
-  return (
-    <StyledIcon
-      classes={{ root: 'root' }}
-      className="styled-icon"
-      {...propsToPassDown}
-    />
-  );
+  const StyledIcon = styled(icons[name])({ '&.root': stylesToApply });
+  return <StyledIcon classes={{ root: 'root' }} className="styled-icon" />;
 };

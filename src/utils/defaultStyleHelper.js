@@ -38,15 +38,11 @@ export const muiRed = '#f44336';
 export const successGreen = '#5DBA9C';
 
 // icons
-export const iconStyle = {
-  button: { marginRight: '.6rem' },
-  link: { marginRight: '.4rem' },
-  plusOne: {
-    height: '1.8rem',
-    width: '1.8rem',
-  },
-};
 export const iconSize = {
+  adornment: {
+    height: '2.5rem',
+    width: '2.5rem',
+  },
   large: {
     height: '11rem',
     width: '11rem',

@@ -9,6 +9,7 @@ import {
 } from './constants';
 import TextAdornment from './adornment-components/TextAdornment';
 import TextButtonAdornment from './adornment-components/TextButtonAdornment';
+import IconAdornment from './adornment-components/IconAdornment';
 
 export default function TestInput({
   datalistId,
@@ -24,23 +25,49 @@ export default function TestInput({
   if (iconAdornment && textAdornment) {
     throw new Error(ICON_TEXT_ADORNMENT_ERROR);
   }
-
   //
-
   //
-
   //
-
-  if (textAdornment) {
-    const { onClick, position, ...textAdornmentValues } = textAdornment;
-
-    //
+  //
+  //
+  if (iconAdornment) {
+    const { position } = iconAdornment;
 
     if (position !== 'start' && position !== 'end') {
       throw new Error(ADORNMENT_POSITION_ERROR);
     }
 
-    //
+    const adornment = (
+      <InputAdornment position={position}>
+        <IconAdornment {...iconAdornment} />
+      </InputAdornment>
+    );
+
+    const adornmentProp = { [`${position}Adornment`]: adornment };
+
+    return (
+      <StyledTextField
+        InputProps={{
+          classes: { input: 'input' },
+          ...adornmentProp,
+          ...InputProps,
+        }}
+        variant="outlined"
+        {...props}
+      />
+    );
+  }
+  //
+  //
+  //
+  //
+  //
+  if (textAdornment) {
+    const { onClick, position, ...textAdornmentValues } = textAdornment;
+
+    if (position !== 'start' && position !== 'end') {
+      throw new Error(ADORNMENT_POSITION_ERROR);
+    }
 
     if (onClick) {
       const adornment = (
@@ -68,8 +95,6 @@ export default function TestInput({
       );
     }
 
-    //
-
     const adornment = (
       <InputAdornment position={position}>
         <TextAdornment position={position} {...textAdornmentValues} />
@@ -90,7 +115,10 @@ export default function TestInput({
       />
     );
   }
-
+  //
+  //
+  //
+  //
   //
   return (
     <StyledTextField
