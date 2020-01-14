@@ -2,7 +2,11 @@ import React from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
 import { StyledTextField } from './styles/TestInput.styles';
-import { ICON_TEXT_ADORNMENT_ERROR, SEARCH_DATALIST_ERROR } from './constants';
+import {
+  ADORNMENT_POSITION_ERROR,
+  ICON_TEXT_ADORNMENT_ERROR,
+  SEARCH_DATALIST_ERROR,
+} from './constants';
 import TextAdornment from './adornment-components/TextAdornment';
 import TextButtonAdornment from './adornment-components/TextButtonAdornment';
 
@@ -29,6 +33,12 @@ export default function TestInput({
 
   if (textAdornment) {
     const { onClick, position, ...textAdornmentValues } = textAdornment;
+
+    //
+
+    if (position !== 'start' && position !== 'end') {
+      throw new Error(ADORNMENT_POSITION_ERROR);
+    }
 
     //
 
@@ -62,7 +72,7 @@ export default function TestInput({
 
     const adornment = (
       <InputAdornment position={position}>
-        <TextAdornment {...textAdornmentValues} />
+        <TextAdornment position={position} {...textAdornmentValues} />
       </InputAdornment>
     );
 

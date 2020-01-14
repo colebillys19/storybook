@@ -32,9 +32,9 @@ const textAdornment = {
   color: 'red',
   // font: typography.font.robotoCondensed,
   // onClick: () => console.log('clicked'),
-  position: 'start',
+  position: 'end',
   // size: typography.size.s2,
-  text: 'yeet',
+  text: '808',
   // weight: typography.weight.bold,
 };
 
