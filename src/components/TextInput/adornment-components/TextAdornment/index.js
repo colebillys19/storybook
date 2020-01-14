@@ -3,26 +3,18 @@ import T from 'prop-types';
 
 import { StyledSpan } from './styledComponents';
 
-const FontAdornment = ({
-  font,
-  size,
-  text,
-  weight,
-}) => (
-  <StyledSpan
-    font={font}
-    size={size}
-    weight={weight}
-  >
+const TextAdornment = ({ text, ...props }) => (
+  <StyledSpan {...props}>
     {text}
   </StyledSpan>
 );
 
-FontAdornment.propTypes = {
+TextAdornment.propTypes = {
+  color: T.string,
   font: T.string,
   size: T.string,
   text: T.string.isRequired,
   weight: T.string,
 };
 
-export default FontAdornment;
+export default TextAdornment;
