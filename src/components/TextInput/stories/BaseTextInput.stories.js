@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { action } from '@storybook/addon-actions';
+import React from 'react';
+// import { action } from '@storybook/addon-actions';
 import {
   // boolean,
   // select,
@@ -28,29 +28,45 @@ export default {
 
 // const iconPlacementOptions = { End: 'end', Start: 'start' };
 
-export const DefaultStory = () => {
-  const [value, setValue] = useState('');
+const textAdornment = {
+  color: 'red',
+  font: typography.font.robotoCondensed,
+  hoverColor: 'black',
+  onClick: () => console.log('clicked'),
+  position: 'start',
+  size: typography.size.s2,
+  text: '808',
+  weight: typography.weight.bold,
+};
 
-  const handleChange = (e) => {
-    action('onChange')();
-    setValue(e.target.value);
-  };
+// const iconAdornment = {
+//   color: 'red',
+//   hoverColor: 'green',
+//   iconName: 'profile',
+//   // onClick: () => console.log('clicked'),
+//   position: 'end',
+// };
 
-  const textAdornment = {
-    font: typography.font.robotoCondensed,
-    size: typography.size.s2,
-    text: 'yeet',
-    weight: typography.weight.bold,
-  };
+export const DefaultStory = () => { // eslint-disable-line
+  // const [value, setValue] = useState('');
+
+  // const handleChange = (e) => {
+  //   action('onChange')();
+  //   setValue(e.target.value);
+  // };
+
+  // const textAdornment = {
+  //   font: typography.font.robotoCondensed,
+  //   size: typography.size.s2,
+  //   text: 'yeet',
+  //   weight: typography.weight.bold,
+  // };
 
   return (
     <BaseTextInput
-      adornmentPlacement="start"
       id="mock-id"
       inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
-      onChange={handleChange}
       textAdornment={textAdornment}
-      value={value}
     />
   );
 };

@@ -1,86 +1,21 @@
-import React from 'react';
+// import React from 'react';
 import styled from 'styled-components';
-import InputBase from '@material-ui/core/InputBase';
-import InputAdornment from '@material-ui/core/InputAdornment';
+import TextField from '@material-ui/core/TextField';
+import { typography } from '../../../utils/defaultStyleHelper';
 
-import {
-  msBrightPurple,
-  muiRed,
-  typography,
-} from '../../../utils/defaultStyleHelper';
-
-export const StyledInput = styled((props) => (
-  <InputBase classes={{ input: 'input' }} {...props} />
-))`
+export const StyledTextField = styled(TextField)`
+  background-color: white;
+  border-radius: 0.5rem;
   & .input {
-    background-color: #fff;
-    border-radius: 0.5rem;
-    border-width: 0.1rem;
-    border-style: solid;
-    border-color: ${({ error }) => error ? muiRed : '#b8b8b8'};
-    box-sizing: border-box;
     font-size: ${typography.size.s2};
-    min-height: 3.8rem;
-    min-width: 24rem;
-    opacity: ${({ disabled }) => disabled ? '0.5' : '1'};
-    padding: 1rem 1.2rem;
-    ${null/* eslint-disable indent */}
-    &:hover {
-      border-color: ${({ disabled, error }) => {
-        if (disabled) {
-          return '';
-        }
-        if (error) {
-          return muiRed;
-        }
-        return '#1f1f1f';
-      }};
-    }
-    &:focus {
-      border-width: 0.2rem;
-      border-color: ${({ color, error }) => {
-        if (error) {
-          return muiRed;
-        }
-        if (color) {
-          return color;
-        }
-        return msBrightPurple;
-      }};
-    }
-    ${null/* eslint-enable indent */}
+    min-height: 40px;
+    padding: 0 1rem;
   }
-`;
-
-export const WithIconButtonAdornment = styled(StyledInput)``;
-
-export const WithIconAdornment = styled(StyledInput)``;
-
-export const WithTextButtonAdornment = styled(StyledInput)``;
-
-export const WithTextAdornment = styled(StyledInput)`
-  
-`;
-
-// export const StyledInputWithAdornment = styled((props) => (
-//   <StyledInput classes={{ input: 'input' }} {...props} />
-// ))`
-//   & .input {
-//     ${null/* eslint-disable indent */}
-//     padding: ${({ adornmentPlacement }) => (
-//       adornmentPlacement === 'start' ? '1rem 1.2rem 1rem 3.9rem' : '1rem 3.8rem 1rem 1.2rem'
-//     )};
-//     ${null/* eslint-enable indent */}
-//   }
-// `;
-
-export const StyledAdornment = styled((props) => (
-  <InputAdornment classes={{ root: 'root' }} {...props} />
-))`
-  &.root {
-    position: absolute;
-    left: ${({ adornmentPlacement }) => adornmentPlacement === 'start' ? '1.2rem' : ''};
-    right: ${({ adornmentPlacement }) => adornmentPlacement === 'start' ? '' : '0.4rem'};
+  & .input:focus + fieldset {
+    border-color: green;
+  }
+  & * {
+    transition: none;
   }
 `;
 

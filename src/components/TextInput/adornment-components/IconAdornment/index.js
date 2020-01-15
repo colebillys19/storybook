@@ -6,10 +6,9 @@ import { IconWrapper, StyledIconButton } from './styledComponents';
 
 const IconAdornment = ({
   color,
-  hoverColor,
   iconName,
   onClick,
-  position,
+  ...props
 }) => {
   const styles = { color };
   // adjust placement for warning icon
@@ -20,16 +19,12 @@ const IconAdornment = ({
   const icon = IconDictionary(iconName, 'adornment', styles);
   if (onClick) {
     return (
-      <StyledIconButton
-        hoverColor={hoverColor}
-        position={position}
-        size="small"
-      >
+      <StyledIconButton size="small" {...props}>
         {icon}
       </StyledIconButton>
     );
   }
-  return <IconWrapper position={position}>{icon}</IconWrapper>;
+  return <IconWrapper {...props}>{icon}</IconWrapper>;
 };
 
 IconAdornment.propTypes = {

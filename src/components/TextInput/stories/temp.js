@@ -1,5 +1,5 @@
-import React from 'react';
-// import { action } from '@storybook/addon-actions';
+import React, { useState } from 'react';
+import { action } from '@storybook/addon-actions';
 import {
   // boolean,
   // select,
@@ -7,17 +7,17 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs';
 
-import TestInput from '../TestInput';
-import TestInputDocs from '../docs/BaseTextInput.docs.mdx';
-// import { typography } from '../../../utils/defaultStyleHelper';
+import BaseTextInput from '../BaseTextInput';
+import BaseTextInputDocs from '../docs/BaseTextInput.docs.mdx';
+import { typography } from '../../../utils/defaultStyleHelper';
 // import { msBrightPurple } from '../../../utils/defaultStyleHelper';
-// import { StyledLabel, StyledSpan } from '../styles/TestInput.styles';
+// import { StyledLabel, StyledSpan } from '../styles/BaseTextInput.styles';
 // import IconDictionary from '../../../utils/IconDictionary';
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: TestInput, docs: { page: TestInputDocs } },
-  title: 'Inputs|TestInput',
+  parameters: { component: BaseTextInput, docs: { page: BaseTextInputDocs } },
+  title: 'Inputs|BaseTextInput',
 };
 
 // const iconOptions = {
@@ -28,44 +28,29 @@ export default {
 
 // const iconPlacementOptions = { End: 'end', Start: 'start' };
 
-// const textAdornment = {
-//   color: 'red',
-//   font: typography.font.robotoCondensed,
-//   onClick: () => console.log('clicked'),
-//   position: 'start',
-//   size: typography.size.s2,
-//   text: '808',
-//   weight: typography.weight.bold,
-// };
+export const DefaultStory = () => {
+  const [value, setValue] = useState('');
 
-const iconAdornment = {
-  color: 'red',
-  hoverColor: 'green',
-  iconName: 'profile',
-  // onClick: () => console.log('clicked'),
-  position: 'end',
-};
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
 
-export const DefaultStory = () => { // eslint-disable-line
-  // const [value, setValue] = useState('');
-
-  // const handleChange = (e) => {
-  //   action('onChange')();
-  //   setValue(e.target.value);
-  // };
-
-  // const textAdornment = {
-  //   font: typography.font.robotoCondensed,
-  //   size: typography.size.s2,
-  //   text: 'yeet',
-  //   weight: typography.weight.bold,
-  // };
+  const textAdornment = {
+    font: typography.font.robotoCondensed,
+    size: typography.size.s2,
+    text: 'yeet',
+    weight: typography.weight.bold,
+  };
 
   return (
-    <TestInput
-      iconAdornment={iconAdornment}
+    <BaseTextInput
+      adornmentPlacement="start"
       id="mock-id"
       inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
+      onChange={handleChange}
+      textAdornment={textAdornment}
+      value={value}
     />
   );
 };
@@ -81,7 +66,7 @@ DefaultStory.story = { name: 'default' };
 //   };
 
 //   return (
-//     <TestInput
+//     <BaseTextInput
 //       color={text('Color', msBrightPurple)}
 //       disabled={boolean('Disabled', false)}
 //       error={boolean('Error', false)}
@@ -112,7 +97,7 @@ DefaultStory.story = { name: 'default' };
 //       <StyledLabel htmlFor="base-text-input">
 //         {text('Label Text', 'label text')}
 //       </StyledLabel>
-//       <TestInput
+//       <BaseTextInput
 //         color={text('Color', msBrightPurple)}
 //         disabled={boolean('Disabled', false)}
 //         error={boolean('Error', false)}
@@ -143,7 +128,7 @@ DefaultStory.story = { name: 'default' };
 //   };
 
 //   return (
-//     <TestInput
+//     <BaseTextInput
 //       adornmentContent={
 //         IconDictionary(select('Icon', iconOptions, 'visibilityOff'), 'mediumSmall')
 //       }

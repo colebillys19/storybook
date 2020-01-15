@@ -1,9 +1,17 @@
 import React from 'react';
 import T from 'prop-types';
 
-import { StyledSpan } from './styledComponents';
+import { StyledButton, StyledSpan } from './styledComponents';
 
-const TextAdornment = ({ text, ...props }) => (
+const TextAdornment = ({
+  onClick,
+  text,
+  ...props
+}) => onClick ? (
+  <StyledButton onClick={onClick} {...props}>
+    {text}
+  </StyledButton>
+) : (
   <StyledSpan {...props}>
     {text}
   </StyledSpan>
@@ -12,6 +20,8 @@ const TextAdornment = ({ text, ...props }) => (
 TextAdornment.propTypes = {
   color: T.string,
   font: T.string,
+  hoverColor: T.string,
+  onClick: T.func,
   size: T.string,
   text: T.string.isRequired,
   weight: T.string,
