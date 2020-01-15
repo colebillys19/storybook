@@ -77,7 +77,7 @@ export const iconSize = {
 export const typography = {
   font: {
     montserrat: "'Montserrat', sans-serif",
-    overpass: '"Overpass", "sans-serif"',
+    overpass: "'Overpass', sans-serif",
     robotoCondensed: "'Roboto Condensed', sans-serif",
   },
   size: {

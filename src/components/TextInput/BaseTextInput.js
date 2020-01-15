@@ -2,35 +2,42 @@ import React from 'react';
 import T from 'prop-types';
 
 import { StyledTextField } from './styles/BaseTextInput.styles';
-import { SEARCH_DATALIST_ERROR } from './constants';
-import { getAdornment } from './helpers';
+import { getAdornment, validateProps } from './helpers';
 
 const BaseTextInput = ({
-  datalistId,
+  ariaDescribedBy,
   iconAdornment,
   InputProps,
+  inputProps,
   textAdornment,
-  type,
   ...props
 }) => {
-  if (type === 'search' && !datalistId) {
-    throw new Error(SEARCH_DATALIST_ERROR);
-  }
+  validateProps(props);
   const adornmentProp = getAdornment(iconAdornment, textAdornment);
+  /* eslint-disable react/jsx-no-duplicate-props */
   return (
     <StyledTextField
       InputProps={{
-        classes: { input: 'input' },
+        classes: { input: 'input', multiline: 'multiline' },
         ...adornmentProp,
         ...InputProps,
+      }}
+      inputProps={{
+        'aria-describedby': ariaDescribedBy,
+        ...inputProps,
       }}
       variant="outlined"
       {...props}
     />
   );
+  /* eslint-enable react/jsx-no-duplicate-props */
 };
 
 BaseTextInput.propTypes = {
+  /** If BaseTextInput has associated helper text, pass a string as this prop that matches the
+    * helper text element's 'id' attribute. */
+  ariaDescribedBy: T.string,
+
   /** This prop helps users to fill forms faster, especially on mobile devices. (e.g. name, email,
     * tel, etc.)
     */
@@ -42,15 +49,12 @@ BaseTextInput.propTypes = {
   /** Override or extend the styles applied to the component. See CSS API below for more details. */
   classes: T.object,
 
-  /** The CSS class name of the wrapper element. */
-  className: T.string,
-
   /** The color of the input border on focus. */
   color: T.string,
 
   /** The id of the associated <datalist /> element. If 'search' is passed as the type prop, the
     * input needs to be associated with a <datalist /> element containing search suggestions as
-    * nested <option /> elements.
+    * nested <option />'s.
     */
   datalistId: T.string,
 
@@ -63,11 +67,8 @@ BaseTextInput.propTypes = {
   /** If true, the input will indicate an error. */
   error: T.bool,
 
-  /** If true, the input will take up the full width of its container. */
-  fullWidth: T.bool,
-
-  /** Icon to be displayed as adornment. Accepts an object containing an IconDictionary component
-    * and an optional onClick handler. If onClick is provided, an icon button will be rendered.
+  /** Object detailing icon to be displayed as adornment. Accepts the following values. If onClick
+    * is provided, an icon button will be rendered.
     */
   iconAdornment: T.shape({
     color: T.string,
@@ -80,21 +81,19 @@ BaseTextInput.propTypes = {
   /** The id of the input element. Ensure the input label's 'for' attribute has a matching value. */
   id: T.string.isRequired,
 
-  /** Attributes applied to the input element. Ensure the 'aria-describedby' string matches the
-    * helper text element's 'id' attribute.
-    */
+  /** Props applied to the MUI Input component. */
+  InputProps: T.object,
+
+  /** Attributes applied to the html input element. */
   inputProps: T.object,
 
   /** Pass a ref to the input element. */
   inputRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
 
-  /** Name attribute of the input element. */
-  name: T.string,
-
-  /** Callback fired when the input is blurred. Notice that the first argument (event) might be
-    * undefined.
+  /** Name attribute of the input element. Used to reference form data after a form is
+    * submitted.
     */
-  onBlur: T.func,
+  name: T.string,
 
   /** Callback fired when the value is changed. */
   onChange: T.func,
@@ -110,12 +109,14 @@ BaseTextInput.propTypes = {
   /** If true, the input element will be required. */
   required: T.bool,
 
-  /** Text to be displayed as adornment. If onClick is provided, a text button will
-    * be rendered. Ensure font/weight passed are available globally.
+  /** Object detailing text to be displayed as adornment. Accepts the following values. If onClick
+    * is provided, a text button will be rendered. Ensure font/weight passed are available
+    * globally.
     */
   textAdornment: T.shape({
     color: T.string,
     font: T.string,
+    hoverColor: T.string,
     onClick: T.func,
     size: T.string,
     text: T.string,
@@ -137,8 +138,7 @@ BaseTextInput.defaultProps = {
   autoFocus: false,
   disabled: false,
   error: false,
-  fullWidth: false,
-  inputProps: {},
+  InputProps: {},
   readOnly: false,
   required: false,
   type: 'text',

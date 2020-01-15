@@ -95,8 +95,8 @@ BaseTextInput.propTypes = {
   /** Determines whether the adornment is placed and the start or end of the input. */
   adornmentPlacement: T.oneOf(['start', 'end']),
 
-  /** This prop helps users to fill forms faster, especially on mobile devices. (e.g. name, email,
-    * tel, etc.)
+  /** This prop helps users to fill forms faster, especially on mobile devices (e.g. name, email,
+    * tel, etc.) - see link in notes with more information.
     */
   autoComplete: T.string,
 

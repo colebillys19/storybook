@@ -1,7 +1,13 @@
 import React from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
-import { ADORNMENT_POSITION_ERROR, ICON_TEXT_ADORNMENT_ERROR } from './constants';
+import {
+  ADORNMENT_POSITION_ERROR,
+  ICON_TEXT_ADORNMENT_ERROR,
+  INVALID_TYPE_ERROR,
+  NO_ID_ERROR,
+  SEARCH_DATALIST_ERROR,
+} from './constants';
 import TextAdornment from './adornment-components/TextAdornment';
 import IconAdornment from './adornment-components/IconAdornment';
 
@@ -58,4 +64,32 @@ export const getAdornment = (iconAdornment, textAdornment) => {
   );
 
   return { [`${position}Adornment`]: adornment };
+};
+
+/**
+ * @description: ...
+ *
+ * @param name {type}: ...
+ *
+ */
+export const validateProps = (props) => {
+  const {
+    datalistId,
+    id,
+    type,
+  } = props;
+
+  const typeOpts = ['email', 'number', 'search', 'tel', 'text', 'url'];
+
+  if (!id) {
+    throw new Error(NO_ID_ERROR);
+  }
+
+  if (!typeOpts.includes(type)) {
+    throw new Error(INVALID_TYPE_ERROR);
+  }
+
+  if (type === 'search' && !datalistId) {
+    throw new Error(SEARCH_DATALIST_ERROR);
+  }
 };

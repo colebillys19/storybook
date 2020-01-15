@@ -1,17 +1,23 @@
-import React from 'react';
-// import { action } from '@storybook/addon-actions';
+import React, { Fragment, useState } from 'react';
+import { action } from '@storybook/addon-actions';
 import {
-  // boolean,
-  // select,
-  // text,
+  boolean,
+  select,
+  text,
   withKnobs,
 } from '@storybook/addon-knobs';
 
 import BaseTextInput from '../BaseTextInput';
 import BaseTextInputDocs from '../docs/BaseTextInput.docs.mdx';
-import { typography } from '../../../utils/defaultStyleHelper';
-// import { msBrightPurple } from '../../../utils/defaultStyleHelper';
-// import { StyledLabel, StyledSpan } from '../styles/BaseTextInput.styles';
+import {
+  msBrightPurple,
+  msMainGreen,
+  muiRed,
+  ssMainBlue,
+  ssYellow,
+  typography,
+} from '../../../utils/defaultStyleHelper';
+import { StyledLabel, StyledSpan } from '../styles/BaseTextInput.styles';
 // import IconDictionary from '../../../utils/IconDictionary';
 
 export default {
@@ -20,148 +26,190 @@ export default {
   title: 'Inputs|BaseTextInput',
 };
 
-// const iconOptions = {
-//   Inbox: 'inbox',
-//   Profile: 'profile',
-//   Warning: 'warning',
-// };
-
-// const iconPlacementOptions = { End: 'end', Start: 'start' };
-
-const textAdornment = {
-  color: 'red',
-  font: typography.font.robotoCondensed,
-  hoverColor: 'black',
-  onClick: () => console.log('clicked'),
-  position: 'start',
-  size: typography.size.s2,
-  text: '808',
-  weight: typography.weight.bold,
+const colorOptions = {
+  msBrightPurple,
+  msMainGreen,
+  muiRed,
+  ssMainBlue,
+  ssYellow,
 };
 
-// const iconAdornment = {
-//   color: 'red',
-//   hoverColor: 'green',
-//   iconName: 'profile',
-//   // onClick: () => console.log('clicked'),
-//   position: 'end',
-// };
+const positionOptions = { end: 'end', start: 'start' };
 
-export const DefaultStory = () => { // eslint-disable-line
-  // const [value, setValue] = useState('');
+/** Default Story */
+export const DefaultStory = () => {
+  const [value, setValue] = useState('');
 
-  // const handleChange = (e) => {
-  //   action('onChange')();
-  //   setValue(e.target.value);
-  // };
-
-  // const textAdornment = {
-  //   font: typography.font.robotoCondensed,
-  //   size: typography.size.s2,
-  //   text: 'yeet',
-  //   weight: typography.weight.bold,
-  // };
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
 
   return (
     <BaseTextInput
+      color={select('Color', colorOptions, msBrightPurple)}
+      disabled={boolean('Disabled', false)}
+      error={boolean('Error', false)}
       id="mock-id"
-      inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
-      textAdornment={textAdornment}
+      onChange={handleChange}
+      placeholder={text('Placeholder', '')}
+      value={value}
     />
   );
 };
 
 DefaultStory.story = { name: 'default' };
 
-// export const DefaultStory = () => {
-//   const [value, setValue] = useState('');
+/** Accessible Story */
+export const AccessibleStory = () => {
+  const [value, setValue] = useState('');
 
-//   const handleChange = (e) => {
-//     action('onChange')();
-//     setValue(e.target.value);
-//   };
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
 
-//   return (
-//     <BaseTextInput
-//       color={text('Color', msBrightPurple)}
-//       disabled={boolean('Disabled', false)}
-//       error={boolean('Error', false)}
-//       fullWidth={boolean('Full Width', false)}
-//       id="mock-id"
-//       inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
-//       onBlur={action('onBlur')}
-//       onChange={handleChange}
-//       placeholder={text('Placeholder', '')}
-//       readOnly={boolean('Read Only', false)}
-//       value={value}
-//     />
-//   );
-// };
+  return (
+    <Fragment>
+      <StyledLabel htmlFor="base-text-input">
+        {text('Label Text', 'label text')}
+      </StyledLabel>
+      <BaseTextInput
+        ariaDescribedBy="helper-text"
+        color={select('Color', colorOptions, msBrightPurple)}
+        disabled={boolean('Disabled', false)}
+        error={boolean('Error', false)}
+        id="base-text-input"
+        onChange={handleChange}
+        placeholder={text('Placeholder', '')}
+        value={value}
+      />
+      <StyledSpan id="helper-text">
+        {text('Helper Text', 'helper text')}
+      </StyledSpan>
+    </Fragment>
+  );
+};
 
-// DefaultStory.story = { name: 'default' };
+AccessibleStory.story = { name: 'accessible' };
 
-// export const AccessibleStory = () => {
-//   const [value, setValue] = useState('');
+/** With Icon Adornment Story */
+export const WithIconAdornmentStory = () => {
+  const [value, setValue] = useState('');
 
-//   const handleChange = (e) => {
-//     action('onChange')();
-//     setValue(e.target.value);
-//   };
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
 
-//   return (
-//     <Fragment>
-//       <StyledLabel htmlFor="base-text-input">
-//         {text('Label Text', 'label text')}
-//       </StyledLabel>
-//       <BaseTextInput
-//         color={text('Color', msBrightPurple)}
-//         disabled={boolean('Disabled', false)}
-//         error={boolean('Error', false)}
-//         fullWidth={boolean('Full Width', false)}
-//         id="base-text-input"
-//         inputProps={{ 'aria-describedby': 'helper-text' }}
-//         onBlur={action('onBlur')}
-//         onChange={handleChange}
-//         placeholder={text('Placeholder', '')}
-//         readOnly={boolean('Read Only', false)}
-//         value={value}
-//       />
-//       <StyledSpan id="helper-text">
-//         {text('Helper Text', 'helper text')}
-//       </StyledSpan>
-//     </Fragment>
-//   );
-// };
+  const mockOnClick = boolean('onClick Passed', false) ? () => null : null;
 
-// AccessibleStory.story = { name: 'accessible' };
+  const iconOptions = {
+    inbox: 'inbox',
+    profile: 'profile',
+    warning: 'warning',
+  };
 
-// export const WithAdornmentStory = () => {
-//   const [value, setValue] = useState('');
+  const iconAdornment = {
+    color: select('Icon Color', colorOptions, msBrightPurple),
+    hoverColor: select('Icon Hover Color', colorOptions, msMainGreen),
+    iconName: select('Icon', iconOptions, 'profile'),
+    onClick: mockOnClick,
+    position: select('Adornment Position', positionOptions, 'start'),
+  };
 
-//   const handleChange = (e) => {
-//     action('onChange')();
-//     setValue(e.target.value);
-//   };
+  return (
+    <BaseTextInput
+      color={select('Color', colorOptions, msBrightPurple)}
+      disabled={boolean('Disabled', false)}
+      error={boolean('Error', false)}
+      iconAdornment={iconAdornment}
+      id="mock-id"
+      onChange={handleChange}
+      placeholder={text('Placeholder', '')}
+      value={value}
+    />
+  );
+};
 
-//   return (
-//     <BaseTextInput
-//       adornmentContent={
-//         IconDictionary(select('Icon', iconOptions, 'visibilityOff'), 'mediumSmall')
-//       }
-//       adornmentPlacement={select('Icon Placement', iconPlacementOptions, 'start')}
-//       color={text('Color', msBrightPurple)}
-//       disabled={boolean('Disabled', false)}
-//       error={boolean('Error', false)}
-//       fullWidth={boolean('Full Width', false)}
-//       id="mock-id"
-//       inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
-//       onBlur={action('onBlur')}
-//       onChange={handleChange}
-//       placeholder={text('Placeholder', '')}
-//       readOnly={boolean('Read Only', false)}
-//       value={value}
-//     />
-//   );
-// };
+WithIconAdornmentStory.story = { name: 'with icon adornment' };
 
-// WithAdornmentStory.story = { name: 'with adornment' };
+/** With Text Adornment Story */
+export const WithTextAdornmentStory = () => {
+  const [value, setValue] = useState('');
+
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
+
+  const mockOnClick = boolean('onClick Passed', false) ? () => null : null;
+
+  const {
+    font: {
+      montserrat,
+      overpass,
+      robotoCondensed,
+    },
+    size: {
+      s1,
+      s2,
+      s3,
+    },
+    weight: {
+      bold,
+      light,
+      normal,
+    },
+  } = typography;
+
+  const fontOptions = {
+    montserrat,
+    overpass,
+    robotoCondensed,
+  };
+
+  const sizeOptions = {
+    '1.2rem': s1,
+    '1.4rem': s2,
+    '1.6rem': s3,
+  };
+
+  const weightOptions = {
+    bold,
+    light,
+    normal,
+  };
+
+  const textAdornment = {
+    color: select('Text Adornment Color', colorOptions, msBrightPurple),
+    font: select('Text Adornment Font', fontOptions, robotoCondensed),
+    hoverColor: select('Text Adornment Hover Color', colorOptions, msMainGreen),
+    onClick: mockOnClick,
+    position: select('Adornment Position', positionOptions, 'start'),
+    size: select('Text Adornment Font Size', sizeOptions, '1.4rem'),
+    text: text('Text Adornment String', 'escrow'),
+    weight: select('Text Adornment Font Weight', weightOptions, normal),
+  };
+
+  return (
+    <BaseTextInput
+      color={select('Color', colorOptions, msBrightPurple)}
+      disabled={boolean('Disabled', false)}
+      error={boolean('Error', false)}
+      id="mock-id"
+      onChange={handleChange}
+      placeholder={text('Placeholder', '')}
+      textAdornment={textAdornment}
+      value={value}
+    />
+  );
+};
+
+WithTextAdornmentStory.story = { name: 'with text adornment' };
+
+// export const AutoFocusStory = () => {};
+// AutoFocusStory.story = { name: 'autofocus' };
+
+// export const SearchStory = () => {};
+// SearchStory.story = { name: 'with search' };

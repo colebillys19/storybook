@@ -1,18 +1,34 @@
 // import React from 'react';
 import styled from 'styled-components';
 import TextField from '@material-ui/core/TextField';
-import { typography } from '../../../utils/defaultStyleHelper';
+import {
+  typography,
+  msBrightPurple,
+  errorRed,
+} from '../../../utils/defaultStyleHelper';
 
 export const StyledTextField = styled(TextField)`
   background-color: white;
   border-radius: 0.5rem;
+  opacity: ${({ disabled }) => disabled ? '0.5' : '1'};
   & .input {
     font-size: ${typography.size.s2};
+    font-family: ${typography.font.overpass};
     min-height: 40px;
     padding: 0 1rem;
   }
   & .input:focus + fieldset {
-    border-color: green;
+    ${null/* eslint-disable indent */}
+    border-color: ${({ color, error }) => {
+      if (error) {
+        return errorRed;
+      }
+      if (color) {
+        return color;
+      }
+      return msBrightPurple;
+    }};
+    ${null/* eslint-enable indent */}
   }
   & * {
     transition: none;
