@@ -1,34 +1,46 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import T from 'prop-types';
 
 import { StyledTextField } from './styles/BaseTextInput.styles';
-import { getAdornment, validateProps } from './helpers';
+import {
+  getAdornment,
+  getDatalist,
+  validateProps,
+} from './helpers';
 
 const BaseTextInput = ({
   ariaDescribedBy,
   iconAdornment,
   InputProps,
   inputProps,
+  searchValues,
   textAdornment,
+  value,
   ...props
 }) => {
   validateProps(props);
   const adornmentProp = getAdornment(iconAdornment, textAdornment);
+  const { datalist, searchProps } = getDatalist(searchValues, value);
+  const ariaProp = ariaDescribedBy ? { 'aria-describedby': ariaDescribedBy } : null;
   /* eslint-disable react/jsx-no-duplicate-props */
   return (
-    <StyledTextField
-      InputProps={{
-        classes: { input: 'input', multiline: 'multiline' },
-        ...adornmentProp,
-        ...InputProps,
-      }}
-      inputProps={{
-        'aria-describedby': ariaDescribedBy,
-        ...inputProps,
-      }}
-      variant="outlined"
-      {...props}
-    />
+    <Fragment>
+      <StyledTextField
+        InputProps={{
+          classes: { input: 'input', multiline: 'multiline' },
+          ...adornmentProp,
+          ...InputProps,
+        }}
+        inputProps={{
+          ...ariaProp,
+          ...searchProps,
+          ...inputProps,
+        }}
+        variant="outlined"
+        {...props}
+      />
+      {datalist}
+    </Fragment>
   );
   /* eslint-enable react/jsx-no-duplicate-props */
 };
@@ -109,6 +121,10 @@ BaseTextInput.propTypes = {
   /** If true, the input element will be required. */
   required: T.bool,
 
+  /** If this prop is passed, the html input element will be of type 'search' and the values passed
+    * will be suggested in a dropdown as the user types. */
+  searchValues: T.array,
+
   /** Object detailing text to be displayed as adornment. Accepts the following values. If onClick
     * is provided, a text button will be rendered. Ensure font/weight passed are available
     * globally.
@@ -138,7 +154,6 @@ BaseTextInput.defaultProps = {
   autoFocus: false,
   disabled: false,
   error: false,
-  InputProps: {},
   readOnly: false,
   required: false,
   type: 'text',

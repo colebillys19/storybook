@@ -182,13 +182,13 @@ export const WithTextAdornmentStory = () => {
   };
 
   const textAdornment = {
-    color: select('Text Adornment Color', colorOptions, msBrightPurple),
+    color: select('Text Adornment Color', colorOptions, msMainGreen),
     font: select('Text Adornment Font', fontOptions, robotoCondensed),
-    hoverColor: select('Text Adornment Hover Color', colorOptions, msMainGreen),
+    hoverColor: select('Text Adornment Hover Color', colorOptions, msBrightPurple),
     onClick: mockOnClick,
     position: select('Adornment Position', positionOptions, 'start'),
     size: select('Text Adornment Font Size', sizeOptions, '1.4rem'),
-    text: text('Text Adornment String', 'escrow'),
+    text: text('Text Adornment String', 'Escrow'),
     weight: select('Text Adornment Font Weight', weightOptions, normal),
   };
 
@@ -208,8 +208,68 @@ export const WithTextAdornmentStory = () => {
 
 WithTextAdornmentStory.story = { name: 'with text adornment' };
 
-// export const AutoFocusStory = () => {};
-// AutoFocusStory.story = { name: 'autofocus' };
+/** Autofocus Story */
+export const AutofocusStory = () => {
+  const [value, setValue] = useState('');
 
-// export const SearchStory = () => {};
-// SearchStory.story = { name: 'with search' };
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
+
+  return (
+    <BaseTextInput
+      autoFocus
+      color={select('Color', colorOptions, msBrightPurple)}
+      disabled={boolean('Disabled', false)}
+      error={boolean('Error', false)}
+      id="mock-id"
+      onChange={handleChange}
+      placeholder={text('Placeholder', '')}
+      value={value}
+    />
+  );
+};
+
+AutofocusStory.story = { name: 'autofocus' };
+
+/** Search Story */
+export const SearchStory = () => {
+  const [value, setValue] = useState('');
+
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
+
+  const searchValues = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
+  return (
+    <BaseTextInput
+      color={select('Color', colorOptions, msBrightPurple)}
+      disabled={boolean('Disabled', false)}
+      error={boolean('Error', false)}
+      id="mock-id"
+      onChange={handleChange}
+      placeholder={text('Placeholder', '')}
+      searchValues={searchValues}
+      type="search"
+      value={value}
+    />
+  );
+};
+
+SearchStory.story = { name: 'with search' };

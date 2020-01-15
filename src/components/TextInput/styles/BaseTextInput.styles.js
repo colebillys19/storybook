@@ -16,6 +16,9 @@ export const StyledTextField = styled(TextField)`
     font-family: ${typography.font.overpass};
     min-height: 40px;
     padding: 0 1rem;
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
   }
   & .input:focus + fieldset {
     ${null/* eslint-disable indent */}

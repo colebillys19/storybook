@@ -6,7 +6,6 @@ import {
   ICON_TEXT_ADORNMENT_ERROR,
   INVALID_TYPE_ERROR,
   NO_ID_ERROR,
-  SEARCH_DATALIST_ERROR,
 } from './constants';
 import TextAdornment from './adornment-components/TextAdornment';
 import IconAdornment from './adornment-components/IconAdornment';
@@ -73,11 +72,7 @@ export const getAdornment = (iconAdornment, textAdornment) => {
  *
  */
 export const validateProps = (props) => {
-  const {
-    datalistId,
-    id,
-    type,
-  } = props;
+  const { id, type } = props;
 
   const typeOpts = ['email', 'number', 'search', 'tel', 'text', 'url'];
 
@@ -88,8 +83,36 @@ export const validateProps = (props) => {
   if (!typeOpts.includes(type)) {
     throw new Error(INVALID_TYPE_ERROR);
   }
+};
 
-  if (type === 'search' && !datalistId) {
-    throw new Error(SEARCH_DATALIST_ERROR);
-  }
+/**
+ * @description: ...
+ *
+ * @param name {type}: ...
+ *
+ */
+export const getRandomNumber = () => Math.random() * 10000000000;
+
+/**
+ * @description: ...
+ *
+ * @param name {type}: ...
+ *
+ */
+export const getDatalist = (searchValues, currentValue) => {
+  // don't show options if current value is one of the options
+  const isSearchValue = searchValues.includes(currentValue);
+
+  const datalist = searchValues && !isSearchValue ? (
+    <datalist id="datalist-id">
+      {searchValues.map((value) => <option key={`${value}${getRandomNumber()}`} value={value} />)}
+    </datalist>
+  ) : null;
+
+  const searchProps = searchValues && !isSearchValue ? {
+    list: 'datalist-id',
+    type: 'search',
+  } : null;
+
+  return { datalist, searchProps };
 };
