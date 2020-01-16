@@ -54,7 +54,7 @@ export const validateProps = (props) => {
     type,
   } = props;
 
-  const typeOpts = ['number', 'password', 'search', 'text'];
+  const typeOpts = ['email', 'number', 'password', 'search', 'text'];
 
   if (!id) {
     throw new Error(NO_ID_ERROR);

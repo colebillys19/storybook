@@ -12,11 +12,12 @@
     "react": "16.9.0",
     "react-dates": "21.3.2",
     "react-dom": "16.9.0",
+    "react-number-format": "4.3.1",
     "react-router-dom": "5.1.2",
     "react-scripts": "3.1.1",
-    "react-text-mask": "5.4.3",
     "styled-components": "4.0.2",
-    "uuid": "3.3.3"
+    "uuid": "3.3.3",
+    "validator": "12.1.0"
   },
   "scripts": {
     "build": "BABEL_ENV=production babel src -d compiled",
