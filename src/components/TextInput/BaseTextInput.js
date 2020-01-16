@@ -139,10 +139,10 @@ BaseTextInput.propTypes = {
   }),
 
   /** Specifies the type attribute passed to the underlying input element. Accepts one of the
-    * following: email, number, search, tel, text (default), or url. Note that if 'search' is
+    * following: number, password, search, or text (default). Note that if 'search' is
     * passed, you'll need to pass a datalistId prop as well.
     */
-  type: T.oneOf(['email', 'number', 'search', 'tel', 'text', 'url']),
+  type: T.oneOf(['number', 'password', 'search', 'text']),
 
   /** The value of the input element, required for a controlled component. */
   value: T.any,

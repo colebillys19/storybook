@@ -85,7 +85,7 @@ export const AccessibleStory = () => {
         value={value}
       />
       <StyledSpan id="helper-text">
-        {text('Helper Text', 'Hint: childhood street name')}
+        {text('Helper Text', 'Hint: (some password hint)')}
       </StyledSpan>
     </Fragment>
   );

@@ -16,7 +16,7 @@ import {
   ssMainBlue,
   ssYellow,
 } from '../../../utils/defaultStyleHelper';
-import { StyledLabel, StyledSpan } from '../styles/TextAreaInput.styles';
+import { StyledLabel, StyledSpan } from '../styles/accessibilityStyles';
 
 export default {
   decorators: [withKnobs],
