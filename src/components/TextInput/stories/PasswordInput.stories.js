@@ -1,17 +1,22 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import {
   boolean,
-  // select,
+  select,
   text,
   withKnobs,
 } from '@storybook/addon-knobs';
 
 import PasswordInput from '../PasswordInput';
 import PasswordInputDocs from '../docs/PasswordInput.docs.mdx';
-import { msBrightPurple } from '../../../utils/defaultStyleHelper';
-// import { StyledLabel, StyledSpan } from '../styles/PasswordInput.styles';
-// import IconDictionary from '../../../utils/IconDictionary';
+import {
+  msBrightPurple,
+  msMainGreen,
+  muiRed,
+  ssMainBlue,
+  ssYellow,
+} from '../../../utils/defaultStyleHelper';
+import { StyledLabel, StyledSpan } from '../styles/accessibilityStyles';
 
 export default {
   decorators: [withKnobs],
@@ -19,14 +24,17 @@ export default {
   title: 'Inputs|PasswordInput',
 };
 
-// const iconOptions = {
-//   Inbox: 'inbox',
-//   Profile: 'profile',
-//   Warning: 'warning',
-// };
+const colorOptions = {
+  msBrightPurple,
+  msMainGreen,
+  muiRed,
+  ssMainBlue,
+  ssYellow,
+};
 
-// const iconPlacementOptions = { End: 'end', Start: 'start' };
+const positionOptions = { end: 'end', start: 'start' };
 
+/** Default Story */
 export const DefaultStory = () => {
   const [value, setValue] = useState('');
 
@@ -37,16 +45,13 @@ export const DefaultStory = () => {
 
   return (
     <PasswordInput
-      color={text('Color', msBrightPurple)}
+      buttonPosition={select('Button Position', positionOptions, 'end')}
+      color={select('Color', colorOptions, msBrightPurple)}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
-      fullWidth={boolean('Full Width', false)}
       id="mock-id"
-      inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
-      onBlur={action('onBlur')}
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
-      readOnly={boolean('Read Only', false)}
       value={value}
     />
   );
@@ -54,68 +59,62 @@ export const DefaultStory = () => {
 
 DefaultStory.story = { name: 'default' };
 
-// export const AccessibleStory = () => {
-//   const [value, setValue] = useState('');
+/** Accessible Story */
+export const AccessibleStory = () => {
+  const [value, setValue] = useState('');
 
-//   const handleChange = (e) => {
-//     action('onChange')();
-//     setValue(e.target.value);
-//   };
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
 
-//   return (
-//     <Fragment>
-//       <StyledLabel htmlFor="base-text-input">
-//         {text('Label Text', 'label text')}
-//       </StyledLabel>
-//       <PasswordInput
-//         color={text('Color', msBrightPurple)}
-//         disabled={boolean('Disabled', false)}
-//         error={boolean('Error', false)}
-//         fullWidth={boolean('Full Width', false)}
-//         id="base-text-input"
-//         inputProps={{ 'aria-describedby': 'helper-text' }}
-//         onBlur={action('onBlur')}
-//         onChange={handleChange}
-//         placeholder={text('Placeholder', '')}
-//         readOnly={boolean('Read Only', false)}
-//         value={value}
-//       />
-//       <StyledSpan id="helper-text">
-//         {text('Helper Text', 'helper text')}
-//       </StyledSpan>
-//     </Fragment>
-//   );
-// };
+  return (
+    <Fragment>
+      <StyledLabel htmlFor="base-text-input">
+        {text('Label Text', 'Password')}
+      </StyledLabel>
+      <PasswordInput
+        ariaDescribedBy="helper-text"
+        buttonPosition={select('Button Position', positionOptions, 'end')}
+        color={select('Color', colorOptions, msBrightPurple)}
+        disabled={boolean('Disabled', false)}
+        error={boolean('Error', false)}
+        id="base-text-input"
+        onChange={handleChange}
+        placeholder={text('Placeholder', '')}
+        value={value}
+      />
+      <StyledSpan id="helper-text">
+        {text('Helper Text', 'Hint: childhood street name')}
+      </StyledSpan>
+    </Fragment>
+  );
+};
 
-// AccessibleStory.story = { name: 'accessible' };
+AccessibleStory.story = { name: 'accessible' };
 
-// export const WithAdornmentStory = () => {
-//   const [value, setValue] = useState('');
+/** Autofocus Story */
+export const AutofocusStory = () => {
+  const [value, setValue] = useState('');
 
-//   const handleChange = (e) => {
-//     action('onChange')();
-//     setValue(e.target.value);
-//   };
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
 
-//   return (
-//     <PasswordInput
-//       adornmentContent={
-//         IconDictionary(select('Icon', iconOptions, 'inbox'), 'mediumSmall')
-//       }
-//       adornmentPlacement={select('Icon Placement', iconPlacementOptions, 'start')}
-//       color={text('Color', msBrightPurple)}
-//       disabled={boolean('Disabled', false)}
-//       error={boolean('Error', false)}
-//       fullWidth={boolean('Full Width', false)}
-//       id="mock-id"
-//       inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
-//       onBlur={action('onBlur')}
-//       onChange={handleChange}
-//       placeholder={text('Placeholder', '')}
-//       readOnly={boolean('Read Only', false)}
-//       value={value}
-//     />
-//   );
-// };
+  return (
+    <PasswordInput
+      autoFocus
+      buttonPosition={select('Button Position', positionOptions, 'end')}
+      color={select('Color', colorOptions, msBrightPurple)}
+      disabled={boolean('Disabled', false)}
+      error={boolean('Error', false)}
+      id="mock-id"
+      onChange={handleChange}
+      placeholder={text('Placeholder', '')}
+      value={value}
+    />
+  );
+};
 
-// WithAdornmentStory.story = { name: 'with adornment' };
+AutofocusStory.story = { name: 'autofocus' };

@@ -17,7 +17,6 @@ import {
   ssYellow,
 } from '../../../utils/defaultStyleHelper';
 import { StyledLabel, StyledSpan } from '../styles/TextAreaInput.styles';
-// import IconDictionary from '../../../utils/IconDictionary';
 
 export default {
   decorators: [withKnobs],

@@ -54,7 +54,6 @@ export const validateProps = (props) => {
     type,
   } = props;
 
-
   const typeOpts = ['email', 'number', 'search', 'tel', 'text', 'url'];
 
   if (!id) {

@@ -36,6 +36,7 @@ export const muiBoxShadow = `0px 5px 5px -3px rgba(0,0,0,0.2),
 export const muiBlue = '#2196f3';
 export const muiRed = '#f44336';
 export const successGreen = '#5DBA9C';
+export const passwordVisibilityHoverGrey = '#555';
 
 // icons
 export const iconSize = {

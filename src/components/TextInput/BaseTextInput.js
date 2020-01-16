@@ -35,9 +35,9 @@ const BaseTextInput = ({
     <Fragment>
       <StyledTextField
         InputProps={{
-          classes: { input: 'input', multiline: 'multiline' },
           ...adornmentProp,
           ...InputProps,
+          classes: { input: 'input', multiline: 'multiline' },
         }}
         inputProps={{
           ...ariaProp,
@@ -82,7 +82,7 @@ BaseTextInput.propTypes = {
   /** If true, the input will indicate an error. */
   error: T.bool,
 
-  /** Object detailing icon to be displayed as adornment. Accepts the following values. If onClick
+  /** Object detailing icon to be displayed as adornment. If onClick
     * is provided, an icon button will be rendered.
     */
   iconAdornment: T.shape({
@@ -124,9 +124,9 @@ BaseTextInput.propTypes = {
     */
   searchValues: T.array,
 
-  /** Object detailing text to be displayed as adornment. Accepts the following values. If onClick
+  /** Object detailing text to be displayed as adornment. If onClick
     * is provided, a text button will be rendered. Ensure font/weight passed are available
-    * globally.
+    * globally. (font string example: `'Montserrat', sans-serif`)
     */
   textAdornment: T.shape({
     color: T.string,

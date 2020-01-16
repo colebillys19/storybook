@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import IconButton from '@material-ui/core/IconButton';
 
@@ -10,7 +11,7 @@ export const IconWrapper = styled.div`
   width: 3.1rem;
 `;
 
-export const StyledIconButton = styled(IconButton)`
+export const StyledIconButton = styled(({ hoverColor, ...props }) => <IconButton {...props} />)`
   margin: ${({ position }) => position === 'start' ? '0 -1rem 0 -0.4rem' : '0 -0.4rem 0 -1rem'};
   &:hover {
     & svg {

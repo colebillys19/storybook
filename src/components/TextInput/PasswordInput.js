@@ -2,102 +2,106 @@ import React, { useState } from 'react';
 import T from 'prop-types';
 
 import BaseTextInput from './BaseTextInput';
-import { StyledIconButton } from './styles/PasswordInput.styles';
-import IconDictionary from '../../utils/IconDictionary';
+import { msDarkGrey, passwordVisibilityHoverGrey } from '../../utils/defaultStyleHelper';
+import { PASSWORD_BUTTON_POSITION_ERROR } from './constants';
 
 const PasswordInput = ({
-  adornmentPlacement,
+  buttonPosition,
+  defaultValue,
+  iconAdornment,
+  InputProps,
   inputProps,
+  placeholder,
+  searchValues,
+  textAdornment,
+  type,
   ...props
-}) => { // eslint-disable-line
+}) => {
+  // destructured props that aren't used is intentional
+  // (BaseTextInput props that shouldn't be changed)
+
   const [visibility, toggleVisibility] = useState(false);
 
-  const handleMouseDownPassword = (e) => {
+  const handleClick = (e) => {
     e.preventDefault();
+    toggleVisibility(!visibility);
   };
 
-  const adornmentContent = (
-    <StyledIconButton
-      adornmentPlacement={adornmentPlacement}
-      aria-label="toggle password visibility"
-      onClick={() => toggleVisibility(!visibility)}
-      onMouseDown={handleMouseDownPassword}
-    >
-      {visibility ? (
-        IconDictionary('visibility', 'mediumSmall')
-      ) : (
-        IconDictionary('visibilityOff', 'mediumSmall')
-      )}
-    </StyledIconButton>
-  );
+  if (buttonPosition !== 'start' && buttonPosition !== 'end') {
+    throw new Error(PASSWORD_BUTTON_POSITION_ERROR);
+  }
+
+  const adornment = {
+    color: msDarkGrey,
+    hoverColor: passwordVisibilityHoverGrey,
+    iconName: visibility ? 'visibility' : 'visibilityOff',
+    onClick: handleClick,
+    position: buttonPosition,
+  };
 
   return (
     <BaseTextInput
-      adornmentContent={adornmentContent}
-      adornmentPlacement={adornmentPlacement}
       autoComplete="off"
-      inputProps={{ type: visibility ? 'text' : 'password', ...inputProps }}
-      isPassword
+      iconAdornment={adornment}
+      inputProps={{ ...inputProps, type: visibility ? 'text' : 'password' }}
       {...props}
     />
   );
 };
 
 PasswordInput.propTypes = {
-  /** */
-  adornmentPlacement: T.oneOf(['start', 'end']),
-  /** If true, the input element will be focused during the first mount. */
+  /** If BaseTextInput has an associated helper text element, pass a string that matches that
+    * element's 'id' attribute.
+    */
+  ariaDescribedBy: T.string,
+
+  /** If true, the input element will be focused on mount. */
   autoFocus: T.bool,
+
+  /** Position of the visibility button. */
+  buttonPosition: T.oneOf(['start', 'end']),
+
   /** Override or extend the styles applied to the component. See CSS API below for more details. */
   classes: T.object,
-  /** The CSS class name of the wrapper element. */
-  className: T.string,
+
   /** The color of the input border on focus. */
   color: T.string,
-  /** The default input element value. Use when the component is not controlled. */
-  defaultValue: T.any,
+
   /** If true, the input element will be disabled. */
   disabled: T.bool,
+
   /** If true, the input will indicate an error. */
   error: T.bool,
-  /** If true, the input will take up the full width of its container. */
-  fullWidth: T.bool,
+
   /** The id of the input element. Ensure the input label's 'for' attribute has a matching value. */
   id: T.string.isRequired,
-  /** Attributes applied to the input element. Ensure the 'aria-describedby' string matches the
-    * helper text element's 'id' attribute.
-    */
+
+  /** Attributes applied to the html input element. */
   inputProps: T.object,
+
   /** Pass a ref to the input element. */
   inputRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
-  /** Name attribute of the input element. */
-  name: T.string,
-  /** Callback fired when the input is blurred. Notice that the first argument (event) might be
-    * undefined.
+
+  /** Name attribute of the input element. Used to reference form data after a form is
+    * submitted.
     */
-  onBlur: T.func,
+  name: T.string,
+
   /** Callback fired when the value is changed. */
   onChange: T.func,
-  /** The short hint displayed in the input before the user enters a value. */
-  placeholder: T.string,
-  /** It prevents the user from changing the value of the field (not from interacting with the
-    * field).
-    */
-  readOnly: T.bool,
+
   /** If true, the input element will be required. */
   required: T.bool,
+
   /** The value of the input element, required for a controlled component. */
   value: T.any,
 };
 
 PasswordInput.defaultProps = {
-  adornmentPlacement: 'end',
   autoFocus: false,
+  buttonPosition: 'end',
   disabled: false,
   error: false,
-  fullWidth: false,
-  inputProps: {},
-  readOnly: false,
   required: false,
 };
 

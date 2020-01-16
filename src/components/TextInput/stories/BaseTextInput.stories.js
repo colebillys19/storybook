@@ -17,8 +17,7 @@ import {
   ssYellow,
   typography,
 } from '../../../utils/defaultStyleHelper';
-import { StyledLabel, StyledSpan } from '../styles/BaseTextInput.styles';
-// import IconDictionary from '../../../utils/IconDictionary';
+import { StyledLabel, StyledSpan } from '../styles/accessibilityStyles';
 
 export default {
   decorators: [withKnobs],

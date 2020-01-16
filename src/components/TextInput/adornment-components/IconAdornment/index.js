@@ -6,6 +6,7 @@ import { IconWrapper, StyledIconButton } from './styledComponents';
 
 const IconAdornment = ({
   color,
+  hoverColor,
   iconName,
   onClick,
   ...props
@@ -19,7 +20,13 @@ const IconAdornment = ({
   const icon = IconDictionary(iconName, 'adornment', styles);
   if (onClick) {
     return (
-      <StyledIconButton size="small" {...props}>
+      <StyledIconButton
+        hoverColor={hoverColor}
+        onClick={onClick}
+        onMouseDown={(e) => e.preventDefault()}
+        size="small"
+        {...props}
+      >
         {icon}
       </StyledIconButton>
     );
