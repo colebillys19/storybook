@@ -264,7 +264,7 @@ export const SearchStory = () => {
       error={boolean('Error', false)}
       id="mock-id"
       onChange={handleChange}
-      placeholder={text('Placeholder', '')}
+      placeholder={text('Placeholder', 'Enter month...')}
       searchValues={searchValues}
       type="search"
       value={value}

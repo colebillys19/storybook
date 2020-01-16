@@ -2,14 +2,22 @@ import React, { Fragment, useState } from 'react';
 import { action } from '@storybook/addon-actions';
 import {
   boolean,
+  select,
   text,
   withKnobs,
 } from '@storybook/addon-knobs';
 
 import TextAreaInput from '../TextAreaInput';
 import TextAreaInputDocs from '../docs/TextAreaInput.docs.mdx';
-import { msBrightPurple } from '../../../utils/defaultStyleHelper';
+import {
+  msBrightPurple,
+  msMainGreen,
+  muiRed,
+  ssMainBlue,
+  ssYellow,
+} from '../../../utils/defaultStyleHelper';
 import { StyledLabel, StyledSpan } from '../styles/TextAreaInput.styles';
+// import IconDictionary from '../../../utils/IconDictionary';
 
 export default {
   decorators: [withKnobs],
@@ -17,6 +25,15 @@ export default {
   title: 'Inputs|TextAreaInput',
 };
 
+const colorOptions = {
+  msBrightPurple,
+  msMainGreen,
+  muiRed,
+  ssMainBlue,
+  ssYellow,
+};
+
+/** Default Story */
 export const DefaultStory = () => {
   const [value, setValue] = useState('');
 
@@ -27,16 +44,12 @@ export const DefaultStory = () => {
 
   return (
     <TextAreaInput
-      color={text('Color', msBrightPurple)}
+      color={select('Color', colorOptions, msBrightPurple)}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
-      fullWidth={boolean('Full Width', false)}
       id="mock-id"
-      inputProps={{ 'aria-describedby': 'mock-aria-describedby' }}
-      onBlur={action('onBlur')}
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
-      readOnly={boolean('Read Only', false)}
       value={value}
     />
   );
@@ -44,6 +57,7 @@ export const DefaultStory = () => {
 
 DefaultStory.story = { name: 'default' };
 
+/** Accessible Story */
 export const AccessibleStory = () => {
   const [value, setValue] = useState('');
 
@@ -58,16 +72,13 @@ export const AccessibleStory = () => {
         {text('Label Text', 'label text')}
       </StyledLabel>
       <TextAreaInput
-        color={text('Color', msBrightPurple)}
+        ariaDescribedBy="helper-text"
+        color={select('Color', colorOptions, msBrightPurple)}
         disabled={boolean('Disabled', false)}
         error={boolean('Error', false)}
-        fullWidth={boolean('Full Width', false)}
         id="base-text-input"
-        inputProps={{ 'aria-describedby': 'helper-text' }}
-        onBlur={action('onBlur')}
         onChange={handleChange}
         placeholder={text('Placeholder', '')}
-        readOnly={boolean('Read Only', false)}
         value={value}
       />
       <StyledSpan id="helper-text">
@@ -78,3 +89,28 @@ export const AccessibleStory = () => {
 };
 
 AccessibleStory.story = { name: 'accessible' };
+
+/** Autofocus Story */
+export const AutofocusStory = () => {
+  const [value, setValue] = useState('');
+
+  const handleChange = (e) => {
+    action('onChange')();
+    setValue(e.target.value);
+  };
+
+  return (
+    <TextAreaInput
+      autoFocus
+      color={select('Color', colorOptions, msBrightPurple)}
+      disabled={boolean('Disabled', false)}
+      error={boolean('Error', false)}
+      id="mock-id"
+      onChange={handleChange}
+      placeholder={text('Placeholder', '')}
+      value={value}
+    />
+  );
+};
+
+AutofocusStory.story = { name: 'autofocus' };

@@ -18,10 +18,18 @@ const BaseTextInput = ({
   value,
   ...props
 }) => {
-  validateProps(props);
+  validateProps({
+    iconAdornment,
+    textAdornment,
+    ...props,
+  });
+
   const adornmentProp = getAdornment(iconAdornment, textAdornment);
+
   const { datalist, searchProps } = getDatalist(searchValues, value);
+
   const ariaProp = ariaDescribedBy ? { 'aria-describedby': ariaDescribedBy } : null;
+
   /* eslint-disable react/jsx-no-duplicate-props */
   return (
     <Fragment>
@@ -46,16 +54,17 @@ const BaseTextInput = ({
 };
 
 BaseTextInput.propTypes = {
-  /** If BaseTextInput has associated helper text, pass a string as this prop that matches the
-    * helper text element's 'id' attribute. */
+  /** If BaseTextInput has an associated helper text element, pass a string that matches that
+    * element's 'id' attribute.
+    */
   ariaDescribedBy: T.string,
 
   /** This prop helps users to fill forms faster, especially on mobile devices. (e.g. name, email,
-    * tel, etc.)
+    * tel, etc.) See notes for more information.
     */
   autoComplete: T.string,
 
-  /** If true, the input element will be focused during the first mount. */
+  /** If true, the input element will be focused on mount. */
   autoFocus: T.bool,
 
   /** Override or extend the styles applied to the component. See CSS API below for more details. */
@@ -63,12 +72,6 @@ BaseTextInput.propTypes = {
 
   /** The color of the input border on focus. */
   color: T.string,
-
-  /** The id of the associated <datalist /> element. If 'search' is passed as the type prop, the
-    * input needs to be associated with a <datalist /> element containing search suggestions as
-    * nested <option />'s.
-    */
-  datalistId: T.string,
 
   /** The default input element value. Use when the component is not controlled. */
   defaultValue: T.any,
@@ -113,16 +116,12 @@ BaseTextInput.propTypes = {
   /** The short hint displayed in the input before the user enters a value. */
   placeholder: T.string,
 
-  /** It prevents the user from changing the value of the field (not from interacting with the
-    * field).
-    */
-  readOnly: T.bool,
-
   /** If true, the input element will be required. */
   required: T.bool,
 
   /** If this prop is passed, the html input element will be of type 'search' and the values passed
-    * will be suggested in a dropdown as the user types. */
+    * will be suggested in a dropdown as the user types.
+    */
   searchValues: T.array,
 
   /** Object detailing text to be displayed as adornment. Accepts the following values. If onClick
@@ -154,7 +153,6 @@ BaseTextInput.defaultProps = {
   autoFocus: false,
   disabled: false,
   error: false,
-  readOnly: false,
   required: false,
   type: 'text',
 };

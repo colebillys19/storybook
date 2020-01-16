@@ -11,9 +11,10 @@ import TextAdornment from './adornment-components/TextAdornment';
 import IconAdornment from './adornment-components/IconAdornment';
 
 /**
- * @description: ...
+ * @description: assembles adornment content based on object passed
  *
- * @param name {type}: ...
+ * @param iconAdornment {object}: contains values used to assemble icon adornment
+ * @param textAdornment {object}: contains values used to assemble text adornment
  *
  */
 export const getAdornment = (iconAdornment, textAdornment) => {
@@ -22,43 +23,17 @@ export const getAdornment = (iconAdornment, textAdornment) => {
     return null;
   }
 
-  // if both adornments passed, throw error
-  if (iconAdornment && textAdornment) {
-    throw new Error(ICON_TEXT_ADORNMENT_ERROR);
-  }
+  const adornmentComponent = iconAdornment ? (
+    <IconAdornment {...iconAdornment} />
+  ) : (
+    <TextAdornment {...textAdornment} />
+  );
 
-  if (iconAdornment) {
-    const { position } = iconAdornment;
-
-    // check for valid position
-    if (position !== 'start' && position !== 'end') {
-      throw new Error(ADORNMENT_POSITION_ERROR);
-    }
-
-    const adornment = (
-      <InputAdornment position={position}>
-        <IconAdornment {...iconAdornment} />
-      </InputAdornment>
-    );
-
-    return { [`${position}Adornment`]: adornment };
-  }
-
-
-  const { onClick, position, ...textAdornmentValues } = textAdornment;
-
-  // check for valid position
-  if (position !== 'start' && position !== 'end') {
-    throw new Error(ADORNMENT_POSITION_ERROR);
-  }
+  const { position } = iconAdornment || textAdornment;
 
   const adornment = (
     <InputAdornment position={position}>
-      <TextAdornment
-        onClick={onClick}
-        position={position}
-        {...textAdornmentValues}
-      />
+      {adornmentComponent}
     </InputAdornment>
   );
 
@@ -66,13 +41,19 @@ export const getAdornment = (iconAdornment, textAdornment) => {
 };
 
 /**
- * @description: ...
+ * @description: ensures props passed to BaseTextInput are valid
  *
- * @param name {type}: ...
+ * @param props {object}: BaseTextInput props
  *
  */
 export const validateProps = (props) => {
-  const { id, type } = props;
+  const {
+    iconAdornment,
+    id,
+    textAdornment,
+    type,
+  } = props;
+
 
   const typeOpts = ['email', 'number', 'search', 'tel', 'text', 'url'];
 
@@ -83,25 +64,36 @@ export const validateProps = (props) => {
   if (!typeOpts.includes(type)) {
     throw new Error(INVALID_TYPE_ERROR);
   }
+
+  if (iconAdornment && textAdornment) {
+    throw new Error(ICON_TEXT_ADORNMENT_ERROR);
+  }
+
+  if (iconAdornment && iconAdornment.position !== 'start' && iconAdornment.position !== 'end') {
+    throw new Error(ADORNMENT_POSITION_ERROR);
+  }
+
+  if (textAdornment && textAdornment.position !== 'start' && textAdornment.position !== 'end') {
+    throw new Error(ADORNMENT_POSITION_ERROR);
+  }
 };
 
 /**
- * @description: ...
- *
- * @param name {type}: ...
- *
+ * @description: produces random 10 digit number
  */
 export const getRandomNumber = () => Math.random() * 10000000000;
 
 /**
- * @description: ...
+ * @description: assembles datalist element based on search values passed, provides relevant props
+ *               to pass to input element
  *
- * @param name {type}: ...
+ * @param searchValues {array}: strings to be mapped as options for the datalist element
+ * @param currentValue {string}: current value of text input
  *
  */
 export const getDatalist = (searchValues, currentValue) => {
   // don't show options if current value is one of the options
-  const isSearchValue = searchValues.includes(currentValue);
+  const isSearchValue = searchValues && searchValues.includes(currentValue);
 
   const datalist = searchValues && !isSearchValue ? (
     <datalist id="datalist-id">
