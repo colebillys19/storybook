@@ -50,9 +50,9 @@ const PasswordInput = ({
 };
 
 PasswordInput.propTypes = {
-  /** If BaseTextInput has an associated helper text element, pass a string that matches that
-    * element's 'id' attribute.
-    */
+  /** If PasswordInput has an associated helper text element, pass a string that matches that
+   * element's 'id' attribute.
+   */
   ariaDescribedBy: T.string,
 
   /** If true, the input element will be focused on mount. */
@@ -83,8 +83,8 @@ PasswordInput.propTypes = {
   inputRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
 
   /** Name attribute of the input element. Used to reference form data after a form is
-    * submitted.
-    */
+   * submitted.
+   */
   name: T.string,
 
   /** Callback fired when the value is changed. */

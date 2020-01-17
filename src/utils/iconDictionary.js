@@ -22,6 +22,7 @@ import Warning from '@material-ui/icons/Warning';
 import { iconSize } from './defaultStyleHelper';
 
 /**
+ * IconDictionary
  * @description: Creates a formatted icon, based on name, size, color, and options
  *
  * @param name {string}: the name/label of the icon to use

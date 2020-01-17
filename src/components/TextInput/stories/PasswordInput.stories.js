@@ -9,30 +9,20 @@ import {
 
 import PasswordInput from '../PasswordInput';
 import PasswordInputDocs from '../docs/PasswordInput.docs.mdx';
+import { msBrightPurple } from '../../../utils/defaultStyleHelper';
 import {
-  msBrightPurple,
-  msMainGreen,
-  muiRed,
-  ssMainBlue,
-  ssYellow,
-} from '../../../utils/defaultStyleHelper';
-import { StyledLabel, StyledSpan } from '../styles/accessibilityStyles';
+  colorOptions,
+  positionOptions,
+  StyledLabel,
+  StyledSpan,
+  variantOptions,
+} from '../../../utils/storyConstants';
 
 export default {
   decorators: [withKnobs],
   parameters: { component: PasswordInput, docs: { page: PasswordInputDocs } },
   title: 'Inputs|PasswordInput',
 };
-
-const colorOptions = {
-  msBrightPurple,
-  msMainGreen,
-  muiRed,
-  ssMainBlue,
-  ssYellow,
-};
-
-const positionOptions = { end: 'end', start: 'start' };
 
 /** Default Story */
 export const DefaultStory = () => {
@@ -83,6 +73,7 @@ export const AccessibleStory = () => {
         onChange={handleChange}
         placeholder={text('Placeholder', '')}
         value={value}
+        variant={select('Variant', variantOptions, 'outlined')}
       />
       <StyledSpan id="helper-text">
         {text('Helper Text', 'Hint: (some password hint)')}
@@ -113,6 +104,7 @@ export const AutofocusStory = () => {
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
       value={value}
+      variant={select('Variant', variantOptions, 'outlined')}
     />
   );
 };

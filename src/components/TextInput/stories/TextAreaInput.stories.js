@@ -9,27 +9,18 @@ import {
 
 import TextAreaInput from '../TextAreaInput';
 import TextAreaInputDocs from '../docs/TextAreaInput.docs.mdx';
+import { msBrightPurple } from '../../../utils/defaultStyleHelper';
 import {
-  msBrightPurple,
-  msMainGreen,
-  muiRed,
-  ssMainBlue,
-  ssYellow,
-} from '../../../utils/defaultStyleHelper';
-import { StyledLabel, StyledSpan } from '../styles/accessibilityStyles';
+  colorOptions,
+  StyledLabel,
+  StyledSpan,
+  variantOptions,
+} from '../../../utils/storyConstants';
 
 export default {
   decorators: [withKnobs],
   parameters: { component: TextAreaInput, docs: { page: TextAreaInputDocs } },
   title: 'Inputs|TextAreaInput',
-};
-
-const colorOptions = {
-  msBrightPurple,
-  msMainGreen,
-  muiRed,
-  ssMainBlue,
-  ssYellow,
 };
 
 /** Default Story */
@@ -50,6 +41,7 @@ export const DefaultStory = () => {
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
       value={value}
+      variant={select('Variant', variantOptions, 'outlined')}
     />
   );
 };
@@ -79,6 +71,7 @@ export const AccessibleStory = () => {
         onChange={handleChange}
         placeholder={text('Placeholder', '')}
         value={value}
+        variant={select('Variant', variantOptions, 'outlined')}
       />
       <StyledSpan id="helper-text">
         {text('Helper Text', 'helper text')}
@@ -108,6 +101,7 @@ export const AutofocusStory = () => {
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
       value={value}
+      variant={select('Variant', variantOptions, 'outlined')}
     />
   );
 };

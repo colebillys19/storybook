@@ -7,10 +7,12 @@ import {
   INVALID_TYPE_ERROR,
   NO_ID_ERROR,
 } from './constants';
+import { errorRed, msBrightPurple } from '../../utils/defaultStyleHelper';
 import TextAdornment from './adornment-components/TextAdornment';
 import IconAdornment from './adornment-components/IconAdornment';
 
 /**
+ * getAdornment
  * @description: assembles adornment content based on object passed
  *
  * @param iconAdornment {object}: contains values used to assemble icon adornment
@@ -41,6 +43,7 @@ export const getAdornment = (iconAdornment, textAdornment) => {
 };
 
 /**
+ * validateProps
  * @description: ensures props passed to BaseTextInput are valid
  *
  * @param props {object}: BaseTextInput props
@@ -78,11 +81,13 @@ export const validateProps = (props) => {
 };
 
 /**
+ * getRandomNumber
  * @description: produces random 10 digit number
  */
 export const getRandomNumber = () => Math.random() * 10000000000;
 
 /**
+ * getDatalist
  * @description: assembles datalist element based on search values passed, provides relevant props
  *               to pass to input element
  *
@@ -106,4 +111,19 @@ export const getDatalist = (searchValues, currentValue) => {
   } : null;
 
   return { datalist, searchProps };
+};
+
+
+/**
+ * getBorderColor
+ * @description: used with BaseTextInput styles to determine border color
+ */
+export const getBorderColor = (color, error) => {
+  if (error) {
+    return errorRed;
+  }
+  if (color) {
+    return color;
+  }
+  return msBrightPurple;
 };

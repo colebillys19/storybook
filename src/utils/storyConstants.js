@@ -1,4 +1,14 @@
-import { msBrightPurple, msDarkGrey, msMainGreen } from './defaultStyleHelper';
+import styled from 'styled-components';
+
+import {
+  msBrightPurple,
+  msDarkGrey,
+  msMainGreen,
+  muiOrange,
+  muiRed,
+  ssMainBlue,
+  ssYellow,
+} from './defaultStyleHelper';
 
 export const iconOptions = {
   cancel: 'cancel',
@@ -47,3 +57,28 @@ export const placementOptions = {
   'left-end': 'left-end',
 };
 /* eslint-enable */
+
+export const StyledLabel = styled.label`
+  display: block;
+  margin: 0 0 0.2rem 0.5rem;
+`;
+
+export const StyledSpan = styled.span`
+  display: block;
+  margin: 0.4rem 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #666;
+`;
+
+export const colorOptions = {
+  msBrightPurple,
+  msMainGreen,
+  muiOrange,
+  muiRed,
+  ssMainBlue,
+  ssYellow,
+};
+
+export const positionOptions = { end: 'end', start: 'start' };
+
+export const variantOptions = { outlined: 'outlined', standard: 'standard' };

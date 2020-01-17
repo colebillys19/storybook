@@ -12,28 +12,21 @@ import NumberInputDocs from '../docs/NumberInput.docs.mdx';
 import {
   msBrightPurple,
   msMainGreen,
-  muiRed,
-  ssMainBlue,
-  ssYellow,
   typography,
 } from '../../../utils/defaultStyleHelper';
-import { StyledLabel, StyledSpan } from '../styles/accessibilityStyles';
+import {
+  colorOptions,
+  positionOptions,
+  StyledLabel,
+  StyledSpan,
+  variantOptions,
+} from '../../../utils/storyConstants';
 
 export default {
   decorators: [withKnobs],
   parameters: { component: NumberInput, docs: { page: NumberInputDocs } },
   title: 'Inputs|NumberInput',
 };
-
-const colorOptions = {
-  msBrightPurple,
-  msMainGreen,
-  muiRed,
-  ssMainBlue,
-  ssYellow,
-};
-
-const positionOptions = { end: 'end', start: 'start' };
 
 /** Default Story */
 export const DefaultStory = () => {
@@ -53,6 +46,7 @@ export const DefaultStory = () => {
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
       value={value}
+      variant={select('Variant', variantOptions, 'outlined')}
     />
   );
 };
@@ -82,6 +76,7 @@ export const AccessibleStory = () => {
         onChange={handleChange}
         placeholder={text('Placeholder', '')}
         value={value}
+        variant={select('Variant', variantOptions, 'outlined')}
       />
       <StyledSpan id="helper-text">
         {text('Helper Text', 'helper text')}
@@ -127,6 +122,7 @@ export const WithIconAdornmentStory = () => {
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
       value={value}
+      variant={select('Variant', variantOptions, 'outlined')}
     />
   );
 };
@@ -201,6 +197,7 @@ export const WithTextAdornmentStory = () => {
       placeholder={text('Placeholder', '')}
       textAdornment={textAdornment}
       value={value}
+      variant={select('Variant', variantOptions, 'outlined')}
     />
   );
 };
@@ -226,6 +223,7 @@ export const AutofocusStory = () => {
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
       value={value}
+      variant={select('Variant', variantOptions, 'outlined')}
     />
   );
 };

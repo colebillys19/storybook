@@ -21,22 +21,10 @@ export const ssRed = '#C1363F';
 export const ssYellow = '#EEB902';
 
 // misc
-export const borderStyle = 'solid';
-export const borderWidth = '.5rem';
-export const dmiMainGreen = '#009350';
-export const dmiSecondaryColor = 'orange';
 export const errorRed = '#C1363F';
-export const expansionPanelDividerStyle = `0.2rem solid ${msLightGrey}`;
-export const greyBorder = '.1rem solid #9e9e9e';
-export const inputFocusedBorder = `0.2rem solid ${msBrightPurple}`;
-export const insetShadow = 'inset 0px 0px 16px 0px rgba(224,224,224,0.4)';
-export const muiBoxShadow = `0px 5px 5px -3px rgba(0,0,0,0.2),
-                             0px 8px 10px 1px rgba(0,0,0,0.14),
-                             0px 3px 14px 2px rgba(0,0,0,0.12)`;
-export const muiBlue = '#2196f3';
-export const muiRed = '#f44336';
-export const successGreen = '#5DBA9C';
 export const passwordVisibilityHoverGrey = '#555';
+export const muiOrange = '#ff9800';
+export const muiRed = '#f44336';
 
 // icons
 export const iconSize = {

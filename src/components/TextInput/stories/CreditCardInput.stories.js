@@ -9,26 +9,13 @@ import {
 
 import CreditCardInput from '../CreditCardInput';
 import BaseTextInputDocs from '../docs/BaseTextInput.docs.mdx';
-import {
-  msBrightPurple,
-  msMainGreen,
-  muiRed,
-  ssMainBlue,
-  ssYellow,
-} from '../../../utils/defaultStyleHelper';
+import { colorOptions, variantOptions } from '../../../utils/storyConstants';
+import { msBrightPurple } from '../../../utils/defaultStyleHelper';
 
 export default {
   decorators: [withKnobs],
   parameters: { component: CreditCardInput, docs: { page: BaseTextInputDocs } },
   title: 'Inputs|CreditCardInput',
-};
-
-const colorOptions = {
-  msBrightPurple,
-  msMainGreen,
-  muiRed,
-  ssMainBlue,
-  ssYellow,
 };
 
 /** Default Story */
@@ -49,6 +36,7 @@ export const DefaultStory = () => {
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
       value={value}
+      variant={select('Variant', variantOptions, 'outlined')}
     />
   );
 };

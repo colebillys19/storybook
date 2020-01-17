@@ -8,14 +8,14 @@ const NumberInput = (props) => { // eslint-disable-line
 };
 
 NumberInput.propTypes = {
-  /** If BaseTextInput has an associated helper text element, pass a string that matches that
-    * element's 'id' attribute.
-    */
+  /** If NumberInput has an associated helper text element, pass a string that matches that
+   * element's 'id' attribute.
+   */
   ariaDescribedBy: T.string,
 
   /** This prop helps users to fill forms faster, especially on mobile devices. (e.g. name, email,
-    * tel, etc.) See notes for more information.
-    */
+   * tel, etc.) See notes for more information.
+   */
   autoComplete: T.string,
 
   /** If true, the input element will be focused on mount. */
@@ -37,8 +37,8 @@ NumberInput.propTypes = {
   error: T.bool,
 
   /** Object detailing icon to be displayed as adornment. If onClick
-    * is provided, an icon button will be rendered.
-    */
+   * is provided, an icon button will be rendered.
+   */
   iconAdornment: T.shape({
     color: T.string,
     hoverColor: T.string,
@@ -60,8 +60,8 @@ NumberInput.propTypes = {
   inputRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
 
   /** Name attribute of the input element. Used to reference form data after a form is
-    * submitted.
-    */
+   * submitted.
+   */
   name: T.string,
 
   /** Callback fired when the value is changed. */
@@ -74,9 +74,9 @@ NumberInput.propTypes = {
   required: T.bool,
 
   /** Object detailing text to be displayed as adornment. If onClick
-    * is provided, a text button will be rendered. Ensure font/weight passed are available
-    * globally. (font string example: `'Montserrat', sans-serif`)
-    */
+   * is provided, a text button will be rendered. Ensure font/weight passed are available
+   * globally. (font string example: `'Montserrat', sans-serif`)
+   */
   textAdornment: T.shape({
     color: T.string,
     font: T.string,

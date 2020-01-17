@@ -37,14 +37,17 @@ const BaseTextInput = ({
         InputProps={{
           ...adornmentProp,
           ...InputProps,
-          classes: { input: 'input', multiline: 'multiline' },
+          classes: {
+            input: 'input',
+            multiline: 'multiline',
+            root: 'input-base',
+          },
         }}
         inputProps={{
           ...ariaProp,
           ...searchProps,
           ...inputProps,
         }}
-        variant="outlined"
         {...props}
       />
       {datalist}
@@ -55,13 +58,13 @@ const BaseTextInput = ({
 
 BaseTextInput.propTypes = {
   /** If BaseTextInput has an associated helper text element, pass a string that matches that
-    * element's 'id' attribute.
-    */
+   * element's 'id' attribute.
+   */
   ariaDescribedBy: T.string,
 
   /** This prop helps users to fill forms faster, especially on mobile devices. (e.g. name, email,
-    * tel, etc.) See notes for more information.
-    */
+   * tel, etc.) See notes for more information.
+   */
   autoComplete: T.string,
 
   /** If true, the input element will be focused on mount. */
@@ -83,8 +86,8 @@ BaseTextInput.propTypes = {
   error: T.bool,
 
   /** Object detailing icon to be displayed as adornment. If onClick
-    * is provided, an icon button will be rendered.
-    */
+   * is provided, an icon button will be rendered.
+   */
   iconAdornment: T.shape({
     color: T.string,
     hoverColor: T.string,
@@ -106,8 +109,8 @@ BaseTextInput.propTypes = {
   inputRef: T.oneOfType([T.func, T.shape({ current: T.instanceOf(Element) })]),
 
   /** Name attribute of the input element. Used to reference form data after a form is
-    * submitted.
-    */
+   * submitted.
+   */
   name: T.string,
 
   /** Callback fired when the value is changed. */
@@ -120,14 +123,14 @@ BaseTextInput.propTypes = {
   required: T.bool,
 
   /** If this prop is passed, the html input element will be of type 'search' and the values passed
-    * will be suggested in a dropdown as the user types.
-    */
+   * will be suggested in a dropdown as the user types.
+   */
   searchValues: T.array,
 
   /** Object detailing text to be displayed as adornment. If onClick
-    * is provided, a text button will be rendered. Ensure font/weight passed are available
-    * globally. (font string example: `'Montserrat', sans-serif`)
-    */
+   * is provided, a text button will be rendered. Ensure font/weight passed are available
+   * globally. (font string example: `'Montserrat', sans-serif`)
+   */
   textAdornment: T.shape({
     color: T.string,
     font: T.string,
@@ -139,13 +142,16 @@ BaseTextInput.propTypes = {
   }),
 
   /** Specifies the type attribute passed to the underlying input element. Accepts one of the
-    * following: number, password, search, or text (default). Note that if 'search' is
-    * passed, you'll need to pass a datalistId prop as well.
-    */
+   * following: number, password, search, or text (default). Note that if 'search' is
+   * passed, you'll need to pass a datalistId prop as well.
+   */
   type: T.oneOf(['email', 'number', 'password', 'search', 'text']),
 
   /** The value of the input element, required for a controlled component. */
   value: T.any,
+
+  /** The style of the input. Either 'outlined' (default) or 'standard'. */
+  variant: T.oneOf(['standard', 'outlined']),
 };
 
 BaseTextInput.defaultProps = {
@@ -155,6 +161,7 @@ BaseTextInput.defaultProps = {
   error: false,
   required: false,
   type: 'text',
+  variant: 'outlined',
 };
 
 export default BaseTextInput;

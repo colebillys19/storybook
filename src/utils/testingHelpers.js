@@ -4,6 +4,7 @@ import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 
 /**
+ * checkBasicRendering
  * @description: Checks the basic rendering of a React component or container
  *
  * @used for: base_ui and starting point for all other React components
@@ -19,6 +20,7 @@ export const checkBasicRendering = (component) => {
 };
 
 /**
+ * checkRequiredProps
  * @description: Checks that all required props on a React component
  * are present and the correct type
  *
@@ -37,6 +39,7 @@ export const checkRequiredProps = (component) => {
 };
 
 /**
+ * checkChildren
  * @description: Checks that any required children
  * are present on a React component
  *
@@ -81,6 +84,7 @@ export const checkChildren = (component, expectedChildren) => {
 };
 
 /**
+ * checkSimpleChild
  * @description: Checks that a simple required child is
  * present on a React component
  *
@@ -112,6 +116,7 @@ export const checkSimpleChild = (component, expectedChild) => {
 };
 
 /**
+ * checkContainsSubComponent
  * @description: Checks that a component's return value contains a
  * specific subcomponent (with props)
  *
@@ -128,6 +133,7 @@ export const checkContainsSubComponent = (component, subComponent) => {
 };
 
 /**
+ * checkEventHandler
  * @description: Checks that a component's event handler was triggered
  *
  * @used for: components that have an event handler
