@@ -36,6 +36,9 @@ NumberInput.propTypes = {
   /** If true, the input will indicate an error. */
   error: T.bool,
 
+  /** Determines how input is formatted. */
+  format: T.oneOf(['credit-card', 'currency', 'default', 'phone']),
+
   /** Object detailing icon to be displayed as adornment. If onClick
    * is provided, an icon button will be rendered.
    */

@@ -8,8 +8,7 @@ import {
   NO_ID_ERROR,
 } from './constants';
 import { errorRed, msBrightPurple } from '../../utils/defaultStyleHelper';
-import TextAdornment from './adornment-components/TextAdornment';
-import IconAdornment from './adornment-components/IconAdornment';
+import { IconAdornment, TextAdornment } from './sub-components';
 
 /**
  * getAdornment
