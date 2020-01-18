@@ -12,18 +12,26 @@ const IconAdornment = ({
   ...props
 }) => {
   const styles = { color };
+
   // adjust placement for warning icon
   if (iconName === 'warning') {
     styles.position = 'relative';
     styles.bottom = onClick ? '0.2rem' : '0.1rem';
   }
+
+  const handleMouseDown = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   const icon = IconDictionary(iconName, 'adornment', styles);
+
   if (onClick) {
     return (
       <StyledIconButton
         hoverColor={hoverColor}
         onClick={onClick}
-        onMouseDown={(e) => e.preventDefault()}
+        onMouseDown={handleMouseDown}
         size="small"
         {...props}
       >

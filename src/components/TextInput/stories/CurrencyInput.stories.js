@@ -7,8 +7,8 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs';
 
-import CreditCardInput from '../CreditCardInput';
-import CreditCardInputDocs from '../docs/CreditCardInput.docs.mdx';
+import CurrencyInput from '../CurrencyInput';
+import CurrencyInputDocs from '../docs/CurrencyInput.docs.mdx';
 import {
   msBrightPurple,
   msMainGreen,
@@ -24,8 +24,8 @@ import {
 
 export default {
   decorators: [withKnobs],
-  parameters: { component: CreditCardInput, docs: { page: CreditCardInputDocs } },
-  title: 'Inputs|CreditCardInput',
+  parameters: { component: CurrencyInput, docs: { page: CurrencyInputDocs } },
+  title: 'Inputs|CurrencyInput',
 };
 
 /** Default Story */
@@ -38,7 +38,7 @@ export const DefaultStory = () => {
   };
 
   return (
-    <CreditCardInput
+    <CurrencyInput
       color={select('Color', colorOptions, msBrightPurple)}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
@@ -65,9 +65,9 @@ export const AccessibleStory = () => {
   return (
     <Fragment>
       <StyledLabel htmlFor="base-text-input">
-        {text('Label Text', 'Credit/Debit Card')}
+        {text('Label Text', 'Payment Input')}
       </StyledLabel>
-      <CreditCardInput
+      <CurrencyInput
         ariaDescribedBy="helper-text"
         color={select('Color', colorOptions, msBrightPurple)}
         disabled={boolean('Disabled', false)}
@@ -79,7 +79,7 @@ export const AccessibleStory = () => {
         variant={select('Variant', variantOptions, 'outlined')}
       />
       <StyledSpan id="helper-text">
-        {text('Helper Text', 'Please enter your credit/debit card number.')}
+        {text('Helper Text', 'Please enter the amount you wish to pay.')}
       </StyledSpan>
     </Fragment>
   );
@@ -113,7 +113,7 @@ export const WithIconAdornmentStory = () => {
   };
 
   return (
-    <CreditCardInput
+    <CurrencyInput
       color={select('Color', colorOptions, msBrightPurple)}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
@@ -188,7 +188,7 @@ export const WithTextAdornmentStory = () => {
   };
 
   return (
-    <CreditCardInput
+    <CurrencyInput
       color={select('Color', colorOptions, msBrightPurple)}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
@@ -214,7 +214,7 @@ export const AutofocusStory = () => {
   };
 
   return (
-    <CreditCardInput
+    <CurrencyInput
       autoFocus
       color={select('Color', colorOptions, msBrightPurple)}
       disabled={boolean('Disabled', false)}

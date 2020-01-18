@@ -15,12 +15,20 @@ export const StyledSpan = styled.span`
   }};
 `;
 
-export const StyledButton = styled((props) => (
+export const StyledButton = styled(({
+  // color, hoverColor, and size pulled from props here to mitigate browser errors
+  color,
+  hoverColor,
+  size,
+  ...props
+}) => (
   <Button classes={{ label: 'label' }} {...props} />
 ))`
   border-radius: 0;
+  border-bottom: none;
   border-left: ${({ position }) => position === 'start' ? 'none' : '0.1rem solid #ebebeb'};
   border-right: ${({ position }) => position === 'start' ? '0.1rem solid #ebebeb' : 'none'};
+  border-top: none;
   margin: ${({ position, variant }) => {
     if (variant === 'outlined') {
       return position === 'start' ? '0 -1rem 0 -1.3rem' : '0 -1.3rem 0 -1rem';

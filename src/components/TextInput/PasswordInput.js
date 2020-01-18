@@ -25,6 +25,7 @@ const PasswordInput = ({
 
   const handleClick = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     toggleVisibility(!visibility);
   };
 

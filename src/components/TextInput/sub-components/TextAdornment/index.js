@@ -9,12 +9,19 @@ const TextAdornment = ({
   text,
   ...props
 }) => {
+  const handleMouseDown = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   // format font to ensure compatibility with storybook select knob
   const formattedFont = font.replace(/&#39;/g, '');
+
   return onClick ? (
     <StyledButton
       font={formattedFont}
       onClick={onClick}
+      onMouseDown={handleMouseDown}
       {...props}
     >
       {text}
