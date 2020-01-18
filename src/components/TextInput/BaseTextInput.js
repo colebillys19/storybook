@@ -16,6 +16,7 @@ const BaseTextInput = ({
   searchValues,
   textAdornment,
   value,
+  variant,
   ...props
 }) => {
   validateProps({
@@ -24,7 +25,7 @@ const BaseTextInput = ({
     ...props,
   });
 
-  const adornmentProp = getAdornment(iconAdornment, textAdornment);
+  const adornmentProp = getAdornment(iconAdornment, textAdornment, variant);
 
   const { datalist, searchProps } = getDatalist(searchValues, value);
 
@@ -48,6 +49,7 @@ const BaseTextInput = ({
           ...searchProps,
           ...inputProps,
         }}
+        variant={variant}
         {...props}
       />
       {datalist}

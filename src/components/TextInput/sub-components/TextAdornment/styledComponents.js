@@ -7,7 +7,12 @@ export const StyledSpan = styled.span`
   font-family: ${({ font }) => font || ''};
   font-size: ${({ size }) => size || '1.4rem'};
   font-weight: ${({ weight }) => weight || ''};
-  margin: ${({ position }) => position === 'start' ? '0 -1rem 0 -0.3rem' : '0 -0.3rem 0 -1rem'};
+  margin: ${({ position, variant }) => {
+    if (variant === 'outlined') {
+      return position === 'start' ? '0 -1rem 0 -0.3rem' : '0 -0.3rem 0 -1rem';
+    }
+    return position === 'start' ? '0 -1rem 0 0.9rem' : '0 0.9rem 0 -1rem';
+  }};
 `;
 
 export const StyledButton = styled((props) => (
@@ -16,7 +21,12 @@ export const StyledButton = styled((props) => (
   border-radius: 0;
   border-left: ${({ position }) => position === 'start' ? 'none' : '0.1rem solid #ebebeb'};
   border-right: ${({ position }) => position === 'start' ? '0.1rem solid #ebebeb' : 'none'};
-  margin: ${({ position }) => position === 'start' ? '0 -1rem 0 -1.3rem' : '0 -1.3rem 0 -1rem'};
+  margin: ${({ position, variant }) => {
+    if (variant === 'outlined') {
+      return position === 'start' ? '0 -1rem 0 -1.3rem' : '0 -1.3rem 0 -1rem';
+    }
+    return position === 'start' ? '0 -1rem 0 -0.1rem' : '0 -0.1rem 0 -1rem';
+  }};
   min-height: 4rem;
   min-width: 0;
   padding: 0 1rem;

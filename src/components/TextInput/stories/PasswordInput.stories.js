@@ -40,9 +40,11 @@ export const DefaultStory = () => {
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       id="mock-id"
+      noButton={boolean('No Button', false)}
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
       value={value}
+      variant={select('Variant', variantOptions, 'outlined')}
     />
   );
 };
@@ -70,6 +72,7 @@ export const AccessibleStory = () => {
         disabled={boolean('Disabled', false)}
         error={boolean('Error', false)}
         id="base-text-input"
+        noButton={boolean('No Button', false)}
         onChange={handleChange}
         placeholder={text('Placeholder', '')}
         value={value}
@@ -101,6 +104,7 @@ export const AutofocusStory = () => {
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       id="mock-id"
+      noButton={boolean('No Button', false)}
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
       value={value}

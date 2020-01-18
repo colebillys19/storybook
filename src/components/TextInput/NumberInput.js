@@ -3,8 +3,24 @@ import T from 'prop-types';
 
 import { StyledBaseTextInput } from './styles/NumberInput.styles';
 
-const NumberInput = (props) => { // eslint-disable-line
-  return <StyledBaseTextInput {...props} type="number" />;
+const NumberInput = ({
+  strict,
+  type,
+  ...props
+}) => {
+  const handleKeyDown = (e) => {
+    if (strict && (e.which === 69 || e.which === 187)) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  };
+  return (
+    <StyledBaseTextInput
+      onKeyDown={handleKeyDown}
+      type="number"
+      {...props}
+    />
+  );
 };
 
 NumberInput.propTypes = {
@@ -76,6 +92,10 @@ NumberInput.propTypes = {
   /** If true, the input element will be required. */
   required: T.bool,
 
+  /** If true (default), NumberInput will prevent the user from typing the
+   * characters 'e', 'E', and '+'. */
+  strict: T.bool,
+
   /** Object detailing text to be displayed as adornment. If onClick
    * is provided, a text button will be rendered. Ensure font/weight passed are available
    * globally. (font string example: `'Montserrat', sans-serif`)
@@ -100,6 +120,7 @@ NumberInput.defaultProps = {
   disabled: false,
   error: false,
   required: false,
+  strict: true,
 };
 
 export default NumberInput;

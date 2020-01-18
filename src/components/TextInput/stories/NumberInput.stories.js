@@ -45,6 +45,7 @@ export const DefaultStory = () => {
       id="mock-id"
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
+      strict={boolean('Strict', true)}
       value={value}
       variant={select('Variant', variantOptions, 'outlined')}
     />
@@ -75,6 +76,7 @@ export const AccessibleStory = () => {
         id="base-text-input"
         onChange={handleChange}
         placeholder={text('Placeholder', '')}
+        strict={boolean('Strict', true)}
         value={value}
         variant={select('Variant', variantOptions, 'outlined')}
       />
@@ -121,6 +123,7 @@ export const WithIconAdornmentStory = () => {
       id="mock-id"
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
+      strict={boolean('Strict', true)}
       value={value}
       variant={select('Variant', variantOptions, 'outlined')}
     />
@@ -195,6 +198,7 @@ export const WithTextAdornmentStory = () => {
       id="mock-id"
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
+      strict={boolean('Strict', true)}
       textAdornment={textAdornment}
       value={value}
       variant={select('Variant', variantOptions, 'outlined')}
@@ -222,6 +226,7 @@ export const AutofocusStory = () => {
       id="mock-id"
       onChange={handleChange}
       placeholder={text('Placeholder', '')}
+      strict={boolean('Strict', true)}
       value={value}
       variant={select('Variant', variantOptions, 'outlined')}
     />

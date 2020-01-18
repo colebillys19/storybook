@@ -11,6 +11,7 @@ const PasswordInput = ({
   iconAdornment,
   InputProps,
   inputProps,
+  noButton,
   placeholder,
   searchValues,
   textAdornment,
@@ -42,7 +43,7 @@ const PasswordInput = ({
   return (
     <BaseTextInput
       autoComplete="off"
-      iconAdornment={adornment}
+      iconAdornment={noButton ? null : adornment}
       inputProps={{ ...inputProps, type: visibility ? 'text' : 'password' }}
       {...props}
     />
@@ -87,6 +88,9 @@ PasswordInput.propTypes = {
    */
   name: T.string,
 
+  /** If true, no visibility button will be displayed. */
+  noButton: T.bool,
+
   /** Callback fired when the value is changed. */
   onChange: T.func,
 
@@ -102,6 +106,7 @@ PasswordInput.defaultProps = {
   buttonPosition: 'end',
   disabled: false,
   error: false,
+  noButton: false,
   required: false,
 };
 

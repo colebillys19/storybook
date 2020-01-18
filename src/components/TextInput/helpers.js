@@ -18,16 +18,15 @@ import { IconAdornment, TextAdornment } from './sub-components';
  * @param textAdornment {object}: contains values used to assemble text adornment
  *
  */
-export const getAdornment = (iconAdornment, textAdornment) => {
-  // if no adornment passed
+export const getAdornment = (iconAdornment, textAdornment, variant) => {
   if (!iconAdornment && !textAdornment) {
     return null;
   }
 
   const adornmentComponent = iconAdornment ? (
-    <IconAdornment {...iconAdornment} />
+    <IconAdornment variant={variant} {...iconAdornment} />
   ) : (
-    <TextAdornment {...textAdornment} />
+    <TextAdornment variant={variant} {...textAdornment} />
   );
 
   const { position } = iconAdornment || textAdornment;
