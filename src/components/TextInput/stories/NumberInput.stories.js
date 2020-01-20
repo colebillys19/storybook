@@ -16,6 +16,7 @@ import {
 } from '../../../utils/defaultStyleHelper';
 import {
   colorOptions,
+  iconOptions,
   positionOptions,
   StyledLabel,
   StyledSpan,
@@ -100,12 +101,6 @@ export const WithIconAdornmentStory = () => {
 
   const mockOnClick = boolean('onClick Passed', false) ? () => null : null;
 
-  const iconOptions = {
-    inbox: 'inbox',
-    profile: 'profile',
-    warning: 'warning',
-  };
-
   const iconAdornment = {
     color: select('Icon Color', colorOptions, msBrightPurple),
     hoverColor: select('Icon Hover Color', colorOptions, msMainGreen),
@@ -186,7 +181,7 @@ export const WithTextAdornmentStory = () => {
     onClick: mockOnClick,
     position: select('Adornment Position', positionOptions, 'start'),
     size: select('Text Adornment Font Size', sizeOptions, '1.4rem'),
-    text: text('Text Adornment String', 'Escrow'),
+    text: text('Text Adornment String', 'ESCROW'),
     weight: select('Text Adornment Font Weight', weightOptions, normal),
   };
 

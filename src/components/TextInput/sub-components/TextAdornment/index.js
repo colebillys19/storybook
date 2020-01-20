@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import T from 'prop-types';
 
 import { StyledButton, StyledSpan } from './styledComponents';
@@ -9,9 +9,16 @@ const TextAdornment = ({
   text,
   ...props
 }) => {
+  const [buttonMouseDown, toggleButtonMouseDown] = useState(false);
+
   const handleMouseDown = (e) => {
     e.preventDefault();
-    e.stopPropagation();
+    toggleButtonMouseDown(true);
+  };
+
+  const resetOpacity = (e) => {
+    e.preventDefault();
+    toggleButtonMouseDown(false);
   };
 
   // format font to ensure compatibility with storybook select knob
@@ -19,9 +26,13 @@ const TextAdornment = ({
 
   return onClick ? (
     <StyledButton
+      buttonMouseDown={buttonMouseDown}
       font={formattedFont}
+      onBlur={resetOpacity}
       onClick={onClick}
       onMouseDown={handleMouseDown}
+      onMouseOut={resetOpacity}
+      onMouseUp={resetOpacity}
       {...props}
     >
       {text}

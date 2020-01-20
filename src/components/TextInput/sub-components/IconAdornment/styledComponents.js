@@ -9,20 +9,25 @@ export const IconWrapper = styled.div`
   justify-content: center;
   margin: ${({ position, variant }) => {
     if (variant === 'outlined') {
-      return position === 'start' ? '0 -1.6rem 0 -1rem' : '0 -0.8rem 0 -1.6rem';
+      return position === 'start' ? '0 -1rem 0 -0.4rem' : '0 -0.4rem 0 -1rem';
     }
-    return position === 'start' ? '0 -1.6rem 0 0.2rem' : '0 0.4rem 0 -1.6rem';
+    return position === 'start' ? '0 -1rem 0 0.8rem' : '0 0.8rem 0 -1rem';
   }};
   width: 3.1rem;
 `;
 
-export const StyledIconButton = styled(({ hoverColor, ...props }) => <IconButton {...props} />)`
+export const StyledIconButton = styled(({
+  buttonMouseDown,
+  hoverColor,
+  ...props
+}) => <IconButton {...props} />)`
   margin: ${({ position, variant }) => {
     if (variant === 'outlined') {
       return position === 'start' ? '0 -1rem 0 -0.4rem' : '0 -0.4rem 0 -1rem';
     }
     return position === 'start' ? '0 -1rem 0 0.8rem' : '0 0.8rem 0 -1rem';
   }};
+  opacity: ${({ buttonMouseDown }) => buttonMouseDown ? '0.7' : '1'};
   &:hover {
     & svg {
       color: ${({ hoverColor }) => hoverColor || ''};

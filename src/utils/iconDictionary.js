@@ -10,6 +10,7 @@ import CheckCircleOutline from '@material-ui/icons/CheckCircleOutline';
 import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import ChevronRight from '@material-ui/icons/ChevronRight';
 import Close from '@material-ui/icons/Close';
+import CreditCard from '@material-ui/icons/CreditCard';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import ExposurePlus1 from '@material-ui/icons/ExposurePlus1';
 import Image from '@material-ui/icons/Image';
@@ -41,6 +42,7 @@ export default (name, size, styling) => {
     calendar: CalendarToday,
     cancel: Cancel,
     close: Close,
+    creditCard: CreditCard,
     dollar: AttachMoney,
     expandMore: ExpandMore,
     image: Image,

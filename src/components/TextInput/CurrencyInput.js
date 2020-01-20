@@ -3,8 +3,10 @@ import T from 'prop-types';
 import NumberFormat from 'react-number-format';
 
 import BaseTextInput from './BaseTextInput';
+import { CURRENCY_PREFIXES } from './constants';
 
 const CurrencyInput = ({
+  currency,
   searchValues,
   type,
   ...props
@@ -12,6 +14,7 @@ const CurrencyInput = ({
   <NumberFormat
     customInput={BaseTextInput}
     decimalScale={2}
+    prefix={CURRENCY_PREFIXES[currency]}
     thousandSeparator
     {...props}
   />
@@ -36,6 +39,19 @@ CurrencyInput.propTypes = {
 
   /** The color of the input border on focus. */
   color: T.string,
+
+  /** Prefix to be displayed along with input. */
+  currency: T.oneOf([
+    '',
+    'australian-dollar',
+    'canadian-dollar',
+    'euro',
+    'franc',
+    'pound',
+    'rand',
+    'us-dollar',
+    'yen/renminbi',
+  ]),
 
   /** The default input element value. Use when the component is not controlled. */
   defaultValue: T.any,
@@ -107,6 +123,7 @@ CurrencyInput.propTypes = {
 BaseTextInput.defaultProps = {
   autoComplete: 'off',
   autoFocus: false,
+  currency: '',
   disabled: false,
   error: false,
   required: false,

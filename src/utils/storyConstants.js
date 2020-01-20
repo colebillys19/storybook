@@ -12,9 +12,12 @@ import {
 
 export const iconOptions = {
   cancel: 'cancel',
+  creditCard: 'creditCard',
+  dollar: 'dollar',
   inbox: 'inbox',
   profile: 'profile',
   star: 'star',
+  warning: 'warning',
 };
 
 export const iconSizeOptions = {

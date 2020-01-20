@@ -16,6 +16,7 @@ import {
 } from '../../../utils/defaultStyleHelper';
 import {
   colorOptions,
+  iconOptions,
   positionOptions,
   StyledLabel,
   StyledSpan,
@@ -98,16 +99,10 @@ export const WithIconAdornmentStory = () => {
 
   const mockOnClick = boolean('onClick Passed', false) ? () => null : null;
 
-  const iconOptions = {
-    inbox: 'inbox',
-    profile: 'profile',
-    warning: 'warning',
-  };
-
   const iconAdornment = {
     color: select('Icon Color', colorOptions, msBrightPurple),
     hoverColor: select('Icon Hover Color', colorOptions, msMainGreen),
-    iconName: select('Icon', iconOptions, 'profile'),
+    iconName: select('Icon', iconOptions, 'creditCard'),
     onClick: mockOnClick,
     position: select('Adornment Position', positionOptions, 'start'),
   };
@@ -177,13 +172,13 @@ export const WithTextAdornmentStory = () => {
   };
 
   const textAdornment = {
-    color: select('Text Adornment Color', colorOptions, msMainGreen),
-    font: select('Text Adornment Font', fontOptions, robotoCondensed),
-    hoverColor: select('Text Adornment Hover Color', colorOptions, msBrightPurple),
+    color: select('Text Adornment Color', colorOptions, msBrightPurple),
+    font: select('Text Adornment Font', fontOptions, montserrat),
+    hoverColor: select('Text Adornment Hover Color', colorOptions, msMainGreen),
     onClick: mockOnClick,
     position: select('Adornment Position', positionOptions, 'start'),
     size: select('Text Adornment Font Size', sizeOptions, '1.4rem'),
-    text: text('Text Adornment String', 'Escrow'),
+    text: text('Text Adornment String', 'CARD'),
     weight: select('Text Adornment Font Weight', weightOptions, normal),
   };
 

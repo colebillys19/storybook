@@ -17,6 +17,7 @@ export const StyledSpan = styled.span`
 
 export const StyledButton = styled(({
   // color, hoverColor, and size pulled from props here to mitigate browser errors
+  buttonMouseDown,
   color,
   hoverColor,
   size,
@@ -37,6 +38,7 @@ export const StyledButton = styled(({
   }};
   min-height: 4rem;
   min-width: 0;
+  opacity: ${({ buttonMouseDown }) => buttonMouseDown ? '0.7' : '1'};
   padding: 0 1rem;
   & .label {
     color: ${({ color }) => color || ''};

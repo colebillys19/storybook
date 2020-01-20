@@ -16,11 +16,26 @@ import {
 } from '../../../utils/defaultStyleHelper';
 import {
   colorOptions,
+  iconOptions,
   positionOptions,
   StyledLabel,
   StyledSpan,
   variantOptions,
 } from '../../../utils/storyConstants';
+
+/* eslint-disable quote-props */
+const currencies = {
+  'australian-dollar': 'australian-dollar',
+  'canadian-dollar': 'canadian-dollar',
+  'euro': 'euro',
+  'franc': 'franc',
+  'none': '',
+  'pound': 'pound',
+  'rand': 'rand',
+  'us-dollar': 'us-dollar',
+  'yen/renminbi': 'yen/renminbi',
+};
+/* eslint-enable quote-props */
 
 export default {
   decorators: [withKnobs],
@@ -40,6 +55,7 @@ export const DefaultStory = () => {
   return (
     <CurrencyInput
       color={select('Color', colorOptions, msBrightPurple)}
+      currency={select('Currency', currencies, 'us-dollar')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       id="mock-id"
@@ -70,6 +86,7 @@ export const AccessibleStory = () => {
       <CurrencyInput
         ariaDescribedBy="helper-text"
         color={select('Color', colorOptions, msBrightPurple)}
+        currency={select('Currency', currencies, 'us-dollar')}
         disabled={boolean('Disabled', false)}
         error={boolean('Error', false)}
         id="base-text-input"
@@ -98,16 +115,10 @@ export const WithIconAdornmentStory = () => {
 
   const mockOnClick = boolean('onClick Passed', false) ? () => null : null;
 
-  const iconOptions = {
-    inbox: 'inbox',
-    profile: 'profile',
-    warning: 'warning',
-  };
-
   const iconAdornment = {
     color: select('Icon Color', colorOptions, msBrightPurple),
     hoverColor: select('Icon Hover Color', colorOptions, msMainGreen),
-    iconName: select('Icon', iconOptions, 'profile'),
+    iconName: select('Icon', iconOptions, 'dollar'),
     onClick: mockOnClick,
     position: select('Adornment Position', positionOptions, 'start'),
   };
@@ -115,6 +126,7 @@ export const WithIconAdornmentStory = () => {
   return (
     <CurrencyInput
       color={select('Color', colorOptions, msBrightPurple)}
+      currency={select('Currency', currencies, '')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       iconAdornment={iconAdornment}
@@ -177,19 +189,20 @@ export const WithTextAdornmentStory = () => {
   };
 
   const textAdornment = {
-    color: select('Text Adornment Color', colorOptions, msMainGreen),
-    font: select('Text Adornment Font', fontOptions, robotoCondensed),
-    hoverColor: select('Text Adornment Hover Color', colorOptions, msBrightPurple),
+    color: select('Text Adornment Color', colorOptions, msBrightPurple),
+    font: select('Text Adornment Font', fontOptions, montserrat),
+    hoverColor: select('Text Adornment Hover Color', colorOptions, msMainGreen),
     onClick: mockOnClick,
     position: select('Adornment Position', positionOptions, 'start'),
     size: select('Text Adornment Font Size', sizeOptions, '1.4rem'),
-    text: text('Text Adornment String', 'Escrow'),
+    text: text('Text Adornment String', 'PAYMENT'),
     weight: select('Text Adornment Font Weight', weightOptions, normal),
   };
 
   return (
     <CurrencyInput
       color={select('Color', colorOptions, msBrightPurple)}
+      currency={select('Currency', currencies, 'us-dollar')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       id="mock-id"
@@ -217,6 +230,7 @@ export const AutofocusStory = () => {
     <CurrencyInput
       autoFocus
       color={select('Color', colorOptions, msBrightPurple)}
+      currency={select('Currency', currencies, 'us-dollar')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       id="mock-id"

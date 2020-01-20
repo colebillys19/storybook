@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import T from 'prop-types';
 
 import IconDictionary from '../../../../utils/IconDictionary';
@@ -11,6 +11,8 @@ const IconAdornment = ({
   onClick,
   ...props
 }) => {
+  const [buttonMouseDown, toggleButtonMouseDown] = useState(false);
+
   const styles = { color };
 
   // adjust placement for warning icon
@@ -21,7 +23,12 @@ const IconAdornment = ({
 
   const handleMouseDown = (e) => {
     e.preventDefault();
-    e.stopPropagation();
+    toggleButtonMouseDown(true);
+  };
+
+  const resetOpacity = (e) => {
+    e.preventDefault();
+    toggleButtonMouseDown(false);
   };
 
   const icon = IconDictionary(iconName, 'adornment', styles);
@@ -29,9 +36,13 @@ const IconAdornment = ({
   if (onClick) {
     return (
       <StyledIconButton
+        buttonMouseDown={buttonMouseDown}
         hoverColor={hoverColor}
+        onBlur={resetOpacity}
         onClick={onClick}
         onMouseDown={handleMouseDown}
+        onMouseOut={resetOpacity}
+        onMouseUp={resetOpacity}
         size="small"
         {...props}
       >
