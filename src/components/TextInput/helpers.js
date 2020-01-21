@@ -1,5 +1,6 @@
 import React from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
+import uuid from 'uuid/v4';
 
 import {
   ADORNMENT_POSITION_ERROR,
@@ -55,7 +56,7 @@ export const validateProps = (props) => {
     type,
   } = props;
 
-  const typeOpts = ['email', 'number', 'password', 'search', 'text'];
+  const typeOpts = ['number', 'password', 'search', 'text'];
 
   if (!id) {
     throw new Error(NO_ID_ERROR);
@@ -79,12 +80,6 @@ export const validateProps = (props) => {
 };
 
 /**
- * getRandomNumber
- * @description: produces random 10 digit number
- */
-export const getRandomNumber = () => Math.random() * 10000000000;
-
-/**
  * getDatalist
  * @description: assembles datalist element based on search values passed, provides relevant props
  *               to pass to input element
@@ -99,7 +94,7 @@ export const getDatalist = (searchValues, currentValue) => {
 
   const datalist = searchValues && !isSearchValue ? (
     <datalist id="datalist-id">
-      {searchValues.map((value) => <option key={`${value}${getRandomNumber()}`} value={value} />)}
+      {searchValues.map((value) => <option key={`${value}${uuid()}`} value={value} />)}
     </datalist>
   ) : null;
 
