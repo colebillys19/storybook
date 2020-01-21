@@ -1,6 +1,7 @@
 import { Props } from '@storybook/addon-docs/blocks';
 
 import CurrencyInput from '../CurrencyInput';
+import { docsLinkStyles } from '../../../utils/storyConstants';
 
 <div>
   <h2>CurrencyInput</h2>
@@ -10,24 +11,23 @@ import CurrencyInput from '../CurrencyInput';
   </div>
   <h3 style={{ marginBottom: '17px' }}>Notes</h3>
   <div style={{ fontFamily: 'monospace' }}>
-    {/* separate lines w/ <br /> */}
     Currency symbols:
     <br />
-    - us dollar: $
+    &nbsp;- us dollar: $
     <br />
-    - canadian dollar: C$
+    &nbsp;- canadian dollar: C$
     <br />
-    - euro: €
+    &nbsp;- euro: €
     <br />
-    - yen/renminbi: ¥
+    &nbsp;- yen/renminbi: ¥
     <br />
-    - pound: £
+    &nbsp;- pound: £
     <br />
-    - franc: CHF
+    &nbsp;- franc: CHF
     <br />
-    - australian dollar: A$
+    &nbsp;- australian dollar: A$
     <br />
-    - rand: R
+    &nbsp;- rand: R
     <br />
     <br />
     To ensure accessibility, make use of a label (and a helper text element when necessary) when
@@ -36,11 +36,11 @@ import CurrencyInput from '../CurrencyInput';
     <br />
     To see options for the 'autoComplete' prop:
     <br />
-    https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete
+    <span style={docsLinkStyles}>https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete</span>
     <br />
     <br />
     When building forms, use of MUI's FormControl component is recommended:
     <br />
-    https://material-ui.com/api/form-control/
+    <span style={docsLinkStyles}>https://material-ui.com/api/form-control/</span>
   </div>
 </div>

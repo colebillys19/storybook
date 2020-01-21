@@ -12,8 +12,10 @@ import {
 
 export const iconOptions = {
   cancel: 'cancel',
+  computer: 'computer',
   creditCard: 'creditCard',
   dollar: 'dollar',
+  email: 'email',
   inbox: 'inbox',
   profile: 'profile',
   star: 'star',
@@ -85,3 +87,9 @@ export const colorOptions = {
 export const positionOptions = { end: 'end', start: 'start' };
 
 export const variantOptions = { outlined: 'outlined', standard: 'standard' };
+
+export const docsLinkStyles = {
+  color: '#999',
+  fontFamily: 'monospace',
+  fontWeight: 'bold',
+};

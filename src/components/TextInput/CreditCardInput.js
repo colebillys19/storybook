@@ -2,7 +2,7 @@ import React from 'react';
 import T from 'prop-types';
 import NumberFormat from 'react-number-format';
 
-import BaseTextInput from './BaseTextInput';
+import { StyledBaseTextInput } from './styles/CreditCardInput.styles';
 
 const CreditCardInput = ({
   searchValues,
@@ -10,7 +10,7 @@ const CreditCardInput = ({
   ...props
 }) => (
   <NumberFormat
-    customInput={BaseTextInput}
+    customInput={StyledBaseTextInput}
     format="#### #### #### ####"
     {...props}
   />
@@ -103,13 +103,12 @@ CreditCardInput.propTypes = {
   variant: T.oneOf(['standard', 'outlined']),
 };
 
-BaseTextInput.defaultProps = {
+CreditCardInput.defaultProps = {
   autoComplete: 'off',
   autoFocus: false,
   disabled: false,
   error: false,
   required: false,
-  type: 'text',
   variant: 'outlined',
 };
 

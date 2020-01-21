@@ -8,7 +8,6 @@ export const StyledTextField = styled(TextField)`
   background-color: white;
   border-radius: 0.5rem;
   border-radius: ${({ variant }) => variant === 'outlined' ? '0.5rem' : '0'};
-  min-width: 17.3rem;
   opacity: ${({ disabled }) => disabled ? '0.5' : '1'};
 
   & .input-base:hover:before {
