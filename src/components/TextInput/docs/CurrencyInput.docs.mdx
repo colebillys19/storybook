@@ -1,7 +1,7 @@
 import { Props } from '@storybook/addon-docs/blocks';
 
 import CurrencyInput from '../CurrencyInput';
-import { docsLinkStyles } from '../../../utils/storyConstants';
+import { docsCodeStyles, docsLinkStyles } from '../../../utils/storyConstants';
 
 <div>
   <h2>CurrencyInput</h2>
@@ -10,8 +10,9 @@ import { docsLinkStyles } from '../../../utils/storyConstants';
     <Props of={CurrencyInput} />
   </div>
   <h3 style={{ marginBottom: '17px' }}>Notes</h3>
+  {/* using monospace here for formatting convenience (column alignment) */}
   <div style={{ fontFamily: 'monospace' }}>
-    Currency symbols:
+    currencyPrefix symbols:
     <br />
     &nbsp;- us dollar: $
     <br />
@@ -19,7 +20,9 @@ import { docsLinkStyles } from '../../../utils/storyConstants';
     <br />
     &nbsp;- euro: €
     <br />
-    &nbsp;- yen/renminbi: ¥
+    &nbsp;- yen: ¥
+    <br />
+    &nbsp;- renminbi: ¥
     <br />
     &nbsp;- pound: £
     <br />
@@ -28,6 +31,19 @@ import { docsLinkStyles } from '../../../utils/storyConstants';
     &nbsp;- australian dollar: A$
     <br />
     &nbsp;- rand: R
+    <br />
+    <br />
+    Depending on the icon, the margin around an adornment icon may be to large for the use case. Adding a "$" icon at
+    the beginning of CurrencyInput is a good example of this. To apply styles to the icon/text adornment when styling
+    an input, target the adornment with "& .adornment-root". Try the following for said issue:
+    <br />
+    <div style={docsCodeStyles}>
+      &nbsp;&nbsp;{'& .adornment-root {'}
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;{'margin: 0 0 0 -0.6rem;'}
+      <br />
+      &nbsp;&nbsp;{'}'}
+    </div>
     <br />
     <br />
     To ensure accessibility, make use of a label (and a helper text element when necessary) when

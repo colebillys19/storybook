@@ -93,3 +93,8 @@ export const docsLinkStyles = {
   fontFamily: 'monospace',
   fontWeight: 'bold',
 };
+
+export const docsCodeStyles = {
+  color: 'SlateBlue',
+  fontFamily: 'monospace',
+};

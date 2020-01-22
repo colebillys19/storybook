@@ -97,7 +97,7 @@ export const WithIconAdornmentStory = () => {
     setValue(e.target.value);
   };
 
-  const mockOnClick = boolean('onClick Passed', false) ? () => null : null;
+  const mockOnClick = boolean('Adornment onClick Passed', false) ? () => null : null;
 
   const iconAdornment = {
     color: select('Icon Color', colorOptions, msBrightPurple),
@@ -133,7 +133,7 @@ export const WithTextAdornmentStory = () => {
     setValue(e.target.value);
   };
 
-  const mockOnClick = boolean('onClick Passed', false) ? () => null : null;
+  const mockOnClick = boolean('Adornment onClick Passed', false) ? () => null : null;
 
   const {
     font: {

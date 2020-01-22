@@ -8,10 +8,11 @@ export const CURRENCY_PREFIXES = {
   'australian-dollar': 'A$',
   'canadian-dollar': 'C$',
   'euro': '€',
-  'franc': 'CHF ',
+  'franc': 'CHF',
   'pound': '£',
-  'rand': 'R ',
+  'rand': 'R',
+  'renminbi': '¥',
   'us-dollar': '$',
-  'yen/renminbi': '¥',
+  'yen': '¥',
 };
 /* eslint-enable quote-props */

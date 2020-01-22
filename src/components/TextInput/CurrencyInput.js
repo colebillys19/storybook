@@ -6,7 +6,7 @@ import BaseTextInput from './BaseTextInput';
 import { CURRENCY_PREFIXES } from './constants';
 
 const CurrencyInput = ({
-  currency,
+  currencyPrefix,
   searchValues,
   type,
   ...props
@@ -14,7 +14,7 @@ const CurrencyInput = ({
   <NumberFormat
     customInput={BaseTextInput}
     decimalScale={2}
-    prefix={CURRENCY_PREFIXES[currency]}
+    prefix={currencyPrefix ? CURRENCY_PREFIXES[currencyPrefix] : ''}
     thousandSeparator
     {...props}
   />
@@ -41,16 +41,16 @@ CurrencyInput.propTypes = {
   color: T.string,
 
   /** Prefix to be displayed along with input. */
-  currency: T.oneOf([
-    '',
+  currencyPrefix: T.oneOf([
     'australian-dollar',
     'canadian-dollar',
     'euro',
     'franc',
     'pound',
     'rand',
+    'renminbi',
     'us-dollar',
-    'yen/renminbi',
+    'yen',
   ]),
 
   /** The default input element value. Use when the component is not controlled. */
@@ -123,7 +123,6 @@ CurrencyInput.propTypes = {
 BaseTextInput.defaultProps = {
   autoComplete: 'off',
   autoFocus: false,
-  currency: '',
   disabled: false,
   error: false,
   required: false,

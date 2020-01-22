@@ -24,7 +24,7 @@ import {
 } from '../../../utils/storyConstants';
 
 /* eslint-disable quote-props */
-const currencies = {
+const currencyPrefixes = {
   'australian-dollar': 'australian-dollar',
   'canadian-dollar': 'canadian-dollar',
   'euro': 'euro',
@@ -32,8 +32,9 @@ const currencies = {
   'none': '',
   'pound': 'pound',
   'rand': 'rand',
+  'renminbi': 'renminbi',
   'us-dollar': 'us-dollar',
-  'yen/renminbi': 'yen/renminbi',
+  'yen': 'yen',
 };
 /* eslint-enable quote-props */
 
@@ -55,7 +56,7 @@ export const DefaultStory = () => {
   return (
     <CurrencyInput
       color={select('Color', colorOptions, msBrightPurple)}
-      currency={select('Currency', currencies, 'us-dollar')}
+      currencyPrefix={select('Currency Prefix', currencyPrefixes, 'us-dollar')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       id="mock-id"
@@ -86,7 +87,7 @@ export const AccessibleStory = () => {
       <CurrencyInput
         ariaDescribedBy="helper-text"
         color={select('Color', colorOptions, msBrightPurple)}
-        currency={select('Currency', currencies, 'us-dollar')}
+        currencyPrefix={select('Currency Prefix', currencyPrefixes, 'us-dollar')}
         disabled={boolean('Disabled', false)}
         error={boolean('Error', false)}
         id="base-text-input"
@@ -113,7 +114,7 @@ export const WithIconAdornmentStory = () => {
     setValue(e.target.value);
   };
 
-  const mockOnClick = boolean('onClick Passed', false) ? () => null : null;
+  const mockOnClick = boolean('Adornment onClick Passed', false) ? () => null : null;
 
   const iconAdornment = {
     color: select('Icon Color', colorOptions, msBrightPurple),
@@ -126,7 +127,7 @@ export const WithIconAdornmentStory = () => {
   return (
     <CurrencyInput
       color={select('Color', colorOptions, msBrightPurple)}
-      currency={select('Currency', currencies, '')}
+      currencyPrefix={select('Currency Prefix', currencyPrefixes, '')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       iconAdornment={iconAdornment}
@@ -150,7 +151,7 @@ export const WithTextAdornmentStory = () => {
     setValue(e.target.value);
   };
 
-  const mockOnClick = boolean('onClick Passed', false) ? () => null : null;
+  const mockOnClick = boolean('Adornment onClick Passed', false) ? () => null : null;
 
   const {
     font: {
@@ -202,7 +203,7 @@ export const WithTextAdornmentStory = () => {
   return (
     <CurrencyInput
       color={select('Color', colorOptions, msBrightPurple)}
-      currency={select('Currency', currencies, 'us-dollar')}
+      currencyPrefix={select('Currency Prefix', currencyPrefixes, 'us-dollar')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       id="mock-id"
@@ -230,7 +231,7 @@ export const AutofocusStory = () => {
     <CurrencyInput
       autoFocus
       color={select('Color', colorOptions, msBrightPurple)}
-      currency={select('Currency', currencies, 'us-dollar')}
+      currencyPrefix={select('Currency Prefix', currencyPrefixes, 'us-dollar')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       id="mock-id"

@@ -33,7 +33,7 @@ export const getAdornment = (iconAdornment, textAdornment, variant) => {
   const { position } = iconAdornment || textAdornment;
 
   const adornment = (
-    <InputAdornment position={position}>
+    <InputAdornment classes={{ root: 'adornment-root' }} position={position}>
       {adornmentComponent}
     </InputAdornment>
   );
