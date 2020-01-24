@@ -26,7 +26,15 @@ const IconAdornment = ({
     toggleButtonMouseDown(true);
   };
 
-  const resetOpacity = (e) => {
+  const handleMouseUp = (e) => {
+    e.preventDefault();
+    if (buttonMouseDown) {
+      onClick(e);
+    }
+    toggleButtonMouseDown(false);
+  };
+
+  const resetClickState = (e) => {
     e.preventDefault();
     toggleButtonMouseDown(false);
   };
@@ -38,11 +46,10 @@ const IconAdornment = ({
       <StyledIconButton
         buttonMouseDown={buttonMouseDown}
         hoverColor={hoverColor}
-        onBlur={resetOpacity}
-        onClick={onClick}
+        onBlur={resetClickState}
         onMouseDown={handleMouseDown}
-        onMouseOut={resetOpacity}
-        onMouseUp={resetOpacity}
+        onMouseOut={resetClickState}
+        onMouseUp={handleMouseUp}
         size="small"
         {...props}
       >

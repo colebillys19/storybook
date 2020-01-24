@@ -33,7 +33,7 @@ const PasswordInput = ({
     throw new Error(PASSWORD_BUTTON_POSITION_ERROR);
   }
 
-  const adornment = {
+  const passwordAdornment = noButton ? null : {
     color: msDarkGrey,
     hoverColor: passwordVisibilityHoverGrey,
     iconName: visibility ? 'visibility' : 'visibilityOff',
@@ -44,8 +44,9 @@ const PasswordInput = ({
   return (
     <BaseTextInput
       autoComplete="off"
-      iconAdornment={noButton ? null : adornment}
+      iconAdornment={iconAdornment && noButton ? iconAdornment : passwordAdornment}
       inputProps={{ ...inputProps, type: visibility ? 'text' : 'password' }}
+      textAdornment={textAdornment && noButton ? textAdornment : null}
       {...props}
     />
   );
@@ -75,6 +76,18 @@ PasswordInput.propTypes = {
   /** If true, the input will indicate an error. */
   error: T.bool,
 
+  /** Object detailing icon to be displayed as adornment. If onClick is provided, an icon button
+   * will be rendered. Note that for PasswordInput, the 'noButton' prop must be passed as true for
+   * custom adornments to be rendered.
+   */
+  iconAdornment: T.shape({
+    color: T.string,
+    hoverColor: T.string,
+    iconName: T.string,
+    onClick: T.func,
+    position: T.string,
+  }),
+
   /** The id of the input element. Ensure the input label's 'for' attribute has a matching value. */
   id: T.string.isRequired,
 
@@ -97,6 +110,21 @@ PasswordInput.propTypes = {
 
   /** If true, the input element will be required. */
   required: T.bool,
+
+  /** Object detailing text to be displayed as adornment. If onClick is provided, a text button
+   * will be rendered. Ensure font/weight passed are available globally (font string
+   * example: `'Montserrat', sans-serif`). Note that for PasswordInput, the 'noButton' prop must
+   * be passed as true for custom adornments to be rendered.
+   */
+  textAdornment: T.shape({
+    color: T.string,
+    font: T.string,
+    hoverColor: T.string,
+    onClick: T.func,
+    size: T.string,
+    text: T.string,
+    weight: T.string,
+  }),
 
   /** The value of the input element, required for a controlled component. */
   value: T.any,

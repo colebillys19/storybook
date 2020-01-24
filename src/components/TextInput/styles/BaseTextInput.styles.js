@@ -30,8 +30,8 @@ export const StyledTextField = styled(TextField)`
     }
   }
 
-  & .input:focus + fieldset {
-    border-color: ${({ color, error }) => getBorderColor(color, error)};
+  & .input:focus ~ fieldset {
+    border-color: ${({ color, error }) => getBorderColor(color, error)} !important;
   }
 
   & * {
