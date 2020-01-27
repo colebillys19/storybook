@@ -8,8 +8,8 @@ import {
   withKnobs,
 } from '@storybook/addon-knobs';
 
-import CurrencyInput from '../CurrencyInput';
-import CurrencyInputDocs from '../docs/CurrencyInput.docs.mdx';
+import PhoneInput from '../PhoneInput';
+import PhoneInputDocs from '../docs/PhoneInput.docs.mdx';
 import {
   msBrightPurple,
   msMainGreen,
@@ -24,31 +24,16 @@ import {
   variantOptions,
 } from '../../../utils/storyConstants';
 
-const StyledCurrencyInput = styled(CurrencyInput)`
+const StyledPhoneInput = styled(PhoneInput)`
   & .adornment-root {
     margin: 0 0.3rem 0 -0.5rem;
   }
 `;
 
-/* eslint-disable quote-props */
-const currencyPrefixes = {
-  'australian-dollar': 'australian-dollar',
-  'canadian-dollar': 'canadian-dollar',
-  'euro': 'euro',
-  'franc': 'franc',
-  'none': '',
-  'pound': 'pound',
-  'rand': 'rand',
-  'renminbi': 'renminbi',
-  'us-dollar': 'us-dollar',
-  'yen': 'yen',
-};
-/* eslint-enable quote-props */
-
 export default {
   decorators: [withKnobs],
-  parameters: { component: CurrencyInput, docs: { page: CurrencyInputDocs } },
-  title: 'Inputs|CurrencyInput',
+  parameters: { component: PhoneInput, docs: { page: PhoneInputDocs } },
+  title: 'Inputs|PhoneInput',
 };
 
 /** Default Story */
@@ -61,9 +46,8 @@ export const DefaultStory = () => {
   };
 
   return (
-    <CurrencyInput
+    <PhoneInput
       color={select('Color', colorOptions, msBrightPurple)}
-      currencyPrefix={select('Currency Prefix', currencyPrefixes, 'us-dollar')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       id="mock-id"
@@ -89,12 +73,11 @@ export const AccessibleStory = () => {
   return (
     <Fragment>
       <StyledLabel htmlFor="base-text-input">
-        {text('Label Text', 'Payment Input')}
+        {text('Label Text', 'Phone Number')}
       </StyledLabel>
-      <CurrencyInput
+      <PhoneInput
         ariaDescribedBy="helper-text"
         color={select('Color', colorOptions, msBrightPurple)}
-        currencyPrefix={select('Currency Prefix', currencyPrefixes, 'us-dollar')}
         disabled={boolean('Disabled', false)}
         error={boolean('Error', false)}
         id="base-text-input"
@@ -104,7 +87,7 @@ export const AccessibleStory = () => {
         variant={select('Variant', variantOptions, 'outlined')}
       />
       <StyledSpan id="helper-text">
-        {text('Helper Text', 'Please enter the amount you wish to pay.')}
+        {text('Helper Text', 'Please enter your phone number.')}
       </StyledSpan>
     </Fragment>
   );
@@ -126,15 +109,14 @@ export const WithIconAdornmentStory = () => {
   const iconAdornment = {
     color: select('Icon Color', colorOptions, msBrightPurple),
     hoverColor: select('Icon Hover Color', colorOptions, msMainGreen),
-    iconName: select('Icon', iconOptions, 'dollar'),
+    iconName: select('Icon', iconOptions, 'plus1'),
     onClick: mockOnClick,
     position: select('Adornment Position', positionOptions, 'start'),
   };
 
   return (
-    <StyledCurrencyInput
+    <StyledPhoneInput
       color={select('Color', colorOptions, msBrightPurple)}
-      currencyPrefix={select('Currency Prefix', currencyPrefixes, '')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       iconAdornment={iconAdornment}
@@ -203,14 +185,13 @@ export const WithTextAdornmentStory = () => {
     onClick: mockOnClick,
     position: select('Adornment Position', positionOptions, 'start'),
     size: select('Text Adornment Font Size', sizeOptions, '1.4rem'),
-    text: text('Text Adornment String', 'PAYMENT'),
+    text: text('Text Adornment String', 'PHONE'),
     weight: select('Text Adornment Font Weight', weightOptions, normal),
   };
 
   return (
-    <CurrencyInput
+    <PhoneInput
       color={select('Color', colorOptions, msBrightPurple)}
-      currencyPrefix={select('Currency Prefix', currencyPrefixes, 'us-dollar')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       id="mock-id"
@@ -235,10 +216,9 @@ export const AutofocusStory = () => {
   };
 
   return (
-    <CurrencyInput
+    <PhoneInput
       autoFocus
       color={select('Color', colorOptions, msBrightPurple)}
-      currencyPrefix={select('Currency Prefix', currencyPrefixes, 'us-dollar')}
       disabled={boolean('Disabled', false)}
       error={boolean('Error', false)}
       id="mock-id"

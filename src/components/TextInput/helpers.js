@@ -44,6 +44,7 @@ export const getAdornment = (iconAdornment, textAdornment, variant) => {
 /**
  * validateProps
  * @description: ensures props passed to BaseTextInput are valid
+ *               more robust prop type check...
  *
  * @param props {object}: BaseTextInput props
  *
@@ -62,7 +63,7 @@ export const validateProps = (props) => {
     throw new Error(NO_ID_ERROR);
   }
 
-  if (!typeOptions.includes(type)) {
+  if (typeOptions.indexOf(type) === -1) {
     throw new Error(INVALID_TYPE_ERROR);
   }
 
@@ -70,11 +71,10 @@ export const validateProps = (props) => {
     throw new Error(ICON_TEXT_ADORNMENT_ERROR);
   }
 
-  if (iconAdornment && iconAdornment.position !== 'start' && iconAdornment.position !== 'end') {
-    throw new Error(ADORNMENT_POSITION_ERROR);
-  }
-
-  if (textAdornment && textAdornment.position !== 'start' && textAdornment.position !== 'end') {
+  if (
+    (iconAdornment && iconAdornment.position !== 'start' && iconAdornment.position !== 'end') ||
+    (textAdornment && textAdornment.position !== 'start' && textAdornment.position !== 'end')
+  ) {
     throw new Error(ADORNMENT_POSITION_ERROR);
   }
 };
@@ -90,7 +90,7 @@ export const validateProps = (props) => {
  */
 export const getDatalist = (searchValues, currentValue) => {
   // don't show options if current value is one of the options
-  const isSearchValue = searchValues && searchValues.includes(currentValue);
+  const isSearchValue = searchValues && searchValues.indexOf(currentValue) !== -1;
 
   const datalist = searchValues && !isSearchValue ? (
     <datalist id="datalist-id">
@@ -105,7 +105,6 @@ export const getDatalist = (searchValues, currentValue) => {
 
   return { datalist, searchProps };
 };
-
 
 /**
  * getBorderColor

@@ -15,11 +15,19 @@ const IconAdornment = ({
 
   const styles = { color };
 
-  // adjust placement for warning icon
-  if (iconName === 'warning') {
-    styles.position = 'relative';
-    styles.bottom = onClick ? '0.2rem' : '0.1rem';
+  // adjust placement for icons that need it
+  /* eslint-disable default-case */
+  switch (iconName) {
+    case 'plus1':
+      styles.position = 'relative';
+      styles.right = '0.1rem';
+      break;
+    case 'warning':
+      styles.position = 'relative';
+      styles.bottom = onClick ? '0.2rem' : '0.1rem';
+      break;
   }
+  /* eslint-enable default-case */
 
   const handleMouseDown = (e) => {
     e.preventDefault();

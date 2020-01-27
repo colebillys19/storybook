@@ -97,4 +97,5 @@ export const docsLinkStyles = {
 export const docsCodeStyles = {
   color: 'SlateBlue',
   fontFamily: 'monospace',
+  marginBottom: '-1.6rem',
 };

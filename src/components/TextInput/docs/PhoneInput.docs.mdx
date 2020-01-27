@@ -1,51 +1,30 @@
 import { Props } from '@storybook/addon-docs/blocks';
 
-import CurrencyInput from '../CurrencyInput';
+import PhoneInput from '../PhoneInput';
 import { docsCodeStyles, docsLinkStyles } from '../../../utils/storyConstants';
 
 <div>
-  <h2>CurrencyInput</h2>
+  <h2>PhoneInput</h2>
   <h3 style={{ position: 'relative', top: '20px' }}>Props</h3>
   <div style={{ marginBottom: '-11px' }}>
-    <Props of={CurrencyInput} />
+    <Props of={PhoneInput} />
   </div>
   <h3 style={{ marginBottom: '17px' }}>Notes</h3>
   {/* using monospace here for formatting convenience (column alignment) */}
   <div style={{ fontFamily: 'monospace' }}>
-    currencyPrefix symbols:
-    <br />
-    &nbsp;- us dollar: $
-    <br />
-    &nbsp;- canadian dollar: C$
-    <br />
-    &nbsp;- euro: €
-    <br />
-    &nbsp;- yen: ¥
-    <br />
-    &nbsp;- renminbi: ¥
-    <br />
-    &nbsp;- pound: £
-    <br />
-    &nbsp;- franc: CHF
-    <br />
-    &nbsp;- australian dollar: A$
-    <br />
-    &nbsp;- rand: R
-    <br />
-    <br />
     Depending on the icon, the margin around an adornment icon may be to small/large for the use case. To apply styles to the icon/text adornment, target the adornment with "& .adornment-root". For example:
     <br />
     <div style={docsCodeStyles}>
       &nbsp;&nbsp;{'& .adornment-root {'}
       <br />
-      &nbsp;&nbsp;&nbsp;&nbsp;{'margin: 0 0.3rem 0 -0.5rem;'}
+      &nbsp;&nbsp;&nbsp;&nbsp;{'margin: 0 0 0 -0.6rem;'}
       <br />
       &nbsp;&nbsp;{'}'}
     </div>
     <br />
     <br />
     To ensure accessibility, make use of a label (and a helper text element when necessary) when
-    using CurrencyInput.
+    using PhoneInput.
     <br />
     <br />
     To see options for the 'autoComplete' prop:
