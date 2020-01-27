@@ -113,6 +113,4 @@ PhoneInput.defaultProps = {
   variant: 'outlined',
 };
 
-PhoneInput.defaultProps = {};
-
 export default PhoneInput;

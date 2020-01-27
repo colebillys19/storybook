@@ -112,6 +112,4 @@ CreditCardInput.defaultProps = {
   variant: 'outlined',
 };
 
-CreditCardInput.defaultProps = {};
-
 export default CreditCardInput;

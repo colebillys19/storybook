@@ -42,6 +42,7 @@ CurrencyInput.propTypes = {
 
   /** Prefix to be displayed along with input. */
   currencyPrefix: T.oneOf([
+    '',
     'australian-dollar',
     'canadian-dollar',
     'euro',
@@ -129,7 +130,5 @@ BaseTextInput.defaultProps = {
   type: 'text',
   variant: 'outlined',
 };
-
-CurrencyInput.defaultProps = {};
 
 export default CurrencyInput;

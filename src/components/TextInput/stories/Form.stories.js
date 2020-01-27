@@ -1,26 +1,112 @@
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
-// import BaseTextInput from '../';
+import {
+  BaseTextInput,
+  CreditCardInput,
+  CurrencyInput,
+  EmailInput,
+  NumberInput,
+  PasswordInput,
+  PhoneInput,
+  TextAreaInput,
+  UrlInput,
+} from '../index';
+import { StyledLabel } from '../../../utils/storyConstants';
 
-// export default { title: 'Inputs|Form' };
+export default { title: 'Inputs|Form' };
 
-// export const DefaultStory = () => {
-//   const [values, setValues] = useState({
-//     baseTextInput: '',
-//     creditCardInput: '',
-//     currencyInput: '',
-//     emailInput: '',
-//     numberInput: '',
-//     passwordInput: '',
-//     textAreaInput: '',
-//     urlInput: '',
-//   });
+const InputWrapper = styled.div`
+  margin-bottom: 1rem;
+`;
 
-//   return (
-//     <form>
+export const DefaultStory = () => {
+  const [values, setValues] = useState({
+    baseText: '',
+    creditCard: '',
+    currency: '',
+    email: '',
+    emailValid: true,
+    number: '',
+    password: '',
+    phone: '',
+    textArea: '',
+    url: '',
+    urlValid: true,
+  });
 
-//     </form>
-//   );
-// };
+  const handleInputChange = (prop) => (e) => {
+    setValues({ ...values, [prop]: e.target.value });
+  };
 
-// DefaultStory.story = { name: 'default' };
+  const handleValidityChange = (prop, value) => () => {
+    setValues({ ...values, [prop]: value });
+    console.log(`${prop}: `, values[prop]);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log('VALUES:');
+    console.log(values);
+
+    // const { emailValid, urlValid } = values;
+    // if (!emailValid || !urlValid) {
+    //   console.log('invalid input');
+    // }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <InputWrapper>
+        <StyledLabel htmlFor="basetext-id">Base Text</StyledLabel>
+        <BaseTextInput id="basetext-id" onChange={handleInputChange('baseText')} />
+      </InputWrapper>
+      <InputWrapper>
+        <StyledLabel htmlFor="creditcard-id">Credit Card</StyledLabel>
+        <CreditCardInput id="creditcard-id" onChange={handleInputChange('creditCard')} />
+      </InputWrapper>
+      <InputWrapper>
+        <StyledLabel htmlFor="currency-id">Currency</StyledLabel>
+        <CurrencyInput id="currency-id" onChange={handleInputChange('currency')} />
+      </InputWrapper>
+      <InputWrapper>
+        <StyledLabel htmlFor="email-id">Email</StyledLabel>
+        <EmailInput
+          id="email-id"
+          onChange={handleInputChange('email')}
+          onInvalidInput={handleValidityChange('emailValid', false)}
+          onValidInput={handleValidityChange('emailValid', true)}
+        />
+      </InputWrapper>
+      <InputWrapper>
+        <StyledLabel htmlFor="number-id">Number</StyledLabel>
+        <NumberInput id="number-id" onChange={handleInputChange('number')} />
+      </InputWrapper>
+      <InputWrapper>
+        <StyledLabel htmlFor="password-id">Password</StyledLabel>
+        <PasswordInput id="password-id" onChange={handleInputChange('password')} />
+      </InputWrapper>
+      <InputWrapper>
+        <StyledLabel htmlFor="phone-id">Phone</StyledLabel>
+        <PhoneInput id="phone-id" onChange={handleInputChange('phone')} />
+      </InputWrapper>
+      <InputWrapper>
+        <StyledLabel htmlFor="textarea-id">Text Area</StyledLabel>
+        <TextAreaInput id="textarea-id" onChange={handleInputChange('textArea')} />
+      </InputWrapper>
+      <InputWrapper>
+        <StyledLabel htmlFor="url-id">Url</StyledLabel>
+        <UrlInput
+          id="url-id"
+          onChange={handleInputChange('url')}
+          onInvalidInput={handleValidityChange('urlValid', false)}
+          onValidInput={handleValidityChange('urlValid', true)}
+        />
+      </InputWrapper>
+      <button type="submit">SUBMIT</button>
+    </form>
+  );
+};
+
+DefaultStory.story = { name: 'default' };
