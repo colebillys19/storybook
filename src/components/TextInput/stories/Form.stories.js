@@ -26,22 +26,21 @@ export const DefaultStory = () => {
     creditCard: '',
     currency: '',
     email: '',
-    emailValid: true,
+    emailIsValid: true,
     number: '',
     password: '',
     phone: '',
     textArea: '',
     url: '',
-    urlValid: true,
+    urlIsValid: true,
   });
 
   const handleInputChange = (prop) => (e) => {
     setValues({ ...values, [prop]: e.target.value });
   };
 
-  const handleValidityChange = (prop, value) => () => {
-    setValues({ ...values, [prop]: value });
-    console.log(`${prop}: `, values[prop]);
+  const handleValidityChange = (prop, bool) => () => {
+    setValues({ ...values, [prop]: bool });
   };
 
   const handleSubmit = (e) => {
@@ -50,8 +49,8 @@ export const DefaultStory = () => {
     console.log('VALUES:');
     console.log(values);
 
-    // const { emailValid, urlValid } = values;
-    // if (!emailValid || !urlValid) {
+    // const { emailIsValid, urlIsValid } = values;
+    // if (!emailIsValid || !urlIsValid) {
     //   console.log('invalid input');
     // }
   };
@@ -75,8 +74,8 @@ export const DefaultStory = () => {
         <EmailInput
           id="email-id"
           onChange={handleInputChange('email')}
-          onInvalidInput={handleValidityChange('emailValid', false)}
-          onValidInput={handleValidityChange('emailValid', true)}
+          onInvalidInput={handleValidityChange('emailIsValid', false)}
+          onValidInput={handleValidityChange('emailIsValid', true)}
         />
       </InputWrapper>
       <InputWrapper>
@@ -100,8 +99,8 @@ export const DefaultStory = () => {
         <UrlInput
           id="url-id"
           onChange={handleInputChange('url')}
-          onInvalidInput={handleValidityChange('urlValid', false)}
-          onValidInput={handleValidityChange('urlValid', true)}
+          onInvalidInput={handleValidityChange('urlIsValid', false)}
+          onValidInput={handleValidityChange('urlIsValid', true)}
         />
       </InputWrapper>
       <button type="submit">SUBMIT</button>
