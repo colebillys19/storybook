@@ -16,8 +16,7 @@
     "react-router-dom": "5.1.2",
     "react-scripts": "3.1.1",
     "styled-components": "4.0.2",
-    "uuid": "3.3.3",
-    "validator": "12.1.0"
+    "uuid": "3.3.3"
   },
   "scripts": {
     "build": "BABEL_ENV=production babel src -d compiled",

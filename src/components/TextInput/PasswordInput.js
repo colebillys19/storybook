@@ -18,8 +18,7 @@ const PasswordInput = ({
   type,
   ...props
 }) => {
-  // destructured props that aren't used is intentional
-  // (BaseTextInput props that shouldn't be changed)
+  // destructured props that aren't used is intentional (props that shouldn't be changed)
 
   const [visibility, toggleVisibility] = useState(false);
 

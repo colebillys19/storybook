@@ -5,12 +5,10 @@ import {
   BaseTextInput,
   CreditCardInput,
   CurrencyInput,
-  EmailInput,
   NumberInput,
   PasswordInput,
   PhoneInput,
   TextAreaInput,
-  UrlInput,
 } from '../index';
 import { StyledLabel } from '../../../utils/storyConstants';
 
@@ -25,34 +23,19 @@ export const DefaultStory = () => {
     baseText: '',
     creditCard: '',
     currency: '',
-    email: '',
-    emailIsValid: true,
     number: '',
     password: '',
     phone: '',
     textArea: '',
-    url: '',
-    urlIsValid: true,
   });
 
   const handleInputChange = (prop) => (e) => {
     setValues({ ...values, [prop]: e.target.value });
   };
 
-  const handleValidityChange = (prop, bool) => () => {
-    setValues({ ...values, [prop]: bool });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log('VALUES:');
     console.log(values);
-
-    // const { emailIsValid, urlIsValid } = values;
-    // if (!emailIsValid || !urlIsValid) {
-    //   console.log('invalid input');
-    // }
   };
 
   return (
@@ -70,15 +53,6 @@ export const DefaultStory = () => {
         <CurrencyInput id="currency-id" onChange={handleInputChange('currency')} />
       </InputWrapper>
       <InputWrapper>
-        <StyledLabel htmlFor="email-id">Email</StyledLabel>
-        <EmailInput
-          id="email-id"
-          onChange={handleInputChange('email')}
-          onInvalidInput={handleValidityChange('emailIsValid', false)}
-          onValidInput={handleValidityChange('emailIsValid', true)}
-        />
-      </InputWrapper>
-      <InputWrapper>
         <StyledLabel htmlFor="number-id">Number</StyledLabel>
         <NumberInput id="number-id" onChange={handleInputChange('number')} />
       </InputWrapper>
@@ -93,15 +67,6 @@ export const DefaultStory = () => {
       <InputWrapper>
         <StyledLabel htmlFor="textarea-id">Text Area</StyledLabel>
         <TextAreaInput id="textarea-id" onChange={handleInputChange('textArea')} />
-      </InputWrapper>
-      <InputWrapper>
-        <StyledLabel htmlFor="url-id">Url</StyledLabel>
-        <UrlInput
-          id="url-id"
-          onChange={handleInputChange('url')}
-          onInvalidInput={handleValidityChange('urlIsValid', false)}
-          onValidInput={handleValidityChange('urlIsValid', true)}
-        />
       </InputWrapper>
       <button type="submit">SUBMIT</button>
     </form>
