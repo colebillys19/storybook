@@ -7,15 +7,10 @@ import { PASSWORD_BUTTON_POSITION_ERROR } from './constants';
 
 const PasswordInput = ({
   buttonPosition,
-  defaultValue,
   iconAdornment,
-  InputProps,
   inputProps,
   noButton,
-  placeholder,
-  searchValues,
   textAdornment,
-  type,
   ...props
 }) => {
   // destructured props that aren't used is intentional (props that shouldn't be changed)
@@ -42,11 +37,11 @@ const PasswordInput = ({
 
   return (
     <BaseTextInput
+      {...props}
       autoComplete="off"
       iconAdornment={iconAdornment && noButton ? iconAdornment : passwordAdornment}
       inputProps={{ ...inputProps, type: visibility ? 'text' : 'password' }}
       textAdornment={textAdornment && noButton ? textAdornment : null}
-      {...props}
     />
   );
 };

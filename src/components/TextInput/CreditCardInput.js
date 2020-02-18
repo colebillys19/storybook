@@ -4,15 +4,11 @@ import NumberFormat from 'react-number-format';
 
 import { StyledBaseTextInput } from './styles/CreditCardInput.styles';
 
-const CreditCardInput = ({
-  searchValues,
-  type,
-  ...props
-}) => (
+const CreditCardInput = ({ ...props }) => (
   <NumberFormat
+    {...props}
     customInput={StyledBaseTextInput}
     format="#### #### #### ####"
-    {...props}
   />
 );
 

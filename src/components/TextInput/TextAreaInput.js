@@ -3,7 +3,7 @@ import T from 'prop-types';
 
 import { StyledInput } from './styles/TextAreaInput.styles';
 
-const TextAreaInput = (props) => <StyledInput multiline {...props} />;
+const TextAreaInput = (props) => <StyledInput {...props} multiline />;
 
 TextAreaInput.propTypes = {
   /** If TextAreaInput has an associated helper text element, pass a string that matches that

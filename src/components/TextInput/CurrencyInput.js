@@ -8,15 +8,14 @@ import { CURRENCY_PREFIXES } from './constants';
 const CurrencyInput = ({
   currencyPrefix,
   searchValues,
-  type,
   ...props
 }) => (
   <NumberFormat
+    {...props}
     customInput={BaseTextInput}
     decimalScale={2}
     prefix={currencyPrefix ? CURRENCY_PREFIXES[currencyPrefix] : ''}
     thousandSeparator
-    {...props}
   />
 );
 

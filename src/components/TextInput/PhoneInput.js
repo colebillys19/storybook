@@ -4,16 +4,12 @@ import NumberFormat from 'react-number-format';
 
 import { StyledBaseTextInput } from './styles/PhoneInput.styles';
 
-const PhoneInput = ({
-  searchValues,
-  type,
-  ...props
-}) => (
+const PhoneInput = ({ searchValues, ...props }) => (
   <NumberFormat
+    {...props}
     customInput={StyledBaseTextInput}
     format="(###) ###-####"
     mask="_"
-    {...props}
   />
 );
 

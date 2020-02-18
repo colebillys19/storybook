@@ -8,9 +8,9 @@ const NumberInput = ({
   strict,
   ...props
 }) => strict ? (
-  <NumberFormat customInput={StyledBaseTextInput} {...props} />
+  <NumberFormat {...props} customInput={StyledBaseTextInput} />
 ) : (
-  <StyledBaseTextInput type="number" {...props} />
+  <StyledBaseTextInput {...props} type="number" />
 );
 
 NumberInput.propTypes = {

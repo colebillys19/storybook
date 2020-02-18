@@ -36,8 +36,8 @@ const BaseTextInput = ({
     <Fragment>
       <StyledTextField
         InputProps={{
-          ...adornmentProp,
           ...InputProps,
+          ...adornmentProp,
           classes: {
             input: 'input',
             multiline: 'multiline',

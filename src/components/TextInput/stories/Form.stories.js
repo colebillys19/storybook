@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 import {
-  BaseTextInput,
-  CreditCardInput,
-  CurrencyInput,
-  NumberInput,
+  // BaseTextInput,
+  // CreditCardInput,
+  // CurrencyInput,
+  // NumberInput,
   PasswordInput,
-  PhoneInput,
-  TextAreaInput,
+  // PhoneInput,
+  // TextAreaInput,
 } from '../index';
-import { StyledLabel } from '../../../utils/storyConstants';
+import TempInput from '../TempInput';
+// import { StyledLabel } from '../../../utils/storyConstants';
 
 export default { title: 'Inputs|Form' };
 
-const InputWrapper = styled.div`
-  margin-bottom: 1rem;
-`;
+// const InputWrapper = styled.div`
+//   margin-bottom: 1rem;
+// `;
 
 export const DefaultStory = () => {
   const [values, setValues] = useState({
@@ -35,12 +36,15 @@ export const DefaultStory = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('VALUES');
     console.log(values);
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <InputWrapper>
+      <PasswordInput id="password-id" onChange={handleInputChange('password')} />
+      <TempInput />
+      {/* <InputWrapper>
         <StyledLabel htmlFor="basetext-id">Base Text</StyledLabel>
         <BaseTextInput id="basetext-id" onChange={handleInputChange('baseText')} />
       </InputWrapper>
@@ -68,7 +72,7 @@ export const DefaultStory = () => {
         <StyledLabel htmlFor="textarea-id">Text Area</StyledLabel>
         <TextAreaInput id="textarea-id" onChange={handleInputChange('textArea')} />
       </InputWrapper>
-      <button type="submit">SUBMIT</button>
+      <button type="submit">SUBMIT</button> */}
     </form>
   );
 };
