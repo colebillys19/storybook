@@ -1,27 +1,17 @@
 import React from 'react';
 import T from 'prop-types';
+import NumberFormat from 'react-number-format';
 
 import { StyledBaseTextInput } from './styles/NumberInput.styles';
 
 const NumberInput = ({
   strict,
-  type,
   ...props
-}) => {
-  const handleKeyDown = (e) => {
-    if (strict && (e.which === 69 || e.which === 187)) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-  };
-  return (
-    <StyledBaseTextInput
-      onKeyDown={handleKeyDown}
-      type="number"
-      {...props}
-    />
-  );
-};
+}) => strict ? (
+  <NumberFormat customInput={StyledBaseTextInput} {...props} />
+) : (
+  <StyledBaseTextInput type="number" {...props} />
+);
 
 NumberInput.propTypes = {
   /** If NumberInput has an associated helper text element, pass a string that matches that
@@ -92,8 +82,9 @@ NumberInput.propTypes = {
   /** If true, the input element will be required. */
   required: T.bool,
 
-  /** If true (default), NumberInput will prevent the user from typing the
-   * characters 'e', 'E', and '+'. */
+  /** If true (default), NumberInput will only allow positive/negative whole/decimal numbers. If
+   * false, NumberInput allows for a any numeral input and free use of
+   * the characters: . + - e E */
   strict: T.bool,
 
   /** Object detailing text to be displayed as adornment. If onClick
