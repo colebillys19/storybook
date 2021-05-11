@@ -6,7 +6,7 @@
     "@material-ui/icons": "4.5.1",
     "@material-ui/styles": "4.5.0",
     "@storybook/cli": "5.2.5",
-    "lodash": "4.17.11",
+    "lodash": "4.17.21",
     "moment": "2.24.0",
     "prop-types": "15.7.2",
     "react": "16.9.0",
